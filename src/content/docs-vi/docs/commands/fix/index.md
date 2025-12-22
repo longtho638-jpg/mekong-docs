@@ -14,7 +14,7 @@ published: true
 
 # /fix
 
-Lệnh sửa lỗi thông minh phân tích mô tả vấn đề của bạn và tự động chọn giữa phương pháp nhanh hoặc kỹ lưỡng. Không cần quyết định giữa `/fix:fast` và `/fix:hard` - để ClaudeKit xác định chiến lược tốt nhất.
+Lệnh sửa lỗi thông minh phân tích mô tả vấn đề của bạn và tự động chọn giữa phương pháp nhanh hoặc kỹ lưỡng. Không cần quyết định giữa `/fix:fast` và `/fix:hard` - để Mekong Marketing xác định chiến lược tốt nhất.
 
 ## Cú pháp
 
@@ -82,7 +82,7 @@ Kiểm thử: ✓ Tất cả đã pass
 ### Hoàn hảo cho
 
 **Bất kỳ lỗi hoặc vấn đề nào**
-- Để ClaudeKit quyết định phương pháp
+- Để Mekong Marketing quyết định phương pháp
 - Không lãng phí thời gian phân loại độ phức tạp
 - Tin tưởng vào định tuyến thông minh
 
@@ -91,7 +91,7 @@ Kiểm thử: ✓ Tất cả đã pass
 # Không chắc đơn giản hay phức tạp?
 /fix [người dùng báo cáo thời gian tải trang chậm]
 
-# ClaudeKit phân tích và chọn phương pháp đúng
+# Mekong Marketing phân tích và chọn phương pháp đúng
 ```
 
 **Quy trình làm việc nhanh**
@@ -443,4 +443,4 @@ Chiến lược đã chọn: /fix:fast | /fix:hard
 
 ---
 
-**Điểm chính**: `/fix` là trợ lý sửa lỗi thông minh của bạn. Chỉ cần mô tả vấn đề - ClaudeKit phân tích độ phức tạp và tự động chọn chiến lược sửa lỗi tối ưu, tiết kiệm thời gian và công sức suy nghĩ.
+**Điểm chính**: `/fix` là trợ lý sửa lỗi thông minh của bạn. Chỉ cần mô tả vấn đề - Mekong Marketing phân tích độ phức tạp và tự động chọn chiến lược sửa lỗi tối ưu, tiết kiệm thời gian và công sức suy nghĩ.

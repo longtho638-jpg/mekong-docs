@@ -1,19 +1,19 @@
 ---
-title: "Upgrade Guide for Claude Code Users"
-description: "Migrate from Claude Code to ClaudeKit seamlessly"
+title: "Upgrade Guide for Mekong CLI Users"
+description: "Migrate from Mekong CLI to Mekong Marketing seamlessly"
 section: getting-started
 order: 3
 published: true
 ---
 
-# Upgrading from Claude Code to ClaudeKit
+# Upgrading from Mekong CLI to Mekong Marketing
 
-Already using Claude Code? ClaudeKit enhances your workflow without breaking existing habits.
+Already using Mekong CLI? Mekong Marketing enhances your workflow without breaking existing habits.
 
 ## What Changes?
 
 **Stays the Same**:
-- Claude Code CLI and interface
+- Mekong CLI CLI and interface
 - Existing project structure
 - .claude/ directory (extended, not replaced)
 - Chat-based interaction
@@ -27,8 +27,8 @@ Already using Claude Code? ClaudeKit enhances your workflow without breaking exi
 ## Installation (Additive)
 
 ```bash
-# Install ClaudeKit CLI (doesn't replace Claude Code)
-npm install -g claudekit-cli
+# Install Mekong Marketing CLI (doesn't replace Mekong CLI)
+npm install -g mekong-cli
 
 # Initialize in existing project
 ck init
@@ -36,14 +36,14 @@ ck init
 # → Existing .claude/commands/ preserved
 ```
 
-### Upgrading ClaudeKit
+### Upgrading Mekong Marketing
 
 ```bash
 # Recommended: Use built-in update command
 ck update
 
 # Alternative: npm global update
-npm install -g claudekit-cli@latest
+npm install -g mekong-cli@latest
 ```
 
 ## Gradual Migration Path
@@ -55,7 +55,7 @@ Start with `/cook` for feature development:
 You: "I need to add a new API endpoint for user profiles"
 [Long conversation with manual guidance]
 
-# ClaudeKit way
+# Mekong Marketing way
 /cook "add user profiles API endpoint"
 [Automated planning, development, testing]
 ```
@@ -86,27 +86,27 @@ Combine commands for complete workflows:
 ## Compatibility
 
 **Supported**:
-- Claude Code v1.0+
+- Mekong CLI v1.0+
 - Existing .claude/commands/ (fully compatible)
 - Custom prompts (still work as-is)
 
 **Not Supported**:
-- Claude Desktop app (Claude Code CLI only)
-- Projects without Git (ClaudeKit requires version control)
+- Claude Desktop app (Mekong CLI CLI only)
+- Projects without Git (Mekong Marketing requires version control)
 
 ## FAQs
 
 **Q: Do I need to rewrite existing commands?**
-A: No. ClaudeKit commands coexist with your custom .claude/commands/
+A: No. Mekong Marketing commands coexist with your custom .claude/commands/
 
 **Q: Can I still use regular chat?**
-A: Yes. ClaudeKit adds slash commands, doesn't remove chat.
+A: Yes. Mekong Marketing adds slash commands, doesn't remove chat.
 
-**Q: What if I don't like ClaudeKit?**
+**Q: What if I don't like Mekong Marketing?**
 A: Uninstall and delete .claude/CLAUDE.md. No breaking changes.
 
 ## Next Steps
 
-1. [Install ClaudeKit](/docs/getting-started/installation)
+1. [Install Mekong Marketing](/docs/getting-started/installation)
 2. [Try Quick Start](/docs/getting-started/quick-start)
 3. [Explore Commands](/docs/commands)

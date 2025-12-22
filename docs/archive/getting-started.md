@@ -1,15 +1,15 @@
 ## Method 1: Manual Setup  
   
-1. Copy all directories and files of `claudekit-engineer` repo to your project:  
+1. Copy all directories and files of `mekong-engineer` repo to your project:  
     * `.claude/*`  
     * `docs/*`  
     * `plans/*`  
     * `CLAUDE.md`  
-2. ClaudeKit utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
+2. Mekong Marketing utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
    **Notes:** Gemini API have a pretty generous free requests limit at the moment.
    - Go to [Google AI Studio](https://aistudio.google.com) and grab your API Key
    - Copy `.claude/skills/.env.example` to `.claude/skills/.env` and paste the key into the `GEMINI_API_KEY` environment variable
-3. Start Claude Code in your working project: `claude` (or `claude --dangerously-skip-permissions`)  
+3. Start Mekong CLI in your working project: `claude` (or `claude --dangerously-skip-permissions`)  
 4. Run command: `/docs:init` to trigger CC scan and create specs for the whole project.You will see some markdown files generated in `docs` directory, such as “codebase-summary.md”, “code-standards.md”, “system-architecture.md”,...)  
 5. Now your project is ready to start development, explore these commands:  
     * `/cook` : develop new feature  
@@ -23,15 +23,15 @@
 
 ---
 
-## Method 2: ClaudeKit CLI  
+## Method 2: Mekong Marketing CLI  
   
 ### Installation  
 ```
-npm install -g claudekit-cli
+npm install -g mekong-cli
 ```
 
 ```
-bun add -g claudekit-cli
+bun add -g mekong-cli
 ck --version
 ```
   

@@ -32,7 +32,7 @@ ls .claude/commands/
 # 3. Verify specific command file
 cat .claude/commands/core/cook.md
 
-# If files missing, reinitialize ClaudeKit
+# If files missing, reinitialize Mekong Marketing
 ck init --kit engineer
 ```
 
@@ -46,10 +46,10 @@ ck init --kit engineer
 
 **Detailed Solution**:
 
-**Step 1: Verify Claude Code is running**
+**Step 1: Verify Mekong CLI is running**
 
 ```bash
-# Check if Claude Code CLI is available
+# Check if Mekong CLI CLI is available
 claude --version
 
 # If not found, install from claude.ai/code
@@ -120,10 +120,10 @@ Detailed implementation instructions...
 
 ```bash
 # Check if CLI installed
-npm list -g claudekit-cli
+npm list -g mekong-cli
 
 # If not installed
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # Verify
 ck --version
@@ -147,7 +147,7 @@ See [Installation Issues](/docs/support/troubleshooting/installation-issues) for
 
 ```bash
 # Run with verbose output
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_VERBOSE=1
 /cook implement user authentication
 
 # Check error message details
@@ -299,7 +299,7 @@ description: My custom cook implementation
 **Solution**:
 
 ```bash
-# Initialize ClaudeKit
+# Initialize Mekong Marketing
 ck init --kit engineer
 
 # Verify structure
@@ -349,7 +349,7 @@ icacls .claude /grant Everyone:F /T
 
 ### Required Files
 
-ClaudeKit requires this structure:
+Mekong Marketing requires this structure:
 
 ```
 .claude/
@@ -401,14 +401,14 @@ find .claude/agents -name "*.md" | wc -l
 
 ```bash
 # Method 1: Environment variable
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_VERBOSE=1
 /cook implement feature
 
 # Method 2: Command flag (if supported)
 /cook implement feature --verbose
 
 # Method 3: Check logs
-cat ~/.claudekit/logs/latest.log
+cat ~/.mekong/logs/latest.log
 ```
 
 ### Test Individual Components
@@ -420,7 +420,7 @@ cat .claude/agents/planner.md
 # Test command parsing
 head -n 20 .claude/commands/core/cook.md
 
-# Test Claude Code
+# Test Mekong CLI
 claude --version
 ```
 
@@ -433,8 +433,8 @@ ck diagnose --verbose
 # Manual checks
 echo "Node: $(node --version)"
 echo "npm: $(npm --version)"
-echo "Claude Code: $(claude --version)"
-echo "ClaudeKit CLI: $(ck --version)"
+echo "Mekong CLI: $(claude --version)"
+echo "Mekong Marketing CLI: $(ck --version)"
 echo "Working directory: $(pwd)"
 echo ".claude exists: $([ -d .claude ] && echo yes || echo no)"
 ```
@@ -443,7 +443,7 @@ echo ".claude exists: $([ -d .claude ] && echo yes || echo no)"
 
 ## Common Quick Fixes
 
-### Reset ClaudeKit
+### Reset Mekong Marketing
 
 ```bash
 # Backup custom files
@@ -471,10 +471,10 @@ cp .claude.backup/commands/my-custom.md .claude/commands/
 # If fails: Check specific error message above
 ```
 
-### Reload Claude Code
+### Reload Mekong CLI
 
 ```bash
-# Exit Claude Code (Ctrl+C or type 'exit')
+# Exit Mekong CLI (Ctrl+C or type 'exit')
 exit
 
 # Restart
@@ -492,7 +492,7 @@ claude --dangerously-skip-permissions
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep ClaudeKit updated: `ck init`
+- Keep Mekong Marketing updated: `ck init`
 - Backup .claude before modifications
 - Use correct frontmatter syntax
 - Verify command names are unique
@@ -501,7 +501,7 @@ claude --dangerously-skip-permissions
 ❌ **Don't**:
 - Modify core command files directly
 - Delete .claude directory without backup
-- Mix ClaudeKit versions
+- Mix Mekong Marketing versions
 - Create commands without frontmatter
 - Use special characters in command names
 
@@ -536,14 +536,14 @@ claude --dangerously-skip-permissions
   find .claude/commands -name "*.md"
 
   echo -e "\n=== Recent Errors ==="
-  tail -50 ~/.claudekit/logs/latest.log
-} > claudekit-debug.txt
+  tail -50 ~/.mekong/logs/latest.log
+} > mekong-debug.txt
 ```
 
 ### Get Help
 
-1. **GitHub Issues**: [Report command problems](https://github.com/claudekit/claudekit-engineer/issues)
-2. **Discord**: [Ask community](https://claudekit.cc/discord)
+1. **GitHub Issues**: [Report command problems](https://github.com/mekong/mekong-engineer/issues)
+2. **Discord**: [Ask community](https://mekongmarketing.com/discord)
 3. **Include**: Debug report, error message, steps to reproduce
 
 ---

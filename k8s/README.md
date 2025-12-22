@@ -1,6 +1,6 @@
 # Kubernetes Deployment Guide
 
-Deploy ClaudeKit Documentation to Kubernetes cluster.
+Deploy Mekong Marketing Documentation to Kubernetes cluster.
 
 ## Prerequisites
 
@@ -15,10 +15,10 @@ Deploy ClaudeKit Documentation to Kubernetes cluster.
 
 ```bash
 # Build image
-docker build -t ghcr.io/claudekit/claudekit-docs:latest .
+docker build -t ghcr.io/mekong/mekong-docs:latest .
 
 # Push to registry
-docker push ghcr.io/claudekit/claudekit-docs:latest
+docker push ghcr.io/mekong/mekong-docs:latest
 ```
 
 2. **Create GitHub Registry Secret**
@@ -48,16 +48,16 @@ kubectl apply -f k8s/ingress.yaml
 
 ```bash
 # Check pods
-kubectl get pods -l app=claudekit-docs
+kubectl get pods -l app=mekong-docs
 
 # Check service
-kubectl get svc claudekit-docs
+kubectl get svc mekong-docs
 
 # Check ingress
-kubectl get ingress claudekit-docs
+kubectl get ingress mekong-docs
 
 # View logs
-kubectl logs -l app=claudekit-docs --follow
+kubectl logs -l app=mekong-docs --follow
 ```
 
 ## Configuration
@@ -67,7 +67,7 @@ kubectl logs -l app=claudekit-docs --follow
 Edit `k8s/configmap.yaml`:
 
 ```yaml
-SITE_URL: "https://docs.claudekit.cc"
+SITE_URL: "https://docs.mekongmarketing.com"
 NODE_ENV: "production"
 ```
 
@@ -111,7 +111,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: admin@claudekit.cc
+    email: admin@mekongmarketing.com
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
@@ -127,7 +127,7 @@ EOF
 
 ```bash
 # Manual health check
-kubectl port-forward svc/claudekit-docs 8080:80
+kubectl port-forward svc/mekong-docs 8080:80
 curl http://localhost:8080
 ```
 
@@ -135,20 +135,20 @@ curl http://localhost:8080
 
 ```bash
 # Stream logs from all pods
-kubectl logs -l app=claudekit-docs -f
+kubectl logs -l app=mekong-docs -f
 
 # Logs from specific pod
-kubectl logs claudekit-docs-<pod-id>
+kubectl logs mekong-docs-<pod-id>
 ```
 
 ## Scaling
 
 ```bash
 # Manual scaling
-kubectl scale deployment claudekit-docs --replicas=5
+kubectl scale deployment mekong-docs --replicas=5
 
 # Auto-scaling (HPA)
-kubectl autoscale deployment claudekit-docs \
+kubectl autoscale deployment mekong-docs \
   --cpu-percent=70 \
   --min=2 \
   --max=10
@@ -158,14 +158,14 @@ kubectl autoscale deployment claudekit-docs \
 
 ```bash
 # Update image
-kubectl set image deployment/claudekit-docs \
-  claudekit-docs=ghcr.io/claudekit/claudekit-docs:v2.0.0
+kubectl set image deployment/mekong-docs \
+  mekong-docs=ghcr.io/mekong/mekong-docs:v2.0.0
 
 # Check rollout status
-kubectl rollout status deployment/claudekit-docs
+kubectl rollout status deployment/mekong-docs
 
 # Rollback if needed
-kubectl rollout undo deployment/claudekit-docs
+kubectl rollout undo deployment/mekong-docs
 ```
 
 ## Troubleshooting
@@ -173,8 +173,8 @@ kubectl rollout undo deployment/claudekit-docs
 ### Pods Not Starting
 
 ```bash
-kubectl describe pod claudekit-docs-<pod-id>
-kubectl logs claudekit-docs-<pod-id>
+kubectl describe pod mekong-docs-<pod-id>
+kubectl logs mekong-docs-<pod-id>
 ```
 
 ### Image Pull Errors
@@ -196,14 +196,14 @@ kubectl create secret docker-registry github-registry \
 
 ```bash
 # Check ingress
-kubectl describe ingress claudekit-docs
+kubectl describe ingress mekong-docs
 
 # Check nginx-ingress logs
 kubectl logs -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx
 
 # Check cert-manager
 kubectl get certificate
-kubectl describe certificate claudekit-docs-tls
+kubectl describe certificate mekong-docs-tls
 ```
 
 ## Cleanup
@@ -213,10 +213,10 @@ kubectl describe certificate claudekit-docs-tls
 kubectl delete -f k8s/
 
 # Or delete individually
-kubectl delete deployment claudekit-docs
-kubectl delete service claudekit-docs
-kubectl delete ingress claudekit-docs
-kubectl delete configmap claudekit-docs-config
+kubectl delete deployment mekong-docs
+kubectl delete service mekong-docs
+kubectl delete ingress mekong-docs
+kubectl delete configmap mekong-docs-config
 ```
 
 ## CI/CD Integration
@@ -237,12 +237,12 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/claudekit/claudekit-docs:${{ github.sha }} .
+        run: docker build -t ghcr.io/mekong/mekong-docs:${{ github.sha }} .
 
       - name: Push to GHCR
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u $ --password-stdin
-          docker push ghcr.io/claudekit/claudekit-docs:${{ github.sha }}
+          docker push ghcr.io/mekong/mekong-docs:${{ github.sha }}
 
       - name: Deploy to Kubernetes
         uses: azure/k8s-deploy@v4
@@ -251,5 +251,5 @@ jobs:
             k8s/deployment.yaml
             k8s/service.yaml
             k8s/ingress.yaml
-          images: ghcr.io/claudekit/claudekit-docs:${{ github.sha }}
+          images: ghcr.io/mekong/mekong-docs:${{ github.sha }}
 ```

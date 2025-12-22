@@ -1,6 +1,6 @@
 ---
-title: "ClaudeKit Cheatsheet"
-description: "Quick reference for ClaudeKit commands - essential commands for AI-powered development workflow."
+title: "Mekong Marketing Cheatsheet"
+description: "Quick reference for Mekong Marketing commands - essential commands for AI-powered development workflow."
 section: getting-started
 category: "getting-started"
 order: 5
@@ -8,27 +8,27 @@ published: true
 lastUpdated: 2025-11-07
 ---
 
-# ClaudeKit Cheatsheet
+# Mekong Marketing Cheatsheet
 
-Quick reference guide for ClaudeKit CLI commands and workflows.
+Quick reference guide for Mekong Marketing CLI commands and workflows.
 
 ## Installation
 
 ```bash
-# Install ClaudeKit globally
-npm i -g claudekit-cli@latest
+# Install Mekong Marketing globally
+npm i -g mekong-cli@latest
 
 # Check version
 ck --version
 ```
 
-## Starting ClaudeKit
+## Starting Mekong Marketing
 
 ```bash
 # Navigate to your project
 cd /path/to/project
 
-# Start Claude Code with ClaudeKit
+# Start Mekong CLI with Mekong Marketing
 claude
 ```
 
@@ -205,13 +205,13 @@ ck init --kit engineer --dir /path/to/project
 ### Brownfield Project Setup
 
 ```bash
-# 1. Install ClaudeKit
-npm i -g claudekit-cli@latest
+# 1. Install Mekong Marketing
+npm i -g mekong-cli@latest
 
 # 2. Go to project
 cd /path/to/existing/project
 
-# 3. Start Claude Code
+# 3. Start Mekong CLI
 claude
 
 # 4. Initialize
@@ -224,8 +224,8 @@ claude
 ### Greenfield Project Setup
 
 ```bash
-# 1. Install ClaudeKit
-npm i -g claudekit-cli@latest
+# 1. Install Mekong Marketing
+npm i -g mekong-cli@latest
 
 # 2. Initialize project
 ck init --kit engineer --dir /path/to/project
@@ -233,7 +233,7 @@ ck init --kit engineer --dir /path/to/project
 # 3. Navigate to project
 cd /path/to/project
 
-# 4. Start Claude Code
+# 4. Start Mekong CLI
 claude
 
 # 5. Bootstrap idea
@@ -420,10 +420,10 @@ More detailed descriptions = better results
 ### Command Not Working
 
 ```bash
-# Check ClaudeKit version
+# Check Mekong Marketing version
 ck --version
 
-# Restart Claude Code
+# Restart Mekong CLI
 # Exit and run: claude
 ```
 
@@ -540,13 +540,13 @@ ck --version
 
 ## Resources
 
-- [Full Documentation](https://docs.claudekit.cc)
+- [Full Documentation](https://docs.mekongmarketing.com)
 - [All Commands](/docs/commands/)
 - [AI Agents](/docs/agents/)
 - [Workflows](/docs/docs/configuration/workflows)
 - [Troubleshooting](/docs/support/troubleshooting/)
-- [GitHub Discussions](https://github.com/mrgoonie/claudekit-cli/discussions)
+- [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
 
 ---
 
-**Print this page** or keep it open while working with ClaudeKit for quick command reference!
+**Print this page** or keep it open while working with Mekong Marketing for quick command reference!

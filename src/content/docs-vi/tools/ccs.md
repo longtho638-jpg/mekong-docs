@@ -1,5 +1,5 @@
 ---
-title: "CCS - Claude Code Switch"
+title: "CCS - Mekong CLI Switch"
 description: "Chuyển đổi giữa nhiều tài khoản Claude và mô hình AI ngay lập tức. Tránh giới hạn tốc độ và tối ưu chi phí với ủy quyền thông minh."
 section: tools
 category: tools
@@ -7,7 +7,7 @@ order: 2
 published: true
 ---
 
-# CCS - Claude Code Switch
+# CCS - Mekong CLI Switch
 
 **Một lệnh duy nhất, không downtime, nhiều tài khoản**
 
@@ -125,7 +125,7 @@ Dùng slash commands bên trong phiên uỷ nhiệm:
 # Thực thi lệnh /cook trong phiên GLM
 ccs glm -p "/cook tạo landing page responsive"
 
-# Sử dụng lệnh ClaudeKit
+# Sử dụng lệnh Mekong Marketing
 ccs glm -p "/fix:test chạy tất cả tests và sửa lỗi"
 ```
 
@@ -233,7 +233,7 @@ ccs glm:continue -p "cũng cập nhật ví dụ trong README"
 ccs glm:continue -p "thêm error handling"
 ```
 
-## Tích hợp với ClaudeKit
+## Tích hợp với Mekong Marketing
 
 ### Quy trình khuyến nghị
 
@@ -290,8 +290,8 @@ rm -rf ~/.ccs
 
 ## Bước tiếp theo
 
-- [Hướng Dẫn Cài Đặt](/vi/docs/getting-started/installation) - Thiết lập ClaudeKit
-- [Quy Trình](/vi/docs/workflows/) - Học quy trình ClaudeKit
+- [Hướng Dẫn Cài Đặt](/vi/docs/getting-started/installation) - Thiết lập Mekong Marketing
+- [Quy Trình](/vi/docs/workflows/) - Học quy trình Mekong Marketing
 - [FAQ](/vi/docs/support/troubleshooting) - Câu hỏi thường gặp
 
 ---

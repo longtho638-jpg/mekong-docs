@@ -14,7 +14,7 @@ published: true
 
 # Implementing Authentication
 
-Learn how to implement secure authentication systems with ClaudeKit - from basic JWT authentication to OAuth2, 2FA, and passwordless login.
+Learn how to implement secure authentication systems with Mekong Marketing - from basic JWT authentication to OAuth2, 2FA, and passwordless login.
 
 ## Overview
 
@@ -495,7 +495,7 @@ Implement authentication for e-commerce site with:
 - Testing: 1-2 hours
 - Security review: 1-2 hours
 
-**With ClaudeKit**: 38 minutes
+**With Mekong Marketing**: 38 minutes
 - Planning: 5 minutes
 - JWT + email: 10 minutes
 - Password reset: 5 minutes
@@ -664,4 +664,4 @@ Before production deployment:
 
 ---
 
-**Key Takeaway**: ClaudeKit enables rapid implementation of secure, production-ready authentication with industry best practices built-in - from basic JWT to OAuth2 and 2FA in under an hour.
+**Key Takeaway**: Mekong Marketing enables rapid implementation of secure, production-ready authentication with industry best practices built-in - from basic JWT to OAuth2 and 2FA in under an hour.

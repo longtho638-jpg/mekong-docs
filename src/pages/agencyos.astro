@@ -1,0 +1,382 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = 'AgencyOS - Run Your Entire Agency with AI';
+const description = '85+ AI commands for marketing, sales, affiliate, and finance. The one-person agency operating system.';
+---
+
+<LandingLayout title={title} description={description}>
+
+<!-- Hero Section -->
+<div class="relative overflow-hidden pb-10 lg:pb-16">
+  <div class="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8 text-center">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-accent-green)] to-[var(--color-accent-cyan)]">
+        Run your entire agency with AI.
+      </h1>
+
+      <p class="mt-4 text-xl leading-relaxed text-[var(--color-text-secondary)] mb-6">
+        85+ commands. Zero employees. Infinite scale.
+      </p>
+
+      <p class="text-sm text-[var(--color-text-muted)] mb-10">
+        Join 500+ agencies worldwide • 4.9/5 rating • 30-day guarantee
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+        <a href="/docs/getting-started/installation" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-[var(--color-accent-green)] rounded-[var(--radius-md)] hover:brightness-110 transition-all duration-200 shadow-green hover:shadow-lg transform hover:-translate-y-0.5">
+          Start Free Trial
+        </a>
+        <a href="#how-it-works" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[var(--color-text-primary)] bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] rounded-[var(--radius-md)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200">
+          Watch Demo →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Problem Section -->
+<section class="py-12 bg-[var(--color-bg-tertiary)]/30 border-y border-[var(--color-border)]">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <h2 id="the-problem" class="text-3xl font-bold text-center mb-8 text-[var(--color-text-primary)]">
+      Running an agency is exhausting.
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20">
+        <span class="text-red-500 text-xl">❌</span>
+        <span class="text-[var(--color-text-secondary)]">80% of time goes to admin, not clients</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20">
+        <span class="text-red-500 text-xl">❌</span>
+        <span class="text-[var(--color-text-secondary)]">Hiring is expensive and unpredictable</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20">
+        <span class="text-red-500 text-xl">❌</span>
+        <span class="text-[var(--color-text-secondary)]">Scaling means more chaos, not profit</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20">
+        <span class="text-red-500 text-xl">❌</span>
+        <span class="text-[var(--color-text-secondary)]">Always behind on content creation</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20">
+        <span class="text-red-500 text-xl">❌</span>
+        <span class="text-[var(--color-text-secondary)]">Proposals take hours, not minutes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Section -->
+<section class="py-12">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <h2 id="the-solution" class="text-3xl font-bold text-center mb-8 text-[var(--color-text-primary)]">
+      What if AI could run your agency?
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+        <span class="text-green-500 text-xl">✅</span>
+        <span class="text-[var(--color-text-secondary)]">85+ AI commands handle everything</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+        <span class="text-green-500 text-xl">✅</span>
+        <span class="text-[var(--color-text-secondary)]">Marketing content in seconds</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+        <span class="text-green-500 text-xl">✅</span>
+        <span class="text-[var(--color-text-secondary)]">Sales proposals that close</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+        <span class="text-green-500 text-xl">✅</span>
+        <span class="text-[var(--color-text-secondary)]">Built-in affiliate income</span>
+      </div>
+      <div class="flex items-start gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+        <span class="text-green-500 text-xl">✅</span>
+        <span class="text-[var(--color-text-secondary)]">Scale without hiring</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Counter -->
+<section class="py-16 border-b border-[var(--color-border)]">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+      
+      <div class="stat-card">
+        <div class="stat-number text-[var(--color-accent-green)]">85+</div>
+        <div class="stat-label">AI Commands</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-number text-[var(--color-accent-blue)]">500+</div>
+        <div class="stat-label">Agencies</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-number text-[var(--color-accent-purple)]">4.9/5</div>
+        <div class="stat-label">Rating</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-number text-[var(--color-accent-cyan)]">30d</div>
+        <div class="stat-label">Guarantee</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .stat-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent-green);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+</style>
+
+<!-- Features Section -->
+<section class="py-12 bg-[var(--color-bg-tertiary)]/30 border-y border-[var(--color-border)]">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <h2 id="features" class="text-3xl font-bold text-center mb-12 text-[var(--color-text-primary)]">
+      Everything Your Agency Needs
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Marketing -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-green)] transition-all">
+        <div class="text-3xl mb-4">🔥</div>
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Marketing</h3>
+        <p class="text-sm text-[var(--color-text-secondary)] mb-3">/marketing/social</p>
+        <p class="text-[var(--color-text-muted)]">Create 30 posts in 30 minutes. Facebook, TikTok, X, LinkedIn.</p>
+      </div>
+
+      <!-- Sales -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-blue)] transition-all">
+        <div class="text-3xl mb-4">💼</div>
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Sales</h3>
+        <p class="text-sm text-[var(--color-text-secondary)] mb-3">/sales/proposal</p>
+        <p class="text-[var(--color-text-muted)]">AI-powered proposals that win clients. 3x higher close rates.</p>
+      </div>
+
+      <!-- Affiliate -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-purple)] transition-all">
+        <div class="text-3xl mb-4">🎯</div>
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Affiliate</h3>
+        <p class="text-sm text-[var(--color-text-secondary)] mb-3">/affiliate/scout</p>
+        <p class="text-[var(--color-text-muted)]">50+ PayPal-friendly programs. Passive income on autopilot.</p>
+      </div>
+
+      <!-- Finance -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-cyan)] transition-all">
+        <div class="text-3xl mb-4">💰</div>
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Finance</h3>
+        <p class="text-sm text-[var(--color-text-secondary)] mb-3">/finance</p>
+        <p class="text-[var(--color-text-muted)]">Track everything automatically. Revenue, expenses, runway.</p>
+      </div>
+
+      <!-- Strategy -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-yellow)] transition-all">
+        <div class="text-3xl mb-4">🏯</div>
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Strategy</h3>
+        <p class="text-sm text-[var(--color-text-secondary)] mb-3">/binh-phap</p>
+        <p class="text-[var(--color-text-muted)]">Sun Tzu's Art of War for business. 13 strategic clusters.</p>
+      </div>
+
+      <!-- Video -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-pink)] transition-all">
+        <div class="text-3xl mb-4">🎬</div>
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Video</h3>
+        <p class="text-sm text-[var(--color-text-secondary)] mb-3">/video/script</p>
+        <p class="text-[var(--color-text-muted)]">Generate scripts for YouTube, TikTok, Reels in seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-12">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <h2 id="how-it-works" class="text-3xl font-bold text-center mb-12 text-[var(--color-text-primary)]">
+      How It Works
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-accent-green)] flex items-center justify-center text-2xl font-bold text-white">1</div>
+        <h3 class="font-semibold mb-2 text-[var(--color-text-primary)]">Get Access</h3>
+        <p class="text-sm text-[var(--color-text-muted)]">Sign up via Polar.sh. Instant delivery.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-accent-blue)] flex items-center justify-center text-2xl font-bold text-white">2</div>
+        <h3 class="font-semibold mb-2 text-[var(--color-text-primary)]">Open in IDE</h3>
+        <p class="text-sm text-[var(--color-text-muted)]">Works with any IDE. Just clone and open.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-accent-purple)] flex items-center justify-center text-2xl font-bold text-white">3</div>
+        <h3 class="font-semibold mb-2 text-[var(--color-text-primary)]">Run Commands</h3>
+        <p class="text-sm text-[var(--color-text-muted)]">Type /help to see 85+ commands. Pick one.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-accent-cyan)] flex items-center justify-center text-2xl font-bold text-white">4</div>
+        <h3 class="font-semibold mb-2 text-[var(--color-text-primary)]">Profit</h3>
+        <p class="text-sm text-[var(--color-text-muted)]">Content created. Deals closed. Money made.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="py-12 bg-[var(--color-bg-tertiary)]/30 border-y border-[var(--color-border)]">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <h2 id="pricing" class="text-3xl font-bold text-center mb-4 text-[var(--color-text-primary)]">
+      Simple Pricing. Massive Value.
+    </h2>
+    <p class="text-center text-[var(--color-text-muted)] mb-12">All plans include 85+ AI commands</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <!-- Starter -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Starter</h3>
+        <div class="text-3xl font-bold mb-4 text-[var(--color-text-primary)]">$29<span class="text-sm font-normal text-[var(--color-text-muted)]">/month</span></div>
+        <p class="text-sm text-[var(--color-text-muted)] mb-6">Perfect for solo operators</p>
+        <ul class="space-y-2 text-sm text-[var(--color-text-secondary)]">
+          <li>✅ 85+ AI commands</li>
+          <li>✅ Marketing automation</li>
+          <li>✅ Sales proposals</li>
+          <li>✅ Community support</li>
+        </ul>
+      </div>
+
+      <!-- Pro -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border-2 border-[var(--color-accent-green)] relative">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[var(--color-accent-green)] text-white text-xs font-semibold rounded-full">POPULAR</div>
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Pro</h3>
+        <div class="text-3xl font-bold mb-4 text-[var(--color-text-primary)]">$99<span class="text-sm font-normal text-[var(--color-text-muted)]">/month</span></div>
+        <p class="text-sm text-[var(--color-text-muted)] mb-6">For serious agency builders</p>
+        <ul class="space-y-2 text-sm text-[var(--color-text-secondary)]">
+          <li>✅ Everything in Starter</li>
+          <li>✅ 5 team seats</li>
+          <li>✅ Priority support</li>
+          <li>✅ API access</li>
+        </ul>
+      </div>
+
+      <!-- Franchise -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
+        <h3 class="text-lg font-semibold mb-2 text-[var(--color-text-primary)]">Franchise</h3>
+        <div class="text-3xl font-bold mb-4 text-[var(--color-text-primary)]">$299<span class="text-sm font-normal text-[var(--color-text-muted)]">/month</span></div>
+        <p class="text-sm text-[var(--color-text-muted)] mb-6">White-label & resell</p>
+        <ul class="space-y-2 text-sm text-[var(--color-text-secondary)]">
+          <li>✅ Everything in Pro</li>
+          <li>✅ White-label rights</li>
+          <li>✅ Custom domain</li>
+          <li>✅ Revenue share (85%)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12 text-[var(--color-text-primary)]">
+      What Agencies Say
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <!-- Testimonial 1 -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] relative">
+        <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+        <p class="text-[var(--color-text-secondary)] mb-6 italic">
+          "I replaced my entire team with AgencyOS. Not joking. My profit tripled in 3 months."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-[var(--color-accent-green)] to-[var(--color-accent-cyan)] flex items-center justify-center text-white font-bold">S</div>
+          <div>
+            <div class="font-semibold text-[var(--color-text-primary)]">Sarah K.</div>
+            <div class="text-sm text-[var(--color-text-muted)]">Marketing Agency</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] relative">
+        <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+        <p class="text-[var(--color-text-secondary)] mb-6 italic">
+          "From $3K to $15K/month in 90 days. AgencyOS is the unfair advantage I needed."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-[var(--color-accent-blue)] to-[var(--color-accent-purple)] flex items-center justify-center text-white font-bold">M</div>
+          <div>
+            <div class="font-semibold text-[var(--color-text-primary)]">Mike T.</div>
+            <div class="text-sm text-[var(--color-text-muted)]">Freelancer → Agency Owner</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="p-6 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] relative">
+        <div class="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+        <p class="text-[var(--color-text-secondary)] mb-6 italic">
+          "The affiliate feature alone pays for itself. 10x ROI in month one."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-[var(--color-accent-purple)] to-[var(--color-accent-pink)] flex items-center justify-center text-white font-bold">D</div>
+          <div>
+            <div class="font-semibold text-[var(--color-text-primary)]">David L.</div>
+            <div class="text-sm text-[var(--color-text-muted)]">Content Creator</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-16">
+  <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8 text-center">
+    <h2 id="get-started" class="text-3xl font-bold mb-4 text-[var(--color-text-primary)]">
+      Ready to automate your agency?
+    </h2>
+    <p class="text-lg text-[var(--color-text-muted)] mb-8">
+      Start free. Cancel anytime. Win forever.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="/docs/getting-started/installation" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-[var(--color-accent-green)] rounded-[var(--radius-md)] hover:brightness-110 transition-all duration-200 shadow-green hover:shadow-lg transform hover:-translate-y-0.5">
+        Start Free Trial
+      </a>
+      <a href="mailto:hello@agencyos.network" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[var(--color-accent-green)] bg-transparent border border-[var(--color-accent-green)] rounded-[var(--radius-md)] hover:bg-[var(--color-accent-green)]/10 transition-all duration-200">
+        Book a Demo
+      </a>
+    </div>
+  </div>
+</section>
+
+</LandingLayout>

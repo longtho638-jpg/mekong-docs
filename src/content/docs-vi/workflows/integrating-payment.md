@@ -14,7 +14,7 @@ published: true
 
 # Integrating Payment Processing
 
-Learn how to integrate payment processing with ClaudeKit - from one-time payments to subscriptions, webhooks, and revenue optimization.
+Learn how to integrate payment processing with Mekong Marketing - from one-time payments to subscriptions, webhooks, and revenue optimization.
 
 ## Overview
 
@@ -564,7 +564,7 @@ Implement payment system for SaaS platform:
 - Testing: 1-2 hours
 - Debugging: 1-2 hours
 
-**With ClaudeKit**: 48 minutes
+**With Mekong Marketing**: 48 minutes
 - Planning: 6 minutes
 - Stripe setup: 15 minutes
 - Subscriptions: 12 minutes
@@ -663,7 +663,7 @@ const processWebhook = async (event) => {
 # Test webhook locally with Stripe CLI
 stripe listen --forward-to localhost:3000/api/webhooks/stripe
 
-# Or fix with ClaudeKit
+# Or fix with Mekong Marketing
 /fix:fast [Stripe webhooks not being received]
 ```
 
@@ -734,4 +734,4 @@ Before production:
 
 ---
 
-**Key Takeaway**: ClaudeKit enables rapid payment integration with built-in security, webhook handling, and best practices - from simple one-time payments to complex subscription systems in under an hour.
+**Key Takeaway**: Mekong Marketing enables rapid payment integration with built-in security, webhook handling, and best practices - from simple one-time payments to complex subscription systems in under an hour.

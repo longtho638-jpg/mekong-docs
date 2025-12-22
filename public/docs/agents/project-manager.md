@@ -596,7 +596,7 @@ After Feature Completion:
 # Project Roadmap
 
 ## Project Overview
-- **Project**: ClaudeKit Platform
+- **Project**: Mekong Marketing Platform
 - **Version**: 2.0.0
 - **Current Phase**: Phase 2 - Core Features
 - **Last Updated**: 2025-10-30

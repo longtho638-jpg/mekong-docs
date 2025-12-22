@@ -1,6 +1,6 @@
 ---
 title: "Core Concepts"
-description: "Understand how ClaudeKit's agents, commands, and skills architecture works"
+description: "Understand how Mekong Marketing's agents, commands, and skills architecture works"
 section: getting-started
 order: 2
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Core Concepts
 
-ClaudeKit's power comes from three interconnected systems: **Agents**, **Commands**, and **Skills**.
+Mekong Marketing's power comes from three interconnected systems: **Agents**, **Commands**, and **Skills**.
 
 ## Agents
 
@@ -121,7 +121,7 @@ All agent behaviors, skills, and workflows configured in `.claude/CLAUDE.md`:
 
 ## Next Steps
 
-- **[Installation](/docs/getting-started/installation)** - Install ClaudeKit
+- **[Installation](/docs/getting-started/installation)** - Install Mekong Marketing
 - **[Quick Start](/docs/getting-started/quick-start)** - Try your first command
 - **[Commands Reference](/docs/commands)** - Explore all commands
 - **[Agents Reference](/docs/agents)** - Learn about each agent

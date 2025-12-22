@@ -142,13 +142,13 @@ Creates testing plan:
 ### Product Page Copy
 
 ```bash
-/content:cro [optimize product page copy for ClaudeKit Pro subscription]
+/content:cro [optimize product page copy for Mekong Marketing Pro subscription]
 ```
 
 **What happens:**
 ```
 1. Analysis
-   Product: ClaudeKit Pro ($49/month)
+   Product: Mekong Marketing Pro ($49/month)
    Goal: Increase subscription conversions
 
    Current issues:
@@ -232,7 +232,7 @@ Creates testing plan:
    EMAIL 1 (Day 0 - Welcome)
 
    Before:
-   Subject: "Welcome to ClaudeKit!"
+   Subject: "Welcome to Mekong Marketing!"
 
    After:
    Subject: "Your first AI agent is ready 🚀"
@@ -265,7 +265,7 @@ Creates testing plan:
 3. A/B Testing Plan
 
    Test: Subject Lines (Email 1)
-   A: "Welcome to ClaudeKit!"
+   A: "Welcome to Mekong Marketing!"
    B: "Your first AI agent is ready 🚀"
    Metric: Open rate
    Expected lift: 20-35%

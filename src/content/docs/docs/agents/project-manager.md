@@ -76,4 +76,4 @@ Senior orchestrator for tracking progress, collecting agent reports, maintaining
 
 ## Key Takeaway
 
-The project-manager is ClaudeKit's orchestration layer: it doesn't code, test, or write docs—it tracks, reports, delegates, and maintains the single source of truth (project-roadmap.md) so your multi-agent system stays aligned.
+The project-manager is Mekong Marketing's orchestration layer: it doesn't code, test, or write docs—it tracks, reports, delegates, and maintains the single source of truth (project-roadmap.md) so your multi-agent system stays aligned.

@@ -1,6 +1,6 @@
 # Deployment Guide
 
-**Project:** ClaudeKit Documentation
+**Project:** Mekong Marketing Documentation
 **Version:** 1.0
 **Last Updated:** 2025-10-18
 **Target Environment:** Production (Kubernetes)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This guide covers deploying ClaudeKit Documentation to production using Docker and Kubernetes. The deployment process includes building containerized images, configuring Kubernetes resources, and setting up SSL certificates.
+This guide covers deploying Mekong Marketing Documentation to production using Docker and Kubernetes. The deployment process includes building containerized images, configuring Kubernetes resources, and setting up SSL certificates.
 
 **Deployment Architecture:**
 - **Container Runtime:** Docker
@@ -66,8 +66,8 @@ This guide covers deploying ClaudeKit Documentation to production using Docker a
 ### 1.1 Clone Repository
 
 ```bash
-git clone https://github.com/claudekit/claudekit-docs.git
-cd claudekit-docs
+git clone https://github.com/mekong/mekong-docs.git
+cd mekong-docs
 ```
 
 ### 1.2 Install Dependencies
@@ -108,10 +108,10 @@ Visit http://localhost:4321
 
 ```bash
 # Build image
-docker build -t claudekit-docs:local .
+docker build -t mekong-docs:local .
 
 # Verify image
-docker images | grep claudekit-docs
+docker images | grep mekong-docs
 ```
 
 ### 2.2 Run Container Locally
@@ -119,12 +119,12 @@ docker images | grep claudekit-docs
 ```bash
 # Run container
 docker run -d \
-  --name claudekit-docs \
+  --name mekong-docs \
   -p 3000:3000 \
-  claudekit-docs:local
+  mekong-docs:local
 
 # Check logs
-docker logs claudekit-docs
+docker logs mekong-docs
 
 # Test
 curl http://localhost:3000
@@ -133,8 +133,8 @@ curl http://localhost:3000
 ### 2.3 Stop and Remove Container
 
 ```bash
-docker stop claudekit-docs
-docker rm claudekit-docs
+docker stop mekong-docs
+docker rm mekong-docs
 ```
 
 ---
@@ -162,18 +162,18 @@ echo $GITHUB_TOKEN | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-std
 
 ```bash
 # Tag image for GHCR
-docker tag claudekit-docs:local ghcr.io/claudekit/claudekit-docs:latest
-docker tag claudekit-docs:local ghcr.io/claudekit/claudekit-docs:v1.0.0
+docker tag mekong-docs:local ghcr.io/mekong/mekong-docs:latest
+docker tag mekong-docs:local ghcr.io/mekong/mekong-docs:v1.0.0
 
 # Push images
-docker push ghcr.io/claudekit/claudekit-docs:latest
-docker push ghcr.io/claudekit/claudekit-docs:v1.0.0
+docker push ghcr.io/mekong/mekong-docs:latest
+docker push ghcr.io/mekong/mekong-docs:v1.0.0
 ```
 
 ### 3.4 Verify Push
 
-1. Go to https://github.com/orgs/claudekit/packages
-2. Find `claudekit-docs` package
+1. Go to https://github.com/orgs/mekong/packages
+2. Find `mekong-docs` package
 3. Verify tags exist: `latest`, `v1.0.0`
 
 ---
@@ -226,7 +226,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: admin@claudekit.cc  # Change to your email
+    email: admin@mekongmarketing.com  # Change to your email
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
@@ -288,81 +288,81 @@ kubectl apply -f k8s/ingress.yaml
 
 ```bash
 # List pods
-kubectl get pods -l app=claudekit-docs
+kubectl get pods -l app=mekong-docs
 
 # Expected output:
 # NAME                              READY   STATUS    RESTARTS   AGE
-# claudekit-docs-xxxxxxxxx-xxxxx    1/1     Running   0          30s
-# claudekit-docs-xxxxxxxxx-xxxxx    1/1     Running   0          30s
+# mekong-docs-xxxxxxxxx-xxxxx    1/1     Running   0          30s
+# mekong-docs-xxxxxxxxx-xxxxx    1/1     Running   0          30s
 ```
 
 **Check Deployment:**
 
 ```bash
-kubectl get deployment claudekit-docs
+kubectl get deployment mekong-docs
 
 # Expected output:
 # NAME             READY   UP-TO-DATE   AVAILABLE   AGE
-# claudekit-docs   2/2     2            2           1m
+# mekong-docs   2/2     2            2           1m
 ```
 
 **Check Service:**
 
 ```bash
-kubectl get svc claudekit-docs
+kubectl get svc mekong-docs
 
 # Expected output:
 # NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-# claudekit-docs   ClusterIP   10.96.xxx.xxx   <none>        80/TCP    1m
+# mekong-docs   ClusterIP   10.96.xxx.xxx   <none>        80/TCP    1m
 ```
 
 **Check Ingress:**
 
 ```bash
-kubectl get ingress claudekit-docs
+kubectl get ingress mekong-docs
 
 # Expected output:
 # NAME             CLASS   HOSTS                 ADDRESS         PORTS     AGE
-# claudekit-docs   nginx   docs.claudekit.cc     x.x.x.x         80, 443   1m
+# mekong-docs   nginx   docs.mekongmarketing.com     x.x.x.x         80, 443   1m
 ```
 
 **Check Certificate:**
 
 ```bash
-kubectl get certificate claudekit-docs-tls
+kubectl get certificate mekong-docs-tls
 
 # Expected output:
 # NAME                   READY   SECRET                 AGE
-# claudekit-docs-tls     True    claudekit-docs-tls     2m
+# mekong-docs-tls     True    mekong-docs-tls     2m
 ```
 
 ### 5.4 View Logs
 
 ```bash
 # Stream logs from all pods
-kubectl logs -l app=claudekit-docs --follow
+kubectl logs -l app=mekong-docs --follow
 
 # Logs from specific pod
-kubectl logs claudekit-docs-xxxxxxxxx-xxxxx
+kubectl logs mekong-docs-xxxxxxxxx-xxxxx
 
 # Previous logs (if pod restarted)
-kubectl logs claudekit-docs-xxxxxxxxx-xxxxx --previous
+kubectl logs mekong-docs-xxxxxxxxx-xxxxx --previous
 ```
 
 ### 5.5 Describe Resources (Troubleshooting)
 
 ```bash
 # Describe pod (shows events)
-kubectl describe pod claudekit-docs-xxxxxxxxx-xxxxx
+kubectl describe pod mekong-docs-xxxxxxxxx-xxxxx
 
 # Describe deployment
-kubectl describe deployment claudekit-docs
+kubectl describe deployment mekong-docs
 
 # Describe ingress
-kubectl describe ingress claudekit-docs
+kubectl describe ingress mekong-docs
 
 # Describe certificate
-kubectl describe certificate claudekit-docs-tls
+kubectl describe certificate mekong-docs-tls
 ```
 
 ---
@@ -391,30 +391,30 @@ TTL: 300 (or your preferred value)
 **Example (CloudFlare, Namecheap, etc.):**
 
 ```
-docs.claudekit.cc → 203.0.113.10
+docs.mekongmarketing.com → 203.0.113.10
 ```
 
 ### 6.3 Verify DNS Propagation
 
 ```bash
 # Check DNS resolution
-nslookup docs.claudekit.cc
+nslookup docs.mekongmarketing.com
 
 # Or use dig
-dig docs.claudekit.cc +short
+dig docs.mekongmarketing.com +short
 ```
 
 ### 6.4 Test HTTPS
 
 ```bash
 # Test HTTP (should redirect to HTTPS)
-curl -I http://docs.claudekit.cc
+curl -I http://docs.mekongmarketing.com
 
 # Test HTTPS
-curl -I https://docs.claudekit.cc
+curl -I https://docs.mekongmarketing.com
 
 # Or visit in browser
-open https://docs.claudekit.cc
+open https://docs.mekongmarketing.com
 ```
 
 ---
@@ -428,28 +428,28 @@ open https://docs.claudekit.cc
 git pull origin main
 
 # 2. Build and push new image
-docker build -t ghcr.io/claudekit/claudekit-docs:v1.0.1 .
-docker push ghcr.io/claudekit/claudekit-docs:v1.0.1
+docker build -t ghcr.io/mekong/mekong-docs:v1.0.1 .
+docker push ghcr.io/mekong/mekong-docs:v1.0.1
 
 # 3. Update deployment
-kubectl set image deployment/claudekit-docs \
-  claudekit-docs=ghcr.io/claudekit/claudekit-docs:v1.0.1
+kubectl set image deployment/mekong-docs \
+  mekong-docs=ghcr.io/mekong/mekong-docs:v1.0.1
 
 # 4. Check rollout status
-kubectl rollout status deployment/claudekit-docs
+kubectl rollout status deployment/mekong-docs
 ```
 
 ### 7.2 Rollback Deployment
 
 ```bash
 # View rollout history
-kubectl rollout history deployment/claudekit-docs
+kubectl rollout history deployment/mekong-docs
 
 # Rollback to previous version
-kubectl rollout undo deployment/claudekit-docs
+kubectl rollout undo deployment/mekong-docs
 
 # Rollback to specific revision
-kubectl rollout undo deployment/claudekit-docs --to-revision=2
+kubectl rollout undo deployment/mekong-docs --to-revision=2
 ```
 
 ### 7.3 Zero-Downtime Rolling Update
@@ -463,7 +463,7 @@ kubectl rollout undo deployment/claudekit-docs --to-revision=2
 
 ```bash
 # Watch pod status during update
-kubectl get pods -l app=claudekit-docs --watch
+kubectl get pods -l app=mekong-docs --watch
 ```
 
 ---
@@ -474,10 +474,10 @@ kubectl get pods -l app=claudekit-docs --watch
 
 ```bash
 # Scale to 5 replicas
-kubectl scale deployment claudekit-docs --replicas=5
+kubectl scale deployment mekong-docs --replicas=5
 
 # Verify scaling
-kubectl get pods -l app=claudekit-docs
+kubectl get pods -l app=mekong-docs
 ```
 
 ### 8.2 Horizontal Pod Autoscaling (HPA)
@@ -485,7 +485,7 @@ kubectl get pods -l app=claudekit-docs
 **Create HPA:**
 
 ```bash
-kubectl autoscale deployment claudekit-docs \
+kubectl autoscale deployment mekong-docs \
   --cpu-percent=70 \
   --min=2 \
   --max=10
@@ -500,12 +500,12 @@ kubectl get hpa
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: claudekit-docs-hpa
+  name: mekong-docs-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: claudekit-docs
+    name: mekong-docs
   minReplicas: 2
   maxReplicas: 10
   metrics:
@@ -525,7 +525,7 @@ spec:
 
 ```bash
 # Pod resource usage
-kubectl top pods -l app=claudekit-docs
+kubectl top pods -l app=mekong-docs
 
 # Node resource usage
 kubectl top nodes
@@ -535,7 +535,7 @@ kubectl top nodes
 
 ```bash
 # Port-forward for local testing
-kubectl port-forward svc/claudekit-docs 8080:80
+kubectl port-forward svc/mekong-docs 8080:80
 
 # Test health endpoint
 curl http://localhost:8080
@@ -548,7 +548,7 @@ curl http://localhost:8080
 kubectl get events --watch
 
 # Filter events for deployment
-kubectl get events --field-selector involvedObject.name=claudekit-docs
+kubectl get events --field-selector involvedObject.name=mekong-docs
 ```
 
 ---
@@ -563,13 +563,13 @@ kubectl get events --field-selector involvedObject.name=claudekit-docs
 
 ```bash
 # Check pod status
-kubectl get pods -l app=claudekit-docs
+kubectl get pods -l app=mekong-docs
 
 # Describe pod for events
-kubectl describe pod claudekit-docs-xxxxxxxxx-xxxxx
+kubectl describe pod mekong-docs-xxxxxxxxx-xxxxx
 
 # Check logs
-kubectl logs claudekit-docs-xxxxxxxxx-xxxxx
+kubectl logs mekong-docs-xxxxxxxxx-xxxxx
 ```
 
 **Common Causes:**
@@ -585,7 +585,7 @@ kubectl logs claudekit-docs-xxxxxxxxx-xxxxx
 
 - **Failed Health Checks:** Liveness/readiness probes failing
   ```bash
-  kubectl logs claudekit-docs-xxxxxxxxx-xxxxx
+  kubectl logs mekong-docs-xxxxxxxxx-xxxxx
   ```
 
 ### 10.2 Ingress Not Working
@@ -596,8 +596,8 @@ kubectl logs claudekit-docs-xxxxxxxxx-xxxxx
 
 ```bash
 # Check ingress
-kubectl get ingress claudekit-docs
-kubectl describe ingress claudekit-docs
+kubectl get ingress mekong-docs
+kubectl describe ingress mekong-docs
 
 # Check nginx-ingress logs
 kubectl logs -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx
@@ -606,7 +606,7 @@ kubectl logs -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx
 **Common Causes:**
 - **DNS Not Propagated:** Wait up to 48 hours
   ```bash
-  nslookup docs.claudekit.cc
+  nslookup docs.mekongmarketing.com
   ```
 
 - **Ingress Class Mismatch:** Verify `ingressClassName: nginx`
@@ -620,15 +620,15 @@ kubectl logs -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx
 
 ```bash
 # Check certificate
-kubectl get certificate claudekit-docs-tls
-kubectl describe certificate claudekit-docs-tls
+kubectl get certificate mekong-docs-tls
+kubectl describe certificate mekong-docs-tls
 
 # Check cert-manager logs
 kubectl logs -n cert-manager -l app=cert-manager
 
 # Check certificate request
 kubectl get certificaterequest
-kubectl describe certificaterequest claudekit-docs-tls-xxxxx
+kubectl describe certificaterequest mekong-docs-tls-xxxxx
 ```
 
 **Common Causes:**
@@ -644,20 +644,20 @@ kubectl describe certificaterequest claudekit-docs-tls-xxxxx
 
 ```bash
 # Check resource usage
-kubectl top pods -l app=claudekit-docs
+kubectl top pods -l app=mekong-docs
 kubectl top nodes
 
 # Check HPA status
 kubectl get hpa
 
 # Check pod events
-kubectl describe pod claudekit-docs-xxxxxxxxx-xxxxx
+kubectl describe pod mekong-docs-xxxxxxxxx-xxxxx
 ```
 
 **Solutions:**
 - **Scale Up:** Increase replicas manually or via HPA
   ```bash
-  kubectl scale deployment claudekit-docs --replicas=5
+  kubectl scale deployment mekong-docs --replicas=5
   ```
 
 - **Increase Resources:** Update `deployment.yaml` limits
@@ -714,8 +714,8 @@ kubectl describe pod claudekit-docs-xxxxxxxxx-xxxxx
 4. **Restore Application:**
    ```bash
    # Clone repository
-   git clone https://github.com/claudekit/claudekit-docs.git
-   cd claudekit-docs
+   git clone https://github.com/mekong/mekong-docs.git
+   cd mekong-docs
 
    # Recreate secrets
    kubectl create secret docker-registry github-registry \
@@ -772,8 +772,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/claudekit/claudekit-docs:latest
-            ghcr.io/claudekit/claudekit-docs:${{ github.sha }}
+            ghcr.io/mekong/mekong-docs:latest
+            ghcr.io/mekong/mekong-docs:${{ github.sha }}
 
       - name: Configure kubectl
         uses: azure/k8s-set-context@v3
@@ -783,9 +783,9 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: |
-          kubectl set image deployment/claudekit-docs \
-            claudekit-docs=ghcr.io/claudekit/claudekit-docs:${{ github.sha }}
-          kubectl rollout status deployment/claudekit-docs
+          kubectl set image deployment/mekong-docs \
+            mekong-docs=ghcr.io/mekong/mekong-docs:${{ github.sha }}
+          kubectl rollout status deployment/mekong-docs
 ```
 
 ### 12.2 Required Secrets
@@ -820,11 +820,11 @@ git push origin main
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: claudekit-docs-netpol
+  name: mekong-docs-netpol
 spec:
   podSelector:
     matchLabels:
-      app: claudekit-docs
+      app: mekong-docs
   policyTypes:
     - Ingress
   ingress:
@@ -850,7 +850,7 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
       containers:
-        - name: claudekit-docs
+        - name: mekong-docs
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
@@ -867,7 +867,7 @@ spec:
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: claudekit-docs-quota
+  name: mekong-docs-quota
 spec:
   hard:
     requests.cpu: "2"
@@ -881,7 +881,7 @@ spec:
 
 ## Conclusion
 
-You now have a production-ready ClaudeKit Documentation deployment on Kubernetes with:
+You now have a production-ready Mekong Marketing Documentation deployment on Kubernetes with:
 
 - ✅ Containerized application (Docker)
 - ✅ Orchestrated deployment (Kubernetes)

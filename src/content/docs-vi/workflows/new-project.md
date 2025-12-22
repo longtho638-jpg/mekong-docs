@@ -10,14 +10,14 @@ lastUpdated: 2025-11-07
 
 # Dự Án Greenfield
 
-Tạo dự án mới từ đầu với quy trình phát triển AI-powered của ClaudeKit. Biến ý tưởng thành ứng dụng production nhanh chóng với intelligent agents.
+Tạo dự án mới từ đầu với quy trình phát triển AI-powered của Mekong Marketing. Biến ý tưởng thành ứng dụng production nhanh chóng với intelligent agents.
 
 ## Cài Đặt
 
-### 1. Cài ClaudeKit CLI
+### 1. Cài Mekong Marketing CLI
 
 ```bash
-npm i -g claudekit-cli@latest
+npm i -g mekong-cli@latest
 ```
 
 ## Bắt Đầu Nhanh
@@ -25,12 +25,12 @@ npm i -g claudekit-cli@latest
 ### Phương Pháp 1: Bootstrap Dự Án Mới
 
 ```bash
-# Tạo dự án mới với ClaudeKit Engineer kit
+# Tạo dự án mới với Mekong Marketing Engineer kit
 ck new --kit engineer --dir /đường/dẫn/đến/dự/án
 ```
 
 **Tùy chọn:**
-- `--kit engineer`: Cài ClaudeKit Engineer configuration
+- `--kit engineer`: Cài Mekong Marketing Engineer configuration
 - `--dir`: Thư mục đích cho dự án
 
 ### Phương Pháp 2: Thiết Lập Thủ Công
@@ -43,7 +43,7 @@ cd dự-án-tuyệt-vời
 # Khởi tạo git (tùy chọn nhưng nên có)
 git init
 
-# Khởi động Claude Code
+# Khởi động Mekong CLI
 claude
 ```
 
@@ -127,11 +127,11 @@ Chạy chế độ tự động hoàn toàn không cần review plan. CC sẽ:
 
 ### Cấu Trúc Dự Án
 
-ClaudeKit tạo cấu trúc dự án chuẩn:
+Mekong Marketing tạo cấu trúc dự án chuẩn:
 
 ```
 dự-án-của-tôi/
-├── .claude/           # ClaudeKit configuration
+├── .claude/           # Mekong Marketing configuration
 ├── docs/              # Tài liệu đã tạo
 │   ├── project-overview-pdr.md
 │   ├── system-architecture.md
@@ -144,7 +144,7 @@ dự-án-của-tôi/
 
 ### Tiếp Tục Phát Triển
 
-Dùng tất cả lệnh ClaudeKit cho phát triển tiếp:
+Dùng tất cả lệnh Mekong Marketing cho phát triển tiếp:
 
 #### Thêm Tính Năng Mới
 ```bash
@@ -352,7 +352,7 @@ Bắt đầu với chức năng cốt lõi, sau đó mở rộng:
 ```bash
 # Sau bootstrap
 git add .
-git commit -m "Khởi tạo dự án qua ClaudeKit bootstrap"
+git commit -m "Khởi tạo dự án qua Mekong Marketing bootstrap"
 
 # Sau mỗi tính năng
 /git:cp
@@ -408,4 +408,4 @@ Sau khi bootstrap dự án:
 
 **Sẵn sàng xây dựng?** Bắt đầu với `/bootstrap` và để AI agents xử lý phần nặng nhọc. Nhớ **xem kỹ kế hoạch** trước khi đồng ý!
 
-**Cần giúp?** Truy cập [GitHub Discussions](https://github.com/mrgoonie/claudekit-cli/discussions)
+**Cần giúp?** Truy cập [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)

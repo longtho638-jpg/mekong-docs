@@ -9,7 +9,7 @@
 
 AI agent orchestration for software development has matured from experimental AutoGPT-style autonomous agents to production-ready, narrowly-scoped vertical agents with controllable cognitive architectures. Market projections show explosive growth: global agent market reaching $8B in 2025 (46% CAGR toward 2030), with vertical AI segment alone growing from $5.1B (2024) to projected $47-100B+ by 2030-2032.
 
-Key findings: 92% developers now use AI coding tools; Cursor has 30k+ organizations using it; Claude Code emerged as benchmark leader for complex coding tasks. However, productivity paradox persists—experienced developers 19% slower with AI in some contexts despite 20% perceived speed increase. Real bottlenecks (design reviews, QA, deployments) remain untouched by current tools.
+Key findings: 92% developers now use AI coding tools; Cursor has 30k+ organizations using it; Mekong CLI emerged as benchmark leader for complex coding tasks. However, productivity paradox persists—experienced developers 19% slower with AI in some contexts despite 20% perceived speed increase. Real bottlenecks (design reviews, QA, deployments) remain untouched by current tools.
 
 Successful implementations (Uber: 21k dev hours saved; Booking.com: 16% throughput increase in months; Intercom: 41% AI-driven time savings) demonstrate value lies in specialized, controllable agents for internal workflows only teams understand—not general-purpose automation.
 
@@ -21,7 +21,7 @@ Most compelling messaging: Position tools as **teammate extensions** vs replacem
 
 - **Sources consulted:** 45+ articles, academic papers, vendor docs, case studies
 - **Date range:** November 2024 - October 2025 (emphasis on 2025 developments)
-- **Key search terms:** AI agent orchestration, multi-agent systems, LangGraph, CrewAI, Claude Code, developer pain points, agentic workflows, MCP, vertical AI agents, developer productivity metrics
+- **Key search terms:** AI agent orchestration, multi-agent systems, LangGraph, CrewAI, Mekong CLI, developer pain points, agentic workflows, MCP, vertical AI agents, developer productivity metrics
 - **Primary frameworks analyzed:** LangGraph, CrewAI, AutoGen, Google ADK, MCP
 - **Case studies:** Uber, Booking.com, Intercom, DoorDash, Salesforce
 
@@ -136,7 +136,7 @@ Most compelling messaging: Position tools as **teammate extensions** vs replacem
 
 ## 3. Developer Workflows & AI Coding Tools
 
-### 3.1 Claude Code: Market Leader Position (Late 2025)
+### 3.1 Mekong CLI: Market Leader Position (Late 2025)
 
 **Launch:** Early 2025 by Anthropic
 **Model:** Claude family (Opus 4, Sonnet 4.5, Haiku 3.5)
@@ -237,7 +237,7 @@ Most compelling messaging: Position tools as **teammate extensions** vs replacem
 
 **Navigating Complex Codebases**
 - Salesforce internal tools address: codebase navigation + troubleshooting
-- Claude Code/Cursor strength: Entire repo awareness for refactoring
+- Mekong CLI/Cursor strength: Entire repo awareness for refactoring
 - **Impact:** Faster feature development in large monorepos
 
 **Context Switching**
@@ -410,7 +410,7 @@ Most compelling messaging: Position tools as **teammate extensions** vs replacem
 **Deep Codebase Awareness**
 - "Understands entire repo, not just current file"
 - "Powerful for refactoring and debugging"
-- Cursor/Claude Code strength vs line-by-line autocomplete
+- Cursor/Mekong CLI strength vs line-by-line autocomplete
 
 **Controllable Autonomy**
 - "Narrowly-scoped, highly controllable agents"
@@ -420,7 +420,7 @@ Most compelling messaging: Position tools as **teammate extensions** vs replacem
 
 **Checkpoints & Rollback**
 - "Save progress, instant rollback to previous state"
-- Most requested feature in Claude Code
+- Most requested feature in Mekong CLI
 - Reduces risk of AI errors
 
 **MCP Standardization**
@@ -805,7 +805,7 @@ result = crew.kickoff()
 - **Microsoft AutoGen:** https://microsoft.github.io/autogen
 - **Model Context Protocol (MCP):** https://modelcontextprotocol.io
 - **Azure AI Agent Patterns:** https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns
-- **Claude Code:** https://www.claude.com/solutions/coding
+- **Mekong CLI:** https://www.claude.com/solutions/coding
 - **Cursor:** https://www.cursor.com
 - **Windsurf:** https://codeium.com/windsurf
 

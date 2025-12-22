@@ -163,7 +163,7 @@ After running `/bootstrap`, you'll have:
 
 ```
 my-project/
-├── .claude/              # ClaudeKit configuration
+├── .claude/              # Mekong Marketing configuration
 │   ├── commands/         # Custom slash commands
 │   ├── agents/           # Agent definitions
 │   └── workflows/        # Development workflows

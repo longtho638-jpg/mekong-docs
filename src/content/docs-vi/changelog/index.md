@@ -1,6 +1,6 @@
 ---
 title: "Changelog"
-description: "Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho ClaudeKit"
+description: "Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong Marketing"
 section: changelog
 order: 0
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Changelog
 
-Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho ClaudeKit.
+Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong Marketing.
 
 ## Phiên bản mới nhất
 
@@ -46,14 +46,14 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho ClaudeK
 **Cải thiện kiến trúc thông tin**:
 - Hệ thống điều hướng theo ngữ cảnh mới
 - Tách onboarding khỏi nội dung marketing
-- Tạo trang "Why ClaudeKit" riêng
+- Tạo trang "Why Mekong Marketing" riêng
 - Thêm hướng dẫn workflow toàn diện
 - Tái cấu trúc nội dung thành 5 section chính
 
 **Trang tài liệu mới**:
 - Section Getting Started với lộ trình học rõ ràng
 - Core Concepts giải thích agents/commands/skills
-- Hướng dẫn nâng cấp cho người dùng Claude Code hiện tại
+- Hướng dẫn nâng cấp cho người dùng Mekong CLI hiện tại
 - Hướng dẫn workflow phát triển tính năng
 - Phương pháp sửa lỗi có hệ thống
 - Workflow duy trì tài liệu
@@ -67,16 +67,16 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho ClaudeK
 ### Giai đoạn Beta Testing - 2024-10-15 đến 2024-11-30
 
 **Bài học chính**:
-- Người dùng hoàn thành tính năng nhanh hơn 10x với ClaudeKit
+- Người dùng hoàn thành tính năng nhanh hơn 10x với Mekong Marketing
 - Multi-agent collaboration giảm bug 80%
 - Testing tự động phát hiện issue trước production
 - Đồng bộ tài liệu loại bỏ docs lỗi thời
 - Team đạt chất lượng code nhất quán giữa các thành viên
 
 **Phản hồi Beta Tester**:
-> "ClaudeKit đã thay đổi cách team chúng tôi build tính năng. Những gì trước đây mất nhiều ngày giờ chỉ mất vài giờ." - Senior Developer, Tech Startup
+> "Mekong Marketing đã thay đổi cách team chúng tôi build tính năng. Những gì trước đây mất nhiều ngày giờ chỉ mất vài giờ." - Senior Developer, Tech Startup
 
-> "Chất lượng code do ClaudeKit agent tạo ra rất ấn tượng. Nó tự động tuân theo pattern và best practice của chúng tôi." - Engineering Manager, Enterprise
+> "Chất lượng code do Mekong Marketing agent tạo ra rất ấn tượng. Nó tự động tuân theo pattern và best practice của chúng tôi." - Engineering Manager, Enterprise
 
 ## Lịch sử phiên bản
 
@@ -120,7 +120,7 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho ClaudeK
 ### Hướng dẫn Migration
 ```bash
 # Cập nhật lên v1.0.0
-npm update claudekit-cli
+npm update mekong-cli
 
 # Migrate cấu hình
 ck migrate
@@ -156,13 +156,13 @@ ck doctor
 ```
 Triển khai tính năng (Complex CRUD):
 - Thủ công: 8 giờ, 15 bug
-- ClaudeKit v0.9: 45 phút, 2 bug
-- ClaudeKit v1.0: 20 phút, 0 bug
+- Mekong Marketing v0.9: 45 phút, 2 bug
+- Mekong Marketing v1.0: 20 phút, 0 bug
 
 Giải quyết bug:
 - Debug thủ công: trung bình 2 giờ
-- ClaudeKit v0.9: trung bình 20 phút
-- ClaudeKit v1.0: trung bình 5 phút
+- Mekong Marketing v0.9: trung bình 20 phút
+- Mekong Marketing v1.0: trung bình 5 phút
 ```
 
 ## Đóng góp cộng đồng
@@ -212,19 +212,19 @@ Giải quyết bug:
 ## Hỗ trợ và tài nguyên
 
 ### Nhận trợ giúp
-- [Discord Community](https://claudekit.cc/discord) - Chat real-time với cộng đồng
-- [GitHub Issues](https://github.com/claudekit/claudekit/issues) - Báo cáo bug và yêu cầu tính năng
+- [Discord Community](https://mekongmarketing.com/discord) - Chat real-time với cộng đồng
+- [GitHub Issues](https://github.com/mekong/mekong/issues) - Báo cáo bug và yêu cầu tính năng
 - [Documentation](../) - Tài liệu tham khảo đầy đủ
-- [Email Support](mailto:support@claudekit.cc) - Hỗ trợ doanh nghiệp
+- [Email Support](mailto:support@mekongmarketing.com) - Hỗ trợ doanh nghiệp
 
 ### Đóng góp
-- [Contributing Guide](../development/contributing.md) - Cách đóng góp cho ClaudeKit
+- [Contributing Guide](../development/contributing.md) - Cách đóng góp cho Mekong Marketing
 - [Skill Development](../development/creating-skills.md) - Tạo skill tùy chỉnh
-- [Plugin Development](../development/plugins.md) - Mở rộng chức năng ClaudeKit
-- [Translation Project](https://translate.claudekit.cc) - Giúp dịch ClaudeKit
+- [Plugin Development](../development/plugins.md) - Mở rộng chức năng Mekong Marketing
+- [Translation Project](https://translate.mekongmarketing.com) - Giúp dịch Mekong Marketing
 
 ---
 
-**Cập nhật**: Tham gia [Discord](https://claudekit.cc/discord) để nhận thông báo và cập nhật.
+**Cập nhật**: Tham gia [Discord](https://mekongmarketing.com/discord) để nhận thông báo và cập nhật.
 
 **Chu kỳ phát hành**: Phát hành định kỳ vào ngày 1 mỗi tháng. Bản vá bảo mật phát hành khi cần.

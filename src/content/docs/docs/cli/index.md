@@ -12,15 +12,15 @@ order: 0
 published: true
 ---
 
-# ClaudeKit CLI Overview
+# Mekong Marketing CLI Overview
 
-Command-line tool for bootstrapping and updating ClaudeKit projects from private GitHub repository releases.
+Command-line tool for bootstrapping and updating Mekong Marketing projects from private GitHub repository releases.
 
-## What is ClaudeKit CLI?
+## What is Mekong Marketing CLI?
 
-**ClaudeKit CLI** (`ck`) is a command-line tool that downloads and manages ClaudeKit starter kits from private GitHub repositories. Built with Bun and TypeScript, it provides fast, secure project setup and updates.
+**Mekong Marketing CLI** (`ck`) is a command-line tool that downloads and manages Mekong Marketing starter kits from private GitHub repositories. Built with Bun and TypeScript, it provides fast, secure project setup and updates.
 
-**Important:** You need to purchase a ClaudeKit Starter Kit from [ClaudeKit.cc](https://claudekit.cc) to use this CLI. Without a purchased kit and repository access, the CLI cannot download project templates.
+**Important:** You need to purchase a Mekong Marketing Starter Kit from [Mekong Marketing.cc](https://mekongmarketing.com) to use this CLI. Without a purchased kit and repository access, the CLI cannot download project templates.
 
 ## Key Features
 
@@ -35,7 +35,7 @@ Command-line tool for bootstrapping and updating ClaudeKit projects from private
 
 ### ck init
 
-Initialize or update ClaudeKit Engineer in your project:
+Initialize or update Mekong Marketing Engineer in your project:
 
 **Note:** This command should be run from the root directory of your project.
 
@@ -58,7 +58,7 @@ ck init -g --kit engineer
 ```
 
 **What it does:**
-- Downloads specified ClaudeKit release
+- Downloads specified Mekong Marketing release
 - Intelligently merges files
 - Preserves your custom changes
 - Protects sensitive files
@@ -73,7 +73,7 @@ ck init -g --kit engineer
 
 **Global vs Local Configuration:**
 
-By default, ClaudeKit uses local configuration (`~/.claudekit`).
+By default, Mekong Marketing uses local configuration (`~/.mekong`).
 
 For platform-specific **user-scoped settings**, use the `--global` flag:
 - **macOS/Linux**: `~/.claude`
@@ -83,7 +83,7 @@ Global mode uses user-scoped directories (no sudo required), allowing separate c
 
 ### ck update
 
-Update the ClaudeKit CLI itself to the latest version:
+Update the Mekong Marketing CLI itself to the latest version:
 
 ```bash
 # Update CLI to latest
@@ -92,11 +92,11 @@ ck update
 
 **What it does:**
 - Updates the `ck` command-line tool to the latest version
-- Does NOT update ClaudeKit Engineer files (use `ck init` for that)
+- Does NOT update Mekong Marketing Engineer files (use `ck init` for that)
 
 ### ck versions
 
-List available versions of ClaudeKit releases:
+List available versions of Mekong Marketing releases:
 
 ```bash
 # Show all available versions
@@ -150,12 +150,12 @@ ck init --verbose --log-file debug.log
 
 ## Available Kits
 
-ClaudeKit offers premium starter kits (purchase required):
+Mekong Marketing offers premium starter kits (purchase required):
 
-- **engineer**: ClaudeKit Engineer - Engineering toolkit with 14 specialized agents
-- **marketing**: ClaudeKit Marketing - [Coming Soon]
+- **engineer**: Mekong Marketing Engineer - Engineering toolkit with 14 specialized agents
+- **marketing**: Mekong Marketing Marketing - [Coming Soon]
 
-Purchase at [ClaudeKit.cc](https://claudekit.cc) to get repository access.
+Purchase at [Mekong Marketing.cc](https://mekongmarketing.com) to get repository access.
 
 ## Authentication
 
@@ -182,7 +182,7 @@ export GITHUB_TOKEN=ghp_your_token_here
 
 ## Configuration
 
-Configuration stored in `~/.claudekit/config.json`:
+Configuration stored in `~/.mekong/config.json`:
 
 ```json
 {
@@ -213,7 +213,7 @@ Your custom files in `.claude/` directory are automatically preserved:
 ```
 Your project:
   .claude/
-    ├── commands/standard.md  (from ClaudeKit)
+    ├── commands/standard.md  (from Mekong Marketing)
     └── commands/my-custom.md (your custom command)
 
 After update:
@@ -226,7 +226,7 @@ After update:
 
 ```bash
 # Install CLI
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # Verify installation
 ck --version
@@ -242,13 +242,13 @@ ck init --kit engineer
 # Navigate to project
 cd my-project
 
-# Start using ClaudeKit
-claude  # Start Claude Code
+# Start using Mekong Marketing
+claude  # Start Mekong CLI
 ```
 
 ## Common Workflows
 
-### Initialize or Update ClaudeKit Engineer
+### Initialize or Update Mekong Marketing Engineer
 
 ```bash
 # Interactive mode (recommended)
@@ -263,7 +263,7 @@ ck init --dir my-app --kit engineer --version v1.0.0
 # With exclusions
 ck init --exclude "*.log" --exclude "temp/**"
 
-# Update ClaudeKit Engineer to latest
+# Update Mekong Marketing Engineer to latest
 ck init
 
 # Update to specific version
@@ -315,10 +315,10 @@ ck versions --limit 50
 **Solutions:**
 ```bash
 # Reinstall globally
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # Check installation
-npm list -g claudekit-cli
+npm list -g mekong-cli
 
 # Restart terminal
 ```
@@ -350,9 +350,9 @@ ck -h
 
 ## Next Steps
 
-- [Installation Guide](/docs/docs/cli/installation) - Install ClaudeKit CLI
-- [Getting Started](/docs/getting-started/installation) - Start using ClaudeKit
+- [Installation Guide](/docs/docs/cli/installation) - Install Mekong Marketing CLI
+- [Getting Started](/docs/getting-started/installation) - Start using Mekong Marketing
 
 ---
 
-**Ready to start?** Purchase a kit at [ClaudeKit.cc](https://claudekit.cc), then run `ck init` to initialize your first project.
+**Ready to start?** Purchase a kit at [Mekong Marketing.cc](https://mekongmarketing.com), then run `ck init` to initialize your first project.

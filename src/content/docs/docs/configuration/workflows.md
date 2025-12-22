@@ -14,7 +14,7 @@ published: true
 
 # Workflows
 
-Workflows are the backbone of ClaudeKit's agent coordination system. They provide detailed instructions that ensure agents work together cohesively and follow project standards.
+Workflows are the backbone of Mekong Marketing's agent coordination system. They provide detailed instructions that ensure agents work together cohesively and follow project standards.
 
 ## What are Workflows?
 
@@ -28,7 +28,7 @@ Workflows are markdown files stored in `.claude/workflows/` that contain:
 
 ## Workflow Files
 
-ClaudeKit includes four core workflow files:
+Mekong Marketing includes four core workflow files:
 
 ### 1. development-rules.md
 
@@ -362,7 +362,7 @@ cat .claude/workflows/development-rules.md
 
 **Solutions:**
 1. Review and update workflow files
-2. Run `ck init` to get latest ClaudeKit workflows
+2. Run `ck init` to get latest Mekong Marketing workflows
 3. Merge custom changes with updates
 4. Document customizations
 

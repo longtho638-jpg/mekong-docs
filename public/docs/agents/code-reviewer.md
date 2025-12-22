@@ -1095,7 +1095,7 @@ After fixes are applied:
 ---
 
 **Review Completed**: 2024-10-20 15:45:00 UTC
-**Reviewer**: ClaudeKit Code Reviewer Agent v1.0
+**Reviewer**: Mekong Marketing Code Reviewer Agent v1.0
 **Total Review Time**: 90 seconds
 **Files Analyzed**: 9 files (1,247 lines)
 **Issues Found**: 12 (2 critical, 3 high, 5 medium, 2 low)
@@ -1187,9 +1187,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run ClaudeKit Review
+      - name: Run Mekong Marketing Review
         run: |
-          npx @claudekit/cli review --pr ${{ github.event.pull_request.number }}
+          npx @mekong/cli review --pr ${{ github.event.pull_request.number }}
 
       - name: Post Review Comment
         uses: actions/github-script@v6

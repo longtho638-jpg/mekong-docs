@@ -276,7 +276,7 @@ Example:
 ---
 Ngân hàng: Vietcombank (VCB)
 Số tài khoản: 0123456789
-Tên tài khoản: CONG TY CLAUDEKIT
+Tên tài khoản: CONG TY AGENCYOS
 Số tiền: 1,000,000 ₫
 Nội dung: COURSE ABC123
 
@@ -427,11 +427,11 @@ subscription_payments:
 
 Email reminder example:
 ---
-Tiêu đề: Gia hạn gói ClaudeKit Pro
+Tiêu đề: Gia hạn gói Mekong Marketing Pro
 
 Xin chào [Tên],
 
-Gói ClaudeKit Pro của bạn sẽ hết hạn vào 3 ngày nữa
+Gói Mekong Marketing Pro của bạn sẽ hết hạn vào 3 ngày nữa
 (ngày 15/11/2025).
 
 Để tiếp tục sử dụng, vui lòng thanh toán:
@@ -443,7 +443,7 @@ Nội dung: SUB[user_id]
 
 [Thanh toán ngay]
 
-Cảm ơn bạn đã tin dùng ClaudeKit!
+Cảm ơn bạn đã tin dùng Mekong Marketing!
 ---
 
 ✓ Subscription billing complete (5 minutes)

@@ -2,11 +2,11 @@
 
 **Last Updated**: 2025-11-25
 **Version**: 0.0.1
-**Project**: claudekit-docs
+**Project**: mekong-docs
 
 ## Overview
 
-claudekit-docs implements static site generation architecture using Astro v5 islands pattern. Content managed via Zod-validated collections, bi-lingual routing through i18n system, minimal JavaScript hydration via React islands.
+mekong-docs implements static site generation architecture using Astro v5 islands pattern. Content managed via Zod-validated collections, bi-lingual routing through i18n system, minimal JavaScript hydration via React islands.
 
 ## Architectural Pattern
 
@@ -427,7 +427,7 @@ Service (ClusterIP)
     ↓
 Deployment (2 replicas)
     ↓
-Pods (claudekit-docs containers)
+Pods (mekong-docs containers)
 ```
 
 **Manifests**:

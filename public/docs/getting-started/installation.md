@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Install ClaudeKit and set up your development environment using manual setup or CLI
+description: Install Mekong Marketing and set up your development environment using manual setup or CLI
 category: getting-started
 order: 2
 published: true
@@ -8,25 +8,25 @@ published: true
 
 # Installation
 
-This guide will help you install ClaudeKit and set up your development environment. You can choose between manual setup or using the ClaudeKit CLI.
+This guide will help you install Mekong Marketing and set up your development environment. You can choose between manual setup or using the Mekong Marketing CLI.
 
 ## Prerequisites
 
-Before installing ClaudeKit, ensure you have:
+Before installing Mekong Marketing, ensure you have:
 
 - **Node.js** v18 or higher
 - **npm** v10 or higher (or bun, pnpm, yarn)
 - **Git** for version control
-- **Claude Code CLI** installed (`claude`)
+- **Mekong CLI CLI** installed (`claude`)
 - **Google Gemini API Key** from [Google AI Studio](https://aistudio.google.com)
 
 ## Method 1: Manual Setup
 
 This method gives you full control over the installation process.
 
-### Step 1: Copy ClaudeKit Files
+### Step 1: Copy Mekong Marketing Files
 
-Copy all directories and files from the `claudekit-engineer` repo to your project:
+Copy all directories and files from the `mekong-engineer` repo to your project:
 
 ```bash
 # Copy these files and directories:
@@ -39,7 +39,7 @@ CLAUDE.md
 ### Step 2: Configure Gemini API Key (Optional)
 
 **WHY?**
-ClaudeKit utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
+Mekong Marketing utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
 
 **Notes:** Gemini API have a pretty generous free requests limit at the moment.
 
@@ -48,9 +48,9 @@ ClaudeKit utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-m
 
 Now you're good to go.
 
-### Step 3: Start Claude Code
+### Step 3: Start Mekong CLI
 
-Start Claude Code in your working project:
+Start Mekong CLI in your working project:
 
 ```bash
 # Standard mode
@@ -76,26 +76,26 @@ This generates markdown files in the `docs` directory:
 
 Now your project is ready for development!
 
-## Method 2: ClaudeKit CLI
+## Method 2: Mekong Marketing CLI
 
-The CLI provides an automated way to set up ClaudeKit projects.
+The CLI provides an automated way to set up Mekong Marketing projects.
 
 ### Installation
 
-Install ClaudeKit CLI globally:
+Install Mekong Marketing CLI globally:
 
 ```bash
 # npm
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # bun
-bun add -g claudekit-cli
+bun add -g mekong-cli
 
 # Verify installation
 ck --version
 ```
 
-### Initialize or Update ClaudeKit Engineer
+### Initialize or Update Mekong Marketing Engineer
 
 **Note:** This command should be run from the root directory of your project.
 
@@ -125,11 +125,11 @@ To update the `ck` command-line tool to the latest version:
 ck update
 ```
 
-**Note:** This updates the CLI tool only, not ClaudeKit Engineer files. Use `ck init` to update ClaudeKit Engineer.
+**Note:** This updates the CLI tool only, not Mekong Marketing Engineer files. Use `ck init` to update Mekong Marketing Engineer.
 
 ### Authentication
 
-The CLI requires a **GitHub Personal Access Token (PAT)** to download releases from private repositories (`claudekit-engineer` and `claudekit-marketing`).
+The CLI requires a **GitHub Personal Access Token (PAT)** to download releases from private repositories (`mekong-engineer` and `mekong-marketing`).
 
 **Authentication Fallback Chain:**
 
@@ -155,19 +155,19 @@ export GITHUB_TOKEN=ghp_your_token_here
 After installation (either method), verify everything is set up correctly:
 
 ```bash
-# Check if Claude Code is available
+# Check if Mekong CLI is available
 claude --version
 
 # Check if .claude directory exists
 ls -la .claude/
 ```
 
-## Update ClaudeKit
+## Update Mekong Marketing
 
-Keep ClaudeKit Engineer up to date:
+Keep Mekong Marketing Engineer up to date:
 
 ```bash
-# Update ClaudeKit Engineer to latest version
+# Update Mekong Marketing Engineer to latest version
 ck init
 
 # Update to specific version
@@ -195,7 +195,7 @@ ck update
 On macOS/Linux, you may need sudo:
 
 ```bash
-sudo npm install -g claudekit-cli
+sudo npm install -g mekong-cli
 ```
 
 Or configure npm to use a different directory:
@@ -206,11 +206,11 @@ npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
 ```
 
-### Claude Code Not Found
+### Mekong CLI Not Found
 
 If `claude` command is not found:
 
-1. Install Claude Code CLI from [claude.ai/code](https://claude.ai/code)
+1. Install Mekong CLI CLI from [claude.ai/code](https://claude.ai/code)
 2. Restart your terminal
 3. Verify with `claude --version`
 
@@ -225,7 +225,7 @@ If CLI can't authenticate:
 
 ## Next Steps
 
-Now that ClaudeKit is installed, proceed to:
+Now that Mekong Marketing is installed, proceed to:
 
 - [Quick Start Guide](/docs/getting-started/quick-start) - Build your first project
 - [CLAUDE.md Explained](/docs/core-concepts/claude-md) - Understand the configuration file

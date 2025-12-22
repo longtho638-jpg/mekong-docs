@@ -2,11 +2,11 @@
 import DocsLayout from '../layouts/DocsLayout.astro';
 import { Code } from 'astro:components';
 
-const title = 'ClaudeKit - Build Software Like You Have a Team';
+const title = 'Mekong Marketing - Build Software Like You Have a Team';
 const description = '14 specialized AI agents working together. Write less code, ship faster, maintain quality. Reclaim 50-70% of time on repetitive tasks.';
 
-const heroCode = `# Install ClaudeKit CLI
-npm install -g claudekit-cli
+const heroCode = `# Install Mekong Marketing CLI
+npm install -g mekong-cli
 
 # Create new project
 ck new --dir my-app
@@ -17,7 +17,7 @@ ck new --dir my-app
 # Start the project
 cd my-app
 
-# Start Claude Code
+# Start Mekong CLI
 claude
 # or \`claude --dangerously-skip-permissions\` (use as your own risk)
 
@@ -28,13 +28,13 @@ claude
 
 # Review, approve, deploy`;
 
-const cliCode = `# Initialize ClaudeKit Engineer in your project
+const cliCode = `# Initialize Mekong Marketing Engineer in your project
 ck init --kit engineer
 
-# Update ClaudeKit Engineer to latest version
+# Update Mekong Marketing Engineer to latest version
 ck init
 
-# Check available ClaudeKit versions
+# Check available Mekong Marketing versions
 ck versions`;
 
 const planningCode = `# Planner agent reads your codebase
@@ -86,7 +86,7 @@ const refactoringCode = `# Scout agent maps codebase structure
 # Tester ensures nothing breaks
 /test [authentication system]`;
 
-const step1Code = `npm install -g claudekit-cli`;
+const step1Code = `npm install -g mekong-cli`;
 const step2Code = `ck new my-first-app
 cd my-first-app`;
 const step3Code = `/plan [add user registration API]
@@ -97,13 +97,13 @@ npm test
 
 // Define headings for Table of Contents
 const headings = [
-  { depth: 2, text: 'Why ClaudeKit?', slug: 'why-claudekit' },
+  { depth: 2, text: 'Why Mekong Marketing?', slug: 'why-mekong' },
   { depth: 3, text: 'Specialized Agents, Real Results', slug: 'specialized-agents-real-results' },
   { depth: 3, text: 'Eliminate Repetitive Work', slug: 'eliminate-repetitive-work' },
   { depth: 3, text: 'Stay in Control', slug: 'stay-in-control' },
   { depth: 2, text: 'How It Works', slug: 'how-it-works' },
-  { depth: 3, text: 'ClaudeKit Engineer: 14 Specialized Agents', slug: 'claudekit-engineer-14-specialized-agents' },
-  { depth: 3, text: 'ClaudeKit CLI: Smart Project Management', slug: 'claudekit-cli-smart-project-management' },
+  { depth: 3, text: 'Mekong Marketing Engineer: 14 Specialized Agents', slug: 'mekong-engineer-14-specialized-agents' },
+  { depth: 3, text: 'Mekong Marketing CLI: Smart Project Management', slug: 'mekong-cli-smart-project-management' },
   { depth: 2, text: 'Real Developer Workflows', slug: 'real-developer-workflows' },
   { depth: 3, text: 'Building a New Feature', slug: 'building-a-new-feature' },
   { depth: 3, text: 'Debugging Production Issues', slug: 'debugging-production-issues' },
@@ -125,7 +125,7 @@ const headings = [
       </h1>
 
       <p class="mt-4 text-xl leading-relaxed text-[var(--color-text-secondary)] mb-10">
-        ClaudeKit gives you 14 specialized developer agents working together.
+        Mekong Marketing gives you 14 specialized developer agents working together.
         Write less code, ship faster, maintain quality.
       </p>
 
@@ -138,23 +138,19 @@ const headings = [
         </a>
       </div>
 
-      <!-- Video Walkthrough -->
+      <!-- Demo Section -->
       <div class="mb-16">
-        <p class="text-sm text-[var(--color-text-muted)] mb-4">Watch the complete walkthrough</p>
-        <div class="relative mx-auto max-w-3xl aspect-video rounded-xl overflow-hidden border border-[var(--color-border)] shadow-2xl">
-          <iframe
-            src="https://www.youtube.com/embed/F_E0GIi_kVY"
-            title="ClaudeKit Complete Walkthrough - From Installation to Building UI"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-            class="absolute inset-0 w-full h-full"
-          ></iframe>
+        <p class="text-sm text-[var(--color-text-muted)] mb-4">See AgencyOS in action</p>
+        <div class="relative mx-auto max-w-3xl aspect-video rounded-xl overflow-hidden border border-[var(--color-border)] shadow-2xl bg-[var(--color-bg-tertiary)] flex items-center justify-center">
+          <div class="text-center p-8">
+            <div class="text-6xl mb-4">🏯</div>
+            <h3 class="text-xl font-bold text-[var(--color-text-primary)] mb-2">Demo Video Coming Soon</h3>
+            <p class="text-[var(--color-text-muted)]">Check our documentation to get started</p>
+            <a href="/docs/getting-started/introduction" class="inline-block mt-4 px-6 py-2 bg-[var(--color-accent-green)] text-white rounded-lg hover:brightness-110 transition">
+              View Docs →
+            </a>
+          </div>
         </div>
-        <p class="text-xs text-[var(--color-text-muted)] mt-3">
-          More tutorials on <a href="https://www.youtube.com/@goonnguyen" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent-blue)] hover:underline">@goonnguyen</a> | X: <a href="https://x.com/goon_nguyen" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent-blue)] hover:underline">@goon_nguyen</a>
-        </p>
       </div>
     </div>
 
@@ -182,7 +178,7 @@ const headings = [
 <section class="py-12 relative overflow-hidden">
   <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 id="why-claudekit" class="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-[var(--color-text-primary)]">Why ClaudeKit?</h2>
+      <h2 id="why-mekong" class="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-[var(--color-text-primary)]">Why Mekong Marketing?</h2>
       <p class="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
         Stop wrestling with repetitive tasks. Let specialized AI agents handle the implementation while you focus on architecture.
       </p>
@@ -281,9 +277,9 @@ const headings = [
 
 <h2 id="how-it-works">How It Works</h2>
 
-<p>ClaudeKit operates through two main components that work seamlessly together:</p>
+<p>Mekong Marketing operates through two main components that work seamlessly together:</p>
 
-<h3 id="claudekit-engineer-14-specialized-agents">ClaudeKit Engineer: 14 Specialized Agents</h3>
+<h3 id="mekong-engineer-14-specialized-agents">Mekong Marketing Engineer: 14 Specialized Agents</h3>
 
 <p>Multi-agent orchestration system with role-based specialists:</p>
 
@@ -297,7 +293,7 @@ const headings = [
 
 <p>Each command triggers specialized agents that collaborate to deliver results.</p>
 
-<h3 id="claudekit-cli-smart-project-management">ClaudeKit CLI: Smart Project Management</h3>
+<h3 id="mekong-cli-smart-project-management">Mekong Marketing CLI: Smart Project Management</h3>
 
 <p>Intelligent project scaffolding and version management:</p>
 
@@ -352,7 +348,7 @@ const headings = [
 </div>
 
 <div class="callout">
-  <strong>Teammate Extension, Not Replacement</strong>: ClaudeKit positions you as the architect and reviewer while AI handles implementation. You maintain full control with checkpoints, rollback capabilities, and transparent decision-making.
+  <strong>Teammate Extension, Not Replacement</strong>: Mekong Marketing positions you as the architect and reviewer while AI handles implementation. You maintain full control with checkpoints, rollback capabilities, and transparent decision-making.
 </div>
 
 <h2 id="what-developers-say">What Developers Say</h2>
@@ -364,12 +360,12 @@ const headings = [
 
 <blockquote>
   <p>"Functions more like a code editor than a typical AI tool. Essential part of my workflow."</p>
-  <footer>— Developer working with Claude Code</footer>
+  <footer>— Developer working with Mekong CLI</footer>
 </blockquote>
 
 <blockquote>
   <p>"The checkpoint feature is game-changing. Try an approach, rollback instantly if it doesn't work. No fear of AI going off the rails."</p>
-  <footer>— Frontend Developer using ClaudeKit Engineer</footer>
+  <footer>— Frontend Developer using Mekong Marketing Engineer</footer>
 </blockquote>
 
 <h2 id="get-started-in-5-minutes">Get Started in 5 Minutes</h2>
@@ -378,7 +374,7 @@ const headings = [
   <div class="step">
     <div class="step-number">1</div>
     <div class="step-content">
-      <h4>Install ClaudeKit CLI</h4>
+      <h4>Install Mekong Marketing CLI</h4>
       <Code code={step1Code} lang="bash" themes={{ light: 'light-plus', dark: 'one-dark-pro' }} />
     </div>
   </div>
@@ -413,7 +409,7 @@ const headings = [
     <div class="mx-auto max-w-3xl">
       <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-[var(--color-text-primary)]">Ready to Build Like You Have a Team?</h2>
       <p class="text-lg text-[var(--color-text-secondary)] mb-10 max-w-2xl mx-auto">
-        Get started with ClaudeKit and experience developer productivity at a new level.
+        Get started with Mekong Marketing and experience developer productivity at a new level.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">

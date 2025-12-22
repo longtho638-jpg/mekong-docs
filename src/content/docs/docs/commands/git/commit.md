@@ -53,7 +53,7 @@ The `/git:cm` command follows a structured git workflow:
 
 ## Commit Message Format
 
-ClaudeKit generates commits following [Conventional Commits](https://www.conventionalcommits.org/):
+Mekong Marketing generates commits following [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
 <type>(<scope>): <subject>
@@ -180,7 +180,7 @@ The command stages and commits:
 
 ## Security Checks
 
-Before committing, ClaudeKit checks for:
+Before committing, Mekong Marketing checks for:
 
 ### Sensitive Files
 
@@ -285,7 +285,7 @@ git push origin feature/user-profile
 
 ### Commit Message Style
 
-ClaudeKit analyzes your commit history and matches the style:
+Mekong Marketing analyzes your commit history and matches the style:
 
 **If your repo uses:**
 ```
@@ -294,7 +294,7 @@ Update README
 Fix login bug
 ```
 
-**ClaudeKit generates:**
+**Mekong Marketing generates:**
 ```
 Add rate limiting middleware
 ```
@@ -306,14 +306,14 @@ fix: resolve login issue
 docs: update README
 ```
 
-**ClaudeKit generates:**
+**Mekong Marketing generates:**
 ```
 feat: add rate limiting middleware
 ```
 
 ### Scope Detection
 
-ClaudeKit automatically detects scope from files changed:
+Mekong Marketing automatically detects scope from files changed:
 
 ```
 Files changed: src/auth/login.ts, src/auth/register.ts
@@ -448,7 +448,7 @@ git add .
 **Solution:**
 ```bash
 # Provide more context in code comments
-# ClaudeKit reads comments to understand intent
+# Mekong Marketing reads comments to understand intent
 
 # Or manually edit commit message:
 git commit --amend

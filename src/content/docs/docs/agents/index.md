@@ -1,6 +1,6 @@
 ---
 title: Agents Overview
-description: ClaudeKit's 17 specialized agents for software development
+description: Mekong Marketing's 17 specialized agents for software development
 section: docs
 category: agents
 order: 1

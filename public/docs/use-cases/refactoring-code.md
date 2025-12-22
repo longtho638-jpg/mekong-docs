@@ -8,7 +8,7 @@ published: true
 
 # Refactoring Code
 
-Learn how to safely refactor code with ClaudeKit - from identifying technical debt to implementing improvements with comprehensive testing and validation.
+Learn how to safely refactor code with Mekong Marketing - from identifying technical debt to implementing improvements with comprehensive testing and validation.
 
 ## Overview
 
@@ -646,4 +646,4 @@ Improvement: +36 points maintainability
 
 ---
 
-**Key Takeaway**: ClaudeKit enables safe, incremental refactoring with automated testing and validation - improving code quality without breaking functionality, turning days of risky refactoring into hours of confident improvement.
+**Key Takeaway**: Mekong Marketing enables safe, incremental refactoring with automated testing and validation - improving code quality without breaking functionality, turning days of risky refactoring into hours of confident improvement.

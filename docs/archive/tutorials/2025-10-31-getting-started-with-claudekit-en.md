@@ -1,14 +1,14 @@
-# Getting Started with ClaudeKit: Your AI Development Team in 5 Minutes
+# Getting Started with Mekong Marketing: Your AI Development Team in 5 Minutes
 
 **For:** Beginners, non-tech users, and anyone who wants to ship features 10x faster
 
 **Time:** 5-15 minutes to your first feature
 
-**What you'll learn:** How to use ClaudeKit to build, test, and deploy production-ready features without writing code manually
+**What you'll learn:** How to use Mekong Marketing to build, test, and deploy production-ready features without writing code manually
 
 ---
 
-## Why ClaudeKit?
+## Why Mekong Marketing?
 
 Imagine having a team of 14 specialized developers working for you 24/7:
 - A planner who researches best practices
@@ -20,9 +20,9 @@ Imagine having a team of 14 specialized developers working for you 24/7:
 - A tech writer who maintains documentation
 - A git expert who creates professional commits
 
-**That's ClaudeKit.**
+**That's Mekong Marketing.**
 
-Instead of spending 8-12 hours implementing a feature, you describe what you need in plain English, and ClaudeKit delivers production-ready code in 5-20 minutes—complete with tests, code review, and documentation.
+Instead of spending 8-12 hours implementing a feature, you describe what you need in plain English, and Mekong Marketing delivers production-ready code in 5-20 minutes—complete with tests, code review, and documentation.
 
 ### Real Results
 
@@ -33,9 +33,9 @@ Instead of spending 8-12 hours implementing a feature, you describe what you nee
 
 ---
 
-## What is ClaudeKit?
+## What is Mekong Marketing?
 
-ClaudeKit is a suite of 14 AI agents built on top of Claude Code (Anthropic's official coding assistant) that automates your entire development workflow.
+Mekong Marketing is a suite of 14 AI agents built on top of Mekong CLI (Anthropic's official coding assistant) that automates your entire development workflow.
 
 **Not a boilerplate**. Not a template. It's a living system that:
 - Works with ANY tech stack (Next.js, Django, Laravel, React Native, etc.)
@@ -111,7 +111,7 @@ Pre-configured expertise in popular frameworks and tools:
 
 ### What You Need
 
-1. **Claude Code** - The AI coding assistant (free during beta)
+1. **Mekong CLI** - The AI coding assistant (free during beta)
    - Install from: https://claude.ai/download
    - Requires: macOS, Windows, or Linux
 
@@ -119,8 +119,8 @@ Pre-configured expertise in popular frameworks and tools:
    - Node.js 18+ (check: `node --version`)
    - Git (check: `git --version`)
 
-3. **ClaudeKit License** - $99 one-time payment
-   - Get it from: https://claudekit.cc
+3. **Mekong Marketing License** - $99 one-time payment
+   - Get it from: https://mekongmarketing.com
    - Lifetime access, all updates included
 
 4. **API Keys** (optional, for enhanced features):
@@ -131,17 +131,17 @@ Pre-configured expertise in popular frameworks and tools:
 
 - **Installation**: 2 minutes
 - **Your first feature**: 5-10 minutes
-- **Learning curve**: Minimal (if you can describe what you want, you can use ClaudeKit)
+- **Learning curve**: Minimal (if you can describe what you want, you can use Mekong Marketing)
 
 ---
 
 ## Installation (2 Minutes)
 
-ClaudeKit offers two installation methods. We recommend the CLI method for beginners.
+Mekong Marketing offers two installation methods. We recommend the CLI method for beginners.
 
-### Method 1: ClaudeKit CLI (Recommended)
+### Method 1: Mekong Marketing CLI (Recommended)
 
-**Step 1:** Install Claude Code CLI
+**Step 1:** Install Mekong CLI CLI
 ```bash
 # macOS/Linux
 curl -fsSL https://claude.ai/install.sh | bash
@@ -152,7 +152,7 @@ irm https://claude.ai/install.ps1 | iex
 
 **Step 2:** Authenticate with GitHub
 
-You need a GitHub Personal Access Token (PAT) to download ClaudeKit:
+You need a GitHub Personal Access Token (PAT) to download Mekong Marketing:
 
 1. Go to: https://github.com/settings/tokens/new
 2. Set these permissions:
@@ -161,7 +161,7 @@ You need a GitHub Personal Access Token (PAT) to download ClaudeKit:
 3. Copy the token
 4. Run: `gh auth login` OR set environment variable: `GITHUB_TOKEN=your_token`
 
-**Step 3:** Create your project with ClaudeKit
+**Step 3:** Create your project with Mekong Marketing
 
 ```bash
 # For a new project
@@ -172,7 +172,7 @@ cd my-existing-project
 ck new . --kit engineer
 ```
 
-**That's it!** ClaudeKit is now installed in your project.
+**That's it!** Mekong Marketing is now installed in your project.
 
 ### Method 2: Manual Installation
 
@@ -180,25 +180,25 @@ If you prefer manual setup:
 
 1. Download the latest release from your purchase email
 2. Extract to your project directory
-3. Run: `cp -r claudekit/.claude ./`
-4. Configure Claude Code MCP settings (see docs)
+3. Run: `cp -r mekong/.claude ./`
+4. Configure Mekong CLI MCP settings (see docs)
 
 ---
 
-## Your First 5 Minutes with ClaudeKit
+## Your First 5 Minutes with Mekong Marketing
 
 Let's build something real: a user authentication system with OAuth.
 
 ### Step 1: Initialize Your Project (2 min)
 
 ```bash
-# Create a new Next.js project with ClaudeKit
+# Create a new Next.js project with Mekong Marketing
 ck new my-app --kit engineer
 cd my-app
 ```
 
 **What just happened?**
-- ClaudeKit downloaded and installed to `.claude/` directory
+- Mekong Marketing downloaded and installed to `.claude/` directory
 - 14 agents are now available
 - 30+ commands are ready to use
 - 46+ skills are configured
@@ -417,7 +417,7 @@ claude /docs:update
 
 ---
 
-## Understanding ClaudeKit's Architecture
+## Understanding Mekong Marketing's Architecture
 
 ### How It Works
 
@@ -459,32 +459,32 @@ After installation, your project has:
 ```
 
 **Key files:**
-- `CLAUDE.md` - Project instructions for Claude Code
+- `CLAUDE.md` - Project instructions for Mekong CLI
 - `workflows/development-rules.md` - Code quality standards
 - `workflows/orchestration-protocol.md` - How agents work together
 
-### Context Engineering (The Magic Behind ClaudeKit)
+### Context Engineering (The Magic Behind Mekong Marketing)
 
-**What is it?** The practice of providing the right information to Claude Code at the right time.
+**What is it?** The practice of providing the right information to Mekong CLI at the right time.
 
-**Why it matters:** Claude Code has a 200,000 token context window (about 150,000 words). ClaudeKit ensures this space is filled with:
+**Why it matters:** Mekong CLI has a 200,000 token context window (about 150,000 words). Mekong Marketing ensures this space is filled with:
 - Your project's tech stack
 - Code quality standards
 - Best practices for your frameworks
 - Project-specific conventions
 - Relevant documentation
 
-**Result:** Claude Code makes better decisions because it understands YOUR project.
+**Result:** Mekong CLI makes better decisions because it understands YOUR project.
 
 **Example:**
 
-Without ClaudeKit:
+Without Mekong Marketing:
 ```
 You: "Add authentication"
 Claude: "Here's a basic auth with localStorage" ❌
 ```
 
-With ClaudeKit:
+With Mekong Marketing:
 ```
 You: "Add authentication"
 Claude: "I see you're using Next.js 15 with App Router.
@@ -501,7 +501,7 @@ I'll implement Better Auth with:
 
 ---
 
-## Customizing ClaudeKit
+## Customizing Mekong Marketing
 
 ### Adding Your Code Standards
 
@@ -612,7 +612,7 @@ npm test
 claude /ask review the recent changes for security issues
 ```
 
-### 5. Let ClaudeKit Handle the Details
+### 5. Let Mekong Marketing Handle the Details
 
 You don't need to specify:
 - Which files to create
@@ -621,7 +621,7 @@ You don't need to specify:
 - Documentation structure
 - Commit message format
 
-ClaudeKit knows your project structure and standards from `.claude/` configuration.
+Mekong Marketing knows your project structure and standards from `.claude/` configuration.
 
 ---
 
@@ -629,28 +629,28 @@ ClaudeKit knows your project structure and standards from `.claude/` configurati
 
 ### Q: Do I need to know how to code?
 
-**A:** No! If you can describe what you want, ClaudeKit can build it. However, basic understanding helps you verify results and make better decisions.
+**A:** No! If you can describe what you want, Mekong Marketing can build it. However, basic understanding helps you verify results and make better decisions.
 
-### Q: What tech stacks does ClaudeKit support?
+### Q: What tech stacks does Mekong Marketing support?
 
-**A:** All of them! ClaudeKit is framework-agnostic. It has pre-built skills for:
+**A:** All of them! Mekong Marketing is framework-agnostic. It has pre-built skills for:
 - Next.js, React, Vue
 - Node.js, Python, Rust
 - PostgreSQL, MongoDB
 - Cloudflare, Google Cloud
 - And 40+ more
 
-For frameworks without pre-built skills, ClaudeKit researches best practices on the fly.
+For frameworks without pre-built skills, Mekong Marketing researches best practices on the fly.
 
 ### Q: Will it work with my existing project?
 
-**A:** Yes! Install ClaudeKit in any project:
+**A:** Yes! Install Mekong Marketing in any project:
 ```bash
 cd your-project
 ck new . --kit engineer
 ```
 
-ClaudeKit analyzes your codebase and adapts to your existing patterns.
+Mekong Marketing analyzes your codebase and adapts to your existing patterns.
 
 ### Q: How much does it cost?
 
@@ -665,7 +665,7 @@ ClaudeKit analyzes your codebase and adapts to your existing patterns.
 
 ### Q: Is the code production-ready?
 
-**A:** Yes! ClaudeKit includes:
+**A:** Yes! Mekong Marketing includes:
 - Comprehensive testing
 - Security code review
 - Error handling
@@ -676,7 +676,7 @@ However, always review before deploying to production.
 
 ### Q: Can I use it in a team?
 
-**A:** Absolutely! ClaudeKit's `.claude/` directory is version-controlled. Your entire team benefits from:
+**A:** Absolutely! Mekong Marketing's `.claude/` directory is version-controlled. Your entire team benefits from:
 - Shared code standards
 - Consistent quality
 - Documented workflows
@@ -684,7 +684,7 @@ However, always review before deploying to production.
 
 ### Q: How does it compare to GitHub Copilot or Cursor?
 
-| Feature | ClaudeKit | Copilot | Cursor |
+| Feature | Mekong Marketing | Copilot | Cursor |
 |---------|-----------|---------|--------|
 | Code completion | ✓ | ✓ | ✓ |
 | Full feature implementation | ✓ | ✗ | Partial |
@@ -695,7 +695,7 @@ However, always review before deploying to production.
 | Production-ready output | ✓ | ✗ | Partial |
 | Tech stack agnostic | ✓ | ✓ | ✓ |
 
-ClaudeKit complements these tools by handling complete workflows, not just code snippets.
+Mekong Marketing complements these tools by handling complete workflows, not just code snippets.
 
 ---
 
@@ -708,7 +708,7 @@ ClaudeKit complements these tools by handling complete workflows, not just code 
 **Solution:**
 ```bash
 # Add to PATH (macOS/Linux)
-echo 'export PATH="$HOME/.claudekit/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="$HOME/.mekong/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
 # Windows: Add to Environment Variables manually
@@ -738,7 +738,7 @@ ck init --kit engineer
 **Problem:** "Context limit exceeded"
 
 **Solution:**
-ClaudeKit manages context automatically, but for very large projects:
+Mekong Marketing manages context automatically, but for very large projects:
 ```bash
 # Use focused commands
 claude /scout find auth-related files  # Instead of asking about entire codebase
@@ -831,9 +831,9 @@ claude /bootstrap a SaaS starter with auth, payments, admin dashboard, and email
 ## Learning Resources
 
 ### Official Documentation
-- ClaudeKit Docs: https://claudekit.cc/docs
-- Claude Code Docs: https://docs.claude.ai/code
-- Getting Started Guide: https://claudekit.cc/docs/getting-started
+- Mekong Marketing Docs: https://mekongmarketing.com/docs
+- Mekong CLI Docs: https://docs.claude.ai/code
+- Getting Started Guide: https://mekongmarketing.com/docs/getting-started
 
 ### Video Tutorials (Coming Soon)
 - Installation walkthrough
@@ -842,36 +842,36 @@ claude /bootstrap a SaaS starter with auth, payments, admin dashboard, and email
 - Team collaboration
 
 ### Community
-- GitHub Discussions: https://github.com/claudekit/claudekit/discussions
-- Discord: https://discord.gg/claudekit
-- Twitter: @claudekit
+- GitHub Discussions: https://github.com/mekong/mekong/discussions
+- Discord: https://discord.gg/mekong
+- Twitter: @mekong
 
 ### Support
-- Email: support@claudekit.cc
-- Documentation: https://claudekit.cc/docs/troubleshooting
-- GitHub Issues: https://github.com/claudekit/claudekit/issues
+- Email: support@mekongmarketing.com
+- Documentation: https://mekongmarketing.com/docs/troubleshooting
+- GitHub Issues: https://github.com/mekong/mekong/issues
 
 ---
 
 ## Conclusion
 
-ClaudeKit transforms how you build software:
+Mekong Marketing transforms how you build software:
 
-**Before ClaudeKit:**
+**Before Mekong Marketing:**
 - 8-12 hours to implement a feature
 - Manual test writing
 - Inconsistent code quality
 - Outdated boilerplates
 - Tech stack lock-in
 
-**With ClaudeKit:**
+**With Mekong Marketing:**
 - 5-20 minutes to production-ready features
 - Automated comprehensive testing
 - Enforced best practices
 - Living system that improves automatically
 - Works with any tech stack
 
-**Your next step:** Install ClaudeKit and ship your first feature in 5 minutes.
+**Your next step:** Install Mekong Marketing and ship your first feature in 5 minutes.
 
 ```bash
 ck new my-first-project --kit engineer
@@ -936,5 +936,5 @@ Welcome to 10x productivity. 🚀
 
 **Published:** October 31, 2025
 **Version:** 1.0
-**Author:** ClaudeKit Team
+**Author:** Mekong Marketing Team
 **License:** MIT

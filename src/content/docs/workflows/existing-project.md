@@ -10,14 +10,14 @@ lastUpdated: 2025-11-07
 
 # Brownfield Projects
 
-Integrate ClaudeKit into your existing projects to enhance development workflow with AI-powered agents. Perfect for legacy codebases, team projects, and gradual AI adoption.
+Integrate Mekong Marketing into your existing projects to enhance development workflow with AI-powered agents. Perfect for legacy codebases, team projects, and gradual AI adoption.
 
 ## Installation
 
-### 1. Install ClaudeKit CLI
+### 1. Install Mekong Marketing CLI
 
 ```bash
-npm i -g claudekit-cli@latest
+npm i -g mekong-cli@latest
 ```
 
 ### 2. Navigate to Your Project
@@ -26,19 +26,19 @@ npm i -g claudekit-cli@latest
 cd /path/to/your/existing/project
 ```
 
-### 3. Start Claude Code
+### 3. Start Mekong CLI
 
 ```bash
 claude
 ```
 
-This will start Claude Code (CC) with ClaudeKit agents in your project directory.
+This will start Mekong CLI (CC) with Mekong Marketing agents in your project directory.
 
 ## Initial Setup
 
 ### Analyze and Create Specs
 
-Let Claude Code scan and analyze your codebase to create initial specifications:
+Let Mekong CLI scan and analyze your codebase to create initial specifications:
 
 ```bash
 /docs:init
@@ -281,13 +281,13 @@ Share `.claude/` directory and generated specs with your team via git.
 # 1. Clone repository
 git clone <repo-url>
 
-# 2. Install ClaudeKit
-npm i -g claudekit-cli@latest
+# 2. Install Mekong Marketing
+npm i -g mekong-cli@latest
 
 # 3. Navigate to project
 cd project-name
 
-# 4. Start Claude Code
+# 4. Start Mekong CLI
 claude
 
 # 5. Specs already exist - start working!
@@ -304,10 +304,10 @@ claude
 
 ### Commands Not Working
 ```bash
-# Verify ClaudeKit installation
+# Verify Mekong Marketing installation
 ck --version
 
-# Restart Claude Code
+# Restart Mekong CLI
 # Exit CC and run: claude
 ```
 
@@ -325,4 +325,4 @@ After successful integration:
 
 ---
 
-**Need help?** Check [Troubleshooting Guide](/docs/support/troubleshooting/) or [GitHub Discussions](https://github.com/mrgoonie/claudekit-cli/discussions)
+**Need help?** Check [Troubleshooting Guide](/docs/support/troubleshooting/) or [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)

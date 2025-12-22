@@ -9,7 +9,7 @@ published: true
 
 # Aesthetic Skill
 
-Transform any design from generic to gorgeous using ClaudeKit's systematic aesthetic framework.
+Transform any design from generic to gorgeous using Mekong Marketing's systematic aesthetic framework.
 
 ## Just Ask Claude To...
 

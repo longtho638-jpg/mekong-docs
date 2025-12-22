@@ -2,7 +2,7 @@
 
 **Last Updated**: 2025-11-28
 **Version**: 0.0.3
-**Project**: claudekit-docs
+**Project**: mekong-docs
 
 ## Version History
 
@@ -13,8 +13,8 @@
 **Content Structure Enhancements**:
 - **13 New Index/Guide Pages**: Created comprehensive index pages and guides across all documentation sections to establish clear information hierarchy
 - **Introduction Page Overhaul**: Completely rewrote the introduction to remove sales content and focus on pure technical onboarding
-- **Dedicated Sales Page**: Created "Why ClaudeKit" page to properly separate marketing content from technical documentation
-- **Comprehensive Concepts Page**: Developed in-depth concepts documentation explaining ClaudeKit's core architecture and workflows
+- **Dedicated Sales Page**: Created "Why Mekong Marketing" page to properly separate marketing content from technical documentation
+- **Comprehensive Concepts Page**: Developed in-depth concepts documentation explaining Mekong Marketing's core architecture and workflows
 - **Proper Changelog Implementation**: Added professional changelog page with version history and detailed release notes
 - **FAQ Implementation**: Created comprehensive FAQ page addressing common user questions and concerns
 
@@ -28,7 +28,7 @@
 **Content Quality Enhancements**:
 - **Schema Compliance**: Updated all content pages to properly comply with frontmatter schema requirements
 - **Content Standardization**: Applied consistent formatting, tone, and structure across all new content
-- **User Journey Optimization**: Designed clear progression paths for different user personas (new users, existing Claude Code users, evaluators)
+- **User Journey Optimization**: Designed clear progression paths for different user personas (new users, existing Mekong CLI users, evaluators)
 - **Accessibility Improvements**: Enhanced content structure for better screen reader compatibility and keyboard navigation
 - **Mobile Content Optimization**: Ensured all new content displays properly and is easily readable on mobile devices
 
@@ -148,7 +148,7 @@
 - Phase 02: Production deployment and core functionality stabilization
 - Implement search functionality (Pagefind)
 - Fix remaining navigation hierarchy issues
-- Deploy to docs.claudekit.cc production environment
+- Deploy to docs.mekongmarketing.com production environment
 
 ---
 
@@ -320,8 +320,8 @@ Due to the IA restructure, some documentation URLs have changed. The old flat st
 **New Pages Added in v0.0.3**:
 - `getting-started/index.md` - Comprehensive getting started hub
 - `getting-started/concepts.md` - In-depth concepts explanation
-- `getting-started/upgrade-guide.md` - Upgrade guide for existing Claude Code users
-- `getting-started/why-claudekit.md` - Dedicated sales and comparison page
+- `getting-started/upgrade-guide.md` - Upgrade guide for existing Mekong CLI users
+- `getting-started/why-mekong.md` - Dedicated sales and comparison page
 - `docs/index.md` - Documentation section hub
 - `workflows/index.md` - Comprehensive workflows guide (completely rewritten)
 - `workflows/feature-development.md` - Feature development workflow guide

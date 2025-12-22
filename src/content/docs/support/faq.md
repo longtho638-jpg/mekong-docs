@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions"
-description: "Common questions about ClaudeKit, from getting started to advanced usage"
+description: "Common questions about Mekong Marketing, from getting started to advanced usage"
 section: support
 order: 1
 published: true
@@ -8,41 +8,41 @@ published: true
 
 # Frequently Asked Questions
 
-Common questions about ClaudeKit, from getting started to advanced usage.
+Common questions about Mekong Marketing, from getting started to advanced usage.
 
 ## Getting Started
 
-### Q: What is ClaudeKit?
-**A:** ClaudeKit is a production-grade framework that extends Claude Code with specialized AI agents, slash commands, and reusable skills. It transforms Claude Code from a general-purpose assistant into a focused engineering toolkit.
+### Q: What is Mekong Marketing?
+**A:** Mekong Marketing is a production-grade framework that extends Mekong CLI with specialized AI agents, slash commands, and reusable skills. It transforms Mekong CLI from a general-purpose assistant into a focused engineering toolkit.
 
-### Q: How is ClaudeKit different from Claude Code?
-**A:** Claude Code provides the base AI assistant, while ClaudeKit adds:
+### Q: How is Mekong Marketing different from Mekong CLI?
+**A:** Mekong CLI provides the base AI assistant, while Mekong Marketing adds:
 - **14 specialized agents** (planner, tester, debugger, etc.)
 - **30+ slash commands** for common development tasks
 - **45 built-in skills** for specific technologies
 - **Multi-agent workflows** that collaborate on complex tasks
 
-### Q: Do I need to pay for Claude Code separately?
-**A:** Yes, ClaudeKit requires an active Claude Code subscription. ClaudeKit is a one-time purchase ($99) that enhances your existing Claude Code subscription.
+### Q: Do I need to pay for Mekong CLI separately?
+**A:** Yes, Mekong Marketing requires an active Mekong CLI subscription. Mekong Marketing is a one-time purchase ($99) that enhances your existing Mekong CLI subscription.
 
-### Q: Can I try ClaudeKit before buying?
-**A:** Yes! We offer a 30-day money-back guarantee. Try ClaudeKit risk-free for 30 days, and if you're not satisfied, get a full refund.
+### Q: Can I try Mekong Marketing before buying?
+**A:** Yes! We offer a 30-day money-back guarantee. Try Mekong Marketing risk-free for 30 days, and if you're not satisfied, get a full refund.
 
 ## Installation and Setup
 
-### Q: How do I install ClaudeKit?
+### Q: How do I install Mekong Marketing?
 **A:**
 ```bash
-# Install ClaudeKit CLI
-npm install -g @claudekit/cli
+# Install Mekong Marketing CLI
+npm install -g @mekong/cli
 
 # Initialize in your project
-claudekit init
+mekong init
 ```
 
-### Q: Does ClaudeKit replace my existing setup?
-**A:** No. ClaudeKit enhances your existing workflow:
-- Keeps your current Claude Code setup
+### Q: Does Mekong Marketing replace my existing setup?
+**A:** No. Mekong Marketing enhances your existing workflow:
+- Keeps your current Mekong CLI setup
 - Extends rather than replaces functionality
 - Works with your existing projects
 - Preserves your custom commands
@@ -50,15 +50,15 @@ claudekit init
 ### Q: What are the system requirements?
 **A:**
 - Node.js 16+
-- Claude Code subscription
+- Mekong CLI subscription
 - Git (required for version control)
 - Any modern OS (Windows, macOS, Linux)
 
-### Q: Can I use ClaudeKit with existing projects?
-**A:** Yes! ClaudeKit works with existing projects:
+### Q: Can I use Mekong Marketing with existing projects?
+**A:** Yes! Mekong Marketing works with existing projects:
 ```bash
 cd your-existing-project
-claudekit init
+mekong init
 # Analyzes your project and activates relevant skills
 ```
 
@@ -73,7 +73,7 @@ claudekit init
 /git:cm                                    # Commit changes
 ```
 
-### Q: How do I fix bugs with ClaudeKit?
+### Q: How do I fix bugs with Mekong Marketing?
 **A:** Use the debugging workflow:
 ```bash
 /debug "login button not working"          # Investigate issue
@@ -83,7 +83,7 @@ claudekit init
 ```
 
 ### Q: Can I create custom commands?
-**A:** Yes! ClaudeKit supports custom commands:
+**A:** Yes! Mekong Marketing supports custom commands:
 ```bash
 /skill:create "My company's React patterns"
 # Creates reusable skill for your team's conventions
@@ -99,8 +99,8 @@ claudekit init
 
 ## Skills and Capabilities
 
-### Q: What technologies does ClaudeKit support?
-**A:** ClaudeKit supports 45+ technologies out of the box:
+### Q: What technologies does Mekong Marketing support?
+**A:** Mekong Marketing supports 45+ technologies out of the box:
 - **Frontend**: Next.js, React, Vue, Angular, Tailwind, shadcn/ui
 - **Backend**: Node.js, Python, Go, Rust, PostgreSQL, MongoDB
 - **Cloud**: AWS, GCP, Azure, Cloudflare Workers, Docker
@@ -109,7 +109,7 @@ claudekit init
 
 ### Q: How do skills work?
 **A:** Skills automatically activate based on your project:
-1. ClaudeKit scans your project files
+1. Mekong Marketing scans your project files
 2. Detects technologies (e.g., `next.config.js` → Next.js skill)
 3. Injects relevant knowledge into agent context
 4. Agents use best practices for detected technologies
@@ -124,7 +124,7 @@ claudekit init
 
 ## Performance and Quality
 
-### Q: How much faster is ClaudeKit?
+### Q: How much faster is Mekong Marketing?
 **A:** Based on user data:
 - **10x faster** feature development
 - **80% fewer bugs** with automated testing
@@ -132,14 +132,14 @@ claudekit init
 - **75% faster** bug resolution
 
 ### Q: Is the generated code production-ready?
-**A:** Yes. ClaudeKit generates production-quality code:
+**A:** Yes. Mekong Marketing generates production-quality code:
 - Follows security best practices
 - Includes comprehensive error handling
 - Has automated test coverage
 - Meets performance standards
 - Includes proper documentation
 
-### Q: How does ClaudeKit ensure code quality?
+### Q: How does Mekong Marketing ensure code quality?
 **A:** Multiple quality assurance layers:
 - **Code Reviewer Agent** performs security and performance analysis
 - **Tester Agent** writes comprehensive tests
@@ -148,12 +148,12 @@ claudekit init
 
 ## Troubleshooting
 
-### Q: ClaudeKit isn't detecting my technology stack
+### Q: Mekong Marketing isn't detecting my technology stack
 **A:** Try these solutions:
 ```bash
 /skill:refresh    # Refresh skill detection
 /debug "project analysis"  # Analyze project structure
-claudekit doctor  # Check system health
+mekong doctor  # Check system health
 ```
 
 ### Q: Commands are taking too long
@@ -163,7 +163,7 @@ claudekit doctor  # Check system health
 - Consider splitting large tasks into smaller ones
 
 ### Q: I keep hitting Claude's rate limits. What can I do?
-**A:** Install [CCS (Claude Code Switch)](/docs/tools/ccs) to:
+**A:** Install [CCS (Mekong CLI Switch)](/docs/tools/ccs) to:
 - **Switch accounts instantly:** Use multiple Claude accounts without downtime
 - **Optimize costs:** Delegate simple tasks to GLM/Kimi (81% cheaper)
 - **Parallel workflows:** Run multiple sessions simultaneously
@@ -179,17 +179,17 @@ claudekit doctor  # Check system health
 
 ## Pricing and Licensing
 
-### Q: How much does ClaudeKit cost?
-**A:** ClaudeKit is a one-time purchase of $99:
+### Q: How much does Mekong Marketing cost?
+**A:** Mekong Marketing is a one-time purchase of $99:
 - Lifetime access to all features
 - All future updates included
 - 30-day money-back guarantee
 - No monthly fees or subscriptions
 
 ### Q: Are there any ongoing costs?
-**A:** No ongoing costs for ClaudeKit itself. You only need:
-- ClaudeKit one-time purchase ($99)
-- Claude Code subscription (separate)
+**A:** No ongoing costs for Mekong Marketing itself. You only need:
+- Mekong Marketing one-time purchase ($99)
+- Mekong CLI subscription (separate)
 
 ### Q: What's included in the price?
 **A:** Everything:
@@ -208,24 +208,24 @@ claudekit doctor  # Check system health
 
 ## Integration and Workflow
 
-### Q: Can ClaudeKit work with my existing CI/CD?
-**A:** Yes! ClaudeKit integrates with:
+### Q: Can Mekong Marketing work with my existing CI/CD?
+**A:** Yes! Mekong Marketing integrates with:
 - GitHub Actions
 - GitLab CI/CD
 - Jenkins
 - CircleCI
 - Any standard Git workflow
 
-### Q: How does ClaudeKit handle version control?
-**A:** ClaudeKit includes Git management:
+### Q: How does Mekong Marketing handle version control?
+**A:** Mekong Marketing includes Git management:
 - Professional commit messages
 - Conventional commit format
 - Automated branching strategies
 - Pull request creation
 - Merge conflict resolution
 
-### Q: Can I use ClaudeKit with team workflows?
-**A:** Absolutely! ClaudeKit enhances team collaboration:
+### Q: Can I use Mekong Marketing with team workflows?
+**A:** Absolutely! Mekong Marketing enhances team collaboration:
 - Shared skill libraries
 - Consistent code patterns across team
 - Automated documentation
@@ -234,13 +234,13 @@ claudekit doctor  # Check system health
 
 ## Advanced Usage
 
-### Q: Can I extend ClaudeKit with custom agents?
+### Q: Can I extend Mekong Marketing with custom agents?
 **A:** While you can't create new agent types, you can:
 - Create custom skills that modify agent behavior
 - Use workflow patterns to combine agents
 - Extend functionality through custom commands
 
-### Q: How do I optimize ClaudeKit for large projects?
+### Q: How do I optimize Mekong Marketing for large projects?
 **A:** Best practices for large codebases:
 ```bash
 # Create .claudeignore file
@@ -254,8 +254,8 @@ echo "node_modules/\ndist/\nbuild/\ncoverage/" > .claudeignore
 /fix:ci "maintain CI/CD health"
 ```
 
-### Q: Can ClaudeKit work with microservices?
-**A:** Yes! ClaudeKit handles microservices:
+### Q: Can Mekong Marketing work with microservices?
+**A:** Yes! Mekong Marketing handles microservices:
 - Service discovery and analysis
 - Inter-service communication patterns
 - Distributed system debugging
@@ -266,12 +266,12 @@ echo "node_modules/\ndist/\nbuild/\ncoverage/" > .claudeignore
 
 ### Q: How do I get help?
 **A:** Multiple support channels:
-- [Discord Community](https://claudekit.cc/discord) - Real-time help
-- [GitHub Issues](https://github.com/claudekit/claudekit/issues) - Bug reports
+- [Discord Community](https://mekongmarketing.com/discord) - Real-time help
+- [GitHub Issues](https://github.com/mekong/mekong/issues) - Bug reports
 - [Documentation](/docs) - Complete reference
-- [Email Support](mailto:support@claudekit.cc) - Direct assistance
+- [Email Support](mailto:support@mekongmarketing.com) - Direct assistance
 
-### Q: How can I contribute to ClaudeKit?
+### Q: How can I contribute to Mekong Marketing?
 **A:** We welcome contributions:
 - Share custom skills with the community
 - Report bugs and suggest features
@@ -279,7 +279,7 @@ echo "node_modules/\ndist/\nbuild/\ncoverage/" > .claudeignore
 - Help others in Discord
 - Create tutorials and examples
 
-### Q: How often is ClaudeKit updated?
+### Q: How often is Mekong Marketing updated?
 **A:** Regular update schedule:
 - Major features: Quarterly
 - Bug fixes: Monthly
@@ -293,16 +293,16 @@ echo "node_modules/\ndist/\nbuild/\ncoverage/" > .claudeignore
 - [Complete Documentation](/docs)
 - [Getting Started Guide](/docs/getting-started)
 - [Workflow Examples](/docs/workflows)
-- [Discord Community](https://claudekit.cc/discord)
-- [Blog](https://claudekit.cc/blog)
+- [Discord Community](https://mekongmarketing.com/discord)
+- [Blog](https://mekongmarketing.com/blog)
 
 ### Q: Can I talk to a human?
 **A:** Yes! Human support available:
 - Discord community (real-time chat)
-- Email support@claudekit.cc
+- Email support@mekongmarketing.com
 - Enterprise customers get dedicated support
 - Office hours for community calls
 
 ---
 
-**Don't see your question here?** Ask in our [Discord community](https://claudekit.cc/discord) or [open an issue](https://github.com/claudekit/claudekit/issues). We're here to help!
+**Don't see your question here?** Ask in our [Discord community](https://mekongmarketing.com/discord) or [open an issue](https://github.com/mekong/mekong/issues). We're here to help!

@@ -8,7 +8,7 @@ published: true
 
 # Adding a New Feature
 
-Learn the complete workflow for adding new features to your project with ClaudeKit - from initial planning through production deployment with full testing and documentation.
+Learn the complete workflow for adding new features to your project with Mekong Marketing - from initial planning through production deployment with full testing and documentation.
 
 ## Overview
 
@@ -19,7 +19,7 @@ Learn the complete workflow for adding new features to your project with ClaudeK
 
 ## Prerequisites
 
-- Existing project with ClaudeKit configured
+- Existing project with Mekong Marketing configured
 - Clear feature requirements
 - Development environment set up
 - Git repository initialized
@@ -31,7 +31,7 @@ Learn the complete workflow for adding new features to your project with ClaudeK
 Start by clearly defining what you want to build:
 
 ```bash
-# Start Claude Code
+# Start Mekong CLI
 claude
 
 # Define your feature
@@ -459,7 +459,7 @@ Real-world scenario: Adding search functionality to an e-commerce site.
 - Testing: 1-2 hours
 - Documentation: 1 hour
 
-**With ClaudeKit**: 25 minutes
+**With Mekong Marketing**: 25 minutes
 - Planning: 5 minutes
 - Implementation: 12 minutes
 - Testing: 5 minutes
@@ -651,4 +651,4 @@ git checkout -b feature/password-reset
 
 ---
 
-**Key Takeaway**: Use ClaudeKit's systematic workflow (plan → implement → test → document → commit) to add production-ready features 10x faster than manual development.
+**Key Takeaway**: Use Mekong Marketing's systematic workflow (plan → implement → test → document → commit) to add production-ready features 10x faster than manual development.

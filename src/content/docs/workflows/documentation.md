@@ -1,6 +1,6 @@
 ---
 title: "Documentation Workflow"
-description: "Keep documentation in sync with code changes using ClaudeKit"
+description: "Keep documentation in sync with code changes using Mekong Marketing"
 section: workflows
 order: 3
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Documentation Workflow
 
-Keep documentation synchronized with code changes using ClaudeKit's automated documentation management.
+Keep documentation synchronized with code changes using Mekong Marketing's automated documentation management.
 
 ## Overview
 
@@ -304,7 +304,7 @@ docs/
 
 - [Writing Style Guide](/docs/writing-style-guide)
 - [Templates and Examples](/docs/templates)
-- [Community Forum](https://forum.claudekit.com)
+- [Community Forum](https://forum.mekong.com)
 - [Documentation Best Practices](/docs/best-practices)
 
 ## Related Workflows

@@ -14,7 +14,7 @@ published: true
 
 # Workflows
 
-Workflows là xương sống của hệ thống điều phối agent của ClaudeKit. Chúng cung cấp hướng dẫn chi tiết để đảm bảo các agents làm việc cùng nhau một cách gắn kết và tuân theo tiêu chuẩn dự án.
+Workflows là xương sống của hệ thống điều phối agent của Mekong Marketing. Chúng cung cấp hướng dẫn chi tiết để đảm bảo các agents làm việc cùng nhau một cách gắn kết và tuân theo tiêu chuẩn dự án.
 
 ## Workflows Là Gì?
 
@@ -28,7 +28,7 @@ Workflows là các file markdown được lưu trong `.claude/workflows/` chứa
 
 ## Các File Workflow
 
-ClaudeKit bao gồm bốn file workflow cốt lõi:
+Mekong Marketing bao gồm bốn file workflow cốt lõi:
 
 ### 1. development-rules.md
 
@@ -362,7 +362,7 @@ cat .claude/workflows/development-rules.md
 
 **Giải Pháp:**
 1. Xem xét và cập nhật các file workflow
-2. Chạy `ck init` để nhận workflows ClaudeKit mới nhất
+2. Chạy `ck init` để nhận workflows Mekong Marketing mới nhất
 3. Hợp nhất thay đổi tùy chỉnh với cập nhật
 4. Tài liệu hóa customizations
 

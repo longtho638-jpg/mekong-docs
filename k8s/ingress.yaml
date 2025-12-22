@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: claudekit-docs
+  name: agencyos-docs
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
@@ -10,16 +10,16 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - docs.claudekit.cc
-      secretName: claudekit-docs-tls
+        - docs.agencyos.cc
+      secretName: agencyos-docs-tls
   rules:
-    - host: docs.claudekit.cc
+    - host: docs.agencyos.cc
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: claudekit-docs
+                name: agencyos-docs
                 port:
                   number: 80

@@ -232,7 +232,7 @@ Files created:
 ### Landing Page Copy
 
 ```bash
-/content:good [write landing page copy for ClaudeKit Pro targeting enterprise teams]
+/content:good [write landing page copy for Mekong Marketing Pro targeting enterprise teams]
 ```
 
 **What happens:**
@@ -439,7 +439,7 @@ tests last week?
 
 If it's more than 2 hours, we have good news.
 
-ClaudeKit now writes your tests automatically.
+Mekong Marketing now writes your tests automatically.
 
 Unit tests. Integration tests. E2E tests. All generated
 from your code in seconds.
@@ -471,7 +471,7 @@ EMAIL 2: The Deep Dive
 ---
 (Sent 3 days later to non-openers and openers who didn't click)
 
-Subject: "How ClaudeKit generated 247 tests in 18 minutes"
+Subject: "How Mekong Marketing generated 247 tests in 18 minutes"
 
 Body:
 
@@ -490,8 +490,8 @@ AI-powered testing...
 - Sarah Chen, Engineering Lead @ TechCorp
 
 How it works:
-1. Install ClaudeKit CLI (1 command)
-2. Run: claudekit test generate
+1. Install Mekong Marketing CLI (1 command)
+2. Run: mekong test generate
 3. Review generated tests
 4. Commit and push
 

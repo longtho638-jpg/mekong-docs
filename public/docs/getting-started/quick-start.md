@@ -1,6 +1,6 @@
 ---
 title: Quick Start
-description: Ship your first feature in 15 minutes with ClaudeKit's AI development team
+description: Ship your first feature in 15 minutes with Mekong Marketing's AI development team
 category: getting-started
 order: 3
 published: true
@@ -12,9 +12,9 @@ Ship production feature in 15 minutes. No boilerplate, no setup hell.
 
 ## Prerequisites
 
-- ClaudeKit CLI installed (`ck --version` works)
-- Claude Code running
-- Project initialized with ClaudeKit
+- Mekong Marketing CLI installed (`ck --version` works)
+- Mekong CLI running
+- Project initialized with Mekong Marketing
 
 **Don't have these?** See [Installation Guide](/docs/getting-started/installation)
 
@@ -61,7 +61,7 @@ Summary:
 • Files to create: 8
 • Files to modify: 4
 • Tests: 12 test cases
-• Estimated: 2 hours manually, 5 minutes with ClaudeKit
+• Estimated: 2 hours manually, 5 minutes with Mekong Marketing
 
 Next: /code plans/251030-auth-implementation.md
 ```
@@ -181,7 +181,7 @@ Done!
 7. Debug issues (1h)
 8. Documentation (30min)
 
-**ClaudeKit approach** (6 minutes):
+**Mekong Marketing approach** (6 minutes):
 1. Plan: AI researches, analyzes, designs (30s)
 2. Implement: AI codes, tests, documents (4m)
 3. Review: AI validates security, performance (30s)
@@ -261,7 +261,7 @@ Each takes 5-20 minutes instead of days.
 ## Common Questions
 
 **Q: Does it work with my tech stack?**
-A: Yes. Next.js, Django, Laravel, Go, Rust, Flutter - any stack. ClaudeKit adapts to your patterns.
+A: Yes. Next.js, Django, Laravel, Go, Rust, Flutter - any stack. Mekong Marketing adapts to your patterns.
 
 **Q: What if AI makes mistakes?**
 A: `code-reviewer` catches issues before commit. Plus, you review PRs as normal. AI augments, doesn't replace judgment.
@@ -275,7 +275,7 @@ A: Yes. Edit `.claude/agents/*.md` to tune behavior. See [Custom Agents](/docs/h
 ## Explore More
 
 **Core Concepts**:
-- [Architecture](/docs/core-concepts/architecture) - How ClaudeKit works
+- [Architecture](/docs/core-concepts/architecture) - How Mekong Marketing works
 - [Agents Overview](/docs/agents/) - Meet your AI team
 - [Commands Guide](/docs/commands/) - All 30+ commands
 
@@ -291,6 +291,6 @@ A: Yes. Edit `.claude/agents/*.md` to tune behavior. See [Custom Agents](/docs/h
 
 ---
 
-**You just shipped production auth in 6 minutes.** Boilerplates can't do that. AI chat assistants can't do that. Only ClaudeKit.
+**You just shipped production auth in 6 minutes.** Boilerplates can't do that. AI chat assistants can't do that. Only Mekong Marketing.
 
 **Ready to ship?** Your AI dev team is waiting.

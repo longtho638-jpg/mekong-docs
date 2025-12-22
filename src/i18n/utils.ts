@@ -58,7 +58,7 @@ export function getCurrentSlug(currentPath: string, locale: Locale): string {
  * @param baseUrl - Base site URL
  * @returns Array of alternate URLs with locale info
  */
-export function getAlternateUrls(slug: string, baseUrl: string = 'https://docs.claudekit.cc') {
+export function getAlternateUrls(slug: string, baseUrl: string = 'https://docs.mekongmarketing.com') {
   return [
     { lang: 'en', url: `${baseUrl}/docs/${slug}` },
     { lang: 'vi', url: `${baseUrl}/vi/docs/${slug}` },

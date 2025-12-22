@@ -1,5 +1,5 @@
 ---
-title: "CCS - Claude Code Switch"
+title: "CCS - Mekong CLI Switch"
 description: "Switch between multiple Claude accounts and AI models instantly. Avoid rate limits and optimize costs with intelligent delegation."
 section: tools
 category: tools
@@ -7,7 +7,7 @@ order: 2
 published: true
 ---
 
-# CCS - Claude Code Switch
+# CCS - Mekong CLI Switch
 
 **One command, zero downtime, multiple accounts**
 
@@ -125,7 +125,7 @@ Use slash commands inside delegated sessions:
 # Execute /cook command in GLM session
 ccs glm -p "/cook create responsive landing page"
 
-# Use ClaudeKit commands
+# Use Mekong Marketing commands
 ccs glm -p "/fix:test run all tests and fix failures"
 ```
 
@@ -247,7 +247,7 @@ ccs glm:continue -p "also update the README examples"
 ccs glm:continue -p "add error handling"
 ```
 
-## Integration with ClaudeKit
+## Integration with Mekong Marketing
 
 ### Recommended Workflow
 
@@ -375,8 +375,8 @@ rm -rf ~/.ccs
 
 ## Next Steps
 
-- [Installation Guide](/docs/getting-started/installation) - Setup ClaudeKit
-- [Workflows](/docs/workflows/) - Learn ClaudeKit workflows
+- [Installation Guide](/docs/getting-started/installation) - Setup Mekong Marketing
+- [Workflows](/docs/workflows/) - Learn Mekong Marketing workflows
 - [FAQ](/docs/support/faq) - Common questions
 
 ---

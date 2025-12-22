@@ -1,6 +1,6 @@
 ---
 title: "Tools & Utilities"
-description: "Ecosystem tools and utilities that enhance your ClaudeKit workflow"
+description: "Ecosystem tools and utilities that enhance your Mekong Marketing workflow"
 section: tools
 category: tools
 order: 1
@@ -9,11 +9,11 @@ published: true
 
 # Tools & Utilities
 
-Ecosystem tools that complement ClaudeKit and enhance your development workflow.
+Ecosystem tools that complement Mekong Marketing and enhance your development workflow.
 
 ## Official Tools
 
-### CCS - Claude Code Switch
+### CCS - Mekong CLI Switch
 
 **Purpose:** Multi-account management and cost optimization
 
@@ -26,7 +26,7 @@ Switch between multiple Claude accounts and AI models (GLM, Kimi) instantly to a
 - 🔐 OAuth and API key authentication
 
 **Use Cases:**
-- Heavy ClaudeKit users hitting rate limits
+- Heavy Mekong Marketing users hitting rate limits
 - Teams sharing Claude accounts
 - Cost optimization for simple tasks
 - Multi-project workflows
@@ -53,16 +53,16 @@ Switch between multiple Claude accounts and AI models (GLM, Kimi) instantly to a
 
 ## Contributing Tools
 
-Have a tool that enhances ClaudeKit? We'd love to feature it!
+Have a tool that enhances Mekong Marketing? We'd love to feature it!
 
 **Requirements:**
 - Open source (MIT, Apache 2.0, or similar)
 - Well-documented
 - Actively maintained
-- Solves a real ClaudeKit user problem
+- Solves a real Mekong Marketing user problem
 
 **Submit via:**
-- [GitHub](https://github.com/claudekit/claudekit-docs/pulls)
+- [GitHub](https://github.com/mekong/mekong-docs/pulls)
 - [Discord Community](https://discord.gg/GnCRPpSw)
 
 ---

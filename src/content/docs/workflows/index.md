@@ -1,6 +1,6 @@
 ---
 title: "Workflows"
-description: "Task-oriented guides for common development scenarios with ClaudeKit"
+description: "Task-oriented guides for common development scenarios with Mekong Marketing"
 section: workflows
 order: 0
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Workflows
 
-Task-oriented guides for common development scenarios using ClaudeKit's slash commands and agents.
+Task-oriented guides for common development scenarios using Mekong Marketing's slash commands and agents.
 
 ## Popular Workflows
 
@@ -118,7 +118,7 @@ cd my-project
 
 ## Getting Started
 
-New to ClaudeKit? Start with:
+New to Mekong Marketing? Start with:
 1. [Getting Started Guide](/docs/getting-started) - Learn the basics
 2. [Quick Start](/docs/getting-started/quick-start) - Build your first feature
 3. [Feature Development](/docs/workflows/feature-development) - Complete workflow example

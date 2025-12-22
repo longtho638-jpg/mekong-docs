@@ -97,7 +97,7 @@ function llmsTxtGenerator() {
           });
 
           // Generate llms.txt (index with links)
-          const llmsTxt = `# ClaudeKit Documentation
+          const llmsTxt = `# Mekong Marketing Documentation
 
 > Production-grade framework for Claude Code with agents, commands, and skills
 
@@ -107,11 +107,11 @@ ${generateSectionIndex(sorted)}
 
 ## All Pages
 
-${sorted.map(doc => `- [${doc.data.title}](https://docs.claudekit.cc/docs/${doc.slug}): ${doc.data.description}`).join('\n')}
+${sorted.map(doc => `- [${doc.data.title}](https://docs.mekongmarketing.com/docs/${doc.slug}): ${doc.data.description}`).join('\n')}
 `;
 
           // Generate llms-full.txt (complete content)
-          const llmsFullTxt = `# ClaudeKit Documentation (Complete)
+          const llmsFullTxt = `# Mekong Marketing Documentation (Complete)
 
 Generated: ${new Date().toISOString()}
 Total Pages: ${sorted.length}
@@ -123,7 +123,7 @@ ${sorted.map(doc => `
 
 Section: ${doc.data.section}
 Category: ${doc.data.category || 'N/A'}
-URL: https://docs.claudekit.cc/docs/${doc.slug}
+URL: https://docs.mekongmarketing.com/docs/${doc.slug}
 
 ${doc.body}
 
@@ -165,8 +165,8 @@ function generateSectionIndex(docs) {
     .map(([section, docs]) => `
 ### ${section.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
 
-${docs.slice(0, 5).map(doc => `- [${doc.data.title}](https://docs.claudekit.cc/docs/${doc.slug})`).join('\n')}
-${docs.length > 5 ? `- [... ${docs.length - 5} more pages](https://docs.claudekit.cc/docs/${section})` : ''}
+${docs.slice(0, 5).map(doc => `- [${doc.data.title}](https://docs.mekongmarketing.com/docs/${doc.slug})`).join('\n')}
+${docs.length > 5 ? `- [... ${docs.length - 5} more pages](https://docs.mekongmarketing.com/docs/${section})` : ''}
   `).join('\n');
 }
 

@@ -1,6 +1,6 @@
 ---
 title: Installation Issues
-description: Fix ClaudeKit CLI install failures, permission errors, path issues, and Node version problems on Windows, macOS, and Linux
+description: Fix Mekong Marketing CLI install failures, permission errors, path issues, and Node version problems on Windows, macOS, and Linux
 category: troubleshooting
 order: 2
 published: true
@@ -8,20 +8,20 @@ published: true
 
 # Installation Issues
 
-ClaudeKit installation problems? Get unblocked in minutes with platform-specific fixes.
+Mekong Marketing installation problems? Get unblocked in minutes with platform-specific fixes.
 
 ## Quick Fix: Command Not Found
 
-**Symptom**: `ck: command not found` or `claudekit-cli: command not found`
+**Symptom**: `ck: command not found` or `mekong-cli: command not found`
 
 **Solution**:
 
 ```bash
 # Verify global installation
-npm list -g claudekit-cli
+npm list -g mekong-cli
 
 # If not found, install globally
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # Verify installation
 ck --version
@@ -54,7 +54,7 @@ ck --version
 
 **Expected output**:
 ```
-claudekit-cli/1.0.0
+mekong-cli/1.0.0
 ```
 
 #### Windows PATH Not Updated
@@ -81,7 +81,7 @@ claudekit-cli/1.0.0
 
 #### Node.js Version Too Old
 
-**Symptom**: "Error: ClaudeKit requires Node.js 18 or higher"
+**Symptom**: "Error: Mekong Marketing requires Node.js 18 or higher"
 
 **Solution**:
 
@@ -95,8 +95,8 @@ node --version
 nvm install 20
 nvm use 20
 
-# Reinstall ClaudeKit
-npm install -g claudekit-cli
+# Reinstall Mekong Marketing
+npm install -g mekong-cli
 ```
 
 ---
@@ -120,14 +120,14 @@ npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
-# Reinstall ClaudeKit
-npm install -g claudekit-cli
+# Reinstall Mekong Marketing
+npm install -g mekong-cli
 ```
 
 **Solution 2**: Use sudo (not recommended)
 
 ```bash
-sudo npm install -g claudekit-cli
+sudo npm install -g mekong-cli
 ```
 
 **Solution 3**: Use nvm (best practice)
@@ -143,8 +143,8 @@ source ~/.zshrc
 nvm install 20
 nvm use 20
 
-# Install ClaudeKit (no sudo needed)
-npm install -g claudekit-cli
+# Install Mekong Marketing (no sudo needed)
+npm install -g mekong-cli
 ```
 
 #### Command Not Found After Install
@@ -184,8 +184,8 @@ arch
 nvm install 20
 nvm alias default 20
 
-# Reinstall ClaudeKit
-npm install -g claudekit-cli
+# Reinstall Mekong Marketing
+npm install -g mekong-cli
 ```
 
 ---
@@ -203,14 +203,14 @@ npm install -g claudekit-cli
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install 20
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # Option 2: Change npm global directory
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-npm install -g claudekit-cli
+npm install -g mekong-cli
 ```
 
 #### Missing Dependencies
@@ -230,8 +230,8 @@ sudo dnf install -y gcc-c++ make python3
 # Arch
 sudo pacman -S base-devel python
 
-# Reinstall ClaudeKit
-npm install -g claudekit-cli
+# Reinstall Mekong Marketing
+npm install -g mekong-cli
 ```
 
 #### PATH Not Set
@@ -271,7 +271,7 @@ npm cache clean --force
 npm install -g npm@latest
 
 # Retry installation
-npm install -g claudekit-cli
+npm install -g mekong-cli
 ```
 
 ### Network/Proxy Issues
@@ -292,7 +292,7 @@ npm config set https-proxy http://proxy.company.com:8080
 npm config set registry https://registry.npmjs.org/
 
 # Retry installation
-npm install -g claudekit-cli
+npm install -g mekong-cli
 ```
 
 ### Version Conflicts
@@ -303,13 +303,13 @@ npm install -g claudekit-cli
 
 ```bash
 # Uninstall old version
-npm uninstall -g claudekit-cli
+npm uninstall -g mekong-cli
 
 # Clear cache
 npm cache clean --force
 
 # Install latest version
-npm install -g claudekit-cli@latest
+npm install -g mekong-cli@latest
 
 # Verify
 ck --version
@@ -371,7 +371,7 @@ After fixing installation issues, verify everything works:
 # Check CLI version
 ck --version
 
-# Expected: claudekit-cli/1.0.0
+# Expected: mekong-cli/1.0.0
 
 # Check available commands
 ck --help
@@ -383,7 +383,7 @@ mkdir test-project
 cd test-project
 ck new --kit engineer
 
-# Expected: Downloads ClaudeKit Engineer successfully
+# Expected: Downloads Mekong Marketing Engineer successfully
 ```
 
 ---
@@ -395,7 +395,7 @@ ck new --kit engineer
 - Keep Node.js updated (18+)
 - Use npm global directory in home folder
 - Check PATH after installation
-- Update ClaudeKit regularly: `ck init`
+- Update Mekong Marketing regularly: `ck init`
 
 ❌ **Don't**:
 - Use sudo with npm (except as last resort)
@@ -429,15 +429,15 @@ npm config list
 npm config get prefix
 
 # Installation status
-npm list -g claudekit-cli
+npm list -g mekong-cli
 which ck
 ```
 
 ### Get Help
 
-1. **Check logs**: Look for errors during `npm install -g claudekit-cli`
-2. **GitHub Issues**: [Report installation problems](https://github.com/claudekit/claudekit-engineer/issues)
-3. **Discord**: [Join ClaudeKit community](https://discord.gg/claudekit)
+1. **Check logs**: Look for errors during `npm install -g mekong-cli`
+2. **GitHub Issues**: [Report installation problems](https://github.com/mekong/mekong-engineer/issues)
+3. **Discord**: [Join Mekong Marketing community](https://discord.gg/mekong)
 
 Include in your report:
 - Operating system and version

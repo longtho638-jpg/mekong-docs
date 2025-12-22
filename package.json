@@ -1,7 +1,7 @@
 {
-  "name": "claudekit-docs",
+  "name": "mekong-docs",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev 2>&1 | tee logs.txt",
     "build": "astro build",

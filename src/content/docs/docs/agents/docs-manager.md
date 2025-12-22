@@ -144,4 +144,4 @@ Authenticate user and return JWT token.
 
 ## Key Takeaway
 
-**Docs-manager keeps documentation synchronized with code automatically.** Run `/docs:init` for initial setup, `/docs:update` after features, `/docs:summarize` for overview. Integrates with Repomix and Scout for comprehensive analysis. Part of ClaudeKit $99 toolkit.
+**Docs-manager keeps documentation synchronized with code automatically.** Run `/docs:init` for initial setup, `/docs:update` after features, `/docs:summarize` for overview. Integrates with Repomix and Scout for comprehensive analysis. Part of Mekong Marketing $99 toolkit.

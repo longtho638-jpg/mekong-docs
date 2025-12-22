@@ -1,4 +1,4 @@
-# ClaudeKit - Docs (Full)
+# Mekong Marketing - Docs (Full)
 
 ---
 
@@ -6,26 +6,26 @@
 
 ### Method 1: Manual Setup
 
-1. Copy all directories and files of `claudekit-engineer` repo to your project:
+1. Copy all directories and files of `mekong-engineer` repo to your project:
    - .claude/*
    - docs/*
    - plans/*
    - CLAUDE.md
-2. ClaudeKit utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
+2. Mekong Marketing utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
    **Notes:** Gemini API have a pretty generous free requests limit at the moment.
    - Go to [Google AI Studio](https://aistudio.google.com) and grab your API Key
    - Copy `.claude/skills/.env.example` to `.claude/skills/.env` and paste the key into the `GEMINI_API_KEY` environment variable
-3. Start Claude Code in your working project: `claude` (or `claude --dangerously-skip-permissions`)
+3. Start Mekong CLI in your working project: `claude` (or `claude --dangerously-skip-permissions`)
 4. Run command: `/docs:init` to trigger CC scan and create specs for the whole project. You will see some markdown files generated in `docs` directory, such as "codebase-summary.md", "code-standards.md", "system-architecture.md",...)
 5. Now your project is ready to start development, explore the commands below.
 
-### Method 2: ClaudeKit CLI
+### Method 2: Mekong Marketing CLI
 
 #### Installation
 
 ```bash
-npm install -g claudekit-cli
-bun add -g claudekit-cli
+npm install -g mekong-cli
+bun add -g mekong-cli
 ck --version
 ```
 
@@ -57,7 +57,7 @@ ck init --kit engineer --version v1.0.0
 
 #### Authentication
 
-The CLI requires a **GitHub Personal Access Token (PAT)** to download releases from private repositories (`claudekit-engineer` and `claudekit-marketing`). The authentication flow follows a multi-tier fallback:
+The CLI requires a **GitHub Personal Access Token (PAT)** to download releases from private repositories (`mekong-engineer` and `mekong-marketing`). The authentication flow follows a multi-tier fallback:
 
 1. GitHub CLI: Uses `gh auth token` if GitHub CLI is installed and authenticated
 2. Environment Variables: Checks `GITHUB_TOKEN` or `GH_TOKEN`
@@ -82,24 +82,24 @@ Now you're good to go!
 
 ## CLAUDE.md
 
-**[Important]** You should not modify this file, as it will be overwritten each time you update ClaudeKit (`ck init`). If you want to modify this file without it being overwritten, use the following flag during updates: `ck init --exclude CLAUDE.md`
+**[Important]** You should not modify this file, as it will be overwritten each time you update Mekong Marketing (`ck init`). If you want to modify this file without it being overwritten, use the following flag during updates: `ck init --exclude CLAUDE.md`
 
 I've read all the documentation about Context Engineering and tested everything. I learned that Manus's approach is extremely effective: Use File System As Context. That's why I recommend you keep everything as it is: just a few lines in `CLAUDE.md` linking to more detailed files in the `.claude/workflows/` and `docs/` directories.
 
-This is good for Claude Code because CLAUDE.md won't consume too many tokens initially when loaded in the project. Only when performing tasks will it look for more specific instructions (e.g., `development-rules.md`).
+This is good for Mekong CLI because CLAUDE.md won't consume too many tokens initially when loaded in the project. Only when performing tasks will it look for more specific instructions (e.g., `development-rules.md`).
 
 ---
 
 ## Workflows
 
 `.claude/workflows/*`
-This is where detailed instructions for Claude Code and subagents are stored. It ensures the system coordinates well together and adheres to development rules:
+This is where detailed instructions for Mekong CLI and subagents are stored. It ensures the system coordinates well together and adheres to development rules:
 
 `development-rules.md`
 Contains comprehensive development guidelines including code quality standards, subagent orchestration rules, pre-commit/push procedures, and implementation principles to ensure consistent and maintainable code across the project.
 
 `documentation-management.md`
-Contains documentation standards for the project. These documents help Claude Code avoid hallucinations and creating redundant code.
+Contains documentation standards for the project. These documents help Mekong CLI avoid hallucinations and creating redundant code.
 
 `orchestration-protocol.md`
 Contains methods for orchestrating agents, such as: initializing multiple subagents to work in parallel, or initializing subagents sequentially one type at a time.
@@ -133,7 +133,7 @@ Number: **14 subagents**
 - I've optimized these subagents for my daily workflow to ensure they can be maximally effective.
 - Of course, this has a downside: some agents may be effective for me but not yet effective for your workflow. If you feel this way, please contact me and we'll find a solution together.
 
-You don't actually need to learn about these agents, as they're already optimized and tuned based on practical experience. The agents will be **automatically orchestrated by ClaudeKit** based on predefined workflows.
+You don't actually need to learn about these agents, as they're already optimized and tuned based on practical experience. The agents will be **automatically orchestrated by Mekong Marketing** based on predefined workflows.
 
 But if you want to, feel free to check out the markdown files in `.claude/agents/` to learn more!
 
@@ -149,45 +149,45 @@ These are the commands I use most frequently in this kit:
 When starting a new project, you can use this command. It's built with spec-driven and test-driven development, so it will ask you questions one by one to fully understand what you want it to build. After understanding the requirements, it will start with "Researcher" agents to search the internet and provide necessary information for the "Planner" agent to create an execution plan. Then it will begin implementation and testing until everything runs smoothly.
 
 `/bootstrap:auto [prompt]`
-Similar to the above command, this is used to initialize a project, but this time you'll completely trust Claude Code. It will use your prompt to start researching, planning, and implementing until completion. To use this command effectively, you should prepare a detailed prompt.
+Similar to the above command, this is used to initialize a project, but this time you'll completely trust Mekong CLI. It will use your prompt to start researching, planning, and implementing until completion. To use this command effectively, you should prepare a detailed prompt.
 
 `/cook [prompt]`
 Main purpose: develop new features.
 
 `/fix:fast [prompt]`
 Fix minor bugs (fast mode). It will skip scouting the codebase and planning, then get straight to work and test after completion.
-**[Important]** Only use this command for small bugs and minor updates, as this saves time. If you see Claude Code starting to make mistakes, use the next command: `/fix:hard`
+**[Important]** Only use this command for small bugs and minor updates, as this saves time. If you see Mekong CLI starting to make mistakes, use the next command: `/fix:hard`
 
 `/fix:hard [prompt]`
 Fix hard bugs. When you're unsure about the bug you want to fix, use this command and describe the current situation you're facing. It will use multiple scout subagents to scan the entire codebase, then analyze and find the root cause, while also searching the internet or reading documentation for thorough solutions. Finally, it will create a meticulous plan on how to resolve it.
 
 `/fix:ci [github-ci-url]`
 Typically in each AI-assisted project, we SHOULD have a testing process via CI, specifically GitHub Actions - a cloud environment to run the entire test suite to check all project features. If this process fails, just copy the workflow URL and provide it to this command. It will automatically read the logs and find a way to fix it.
-**[Note]** You'll need to install the `gh` package on your machine. If you don't have it yet, don't worry - when you run this command, Claude Code will automatically detect it and guide you through the setup step by step.
+**[Note]** You'll need to install the `gh` package on your machine. If you don't have it yet, don't worry - when you run this command, Mekong CLI will automatically detect it and guide you through the setup step by step.
 
 `/fix:logs`
 When using this command, all development logs will be piped to `logs.txt`, and CC will read this file directly without you having to manually copy and paste errors. Quite useful for daily development.
 
 `/fix:test`
-Claude Code will launch agents to test all tests in the project. If errors are found, it will plan and fix them until there are no more errors.
+Mekong CLI will launch agents to test all tests in the project. If errors are found, it will plan and fix them until there are no more errors.
 
 `/fix:ui [prompt]`
 This command is used to fix UI errors. You can describe the error you're experiencing or simply provide a screenshot or video of the error, and it will help you investigate the cause, then fix it and perform testing.
 
 `/fix:types`
-Occasionally when working with TypeScript projects, you'll encounter "type" errors. Just type this command and Claude Code will check what the type error is and help you fix it.
+Occasionally when working with TypeScript projects, you'll encounter "type" errors. Just type this command and Mekong CLI will check what the type error is and help you fix it.
 
 `/docs:init`
-If you want to use ClaudeKit with an existing project, this will be the command you should start with. This command will have subagents read your entire codebase and create spec files for the project such as: codebase-summary, project-overview-pdr, code-standards, system-architecture,... These files will help Claude Code understand the codebase better, avoid hallucinations, and prevent creating duplicate code during later development.
+If you want to use Mekong Marketing with an existing project, this will be the command you should start with. This command will have subagents read your entire codebase and create spec files for the project such as: codebase-summary, project-overview-pdr, code-standards, system-architecture,... These files will help Mekong CLI understand the codebase better, avoid hallucinations, and prevent creating duplicate code during later development.
 
 `/docs:update`
-During development, although there are rules forcing Claude Code to stick to project spec documents, sometimes it forgets to update documentation when developing new features or refactoring (LLM still has many shortcomings). That's why I created this command - use it to update necessary project documentation.
+During development, although there are rules forcing Mekong CLI to stick to project spec documents, sometimes it forgets to update documentation when developing new features or refactoring (LLM still has many shortcomings). That's why I created this command - use it to update necessary project documentation.
 
 `/docs:summarize`
 This time it's used to read all project development documentation and then summarize it so we can understand better. This command is quite useful for onboarding new team members.
 
 `/plan`
-When developing new features, planning is essential. With this command, Claude Code will start summoning subagents to search the internet for relevant information, then report back to the planning agent to draft a detailed implementation plan. You should carefully review the plan file in the "plans/" directory and continue prompting the AI to adjust according to your wishes.
+When developing new features, planning is essential. With this command, Mekong CLI will start summoning subagents to search the internet for relevant information, then report back to the planning agent to draft a detailed implementation plan. You should carefully review the plan file in the "plans/" directory and continue prompting the AI to adjust according to your wishes.
 
 `/brainstorm`
 Sometimes you want to develop a feature but don't know where to start - use this command. With its understanding of the project context, this command will start discussing with you sincerely about the feature's feasibility and how it proposes to develop the feature most effectively. If necessary, it can summon subagents like "Researcher" to search the internet for best practices and advise you. It's optimized to be honest and straightforward, so it will always stick to "YAGNI - KISS - DRY" principles to make the implementation plan realistic and maintainable later.
@@ -246,7 +246,7 @@ If you want to create a more complete and refined design, you can use this comma
 This command is used to turn screenshots into UI (screenshot-to-code). It uses Gemini's image recognition technology, so it can accurately analyze screenshots - resulting in 80-90% similarity. Especially: it can also use the Gemini Imagen model to generate images used in the UI. Isn't that great?
 
 `/design:video`
-Similar to the screenshot-to-code command, this command turns screen recording videos into UI. With Gemini model's video understanding capabilities, ClaudeKit is probably the only tool on the market with this capability!
+Similar to the screenshot-to-code command, this command turns screen recording videos into UI. With Gemini model's video understanding capabilities, Mekong Marketing is probably the only tool on the market with this capability!
 
 `/content:cro`
 Use this command to write conversion-optimizing content for your project.

@@ -1,6 +1,6 @@
 ---
 title: Starting a New Project
-description: Complete guide to bootstrapping a new project with ClaudeKit from initial setup to first deployment
+description: Complete guide to bootstrapping a new project with Mekong Marketing from initial setup to first deployment
 category: use-cases
 order: 1
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Starting a New Project
 
-Learn how to bootstrap a new project with ClaudeKit, from initial requirements to deployed application. This guide walks through a real-world example of building a task management API.
+Learn how to bootstrap a new project with Mekong Marketing, from initial requirements to deployed application. This guide walks through a real-world example of building a task management API.
 
 ## Overview
 
@@ -20,7 +20,7 @@ Learn how to bootstrap a new project with ClaudeKit, from initial requirements t
 ## Prerequisites
 
 - Node.js 18+ installed
-- ClaudeKit CLI installed (`npm install -g claudekit-cli`)
+- Mekong Marketing CLI installed (`npm install -g mekong-cli`)
 - GitHub account
 - Basic understanding of REST APIs
 
@@ -28,14 +28,14 @@ Learn how to bootstrap a new project with ClaudeKit, from initial requirements t
 
 ### Option A: Using /bootstrap (Recommended)
 
-Start Claude Code and use the bootstrap command:
+Start Mekong CLI and use the bootstrap command:
 
 ```bash
 # Create project directory
 mkdir task-api
 cd task-api
 
-# Start Claude Code
+# Start Mekong CLI
 claude
 
 # Bootstrap the project
@@ -45,7 +45,7 @@ claude
 **Interactive Q&A:**
 
 ```
-🤖 ClaudeKit: I'll help you bootstrap a REST API for task management. Let me ask a few questions:
+🤖 Mekong Marketing: I'll help you bootstrap a REST API for task management. Let me ask a few questions:
 
 Q1: What's your primary tech stack preference?
    1. Node.js + Express
@@ -186,7 +186,7 @@ Next steps:
 4. npm run dev
 ```
 
-### Option B: Using ClaudeKit CLI
+### Option B: Using Mekong Marketing CLI
 
 ```bash
 # Interactive setup
@@ -198,7 +198,7 @@ ck new
 ? Authentication: JWT
 
 ✓ Project created
-✓ ClaudeKit configured
+✓ Mekong Marketing configured
 ✓ Dependencies installed
 
 cd task-api
@@ -347,7 +347,7 @@ Coverage:    87.3%
 ### If Tests Fail
 
 ```bash
-# Use ClaudeKit to fix
+# Use Mekong Marketing to fix
 /fix:test
 ```
 
@@ -484,7 +484,7 @@ cat docs/architecture.md
 git status
 git diff
 
-# Commit with ClaudeKit
+# Commit with Mekong Marketing
 /git:cm
 ```
 
@@ -501,7 +501,7 @@ feat: initialize task management API
 - Add Swagger API documentation
 - Configure Docker for deployment
 
-🤖 Generated with ClaudeKit
+🤖 Generated with Mekong Marketing
 ```
 
 ## Step 9: Set Up CI/CD
@@ -722,4 +722,4 @@ npx prisma migrate reset
 
 ---
 
-**Congratulations!** You've built a complete, production-ready REST API with ClaudeKit in under an hour. This same approach works for any type of project.
+**Congratulations!** You've built a complete, production-ready REST API with Mekong Marketing in under an hour. This same approach works for any type of project.

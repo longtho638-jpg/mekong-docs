@@ -1,6 +1,6 @@
 ---
 title: /ck-help
-description: ClaudeKit usage guide - search commands, categories, and workflows
+description: Mekong Marketing usage guide - search commands, categories, and workflows
 section: docs
 category: commands/core
 order: 21
@@ -9,7 +9,7 @@ published: true
 
 # /ck-help
 
-All-in-one ClaudeKit guide for discovering commands and workflows.
+All-in-one Mekong Marketing guide for discovering commands and workflows.
 
 ## Syntax
 
@@ -58,4 +58,4 @@ All-in-one ClaudeKit guide for discovering commands and workflows.
 
 ---
 
-**Key Takeaway**: Use `/ck-help` to discover ClaudeKit commands, explore categories, or find commands for specific tasks.
+**Key Takeaway**: Use `/ck-help` to discover Mekong Marketing commands, explore categories, or find commands for specific tasks.

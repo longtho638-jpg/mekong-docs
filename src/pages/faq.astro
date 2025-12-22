@@ -1,0 +1,281 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = 'FAQ - AgencyOS';
+const description = 'Frequently asked questions about AgencyOS, pricing, and getting started.';
+
+const faqs = [
+  {
+    category: "Getting Started",
+    questions: [
+      {
+        q: "What is AgencyOS?",
+        a: "AgencyOS is an AI-powered operating system for solo agencies. It includes 85+ commands to automate marketing, sales, affiliate management, and finance tasks."
+      },
+      {
+        q: "How do I install AgencyOS?",
+        a: "After purchase, you get access to a private GitHub repository. Clone it locally and open in your IDE. Run the setup script and you're ready to go."
+      },
+      {
+        q: "Do I need coding experience?",
+        a: "No! AgencyOS is designed for non-technical users. Just type natural language commands like /marketing/social or /sales/proposal and the AI handles the rest."
+      }
+    ]
+  },
+  {
+    category: "Pricing & Plans",
+    questions: [
+      {
+        q: "What's included in the free trial?",
+        a: "The 7-day free trial includes all Starter tier features: 20 AI commands, basic marketing automation, and community support."
+      },
+      {
+        q: "Can I upgrade or downgrade anytime?",
+        a: "Yes! You can switch plans at any time. Upgrades are prorated, and downgrades take effect at the next billing cycle."
+      },
+      {
+        q: "Is there a refund policy?",
+        a: "Absolutely. We offer a 30-day money-back guarantee. If you're not satisfied, email us and we'll refund you, no questions asked."
+      }
+    ]
+  },
+  {
+    category: "Features & Commands",
+    questions: [
+      {
+        q: "How many commands are available?",
+        a: "AgencyOS includes 85+ commands across marketing, sales, affiliate, finance, and content creation. New commands are added monthly."
+      },
+      {
+        q: "Can I create custom commands?",
+        a: "Yes! Pro and Franchise tiers include the ability to create and save custom command templates."
+      },
+      {
+        q: "Does it integrate with my existing tools?",
+        a: "AgencyOS works with popular tools like Notion, Google Workspace, Slack, and more through our MCP (Model Context Protocol) integrations."
+      }
+    ]
+  },
+  {
+    category: "Support & Community",
+    questions: [
+      {
+        q: "How do I get support?",
+        a: "Starter users get community support via Discord. Pro users get priority email support. Franchise users get dedicated 1:1 onboarding calls."
+      },
+      {
+        q: "Is there a community?",
+        a: "Yes! Join our Discord community with 500+ agency owners sharing tips, templates, and wins."
+      },
+      {
+        q: "Are there tutorials or documentation?",
+        a: "We have comprehensive documentation, video tutorials, and a blog with tips and best practices."
+      }
+    ]
+  }
+];
+---
+
+<LandingLayout title={title} description={description}>
+  <section class="faq-page">
+    <div class="faq-container">
+      
+      <!-- Header -->
+      <div class="faq-header">
+        <h1 class="faq-title">FAQ</h1>
+        <p class="faq-subtitle">
+          Got questions? We've got answers.
+        </p>
+      </div>
+
+      <!-- FAQ Categories -->
+      <div class="faq-content">
+        {faqs.map(category => (
+          <div class="faq-category">
+            <h2 class="category-title">{category.category}</h2>
+            <div class="questions-list">
+              {category.questions.map(item => (
+                <details class="faq-item">
+                  <summary class="faq-question">{item.q}</summary>
+                  <div class="faq-answer">{item.a}</div>
+                </details>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Still Have Questions -->
+      <div class="faq-cta">
+        <h2>Still have questions?</h2>
+        <p>We're here to help. Reach out to our team.</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn-primary">Contact Us</a>
+          <a href="https://discord.gg/agencyos" class="btn-secondary" target="_blank">Join Discord</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  .faq-page {
+    min-height: calc(100vh - 72px);
+    padding: 64px 24px;
+  }
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .faq-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+
+  .faq-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+  }
+
+  .faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  .category-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .faq-item {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  .faq-item:hover {
+    border-color: var(--color-accent-green);
+  }
+
+  .faq-item[open] {
+    border-color: var(--color-accent-green);
+  }
+
+  .faq-question {
+    padding: 16px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--color-accent-green);
+    transition: transform 0.2s;
+  }
+
+  .faq-item[open] .faq-question::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    padding: 0 20px 16px 20px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+  }
+
+  .faq-cta {
+    text-align: center;
+    padding: 48px 32px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+  }
+
+  .faq-cta h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+  }
+
+  .faq-cta p {
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+    background: #22c55e;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    padding: 12px 24px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--color-accent-green);
+    color: var(--color-accent-green);
+  }
+</style>

@@ -16,7 +16,7 @@ published: true
 
 **Đội Ngũ Phát Triển AI Triển Khai Code Production**
 
-ClaudeKit là 14 AI agents chuyên biệt được xây dựng trên Claude Code. Chúng lập kế hoạch, nghiên cứu, viết code, kiểm tra, review và triển khai tính năng - giống như thuê một đội senior dev mà không tốn chi phí.
+Mekong Marketing là 14 AI agents chuyên biệt được xây dựng trên Mekong CLI. Chúng lập kế hoạch, nghiên cứu, viết code, kiểm tra, review và triển khai tính năng - giống như thuê một đội senior dev mà không tốn chi phí.
 
 [Thử Quick Start →](/vi/docs/getting-started/quick-start)
 
@@ -25,4 +25,4 @@ ClaudeKit là 14 AI agents chuyên biệt được xây dựng trên Claude Code
 **Fast track** (6 phút):
 1. [Quick Start](/vi/docs/getting-started/quick-start)
 
-[Lấy ClaudeKit →](https://claudekit.cc)
+[Lấy Mekong Marketing →](https://mekongmarketing.com)

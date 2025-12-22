@@ -1,6 +1,6 @@
 ---
 title: Use Cases
-description: Real-world examples of using ClaudeKit for different development scenarios
+description: Real-world examples of using Mekong Marketing for different development scenarios
 category: use-cases
 order: 0
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Use Cases
 
-Learn how to use ClaudeKit for real-world development scenarios. This section contains practical examples and workflows for common tasks.
+Learn how to use Mekong Marketing for real-world development scenarios. This section contains practical examples and workflows for common tasks.
 
 ## Coming Soon
 
@@ -31,7 +31,7 @@ Step-by-step guide for initializing a new project from scratch:
 
 ### Maintaining an Old Project
 
-How to integrate ClaudeKit into existing codebases:
+How to integrate Mekong Marketing into existing codebases:
 
 - Initial documentation setup with `/docs:init`
 - Understanding existing architecture
@@ -142,7 +142,7 @@ Systematic approach to fixing production bugs:
 
 ### Team Collaboration
 
-Working with ClaudeKit in a team environment:
+Working with Mekong Marketing in a team environment:
 
 - Sharing workflows
 - Custom commands for team
@@ -182,7 +182,7 @@ Want to contribute use case examples? We're looking for:
 
 **Contact us:**
 - [Discord Community](https://discord.gg/x7SwTSf3wc)
-- [GitHub Discussions](https://github.com/claudekit/discussions)
+- [GitHub Discussions](https://github.com/mekong/discussions)
 
 ## Request Use Cases
 

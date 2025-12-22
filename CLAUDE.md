@@ -1,6 +1,6 @@
-# ClaudeKit Docs
+# Mekong Marketing Docs
 
-Astro v5 static docs site for ClaudeKit. Live: https://docs.claudekit.cc
+Astro v5 static docs site for Mekong Marketing. Live: https://docs.mekongmarketing.com
 
 ## CRITICAL: Quality Gate
 

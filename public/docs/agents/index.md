@@ -1,6 +1,6 @@
 ---
 title: Agents Overview
-description: Understanding ClaudeKit's 14 specialized agents and how they work together
+description: Understanding Mekong Marketing's 14 specialized agents and how they work together
 category: agents
 order: 1
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Agents Overview
 
-ClaudeKit includes 14 specialized agents that work together to handle every aspect of software development. Each agent is optimized for specific tasks and follows established workflows.
+Mekong Marketing includes 14 specialized agents that work together to handle every aspect of software development. Each agent is optimized for specific tasks and follows established workflows.
 
 ## The 14 Specialized Agents
 
@@ -53,11 +53,11 @@ These 14 agents are carefully optimized for daily development workflows based on
 - **Comprehensive Coverage**: Cover all aspects of development
 - **Maintainable**: Small enough to maintain, large enough to be effective
 
-> **Note**: If you need a new specialized agent, you can request it at the [ClaudeKit Discord](https://discord.gg/x7SwTSf3wc)
+> **Note**: If you need a new specialized agent, you can request it at the [Mekong Marketing Discord](https://discord.gg/x7SwTSf3wc)
 
 ## How Agents Work Together
 
-Agents are automatically orchestrated by ClaudeKit based on predefined workflows. You don't need to manually coordinate them.
+Agents are automatically orchestrated by Mekong Marketing based on predefined workflows. You don't need to manually coordinate them.
 
 ### Example: Building a New Feature
 
@@ -186,7 +186,7 @@ Agents can be invoked in three ways:
 
 ### 1. Automatically (Recommended)
 
-ClaudeKit automatically orchestrates agents based on:
+Mekong Marketing automatically orchestrates agents based on:
 
 - Command used (`/cook`, `/fix:hard`, etc.)
 - Task complexity
@@ -297,7 +297,7 @@ Research, analyze, and create comprehensive implementation plans
 ✅ **Do**: Trust the orchestration
 ```bash
 /cook [build REST API]
-# Let ClaudeKit orchestrate all agents automatically
+# Let Mekong Marketing orchestrate all agents automatically
 ```
 
 ❌ **Don't**: Micromanage agents
@@ -337,7 +337,7 @@ cat plans/latest-plan.md
 
 ### Todo List
 
-ClaudeKit uses TodoWrite tool to show agent progress:
+Mekong Marketing uses TodoWrite tool to show agent progress:
 
 ```
 ✓ planner Agent: Created implementation plan
@@ -407,4 +407,4 @@ Or explore:
 
 ---
 
-**Key Takeaway**: ClaudeKit's 14 specialized agents work together automatically through predefined workflows, handling every aspect of software development from planning to deployment.
+**Key Takeaway**: Mekong Marketing's 14 specialized agents work together automatically through predefined workflows, handling every aspect of software development from planning to deployment.

@@ -660,7 +660,7 @@ gh run rerun 1234567890 --failed
 ---
 
 **Report Generated**: 2024-10-20 14:51:00 UTC
-**Debugger**: ClaudeKit Debugger Agent v1.0
+**Debugger**: Mekong Marketing Debugger Agent v1.0
 **Total Investigation Time**: 30 minutes
 ```
 

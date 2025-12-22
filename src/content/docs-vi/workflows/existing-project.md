@@ -10,14 +10,14 @@ lastUpdated: 2025-11-07
 
 # Dự Án Brownfield
 
-Tích hợp ClaudeKit vào dự án hiện tại để nâng cao quy trình phát triển với AI agents. Hoàn hảo cho legacy codebase, dự án nhóm, và áp dụng AI dần dần.
+Tích hợp Mekong Marketing vào dự án hiện tại để nâng cao quy trình phát triển với AI agents. Hoàn hảo cho legacy codebase, dự án nhóm, và áp dụng AI dần dần.
 
 ## Cài Đặt
 
-### 1. Cài ClaudeKit CLI
+### 1. Cài Mekong Marketing CLI
 
 ```bash
-npm i -g claudekit-cli@latest
+npm i -g mekong-cli@latest
 ```
 
 ### 2. Di Chuyển Đến Dự Án
@@ -26,19 +26,19 @@ npm i -g claudekit-cli@latest
 cd /đường/dẫn/đến/dự/án/hiện/tại
 ```
 
-### 3. Khởi Động Claude Code
+### 3. Khởi Động Mekong CLI
 
 ```bash
 claude
 ```
 
-Lệnh này sẽ khởi động Claude Code (CC) với ClaudeKit agents trong thư mục dự án.
+Lệnh này sẽ khởi động Mekong CLI (CC) với Mekong Marketing agents trong thư mục dự án.
 
 ## Thiết Lập Ban Đầu
 
 ### Phân Tích và Tạo Specs
 
-Để Claude Code quét và phân tích codebase, tạo tài liệu kỹ thuật ban đầu:
+Để Mekong CLI quét và phân tích codebase, tạo tài liệu kỹ thuật ban đầu:
 
 ```bash
 /docs:init
@@ -281,13 +281,13 @@ Chia sẻ thư mục `.claude/` và specs đã tạo với team qua git.
 # 1. Clone repository
 git clone <repo-url>
 
-# 2. Cài ClaudeKit
-npm i -g claudekit-cli@latest
+# 2. Cài Mekong Marketing
+npm i -g mekong-cli@latest
 
 # 3. Di chuyển đến project
 cd project-name
 
-# 4. Khởi động Claude Code
+# 4. Khởi động Mekong CLI
 claude
 
 # 5. Specs đã có sẵn - bắt đầu làm việc!
@@ -304,10 +304,10 @@ claude
 
 ### Lệnh Không Hoạt Động
 ```bash
-# Kiểm tra cài đặt ClaudeKit
+# Kiểm tra cài đặt Mekong Marketing
 ck --version
 
-# Khởi động lại Claude Code
+# Khởi động lại Mekong CLI
 # Thoát CC và chạy: claude
 ```
 
@@ -325,4 +325,4 @@ Sau khi tích hợp thành công:
 
 ---
 
-**Cần giúp?** Xem [Troubleshooting Guide](/vi/docs/troubleshooting/) hoặc [GitHub Discussions](https://github.com/mrgoonie/claudekit-cli/discussions)
+**Cần giúp?** Xem [Troubleshooting Guide](/vi/docs/troubleshooting/) hoặc [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)

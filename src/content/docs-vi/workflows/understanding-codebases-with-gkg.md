@@ -84,9 +84,9 @@ Workspace Statistics:
 - Relationships found: 12,156
 ```
 
-### 2. Sử dụng công cụ GKG MCP với ClaudeKit
+### 2. Sử dụng công cụ GKG MCP với Mekong Marketing
 
-Sau khi lập chỉ mục, sử dụng công cụ GKG MCP trong các phiên Claude Code của bạn:
+Sau khi lập chỉ mục, sử dụng công cụ GKG MCP trong các phiên Mekong CLI của bạn:
 
 #### Liệt kê tất cả Projects
 
@@ -457,7 +457,7 @@ gkg server stop
 gkg server start
 ```
 
-## Tích hợp với ClaudeKit
+## Tích hợp với Mekong Marketing
 
 ### Sử dụng GKG trong Lệnh `/code`
 
@@ -465,7 +465,7 @@ gkg server start
 # Khi triển khai từ kế hoạch, sử dụng GKG cho ngữ cảnh
 /cook Add user authentication system
 
-# Claude Code sử dụng GKG để:
+# Mekong CLI sử dụng GKG để:
 # 1. Tìm kiếm các mẫu xác thực hiện có
 # 2. Hiểu kiến trúc hiện tại
 # 3. Tìm các điểm tích hợp
@@ -478,7 +478,7 @@ gkg server start
 # Trước khi tái cấu trúc lớn
 /plan Refactor authentication module
 
-# Claude Code sử dụng GKG để:
+# Mekong CLI sử dụng GKG để:
 # 1. Lập bản đồ tất cả code liên quan xác thực
 # 2. Tìm tất cả cách sử dụng
 # 3. Xác định phụ thuộc
@@ -532,7 +532,7 @@ gkg_repo_map \
 1. **Cài đặt GKG**: Làm theo hướng dẫn cài đặt ở trên
 2. **Lập chỉ mục Project của bạn**: `gkg index /path/to/project`
 3. **Khám phá**: Sử dụng công cụ MCP để hiểu codebase
-4. **Tích hợp với ClaudeKit**: Sử dụng ngữ cảnh GKG trong các lệnh `/code` và tái cấu trúc
+4. **Tích hợp với Mekong Marketing**: Sử dụng ngữ cảnh GKG trong các lệnh `/code` và tái cấu trúc
 5. **Tự động hóa**: Xây dựng workflow với dữ liệu GKG
 
 ---

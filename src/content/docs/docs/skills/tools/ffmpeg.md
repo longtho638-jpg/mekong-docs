@@ -1,6 +1,6 @@
 ---
 title: ffmpeg
-description: "Professional video/audio encoding, conversion, streaming, and filtering for ClaudeKit $99 toolkit"
+description: "Professional video/audio encoding, conversion, streaming, and filtering for Mekong Marketing $99 toolkit"
 section: docs
 category: skills/tools
 order: 21

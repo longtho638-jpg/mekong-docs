@@ -14,7 +14,7 @@ published: true
 
 # Maintaining an Old Project
 
-Learn how to integrate ClaudeKit into an existing project, understand legacy code, and systematically improve it. This guide walks through a real-world scenario of reviving a 2-year-old project.
+Learn how to integrate Mekong Marketing into an existing project, understand legacy code, and systematically improve it. This guide walks through a real-world scenario of reviving a 2-year-old project.
 
 ## Scenario
 
@@ -45,7 +45,7 @@ cat package.json
 cat README.md  # Usually outdated or missing
 ```
 
-### Start Claude Code
+### Start Mekong CLI
 
 ```bash
 claude
@@ -144,7 +144,7 @@ E-commerce backend API
 
 ### Ask Questions
 
-Now that ClaudeKit has context, ask specific questions:
+Now that Mekong Marketing has context, ask specific questions:
 
 ```bash
 /ask [how does the payment processing work?]

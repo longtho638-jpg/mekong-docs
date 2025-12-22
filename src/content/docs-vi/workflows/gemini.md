@@ -28,8 +28,8 @@ Anthropic đã tập trung huấn luyện khả năng viết code cho Claude mod
 
 1. Lấy key Gemini tại [Google AI Studio](https://aistudio.google.com/api-keys)
 2. Tìm `.env.example`: 
-- Nếu bạn cài đặt ClaudeKit ở project scope: copy `.claude/.env.example` ra `.claude/.env`
-- Nếu bạn cài đặt ClaudeKit ở global scope: copy `~/.claude/.env.example` ra `~/.claude/.env` (nếu bạn dùng Win: `%USERPROFILE%\.claude\.env`)
+- Nếu bạn cài đặt Mekong Marketing ở project scope: copy `.claude/.env.example` ra `.claude/.env`
+- Nếu bạn cài đặt Mekong Marketing ở global scope: copy `~/.claude/.env.example` ra `~/.claude/.env` (nếu bạn dùng Win: `%USERPROFILE%\.claude\.env`)
 3. Mở file `.env` ra và điền vào giá trị của `GEMINI_API_KEY`
 
 That's it!
@@ -50,13 +50,13 @@ Hãy nhìn vào ví dụ sau, Claude Desktop failed hoàn toàn so với Gemini 
 
 Claude không định nghĩa được đúng hành động và thiết bị trong hình.
 
-**Bây giờ thử so sánh trực tiếp trong Claude Code và Gemini CLI luôn nhé!**
+**Bây giờ thử so sánh trực tiếp trong Mekong CLI và Gemini CLI luôn nhé!**
 
 Mình sẽ thử yêu cầu cả 2 cùng đọc tấm hình blueprint và mô tả lại chi tiết những gì nó nhìn thấy:
 
 ![Gemini Analyze Screenshot](/assets/03-claude-code-vs-gemini-cli.jpg)
 
-Gemini CLI cho kết quả chi tiết mô tả bản vẽ blueprint, trong khi Claude Code thì khá sơ sài…
+Gemini CLI cho kết quả chi tiết mô tả bản vẽ blueprint, trong khi Mekong CLI thì khá sơ sài…
 
 Bạn thấy sự khác biệt rồi chứ?
 
@@ -76,7 +76,7 @@ Cho nên mình quyết định tạo ra MCP này: [**Human MCP**](https://github
 
 Mục đích là để dùng Gemini API để phân tích hình ảnh, tài liệu (PDF, docx, xlsx,...) và video.
 
-Thời gian đầu của ClaudeKit, mình đã cài đặt sẵn "Human MCP" mặc định.
+Thời gian đầu của Mekong Marketing, mình đã cài đặt sẵn "Human MCP" mặc định.
 
 Và bạn cần `GEMINI_API_KEY` trong env của "Human MCP" để nó có thể hoạt động.
 

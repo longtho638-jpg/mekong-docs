@@ -84,9 +84,9 @@ Workspace Statistics:
 - Relationships found: 12,156
 ```
 
-### 2. Use GKG MCP Tools with ClaudeKit
+### 2. Use GKG MCP Tools with Mekong Marketing
 
-Once indexed, use GKG MCP tools in your Claude Code sessions:
+Once indexed, use GKG MCP tools in your Mekong CLI sessions:
 
 #### List All Projects
 
@@ -457,7 +457,7 @@ gkg server stop
 gkg server start
 ```
 
-## Integration with ClaudeKit
+## Integration with Mekong Marketing
 
 ### Using GKG in `/code` Commands
 
@@ -465,7 +465,7 @@ gkg server start
 # When implementing from plan, use GKG for context
 /cook Add user authentication system
 
-# Claude Code uses GKG to:
+# Mekong CLI uses GKG to:
 # 1. Search for existing auth patterns
 # 2. Understand current architecture
 # 3. Find integration points
@@ -478,7 +478,7 @@ gkg server start
 # Before major refactoring
 /plan Refactor authentication module
 
-# Claude Code uses GKG to:
+# Mekong CLI uses GKG to:
 # 1. Map all auth-related code
 # 2. Find all usages
 # 3. Identify dependencies
@@ -532,7 +532,7 @@ gkg_repo_map \
 1. **Install GKG**: Follow installation guide above
 2. **Index Your Project**: `gkg index /path/to/project`
 3. **Explore**: Use MCP tools to understand codebase
-4. **Integrate with ClaudeKit**: Use GKG context in `/code` and refactoring commands
+4. **Integrate with Mekong Marketing**: Use GKG context in `/code` and refactoring commands
 5. **Automate**: Build workflows with GKG data
 
 ---

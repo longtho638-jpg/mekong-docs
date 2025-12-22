@@ -78,4 +78,4 @@ Research trending designs, create production-ready interfaces, and ship conversi
 
 ## Key Takeaway
 
-ClaudeKit UI/UX Designer agent ships award-winning interfaces in minutes, not days. Research-backed designs with production-ready code, WCAG compliance, and Lighthouse 90+ scores out of the box. No Figma needed.
+Mekong Marketing UI/UX Designer agent ships award-winning interfaces in minutes, not days. Research-backed designs with production-ready code, WCAG compliance, and Lighthouse 90+ scores out of the box. No Figma needed.

@@ -75,7 +75,7 @@ VARIATION 1 (Professional + Stats):
 ---
 🚀 Big news: We just launched AI Code Review
 
-After 6 months of development, ClaudeKit now
+After 6 months of development, Mekong Marketing now
 reviews your PRs automatically.
 
 Results from beta:
@@ -83,7 +83,7 @@ Results from beta:
 • 92% of bugs caught before production
 • 50,000+ PRs reviewed
 
-Try it free: link.claudekit.cc/code-review
+Try it free: link.mekongmarketing.com/code-review
 
 #AI #Development #CodeReview
 ---
@@ -95,13 +95,13 @@ Remember spending hours in code review meetings?
 
 We built something better.
 
-ClaudeKit's new AI Code Review analyzes your PRs
+Mekong Marketing's new AI Code Review analyzes your PRs
 in seconds, catching bugs, security issues, and
 style problems automatically.
 
 Beta users shipped 2x faster.
 
-Try it free → link.claudekit.cc/code-review
+Try it free → link.mekongmarketing.com/code-review
 ---
 (272 characters)
 
@@ -110,13 +110,13 @@ VARIATION 3 (Question hook):
 What if code reviews took 30 seconds instead
 of 30 minutes?
 
-ClaudeKit's AI Code Review just made it possible:
+Mekong Marketing's AI Code Review just made it possible:
 ✓ Automatic bug detection
 ✓ Security analysis
 ✓ Best practices enforcement
 ✓ Instant feedback
 
-Free trial → link.claudekit.cc/code-review
+Free trial → link.mekongmarketing.com/code-review
 
 Tired of slow reviews? This changes everything.
 ---
@@ -249,7 +249,7 @@ Zero risk." (87 chars)
 
 AD VARIATION 3:
 Headline 1: "Cut Coding Time by 70%" (23 chars)
-Headline 2: "Try ClaudeKit Free" (19 chars)
+Headline 2: "Try Mekong Marketing Free" (19 chars)
 Headline 3: "Trusted by 50K Devs" (20 chars)
 Description 1: "AI agents handle boring tasks.
 You build great products. Free 14-day trial,
@@ -277,13 +277,13 @@ Length: Short (100-150 words)
 Generated description:
 
 ---
-# ClaudeKit
+# Mekong Marketing
 
 AI-powered development toolkit that helps you ship faster.
 
 ## What It Does
 
-ClaudeKit provides AI agents that write, test, and review code
+Mekong Marketing provides AI agents that write, test, and review code
 automatically. No prompt engineering required—just describe what
 you want to build.
 
@@ -302,7 +302,7 @@ Developers and teams who want to:
 Trusted by 50,000+ developers at companies like Google, Meta,
 and Amazon.
 
-[Try Free →](https://claudekit.cc)
+[Try Free →](https://mekongmarketing.com)
 ---
 
 (147 words)

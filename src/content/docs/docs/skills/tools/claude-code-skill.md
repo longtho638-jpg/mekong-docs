@@ -1,13 +1,13 @@
 ---
-title: Claude Code Skill
-description: Guide for Claude Code installation, commands, skills, MCP servers, hooks, IDE integration, and enterprise features
+title: Mekong CLI Skill
+description: Guide for Mekong CLI installation, commands, skills, MCP servers, hooks, IDE integration, and enterprise features
 section: docs
 category: skills/tools
 order: 16
 published: true
 ---
 
-# Claude Code Skill
+# Mekong CLI Skill
 
 Anthropic's agentic coding tool combining autonomous planning, execution, and validation with extensibility through skills, plugins, MCP servers, and hooks.
 
@@ -72,7 +72,7 @@ When answering questions:
 - [GitHub](https://github.com/anthropics/claude-code)
 - Support: support.claude.com
 
-## Integration with ClaudeKit
+## Integration with Mekong Marketing
 
 Works with:
 
@@ -84,4 +84,4 @@ Works with:
 
 ## Key Takeaway
 
- Claude Code skill provides guidance for Anthropic's agentic coding tool including installation, slash commands, skills, MCP integration, hooks, IDE integration, and enterprise features. Load specific references based on user query topic.
+ Mekong CLI skill provides guidance for Anthropic's agentic coding tool including installation, slash commands, skills, MCP integration, hooks, IDE integration, and enterprise features. Load specific references based on user query topic.

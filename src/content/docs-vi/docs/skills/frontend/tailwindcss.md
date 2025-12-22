@@ -369,9 +369,9 @@ export default {
 </div>
 ```
 
-## Integration with ClaudeKit
+## Integration with Mekong Marketing
 
-ClaudeKit agents use the Tailwind CSS skill to:
+Mekong Marketing agents use the Tailwind CSS skill to:
 
 ### 1. Rapid UI Prototyping
 
@@ -699,4 +699,4 @@ export default {
 
 ---
 
-**Key Takeaway**: Tailwind CSS accelerates UI development by providing a comprehensive set of utility classes, eliminating the need for custom CSS while maintaining full design flexibility. ClaudeKit agents leverage Tailwind to rapidly prototype and build production-ready interfaces.
+**Key Takeaway**: Tailwind CSS accelerates UI development by providing a comprehensive set of utility classes, eliminating the need for custom CSS while maintaining full design flexibility. Mekong Marketing agents leverage Tailwind to rapidly prototype and build production-ready interfaces.

@@ -1,0 +1,467 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'AgencyOS - The One-Person Agency Operating System',
+  description = '85+ AI commands to run your entire agency. Marketing, sales, affiliate, finance - all automated.',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <link rel="icon" type="image/png" href="/logo-512-transparent.png" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- Simple Header -->
+    <header class="landing-header">
+      <div class="header-container">
+        <a href="/" class="logo">
+          <span class="logo-icon">🏯</span>
+          <span class="logo-text">AgencyOS</span>
+        </a>
+        
+        <nav class="landing-nav">
+          <a href="/agencyos">Home</a>
+          <a href="/about">About</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact">Contact</a>
+          <a href="/docs/getting-started/introduction">Docs</a>
+        </nav>
+        
+        <div class="header-actions">
+          <a href="/docs/getting-started/installation" class="btn-primary">Get Started</a>
+          
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Dropdown -->
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="/agencyos">Home</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/docs/getting-started/introduction">Docs</a>
+        <a href="/docs/getting-started/installation" class="mobile-cta">Get Started</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="landing-main">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="logo-icon">🏯</span>
+          <span>AgencyOS</span>
+        </div>
+        <div class="footer-links">
+          <a href="/agencyos">Home</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/docs/getting-started/introduction">Docs</a>
+          <a href="mailto:hello@agencyos.network">Contact</a>
+        </div>
+        <div class="footer-copy">
+          © 2025 AgencyOS Network. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('mobile-nav');
+        
+        if (btn && nav) {
+          btn.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  /* Landing Header */
+  .landing-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 100;
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--color-text-primary);
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .landing-nav {
+    display: flex;
+    gap: 32px;
+  }
+
+  .landing-nav a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .landing-nav a:hover {
+    color: var(--color-text-primary);
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+
+  /* Main Content */
+  .landing-main {
+    min-height: 100vh;
+    padding-top: 72px;
+  }
+
+  /* Footer */
+  .landing-footer {
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    padding: 48px 24px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-text-primary);
+  }
+
+  .footer-copy {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .mobile-menu-btn:hover {
+    background: var(--color-bg-tertiary);
+  }
+
+  .mobile-menu-btn.open {
+    background: var(--color-bg-tertiary);
+  }
+
+  /* Mobile Nav Dropdown */
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.98);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 8px;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .mobile-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-nav a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .mobile-nav a:hover {
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+  }
+
+  .mobile-cta {
+    background: #22c55e !important;
+    color: white !important;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .landing-nav {
+      display: none;
+    }
+
+    .btn-primary {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .mobile-nav {
+      display: flex;
+    }
+  }
+
+  /* === WOW ANIMATIONS === */
+  
+  /* Gradient Background Glow */
+  .landing-main::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Pulse animation for CTA */
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+    }
+  }
+
+  /* Glow animation */
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+    }
+  }
+
+  /* Apply animations */
+  .btn-primary {
+    animation: pulse 2s infinite;
+  }
+
+  .btn-primary:hover {
+    animation: none;
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(34, 197, 94, 0.3);
+  }
+
+  .logo-text {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  /* Floating animation for icons */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .logo-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color */
+  ::selection {
+    background: rgba(34, 197, 94, 0.3);
+    color: white;
+  }
+
+  /* Link hover underline animation */
+  .landing-nav a {
+    position: relative;
+  }
+
+  .landing-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #22c55e, #06b6d4);
+    transition: width 0.3s ease;
+  }
+
+  .landing-nav a:hover::after {
+    width: 100%;
+  }
+
+  /* Card hover effects */
+  :global(.landing-main section) {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  :global(.landing-main section:nth-child(2)) {
+    animation-delay: 0.1s;
+  }
+
+  :global(.landing-main section:nth-child(3)) {
+    animation-delay: 0.2s;
+  }
+
+  :global(.landing-main section:nth-child(4)) {
+    animation-delay: 0.3s;
+  }
+</style>

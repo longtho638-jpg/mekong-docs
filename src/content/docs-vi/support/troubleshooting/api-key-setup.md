@@ -14,7 +14,7 @@ published: true
 
 # API Key Setup
 
-Fix API key errors and configure credentials for ClaudeKit's AI-powered features.
+Fix API key errors and configure credentials for Mekong Marketing's AI-powered features.
 
 ## Quick Fix: Missing API Key
 
@@ -32,7 +32,7 @@ export GEMINI_API_KEY=your-key-here
 # Verify
 echo $GEMINI_API_KEY
 
-# Restart Claude Code
+# Restart Mekong CLI
 claude
 ```
 
@@ -52,7 +52,7 @@ Go to [aistudio.google.com](https://aistudio.google.com)
 2. Select "Create API key in new project" (or use existing project)
 3. Copy the generated key (starts with `AIza...`)
 
-**Step 3: Configure ClaudeKit**
+**Step 3: Configure Mekong Marketing**
 
 **Method 1: .env file (recommended)**
 
@@ -158,7 +158,7 @@ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:g
 **Monitor usage**:
 ```bash
 # Enable verbose mode
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_VERBOSE=1
 
 # Watch API calls
 /cook implement feature
@@ -184,7 +184,7 @@ Go to [searchapi.io](https://www.searchapi.io)
 2. Verify email
 3. Copy API key from dashboard
 
-**Step 3: Configure ClaudeKit**
+**Step 3: Configure Mekong Marketing**
 
 ```bash
 # Add to .env
@@ -262,7 +262,7 @@ Go to [openrouter.ai](https://openrouter.ai)
 2. Add credits (pay-as-you-go)
 3. Generate API key
 
-**Step 3: Configure ClaudeKit**
+**Step 3: Configure Mekong Marketing**
 
 ```bash
 # Add to .env
@@ -332,8 +332,8 @@ SEARCH_API_KEY=searchapi-key-here
 OPENROUTER_API_KEY=sk-or-...
 
 # Optional
-CLAUDEKIT_VERBOSE=0
-CLAUDEKIT_DEBUG=0
+AGENCYOS_VERBOSE=0
+AGENCYOS_DEBUG=0
 ```
 
 **Add to .gitignore**:
@@ -443,7 +443,7 @@ curl -s "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flas
 # Test SearchAPI
 curl -s "https://www.searchapi.io/api/v1/search?q=test&api_key=$SEARCH_API_KEY" | grep -q "search_results" && echo "✅ SearchAPI works" || echo "❌ SearchAPI failed"
 
-# Test with ClaudeKit
+# Test with Mekong Marketing
 /plan implement hello world
 # Should complete without API key errors
 ```
@@ -463,7 +463,7 @@ curl -s "https://www.searchapi.io/api/v1/search?q=test&api_key=$SEARCH_API_KEY" 
 ls -la .env
 # Must be in project root
 
-# 2. Restart Claude Code
+# 2. Restart Mekong CLI
 # Exit and restart to reload environment
 
 # 3. Check for typos
@@ -490,7 +490,7 @@ cat .env | cat -A
 # Update .env with new key
 nano .env
 
-# Restart Claude Code
+# Restart Mekong CLI
 ```
 
 ---
@@ -541,10 +541,10 @@ nano .env
 
 ### Get Help
 
-1. **GitHub Issues**: [Report API key problems](https://github.com/claudekit/claudekit-engineer/issues)
-2. **Discord**: [API configuration help](https://claudekit.cc/discord)
+1. **GitHub Issues**: [Report API key problems](https://github.com/mekong/mekong-engineer/issues)
+2. **Discord**: [API configuration help](https://mekongmarketing.com/discord)
 3. **Include**: API debug report (keys masked), error messages, provider (Gemini/SearchAPI/OpenRouter)
 
 ---
 
-**Most API key issues resolve with proper .env configuration and Claude Code restart.** Set up keys once, use everywhere.
+**Most API key issues resolve with proper .env configuration and Mekong CLI restart.** Set up keys once, use everywhere.

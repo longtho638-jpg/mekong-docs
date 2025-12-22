@@ -146,4 +146,4 @@ DATABASE_URL=postgresql://...                # Server only
 
 ## Key Takeaway
 
-Next.js eliminates the client vs. server tradeoff by making Server Components the default, letting you fetch data directly in your components without APIs, while still supporting client-side interactivity when needed. ClaudeKit agents leverage this to build full-stack apps faster.
+Next.js eliminates the client vs. server tradeoff by making Server Components the default, letting you fetch data directly in your components without APIs, while still supporting client-side interactivity when needed. Mekong Marketing agents leverage this to build full-stack apps faster.

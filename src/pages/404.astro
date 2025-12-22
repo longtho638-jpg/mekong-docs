@@ -1,0 +1,146 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = '404 - Page Not Found | AgencyOS';
+const description = 'The page you are looking for does not exist.';
+---
+
+<LandingLayout title={title} description={description}>
+  <section class="error-page">
+    <div class="error-content">
+      <div class="error-icon">🏯</div>
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Page Not Found</h2>
+      <p class="error-message">
+        The page you're looking for has wandered off into the mist.
+        <br />
+        Let's get you back on track.
+      </p>
+      
+      <div class="error-actions">
+        <a href="/agencyos" class="btn-primary">Go Home</a>
+        <a href="/pricing" class="btn-secondary">View Pricing</a>
+        <a href="/docs/getting-started/introduction" class="btn-secondary">Read Docs</a>
+      </div>
+      
+      <div class="error-commands">
+        <p class="commands-title">Or try these commands:</p>
+        <code>/marketing/social</code>
+        <code>/sales/proposal</code>
+        <code>/affiliate/scout</code>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  .error-page {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .error-content {
+    max-width: 500px;
+  }
+
+  .error-icon {
+    font-size: 4rem;
+    margin-bottom: 16px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .error-code {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+  }
+
+  .error-message {
+    color: var(--color-text-muted);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    padding: 12px 24px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--color-accent-green);
+    color: var(--color-accent-green);
+  }
+
+  .error-commands {
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .commands-title {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+  }
+
+  .error-commands code {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 4px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--color-accent-green);
+    font-family: monospace;
+  }
+</style>

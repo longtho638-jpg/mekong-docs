@@ -11,7 +11,8 @@ const { currentPath } = Astro.props;
 <aside class="sidebar" data-pagefind-ignore>
   <div class="sidebar-header">
     <a href="/" class="logo">
-      <img src="/logo-horizontal.png" alt="ClaudeKit Engineer" class="logo-image" />
+      <span class="logo-icon">🏯</span>
+      <span class="logo-text">AgencyOS</span>
     </a>
     
     <button class="icon-button theme-toggle" onclick="window.toggleTheme()" aria-label="Toggle theme" title="Toggle theme">
@@ -199,14 +200,17 @@ const { currentPath } = Astro.props;
     opacity: 0.8;
   }
 
-  .logo-image {
-    height: 32px;
-    width: auto;
-    object-fit: contain;
+  .logo-icon {
+    font-size: 1.5rem;
   }
 
-  :root[data-theme='light'] .logo-image {
-    filter: invert(1) hue-rotate(180deg);
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-accent-green), var(--color-accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .sidebar-search-trigger {

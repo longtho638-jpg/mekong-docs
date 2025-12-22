@@ -20,8 +20,8 @@ export class OpenRouterClient {
       baseURL: 'https://openrouter.ai/api/v1',
       apiKey: apiKey || process.env.OPENROUTER_API_KEY,
       defaultHeaders: {
-        'HTTP-Referer': 'https://docs.claudekit.cc',
-        'X-Title': 'ClaudeKit Documentation',
+        'HTTP-Referer': 'https://docs.mekongmarketing.com',
+        'X-Title': 'Mekong Marketing Documentation',
       },
     });
   }

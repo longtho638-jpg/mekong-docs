@@ -1,4 +1,4 @@
-# Multi-stage build for ClaudeKit Docs
+# Multi-stage build for AgencyOS Docs
 FROM oven/bun:1-alpine AS builder
 
 # Set working directory

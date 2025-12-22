@@ -1,6 +1,6 @@
 ---
 title: Commands Overview
-description: Comprehensive guide to ClaudeKit's slash commands for development, debugging, design, and more
+description: Comprehensive guide to Mekong Marketing's slash commands for development, debugging, design, and more
 category: commands
 order: 0
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Commands Overview
 
-ClaudeKit provides a comprehensive set of slash commands to accelerate your development workflow. Each command is designed for specific tasks and automatically orchestrates the appropriate agents.
+Mekong Marketing provides a comprehensive set of slash commands to accelerate your development workflow. Each command is designed for specific tasks and automatically orchestrates the appropriate agents.
 
 ## Command Categories
 
@@ -399,10 +399,10 @@ Next: Review changes, then /git:cm
 **Problem**: `/command` not recognized
 
 **Solutions:**
-1. Verify you're in a ClaudeKit project (`ls .claude/`)
+1. Verify you're in a Mekong Marketing project (`ls .claude/`)
 2. Check command exists (`ls .claude/commands/`)
 3. Run `ck init` to get latest commands
-4. Restart Claude Code
+4. Restart Mekong CLI
 
 ### Command Fails
 
@@ -443,4 +443,4 @@ Or learn about:
 
 ---
 
-**Key Takeaway**: ClaudeKit commands provide a natural, intuitive interface to powerful agent orchestration, making complex development tasks simple and repeatable.
+**Key Takeaway**: Mekong Marketing commands provide a natural, intuitive interface to powerful agent orchestration, making complex development tasks simple and repeatable.

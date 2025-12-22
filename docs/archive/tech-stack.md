@@ -1,6 +1,6 @@
 # Tech Stack
 
-ClaudeKit Documentation Website - Technology Stack Decisions
+Mekong Marketing Documentation Website - Technology Stack Decisions
 
 **Version:** 1.0
 **Date:** 2025-10-17
@@ -10,7 +10,7 @@ ClaudeKit Documentation Website - Technology Stack Decisions
 
 ## Overview
 
-Full-stack documentation website with advanced AI features built on Astro framework, deployed on Kubernetes cluster at https://docs.claudekit.cc
+Full-stack documentation website with advanced AI features built on Astro framework, deployed on Kubernetes cluster at https://docs.mekongmarketing.com
 
 ---
 
@@ -296,13 +296,13 @@ Full-stack documentation website with advanced AI features built on Astro framew
 - **Storage:** 5GB (images, build artifacts)
 
 **Services:**
-- **Deployment:** docs-claudekit (2 replicas)
+- **Deployment:** docs-mekong (2 replicas)
 - **Service:** ClusterIP, port 3000
 - **Ingress:** nginx-ingress with TLS
 - **ConfigMap:** Environment variables
 - **Secret:** OpenRouter API key
 
-**Domain:** docs.claudekit.cc
+**Domain:** docs.mekongmarketing.com
 **TLS:** Let's Encrypt (cert-manager)
 
 ### CI/CD: GitHub Actions
@@ -351,7 +351,7 @@ Full-stack documentation website with advanced AI features built on Astro framew
 - Server-side API routes only (no client-side API keys)
 - Rate limiting: 20 requests/minute per IP
 - Input validation and sanitization
-- CORS: Restrict to docs.claudekit.cc
+- CORS: Restrict to docs.mekongmarketing.com
 - Content Security Policy headers
 
 ### Authentication
@@ -520,7 +520,7 @@ Full-stack documentation website with advanced AI features built on Astro framew
 | Item | Cost | Notes |
 |------|------|-------|
 | Kubernetes Hosting | $10-30 | DigitalOcean/Linode/AWS |
-| Domain (docs.claudekit.cc) | $1-2/month | Amortized annual |
+| Domain (docs.mekongmarketing.com) | $1-2/month | Amortized annual |
 | OpenRouter API | $5-20 | Usage-based |
 | SSL Certificate | Free | Let's Encrypt |
 | GitHub Actions | Free | Public repo |

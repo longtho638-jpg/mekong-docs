@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: claudekit-docs
+  name: agencyos-docs
   labels:
-    app: claudekit-docs
+    app: agencyos-docs
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: claudekit-docs
+      app: agencyos-docs
   template:
     metadata:
       labels:
-        app: claudekit-docs
+        app: agencyos-docs
     spec:
       containers:
-        - name: claudekit-docs
-          image: ghcr.io/claudekit/claudekit-docs:latest
+        - name: agencyos-docs
+          image: ghcr.io/agencyos/agencyos-docs:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

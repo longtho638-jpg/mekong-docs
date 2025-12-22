@@ -32,10 +32,10 @@ Quick fixes for common issues. Most problems resolve in under 5 minutes.
 **Fix**:
 ```bash
 # Verify installation
-npm list -g claudekit-cli
+npm list -g mekong-cli
 
 # Reinstall if needed
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # Verify
 ck --version
@@ -69,7 +69,7 @@ cat .claude/commands/core/cook.md
 **Fix**:
 1. Verify `.claude/agents/` exists
 2. Check agent file format
-3. Confirm Claude Code is running
+3. Confirm Mekong CLI is running
 
 ```bash
 # List agents
@@ -115,7 +115,7 @@ export GEMINI_API_KEY=your-key
 
 ## Common Quick Fixes
 
-### Reset ClaudeKit
+### Reset Mekong Marketing
 
 ```bash
 # Backup first
@@ -135,8 +135,8 @@ cp .claude.backup/commands/my-custom.md .claude/commands/
 rm -rf node_modules
 npm install
 
-# Clear ClaudeKit cache
-rm -rf ~/.claudekit/cache
+# Clear Mekong Marketing cache
+rm -rf ~/.mekong/cache
 ```
 
 ### Verify Setup
@@ -145,7 +145,7 @@ rm -rf ~/.claudekit/cache
 # Check CLI
 ck --version
 
-# Check Claude Code
+# Check Mekong CLI
 claude --version
 
 # Check directory structure
@@ -164,28 +164,28 @@ tree .claude -L 2
 2. **Check logs**:
    ```bash
    # Enable verbose mode
-   export CLAUDEKIT_VERBOSE=1
+   export AGENCYOS_VERBOSE=1
 
    # Run command
    /cook add feature
 
    # Check output
-   cat claudekit-debug.log
+   cat mekong-debug.log
    ```
 
 3. **Report issue**:
-   - GitHub: https://github.com/claudekit/claudekit-engineer/issues
+   - GitHub: https://github.com/mekong/mekong-engineer/issues
    - Include: OS, CLI version, error message, steps to reproduce
 
 ### Community
 
-- **Discord**: [Join ClaudeKit Discord](https://claudekit.cc/discord)
+- **Discord**: [Join Mekong Marketing Discord](https://mekongmarketing.com/discord)
 - **GitHub Discussions**: Share solutions, ask questions
 
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep ClaudeKit updated (`ck init`)
+- Keep Mekong Marketing updated (`ck init`)
 - Use `--verbose` when debugging
 - Backup before major changes
 - Read error messages fully

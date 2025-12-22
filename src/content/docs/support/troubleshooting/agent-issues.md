@@ -29,10 +29,10 @@ ls .claude/agents/ | grep planner
 # 2. Check agent file format
 cat .claude/agents/planner.md
 
-# 3. Verify Claude Code is running
+# 3. Verify Mekong CLI is running
 claude --version
 
-# 4. Restart Claude Code
+# 4. Restart Mekong CLI
 # Exit (Ctrl+C), then restart
 claude
 ```
@@ -111,10 +111,10 @@ description: Creates implementation plans
 ---
 ```
 
-**Step 2: Check Claude Code connection**
+**Step 2: Check Mekong CLI connection**
 
 ```bash
-# Verify Claude Code CLI is running
+# Verify Mekong CLI CLI is running
 ps aux | grep claude
 
 # If not running, start it
@@ -165,7 +165,7 @@ See [API Key Setup](/docs/support/troubleshooting/api-key-setup) for configurati
 **Monitor rate limits**:
 ```bash
 # Enable verbose mode
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_VERBOSE=1
 
 # Watch API calls
 /cook implement feature
@@ -205,7 +205,7 @@ vm_stat  # macOS
 # Clear Node cache
 npm cache clean --force
 
-# Restart Claude Code with more memory
+# Restart Mekong CLI with more memory
 NODE_OPTIONS="--max-old-space-size=4096" claude
 ```
 
@@ -253,7 +253,7 @@ git stash
 **Solution**:
 
 ```bash
-# Stop Claude Code (Ctrl+C)
+# Stop Mekong CLI (Ctrl+C)
 ^C
 
 # Check if agent file has infinite loop logic
@@ -264,7 +264,7 @@ cat .claude/agents/problematic-agent.md
 # - Recursive calls without exit
 # - Incorrect workflow logic
 
-# Report to ClaudeKit if core agent
+# Report to Mekong Marketing if core agent
 # Or fix custom agent logic
 ```
 
@@ -298,7 +298,7 @@ cat .claude/agents/planner.md | grep -i "spawn\|delegate"
 **Solution**:
 
 ```bash
-# Update ClaudeKit to latest version
+# Update Mekong Marketing to latest version
 ck init --kit engineer
 
 # Verify planner agent updated
@@ -326,7 +326,7 @@ ls -la plans/reports/
 # review-*.md
 
 # If missing, agents not writing reports correctly
-# Update ClaudeKit
+# Update Mekong Marketing
 ck init --kit engineer
 ```
 
@@ -511,8 +511,8 @@ EOF
 
 ```bash
 # Method 1: Environment variable
-export CLAUDEKIT_DEBUG=1
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_DEBUG=1
+export AGENCYOS_VERBOSE=1
 
 # Method 2: Check agent output files
 ls -la plans/reports/
@@ -636,10 +636,10 @@ done
 
 ### Get Help
 
-1. **GitHub Issues**: [Report agent problems](https://github.com/claudekit/claudekit-engineer/issues)
-2. **Discord**: [Agent troubleshooting channel](https://claudekit.cc/discord)
+1. **GitHub Issues**: [Report agent problems](https://github.com/mekong/mekong-engineer/issues)
+2. **Discord**: [Agent troubleshooting channel](https://mekongmarketing.com/discord)
 3. **Include**: Agent debug report, specific agent name, command used, expected vs actual behavior
 
 ---
 
-**Most agent issues resolve with updated ClaudeKit.** Run `ck init --kit engineer` first, then retest your command.
+**Most agent issues resolve with updated Mekong Marketing.** Run `ck init --kit engineer` first, then retest your command.

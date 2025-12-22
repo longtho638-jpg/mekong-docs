@@ -1,12 +1,12 @@
-# ClaudeKit Documentation
+# AgencyOS Documentation
 
 > AI Development Team - 14 specialized agents that plan, code, test, and ship production features in minutes
 
-ClaudeKit is a comprehensive toolkit built on Claude Code, providing 14 AI agents, 30+ slash commands, and 45 built-in skills to accelerate software development. This documentation covers everything from installation to advanced workflows.
+AgencyOS is a comprehensive toolkit built on Claude Code, providing 14 AI agents, 30+ slash commands, and 45 built-in skills to accelerate software development. This documentation covers everything from installation to advanced workflows.
 
 ## Getting Started
 
-Essential guides to begin using ClaudeKit:
+Essential guides to begin using AgencyOS:
 
 - [Introduction](/docs/getting-started/introduction.md): Overview and value proposition
 - [Installation](/docs/getting-started/installation.md): Setup instructions
@@ -17,7 +17,7 @@ Essential guides to begin using ClaudeKit:
 
 ## Core Concepts
 
-Understanding ClaudeKit's architecture and workflows:
+Understanding AgencyOS's architecture and workflows:
 
 - [CLAUDE.md Configuration](/docs/core-concepts/claude-md.md): Project configuration file
 - [Workflows](/docs/core-concepts/workflows.md): Development workflows and orchestration
@@ -218,11 +218,11 @@ Common issues and solutions:
 
 ## Additional Resources
 
-- Website: https://docs.claudekit.cc
-- Main Site: https://claudekit.cc
-- GitHub: https://github.com/claudekit/claudekit-docs
+- Website: https://docs.agencyos.cc
+- Main Site: https://agencyos.cc
+- GitHub: https://github.com/agencyos/agencyos-docs
 
 ---
 
 Last Updated: 2025-11-11
-Maintainers: ClaudeKit Team
+Maintainers: AgencyOS Team

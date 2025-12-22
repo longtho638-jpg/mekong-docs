@@ -8,7 +8,7 @@ published: true
 
 # /docs:init
 
-Initialize comprehensive project documentation by analyzing the entire codebase. This is the essential first command when integrating ClaudeKit into an existing project.
+Initialize comprehensive project documentation by analyzing the entire codebase. This is the essential first command when integrating Mekong Marketing into an existing project.
 
 ## Syntax
 
@@ -70,13 +70,13 @@ cd existing-project
 # Now you understand the entire project!
 ```
 
-**Integrating ClaudeKit**
+**Integrating Mekong Marketing**
 ```bash
-# Adding ClaudeKit to existing project
+# Adding Mekong Marketing to existing project
 ck init --kit engineer
 /docs:init
 
-# ClaudeKit now understands your codebase
+# Mekong Marketing now understands your codebase
 ```
 
 **Project Audit**
@@ -401,7 +401,7 @@ Documentation created with:
 
 ### Prevents Hallucinations
 
-With documentation, ClaudeKit:
+With documentation, Mekong Marketing:
 - Understands existing patterns
 - Follows project conventions
 - Avoids creating duplicate code
@@ -421,7 +421,7 @@ Claude: Extends existing auth system properly
 
 ### Faster Development
 
-Documentation helps ClaudeKit:
+Documentation helps Mekong Marketing:
 - Generate code matching your style
 - Reuse existing utilities
 - Follow established patterns
@@ -429,7 +429,7 @@ Documentation helps ClaudeKit:
 
 ### Better Code Quality
 
-ClaudeKit produces code that:
+Mekong Marketing produces code that:
 - Matches your standards
 - Fits your architecture
 - Uses your conventions
@@ -480,7 +480,7 @@ vendor/
 
 ### Run Immediately
 
-When joining a project or integrating ClaudeKit:
+When joining a project or integrating Mekong Marketing:
 
 ```bash
 # First thing to do
@@ -575,4 +575,4 @@ After running `/docs:init`:
 
 ---
 
-**Key Takeaway**: `/docs:init` is essential when starting with ClaudeKit on existing projects. It creates comprehensive documentation that helps ClaudeKit understand your codebase and prevents hallucinations.
+**Key Takeaway**: `/docs:init` is essential when starting with Mekong Marketing on existing projects. It creates comprehensive documentation that helps Mekong Marketing understand your codebase and prevents hallucinations.

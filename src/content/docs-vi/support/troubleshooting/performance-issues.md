@@ -14,7 +14,7 @@ published: true
 
 # Performance Issues
 
-Commands taking forever? Optimize ClaudeKit for blazing-fast execution.
+Commands taking forever? Optimize Mekong Marketing for blazing-fast execution.
 
 ## Quick Fix: Commands Too Slow
 
@@ -34,7 +34,7 @@ echo $GEMINI_API_KEY
 model: gemini-2.5-flash-agent
 
 # 4. Run with verbose to see bottleneck
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_VERBOSE=1
 /cook implement feature
 ```
 
@@ -92,7 +92,7 @@ curl -w "@-" -o /dev/null -s https://generativelanguage.googleapis.com <<< "time
 **Monitor rate limits**:
 ```bash
 # Enable verbose mode
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_VERBOSE=1
 /cook implement feature
 
 # Watch for "429" errors or "quota exceeded"
@@ -245,7 +245,7 @@ node -e "console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))"
 
 ### Memory Leaks
 
-**Symptom**: Claude Code slows down over time, eventually crashes
+**Symptom**: Mekong CLI slows down over time, eventually crashes
 
 **Solution**:
 
@@ -258,14 +258,14 @@ watch -n 1 "ps aux | grep claude"
 watch -n 1 "ps aux | grep claude | grep -v grep"
 
 # If memory grows continuously:
-# 1. Restart Claude Code
+# 1. Restart Mekong CLI
 exit
 claude
 
 # 2. Clear npm cache
 npm cache clean --force
 
-# 3. Update ClaudeKit
+# 3. Update Mekong Marketing
 ck init --kit engineer
 
 # 4. Update Node.js
@@ -321,7 +321,7 @@ export HTTPS_PROXY=http://proxy.company.com:8080
 echo 'HTTP_PROXY=http://proxy.company.com:8080' >> .env
 echo 'HTTPS_PROXY=http://proxy.company.com:8080' >> .env
 
-# Restart Claude Code
+# Restart Mekong CLI
 claude
 ```
 
@@ -333,7 +333,7 @@ claude
 
 ```bash
 # Method 1: Environment variable
-export CLAUDEKIT_VERBOSE=1
+export AGENCYOS_VERBOSE=1
 /cook implement feature
 
 # Method 2: Command flag
@@ -611,8 +611,8 @@ EOF
 
 ### Get Help
 
-1. **GitHub Issues**: [Report performance problems](https://github.com/claudekit/claudekit-engineer/issues)
-2. **Discord**: [Performance optimization channel](https://claudekit.cc/discord)
+1. **GitHub Issues**: [Report performance problems](https://github.com/mekong/mekong-engineer/issues)
+2. **Discord**: [Performance optimization channel](https://mekongmarketing.com/discord)
 3. **Include**: Performance report, project size, specific slow command, expected vs actual time
 
 ---

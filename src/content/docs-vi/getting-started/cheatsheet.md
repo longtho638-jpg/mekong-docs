@@ -1,6 +1,6 @@
 ---
-title: "ClaudeKit Cheatsheet"
-description: "Tham khảo nhanh các lệnh ClaudeKit - lệnh thiết yếu cho quy trình phát triển AI-powered."
+title: "Mekong Marketing Cheatsheet"
+description: "Tham khảo nhanh các lệnh Mekong Marketing - lệnh thiết yếu cho quy trình phát triển AI-powered."
 section: getting-started
 category: getting-started
 order: 5
@@ -8,27 +8,27 @@ published: true
 lastUpdated: 2025-11-07
 ---
 
-# ClaudeKit Cheatsheet
+# Mekong Marketing Cheatsheet
 
-Hướng dẫn tham khảo nhanh cho ClaudeKit CLI commands và workflows.
+Hướng dẫn tham khảo nhanh cho Mekong Marketing CLI commands và workflows.
 
 ## Cài Đặt
 
 ```bash
-# Cài ClaudeKit globally
-npm i -g claudekit-cli@latest
+# Cài Mekong Marketing globally
+npm i -g mekong-cli@latest
 
 # Kiểm tra phiên bản
 ck --version
 ```
 
-## Khởi Động ClaudeKit
+## Khởi Động Mekong Marketing
 
 ```bash
 # Di chuyển đến dự án
 cd /đường/dẫn/đến/dự/án
 
-# Khởi động Claude Code với ClaudeKit
+# Khởi động Mekong CLI với Mekong Marketing
 claude
 ```
 
@@ -205,13 +205,13 @@ ck new --kit engineer --dir /đường/dẫn/đến/dự/án
 ### Thiết Lập Dự Án Brownfield
 
 ```bash
-# 1. Cài ClaudeKit
-npm i -g claudekit-cli@latest
+# 1. Cài Mekong Marketing
+npm i -g mekong-cli@latest
 
 # 2. Đi đến dự án
 cd /đường/dẫn/đến/dự/án/hiện/tại
 
-# 3. Khởi động Claude Code
+# 3. Khởi động Mekong CLI
 claude
 
 # 4. Khởi tạo
@@ -224,8 +224,8 @@ claude
 ### Thiết Lập Dự Án Greenfield
 
 ```bash
-# 1. Cài ClaudeKit
-npm i -g claudekit-cli@latest
+# 1. Cài Mekong Marketing
+npm i -g mekong-cli@latest
 
 # 2. Tạo dự án
 ck new --kit engineer --dir /đường/dẫn/đến/dự/án
@@ -233,7 +233,7 @@ ck new --kit engineer --dir /đường/dẫn/đến/dự/án
 # 3. Di chuyển đến dự án
 cd /đường/dẫn/đến/dự/án
 
-# 4. Khởi động Claude Code
+# 4. Khởi động Mekong CLI
 claude
 
 # 5. Bootstrap ý tưởng
@@ -420,10 +420,10 @@ Mô tả chi tiết hơn = kết quả tốt hơn
 ### Lệnh Không Hoạt Động
 
 ```bash
-# Kiểm tra phiên bản ClaudeKit
+# Kiểm tra phiên bản Mekong Marketing
 ck --version
 
-# Khởi động lại Claude Code
+# Khởi động lại Mekong CLI
 # Thoát và chạy: claude
 ```
 
@@ -540,13 +540,13 @@ ck --version
 
 ## Tài Nguyên
 
-- [Tài Liệu Đầy Đủ](https://docs.claudekit.cc)
+- [Tài Liệu Đầy Đủ](https://docs.mekongmarketing.com)
 - [Tất Cả Lệnh](/vi/docs/commands/)
 - [AI Agents](/vi/docs/agents/)
 - [Workflows](/vi/docs/core-concepts/workflows)
 - [Troubleshooting](/vi/docs/troubleshooting/)
-- [GitHub Discussions](https://github.com/mrgoonie/claudekit-cli/discussions)
+- [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
 
 ---
 
-**In trang này** hoặc giữ mở khi làm việc với ClaudeKit để tham khảo lệnh nhanh!
+**In trang này** hoặc giữ mở khi làm việc với Mekong Marketing để tham khảo lệnh nhanh!

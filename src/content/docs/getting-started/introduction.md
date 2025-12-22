@@ -1,23 +1,23 @@
 ---
 title: "Introduction"
-description: "What is ClaudeKit and how does it work? Learn the basics in 3 minutes"
+description: "What is Mekong Marketing and how does it work? Learn the basics in 3 minutes"
 section: getting-started
 order: 1
 published: true
 ---
 
-# Introduction to ClaudeKit
+# Introduction to Mekong Marketing
 
-**ClaudeKit** extends Claude Code with specialized agents, slash commands, and reusable skills.
+**Mekong Marketing** extends Mekong CLI with specialized agents, slash commands, and reusable skills.
 
 ## Video Walkthrough
 
-New to ClaudeKit? Watch this step-by-step walkthrough covering CLI installation, setup with `ck` commands, and a demo building UI from a screenshot.
+New to Mekong Marketing? Watch this step-by-step walkthrough covering CLI installation, setup with `ck` commands, and a demo building UI from a screenshot.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;">
   <iframe
     src="https://www.youtube.com/embed/F_E0GIi_kVY"
-    title="ClaudeKit Complete Walkthrough"
+    title="Mekong Marketing Complete Walkthrough"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -28,9 +28,9 @@ New to ClaudeKit? Watch this step-by-step walkthrough covering CLI installation,
 
 *More tutorials: [@goonnguyen](https://www.youtube.com/@goonnguyen) | X: [@goon_nguyen](https://x.com/goon_nguyen)*
 
-## What is ClaudeKit?
+## What is Mekong Marketing?
 
-ClaudeKit transforms Claude Code from a general AI assistant into a focused engineering toolkit. Instead of writing prompts from scratch, you invoke battle-tested workflows optimized for speed and quality.
+Mekong Marketing transforms Mekong CLI from a general AI assistant into a focused engineering toolkit. Instead of writing prompts from scratch, you invoke battle-tested workflows optimized for speed and quality.
 
 **Core Components**:
 - **Agents**: Specialized AI assistants (planner, researcher, tester, debugger)
@@ -44,7 +44,7 @@ ClaudeKit transforms Claude Code from a general AI assistant into a focused engi
 3. **Workflow Executes**: Agents collaborate, write code, run tests, commit changes
 4. **You Review**: Check output, provide feedback, iterate
 
-## Why Use ClaudeKit?
+## Why Use Mekong Marketing?
 
 - **Speed**: 10x faster than manual prompting
 - **Quality**: Battle-tested workflows reduce bugs and rework
@@ -54,14 +54,14 @@ ClaudeKit transforms Claude Code from a general AI assistant into a focused engi
 ## Quick Example
 
 ```bash
-# Without ClaudeKit
+# Without Mekong Marketing
 You: "I need to add authentication to my Next.js app"
 Claude: "Sure! What auth library? What features?"
 [20+ message back-and-forth]
 
-# With ClaudeKit
+# With Mekong Marketing
 You: /cook "add authentication with Better Auth"
-ClaudeKit:
+Mekong Marketing:
   ✓ Planner creates implementation plan
   ✓ Researcher analyzes codebase
   ✓ Developer writes code following best practices
@@ -73,11 +73,11 @@ ClaudeKit:
 ## Next Steps
 
 1. **[Understand Concepts](/docs/getting-started/concepts)** - How agents, commands, and skills work
-2. **[Install ClaudeKit](/docs/getting-started/installation)** - Set up the CLI
+2. **[Install Mekong Marketing](/docs/getting-started/installation)** - Set up the CLI
 3. **[Quick Start](/docs/getting-started/quick-start)** - Build your first feature in 15 minutes
 
 ## Want to Learn More?
 
-- [Why ClaudeKit](/docs/getting-started/why-claudekit) - Comparisons, ROI calculations, pricing
+- [Why Mekong Marketing](/docs/getting-started/why-mekong) - Comparisons, ROI calculations, pricing
 - [Use Cases](/docs/workflows) - Real-world workflows
 - [FAQ](/docs/support/faq) - Common questions answered

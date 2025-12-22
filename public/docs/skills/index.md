@@ -1,6 +1,6 @@
 ---
 title: Skills Overview
-description: Specialized capabilities you can invoke within Claude Code for enhanced functionality
+description: Specialized capabilities you can invoke within Mekong CLI for enhanced functionality
 category: skills
 order: 1
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Skills Overview
 
-Skills are specialized capabilities that extend Claude Code's functionality. ClaudeKit includes 46+ pre-built skills covering everything from authentication to AI integration.
+Skills are specialized capabilities that extend Mekong CLI's functionality. Mekong Marketing includes 46+ pre-built skills covering everything from authentication to AI integration.
 
 ## What Are Skills?
 
@@ -402,7 +402,7 @@ Find and retrieve documentation from various sources.
 **Use when:** Need to look up API docs, framework guides
 
 #### claude-code
-Meta-skill for understanding Claude Code itself.
+Meta-skill for understanding Mekong CLI itself.
 
 ---
 
@@ -423,7 +423,7 @@ Shopify app development and API integration.
 
 ## How to Use Skills
 
-Skills are invoked by mentioning them in conversation with Claude Code.
+Skills are invoked by mentioning them in conversation with Mekong CLI.
 
 ### Basic Invocation
 

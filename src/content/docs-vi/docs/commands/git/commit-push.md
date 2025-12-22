@@ -221,7 +221,7 @@ git branch --set-upstream-to=origin/feature-name
 
 ### Push Options
 
-ClaudeKit automatically handles:
+Mekong Marketing automatically handles:
 - First push (`git push -u origin branch-name`)
 - Subsequent pushes (`git push`)
 - Force push warnings

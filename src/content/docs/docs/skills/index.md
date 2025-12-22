@@ -1,6 +1,6 @@
 ---
 title: Skills Overview
-description: ClaudeKit's 42 specialized skills for development, design, and tooling
+description: Mekong Marketing's 42 specialized skills for development, design, and tooling
 section: docs
 category: skills
 order: 1
@@ -61,7 +61,7 @@ published: true
 | [chrome-devtools](/docs/skills/tools/chrome-devtools) | Browser automation, performance profiling |
 | [ffmpeg](/docs/skills/tools/ffmpeg) | Video/audio processing and conversion |
 | [imagemagick](/docs/skills/tools/imagemagick) | Image manipulation and batch processing |
-| [claude-code-skill](/docs/skills/tools/claude-code-skill) | Meta-skill for Claude Code itself |
+| [claude-code-skill](/docs/skills/tools/claude-code-skill) | Meta-skill for Mekong CLI itself |
 
 ### Process & Methodology
 
@@ -167,7 +167,7 @@ skill-creator will:
 
 **Need a skill that doesn't exist?**
 - Use skill-creator to build it
-- Request on [Discord](https://claudekit.cc/discord)
+- Request on [Discord](https://mekongmarketing.com/discord)
 
 ## Key Takeaway
 

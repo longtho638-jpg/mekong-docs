@@ -1,12 +1,12 @@
 ---
-title: "Why ClaudeKit"
-description: "Compare ClaudeKit vs alternatives and see ROI calculations and pricing"
+title: "Why Mekong Marketing"
+description: "Compare Mekong Marketing vs alternatives and see ROI calculations and pricing"
 section: getting-started
 order: 4
 published: true
 ---
 
-# Why ClaudeKit
+# Why Mekong Marketing
 
 ## 5-Minute Quick Win
 
@@ -55,9 +55,9 @@ cd my-app
 - Database: PostgreSQL, MongoDB
 - [See all skills →](/docs/skills)
 
-## ClaudeKit vs Alternatives
+## Mekong Marketing vs Alternatives
 
-| Feature | ClaudeKit | Boilerplates | AI Chat |
+| Feature | Mekong Marketing | Boilerplates | AI Chat |
 |---------|-----------|--------------|---------|
 | **Tech Stack** | Any (Next.js, Django, Go, Rust) | Locked to specific stack | Limited support |
 | **Setup Time** | 2 min | 30-60 min | N/A |
@@ -71,12 +71,12 @@ cd my-app
 | **Time Savings** | **10+ hours/feature** | None (is the baseline) | 2-3 hours |
 | **Cost** | $99 one-time | $0-$200 one-time | $20/month ongoing |
 
-**Verdict**: ClaudeKit is the only solution that ships production features end-to-end with testing, review, and docs.
+**Verdict**: Mekong Marketing is the only solution that ships production features end-to-end with testing, review, and docs.
 
 ## Why It Works
 
 ### Living System, Not Dead Code
-Traditional boilerplates are snapshots in time. ClaudeKit improves with every Claude update. Your dev team gets smarter automatically.
+Traditional boilerplates are snapshots in time. Mekong Marketing improves with every Claude update. Your dev team gets smarter automatically.
 
 ### Tech Stack Agnostic
 Works with your existing codebase. Next.js today, migrate to Django tomorrow. No lock-in.
@@ -89,7 +89,7 @@ Not just code generation. **Plan → Research → Implement → Test → Review 
 **Cost**: $99 one-time
 **Net profit day 1**: $901
 
-## Who Uses ClaudeKit
+## Who Uses Mekong Marketing
 
 - **Solo developers** - Entire dev team in your terminal
 - **Indie makers** - Validate ideas 800% faster
@@ -104,10 +104,10 @@ Not just code generation. **Plan → Research → Implement → Test → Review 
 - All future features included
 - No monthly fees
 
-[Get ClaudeKit →](https://claudekit.cc)
+[Get Mekong Marketing →](https://mekongmarketing.com)
 
 ---
 
 **Traditional dev**: 40 hours/feature
-**With ClaudeKit**: 5-20 minutes/feature
+**With Mekong Marketing**: 5-20 minutes/feature
 **Time reclaimed**: Build your product instead of infrastructure.

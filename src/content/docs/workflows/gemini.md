@@ -28,8 +28,8 @@ Anthropic has focused on training Claude models for coding capabilities, so they
 
 1. Get your Gemini key at [Google AI Studio](https://aistudio.google.com/api-keys)
 2. Find the `.env.example` file: 
-- If you installed ClaudeKit at project scope: copy `.claude/.env.example` to `.claude/.env`
-- If you installed ClaudeKit at global scope: copy `~/.claude/.env.example` to `~/.claude/.env` (for Windows users: `%USERPROFILE%\.claude\.env`)
+- If you installed Mekong Marketing at project scope: copy `.claude/.env.example` to `.claude/.env`
+- If you installed Mekong Marketing at global scope: copy `~/.claude/.env.example` to `~/.claude/.env` (for Windows users: `%USERPROFILE%\.claude\.env`)
 3. Open the `.env` file and fill in the value for `GEMINI_API_KEY`
 
 That's it!
@@ -50,13 +50,13 @@ Look at this example, Claude Desktop completely failed compared to Gemini and Ch
 
 Claude couldn't correctly identify the actions and devices in the image.
 
-**Now let's compare directly between Claude Code and Gemini CLI!**
+**Now let's compare directly between Mekong CLI and Gemini CLI!**
 
 I'll ask both to read a blueprint image and describe in detail what they see:
 
 ![Gemini Analyze Screenshot](/assets/03-claude-code-vs-gemini-cli.jpg)
 
-Gemini CLI provides detailed descriptions of the blueprint, while Claude Code is quite superficial...
+Gemini CLI provides detailed descriptions of the blueprint, while Mekong CLI is quite superficial...
 
 Do you see the difference?
 
@@ -76,7 +76,7 @@ So I decided to create this MCP: [**Human MCP**](https://github.com/mrgoonie/hum
 
 The purpose is to use Gemini API to analyze images, documents (PDF, docx, xlsx,...) and videos.
 
-In the early days of ClaudeKit, I had "Human MCP" pre-installed by default.
+In the early days of Mekong Marketing, I had "Human MCP" pre-installed by default.
 
 And you need `GEMINI_API_KEY` in the "Human MCP" env for it to work.
 

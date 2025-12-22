@@ -14,7 +14,7 @@ published: true
 
 # Fixing Bugs
 
-Learn how to systematically investigate, fix, and verify bug fixes using ClaudeKit's debugging workflow - from log analysis to production deployment.
+Learn how to systematically investigate, fix, and verify bug fixes using Mekong Marketing's debugging workflow - from log analysis to production deployment.
 
 ## Overview
 
@@ -32,7 +32,7 @@ Learn how to systematically investigate, fix, and verify bug fixes using ClaudeK
 
 ## Choosing the Right Command
 
-ClaudeKit provides different debugging commands for different scenarios:
+Mekong Marketing provides different debugging commands for different scenarios:
 
 | Command | Use Case | Complexity | Time |
 |---------|----------|------------|------|
@@ -449,7 +449,7 @@ Fixes applied:
 - Testing: 30-45 minutes
 - Documentation: 30 minutes
 
-**With ClaudeKit**: 18 minutes
+**With Mekong Marketing**: 18 minutes
 - Reproduce: 5 minutes
 - /fix:hard: 12 minutes
 - Verification: 1 minute
@@ -680,4 +680,4 @@ After fixing bugs, improve processes:
 
 ---
 
-**Key Takeaway**: ClaudeKit's debugging workflow provides systematic bug resolution with root cause analysis, automated testing, and prevention measures - turning hours of debugging into minutes.
+**Key Takeaway**: Mekong Marketing's debugging workflow provides systematic bug resolution with root cause analysis, automated testing, and prevention measures - turning hours of debugging into minutes.

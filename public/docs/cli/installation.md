@@ -1,6 +1,6 @@
 ---
 title: CLI Installation
-description: Install ClaudeKit CLI to download and manage ClaudeKit projects from private GitHub releases
+description: Install Mekong Marketing CLI to download and manage Mekong Marketing projects from private GitHub releases
 category: cli
 order: 1
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # CLI Installation
 
-Install ClaudeKit CLI (`ck`) to download and manage ClaudeKit starter kits from private GitHub repository releases.
+Install Mekong Marketing CLI (`ck`) to download and manage Mekong Marketing starter kits from private GitHub repository releases.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Before installing, ensure you have:
 - **Node.js 18+** - [Download from nodejs.org](https://nodejs.org)
 - **npm 9+** - Comes with Node.js
 - **Git** - For repository access
-- **ClaudeKit purchase** - Required for repository access from [ClaudeKit.cc](https://claudekit.cc)
+- **Mekong Marketing purchase** - Required for repository access from [Mekong Marketing.cc](https://mekongmarketing.com)
 
 Verify installations:
 
@@ -32,7 +32,7 @@ git --version   # Any recent version
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g claudekit-cli
+npm install -g mekong-cli
 ```
 
 This installs the `ck` command globally, available from any directory.
@@ -55,15 +55,15 @@ ck --help
 
 **Output:**
 ```
-ClaudeKit CLI v1.2.1
+Mekong Marketing CLI v1.2.1
 
 Usage:
   ck <command> [options]
 
 Commands:
-  new       Create new project from latest ClaudeKit release
+  new       Create new project from latest Mekong Marketing release
   init      Update existing project to latest version
-  versions  List available ClaudeKit releases
+  versions  List available Mekong Marketing releases
 
 Options:
   --version, -v   Show version number
@@ -74,12 +74,12 @@ Examples:
   ck init
   ck versions --kit engineer
 
-For more info: https://docs.claudekit.cc
+For more info: https://docs.mekongmarketing.com
 ```
 
 ## GitHub Authentication
 
-ClaudeKit CLI requires GitHub authentication to download from private repositories.
+Mekong Marketing CLI requires GitHub authentication to download from private repositories.
 
 ### Authentication Methods
 
@@ -135,7 +135,7 @@ Create a GitHub Personal Access Token (PAT):
 
 1. Go to [GitHub Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens)
 2. Click "Generate new token (classic)"
-3. Give it a name: "ClaudeKit CLI"
+3. Give it a name: "Mekong Marketing CLI"
 4. Select scopes: **`repo`** (Full control of private repositories)
 5. Click "Generate token"
 6. Copy the token (starts with `ghp_`)
@@ -182,7 +182,7 @@ The token is encrypted and stored in your OS keychain:
 
 ## Verify Access
 
-After authentication, verify you can access ClaudeKit repositories:
+After authentication, verify you can access Mekong Marketing repositories:
 
 ```bash
 # List available versions
@@ -193,7 +193,7 @@ If authentication is successful, you'll see available releases. If not, you'll s
 
 ## Repository Access
 
-**Important:** You must purchase a ClaudeKit starter kit from [ClaudeKit.cc](https://claudekit.cc) to access the private repositories.
+**Important:** You must purchase a Mekong Marketing starter kit from [Mekong Marketing.cc](https://mekongmarketing.com) to access the private repositories.
 
 After purchase:
 1. You'll be added to the GitHub repository
@@ -203,12 +203,12 @@ After purchase:
 Without purchase, you'll see:
 ```
 Error: Repository not found or access denied
-Please purchase a ClaudeKit kit at https://claudekit.cc
+Please purchase a Mekong Marketing kit at https://mekongmarketing.com
 ```
 
 ## Configuration
 
-ClaudeKit CLI stores configuration in `~/.claudekit/config.json`:
+Mekong Marketing CLI stores configuration in `~/.mekong/config.json`:
 
 ```json
 {
@@ -229,7 +229,7 @@ ClaudeKit CLI stores configuration in `~/.claudekit/config.json`:
 Keep the CLI updated for latest features:
 
 ```bash
-npm update -g claudekit-cli
+npm update -g mekong-cli
 ```
 
 Check installed version:
@@ -239,15 +239,15 @@ ck --version
 
 ## Uninstall
 
-Remove ClaudeKit CLI:
+Remove Mekong Marketing CLI:
 
 ```bash
-npm uninstall -g claudekit-cli
+npm uninstall -g mekong-cli
 ```
 
 Remove configuration (optional):
 ```bash
-rm -rf ~/.claudekit
+rm -rf ~/.mekong
 ```
 
 ## Troubleshooting
@@ -262,7 +262,7 @@ rm -rf ~/.claudekit
 
 2. **Check installation:**
    ```bash
-   npm list -g claudekit-cli
+   npm list -g mekong-cli
    ```
 
 3. **Verify npm global bin in PATH:**
@@ -277,8 +277,8 @@ rm -rf ~/.claudekit
 
 4. **Reinstall:**
    ```bash
-   npm uninstall -g claudekit-cli
-   npm install -g claudekit-cli
+   npm uninstall -g mekong-cli
+   npm install -g mekong-cli
    ```
 
 ### Authentication failed
@@ -308,7 +308,7 @@ rm -rf ~/.claudekit
    ```
 
 4. **Verify repository access:**
-   - Ensure you purchased a ClaudeKit kit
+   - Ensure you purchased a Mekong Marketing kit
    - Check you can access the repository on GitHub
 
 ### Permission denied
@@ -319,7 +319,7 @@ rm -rf ~/.claudekit
 
 1. **Use npx (no installation needed):**
    ```bash
-   npx claudekit-cli new --kit engineer
+   npx mekong-cli new --kit engineer
    ```
 
 2. **Fix npm permissions:**
@@ -327,12 +327,12 @@ rm -rf ~/.claudekit
    mkdir ~/.npm-global
    npm config set prefix '~/.npm-global'
    export PATH=~/.npm-global/bin:$PATH
-   npm install -g claudekit-cli
+   npm install -g mekong-cli
    ```
 
 3. **Use sudo (not recommended):**
    ```bash
-   sudo npm install -g claudekit-cli
+   sudo npm install -g mekong-cli
    ```
 
 ### Download fails
@@ -366,9 +366,9 @@ Now that the CLI is installed:
 
 ## Need Help?
 
-- **Documentation**: [docs.claudekit.cc](https://docs.claudekit.cc)
-- **GitHub Issues**: [github.com/mrgoonie/claudekit-cli/issues](https://github.com/mrgoonie/claudekit-cli/issues)
-- **Purchase Support**: [claudekit.cc](https://claudekit.cc)
+- **Documentation**: [docs.mekongmarketing.com](https://docs.mekongmarketing.com)
+- **GitHub Issues**: [github.com/mrgoonie/mekong-cli/issues](https://github.com/mrgoonie/mekong-cli/issues)
+- **Purchase Support**: [mekongmarketing.com](https://mekongmarketing.com)
 
 ---
 

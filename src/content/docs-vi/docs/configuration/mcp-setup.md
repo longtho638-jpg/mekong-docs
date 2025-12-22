@@ -12,7 +12,7 @@ lastUpdated: 2025-11-17
 
 ## Tóm tắt
 
-ClaudeKit chuyển việc quản lý các máy chủ MCP (Model Context Protocol) cho **mcp-manager** – một subagent chuyên trách. Cách làm này tách toàn bộ manifest của công cụ ra khỏi agent chính, giúp giữ context gọn nhẹ mà vẫn tận dụng được các tích hợp sâu.
+Mekong Marketing chuyển việc quản lý các máy chủ MCP (Model Context Protocol) cho **mcp-manager** – một subagent chuyên trách. Cách làm này tách toàn bộ manifest của công cụ ra khỏi agent chính, giúp giữ context gọn nhẹ mà vẫn tận dụng được các tích hợp sâu.
 
 ---
 
@@ -45,7 +45,7 @@ Kích hoạt các công cụ do subagent quản lý thông qua lệnh `/use-mcp`
 /use-mcp Dùng chrome-devtools mcp để chụp ảnh màn hình google.com
 ```
 
-ClaudeKit sẽ gọi **mcp-manager**, nạp cấu hình MCP, phân tích các công cụ khả dụng, chọn phương án phù hợp nhất, thực thi và trả kết quả về phiên làm việc chính.
+Mekong Marketing sẽ gọi **mcp-manager**, nạp cấu hình MCP, phân tích các công cụ khả dụng, chọn phương án phù hợp nhất, thực thi và trả kết quả về phiên làm việc chính.
 
 ---
 
@@ -73,7 +73,7 @@ Kết quả: context chính vẫn sạch nhưng bạn vẫn khai thác trọn v�
 
 ### Tối ưu nâng cao
 
-Ngay cả khi cô lập bằng subagent, việc duyệt quá nhiều công cụ MCP vẫn tốn token. Để giảm chi phí, ClaudeKit có thể chuyển phần orchestration nặng nề sang **gemini-cli**, tận dụng một runtime rẻ hơn mà vẫn giữ cuộc trò chuyện chính tập trung.
+Ngay cả khi cô lập bằng subagent, việc duyệt quá nhiều công cụ MCP vẫn tốn token. Để giảm chi phí, Mekong Marketing có thể chuyển phần orchestration nặng nề sang **gemini-cli**, tận dụng một runtime rẻ hơn mà vẫn giữ cuộc trò chuyện chính tập trung.
 
 ---
 
@@ -81,6 +81,6 @@ Ngay cả khi cô lập bằng subagent, việc duyệt quá nhiều công cụ 
 
 - Cập nhật `.claude/.mcp.json` theo nhu cầu công cụ thực tế.
 - Quản lý phiên bản một cách riêng tư nếu tệp chứa endpoint hoặc thông tin nhạy cảm.
-- Kết hợp `/use-mcp` với các lệnh tự động như `/cook`, `/fix`, `/plan` để dùng song song công cụ tùy chỉnh và agent gốc của ClaudeKit.
+- Kết hợp `/use-mcp` với các lệnh tự động như `/cook`, `/fix`, `/plan` để dùng song song công cụ tùy chỉnh và agent gốc của Mekong Marketing.
 
 Bạn sẽ tận dụng được lợi thế của MCP mà không lo phình to context chính.

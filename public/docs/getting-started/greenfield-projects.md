@@ -1,6 +1,6 @@
 ---
 title: "Greenfield Projects"
-description: "Start new projects with ClaudeKit from scratch - bootstrap ideas into production-ready applications with AI agents."
+description: "Start new projects with Mekong Marketing from scratch - bootstrap ideas into production-ready applications with AI agents."
 category: "getting-started"
 order: 5
 published: true
@@ -9,14 +9,14 @@ lastUpdated: 2025-11-07
 
 # Greenfield Projects
 
-Create new projects from scratch with ClaudeKit's AI-powered development workflow. Transform ideas into production-ready applications quickly with intelligent agents.
+Create new projects from scratch with Mekong Marketing's AI-powered development workflow. Transform ideas into production-ready applications quickly with intelligent agents.
 
 ## Installation
 
-### 1. Install ClaudeKit CLI
+### 1. Install Mekong Marketing CLI
 
 ```bash
-npm i -g claudekit-cli@latest
+npm i -g mekong-cli@latest
 ```
 
 ## Quick Start
@@ -24,12 +24,12 @@ npm i -g claudekit-cli@latest
 ### Method 1: Bootstrap New Project
 
 ```bash
-# Create new project with ClaudeKit Engineer kit
+# Create new project with Mekong Marketing Engineer kit
 ck new --kit engineer --dir /path/to/project
 ```
 
 **Options:**
-- `--kit engineer`: Installs ClaudeKit Engineer configuration
+- `--kit engineer`: Installs Mekong Marketing Engineer configuration
 - `--dir`: Target directory for the project
 
 ### Method 2: Manual Setup
@@ -42,7 +42,7 @@ cd my-awesome-project
 # Initialize git (optional but recommended)
 git init
 
-# Start Claude Code
+# Start Mekong CLI
 claude
 ```
 
@@ -126,11 +126,11 @@ Runs full autonomous mode without plan review. CC will:
 
 ### Project Structure
 
-ClaudeKit creates standard project structure:
+Mekong Marketing creates standard project structure:
 
 ```
 my-project/
-├── .claude/           # ClaudeKit configuration
+├── .claude/           # Mekong Marketing configuration
 ├── docs/              # Generated documentation
 │   ├── project-overview-pdr.md
 │   ├── system-architecture.md
@@ -143,7 +143,7 @@ my-project/
 
 ### Continue Development
 
-Use all ClaudeKit commands for further development:
+Use all Mekong Marketing commands for further development:
 
 #### Add New Features
 ```bash
@@ -351,7 +351,7 @@ Begin with core functionality, then expand:
 ```bash
 # After bootstrap
 git add .
-git commit -m "Initial project setup via ClaudeKit bootstrap"
+git commit -m "Initial project setup via Mekong Marketing bootstrap"
 
 # After each feature
 /git:cp
@@ -445,4 +445,4 @@ After bootstrapping your project:
 
 **Ready to build?** Start with `/bootstrap` and let AI agents handle the heavy lifting. Remember to **review plans carefully** before approval!
 
-**Need help?** Visit [GitHub Discussions](https://github.com/mrgoonie/claudekit-cli/discussions)
+**Need help?** Visit [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)

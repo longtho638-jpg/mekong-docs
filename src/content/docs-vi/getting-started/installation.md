@@ -14,25 +14,25 @@ published: true
 
 # Cài Đặt
 
-Hướng dẫn này sẽ giúp bạn cài đặt ClaudeKit và thiết lập môi trường phát triển. Bạn có thể chọn giữa cài đặt thủ công hoặc sử dụng ClaudeKit CLI.
+Hướng dẫn này sẽ giúp bạn cài đặt Mekong Marketing và thiết lập môi trường phát triển. Bạn có thể chọn giữa cài đặt thủ công hoặc sử dụng Mekong Marketing CLI.
 
 ## Yêu Cầu
 
-Trước khi cài đặt ClaudeKit, đảm bảo bạn có:
+Trước khi cài đặt Mekong Marketing, đảm bảo bạn có:
 
 - **Node.js** v18 trở lên
 - **npm** v10 trở lên (hoặc bun, pnpm, yarn)
 - **Git** để quản lý phiên bản
-- **Claude Code CLI** đã cài đặt (`claude`)
+- **Mekong CLI CLI** đã cài đặt (`claude`)
 - **Google Gemini API Key** từ [Google AI Studio](https://aistudio.google.com)
 
 ## Phương Pháp 1: Cài Đặt Thủ Công
 
 Phương pháp này cho bạn quyền kiểm soát hoàn toàn quá trình cài đặt.
 
-### Bước 1: Sao Chép Các File ClaudeKit
+### Bước 1: Sao Chép Các File Mekong Marketing
 
-Sao chép tất cả thư mục và file từ repo `claudekit-engineer` vào dự án của bạn:
+Sao chép tất cả thư mục và file từ repo `mekong-engineer` vào dự án của bạn:
 
 ```bash
 # Sao chép các file và thư mục sau:
@@ -45,7 +45,7 @@ CLAUDE.md
 ### Bước 2: Cấu Hình API Key Gemini (Tuỳ Chọn)
 
 **TẠI SAO?**  
-ClaudeKit từng sử dụng [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) để phân tích hình ảnh và video vì Gemini có khả năng xử lý vision tốt. Tuy nhiên, Anthropic đã ra mắt [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) hỗ trợ context engineering tốt hơn, nên toàn bộ công cụ Human MCP đã được chuyển thành Agent Skills.
+Mekong Marketing từng sử dụng [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) để phân tích hình ảnh và video vì Gemini có khả năng xử lý vision tốt. Tuy nhiên, Anthropic đã ra mắt [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) hỗ trợ context engineering tốt hơn, nên toàn bộ công cụ Human MCP đã được chuyển thành Agent Skills.
 
 **Lưu ý:** Gemini API hiện đang có hạn mức miễn phí khá rộng rãi.
 
@@ -54,9 +54,9 @@ ClaudeKit từng sử dụng [Human MCP](https://www.npmjs.com/package/@goonnguy
 
 Vậy là bạn đã sẵn sàng sử dụng.
 
-### Bước 3: Khởi Động Claude Code
+### Bước 3: Khởi Động Mekong CLI
 
-Khởi động Claude Code trong dự án làm việc của bạn:
+Khởi động Mekong CLI trong dự án làm việc của bạn:
 
 ```bash
 # Chế độ tiêu chuẩn
@@ -82,26 +82,26 @@ Lệnh này tạo ra các file markdown trong thư mục `docs`:
 
 Bây giờ dự án của bạn đã sẵn sàng để phát triển!
 
-## Phương Pháp 2: ClaudeKit CLI
+## Phương Pháp 2: Mekong Marketing CLI
 
-CLI cung cấp cách tự động để thiết lập các dự án ClaudeKit.
+CLI cung cấp cách tự động để thiết lập các dự án Mekong Marketing.
 
 ### Cài Đặt
 
-Cài đặt ClaudeKit CLI toàn cục:
+Cài đặt Mekong Marketing CLI toàn cục:
 
 ```bash
 # npm
-npm install -g claudekit-cli
+npm install -g mekong-cli
 
 # bun
-bun add -g claudekit-cli
+bun add -g mekong-cli
 
 # Xác minh cài đặt
 ck --version
 ```
 
-### Khởi Tạo hoặc Cập Nhật ClaudeKit Engineer
+### Khởi Tạo hoặc Cập Nhật Mekong Marketing Engineer
 
 **Lưu ý:** Lệnh này nên được chạy từ thư mục gốc của dự án.
 
@@ -131,11 +131,11 @@ ck init -g --kit engineer
 ck update
 ```
 
-**Lưu ý:** Lệnh này chỉ cập nhật CLI, không cập nhật file ClaudeKit Engineer. Dùng `ck init` để cập nhật ClaudeKit Engineer.
+**Lưu ý:** Lệnh này chỉ cập nhật CLI, không cập nhật file Mekong Marketing Engineer. Dùng `ck init` để cập nhật Mekong Marketing Engineer.
 
 ### Xác Thực
 
-CLI yêu cầu **GitHub Personal Access Token (PAT)** để tải xuống các bản phát hành từ repository riêng tư (`claudekit-engineer` và `claudekit-marketing`).
+CLI yêu cầu **GitHub Personal Access Token (PAT)** để tải xuống các bản phát hành từ repository riêng tư (`mekong-engineer` và `mekong-marketing`).
 
 **Chuỗi Dự Phòng Xác Thực:**
 
@@ -161,19 +161,19 @@ export GITHUB_TOKEN=ghp_your_token_here
 Sau khi cài đặt (bất kỳ phương pháp nào), xác minh mọi thứ đã được thiết lập đúng:
 
 ```bash
-# Kiểm tra Claude Code có sẵn
+# Kiểm tra Mekong CLI có sẵn
 claude --version
 
 # Kiểm tra thư mục .claude tồn tại
 ls -la .claude/
 ```
 
-## Cập Nhật ClaudeKit
+## Cập Nhật Mekong Marketing
 
-Giữ ClaudeKit Engineer luôn cập nhật:
+Giữ Mekong Marketing Engineer luôn cập nhật:
 
 ```bash
-# Cập nhật ClaudeKit Engineer lên phiên bản mới nhất
+# Cập nhật Mekong Marketing Engineer lên phiên bản mới nhất
 ck init
 
 # Cập nhật lên phiên bản cụ thể
@@ -201,7 +201,7 @@ ck update
 Trên macOS/Linux, bạn có thể cần sudo:
 
 ```bash
-sudo npm install -g claudekit-cli
+sudo npm install -g mekong-cli
 ```
 
 Hoặc cấu hình npm để sử dụng thư mục khác:
@@ -212,11 +212,11 @@ npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
 ```
 
-### Không Tìm Thấy Claude Code
+### Không Tìm Thấy Mekong CLI
 
 Nếu lệnh `claude` không được tìm thấy:
 
-1. Cài đặt Claude Code CLI từ [claude.ai/code](https://claude.ai/code)
+1. Cài đặt Mekong CLI CLI từ [claude.ai/code](https://claude.ai/code)
 2. Khởi động lại terminal
 3. Xác minh với `claude --version`
 
@@ -231,7 +231,7 @@ Nếu CLI không thể xác thực:
 
 ## Bước Tiếp Theo
 
-Bây giờ ClaudeKit đã được cài đặt, tiếp tục với:
+Bây giờ Mekong Marketing đã được cài đặt, tiếp tục với:
 
 - [Hướng Dẫn Bắt Đầu Nhanh](/docs/getting-started/quick-start) - Xây dựng dự án đầu tiên
 - [Giải Thích CLAUDE.md](/docs/core-concepts/claude-md) - Hiểu file cấu hình

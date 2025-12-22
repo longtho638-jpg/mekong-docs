@@ -8,11 +8,11 @@ published: true
 
 # CLAUDE.md
 
-The `CLAUDE.md` file is the primary configuration file that provides guidance to Claude Code when working with your codebase. Understanding this file is crucial for effective use of ClaudeKit.
+The `CLAUDE.md` file is the primary configuration file that provides guidance to Mekong CLI when working with your codebase. Understanding this file is crucial for effective use of Mekong Marketing.
 
 ## What is CLAUDE.md?
 
-`CLAUDE.md` serves as the entry point for Claude Code's understanding of your project. It contains:
+`CLAUDE.md` serves as the entry point for Mekong CLI's understanding of your project. It contains:
 
 - Role and responsibilities definitions
 - Links to detailed workflow documentation
@@ -26,7 +26,7 @@ A typical `CLAUDE.md` file looks like this:
 ```markdown
 # CLAUDE.md
 
-This file provides guidance to Claude Code when working with code in this repository.
+This file provides guidance to Mekong CLI when working with code in this repository.
 
 ## Role & Responsibilities
 
@@ -47,7 +47,7 @@ We keep all important docs in `./docs` folder and keep updating them.
 
 ## Why File System As Context?
 
-ClaudeKit follows Manus's approach to Context Engineering: **Use File System As Context**.
+Mekong Marketing follows Manus's approach to Context Engineering: **Use File System As Context**.
 
 ### Benefits
 
@@ -70,7 +70,7 @@ Instead of putting all development rules in CLAUDE.md:
 ... (hundreds of lines)
 ```
 
-ClaudeKit uses references:
+Mekong Marketing uses references:
 
 ```markdown
 ✅ Good Approach (File System As Context)
@@ -83,13 +83,13 @@ This keeps CLAUDE.md lightweight while maintaining access to detailed guidelines
 
 ## Important: Do Not Modify
 
-**[Important]** You should not modify `CLAUDE.md` directly, as it will be overwritten each time you update ClaudeKit using `ck init`.
+**[Important]** You should not modify `CLAUDE.md` directly, as it will be overwritten each time you update Mekong Marketing using `ck init`.
 
 ### Why?
 
-- ClaudeKit updates may include improvements to workflows and rules
+- Mekong Marketing updates may include improvements to workflows and rules
 - Manual changes will be lost during updates
-- Consistency across ClaudeKit projects
+- Consistency across Mekong Marketing projects
 
 ### What if I need to customize?
 
@@ -130,23 +130,23 @@ docs/
 └── project-roadmap.md
 ```
 
-These files help Claude Code:
+These files help Mekong CLI:
 - Avoid hallucinations
 - Prevent creating redundant code
 - Understand project-specific patterns
 - Follow established conventions
 
-## How Claude Code Uses CLAUDE.md
+## How Mekong CLI Uses CLAUDE.md
 
 ### Initial Load
 
-1. Claude Code reads `CLAUDE.md` when started
+1. Mekong CLI reads `CLAUDE.md` when started
 2. Understands the project's role and structure
 3. Knows where to find detailed instructions
 
 ### During Tasks
 
-When performing specific tasks, Claude Code:
+When performing specific tasks, Mekong CLI:
 
 1. References linked workflow files
 2. Reads relevant documentation from `docs/`
@@ -195,7 +195,7 @@ Using File System As Context significantly reduces token usage:
 - Initial load: ~5000 tokens (everything in CLAUDE.md)
 - Every task: Same 5000 tokens loaded
 
-**With File System As Context (ClaudeKit approach):**
+**With File System As Context (Mekong Marketing approach):**
 - Initial load: ~500 tokens (just CLAUDE.md)
 - Specific task: +1000 tokens (only relevant file)
 - Total: 1500 tokens vs 5000 tokens (70% savings)
@@ -225,4 +225,4 @@ Now that you understand CLAUDE.md:
 
 ---
 
-**Key Takeaway**: CLAUDE.md is a lightweight entry point that uses the file system as context, making ClaudeKit efficient and maintainable.
+**Key Takeaway**: CLAUDE.md is a lightweight entry point that uses the file system as context, making Mekong Marketing efficient and maintainable.

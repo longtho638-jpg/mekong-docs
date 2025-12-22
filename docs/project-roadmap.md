@@ -2,7 +2,7 @@
 
 **Last Updated**: 2025-11-28
 **Version**: 0.0.1
-**Project**: claudekit-docs
+**Project**: mekong-docs
 
 ## Current Status
 
@@ -34,8 +34,8 @@
 **Phase 03: Content Creation & Rewriting** (November 2025):
 - ✅ Created 13 new index/guide pages for improved information hierarchy
 - ✅ Rewrote Introduction page to remove sales content and focus on pure onboarding
-- ✅ Created dedicated "Why ClaudeKit" sales page with all marketing content
-- ✅ Developed comprehensive Concepts page explaining core ClaudeKit architecture
+- ✅ Created dedicated "Why Mekong Marketing" sales page with all marketing content
+- ✅ Developed comprehensive Concepts page explaining core Mekong Marketing architecture
 - ✅ Implemented proper Changelog page with version history tracking
 - ✅ Added FAQ page addressing common user questions
 - ✅ Updated all content pages with proper frontmatter schema compliance
@@ -102,7 +102,7 @@
 
 ### In Progress 🔄
 
-- Production deployment to docs.claudekit.cc
+- Production deployment to docs.mekongmarketing.com
 - TypeScript null safety improvements (non-blocking)
 - AI chat backend integration (OpenRouter)
 
@@ -146,7 +146,7 @@
 **Priority 1** (Critical) - COMPLETED:
 - ✅ Created 13 new index/guide pages across all sections
 - ✅ Rewrote Introduction page for pure onboarding experience
-- ✅ Created dedicated "Why ClaudeKit" sales page
+- ✅ Created dedicated "Why Mekong Marketing" sales page
 - ✅ Developed comprehensive Concepts page
 - ✅ Implemented proper Changelog with version tracking
 - ✅ Added FAQ page for common user questions
@@ -264,7 +264,7 @@
 - Security best practices enforced
 
 **Ready for Production Deployment**:
-- [ ] Deploy to docs.claudekit.cc (K8s cluster)
+- [ ] Deploy to docs.mekongmarketing.com (K8s cluster)
 - [ ] Configure TLS/SSL with cert-manager
 - [ ] Setup monitoring (uptime, errors)
 - [ ] Test all pages load correctly
@@ -454,11 +454,11 @@
 - OpenRouter API availability
 - Pagefind compatibility with Astro v5
 - K8s cluster access for deployment
-- Domain configuration (docs.claudekit.cc)
+- Domain configuration (docs.mekongmarketing.com)
 
 **Internal**:
-- ClaudeKit CLI development (content references)
-- ClaudeKit Engineer updates (agent/command docs)
+- Mekong Marketing CLI development (content references)
+- Mekong Marketing Engineer updates (agent/command docs)
 - Design system finalization
 
 ## Resources Required
@@ -580,7 +580,7 @@
 - ✅ Phase 03: Content Creation & Rewriting COMPLETED
 - Created 13 new index/guide pages across all documentation sections
 - Rewrote Introduction page to focus on pure onboarding experience
-- Created dedicated "Why ClaudeKit" sales page with marketing content
+- Created dedicated "Why Mekong Marketing" sales page with marketing content
 - Developed comprehensive Concepts page explaining core architecture
 - Implemented proper Changelog page with version history tracking
 - Added FAQ page addressing common user questions

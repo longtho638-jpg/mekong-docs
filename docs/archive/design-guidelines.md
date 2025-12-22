@@ -1,4 +1,4 @@
-# ClaudeKit Documentation - Design Guidelines
+# Mekong Marketing Documentation - Design Guidelines
 
 **Version:** 1.0
 **Date:** 2025-10-17
@@ -1642,7 +1642,7 @@ Create a sparkle icon (✨) with clean geometric lines:
 
 **Prompt for Human MCP Server:**
 ```
-Generate a modern, minimal logo for "ClaudeKit" documentation:
+Generate a modern, minimal logo for "Mekong Marketing" documentation:
 - Style: Geometric, technical, clean
 - Colors: Cyan (#56B6C2) and Purple (#C678DD) gradient
 - Shape: Abstract combination of 'C' and 'K' letterforms
@@ -1663,7 +1663,7 @@ Generate a modern, minimal logo for "ClaudeKit" documentation:
 
 **Prompt:**
 ```
-Generate favicon variations of the ClaudeKit logo:
+Generate favicon variations of the Mekong Marketing logo:
 - Simplified icon version (more recognizable at small sizes)
 - Remove fine details that won't render at 16px
 - Maintain brand colors (cyan/purple gradient)
@@ -1818,7 +1818,7 @@ Inline critical CSS for above-the-fold content:
   src="/images/logo.png"
   srcset="/images/logo@2x.png 2x,
           /images/logo@3x.png 3x"
-  alt="ClaudeKit"
+  alt="Mekong Marketing"
   loading="lazy"
   decoding="async"
   width="32"

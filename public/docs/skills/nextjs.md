@@ -331,9 +331,9 @@ export const config = {
 };
 ```
 
-## Integration with ClaudeKit
+## Integration with Mekong Marketing
 
-ClaudeKit agents use the Next.js skill to:
+Mekong Marketing agents use the Next.js skill to:
 
 ### 1. Project Scaffolding
 
@@ -633,4 +633,4 @@ export default function DashboardLayout({
 
 ---
 
-**Key Takeaway**: Next.js combines the best of server-side rendering, static generation, and client-side interactivity, making it the ideal choice for modern web applications. ClaudeKit agents leverage these capabilities to build fast, SEO-friendly, and maintainable applications.
+**Key Takeaway**: Next.js combines the best of server-side rendering, static generation, and client-side interactivity, making it the ideal choice for modern web applications. Mekong Marketing agents leverage these capabilities to build fast, SEO-friendly, and maintainable applications.

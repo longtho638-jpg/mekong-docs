@@ -751,7 +751,7 @@ More flexible implementation:
 
 **Solution:**
 ```typescript
-// ClaudeKit suggests similar fonts
+// Mekong Marketing suggests similar fonts
 // Original: "Custom Font Pro"
 // Suggested: "Inter" (similar characteristics)
 

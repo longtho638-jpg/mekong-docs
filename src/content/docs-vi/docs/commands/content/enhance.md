@@ -191,7 +191,7 @@ Files created:
    AFTER:
    "In 2020, we got frustrated watching developers
    waste hours on repetitive tasks. So we built
-   ClaudeKit—AI agents that actually work."
+   Mekong Marketing—AI agents that actually work."
 
    (+Specific, relatable, conversational)
 

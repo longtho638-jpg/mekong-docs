@@ -8,7 +8,7 @@ published: true
 
 # Feature Development Workflow
 
-Complete feature lifecycle from planning to deployment using ClaudeKit's multi-agent workflows.
+Complete feature lifecycle from planning to deployment using Mekong Marketing's multi-agent workflows.
 
 ## Overview
 
@@ -177,7 +177,7 @@ Let's walk through adding authentication to a Next.js app:
 ### Getting Help
 - [Troubleshooting Guide](/docs/support/troubleshooting)
 - [FAQ](/docs/support/faq)
-- [Discord Community](https://claudekit.cc/discord)
+- [Discord Community](https://mekongmarketing.com/discord)
 
 ## Next Steps
 

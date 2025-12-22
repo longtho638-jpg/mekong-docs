@@ -171,7 +171,7 @@ Files Created: 4 documentation files
 # docs/codebase-summary.md
 
 ## Overview
-Complete overview of ClaudeKit Engineer - a comprehensive
+Complete overview of Mekong Marketing Engineer - a comprehensive
 development toolkit with 49 source files across 12 AI agents,
 30+ slash commands, and 6 MCP servers.
 

@@ -2,11 +2,11 @@
 
 **Last Updated**: 2025-11-29
 **Version**: 0.0.3 (Post-Content Creation Phase - Phase 01 Complete)
-**Repository**: claudekit-docs
+**Repository**: mekong-docs
 
 ## Overview
 
-claudekit-docs is Astro v5-based static documentation site for ClaudeKit ecosystem. Features bi-lingual content (English/Vietnamese), section-based information architecture, AI chat integration (UI complete, backend pending), enhanced sidebar navigation, and One Dark Pro-inspired design system. Successfully completed Phase 01 IA restructure (194 files migrated), Phase 02 navigation overhaul (context-aware navigation system), and Phase 03 content creation & rewriting (13 new pages, enhanced user journeys).
+mekong-docs is Astro v5-based static documentation site for Mekong Marketing ecosystem. Features bi-lingual content (English/Vietnamese), section-based information architecture, AI chat integration (UI complete, backend pending), enhanced sidebar navigation, and One Dark Pro-inspired design system. Successfully completed Phase 01 IA restructure (194 files migrated), Phase 02 navigation overhaul (context-aware navigation system), and Phase 03 content creation & rewriting (13 new pages, enhanced user journeys).
 
 ## Project Statistics
 
@@ -34,7 +34,7 @@ claudekit-docs is Astro v5-based static documentation site for ClaudeKit ecosyst
 ## Directory Structure
 
 ```
-/home/kai/claudekit/claudekit-docs/
+/home/kai/mekong/mekong-docs/
 ├── src/                          # Source code
 │   ├── components/              # UI components
 │   │   ├── AIChat.tsx           # React: Chat interface (backend pending)
@@ -94,7 +94,7 @@ claudekit-docs is Astro v5-based static documentation site for ClaudeKit ecosyst
 │   ├── project-overview-pdr.md  # Product requirements
 │   ├── system-architecture.md   # Technical architecture
 │   └── tech-stack.md            # Technology decisions
-├── .claude/                     # Claude Code workflows
+├── .claude/                     # Mekong CLI workflows
 ├── astro.config.mjs             # Astro config (MDX, React, Tailwind, i18n)
 ├── CLAUDE.md                    # Claude-specific instructions (171 lines)
 ├── Dockerfile                   # Multi-stage build (node:20-alpine)
@@ -176,9 +176,9 @@ docsSchema = z.object({
 1. **getting-started** (12+ docs): Comprehensive user onboarding and setup guides (Enhanced in Phase 03)
    - **New**: `index.md` - Comprehensive getting started hub with user journey paths
    - **Enhanced**: `introduction.md` - Rewritten introduction focusing on technical onboarding
-   - **New**: `concepts.md` - In-depth explanation of ClaudeKit concepts and architecture
-   - **New**: `upgrade-guide.md` - Migration guide for existing Claude Code users
-   - **New**: `why-claudekit.md` - Dedicated sales and comparison page
+   - **New**: `concepts.md` - In-depth explanation of Mekong Marketing concepts and architecture
+   - **New**: `upgrade-guide.md` - Migration guide for existing Mekong CLI users
+   - **New**: `why-mekong.md` - Dedicated sales and comparison page
    - Installation and configuration
    - Quick-start tutorials (15-minute setup)
    - Greenfield and brownfield project setups
@@ -505,8 +505,8 @@ npm run preview      # Preview build
 - ConfigMap for environment variables
 
 **Docker** (Local/Testing):
-- Build: `docker build -t claudekit-docs:local .`
-- Run: `docker run -p 3000:3000 claudekit-docs:local`
+- Build: `docker build -t mekong-docs:local .`
+- Run: `docker run -p 3000:3000 mekong-docs:local`
 
 **Static Hosts** (Alternative):
 - Vercel, Netlify, Cloudflare Pages
@@ -555,7 +555,7 @@ npm run preview      # Preview build
 ### Completed Successfully ✅
 - **13 New Content Pages**: Created comprehensive index pages and guides across all sections
 - **Introduction Overhaul**: Completely rewrote introduction to focus on technical onboarding
-- **Sales Content Separation**: Created dedicated "Why ClaudeKit" page, separated from technical docs
+- **Sales Content Separation**: Created dedicated "Why Mekong Marketing" page, separated from technical docs
 - **Comprehensive Concepts**: Developed in-depth concepts documentation explaining core architecture
 - **Professional Changelog**: Implemented proper changelog with version history tracking
 - **FAQ Implementation**: Created comprehensive FAQ page addressing common questions
@@ -620,7 +620,7 @@ npm run preview      # Preview build
 1. **Complete Core Commands**: Document remaining core commands beyond `/code` and `/brainstorm`
 2. **Fix Commands Documentation**: Document all `/fix:*` command variants
 3. **Design Commands**: Document `/design:*` command suite
-4. **Production Deployment**: Deploy to docs.claudekit.cc with all documented content
+4. **Production Deployment**: Deploy to docs.mekongmarketing.com with all documented content
 5. **Vietnamese Translation**: Translate 15 new pages to Vietnamese
 6. **Search Implementation**: Implement Pagefind search functionality
 7. **LLM Integration Features**: Implement CopyForLLMs component and llms.txt generation
@@ -644,10 +644,10 @@ npm run preview      # Preview build
 
 ## Related Projects
 
-- **claudekit-cli**: CLI setup tool (`../claudekit-cli`)
-- **claudekit-engineer**: Engineering toolkit (`../claudekit-engineer`)
-- **claudekit-marketing**: Marketing toolkit (`../claudekit-marketing`)
-- **claudekit** (main): Website (`../claudekit`)
+- **mekong-cli**: CLI setup tool (`../mekong-cli`)
+- **mekong-engineer**: Engineering toolkit (`../mekong-engineer`)
+- **mekong-marketing**: Marketing toolkit (`../mekong-marketing`)
+- **mekong** (main): Website (`../mekong`)
 
 ## Unresolved Questions
 
