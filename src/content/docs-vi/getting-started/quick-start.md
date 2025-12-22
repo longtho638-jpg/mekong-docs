@@ -18,7 +18,7 @@ Ship tính năng production trong 15 phút. Không cần boilerplate, không c�
 
 ## Yêu Cầu
 
-- Mekong Marketing CLI đã cài đặt (`ck --version` hoạt động)
+- Mekong Marketing CLI đã cài đặt (`mk --version` hoạt động)
 - Mekong CLI đang chạy
 - Dự án đã khởi tạo với Mekong Marketing
 
@@ -31,7 +31,7 @@ Thêm xác thực người dùng vào ứng dụng Next.js trong 15 phút.
 ### Bước 1: Bootstrap Dự Án
 
 ```bash
-ck new my-app --kit engineer
+mk new my-app --kit engineer
 cd my-app
 ```
 

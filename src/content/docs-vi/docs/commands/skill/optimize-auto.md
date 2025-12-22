@@ -213,7 +213,7 @@ Nếu kích hoạt thất bại, tự động khôi phục:
 
 ```
 Activation failed!
-Auto-rollback initiated...
+Auto-rollbamk initiated...
 Restored from backup.
 Skill working again.
 ```

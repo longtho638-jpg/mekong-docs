@@ -102,7 +102,7 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong 
 
 ### v1.0.0
 - Không có breaking change từ phiên bản beta
-- Lộ trình migration: Lệnh `ck migrate` có sẵn
+- Lộ trình migration: Lệnh `mk migrate` có sẵn
 - Tất cả cấu hình beta vẫn tương thích
 
 ### v0.9.0 → v1.0.0
@@ -123,10 +123,10 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong 
 npm update mekong-cli
 
 # Migrate cấu hình
-ck migrate
+mk migrate
 
 # Xác minh setup
-ck doctor
+mk doctor
 ```
 
 ## Cập nhật bảo mật

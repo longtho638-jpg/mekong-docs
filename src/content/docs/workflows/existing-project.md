@@ -305,7 +305,7 @@ claude
 ### Commands Not Working
 ```bash
 # Verify Mekong Marketing installation
-ck --version
+mk --version
 
 # Restart Mekong CLI
 # Exit CC and run: claude

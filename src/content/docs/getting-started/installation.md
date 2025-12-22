@@ -116,7 +116,7 @@ npm install -g mekong-cli
 bun add -g mekong-cli
 
 # Verify installation
-ck --version
+mk --version
 ```
 
 ### Initialize or Update Mekong Marketing Engineer
@@ -125,20 +125,20 @@ ck --version
 
 ```bash
 # Interactive mode (recommended)
-ck init
+mk init
 
 # With options
-ck init --kit engineer
+mk init --kit engineer
 
 # Specific version
-ck init --kit engineer --version v1.0.0
+mk init --kit engineer --version v1.0.0
 
 # With exclude patterns
-ck init --exclude "local-config/**" --exclude "*.local"
+mk init --exclude "local-config/**" --exclude "*.local"
 
 # Global mode - use platform-specific user configuration
-ck init --global
-ck init -g --kit engineer
+mk init --global
+mk init -g --kit engineer
 ```
 
 ### Update the CLI Itself
@@ -146,10 +146,10 @@ ck init -g --kit engineer
 To update the `ck` command-line tool to the latest version:
 
 ```bash
-ck update
+mk update
 ```
 
-**Note:** This updates the CLI tool only, not Mekong Marketing Engineer files. Use `ck init` to update Mekong Marketing Engineer.
+**Note:** This updates the CLI tool only, not Mekong Marketing Engineer files. Use `mk init` to update Mekong Marketing Engineer.
 
 **Global vs Local Configuration:**
 
@@ -202,24 +202,24 @@ Keep Mekong Marketing Engineer up to date:
 
 ```bash
 # Update Mekong Marketing Engineer to latest version
-ck init
+mk init
 
 # Update to specific version
-ck init --version v1.2.0
+mk init --version v1.2.0
 ```
 
 **Exclude specific files during update:**
 
 ```bash
 # Don't overwrite CLAUDE.md
-ck init --exclude CLAUDE.md
+mk init --exclude CLAUDE.md
 ```
 
 **Update the CLI itself:**
 
 ```bash
 # Update ck command-line tool
-ck update
+mk update
 ```
 
 ## Troubleshooting

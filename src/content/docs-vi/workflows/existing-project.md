@@ -305,7 +305,7 @@ claude
 ### Lệnh Không Hoạt Động
 ```bash
 # Kiểm tra cài đặt Mekong Marketing
-ck --version
+mk --version
 
 # Khởi động lại Mekong CLI
 # Thoát CC và chạy: claude

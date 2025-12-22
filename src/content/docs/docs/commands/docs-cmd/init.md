@@ -79,7 +79,7 @@ cd existing-project
 **Integrating Mekong Marketing**
 ```bash
 # Adding Mekong Marketing to existing project
-ck init --kit engineer
+mk init --kit engineer
 /docs:init
 
 # Mekong Marketing now understands your codebase
@@ -447,7 +447,7 @@ Documentation should be updated when:
 - Major refactoring occurs
 - Architecture changes
 - New patterns introduced
-- Tech stack inits
+- Tech stamk inits
 
 ```bash
 # After major changes

@@ -41,7 +41,7 @@ Task-oriented guides for common development scenarios using Mekong Marketing's s
 
 ### Setup New Project
 ```bash
-ck init my-project --kit engineer
+mk init my-project --kit engineer
 cd my-project
 /plan "set up project structure"
 /code @plans/project-setup.md

@@ -19,7 +19,7 @@ Hướng dẫn tham khảo nhanh cho Mekong Marketing CLI commands và workflows
 npm i -g mekong-cli@latest
 
 # Kiểm tra phiên bản
-ck --version
+mk --version
 ```
 
 ## Khởi Động Mekong Marketing
@@ -39,7 +39,7 @@ claude
 /docs:init
 
 # Cho dự án mới (greenfield)
-ck new --kit engineer --dir /đường/dẫn/đến/dự/án
+mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 ```
 
 ## Lệnh Cơ Bản
@@ -228,7 +228,7 @@ claude
 npm i -g mekong-cli@latest
 
 # 2. Tạo dự án
-ck new --kit engineer --dir /đường/dẫn/đến/dự/án
+mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 
 # 3. Di chuyển đến dự án
 cd /đường/dẫn/đến/dự/án
@@ -421,7 +421,7 @@ Mô tả chi tiết hơn = kết quả tốt hơn
 
 ```bash
 # Kiểm tra phiên bản Mekong Marketing
-ck --version
+mk --version
 
 # Khởi động lại Mekong CLI
 # Thoát và chạy: claude

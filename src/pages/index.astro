@@ -9,7 +9,7 @@ const heroCode = `# Install Mekong Marketing CLI
 npm install -g mekong-cli
 
 # Create new project
-ck new --dir my-app
+mk new --dir my-app
 
 # Select "Engineer Kit"
 # Wait for installation to complete
@@ -29,13 +29,13 @@ claude
 # Review, approve, deploy`;
 
 const cliCode = `# Initialize Mekong Marketing Engineer in your project
-ck init --kit engineer
+mk init --kit engineer
 
 # Update Mekong Marketing Engineer to latest version
-ck init
+mk init
 
 # Check available Mekong Marketing versions
-ck versions`;
+mk versions`;
 
 const planningCode = `# Planner agent reads your codebase
 /plan [add real-time notifications with WebSocket]
@@ -87,7 +87,7 @@ const refactoringCode = `# Scout agent maps codebase structure
 /test [authentication system]`;
 
 const step1Code = `npm install -g mekong-cli`;
-const step2Code = `ck new my-first-app
+const step2Code = `mk new my-first-app
 cd my-first-app`;
 const step3Code = `/plan [add user registration API]
 /cook [implement registration endpoint]`;

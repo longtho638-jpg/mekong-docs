@@ -19,7 +19,7 @@ Quick reference guide for Mekong Marketing CLI commands and workflows.
 npm i -g mekong-cli@latest
 
 # Check version
-ck --version
+mk --version
 ```
 
 ## Starting Mekong Marketing
@@ -39,7 +39,7 @@ claude
 /docs:init
 
 # For new projects (greenfield)
-ck init --kit engineer --dir /path/to/project
+mk init --kit engineer --dir /path/to/project
 ```
 
 ## Core Commands
@@ -228,7 +228,7 @@ claude
 npm i -g mekong-cli@latest
 
 # 2. Initialize project
-ck init --kit engineer --dir /path/to/project
+mk init --kit engineer --dir /path/to/project
 
 # 3. Navigate to project
 cd /path/to/project
@@ -421,7 +421,7 @@ More detailed descriptions = better results
 
 ```bash
 # Check Mekong Marketing version
-ck --version
+mk --version
 
 # Restart Mekong CLI
 # Exit and run: claude

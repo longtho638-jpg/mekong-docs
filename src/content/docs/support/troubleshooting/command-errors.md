@@ -33,7 +33,7 @@ ls .claude/commands/
 cat .claude/commands/core/cook.md
 
 # If files missing, reinitialize Mekong Marketing
-ck init --kit engineer
+mk init --kit engineer
 ```
 
 ---
@@ -114,7 +114,7 @@ Detailed implementation instructions...
 
 ### ck Commands Don't Work
 
-**Symptom**: `ck init` shows "command not found"
+**Symptom**: `mk init` shows "command not found"
 
 **Solution**:
 
@@ -126,7 +126,7 @@ npm list -g mekong-cli
 npm install -g mekong-cli
 
 # Verify
-ck --version
+mk --version
 
 # If still not found, check PATH
 which ck
@@ -211,7 +211,7 @@ ls .claude/agents/
 cat .claude/agents/planner.md
 
 # Reinitialize if missing
-ck init --kit engineer
+mk init --kit engineer
 ```
 
 See [Agent Issues](/docs/support/troubleshooting/agent-issues) for agent-specific problems.
@@ -300,7 +300,7 @@ description: My custom cook implementation
 
 ```bash
 # Initialize Mekong Marketing
-ck init --kit engineer
+mk init --kit engineer
 
 # Verify structure
 tree .claude -L 2
@@ -317,7 +317,7 @@ tree .claude -L 2
 cp -r .claude .claude.backup
 
 # Update to fresh version
-ck init --kit engineer
+mk init --kit engineer
 
 # Restore custom files if needed
 cp .claude.backup/commands/my-custom.md .claude/commands/
@@ -428,7 +428,7 @@ claude --version
 
 ```bash
 # If available
-ck diagnose --verbose
+mk diagnose --verbose
 
 # Manual checks
 echo "Node: $(node --version)"
@@ -450,7 +450,7 @@ echo ".claude exists: $([ -d .claude ] && echo yes || echo no)"
 cp -r .claude .claude.backup
 
 # Update to latest
-ck init --kit engineer
+mk init --kit engineer
 
 # Restore custom commands
 cp .claude.backup/commands/my-custom.md .claude/commands/
@@ -492,7 +492,7 @@ claude --dangerously-skip-permissions
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep Mekong Marketing updated: `ck init`
+- Keep Mekong Marketing updated: `mk init`
 - Backup .claude before modifications
 - Use correct frontmatter syntax
 - Verify command names are unique
@@ -548,4 +548,4 @@ claude --dangerously-skip-permissions
 
 ---
 
-**Most command issues stem from missing files or incorrect structure.** Run `ck init --kit engineer` to fix 80% of problems instantly.
+**Most command issues stem from missing files or incorrect structure.** Run `mk init --kit engineer` to fix 80% of problems instantly.

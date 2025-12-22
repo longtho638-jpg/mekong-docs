@@ -11,7 +11,7 @@ published: true
 ## 5-Minute Quick Win
 
 ```bash
-ck init my-app --kit engineer
+mk init my-app --kit engineer
 cd my-app
 /cook add user authentication with OAuth
 ```

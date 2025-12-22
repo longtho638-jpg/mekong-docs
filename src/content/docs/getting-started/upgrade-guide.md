@@ -31,7 +31,7 @@ Already using Mekong CLI? Mekong Marketing enhances your workflow without breaki
 npm install -g mekong-cli
 
 # Initialize in existing project
-ck init
+mk init
 # → Adds .claude/CLAUDE.md, skills/, workflows/
 # → Existing .claude/commands/ preserved
 ```
@@ -40,7 +40,7 @@ ck init
 
 ```bash
 # Recommended: Use built-in update command
-ck update
+mk update
 
 # Alternative: npm global update
 npm install -g mekong-cli@latest

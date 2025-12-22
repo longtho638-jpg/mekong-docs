@@ -38,7 +38,7 @@ npm list -g mekong-cli
 npm install -g mekong-cli
 
 # Verify
-ck --version
+mk --version
 ```
 
 [More installation fixes →](/docs/support/troubleshooting/installation-issues)
@@ -122,7 +122,7 @@ export GEMINI_API_KEY=your-key
 cp -r .claude .claude.backup
 
 # Update to latest
-ck init --kit engineer
+mk init --kit engineer
 
 # Restore custom files
 cp .claude.backup/commands/my-custom.md .claude/commands/
@@ -143,7 +143,7 @@ rm -rf ~/.mekong/cache
 
 ```bash
 # Check CLI
-ck --version
+mk --version
 
 # Check Mekong CLI
 claude --version
@@ -185,7 +185,7 @@ tree .claude -L 2
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep Mekong Marketing updated (`ck init`)
+- Keep Mekong Marketing updated (`mk init`)
 - Use `--verbose` when debugging
 - Backup before major changes
 - Read error messages fully

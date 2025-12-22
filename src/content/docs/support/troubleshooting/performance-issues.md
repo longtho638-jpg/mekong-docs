@@ -266,7 +266,7 @@ claude
 npm cache clean --force
 
 # 3. Update Mekong Marketing
-ck init --kit engineer
+mk init --kit engineer
 
 # 4. Update Node.js
 node --version  # Should be 18+

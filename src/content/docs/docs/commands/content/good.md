@@ -698,7 +698,7 @@ Use for:            Strategic content
 ```
 Research depth:      ⭐⭐☆☆☆
 Strategic thinking:  ⭐⭐⭐☆☆
-Multiple variations: 3-5 quick versions
+Multiple variations: 3-5 quimk versions
 A/B test strategy:   Basic suggestions
 Time:               5-15 seconds
 Use for:            Quick content needs

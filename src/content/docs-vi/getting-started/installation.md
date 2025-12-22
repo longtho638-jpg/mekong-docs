@@ -98,7 +98,7 @@ npm install -g mekong-cli
 bun add -g mekong-cli
 
 # Xác minh cài đặt
-ck --version
+mk --version
 ```
 
 ### Khởi Tạo hoặc Cập Nhật Mekong Marketing Engineer
@@ -107,20 +107,20 @@ ck --version
 
 ```bash
 # Chế độ tương tác (khuyến nghị)
-ck init
+mk init
 
 # Với tùy chọn
-ck init --kit engineer
+mk init --kit engineer
 
 # Phiên bản cụ thể
-ck init --kit engineer --version v1.0.0
+mk init --kit engineer --version v1.0.0
 
 # Với mẫu loại trừ
-ck init --exclude "local-config/**" --exclude "*.local"
+mk init --exclude "local-config/**" --exclude "*.local"
 
 # Chế độ global - sử dụng thư mục cấu hình theo platform
-ck init --global
-ck init -g --kit engineer
+mk init --global
+mk init -g --kit engineer
 ```
 
 ### Cập Nhật CLI
@@ -128,10 +128,10 @@ ck init -g --kit engineer
 Để cập nhật công cụ dòng lệnh `ck` lên phiên bản mới nhất:
 
 ```bash
-ck update
+mk update
 ```
 
-**Lưu ý:** Lệnh này chỉ cập nhật CLI, không cập nhật file Mekong Marketing Engineer. Dùng `ck init` để cập nhật Mekong Marketing Engineer.
+**Lưu ý:** Lệnh này chỉ cập nhật CLI, không cập nhật file Mekong Marketing Engineer. Dùng `mk init` để cập nhật Mekong Marketing Engineer.
 
 ### Xác Thực
 
@@ -174,24 +174,24 @@ Giữ Mekong Marketing Engineer luôn cập nhật:
 
 ```bash
 # Cập nhật Mekong Marketing Engineer lên phiên bản mới nhất
-ck init
+mk init
 
 # Cập nhật lên phiên bản cụ thể
-ck init --version v1.2.0
+mk init --version v1.2.0
 ```
 
 **Loại trừ các file cụ thể khi cập nhật:**
 
 ```bash
 # Không ghi đè CLAUDE.md
-ck init --exclude CLAUDE.md
+mk init --exclude CLAUDE.md
 ```
 
 **Cập nhật CLI:**
 
 ```bash
 # Cập nhật công cụ dòng lệnh ck
-ck update
+mk update
 ```
 
 ## Khắc Phục Sự Cố

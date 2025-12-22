@@ -89,7 +89,7 @@ Mekong Marketing sử dụng tham chiếu:
 
 ## Quan Trọng: Không Sửa Đổi
 
-**[Quan Trọng]** Bạn không nên sửa đổi `CLAUDE.md` trực tiếp, vì nó sẽ bị ghi đè mỗi khi bạn cập nhật Mekong Marketing bằng `ck init`.
+**[Quan Trọng]** Bạn không nên sửa đổi `CLAUDE.md` trực tiếp, vì nó sẽ bị ghi đè mỗi khi bạn cập nhật Mekong Marketing bằng `mk init`.
 
 ### Tại Sao?
 
@@ -103,7 +103,7 @@ Nếu bạn muốn sửa đổi `CLAUDE.md` mà không bị ghi đè:
 
 ```bash
 # Sử dụng cờ exclude khi cập nhật
-ck init --exclude CLAUDE.md
+mk init --exclude CLAUDE.md
 ```
 
 **Cách tiếp cận tốt hơn**: Thay vì sửa đổi CLAUDE.md, hãy tùy chỉnh các file được tham chiếu trong `.claude/workflows/` vì chúng ít thay đổi hơn khi cập nhật.
@@ -184,7 +184,7 @@ Cập nhật tài liệu
 ✅ Giữ CLAUDE.md ngắn gọn với links đến docs chi tiết
 ✅ Cập nhật các file workflow trong `.claude/workflows/` khi cần
 ✅ Duy trì docs dự án trong thư mục `docs/`
-✅ Sử dụng `ck init --exclude CLAUDE.md` nếu phải tùy chỉnh
+✅ Sử dụng `mk init --exclude CLAUDE.md` nếu phải tùy chỉnh
 
 ### Không Nên Làm
 

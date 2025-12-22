@@ -196,7 +196,7 @@ Next steps:
 
 ```bash
 # Interactive setup
-ck init
+mk init
 
 ? Project name: task-api
 ? Template: Node.js API

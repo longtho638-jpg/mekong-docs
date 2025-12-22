@@ -213,7 +213,7 @@ If activation fails, automatically restores:
 
 ```
 Activation failed!
-Auto-rollback initiated...
+Auto-rollbamk initiated...
 Restored from backup.
 Skill working again.
 ```

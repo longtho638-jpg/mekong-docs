@@ -362,7 +362,7 @@ cat .claude/workflows/development-rules.md
 
 **Solutions:**
 1. Review and update workflow files
-2. Run `ck init` to get latest Mekong Marketing workflows
+2. Run `mk init` to get latest Mekong Marketing workflows
 3. Merge custom changes with updates
 4. Document customizations
 

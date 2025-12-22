@@ -36,7 +36,7 @@ See Mekong Marketing in action - from installation to building UI from a screens
 
 ## Prerequisites
 
-- Mekong Marketing CLI installed (`ck --version` works)
+- Mekong Marketing CLI installed (`mk --version` works)
 - Mekong CLI running
 - Project initialized with Mekong Marketing
 
@@ -49,7 +49,7 @@ Add user authentication to Next.js app in 15 minutes.
 ### Step 1: Bootstrap Project
 
 ```bash
-ck init my-app --kit engineer
+mk init my-app --kit engineer
 cd my-app
 ```
 

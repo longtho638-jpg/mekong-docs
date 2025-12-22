@@ -149,7 +149,7 @@ Mekong Marketing provides a comprehensive set of slash commands to accelerate yo
 ```bash
 1. /bootstrap [project description]
    # OR
-   ck new --kit engineer
+   mk new --kit engineer
 
 2. # Customize requirements through Q&A
 
@@ -408,7 +408,7 @@ Next: Review changes, then /git:cm
 **Solutions:**
 1. Verify you're in a Mekong Marketing project (`ls .claude/`)
 2. Check command exists (`ls .claude/commands/`)
-3. Run `ck init` to get latest commands
+3. Run `mk init` to get latest commands
 4. Restart Mekong CLI
 
 ### Command Fails

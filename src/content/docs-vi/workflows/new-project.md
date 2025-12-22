@@ -26,7 +26,7 @@ npm i -g mekong-cli@latest
 
 ```bash
 # Tạo dự án mới với Mekong Marketing Engineer kit
-ck new --kit engineer --dir /đường/dẫn/đến/dự/án
+mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 ```
 
 **Tùy chọn:**

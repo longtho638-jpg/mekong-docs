@@ -33,7 +33,7 @@ Command-line tool for bootstrapping and updating Mekong Marketing projects from 
 
 ## Core Commands
 
-### ck init
+### mk init
 
 Initialize or update Mekong Marketing Engineer in your project:
 
@@ -41,20 +41,20 @@ Initialize or update Mekong Marketing Engineer in your project:
 
 ```bash
 # Interactive mode (recommended)
-ck init
+mk init
 
 # With options
-ck init --kit engineer
+mk init --kit engineer
 
 # Specific version
-ck init --kit engineer --version v1.0.0
+mk init --kit engineer --version v1.0.0
 
 # With exclude patterns
-ck init --exclude "local-config/**" --exclude "*.local"
+mk init --exclude "local-config/**" --exclude "*.local"
 
 # Global mode - use platform-specific user configuration
-ck init --global
-ck init -g --kit engineer
+mk init --global
+mk init -g --kit engineer
 ```
 
 **What it does:**
@@ -87,30 +87,30 @@ Update the Mekong Marketing CLI itself to the latest version:
 
 ```bash
 # Update CLI to latest
-ck update
+mk update
 ```
 
 **What it does:**
 - Updates the `ck` command-line tool to the latest version
-- Does NOT update Mekong Marketing Engineer files (use `ck init` for that)
+- Does NOT update Mekong Marketing Engineer files (use `mk init` for that)
 
-### ck versions
+### mk versions
 
 List available versions of Mekong Marketing releases:
 
 ```bash
 # Show all available versions
-ck versions
+mk versions
 
 # Filter by specific kit
-ck versions --kit engineer
-ck versions --kit marketing
+mk versions --kit engineer
+mk versions --kit marketing
 
 # Show more versions (default: 30)
-ck versions --limit 50
+mk versions --limit 50
 
 # Include prereleases and drafts
-ck versions --all
+mk versions --all
 ```
 
 **Options:**
@@ -127,8 +127,8 @@ All commands support these global options:
 Enable verbose logging for debugging:
 
 ```bash
-ck init --verbose
-ck init -v  # Short form
+mk init --verbose
+mk init -v  # Short form
 ```
 
 **Shows:**
@@ -143,7 +143,7 @@ ck init -v  # Short form
 Write logs to file for sharing:
 
 ```bash
-ck init --verbose --log-file debug.log
+mk init --verbose --log-file debug.log
 ```
 
 **Note:** All sensitive data (tokens, credentials) is automatically sanitized in logs.
@@ -229,7 +229,7 @@ After update:
 npm install -g mekong-cli
 
 # Verify installation
-ck --version
+mk --version
 
 # Authenticate with GitHub
 gh auth login
@@ -237,7 +237,7 @@ gh auth login
 export GITHUB_TOKEN=ghp_your_token
 
 # Initialize project
-ck init --kit engineer
+mk init --kit engineer
 
 # Navigate to project
 cd my-project
@@ -252,48 +252,48 @@ claude  # Start Mekong CLI
 
 ```bash
 # Interactive mode (recommended)
-ck init
+mk init
 
 # Direct with options
-ck init --dir my-app --kit engineer
+mk init --dir my-app --kit engineer
 
 # Specific version
-ck init --dir my-app --kit engineer --version v1.0.0
+mk init --dir my-app --kit engineer --version v1.0.0
 
 # With exclusions
-ck init --exclude "*.log" --exclude "temp/**"
+mk init --exclude "*.log" --exclude "temp/**"
 
 # Update Mekong Marketing Engineer to latest
-ck init
+mk init
 
 # Update to specific version
-ck init --version v1.2.0
+mk init --version v1.2.0
 
 # Update with exclusions
-ck init --exclude "local-config/**" --exclude "*.local"
+mk init --exclude "local-config/**" --exclude "*.local"
 
 # Update with verbose output
-ck init --verbose
+mk init --verbose
 ```
 
 ### Update the CLI Itself
 
 ```bash
 # Update ck CLI to latest version
-ck update
+mk update
 ```
 
 ### Check Available Versions
 
 ```bash
 # List all versions
-ck versions
+mk versions
 
 # Filter by kit
-ck versions --kit engineer
+mk versions --kit engineer
 
 # Show more releases
-ck versions --limit 50
+mk versions --limit 50
 ```
 
 ## Troubleshooting
@@ -331,7 +331,7 @@ npm list -g mekong-cli
 1. Check internet connection
 2. Verify GitHub token is valid: `gh auth status`
 3. Confirm you have repository access (purchased kit)
-4. Try with verbose flag: `ck init --verbose`
+4. Try with verbose flag: `mk init --verbose`
 
 ## Version Information
 
@@ -339,13 +339,13 @@ Current version: **1.2.1**
 
 Check version:
 ```bash
-ck --version
+mk --version
 ```
 
 View help:
 ```bash
-ck --help
-ck -h
+mk --help
+mk -h
 ```
 
 ## Next Steps
@@ -355,4 +355,4 @@ ck -h
 
 ---
 
-**Ready to start?** Purchase a kit at [Mekong Marketing.cc](https://mekongmarketing.com), then run `ck init` to initialize your first project.
+**Ready to start?** Purchase a kit at [Mekong Marketing.cc](https://mekongmarketing.com), then run `mk init` to initialize your first project.

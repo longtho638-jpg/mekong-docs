@@ -299,7 +299,7 @@ cat .claude/agents/planner.md | grep -i "spawn\|delegate"
 
 ```bash
 # Update Mekong Marketing to latest version
-ck init --kit engineer
+mk init --kit engineer
 
 # Verify planner agent updated
 cat .claude/agents/planner.md | head -20
@@ -327,7 +327,7 @@ ls -la plans/reports/
 
 # If missing, agents not writing reports correctly
 # Update Mekong Marketing
-ck init --kit engineer
+mk init --kit engineer
 ```
 
 ---
@@ -590,7 +590,7 @@ done
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep agents updated: `ck init`
+- Keep agents updated: `mk init`
 - Use appropriate agents for task complexity
 - Provide clear, specific task descriptions
 - Monitor API rate limits
@@ -642,4 +642,4 @@ done
 
 ---
 
-**Most agent issues resolve with updated Mekong Marketing.** Run `ck init --kit engineer` first, then retest your command.
+**Most agent issues resolve with updated Mekong Marketing.** Run `mk init --kit engineer` first, then retest your command.

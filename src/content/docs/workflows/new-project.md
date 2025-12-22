@@ -26,7 +26,7 @@ npm i -g mekong-cli@latest
 
 ```bash
 # Initialize project with Mekong Marketing Engineer kit
-ck init --kit engineer --dir /path/to/project
+mk init --kit engineer --dir /path/to/project
 ```
 
 **Options:**

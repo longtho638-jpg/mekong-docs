@@ -362,7 +362,7 @@ cat .claude/workflows/development-rules.md
 
 **Giải Pháp:**
 1. Xem xét và cập nhật các file workflow
-2. Chạy `ck init` để nhận workflows Mekong Marketing mới nhất
+2. Chạy `mk init` để nhận workflows Mekong Marketing mới nhất
 3. Hợp nhất thay đổi tùy chỉnh với cập nhật
 4. Tài liệu hóa customizations
 

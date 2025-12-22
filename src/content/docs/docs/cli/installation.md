@@ -46,7 +46,7 @@ This installs the `ck` command globally, available from any directory.
 ### Verify Installation
 
 ```bash
-ck --version
+mk --version
 ```
 
 **Expected output:**
@@ -56,7 +56,7 @@ ck --version
 
 View help:
 ```bash
-ck --help
+mk --help
 ```
 
 **Output:**
@@ -76,9 +76,9 @@ Options:
   --help, -h      Show help
 
 Examples:
-  ck init --kit engineer
-  ck init --global
-  ck versions --kit engineer
+  mk init --kit engineer
+  mk init --global
+  mk versions --kit engineer
 
 For more info: https://docs.mekongmarketing.com
 ```
@@ -161,7 +161,7 @@ After authentication, verify you can access Mekong Marketing repositories:
 
 ```bash
 # List available versions
-ck versions --kit engineer
+mk versions --kit engineer
 ```
 
 If authentication is successful, you'll see available releases. If not, you'll see an error about repository access.
@@ -209,7 +209,7 @@ npm update -g mekong-cli
 
 Check installed version:
 ```bash
-ck --version
+mk --version
 ```
 
 ## Uninstall
@@ -315,7 +315,7 @@ rm -rf ~/.mekong
 
 3. **Try with verbose logging:**
    ```bash
-   ck init --kit engineer --verbose
+   mk init --kit engineer --verbose
    ```
 
 4. **Check GitHub status:**
@@ -325,8 +325,8 @@ rm -rf ~/.mekong
 
 Now that the CLI is installed:
 
-1. **Initialize a project** - Run `ck init --kit engineer`
-2. **Browse available versions** - Run `ck versions`
+1. **Initialize a project** - Run `mk init --kit engineer`
+2. **Browse available versions** - Run `mk versions`
 3. **Start developing** - Follow [Getting Started](/docs/getting-started/installation)
 
 ## Need Help?
@@ -337,4 +337,4 @@ Now that the CLI is installed:
 
 ---
 
-**Ready to start?** Run `ck init --kit engineer` to initialize your first project.
+**Ready to start?** Run `mk init --kit engineer` to initialize your first project.

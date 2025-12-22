@@ -30,7 +30,7 @@ npm list -g mekong-cli
 npm install -g mekong-cli
 
 # Verify installation
-ck --version
+mk --version
 ```
 
 If still not working, check your PATH (see [PATH issues](#path-issues) below).
@@ -55,7 +55,7 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # Verify
-ck --version
+mk --version
 ```
 
 **Expected output**:
@@ -168,7 +168,7 @@ echo 'export PATH="$(npm config get prefix)/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
 # Verify
-ck --version
+mk --version
 ```
 
 #### Apple Silicon (M1/M2/M3) Issues
@@ -256,7 +256,7 @@ source ~/.bashrc
 
 # Verify
 which ck
-ck --version
+mk --version
 ```
 
 ---
@@ -318,7 +318,7 @@ npm cache clean --force
 npm install -g mekong-cli@latest
 
 # Verify
-ck --version
+mk --version
 ```
 
 ---
@@ -375,19 +375,19 @@ After fixing installation issues, verify everything works:
 
 ```bash
 # Check CLI version
-ck --version
+mk --version
 
 # Expected: mekong-cli/1.0.0
 
 # Check available commands
-ck --help
+mk --help
 
 # Expected: Lists init, versions, diagnose commands
 
 # Test with demo project
 mkdir test-project
 cd test-project
-ck init --kit engineer
+mk init --kit engineer
 
 # Expected: Downloads Mekong Marketing Engineer successfully
 ```
@@ -401,7 +401,7 @@ ck init --kit engineer
 - Keep Node.js updated (18+)
 - Use npm global directory in home folder
 - Check PATH after installation
-- Update Mekong Marketing regularly: `ck init`
+- Update Mekong Marketing regularly: `mk init`
 
 ❌ **Don't**:
 - Use sudo with npm (except as last resort)
