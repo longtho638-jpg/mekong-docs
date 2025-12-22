@@ -23,7 +23,7 @@ Trước khi cài đặt AgencyOS, đảm bảo bạn có:
 - **Node.js** v18 trở lên
 - **npm** v10 trở lên (hoặc bun, pnpm, yarn)
 - **Git** để quản lý phiên bản
-- **Mekong CLI CLI** đã cài đặt (`claude`)
+- **AgencyOS CLI CLI** đã cài đặt (`claude`)
 - **Google Gemini API Key** từ [Google AI Studio](https://aistudio.google.com)
 
 ## Phương Pháp 1: Cài Đặt Thủ Công
@@ -45,7 +45,7 @@ CLAUDE.md
 ### Bước 2: Cấu Hình API Key Gemini (Tuỳ Chọn)
 
 **TẠI SAO?**  
-AgencyOS từng sử dụng [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) để phân tích hình ảnh và video vì Gemini có khả năng xử lý vision tốt. Tuy nhiên, Anthropic đã ra mắt [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) hỗ trợ context engineering tốt hơn, nên toàn bộ công cụ Human MCP đã được chuyển thành Agent Skills.
+AgencyOS từng sử dụng [Human MCP](https://www.npmjs.com/package/human-analyzer) để phân tích hình ảnh và video vì Gemini có khả năng xử lý vision tốt. Tuy nhiên, Anthropic đã ra mắt [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) hỗ trợ context engineering tốt hơn, nên toàn bộ công cụ Human MCP đã được chuyển thành Agent Skills.
 
 **Lưu ý:** Gemini API hiện đang có hạn mức miễn phí khá rộng rãi.
 
@@ -54,9 +54,9 @@ AgencyOS từng sử dụng [Human MCP](https://www.npmjs.com/package/@goonnguye
 
 Vậy là bạn đã sẵn sàng sử dụng.
 
-### Bước 3: Khởi Động Mekong CLI
+### Bước 3: Khởi Động AgencyOS CLI
 
-Khởi động Mekong CLI trong dự án làm việc của bạn:
+Khởi động AgencyOS CLI trong dự án làm việc của bạn:
 
 ```bash
 # Chế độ tiêu chuẩn
@@ -125,7 +125,7 @@ mk init -g --kit engineer
 
 ### Cập Nhật CLI
 
-Để cập nhật công cụ dòng lệnh `ck` lên phiên bản mới nhất:
+Để cập nhật công cụ dòng lệnh `mk` lên phiên bản mới nhất:
 
 ```bash
 mk update
@@ -161,7 +161,7 @@ export GITHUB_TOKEN=ghp_your_token_here
 Sau khi cài đặt (bất kỳ phương pháp nào), xác minh mọi thứ đã được thiết lập đúng:
 
 ```bash
-# Kiểm tra Mekong CLI có sẵn
+# Kiểm tra AgencyOS CLI có sẵn
 claude --version
 
 # Kiểm tra thư mục .claude tồn tại
@@ -212,11 +212,11 @@ npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
 ```
 
-### Không Tìm Thấy Mekong CLI
+### Không Tìm Thấy AgencyOS CLI
 
 Nếu lệnh `claude` không được tìm thấy:
 
-1. Cài đặt Mekong CLI CLI từ [claude.ai/code](https://claude.ai/code)
+1. Cài đặt AgencyOS CLI CLI từ [claude.ai/code](https://claude.ai/code)
 2. Khởi động lại terminal
 3. Xác minh với `claude --version`
 

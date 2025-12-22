@@ -45,7 +45,7 @@ cat package.json
 cat README.md  # Usually outdated or missing
 ```
 
-### Start Mekong CLI
+### Start AgencyOS CLI
 
 ```bash
 claude

@@ -409,7 +409,7 @@ Next: Review changes, then /git:cm
 1. Verify you're in a AgencyOS project (`ls .claude/`)
 2. Check command exists (`ls .claude/commands/`)
 3. Run `mk init` to get latest commands
-4. Restart Mekong CLI
+4. Restart AgencyOS CLI
 
 ### Command Fails
 

@@ -61,7 +61,7 @@ published: true
 | [chrome-devtools](/docs/skills/tools/chrome-devtools) | Browser automation, performance profiling |
 | [ffmpeg](/docs/skills/tools/ffmpeg) | Video/audio processing and conversion |
 | [imagemagick](/docs/skills/tools/imagemagick) | Image manipulation and batch processing |
-| [claude-code-skill](/docs/skills/tools/claude-code-skill) | Meta-skill for Mekong CLI itself |
+| [claude-code-skill](/docs/skills/tools/claude-code-skill) | Meta-skill for AgencyOS CLI itself |
 
 ### Process & Methodology
 

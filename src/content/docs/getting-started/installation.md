@@ -20,19 +20,9 @@ This guide will help you install AgencyOS and set up your development environmen
 
 Prefer video? Watch the complete installation walkthrough:
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;">
-  <iframe
-    src="https://www.youtube.com/embed/F_E0GIi_kVY"
-    title="AgencyOS Installation Walkthrough"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
-</div>
+<div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🏯</div><h3 style="margin: 0 0 0.5rem 0;">Demo Video Coming Soon</h3><p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p></div>
 
-*More tutorials: [@goonnguyen](https://www.youtube.com/@goonnguyen) | X: [@goon_nguyen](https://x.com/goon_nguyen)*
+*More tutorials: [
 
 ## Prerequisites
 
@@ -41,7 +31,7 @@ Before installing AgencyOS, ensure you have:
 - **Node.js** v18 or higher
 - **npm** v10 or higher (or bun, pnpm, yarn)
 - **Git** for version control
-- **Mekong CLI CLI** installed (`claude`)
+- **AgencyOS CLI CLI** installed (`claude`)
 - **Google Gemini API Key** from [Google AI Studio](https://aistudio.google.com)
 
 ## Method 1: Manual Setup
@@ -63,7 +53,7 @@ CLAUDE.md
 ### Step 2: Configure Gemini API Key (Optional)
 
 **WHY?**
-AgencyOS utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
+AgencyOS utilized [Human MCP](https://www.npmjs.com/package/human-analyzer) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
 
 **Notes:** Gemini API have a pretty generous free requests limit at the moment.
 
@@ -72,9 +62,9 @@ AgencyOS utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mc
 
 Now you're good to go.
 
-### Step 3: Start Mekong CLI
+### Step 3: Start AgencyOS CLI
 
-Start Mekong CLI in your working project:
+Start AgencyOS CLI in your working project:
 
 ```bash
 # Standard mode
@@ -143,7 +133,7 @@ mk init -g --kit engineer
 
 ### Update the CLI Itself
 
-To update the `ck` command-line tool to the latest version:
+To update the `mk` command-line tool to the latest version:
 
 ```bash
 mk update
@@ -189,7 +179,7 @@ export GITHUB_TOKEN=ghp_your_token_here
 After installation (either method), verify everything is set up correctly:
 
 ```bash
-# Check if Mekong CLI is available
+# Check if AgencyOS CLI is available
 claude --version
 
 # Check if .claude directory exists
@@ -240,11 +230,11 @@ npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
 ```
 
-### Mekong CLI Not Found
+### AgencyOS CLI Not Found
 
 If `claude` command is not found:
 
-1. Install Mekong CLI CLI from [claude.ai/code](https://claude.ai/code)
+1. Install AgencyOS CLI CLI from [claude.ai/code](https://claude.ai/code)
 2. Restart your terminal
 3. Verify with `claude --version`
 
@@ -259,7 +249,7 @@ If CLI can't authenticate:
 
 ## Optional Tools
 
-### CCS - Mekong CLI Switch (Recommended for Heavy Users)
+### CCS - AgencyOS CLI Switch (Recommended for Heavy Users)
 
 If you're a heavy AgencyOS user or frequently hit Claude's rate limits, consider installing **CCS**:
 

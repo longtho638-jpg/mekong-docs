@@ -13,7 +13,7 @@ Các công cụ trong hệ sinh thái giúp bổ trợ cho AgencyOS và nâng ca
 
 ## Công cụ chính thức
 
-### CCS - Mekong CLI Switch
+### CCS - AgencyOS CLI Switch
 
 **Mục đích:** Quản lý đa tài khoản và tối ưu chi phí
 

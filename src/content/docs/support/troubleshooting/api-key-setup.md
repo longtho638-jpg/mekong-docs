@@ -32,7 +32,7 @@ export GEMINI_API_KEY=your-key-here
 # Verify
 echo $GEMINI_API_KEY
 
-# Restart Mekong CLI
+# Restart AgencyOS CLI
 claude
 ```
 
@@ -462,7 +462,7 @@ curl -s "https://www.searchapi.io/api/v1/search?q=test&api_key=$SEARCH_API_KEY" 
 ls -la .env
 # Must be in project root
 
-# 2. Restart Mekong CLI
+# 2. Restart AgencyOS CLI
 # Exit and restart to reload environment
 
 # 3. Check for typos
@@ -489,7 +489,7 @@ cat .env | cat -A
 # Update .env with new key
 nano .env
 
-# Restart Mekong CLI
+# Restart AgencyOS CLI
 ```
 
 ---
@@ -546,4 +546,4 @@ nano .env
 
 ---
 
-**Most API key issues resolve with proper .env configuration and Mekong CLI restart.** Set up keys once, use everywhere.
+**Most API key issues resolve with proper .env configuration and AgencyOS CLI restart.** Set up keys once, use everywhere.

@@ -8,29 +8,23 @@ published: true
 
 # Introduction to AgencyOS
 
-**AgencyOS** extends Mekong CLI with specialized agents, slash commands, and reusable skills.
+**AgencyOS** is an AI-powered operating system for solo agencies with specialized agents, slash commands, and reusable skills.
 
 ## Video Walkthrough
 
-New to AgencyOS? Watch this step-by-step walkthrough covering CLI installation, setup with `ck` commands, and a demo building UI from a screenshot.
+New to AgencyOS? Watch our step-by-step walkthrough covering CLI installation, setup with `mk` commands, and building your first feature.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;">
-  <iframe
-    src="https://www.youtube.com/embed/F_E0GIi_kVY"
-    title="AgencyOS Complete Walkthrough"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem; background: var(--color-bg-tertiary); display: flex; align-items: center; justify-content: center;">
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; padding: 2rem;">
+    <div style="font-size: 3rem; margin-bottom: 1rem;">🏯</div>
+    <h3 style="margin: 0 0 0.5rem 0; color: var(--color-text-primary);">Demo Video Coming Soon</h3>
+    <p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p>
+  </div>
 </div>
-
-*More tutorials: [@goonnguyen](https://www.youtube.com/@goonnguyen) | X: [@goon_nguyen](https://x.com/goon_nguyen)*
 
 ## What is AgencyOS?
 
-AgencyOS transforms Mekong CLI from a general AI assistant into a focused engineering toolkit. Instead of writing prompts from scratch, you invoke battle-tested workflows optimized for speed and quality.
+AgencyOS transforms a general AI assistant into a focused agency toolkit. Instead of writing prompts from scratch, you invoke battle-tested workflows optimized for speed and quality.
 
 **Core Components**:
 - **Agents**: Specialized AI assistants (planner, researcher, tester, debugger)

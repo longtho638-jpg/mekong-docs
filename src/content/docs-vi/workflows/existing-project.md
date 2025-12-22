@@ -26,19 +26,19 @@ npm i -g mekong-cli@latest
 cd /đường/dẫn/đến/dự/án/hiện/tại
 ```
 
-### 3. Khởi Động Mekong CLI
+### 3. Khởi Động AgencyOS CLI
 
 ```bash
 claude
 ```
 
-Lệnh này sẽ khởi động Mekong CLI (CC) với AgencyOS agents trong thư mục dự án.
+Lệnh này sẽ khởi động AgencyOS CLI (CC) với AgencyOS agents trong thư mục dự án.
 
 ## Thiết Lập Ban Đầu
 
 ### Phân Tích và Tạo Specs
 
-Để Mekong CLI quét và phân tích codebase, tạo tài liệu kỹ thuật ban đầu:
+Để AgencyOS CLI quét và phân tích codebase, tạo tài liệu kỹ thuật ban đầu:
 
 ```bash
 /docs:init
@@ -287,7 +287,7 @@ npm i -g mekong-cli@latest
 # 3. Di chuyển đến project
 cd project-name
 
-# 4. Khởi động Mekong CLI
+# 4. Khởi động AgencyOS CLI
 claude
 
 # 5. Specs đã có sẵn - bắt đầu làm việc!
@@ -307,7 +307,7 @@ claude
 # Kiểm tra cài đặt AgencyOS
 mk --version
 
-# Khởi động lại Mekong CLI
+# Khởi động lại AgencyOS CLI
 # Thoát CC và chạy: claude
 ```
 

@@ -1,13 +1,13 @@
 ---
-title: Mekong CLI Skill
-description: Guide for Mekong CLI installation, commands, skills, MCP servers, hooks, IDE integration, and enterprise features
+title: AgencyOS CLI Skill
+description: Guide for AgencyOS CLI installation, commands, skills, MCP servers, hooks, IDE integration, and enterprise features
 section: docs
 category: skills/tools
 order: 16
 published: true
 ---
 
-# Mekong CLI Skill
+# AgencyOS CLI Skill
 
 Anthropic's agentic coding tool combining autonomous planning, execution, and validation with extensibility through skills, plugins, MCP servers, and hooks.
 
@@ -84,4 +84,4 @@ Works with:
 
 ## Key Takeaway
 
- Mekong CLI skill provides guidance for Anthropic's agentic coding tool including installation, slash commands, skills, MCP integration, hooks, IDE integration, and enterprise features. Load specific references based on user query topic.
+ AgencyOS CLI skill provides guidance for Anthropic's agentic coding tool including installation, slash commands, skills, MCP integration, hooks, IDE integration, and enterprise features. Load specific references based on user query topic.

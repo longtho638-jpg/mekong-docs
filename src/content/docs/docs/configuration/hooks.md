@@ -1,6 +1,6 @@
 ---
 title: Hooks
-description: Configure Mekong CLI hooks for notifications, automation, and custom behaviors
+description: Configure AgencyOS CLI hooks for notifications, automation, and custom behaviors
 section: docs
 category: configuration
 order: 4
@@ -9,11 +9,11 @@ published: true
 
 # Hooks
 
-Hooks allow you to extend Mekong CLI with custom scripts that run at specific points in the workflow. AgencyOS includes pre-built hooks for notifications (Discord, Telegram) and development rule enforcement.
+Hooks allow you to extend AgencyOS CLI with custom scripts that run at specific points in the workflow. AgencyOS includes pre-built hooks for notifications (Discord, Telegram) and development rule enforcement.
 
 ## Overview
 
-Hooks are configured in `.claude/settings.json` and execute shell commands in response to Mekong CLI events.
+Hooks are configured in `.claude/settings.json` and execute shell commands in response to AgencyOS CLI events.
 
 ### Available Hook Events
 
@@ -168,7 +168,7 @@ Hooks are defined in `.claude/settings.json`:
 **Message Format:**
 ```
 ╔═══════════════════════════════════════╗
-║ 🤖 Mekong CLI Session Complete       ║
+║ 🤖 AgencyOS CLI Session Complete       ║
 ╠═══════════════════════════════════════╣
 ║ Implementation Complete               ║
 ║                                       ║
@@ -441,4 +441,4 @@ AgencyOS hooks load environment variables in this priority:
 
 ---
 
-**Key Takeaway**: Hooks extend Mekong CLI with custom automation - from development rule enforcement to real-time notifications. Use built-in Discord/Telegram hooks or create custom hooks to fit your workflow.
+**Key Takeaway**: Hooks extend AgencyOS CLI with custom automation - from development rule enforcement to real-time notifications. Use built-in Discord/Telegram hooks or create custom hooks to fit your workflow.

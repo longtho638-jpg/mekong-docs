@@ -14,7 +14,7 @@ published: true
 
 # CLI Installation
 
-Install AgencyOS CLI (`ck`) to download and manage AgencyOS starter kits from private GitHub repository releases.
+Install AgencyOS CLI (`mk`) to download and manage AgencyOS starter kits from private GitHub repository releases.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ git --version   # Any recent version
 npm install -g mekong-cli
 ```
 
-This installs the `ck` command globally, available from any directory.
+This installs the `mk` command globally, available from any directory.
 
 ### Verify Installation
 
@@ -229,7 +229,7 @@ rm -rf ~/.mekong
 
 ### Command not found: ck
 
-**Problem:** Terminal doesn't recognize `ck` command
+**Problem:** Terminal doesn't recognize `mk` command
 
 **Solutions:**
 

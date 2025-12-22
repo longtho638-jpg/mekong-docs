@@ -37,7 +37,7 @@ Learn the complete workflow for adding new features to your project with AgencyO
 Start by clearly defining what you want to build:
 
 ```bash
-# Start Mekong CLI
+# Start AgencyOS CLI
 claude
 
 # Define your feature

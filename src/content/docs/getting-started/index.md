@@ -8,7 +8,7 @@ published: true
 
 # Getting Started with AgencyOS
 
-AgencyOS supercharges Mekong CLI with agents, commands, and skills for production-grade development. Get started in 15 minutes.
+AgencyOS supercharges AgencyOS CLI with agents, commands, and skills for production-grade development. Get started in 15 minutes.
 
 ## Quick Paths
 
@@ -18,7 +18,7 @@ AgencyOS supercharges Mekong CLI with agents, commands, and skills for productio
 3. [Installation](/docs/getting-started/installation) - Install AgencyOS CLI
 4. [Quick Start](/docs/getting-started/quick-start) - Build your first feature in 15 minutes
 
-### Existing Mekong CLI User?
+### Existing AgencyOS CLI User?
 [Upgrade Guide](/docs/getting-started/upgrade-guide) - Migrate to AgencyOS seamlessly
 
 ### Evaluating AgencyOS?

@@ -65,7 +65,7 @@ mekong-cli/1.0.0
 
 #### Windows PATH Not Updated
 
-**Symptom**: `ck` works in some terminals but not others
+**Symptom**: `mk` works in some terminals but not others
 
 **Solution**:
 
@@ -155,7 +155,7 @@ npm install -g mekong-cli
 
 #### Command Not Found After Install
 
-**Symptom**: Installation succeeds but `ck` command not found
+**Symptom**: Installation succeeds but `mk` command not found
 
 **Solution**:
 
@@ -242,7 +242,7 @@ npm install -g mekong-cli
 
 #### PATH Not Set
 
-**Symptom**: `ck` command not found after successful install
+**Symptom**: `mk` command not found after successful install
 
 **Solution**:
 

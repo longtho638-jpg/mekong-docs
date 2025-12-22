@@ -29,10 +29,10 @@ ls .claude/agents/ | grep planner
 # 2. Check agent file format
 cat .claude/agents/planner.md
 
-# 3. Verify Mekong CLI is running
+# 3. Verify AgencyOS CLI is running
 claude --version
 
-# 4. Restart Mekong CLI
+# 4. Restart AgencyOS CLI
 # Exit (Ctrl+C), then restart
 claude
 ```
@@ -111,10 +111,10 @@ description: Creates implementation plans
 ---
 ```
 
-**Step 2: Check Mekong CLI connection**
+**Step 2: Check AgencyOS CLI connection**
 
 ```bash
-# Verify Mekong CLI CLI is running
+# Verify AgencyOS CLI CLI is running
 ps aux | grep claude
 
 # If not running, start it
@@ -205,7 +205,7 @@ vm_stat  # macOS
 # Clear Node cache
 npm cache clean --force
 
-# Restart Mekong CLI with more memory
+# Restart AgencyOS CLI with more memory
 NODE_OPTIONS="--max-old-space-size=4096" claude
 ```
 
@@ -253,7 +253,7 @@ git stash
 **Solution**:
 
 ```bash
-# Stop Mekong CLI (Ctrl+C)
+# Stop AgencyOS CLI (Ctrl+C)
 ^C
 
 # Check if agent file has infinite loop logic

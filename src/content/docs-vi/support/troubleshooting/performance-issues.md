@@ -245,7 +245,7 @@ node -e "console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))"
 
 ### Memory Leaks
 
-**Symptom**: Mekong CLI slows down over time, eventually crashes
+**Symptom**: AgencyOS CLI slows down over time, eventually crashes
 
 **Solution**:
 
@@ -258,7 +258,7 @@ watch -n 1 "ps aux | grep claude"
 watch -n 1 "ps aux | grep claude | grep -v grep"
 
 # If memory grows continuously:
-# 1. Restart Mekong CLI
+# 1. Restart AgencyOS CLI
 exit
 claude
 
@@ -321,7 +321,7 @@ export HTTPS_PROXY=http://proxy.company.com:8080
 echo 'HTTP_PROXY=http://proxy.company.com:8080' >> .env
 echo 'HTTPS_PROXY=http://proxy.company.com:8080' >> .env
 
-# Restart Mekong CLI
+# Restart AgencyOS CLI
 claude
 ```
 

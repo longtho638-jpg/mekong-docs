@@ -20,24 +20,14 @@ Ship production feature in 15 minutes. No boilerplate, no setup hell.
 
 See AgencyOS in action - from installation to building UI from a screenshot:
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;">
-  <iframe
-    src="https://www.youtube.com/embed/F_E0GIi_kVY"
-    title="AgencyOS Quick Start Demo"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
-</div>
+<div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🏯</div><h3 style="margin: 0 0 0.5rem 0;">Demo Video Coming Soon</h3><p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p></div>
 
-*More tutorials: [@goonnguyen](https://www.youtube.com/@goonnguyen) | X: [@goon_nguyen](https://x.com/goon_nguyen)*
+*More tutorials: [
 
 ## Prerequisites
 
 - AgencyOS CLI installed (`mk --version` works)
-- Mekong CLI running
+- AgencyOS CLI running
 - Project initialized with AgencyOS
 
 **Don't have these?** See [Installation Guide](/docs/getting-started/installation)

@@ -34,14 +34,14 @@ Learn how to bootstrap a new project with AgencyOS, from initial requirements to
 
 ### Option A: Using /bootstrap (Recommended)
 
-Start Mekong CLI and use the bootstrap command:
+Start AgencyOS CLI and use the bootstrap command:
 
 ```bash
 # Create project directory
 mkdir task-api
 cd task-api
 
-# Start Mekong CLI
+# Start AgencyOS CLI
 claude
 
 # Bootstrap the project

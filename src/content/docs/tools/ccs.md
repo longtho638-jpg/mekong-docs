@@ -1,5 +1,5 @@
 ---
-title: "CCS - Mekong CLI Switch"
+title: "CCS - AgencyOS CLI Switch"
 description: "Switch between multiple Claude accounts and AI models instantly. Avoid rate limits and optimize costs with intelligent delegation."
 section: tools
 category: tools
@@ -7,7 +7,7 @@ order: 2
 published: true
 ---
 
-# CCS - Mekong CLI Switch
+# CCS - AgencyOS CLI Switch
 
 **One command, zero downtime, multiple accounts**
 

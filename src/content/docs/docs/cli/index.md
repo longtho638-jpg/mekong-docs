@@ -18,7 +18,7 @@ Command-line tool for bootstrapping and updating AgencyOS projects from private 
 
 ## What is AgencyOS CLI?
 
-**AgencyOS CLI** (`ck`) is a command-line tool that downloads and manages AgencyOS starter kits from private GitHub repositories. Built with Bun and TypeScript, it provides fast, secure project setup and updates.
+**AgencyOS CLI** (`mk`) is a command-line tool that downloads and manages AgencyOS starter kits from private GitHub repositories. Built with Bun and TypeScript, it provides fast, secure project setup and updates.
 
 **Important:** You need to purchase a AgencyOS Starter Kit from [AgencyOS.cc](https://agencyos.network) to use this CLI. Without a purchased kit and repository access, the CLI cannot download project templates.
 
@@ -91,7 +91,7 @@ mk update
 ```
 
 **What it does:**
-- Updates the `ck` command-line tool to the latest version
+- Updates the `mk` command-line tool to the latest version
 - Does NOT update AgencyOS Engineer files (use `mk init` for that)
 
 ### mk versions
@@ -243,7 +243,7 @@ mk init --kit engineer
 cd my-project
 
 # Start using AgencyOS
-claude  # Start Mekong CLI
+claude  # Start AgencyOS CLI
 ```
 
 ## Common Workflows

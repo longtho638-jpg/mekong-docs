@@ -43,7 +43,7 @@ cd my-awesome-project
 # Initialize git (optional but recommended)
 git init
 
-# Start Mekong CLI
+# Start AgencyOS CLI
 claude
 ```
 

@@ -1,16 +1,16 @@
 ---
-title: Giới thiệu Mekong CLI
+title: Giới thiệu AgencyOS CLI
 description: Framework phát triển AI-powered cho thị trường Việt Nam
 section: getting-started
 ---
 
-# Mekong CLI
+# AgencyOS CLI
 
 > **AgencyOS for Vietnamese Market** - Framework phát triển AI-powered được tối ưu hoá cho thị trường Việt Nam
 
-## 🌾 Tại sao Mekong CLI?
+## 🌾 Tại sao AgencyOS CLI?
 
-Mekong CLI được xây dựng trên nền tảng AgencyOS Engineer với các tính năng đặc biệt cho:
+AgencyOS CLI được xây dựng trên nền tảng AgencyOS Engineer với các tính năng đặc biệt cho:
 
 - **Thị trường ĐBSCL** - Phân tích nông sản, giá cả, mùa vụ
 - **Social Commerce** - Zalo, Facebook, TikTok Shop
@@ -23,7 +23,7 @@ Mekong CLI được xây dựng trên nền tảng AgencyOS Engineer với các 
 git clone https://github.com/your-org/mekong-cli
 cd mekong-cli
 
-# Mở trong Mekong CLI
+# Mở trong AgencyOS CLI
 claude
 
 # Bắt đầu với commands

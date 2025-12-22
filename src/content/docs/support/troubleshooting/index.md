@@ -69,7 +69,7 @@ cat .claude/commands/core/cook.md
 **Fix**:
 1. Verify `.claude/agents/` exists
 2. Check agent file format
-3. Confirm Mekong CLI is running
+3. Confirm AgencyOS CLI is running
 
 ```bash
 # List agents
@@ -145,7 +145,7 @@ rm -rf ~/.mekong/cache
 # Check CLI
 mk --version
 
-# Check Mekong CLI
+# Check AgencyOS CLI
 claude --version
 
 # Check directory structure

@@ -1,5 +1,5 @@
 ---
-title: "CCS - Mekong CLI Switch"
+title: "CCS - AgencyOS CLI Switch"
 description: "Chuyển đổi giữa nhiều tài khoản Claude và mô hình AI ngay lập tức. Tránh giới hạn tốc độ và tối ưu chi phí với ủy quyền thông minh."
 section: tools
 category: tools
@@ -7,7 +7,7 @@ order: 2
 published: true
 ---
 
-# CCS - Mekong CLI Switch
+# CCS - AgencyOS CLI Switch
 
 **Một lệnh duy nhất, không downtime, nhiều tài khoản**
 

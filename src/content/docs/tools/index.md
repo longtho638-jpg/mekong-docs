@@ -13,7 +13,7 @@ Ecosystem tools that complement AgencyOS and enhance your development workflow.
 
 ## Official Tools
 
-### CCS - Mekong CLI Switch
+### CCS - AgencyOS CLI Switch
 
 **Purpose:** Multi-account management and cost optimization
 

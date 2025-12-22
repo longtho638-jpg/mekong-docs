@@ -43,7 +43,7 @@ cd dự-án-tuyệt-vời
 # Khởi tạo git (tùy chọn nhưng nên có)
 git init
 
-# Khởi động Mekong CLI
+# Khởi động AgencyOS CLI
 claude
 ```
 

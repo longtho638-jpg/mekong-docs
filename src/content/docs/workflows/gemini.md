@@ -50,13 +50,13 @@ Look at this example, Claude Desktop completely failed compared to Gemini and Ch
 
 Claude couldn't correctly identify the actions and devices in the image.
 
-**Now let's compare directly between Mekong CLI and Gemini CLI!**
+**Now let's compare directly between AgencyOS CLI and Gemini CLI!**
 
 I'll ask both to read a blueprint image and describe in detail what they see:
 
 ![Gemini Analyze Screenshot](/assets/03-claude-code-vs-gemini-cli.jpg)
 
-Gemini CLI provides detailed descriptions of the blueprint, while Mekong CLI is quite superficial...
+Gemini CLI provides detailed descriptions of the blueprint, while AgencyOS CLI is quite superficial...
 
 Do you see the difference?
 

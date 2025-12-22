@@ -53,7 +53,7 @@ Recent changes, updates, and release notes for AgencyOS.
 **New Documentation Pages**:
 - Getting Started section with clear learning paths
 - Core Concepts explaining agents/commands/skills
-- Upgrade Guide for existing Mekong CLI users
+- Upgrade Guide for existing AgencyOS CLI users
 - Feature Development workflow guide
 - Bug Fixing systematic approach
 - Documentation maintenance workflow

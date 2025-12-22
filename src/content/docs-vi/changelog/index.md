@@ -53,7 +53,7 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho AgencyO
 **Trang tài liệu mới**:
 - Section Getting Started với lộ trình học rõ ràng
 - Core Concepts giải thích agents/commands/skills
-- Hướng dẫn nâng cấp cho người dùng Mekong CLI hiện tại
+- Hướng dẫn nâng cấp cho người dùng AgencyOS CLI hiện tại
 - Hướng dẫn workflow phát triển tính năng
 - Phương pháp sửa lỗi có hệ thống
 - Workflow duy trì tài liệu

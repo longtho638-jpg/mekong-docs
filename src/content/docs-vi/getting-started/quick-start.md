@@ -19,7 +19,7 @@ Ship tính năng production trong 15 phút. Không cần boilerplate, không c�
 ## Yêu Cầu
 
 - AgencyOS CLI đã cài đặt (`mk --version` hoạt động)
-- Mekong CLI đang chạy
+- AgencyOS CLI đang chạy
 - Dự án đã khởi tạo với AgencyOS
 
 **Chưa có những điều này?** Xem [Hướng Dẫn Cài Đặt](/docs/getting-started/installation)

@@ -14,11 +14,11 @@ published: true
 
 # CLAUDE.md
 
-The `CLAUDE.md` file is the primary configuration file that provides guidance to Mekong CLI when working with your codebase. Understanding this file is crucial for effective use of AgencyOS.
+The `CLAUDE.md` file is the primary configuration file that provides guidance to AgencyOS CLI when working with your codebase. Understanding this file is crucial for effective use of AgencyOS.
 
 ## What is CLAUDE.md?
 
-`CLAUDE.md` serves as the entry point for Mekong CLI's understanding of your project. It contains:
+`CLAUDE.md` serves as the entry point for AgencyOS CLI's understanding of your project. It contains:
 
 - Role and responsibilities definitions
 - Links to detailed workflow documentation
@@ -32,7 +32,7 @@ A typical `CLAUDE.md` file looks like this:
 ```markdown
 # CLAUDE.md
 
-This file provides guidance to Mekong CLI when working with code in this repository.
+This file provides guidance to AgencyOS CLI when working with code in this repository.
 
 ## Role & Responsibilities
 
@@ -136,23 +136,23 @@ docs/
 └── project-roadmap.md
 ```
 
-These files help Mekong CLI:
+These files help AgencyOS CLI:
 - Avoid hallucinations
 - Prevent creating redundant code
 - Understand project-specific patterns
 - Follow established conventions
 
-## How Mekong CLI Uses CLAUDE.md
+## How AgencyOS CLI Uses CLAUDE.md
 
 ### Initial Load
 
-1. Mekong CLI reads `CLAUDE.md` when started
+1. AgencyOS CLI reads `CLAUDE.md` when started
 2. Understands the project's role and structure
 3. Knows where to find detailed instructions
 
 ### During Tasks
 
-When performing specific tasks, Mekong CLI:
+When performing specific tasks, AgencyOS CLI:
 
 1. References linked workflow files
 2. Reads relevant documentation from `docs/`

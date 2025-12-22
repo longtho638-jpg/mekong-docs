@@ -50,13 +50,13 @@ Hãy nhìn vào ví dụ sau, Claude Desktop failed hoàn toàn so với Gemini 
 
 Claude không định nghĩa được đúng hành động và thiết bị trong hình.
 
-**Bây giờ thử so sánh trực tiếp trong Mekong CLI và Gemini CLI luôn nhé!**
+**Bây giờ thử so sánh trực tiếp trong AgencyOS CLI và Gemini CLI luôn nhé!**
 
 Mình sẽ thử yêu cầu cả 2 cùng đọc tấm hình blueprint và mô tả lại chi tiết những gì nó nhìn thấy:
 
 ![Gemini Analyze Screenshot](/assets/03-claude-code-vs-gemini-cli.jpg)
 
-Gemini CLI cho kết quả chi tiết mô tả bản vẽ blueprint, trong khi Mekong CLI thì khá sơ sài…
+Gemini CLI cho kết quả chi tiết mô tả bản vẽ blueprint, trong khi AgencyOS CLI thì khá sơ sài…
 
 Bạn thấy sự khác biệt rồi chứ?
 

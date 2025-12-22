@@ -28,7 +28,7 @@ mk --version
 # Navigate to your project
 cd /path/to/project
 
-# Start Mekong CLI with AgencyOS
+# Start AgencyOS CLI with AgencyOS
 claude
 ```
 
@@ -211,7 +211,7 @@ npm i -g mekong-cli@latest
 # 2. Go to project
 cd /path/to/existing/project
 
-# 3. Start Mekong CLI
+# 3. Start AgencyOS CLI
 claude
 
 # 4. Initialize
@@ -233,7 +233,7 @@ mk init --kit engineer --dir /path/to/project
 # 3. Navigate to project
 cd /path/to/project
 
-# 4. Start Mekong CLI
+# 4. Start AgencyOS CLI
 claude
 
 # 5. Bootstrap idea
@@ -423,7 +423,7 @@ More detailed descriptions = better results
 # Check AgencyOS version
 mk --version
 
-# Restart Mekong CLI
+# Restart AgencyOS CLI
 # Exit and run: claude
 ```
 

@@ -86,7 +86,7 @@ Workspace Statistics:
 
 ### 2. Sử dụng công cụ GKG MCP với AgencyOS
 
-Sau khi lập chỉ mục, sử dụng công cụ GKG MCP trong các phiên Mekong CLI của bạn:
+Sau khi lập chỉ mục, sử dụng công cụ GKG MCP trong các phiên AgencyOS CLI của bạn:
 
 #### Liệt kê tất cả Projects
 
@@ -465,7 +465,7 @@ gkg server start
 # Khi triển khai từ kế hoạch, sử dụng GKG cho ngữ cảnh
 /cook Add user authentication system
 
-# Mekong CLI sử dụng GKG để:
+# AgencyOS CLI sử dụng GKG để:
 # 1. Tìm kiếm các mẫu xác thực hiện có
 # 2. Hiểu kiến trúc hiện tại
 # 3. Tìm các điểm tích hợp
@@ -478,7 +478,7 @@ gkg server start
 # Trước khi tái cấu trúc lớn
 /plan Refactor authentication module
 
-# Mekong CLI sử dụng GKG để:
+# AgencyOS CLI sử dụng GKG để:
 # 1. Lập bản đồ tất cả code liên quan xác thực
 # 2. Tìm tất cả cách sử dụng
 # 3. Xác định phụ thuộc

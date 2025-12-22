@@ -14,7 +14,7 @@ published: true
 
 # Skills Overview
 
-Skills are specialized capabilities that extend Mekong CLI's functionality. AgencyOS includes 46+ pre-built skills covering everything from authentication to AI integration.
+Skills are specialized capabilities that extend AgencyOS CLI's functionality. AgencyOS includes 46+ pre-built skills covering everything from authentication to AI integration.
 
 ## What Are Skills?
 
@@ -408,7 +408,7 @@ Find and retrieve documentation from various sources.
 **Use when:** Need to look up API docs, framework guides
 
 #### claude-code
-Meta-skill for understanding Mekong CLI itself.
+Meta-skill for understanding AgencyOS CLI itself.
 
 ---
 
@@ -429,7 +429,7 @@ Shopify app development and API integration.
 
 ## How to Use Skills
 
-Skills are invoked by mentioning them in conversation with Mekong CLI.
+Skills are invoked by mentioning them in conversation with AgencyOS CLI.
 
 ### Basic Invocation
 

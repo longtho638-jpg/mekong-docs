@@ -28,7 +28,7 @@ mk --version
 # Di chuyển đến dự án
 cd /đường/dẫn/đến/dự/án
 
-# Khởi động Mekong CLI với AgencyOS
+# Khởi động AgencyOS CLI với AgencyOS
 claude
 ```
 
@@ -211,7 +211,7 @@ npm i -g mekong-cli@latest
 # 2. Đi đến dự án
 cd /đường/dẫn/đến/dự/án/hiện/tại
 
-# 3. Khởi động Mekong CLI
+# 3. Khởi động AgencyOS CLI
 claude
 
 # 4. Khởi tạo
@@ -233,7 +233,7 @@ mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 # 3. Di chuyển đến dự án
 cd /đường/dẫn/đến/dự/án
 
-# 4. Khởi động Mekong CLI
+# 4. Khởi động AgencyOS CLI
 claude
 
 # 5. Bootstrap ý tưởng
@@ -423,7 +423,7 @@ Mô tả chi tiết hơn = kết quả tốt hơn
 # Kiểm tra phiên bản AgencyOS
 mk --version
 
-# Khởi động lại Mekong CLI
+# Khởi động lại AgencyOS CLI
 # Thoát và chạy: claude
 ```
 

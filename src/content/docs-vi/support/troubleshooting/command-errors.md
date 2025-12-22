@@ -46,10 +46,10 @@ mk init --kit engineer
 
 **Detailed Solution**:
 
-**Step 1: Verify Mekong CLI is running**
+**Step 1: Verify AgencyOS CLI is running**
 
 ```bash
-# Check if Mekong CLI CLI is available
+# Check if AgencyOS CLI CLI is available
 claude --version
 
 # If not found, install from claude.ai/code
@@ -423,7 +423,7 @@ cat .claude/agents/planner.md
 # Test command parsing
 head -n 20 .claude/commands/core/cook.md
 
-# Test Mekong CLI
+# Test AgencyOS CLI
 claude --version
 ```
 
@@ -436,7 +436,7 @@ mk diagnose --verbose
 # Manual checks
 echo "Node: $(node --version)"
 echo "npm: $(npm --version)"
-echo "Mekong CLI: $(claude --version)"
+echo "AgencyOS CLI: $(claude --version)"
 echo "AgencyOS CLI: $(ck --version)"
 echo "Working directory: $(pwd)"
 echo ".claude exists: $([ -d .claude ] && echo yes || echo no)"
@@ -474,10 +474,10 @@ cp .claude.backup/commands/my-custom.md .claude/commands/
 # If fails: Check specific error message above
 ```
 
-### Reload Mekong CLI
+### Reload AgencyOS CLI
 
 ```bash
-# Exit Mekong CLI (Ctrl+C or type 'exit')
+# Exit AgencyOS CLI (Ctrl+C or type 'exit')
 exit
 
 # Restart

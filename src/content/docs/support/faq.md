@@ -13,17 +13,17 @@ Common questions about AgencyOS, from getting started to advanced usage.
 ## Getting Started
 
 ### Q: What is AgencyOS?
-**A:** AgencyOS is a production-grade framework that extends Mekong CLI with specialized AI agents, slash commands, and reusable skills. It transforms Mekong CLI from a general-purpose assistant into a focused engineering toolkit.
+**A:** AgencyOS is a production-grade framework that extends AgencyOS CLI with specialized AI agents, slash commands, and reusable skills. It transforms AgencyOS CLI from a general-purpose assistant into a focused engineering toolkit.
 
-### Q: How is AgencyOS different from Mekong CLI?
-**A:** Mekong CLI provides the base AI assistant, while AgencyOS adds:
+### Q: How is AgencyOS different from AgencyOS CLI?
+**A:** AgencyOS CLI provides the base AI assistant, while AgencyOS adds:
 - **14 specialized agents** (planner, tester, debugger, etc.)
 - **30+ slash commands** for common development tasks
 - **45 built-in skills** for specific technologies
 - **Multi-agent workflows** that collaborate on complex tasks
 
-### Q: Do I need to pay for Mekong CLI separately?
-**A:** Yes, AgencyOS requires an active Mekong CLI subscription. AgencyOS is a one-time purchase ($99) that enhances your existing Mekong CLI subscription.
+### Q: Do I need to pay for AgencyOS CLI separately?
+**A:** Yes, AgencyOS requires an active AgencyOS CLI subscription. AgencyOS is a one-time purchase ($99) that enhances your existing AgencyOS CLI subscription.
 
 ### Q: Can I try AgencyOS before buying?
 **A:** Yes! We offer a 30-day money-back guarantee. Try AgencyOS risk-free for 30 days, and if you're not satisfied, get a full refund.
@@ -42,7 +42,7 @@ mekong init
 
 ### Q: Does AgencyOS replace my existing setup?
 **A:** No. AgencyOS enhances your existing workflow:
-- Keeps your current Mekong CLI setup
+- Keeps your current AgencyOS CLI setup
 - Extends rather than replaces functionality
 - Works with your existing projects
 - Preserves your custom commands
@@ -50,7 +50,7 @@ mekong init
 ### Q: What are the system requirements?
 **A:**
 - Node.js 16+
-- Mekong CLI subscription
+- AgencyOS CLI subscription
 - Git (required for version control)
 - Any modern OS (Windows, macOS, Linux)
 
@@ -163,7 +163,7 @@ mekong doctor  # Check system health
 - Consider splitting large tasks into smaller ones
 
 ### Q: I keep hitting Claude's rate limits. What can I do?
-**A:** Install [CCS (Mekong CLI Switch)](/docs/tools/ccs) to:
+**A:** Install [CCS (AgencyOS CLI Switch)](/docs/tools/ccs) to:
 - **Switch accounts instantly:** Use multiple Claude accounts without downtime
 - **Optimize costs:** Delegate simple tasks to GLM/Kimi (81% cheaper)
 - **Parallel workflows:** Run multiple sessions simultaneously
@@ -189,7 +189,7 @@ mekong doctor  # Check system health
 ### Q: Are there any ongoing costs?
 **A:** No ongoing costs for AgencyOS itself. You only need:
 - AgencyOS one-time purchase ($99)
-- Mekong CLI subscription (separate)
+- AgencyOS CLI subscription (separate)
 
 ### Q: What's included in the price?
 **A:** Everything:

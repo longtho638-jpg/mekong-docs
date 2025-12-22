@@ -1,19 +1,19 @@
 ---
-title: "Upgrade Guide for Mekong CLI Users"
-description: "Migrate from Mekong CLI to AgencyOS seamlessly"
+title: "Upgrade Guide for AgencyOS CLI Users"
+description: "Migrate from AgencyOS CLI to AgencyOS seamlessly"
 section: getting-started
 order: 3
 published: true
 ---
 
-# Upgrading from Mekong CLI to AgencyOS
+# Upgrading from AgencyOS CLI to AgencyOS
 
-Already using Mekong CLI? AgencyOS enhances your workflow without breaking existing habits.
+Already using AgencyOS CLI? AgencyOS enhances your workflow without breaking existing habits.
 
 ## What Changes?
 
 **Stays the Same**:
-- Mekong CLI CLI and interface
+- AgencyOS CLI CLI and interface
 - Existing project structure
 - .claude/ directory (extended, not replaced)
 - Chat-based interaction
@@ -27,7 +27,7 @@ Already using Mekong CLI? AgencyOS enhances your workflow without breaking exist
 ## Installation (Additive)
 
 ```bash
-# Install AgencyOS CLI (doesn't replace Mekong CLI)
+# Install AgencyOS CLI (doesn't replace AgencyOS CLI)
 npm install -g mekong-cli
 
 # Initialize in existing project
@@ -86,12 +86,12 @@ Combine commands for complete workflows:
 ## Compatibility
 
 **Supported**:
-- Mekong CLI v1.0+
+- AgencyOS CLI v1.0+
 - Existing .claude/commands/ (fully compatible)
 - Custom prompts (still work as-is)
 
 **Not Supported**:
-- Claude Desktop app (Mekong CLI CLI only)
+- Claude Desktop app (AgencyOS CLI CLI only)
 - Projects without Git (AgencyOS requires version control)
 
 ## FAQs

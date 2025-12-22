@@ -75,7 +75,7 @@ Get help with AgencyOS through our community resources, documentation, and direc
 - [Workflow Examples](/docs/workflows) - Real-world workflows
 - [Use Cases](/docs/workflows) - Practical applications
 - [Quick Start Guide](/docs/getting-started/quick-start) - First project in 15 minutes
-- [Migration Guide](/docs/getting-started/upgrade-guide) - From Mekong CLI to AgencyOS
+- [Migration Guide](/docs/getting-started/upgrade-guide) - From AgencyOS CLI to AgencyOS
 
 ### Code Examples
 - [GitHub Repository](https://github.com/mekong/examples) - Example projects

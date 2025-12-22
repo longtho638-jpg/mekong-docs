@@ -26,19 +26,19 @@ npm i -g mekong-cli@latest
 cd /path/to/your/existing/project
 ```
 
-### 3. Start Mekong CLI
+### 3. Start AgencyOS CLI
 
 ```bash
 claude
 ```
 
-This will start Mekong CLI (CC) with AgencyOS agents in your project directory.
+This will start AgencyOS CLI (CC) with AgencyOS agents in your project directory.
 
 ## Initial Setup
 
 ### Analyze and Create Specs
 
-Let Mekong CLI scan and analyze your codebase to create initial specifications:
+Let AgencyOS CLI scan and analyze your codebase to create initial specifications:
 
 ```bash
 /docs:init
@@ -287,7 +287,7 @@ npm i -g mekong-cli@latest
 # 3. Navigate to project
 cd project-name
 
-# 4. Start Mekong CLI
+# 4. Start AgencyOS CLI
 claude
 
 # 5. Specs already exist - start working!
@@ -307,7 +307,7 @@ claude
 # Verify AgencyOS installation
 mk --version
 
-# Restart Mekong CLI
+# Restart AgencyOS CLI
 # Exit CC and run: claude
 ```
 
