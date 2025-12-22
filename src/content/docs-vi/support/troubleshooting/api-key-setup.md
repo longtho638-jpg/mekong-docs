@@ -14,7 +14,7 @@ published: true
 
 # API Key Setup
 
-Fix API key errors and configure credentials for Mekong Marketing's AI-powered features.
+Fix API key errors and configure credentials for AgencyOS's AI-powered features.
 
 ## Quick Fix: Missing API Key
 
@@ -52,7 +52,7 @@ Go to [aistudio.google.com](https://aistudio.google.com)
 2. Select "Create API key in new project" (or use existing project)
 3. Copy the generated key (starts with `AIza...`)
 
-**Step 3: Configure Mekong Marketing**
+**Step 3: Configure AgencyOS**
 
 **Method 1: .env file (recommended)**
 
@@ -184,7 +184,7 @@ Go to [searchapi.io](https://www.searchapi.io)
 2. Verify email
 3. Copy API key from dashboard
 
-**Step 3: Configure Mekong Marketing**
+**Step 3: Configure AgencyOS**
 
 ```bash
 # Add to .env
@@ -262,7 +262,7 @@ Go to [openrouter.ai](https://openrouter.ai)
 2. Add credits (pay-as-you-go)
 3. Generate API key
 
-**Step 3: Configure Mekong Marketing**
+**Step 3: Configure AgencyOS**
 
 ```bash
 # Add to .env
@@ -443,7 +443,7 @@ curl -s "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flas
 # Test SearchAPI
 curl -s "https://www.searchapi.io/api/v1/search?q=test&api_key=$SEARCH_API_KEY" | grep -q "search_results" && echo "✅ SearchAPI works" || echo "❌ SearchAPI failed"
 
-# Test with Mekong Marketing
+# Test with AgencyOS
 /plan implement hello world
 # Should complete without API key errors
 ```
@@ -542,7 +542,7 @@ nano .env
 ### Get Help
 
 1. **GitHub Issues**: [Report API key problems](https://github.com/mekong/mekong-engineer/issues)
-2. **Discord**: [API configuration help](https://mekongmarketing.com/discord)
+2. **Discord**: [API configuration help](https://agencyos.network/discord)
 3. **Include**: API debug report (keys masked), error messages, provider (Gemini/SearchAPI/OpenRouter)
 
 ---

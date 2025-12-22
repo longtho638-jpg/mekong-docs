@@ -1,6 +1,6 @@
 ---
 title: "Documentation Workflow"
-description: "Keep documentation in sync with code changes using Mekong Marketing"
+description: "Keep documentation in sync with code changes using AgencyOS"
 section: workflows
 order: 3
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Documentation Workflow
 
-Keep documentation synchronized with code changes using Mekong Marketing's automated documentation management.
+Keep documentation synchronized with code changes using AgencyOS's automated documentation management.
 
 ## Overview
 

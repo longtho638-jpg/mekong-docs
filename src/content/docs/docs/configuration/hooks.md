@@ -9,7 +9,7 @@ published: true
 
 # Hooks
 
-Hooks allow you to extend Mekong CLI with custom scripts that run at specific points in the workflow. Mekong Marketing includes pre-built hooks for notifications (Discord, Telegram) and development rule enforcement.
+Hooks allow you to extend Mekong CLI with custom scripts that run at specific points in the workflow. AgencyOS includes pre-built hooks for notifications (Discord, Telegram) and development rule enforcement.
 
 ## Overview
 
@@ -374,7 +374,7 @@ Hooks can access these environment variables:
 
 ### Loading .env Files
 
-Mekong Marketing hooks load environment variables in this priority:
+AgencyOS hooks load environment variables in this priority:
 
 1. System environment variables
 2. `.claude/.env` (project-level)

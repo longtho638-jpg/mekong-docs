@@ -14,7 +14,7 @@ published: true
 
 # /docs:init
 
-Initialize comprehensive project documentation by analyzing the entire codebase. This is the essential first command when integrating Mekong Marketing into an existing project.
+Initialize comprehensive project documentation by analyzing the entire codebase. This is the essential first command when integrating AgencyOS into an existing project.
 
 ## Syntax
 
@@ -76,13 +76,13 @@ cd existing-project
 # Now you understand the entire project!
 ```
 
-**Integrating Mekong Marketing**
+**Integrating AgencyOS**
 ```bash
-# Adding Mekong Marketing to existing project
+# Adding AgencyOS to existing project
 mk init --kit engineer
 /docs:init
 
-# Mekong Marketing now understands your codebase
+# AgencyOS now understands your codebase
 ```
 
 **Project Audit**
@@ -407,7 +407,7 @@ Documentation created with:
 
 ### Prevents Hallucinations
 
-With documentation, Mekong Marketing:
+With documentation, AgencyOS:
 - Understands existing patterns
 - Follows project conventions
 - Avoids creating duplicate code
@@ -427,7 +427,7 @@ Claude: Extends existing auth system properly
 
 ### Faster Development
 
-Documentation helps Mekong Marketing:
+Documentation helps AgencyOS:
 - Generate code matching your style
 - Reuse existing utilities
 - Follow established patterns
@@ -435,7 +435,7 @@ Documentation helps Mekong Marketing:
 
 ### Better Code Quality
 
-Mekong Marketing produces code that:
+AgencyOS produces code that:
 - Matches your standards
 - Fits your architecture
 - Uses your conventions
@@ -486,7 +486,7 @@ vendor/
 
 ### Run Immediately
 
-When joining a project or integrating Mekong Marketing:
+When joining a project or integrating AgencyOS:
 
 ```bash
 # First thing to do
@@ -581,4 +581,4 @@ After running `/docs:init`:
 
 ---
 
-**Key Takeaway**: `/docs:init` is essential when starting with Mekong Marketing on existing projects. It creates comprehensive documentation that helps Mekong Marketing understand your codebase and prevents hallucinations.
+**Key Takeaway**: `/docs:init` is essential when starting with AgencyOS on existing projects. It creates comprehensive documentation that helps AgencyOS understand your codebase and prevents hallucinations.

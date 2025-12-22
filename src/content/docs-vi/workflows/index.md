@@ -14,7 +14,7 @@ published: true
 
 # Use Cases
 
-Learn how to use Mekong Marketing for real-world development scenarios. This section contains practical examples and workflows for common tasks.
+Learn how to use AgencyOS for real-world development scenarios. This section contains practical examples and workflows for common tasks.
 
 ## Coming Soon
 
@@ -37,7 +37,7 @@ Step-by-step guide for initializing a new project from scratch:
 
 ### Maintaining an Old Project
 
-How to integrate Mekong Marketing into existing codebases:
+How to integrate AgencyOS into existing codebases:
 
 - Initial documentation setup with `/docs:init`
 - Understanding existing architecture
@@ -148,7 +148,7 @@ Systematic approach to fixing production bugs:
 
 ### Team Collaboration
 
-Working with Mekong Marketing in a team environment:
+Working with AgencyOS in a team environment:
 
 - Sharing workflows
 - Custom commands for team
@@ -187,14 +187,14 @@ Want to contribute use case examples? We're looking for:
 - Best practices learned
 
 **Contact us:**
-- [Discord Community](https://mekongmarketing.com/discord)
+- [Discord Community](https://agencyos.network/discord)
 - [GitHub Discussions](https://github.com/mekong/discussions)
 
 ## Request Use Cases
 
 Need a specific use case documented?
 
-1. Join our [Discord](https://mekongmarketing.com/discord)
+1. Join our [Discord](https://agencyos.network/discord)
 2. Share your scenario
 3. We'll prioritize based on community interest
 

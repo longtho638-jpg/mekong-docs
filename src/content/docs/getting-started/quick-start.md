@@ -18,12 +18,12 @@ Ship production feature in 15 minutes. No boilerplate, no setup hell.
 
 ## Video Demo
 
-See Mekong Marketing in action - from installation to building UI from a screenshot:
+See AgencyOS in action - from installation to building UI from a screenshot:
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;">
   <iframe
     src="https://www.youtube.com/embed/F_E0GIi_kVY"
-    title="Mekong Marketing Quick Start Demo"
+    title="AgencyOS Quick Start Demo"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -36,9 +36,9 @@ See Mekong Marketing in action - from installation to building UI from a screens
 
 ## Prerequisites
 
-- Mekong Marketing CLI installed (`mk --version` works)
+- AgencyOS CLI installed (`mk --version` works)
 - Mekong CLI running
-- Project initialized with Mekong Marketing
+- Project initialized with AgencyOS
 
 **Don't have these?** See [Installation Guide](/docs/getting-started/installation)
 
@@ -85,7 +85,7 @@ Summary:
 • Files to create: 8
 • Files to modify: 4
 • Tests: 12 test cases
-• Estimated: 2 hours manually, 5 minutes with Mekong Marketing
+• Estimated: 2 hours manually, 5 minutes with AgencyOS
 
 Next: /code plans/251030-auth-implementation.md
 ```
@@ -205,7 +205,7 @@ Done!
 7. Debug issues (1h)
 8. Documentation (30min)
 
-**Mekong Marketing approach** (6 minutes):
+**AgencyOS approach** (6 minutes):
 1. Plan: AI researches, analyzes, designs (30s)
 2. Implement: AI codes, tests, documents (4m)
 3. Review: AI validates security, performance (30s)
@@ -285,7 +285,7 @@ Each takes 5-20 minutes instead of days.
 ## Common Questions
 
 **Q: Does it work with my tech stack?**
-A: Yes. Next.js, Django, Laravel, Go, Rust, Flutter - any stack. Mekong Marketing adapts to your patterns.
+A: Yes. Next.js, Django, Laravel, Go, Rust, Flutter - any stack. AgencyOS adapts to your patterns.
 
 **Q: What if AI makes mistakes?**
 A: `code-reviewer` catches issues before commit. Plus, you review PRs as normal. AI augments, doesn't replace judgment.
@@ -299,7 +299,7 @@ A: Yes. Edit `.claude/agents/*.md` to tune behavior. See [Custom Agents](/docs/h
 ## Explore More
 
 **Core Concepts**:
-- [Architecture](/docs/docs/agents) - How Mekong Marketing works
+- [Architecture](/docs/docs/agents) - How AgencyOS works
 - [Agents Overview](/docs/agents/) - Meet your AI team
 - [Commands Guide](/docs/commands/) - All 30+ commands
 
@@ -315,6 +315,6 @@ A: Yes. Edit `.claude/agents/*.md` to tune behavior. See [Custom Agents](/docs/h
 
 ---
 
-**You just shipped production auth in 6 minutes.** Boilerplates can't do that. AI chat assistants can't do that. Only Mekong Marketing.
+**You just shipped production auth in 6 minutes.** Boilerplates can't do that. AI chat assistants can't do that. Only AgencyOS.
 
 **Ready to ship?** Your AI dev team is waiting.

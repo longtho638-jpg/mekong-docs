@@ -1,6 +1,6 @@
 ---
 title: Skills Overview
-description: Mekong Marketing's 42 specialized skills for development, design, and tooling
+description: AgencyOS's 42 specialized skills for development, design, and tooling
 section: docs
 category: skills
 order: 1
@@ -167,7 +167,7 @@ skill-creator will:
 
 **Need a skill that doesn't exist?**
 - Use skill-creator to build it
-- Request on [Discord](https://mekongmarketing.com/discord)
+- Request on [Discord](https://agencyos.network/discord)
 
 ## Key Takeaway
 

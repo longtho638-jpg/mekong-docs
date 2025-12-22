@@ -18,9 +18,9 @@ Ship tính năng production trong 15 phút. Không cần boilerplate, không c�
 
 ## Yêu Cầu
 
-- Mekong Marketing CLI đã cài đặt (`mk --version` hoạt động)
+- AgencyOS CLI đã cài đặt (`mk --version` hoạt động)
 - Mekong CLI đang chạy
-- Dự án đã khởi tạo với Mekong Marketing
+- Dự án đã khởi tạo với AgencyOS
 
 **Chưa có những điều này?** Xem [Hướng Dẫn Cài Đặt](/docs/getting-started/installation)
 
@@ -67,7 +67,7 @@ Tóm tắt:
 • Files cần tạo: 8
 • Files cần sửa: 4
 • Tests: 12 test cases
-• Ước tính: 2 giờ thủ công, 5 phút với Mekong Marketing
+• Ước tính: 2 giờ thủ công, 5 phút với AgencyOS
 
 Tiếp theo: /code plans/251030-auth-implementation.md
 ```
@@ -187,7 +187,7 @@ Hoàn tất!
 7. Debug issues (1h)
 8. Tài liệu (30 phút)
 
-**Cách tiếp cận Mekong Marketing** (6 phút):
+**Cách tiếp cận AgencyOS** (6 phút):
 1. Lập kế hoạch: AI nghiên cứu, phân tích, thiết kế (30s)
 2. Triển khai: AI code, test, tài liệu (4m)
 3. Review: AI xác thực bảo mật, hiệu suất (30s)
@@ -268,7 +268,7 @@ Mỗi cái mất 5-20 phút thay vì nhiều ngày.
 ## Câu Hỏi Thường Gặp
 
 **Q: Có hoạt động với tech stack của tôi không?**
-A: Có. Next.js, Django, Laravel, Go, Rust, Flutter - bất kỳ stack nào. Mekong Marketing thích ứng với các pattern của bạn.
+A: Có. Next.js, Django, Laravel, Go, Rust, Flutter - bất kỳ stack nào. AgencyOS thích ứng với các pattern của bạn.
 
 **Q: Nếu AI mắc lỗi thì sao?**
 A: `code-reviewer` phát hiện vấn đề trước khi commit. Thêm vào đó, bạn review PRs như bình thường. AI tăng cường, không thay thế phán đoán.
@@ -282,7 +282,7 @@ A: Có. Sửa `.claude/agents/*.md` để điều chỉnh hành vi. Xem [Custom 
 ## Khám Phá Thêm
 
 **Khái Niệm Cốt Lõi**:
-- [Kiến Trúc](/docs/core-concepts/architecture) - Cách Mekong Marketing hoạt động
+- [Kiến Trúc](/docs/core-concepts/architecture) - Cách AgencyOS hoạt động
 - [Tổng Quan Agents](/docs/agents/) - Gặp gỡ đội ngũ AI
 - [Hướng Dẫn Commands](/docs/commands/) - Tất cả 30+ lệnh
 
@@ -298,6 +298,6 @@ A: Có. Sửa `.claude/agents/*.md` để điều chỉnh hành vi. Xem [Custom 
 
 ---
 
-**Bạn vừa ship production auth trong 6 phút.** Boilerplates không thể làm được. AI chat assistants không thể làm được. Chỉ Mekong Marketing.
+**Bạn vừa ship production auth trong 6 phút.** Boilerplates không thể làm được. AI chat assistants không thể làm được. Chỉ AgencyOS.
 
 **Sẵn sàng ship?** Đội ngũ AI dev của bạn đang chờ.

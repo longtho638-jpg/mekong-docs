@@ -14,7 +14,7 @@ published: true
 
 # Installation
 
-This guide will help you install Mekong Marketing and set up your development environment. You can choose between manual setup or using the Mekong Marketing CLI.
+This guide will help you install AgencyOS and set up your development environment. You can choose between manual setup or using the AgencyOS CLI.
 
 ## Video Guide
 
@@ -23,7 +23,7 @@ Prefer video? Watch the complete installation walkthrough:
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;">
   <iframe
     src="https://www.youtube.com/embed/F_E0GIi_kVY"
-    title="Mekong Marketing Installation Walkthrough"
+    title="AgencyOS Installation Walkthrough"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -36,7 +36,7 @@ Prefer video? Watch the complete installation walkthrough:
 
 ## Prerequisites
 
-Before installing Mekong Marketing, ensure you have:
+Before installing AgencyOS, ensure you have:
 
 - **Node.js** v18 or higher
 - **npm** v10 or higher (or bun, pnpm, yarn)
@@ -48,7 +48,7 @@ Before installing Mekong Marketing, ensure you have:
 
 This method gives you full control over the installation process.
 
-### Step 1: Copy Mekong Marketing Files
+### Step 1: Copy AgencyOS Files
 
 Copy all directories and files from the `mekong-engineer` repo to your project:
 
@@ -63,7 +63,7 @@ CLAUDE.md
 ### Step 2: Configure Gemini API Key (Optional)
 
 **WHY?**
-Mekong Marketing utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
+AgencyOS utilized [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
 
 **Notes:** Gemini API have a pretty generous free requests limit at the moment.
 
@@ -100,13 +100,13 @@ This generates markdown files in the `docs` directory:
 
 Now your project is ready for development!
 
-## Method 2: Mekong Marketing CLI
+## Method 2: AgencyOS CLI
 
-The CLI provides an automated way to set up Mekong Marketing projects.
+The CLI provides an automated way to set up AgencyOS projects.
 
 ### Installation
 
-Install Mekong Marketing CLI globally:
+Install AgencyOS CLI globally:
 
 ```bash
 # npm
@@ -119,7 +119,7 @@ bun add -g mekong-cli
 mk --version
 ```
 
-### Initialize or Update Mekong Marketing Engineer
+### Initialize or Update AgencyOS Engineer
 
 **Note:** This command should be run from the root directory of your project.
 
@@ -149,11 +149,11 @@ To update the `ck` command-line tool to the latest version:
 mk update
 ```
 
-**Note:** This updates the CLI tool only, not Mekong Marketing Engineer files. Use `mk init` to update Mekong Marketing Engineer.
+**Note:** This updates the CLI tool only, not AgencyOS Engineer files. Use `mk init` to update AgencyOS Engineer.
 
 **Global vs Local Configuration:**
 
-By default, Mekong Marketing uses local configuration (`~/.mekong`).
+By default, AgencyOS uses local configuration (`~/.mekong`).
 
 For platform-specific **user-scoped settings**, use the `--global` flag:
 - **macOS/Linux**: `~/.claude`
@@ -196,12 +196,12 @@ claude --version
 ls -la .claude/
 ```
 
-## Update Mekong Marketing
+## Update AgencyOS
 
-Keep Mekong Marketing Engineer up to date:
+Keep AgencyOS Engineer up to date:
 
 ```bash
-# Update Mekong Marketing Engineer to latest version
+# Update AgencyOS Engineer to latest version
 mk init
 
 # Update to specific version
@@ -261,7 +261,7 @@ If CLI can't authenticate:
 
 ### CCS - Mekong CLI Switch (Recommended for Heavy Users)
 
-If you're a heavy Mekong Marketing user or frequently hit Claude's rate limits, consider installing **CCS**:
+If you're a heavy AgencyOS user or frequently hit Claude's rate limits, consider installing **CCS**:
 
 ```bash
 npm install -g @kaitranntt/ccs
@@ -277,7 +277,7 @@ npm install -g @kaitranntt/ccs
 
 ## Next Steps
 
-Now that Mekong Marketing is installed, proceed to:
+Now that AgencyOS is installed, proceed to:
 
 - [Quick Start Guide](/docs/getting-started/quick-start) - Build your first project
 - [CLAUDE.md Explained](/docs/docs/configuration/claude-md) - Understand the configuration file

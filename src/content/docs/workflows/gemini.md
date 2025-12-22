@@ -28,8 +28,8 @@ Anthropic has focused on training Claude models for coding capabilities, so they
 
 1. Get your Gemini key at [Google AI Studio](https://aistudio.google.com/api-keys)
 2. Find the `.env.example` file: 
-- If you installed Mekong Marketing at project scope: copy `.claude/.env.example` to `.claude/.env`
-- If you installed Mekong Marketing at global scope: copy `~/.claude/.env.example` to `~/.claude/.env` (for Windows users: `%USERPROFILE%\.claude\.env`)
+- If you installed AgencyOS at project scope: copy `.claude/.env.example` to `.claude/.env`
+- If you installed AgencyOS at global scope: copy `~/.claude/.env.example` to `~/.claude/.env` (for Windows users: `%USERPROFILE%\.claude\.env`)
 3. Open the `.env` file and fill in the value for `GEMINI_API_KEY`
 
 That's it!
@@ -76,7 +76,7 @@ So I decided to create this MCP: [**Human MCP**](https://github.com/mrgoonie/hum
 
 The purpose is to use Gemini API to analyze images, documents (PDF, docx, xlsx,...) and videos.
 
-In the early days of Mekong Marketing, I had "Human MCP" pre-installed by default.
+In the early days of AgencyOS, I had "Human MCP" pre-installed by default.
 
 And you need `GEMINI_API_KEY` in the "Human MCP" env for it to work.
 

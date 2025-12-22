@@ -751,7 +751,7 @@ More flexible implementation:
 
 **Solution:**
 ```typescript
-// Mekong Marketing suggests similar fonts
+// AgencyOS suggests similar fonts
 // Original: "Custom Font Pro"
 // Suggested: "Inter" (similar characteristics)
 

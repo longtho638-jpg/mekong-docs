@@ -14,7 +14,7 @@ published: true
 
 # Installation Issues
 
-Mekong Marketing installation problems? Get unblocked in minutes with platform-specific fixes.
+AgencyOS installation problems? Get unblocked in minutes with platform-specific fixes.
 
 ## Quick Fix: Command Not Found
 
@@ -87,7 +87,7 @@ mekong-cli/1.0.0
 
 #### Node.js Version Too Old
 
-**Symptom**: "Error: Mekong Marketing requires Node.js 18 or higher"
+**Symptom**: "Error: AgencyOS requires Node.js 18 or higher"
 
 **Solution**:
 
@@ -101,7 +101,7 @@ node --version
 nvm install 20
 nvm use 20
 
-# Reinstall Mekong Marketing
+# Reinstall AgencyOS
 npm install -g mekong-cli
 ```
 
@@ -126,7 +126,7 @@ npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
-# Reinstall Mekong Marketing
+# Reinstall AgencyOS
 npm install -g mekong-cli
 ```
 
@@ -149,7 +149,7 @@ source ~/.zshrc
 nvm install 20
 nvm use 20
 
-# Install Mekong Marketing (no sudo needed)
+# Install AgencyOS (no sudo needed)
 npm install -g mekong-cli
 ```
 
@@ -190,7 +190,7 @@ arch
 nvm install 20
 nvm alias default 20
 
-# Reinstall Mekong Marketing
+# Reinstall AgencyOS
 npm install -g mekong-cli
 ```
 
@@ -236,7 +236,7 @@ sudo dnf install -y gcc-c++ make python3
 # Arch
 sudo pacman -S base-devel python
 
-# Reinstall Mekong Marketing
+# Reinstall AgencyOS
 npm install -g mekong-cli
 ```
 
@@ -389,7 +389,7 @@ mkdir test-project
 cd test-project
 mk init --kit engineer
 
-# Expected: Downloads Mekong Marketing Engineer successfully
+# Expected: Downloads AgencyOS Engineer successfully
 ```
 
 ---
@@ -401,7 +401,7 @@ mk init --kit engineer
 - Keep Node.js updated (18+)
 - Use npm global directory in home folder
 - Check PATH after installation
-- Update Mekong Marketing regularly: `mk init`
+- Update AgencyOS regularly: `mk init`
 
 ❌ **Don't**:
 - Use sudo with npm (except as last resort)
@@ -443,7 +443,7 @@ which ck
 
 1. **Check logs**: Look for errors during `npm install -g mekong-cli`
 2. **GitHub Issues**: [Report installation problems](https://github.com/mekong/mekong-engineer/issues)
-3. **Discord**: [Join Mekong Marketing community](https://mekongmarketing.com/discord)
+3. **Discord**: [Join AgencyOS community](https://agencyos.network/discord)
 
 Include in your report:
 - Operating system and version

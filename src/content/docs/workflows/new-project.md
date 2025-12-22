@@ -10,11 +10,11 @@ lastUpdated: 2025-11-07
 
 # Greenfield Projects
 
-Create new projects from scratch with Mekong Marketing's AI-powered development workflow. Transform ideas into production-ready applications quickly with intelligent agents.
+Create new projects from scratch with AgencyOS's AI-powered development workflow. Transform ideas into production-ready applications quickly with intelligent agents.
 
 ## Installation
 
-### 1. Install Mekong Marketing CLI
+### 1. Install AgencyOS CLI
 
 ```bash
 npm i -g mekong-cli@latest
@@ -25,12 +25,12 @@ npm i -g mekong-cli@latest
 ### Method 1: Bootstrap New Project
 
 ```bash
-# Initialize project with Mekong Marketing Engineer kit
+# Initialize project with AgencyOS Engineer kit
 mk init --kit engineer --dir /path/to/project
 ```
 
 **Options:**
-- `--kit engineer`: Installs Mekong Marketing Engineer configuration
+- `--kit engineer`: Installs AgencyOS Engineer configuration
 - `--dir`: Target directory for the project
 
 ### Method 2: Manual Setup
@@ -127,11 +127,11 @@ Runs full autonomous mode without plan review. CC will:
 
 ### Project Structure
 
-Mekong Marketing creates standard project structure:
+AgencyOS creates standard project structure:
 
 ```
 my-project/
-├── .claude/           # Mekong Marketing configuration
+├── .claude/           # AgencyOS configuration
 ├── docs/              # Generated documentation
 │   ├── project-overview-pdr.md
 │   ├── system-architecture.md
@@ -144,7 +144,7 @@ my-project/
 
 ### Continue Development
 
-Use all Mekong Marketing commands for further development:
+Use all AgencyOS commands for further development:
 
 #### Add New Features
 ```bash
@@ -352,7 +352,7 @@ Begin with core functionality, then expand:
 ```bash
 # After bootstrap
 git add .
-git commit -m "Initial project setup via Mekong Marketing bootstrap"
+git commit -m "Initial project setup via AgencyOS bootstrap"
 
 # After each feature
 /git:cp

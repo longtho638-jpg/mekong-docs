@@ -10,11 +10,11 @@ lastUpdated: 2025-11-07
 
 # Dự Án Greenfield
 
-Tạo dự án mới từ đầu với quy trình phát triển AI-powered của Mekong Marketing. Biến ý tưởng thành ứng dụng production nhanh chóng với intelligent agents.
+Tạo dự án mới từ đầu với quy trình phát triển AI-powered của AgencyOS. Biến ý tưởng thành ứng dụng production nhanh chóng với intelligent agents.
 
 ## Cài Đặt
 
-### 1. Cài Mekong Marketing CLI
+### 1. Cài AgencyOS CLI
 
 ```bash
 npm i -g mekong-cli@latest
@@ -25,12 +25,12 @@ npm i -g mekong-cli@latest
 ### Phương Pháp 1: Bootstrap Dự Án Mới
 
 ```bash
-# Tạo dự án mới với Mekong Marketing Engineer kit
+# Tạo dự án mới với AgencyOS Engineer kit
 mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 ```
 
 **Tùy chọn:**
-- `--kit engineer`: Cài Mekong Marketing Engineer configuration
+- `--kit engineer`: Cài AgencyOS Engineer configuration
 - `--dir`: Thư mục đích cho dự án
 
 ### Phương Pháp 2: Thiết Lập Thủ Công
@@ -127,11 +127,11 @@ Chạy chế độ tự động hoàn toàn không cần review plan. CC sẽ:
 
 ### Cấu Trúc Dự Án
 
-Mekong Marketing tạo cấu trúc dự án chuẩn:
+AgencyOS tạo cấu trúc dự án chuẩn:
 
 ```
 dự-án-của-tôi/
-├── .claude/           # Mekong Marketing configuration
+├── .claude/           # AgencyOS configuration
 ├── docs/              # Tài liệu đã tạo
 │   ├── project-overview-pdr.md
 │   ├── system-architecture.md
@@ -144,7 +144,7 @@ dự-án-của-tôi/
 
 ### Tiếp Tục Phát Triển
 
-Dùng tất cả lệnh Mekong Marketing cho phát triển tiếp:
+Dùng tất cả lệnh AgencyOS cho phát triển tiếp:
 
 #### Thêm Tính Năng Mới
 ```bash
@@ -352,7 +352,7 @@ Bắt đầu với chức năng cốt lõi, sau đó mở rộng:
 ```bash
 # Sau bootstrap
 git add .
-git commit -m "Khởi tạo dự án qua Mekong Marketing bootstrap"
+git commit -m "Khởi tạo dự án qua AgencyOS bootstrap"
 
 # Sau mỗi tính năng
 /git:cp

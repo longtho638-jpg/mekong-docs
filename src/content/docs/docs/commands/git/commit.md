@@ -53,7 +53,7 @@ The `/git:cm` command follows a structured git workflow:
 
 ## Commit Message Format
 
-Mekong Marketing generates commits following [Conventional Commits](https://www.conventionalcommits.org/):
+AgencyOS generates commits following [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
 <type>(<scope>): <subject>
@@ -180,7 +180,7 @@ The command stages and commits:
 
 ## Security Checks
 
-Before committing, Mekong Marketing checks for:
+Before committing, AgencyOS checks for:
 
 ### Sensitive Files
 
@@ -285,7 +285,7 @@ git push origin feature/user-profile
 
 ### Commit Message Style
 
-Mekong Marketing analyzes your commit history and matches the style:
+AgencyOS analyzes your commit history and matches the style:
 
 **If your repo uses:**
 ```
@@ -294,7 +294,7 @@ Update README
 Fix login bug
 ```
 
-**Mekong Marketing generates:**
+**AgencyOS generates:**
 ```
 Add rate limiting middleware
 ```
@@ -306,14 +306,14 @@ fix: resolve login issue
 docs: update README
 ```
 
-**Mekong Marketing generates:**
+**AgencyOS generates:**
 ```
 feat: add rate limiting middleware
 ```
 
 ### Scope Detection
 
-Mekong Marketing automatically detects scope from files changed:
+AgencyOS automatically detects scope from files changed:
 
 ```
 Files changed: src/auth/login.ts, src/auth/register.ts
@@ -448,7 +448,7 @@ git add .
 **Solution:**
 ```bash
 # Provide more context in code comments
-# Mekong Marketing reads comments to understand intent
+# AgencyOS reads comments to understand intent
 
 # Or manually edit commit message:
 git commit --amend

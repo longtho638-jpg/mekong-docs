@@ -14,7 +14,7 @@ published: true
 
 # Maintaining an Old Project
 
-Learn how to integrate Mekong Marketing into an existing project, understand legacy code, and systematically improve it. This guide walks through a real-world scenario of reviving a 2-year-old project.
+Learn how to integrate AgencyOS into an existing project, understand legacy code, and systematically improve it. This guide walks through a real-world scenario of reviving a 2-year-old project.
 
 ## Scenario
 
@@ -144,7 +144,7 @@ E-commerce backend API
 
 ### Ask Questions
 
-Now that Mekong Marketing has context, ask specific questions:
+Now that AgencyOS has context, ask specific questions:
 
 ```bash
 /ask [how does the payment processing work?]

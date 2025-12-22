@@ -597,7 +597,7 @@ After Feature Completion:
 # Project Roadmap
 
 ## Project Overview
-- **Project**: Mekong Marketing Platform
+- **Project**: AgencyOS Platform
 - **Version**: 2.0.0
 - **Current Phase**: Phase 2 - Core Features
 - **Last Updated**: 2025-10-30

@@ -14,7 +14,7 @@ published: true
 
 # Optimizing Performance
 
-Learn how to identify and fix performance bottlenecks with Mekong Marketing - from profiling and analysis to implementation of caching, database optimization, and code improvements.
+Learn how to identify and fix performance bottlenecks with AgencyOS - from profiling and analysis to implementation of caching, database optimization, and code improvements.
 
 ## Overview
 
@@ -624,7 +624,7 @@ Customer impact:
 - Testing: 1-2 hours
 - Debugging: 1-2 hours
 
-**With Mekong Marketing**: 58 minutes
+**With AgencyOS**: 58 minutes
 - Profiling: 8 minutes
 - Database: 15 minutes
 - Caching: 12 minutes
@@ -803,4 +803,4 @@ Metrics:
 
 ---
 
-**Key Takeaway**: Mekong Marketing enables systematic performance optimization with profiling, analysis, and implementation of best practices - turning slow applications into fast ones in under an hour with measurable improvements.
+**Key Takeaway**: AgencyOS enables systematic performance optimization with profiling, analysis, and implementation of best practices - turning slow applications into fast ones in under an hour with measurable improvements.

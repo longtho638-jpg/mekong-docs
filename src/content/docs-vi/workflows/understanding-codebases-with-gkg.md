@@ -84,7 +84,7 @@ Workspace Statistics:
 - Relationships found: 12,156
 ```
 
-### 2. Sử dụng công cụ GKG MCP với Mekong Marketing
+### 2. Sử dụng công cụ GKG MCP với AgencyOS
 
 Sau khi lập chỉ mục, sử dụng công cụ GKG MCP trong các phiên Mekong CLI của bạn:
 
@@ -457,7 +457,7 @@ gkg server stop
 gkg server start
 ```
 
-## Tích hợp với Mekong Marketing
+## Tích hợp với AgencyOS
 
 ### Sử dụng GKG trong Lệnh `/code`
 
@@ -532,7 +532,7 @@ gkg_repo_map \
 1. **Cài đặt GKG**: Làm theo hướng dẫn cài đặt ở trên
 2. **Lập chỉ mục Project của bạn**: `gkg index /path/to/project`
 3. **Khám phá**: Sử dụng công cụ MCP để hiểu codebase
-4. **Tích hợp với Mekong Marketing**: Sử dụng ngữ cảnh GKG trong các lệnh `/code` và tái cấu trúc
+4. **Tích hợp với AgencyOS**: Sử dụng ngữ cảnh GKG trong các lệnh `/code` và tái cấu trúc
 5. **Tự động hóa**: Xây dựng workflow với dữ liệu GKG
 
 ---

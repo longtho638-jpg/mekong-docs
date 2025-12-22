@@ -9,7 +9,7 @@ export function AIChat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'system',
-      content: "Hello! I'm your AI documentation assistant. Ask me anything about Mekong Marketing.",
+      content: "Hello! I'm your AI documentation assistant. Ask me anything about AgencyOS.",
     },
   ]);
   const [input, setInput] = useState('');
@@ -89,7 +89,7 @@ export function AIChat() {
           <input
             type="text"
             className="ai-input"
-            placeholder="Ask about Mekong Marketing..."
+            placeholder="Ask about AgencyOS..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={isLoading}

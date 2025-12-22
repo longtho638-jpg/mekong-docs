@@ -132,4 +132,4 @@ Multi-source technology intelligence that explores docs, videos, GitHub repos, a
 
 ## Key Takeaway
 
-Researcher eliminates "tutorial hell" by validating 15+ sources in parallel, surfacing security risks, and delivering production-ready intelligence before you write a single line of code. Part of Mekong Marketing $99 toolkit.
+Researcher eliminates "tutorial hell" by validating 15+ sources in parallel, surfacing security risks, and delivering production-ready intelligence before you write a single line of code. Part of AgencyOS $99 toolkit.

@@ -1,6 +1,6 @@
 ---
 title: Agents Tổng Quan
-description: Understanding Mekong Marketing's 14 specialized agents and how they work together
+description: Understanding AgencyOS's 14 specialized agents and how they work together
 section: docs
 category: agents
 order: 1
@@ -9,7 +9,7 @@ published: true
 
 # Agents Overview
 
-Mekong Marketing includes 14 specialized agents that work together to handle every aspect of software development. Each agent is optimized for specific tasks and follows established workflows.
+AgencyOS includes 14 specialized agents that work together to handle every aspect of software development. Each agent is optimized for specific tasks and follows established workflows.
 
 ## The 14 Specialized Agents
 
@@ -54,11 +54,11 @@ These 14 agents are carefully optimized for daily development workflows based on
 - **Comprehensive Coverage**: Cover all aspects of development
 - **Maintainable**: Small enough to maintain, large enough to be effective
 
-> **Note**: If you need a new specialized agent, you can request it at the [Mekong Marketing Discord](https://mekongmarketing.com/discord)
+> **Note**: If you need a new specialized agent, you can request it at the [AgencyOS Discord](https://agencyos.network/discord)
 
 ## How Agents Work Together
 
-Agents are automatically orchestrated by Mekong Marketing based on predefined workflows. You don't need to manually coordinate them.
+Agents are automatically orchestrated by AgencyOS based on predefined workflows. You don't need to manually coordinate them.
 
 ### Example: Building a New Feature
 
@@ -187,7 +187,7 @@ Agents can be invoked in three ways:
 
 ### 1. Automatically (Recommended)
 
-Mekong Marketing automatically orchestrates agents based on:
+AgencyOS automatically orchestrates agents based on:
 
 - Command used (`/cook`, `/fix:hard`, etc.)
 - Task complexity
@@ -298,7 +298,7 @@ Research, analyze, and create comprehensive implementation plans
 ✅ **Do**: Trust the orchestration
 ```bash
 /cook [build REST API]
-# Let Mekong Marketing orchestrate all agents automatically
+# Let AgencyOS orchestrate all agents automatically
 ```
 
 ❌ **Don't**: Micromanage agents
@@ -338,7 +338,7 @@ cat plans/latest-plan.md
 
 ### Todo List
 
-Mekong Marketing uses TodoWrite tool to show agent progress:
+AgencyOS uses TodoWrite tool to show agent progress:
 
 ```
 ✓ planner Agent: Created implementation plan
@@ -408,4 +408,4 @@ Or explore:
 
 ---
 
-**Key Takeaway**: Mekong Marketing's 14 specialized agents work together automatically through predefined workflows, handling every aspect of software development from planning to deployment.
+**Key Takeaway**: AgencyOS's 14 specialized agents work together automatically through predefined workflows, handling every aspect of software development from planning to deployment.

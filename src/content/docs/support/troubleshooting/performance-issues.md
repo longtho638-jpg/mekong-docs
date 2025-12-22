@@ -14,7 +14,7 @@ published: true
 
 # Performance Issues
 
-Commands taking forever? Optimize Mekong Marketing for blazing-fast execution.
+Commands taking forever? Optimize AgencyOS for blazing-fast execution.
 
 ## Quick Fix: Commands Too Slow
 
@@ -265,7 +265,7 @@ claude
 # 2. Clear npm cache
 npm cache clean --force
 
-# 3. Update Mekong Marketing
+# 3. Update AgencyOS
 mk init --kit engineer
 
 # 4. Update Node.js
@@ -612,7 +612,7 @@ EOF
 ### Get Help
 
 1. **GitHub Issues**: [Report performance problems](https://github.com/mekong/mekong-engineer/issues)
-2. **Discord**: [Performance optimization channel](https://mekongmarketing.com/discord)
+2. **Discord**: [Performance optimization channel](https://agencyos.network/discord)
 3. **Include**: Performance report, project size, specific slow command, expected vs actual time
 
 ---

@@ -72,7 +72,7 @@ When answering questions:
 - [GitHub](https://github.com/anthropics/claude-code)
 - Support: support.claude.com
 
-## Integration with Mekong Marketing
+## Integration with AgencyOS
 
 Works with:
 

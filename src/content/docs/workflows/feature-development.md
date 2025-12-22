@@ -8,7 +8,7 @@ published: true
 
 # Feature Development Workflow
 
-Complete feature lifecycle from planning to deployment using Mekong Marketing's multi-agent workflows.
+Complete feature lifecycle from planning to deployment using AgencyOS's multi-agent workflows.
 
 ## Overview
 
@@ -177,7 +177,7 @@ Let's walk through adding authentication to a Next.js app:
 ### Getting Help
 - [Troubleshooting Guide](/docs/support/troubleshooting)
 - [FAQ](/docs/support/faq)
-- [Discord Community](https://mekongmarketing.com/discord)
+- [Discord Community](https://agencyos.network/discord)
 
 ## Next Steps
 

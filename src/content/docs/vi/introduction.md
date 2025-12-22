@@ -6,11 +6,11 @@ section: getting-started
 
 # Mekong CLI
 
-> **Mekong Marketing for Vietnamese Market** - Framework phát triển AI-powered được tối ưu hoá cho thị trường Việt Nam
+> **AgencyOS for Vietnamese Market** - Framework phát triển AI-powered được tối ưu hoá cho thị trường Việt Nam
 
 ## 🌾 Tại sao Mekong CLI?
 
-Mekong CLI được xây dựng trên nền tảng Mekong Marketing Engineer với các tính năng đặc biệt cho:
+Mekong CLI được xây dựng trên nền tảng AgencyOS Engineer với các tính năng đặc biệt cho:
 
 - **Thị trường ĐBSCL** - Phân tích nông sản, giá cả, mùa vụ
 - **Social Commerce** - Zalo, Facebook, TikTok Shop
@@ -35,7 +35,7 @@ claude
 
 | Component | Số lượng |
 |-----------|----------|
-| **Agents** | 18 (17 Mekong Marketing + 1 Mekong) |
+| **Agents** | 18 (17 AgencyOS + 1 Mekong) |
 | **Skills** | 33 |
 | **Commands** | 66+ |
 

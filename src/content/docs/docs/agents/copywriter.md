@@ -9,7 +9,7 @@ published: true
 
 # Copywriter Agent
 
-Elite conversion copywriter for high-converting marketing copy, viral social media, and product descriptions. Part of Mekong Marketing $99 toolkit.
+Elite conversion copywriter for high-converting marketing copy, viral social media, and product descriptions. Part of AgencyOS $99 toolkit.
 
 ## When to Use
 
@@ -110,4 +110,4 @@ Every output includes test recommendations:
 
 ## Key Takeaway
 
-The copywriter agent creates brutally honest, conversion-focused copy using psychological triggers, platform optimization, and specific metrics. No theory, no fluff—just copy that converts visitors into customers. Delivers multiple versions with A/B test plans and expected performance metrics. Part of Mekong Marketing $99 toolkit.
+The copywriter agent creates brutally honest, conversion-focused copy using psychological triggers, platform optimization, and specific metrics. No theory, no fluff—just copy that converts visitors into customers. Delivers multiple versions with A/B test plans and expected performance metrics. Part of AgencyOS $99 toolkit.

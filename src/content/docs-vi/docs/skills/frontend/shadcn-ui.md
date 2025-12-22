@@ -499,9 +499,9 @@ export function ToastDemo() {
 }
 ```
 
-## Integration with Mekong Marketing
+## Integration with AgencyOS
 
-Mekong Marketing agents use the shadcn/ui skill to:
+AgencyOS agents use the shadcn/ui skill to:
 
 ### 1. Rapid UI Development
 
@@ -831,4 +831,4 @@ npx shadcn@latest diff
 
 ---
 
-**Key Takeaway**: shadcn/ui provides production-ready, accessible UI components that you own and control. Unlike traditional component libraries, these components live in your codebase, giving you complete flexibility to customize and extend them. Mekong Marketing agents leverage shadcn/ui to rapidly build beautiful, accessible interfaces with minimal effort.
+**Key Takeaway**: shadcn/ui provides production-ready, accessible UI components that you own and control. Unlike traditional component libraries, these components live in your codebase, giving you complete flexibility to customize and extend them. AgencyOS agents leverage shadcn/ui to rapidly build beautiful, accessible interfaces with minimal effort.

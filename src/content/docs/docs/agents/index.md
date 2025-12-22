@@ -1,6 +1,6 @@
 ---
 title: Agents Overview
-description: Mekong Marketing's 17 specialized agents for software development
+description: AgencyOS's 17 specialized agents for software development
 section: docs
 category: agents
 order: 1

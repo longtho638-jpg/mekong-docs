@@ -115,7 +115,7 @@ export GEMINI_API_KEY=your-key
 
 ## Common Quick Fixes
 
-### Reset Mekong Marketing
+### Reset AgencyOS
 
 ```bash
 # Backup first
@@ -135,7 +135,7 @@ cp .claude.backup/commands/my-custom.md .claude/commands/
 rm -rf node_modules
 npm install
 
-# Clear Mekong Marketing cache
+# Clear AgencyOS cache
 rm -rf ~/.mekong/cache
 ```
 
@@ -179,13 +179,13 @@ tree .claude -L 2
 
 ### Community
 
-- **Discord**: [Join Mekong Marketing Discord](https://mekongmarketing.com/discord)
+- **Discord**: [Join AgencyOS Discord](https://agencyos.network/discord)
 - **GitHub Discussions**: Share solutions, ask questions
 
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep Mekong Marketing updated (`mk init`)
+- Keep AgencyOS updated (`mk init`)
 - Use `--verbose` when debugging
 - Backup before major changes
 - Read error messages fully

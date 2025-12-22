@@ -21,7 +21,7 @@ export class OpenRouterClient {
       apiKey: apiKey || process.env.OPENROUTER_API_KEY,
       defaultHeaders: {
         'HTTP-Referer': 'https://docs.mekongmarketing.com',
-        'X-Title': 'Mekong Marketing Documentation',
+        'X-Title': 'AgencyOS Documentation',
       },
     });
   }

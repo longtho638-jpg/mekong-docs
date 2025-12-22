@@ -84,7 +84,7 @@ Workspace Statistics:
 - Relationships found: 12,156
 ```
 
-### 2. Use GKG MCP Tools with Mekong Marketing
+### 2. Use GKG MCP Tools with AgencyOS
 
 Once indexed, use GKG MCP tools in your Mekong CLI sessions:
 
@@ -457,7 +457,7 @@ gkg server stop
 gkg server start
 ```
 
-## Integration with Mekong Marketing
+## Integration with AgencyOS
 
 ### Using GKG in `/code` Commands
 
@@ -532,7 +532,7 @@ gkg_repo_map \
 1. **Install GKG**: Follow installation guide above
 2. **Index Your Project**: `gkg index /path/to/project`
 3. **Explore**: Use MCP tools to understand codebase
-4. **Integrate with Mekong Marketing**: Use GKG context in `/code` and refactoring commands
+4. **Integrate with AgencyOS**: Use GKG context in `/code` and refactoring commands
 5. **Automate**: Build workflows with GKG data
 
 ---

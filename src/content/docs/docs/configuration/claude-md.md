@@ -14,7 +14,7 @@ published: true
 
 # CLAUDE.md
 
-The `CLAUDE.md` file is the primary configuration file that provides guidance to Mekong CLI when working with your codebase. Understanding this file is crucial for effective use of Mekong Marketing.
+The `CLAUDE.md` file is the primary configuration file that provides guidance to Mekong CLI when working with your codebase. Understanding this file is crucial for effective use of AgencyOS.
 
 ## What is CLAUDE.md?
 
@@ -53,7 +53,7 @@ We keep all important docs in `./docs` folder and keep updating them.
 
 ## Why File System As Context?
 
-Mekong Marketing follows Manus's approach to Context Engineering: **Use File System As Context**.
+AgencyOS follows Manus's approach to Context Engineering: **Use File System As Context**.
 
 ### Benefits
 
@@ -76,7 +76,7 @@ Instead of putting all development rules in CLAUDE.md:
 ... (hundreds of lines)
 ```
 
-Mekong Marketing uses references:
+AgencyOS uses references:
 
 ```markdown
 ✅ Good Approach (File System As Context)
@@ -89,13 +89,13 @@ This keeps CLAUDE.md lightweight while maintaining access to detailed guidelines
 
 ## Important: Do Not Modify
 
-**[Important]** You should not modify `CLAUDE.md` directly, as it will be overwritten each time you update Mekong Marketing using `mk init`.
+**[Important]** You should not modify `CLAUDE.md` directly, as it will be overwritten each time you update AgencyOS using `mk init`.
 
 ### Why?
 
-- Mekong Marketing updates may include improvements to workflows and rules
+- AgencyOS updates may include improvements to workflows and rules
 - Manual changes will be lost during updates
-- Consistency across Mekong Marketing projects
+- Consistency across AgencyOS projects
 
 ### What if I need to customize?
 
@@ -201,7 +201,7 @@ Using File System As Context significantly reduces token usage:
 - Initial load: ~5000 tokens (everything in CLAUDE.md)
 - Every task: Same 5000 tokens loaded
 
-**With File System As Context (Mekong Marketing approach):**
+**With File System As Context (AgencyOS approach):**
 - Initial load: ~500 tokens (just CLAUDE.md)
 - Specific task: +1000 tokens (only relevant file)
 - Total: 1500 tokens vs 5000 tokens (70% savings)
@@ -231,4 +231,4 @@ Now that you understand CLAUDE.md:
 
 ---
 
-**Key Takeaway**: CLAUDE.md is a lightweight entry point that uses the file system as context, making Mekong Marketing efficient and maintainable.
+**Key Takeaway**: CLAUDE.md is a lightweight entry point that uses the file system as context, making AgencyOS efficient and maintainable.

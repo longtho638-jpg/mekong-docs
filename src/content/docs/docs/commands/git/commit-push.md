@@ -221,7 +221,7 @@ git branch --set-upstream-to=origin/feature-name
 
 ### Push Options
 
-Mekong Marketing automatically handles:
+AgencyOS automatically handles:
 - First push (`git push -u origin branch-name`)
 - Subsequent pushes (`git push`)
 - Force push warnings

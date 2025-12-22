@@ -148,13 +148,13 @@ Creates testing plan:
 ### Product Page Copy
 
 ```bash
-/content:cro [optimize product page copy for Mekong Marketing Pro subscription]
+/content:cro [optimize product page copy for AgencyOS Pro subscription]
 ```
 
 **What happens:**
 ```
 1. Analysis
-   Product: Mekong Marketing Pro ($49/month)
+   Product: AgencyOS Pro ($49/month)
    Goal: Increase subscription conversions
 
    Current issues:
@@ -238,7 +238,7 @@ Creates testing plan:
    EMAIL 1 (Day 0 - Welcome)
 
    Before:
-   Subject: "Welcome to Mekong Marketing!"
+   Subject: "Welcome to AgencyOS!"
 
    After:
    Subject: "Your first AI agent is ready 🚀"
@@ -271,7 +271,7 @@ Creates testing plan:
 3. A/B Testing Plan
 
    Test: Subject Lines (Email 1)
-   A: "Welcome to Mekong Marketing!"
+   A: "Welcome to AgencyOS!"
    B: "Your first AI agent is ready 🚀"
    Metric: Open rate
    Expected lift: 20-35%

@@ -264,7 +264,7 @@ cat .claude/agents/problematic-agent.md
 # - Recursive calls without exit
 # - Incorrect workflow logic
 
-# Report to Mekong Marketing if core agent
+# Report to AgencyOS if core agent
 # Or fix custom agent logic
 ```
 
@@ -298,7 +298,7 @@ cat .claude/agents/planner.md | grep -i "spawn\|delegate"
 **Solution**:
 
 ```bash
-# Update Mekong Marketing to latest version
+# Update AgencyOS to latest version
 mk init --kit engineer
 
 # Verify planner agent updated
@@ -326,7 +326,7 @@ ls -la plans/reports/
 # review-*.md
 
 # If missing, agents not writing reports correctly
-# Update Mekong Marketing
+# Update AgencyOS
 mk init --kit engineer
 ```
 
@@ -637,9 +637,9 @@ done
 ### Get Help
 
 1. **GitHub Issues**: [Report agent problems](https://github.com/mekong/mekong-engineer/issues)
-2. **Discord**: [Agent troubleshooting channel](https://mekongmarketing.com/discord)
+2. **Discord**: [Agent troubleshooting channel](https://agencyos.network/discord)
 3. **Include**: Agent debug report, specific agent name, command used, expected vs actual behavior
 
 ---
 
-**Most agent issues resolve with updated Mekong Marketing.** Run `mk init --kit engineer` first, then retest your command.
+**Most agent issues resolve with updated AgencyOS.** Run `mk init --kit engineer` first, then retest your command.

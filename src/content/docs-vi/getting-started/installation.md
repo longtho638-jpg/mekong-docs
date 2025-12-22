@@ -14,11 +14,11 @@ published: true
 
 # Cài Đặt
 
-Hướng dẫn này sẽ giúp bạn cài đặt Mekong Marketing và thiết lập môi trường phát triển. Bạn có thể chọn giữa cài đặt thủ công hoặc sử dụng Mekong Marketing CLI.
+Hướng dẫn này sẽ giúp bạn cài đặt AgencyOS và thiết lập môi trường phát triển. Bạn có thể chọn giữa cài đặt thủ công hoặc sử dụng AgencyOS CLI.
 
 ## Yêu Cầu
 
-Trước khi cài đặt Mekong Marketing, đảm bảo bạn có:
+Trước khi cài đặt AgencyOS, đảm bảo bạn có:
 
 - **Node.js** v18 trở lên
 - **npm** v10 trở lên (hoặc bun, pnpm, yarn)
@@ -30,7 +30,7 @@ Trước khi cài đặt Mekong Marketing, đảm bảo bạn có:
 
 Phương pháp này cho bạn quyền kiểm soát hoàn toàn quá trình cài đặt.
 
-### Bước 1: Sao Chép Các File Mekong Marketing
+### Bước 1: Sao Chép Các File AgencyOS
 
 Sao chép tất cả thư mục và file từ repo `mekong-engineer` vào dự án của bạn:
 
@@ -45,7 +45,7 @@ CLAUDE.md
 ### Bước 2: Cấu Hình API Key Gemini (Tuỳ Chọn)
 
 **TẠI SAO?**  
-Mekong Marketing từng sử dụng [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) để phân tích hình ảnh và video vì Gemini có khả năng xử lý vision tốt. Tuy nhiên, Anthropic đã ra mắt [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) hỗ trợ context engineering tốt hơn, nên toàn bộ công cụ Human MCP đã được chuyển thành Agent Skills.
+AgencyOS từng sử dụng [Human MCP](https://www.npmjs.com/package/@goonnguyen/human-mcp) để phân tích hình ảnh và video vì Gemini có khả năng xử lý vision tốt. Tuy nhiên, Anthropic đã ra mắt [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) hỗ trợ context engineering tốt hơn, nên toàn bộ công cụ Human MCP đã được chuyển thành Agent Skills.
 
 **Lưu ý:** Gemini API hiện đang có hạn mức miễn phí khá rộng rãi.
 
@@ -82,13 +82,13 @@ Lệnh này tạo ra các file markdown trong thư mục `docs`:
 
 Bây giờ dự án của bạn đã sẵn sàng để phát triển!
 
-## Phương Pháp 2: Mekong Marketing CLI
+## Phương Pháp 2: AgencyOS CLI
 
-CLI cung cấp cách tự động để thiết lập các dự án Mekong Marketing.
+CLI cung cấp cách tự động để thiết lập các dự án AgencyOS.
 
 ### Cài Đặt
 
-Cài đặt Mekong Marketing CLI toàn cục:
+Cài đặt AgencyOS CLI toàn cục:
 
 ```bash
 # npm
@@ -101,7 +101,7 @@ bun add -g mekong-cli
 mk --version
 ```
 
-### Khởi Tạo hoặc Cập Nhật Mekong Marketing Engineer
+### Khởi Tạo hoặc Cập Nhật AgencyOS Engineer
 
 **Lưu ý:** Lệnh này nên được chạy từ thư mục gốc của dự án.
 
@@ -131,7 +131,7 @@ mk init -g --kit engineer
 mk update
 ```
 
-**Lưu ý:** Lệnh này chỉ cập nhật CLI, không cập nhật file Mekong Marketing Engineer. Dùng `mk init` để cập nhật Mekong Marketing Engineer.
+**Lưu ý:** Lệnh này chỉ cập nhật CLI, không cập nhật file AgencyOS Engineer. Dùng `mk init` để cập nhật AgencyOS Engineer.
 
 ### Xác Thực
 
@@ -168,12 +168,12 @@ claude --version
 ls -la .claude/
 ```
 
-## Cập Nhật Mekong Marketing
+## Cập Nhật AgencyOS
 
-Giữ Mekong Marketing Engineer luôn cập nhật:
+Giữ AgencyOS Engineer luôn cập nhật:
 
 ```bash
-# Cập nhật Mekong Marketing Engineer lên phiên bản mới nhất
+# Cập nhật AgencyOS Engineer lên phiên bản mới nhất
 mk init
 
 # Cập nhật lên phiên bản cụ thể
@@ -231,7 +231,7 @@ Nếu CLI không thể xác thực:
 
 ## Bước Tiếp Theo
 
-Bây giờ Mekong Marketing đã được cài đặt, tiếp tục với:
+Bây giờ AgencyOS đã được cài đặt, tiếp tục với:
 
 - [Hướng Dẫn Bắt Đầu Nhanh](/docs/getting-started/quick-start) - Xây dựng dự án đầu tiên
 - [Giải Thích CLAUDE.md](/docs/core-concepts/claude-md) - Hiểu file cấu hình

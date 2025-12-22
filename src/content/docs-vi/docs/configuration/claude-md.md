@@ -14,7 +14,7 @@ published: true
 
 # CLAUDE.md
 
-File `CLAUDE.md` là file cấu hình chính cung cấp hướng dẫn cho Mekong CLI khi làm việc với codebase của bạn. Hiểu về file này là rất quan trọng để sử dụng Mekong Marketing hiệu quả.
+File `CLAUDE.md` là file cấu hình chính cung cấp hướng dẫn cho Mekong CLI khi làm việc với codebase của bạn. Hiểu về file này là rất quan trọng để sử dụng AgencyOS hiệu quả.
 
 ## CLAUDE.md Là Gì?
 
@@ -53,7 +53,7 @@ Chúng tôi lưu tất cả docs quan trọng trong thư mục `./docs` và liê
 
 ## Tại Sao Dùng File System Làm Context?
 
-Mekong Marketing tuân theo cách tiếp cận Context Engineering của Manus: **Sử Dụng File System Làm Context**.
+AgencyOS tuân theo cách tiếp cận Context Engineering của Manus: **Sử Dụng File System Làm Context**.
 
 ### Lợi Ích
 
@@ -76,7 +76,7 @@ Thay vì đặt tất cả development rules trong CLAUDE.md:
 ... (hàng trăm dòng)
 ```
 
-Mekong Marketing sử dụng tham chiếu:
+AgencyOS sử dụng tham chiếu:
 
 ```markdown
 ✅ Cách Tiếp Cận Tốt (File System Làm Context)
@@ -89,13 +89,13 @@ Mekong Marketing sử dụng tham chiếu:
 
 ## Quan Trọng: Không Sửa Đổi
 
-**[Quan Trọng]** Bạn không nên sửa đổi `CLAUDE.md` trực tiếp, vì nó sẽ bị ghi đè mỗi khi bạn cập nhật Mekong Marketing bằng `mk init`.
+**[Quan Trọng]** Bạn không nên sửa đổi `CLAUDE.md` trực tiếp, vì nó sẽ bị ghi đè mỗi khi bạn cập nhật AgencyOS bằng `mk init`.
 
 ### Tại Sao?
 
-- Cập nhật Mekong Marketing có thể bao gồm cải tiến cho workflows và rules
+- Cập nhật AgencyOS có thể bao gồm cải tiến cho workflows và rules
 - Thay đổi thủ công sẽ bị mất khi cập nhật
-- Tính nhất quán giữa các dự án Mekong Marketing
+- Tính nhất quán giữa các dự án AgencyOS
 
 ### Nếu Tôi Cần Tùy Chỉnh Thì Sao?
 
@@ -201,7 +201,7 @@ Sử dụng File System Làm Context giảm đáng kể việc sử dụng token
 - Tải ban đầu: ~5000 tokens (mọi thứ trong CLAUDE.md)
 - Mỗi tác vụ: Cùng 5000 tokens được tải
 
-**Với File System Làm Context (cách tiếp cận Mekong Marketing):**
+**Với File System Làm Context (cách tiếp cận AgencyOS):**
 - Tải ban đầu: ~500 tokens (chỉ CLAUDE.md)
 - Tác vụ cụ thể: +1000 tokens (chỉ file liên quan)
 - Tổng: 1500 tokens vs 5000 tokens (tiết kiệm 70%)
@@ -231,4 +231,4 @@ Bây giờ bạn đã hiểu CLAUDE.md:
 
 ---
 
-**Điểm Chính**: CLAUDE.md là điểm khởi đầu nhẹ sử dụng file system làm context, làm cho Mekong Marketing hiệu quả và dễ bảo trì.
+**Điểm Chính**: CLAUDE.md là điểm khởi đầu nhẹ sử dụng file system làm context, làm cho AgencyOS hiệu quả và dễ bảo trì.

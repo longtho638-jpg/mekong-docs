@@ -1,6 +1,6 @@
 ---
 title: "Bug Fixing Workflow"
-description: "Systematic approach to debugging and fixing issues with Mekong Marketing"
+description: "Systematic approach to debugging and fixing issues with AgencyOS"
 section: workflows
 order: 2
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Bug Fixing Workflow
 
-Systematic approach to debugging and fixing issues using Mekong Marketing's specialized debugging agents.
+Systematic approach to debugging and fixing issues using AgencyOS's specialized debugging agents.
 
 ## Overview
 
@@ -241,7 +241,7 @@ const sessionConfig = {
 
 - [Troubleshooting Guide](/docs/support/troubleshooting)
 - [Common Issues](/docs/support/troubleshooting#common-issues)
-- [Discord Community](https://mekongmarketing.com/discord)
+- [Discord Community](https://agencyos.network/discord)
 
 ## Related Workflows
 

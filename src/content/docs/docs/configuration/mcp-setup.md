@@ -12,7 +12,7 @@ lastUpdated: 2025-11-17
 
 ## TL;DR
 
-Mekong Marketing delegates MCP (Model Context Protocol) servers to the dedicated **mcp-manager** subagent. This isolates heavy tool manifests away from the primary agent, keeping its context window lean while still enabling deep integrations.
+AgencyOS delegates MCP (Model Context Protocol) servers to the dedicated **mcp-manager** subagent. This isolates heavy tool manifests away from the primary agent, keeping its context window lean while still enabling deep integrations.
 
 ---
 
@@ -45,7 +45,7 @@ Trigger the subagent-managed tools via the `/use-mcp` command:
 /use-mcp Use chrome-devtools mcp to capture a screenshot of google.com
 ```
 
-Mekong Marketing will summon the **mcp-manager** subagent, load the configured MCP clients, analyze available tools, execute the best fit, and return the results to your primary chat.
+AgencyOS will summon the **mcp-manager** subagent, load the configured MCP clients, analyze available tools, execute the best fit, and return the results to your primary chat.
 
 ---
 
@@ -73,7 +73,7 @@ The result: your main context stays pristine, yet you can still tap into special
 
 ### Further Optimization
 
-Even with subagent isolation, processing massive MCP catalogs still burns tokens. To mitigate that, Mekong Marketing can hand off heavy MCP orchestration to **gemini-cli**, shifting the most expensive reasoning to a cheaper, external runtime while keeping the main conversation focused.
+Even with subagent isolation, processing massive MCP catalogs still burns tokens. To mitigate that, AgencyOS can hand off heavy MCP orchestration to **gemini-cli**, shifting the most expensive reasoning to a cheaper, external runtime while keeping the main conversation focused.
 
 ---
 
@@ -81,6 +81,6 @@ Even with subagent isolation, processing massive MCP catalogs still burns tokens
 
 - Keep refining `.claude/.mcp.json` as your toolset evolves.
 - Version-control the file privately if it includes API endpoints or sensitive details.
-- Pair `/use-mcp` with automation commands (e.g., `/cook`, `/fix`, `/plan`) to mix bespoke tools with Mekong Marketing’s native agents.
+- Pair `/use-mcp` with automation commands (e.g., `/cook`, `/fix`, `/plan`) to mix bespoke tools with AgencyOS’s native agents.
 
 With this workflow, you get the power of MCP without the usual context penalty.

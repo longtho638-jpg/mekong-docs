@@ -100,4 +100,4 @@ Output: Slow query log, missing index discovery, query plan analysis, why stagin
 
 ## Key Takeaway
 
-Journal Writer transforms expensive failures into permanent institutional knowledge through brutally honest documentation - capturing technical details, emotional reality, failed attempts, and systemic causes so teams learn once instead of failing repeatedly. Part of Mekong Marketing $99 toolkit.
+Journal Writer transforms expensive failures into permanent institutional knowledge through brutally honest documentation - capturing technical details, emotional reality, failed attempts, and systemic causes so teams learn once instead of failing repeatedly. Part of AgencyOS $99 toolkit.

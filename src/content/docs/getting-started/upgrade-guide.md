@@ -1,14 +1,14 @@
 ---
 title: "Upgrade Guide for Mekong CLI Users"
-description: "Migrate from Mekong CLI to Mekong Marketing seamlessly"
+description: "Migrate from Mekong CLI to AgencyOS seamlessly"
 section: getting-started
 order: 3
 published: true
 ---
 
-# Upgrading from Mekong CLI to Mekong Marketing
+# Upgrading from Mekong CLI to AgencyOS
 
-Already using Mekong CLI? Mekong Marketing enhances your workflow without breaking existing habits.
+Already using Mekong CLI? AgencyOS enhances your workflow without breaking existing habits.
 
 ## What Changes?
 
@@ -27,7 +27,7 @@ Already using Mekong CLI? Mekong Marketing enhances your workflow without breaki
 ## Installation (Additive)
 
 ```bash
-# Install Mekong Marketing CLI (doesn't replace Mekong CLI)
+# Install AgencyOS CLI (doesn't replace Mekong CLI)
 npm install -g mekong-cli
 
 # Initialize in existing project
@@ -36,7 +36,7 @@ mk init
 # → Existing .claude/commands/ preserved
 ```
 
-### Upgrading Mekong Marketing
+### Upgrading AgencyOS
 
 ```bash
 # Recommended: Use built-in update command
@@ -55,7 +55,7 @@ Start with `/cook` for feature development:
 You: "I need to add a new API endpoint for user profiles"
 [Long conversation with manual guidance]
 
-# Mekong Marketing way
+# AgencyOS way
 /cook "add user profiles API endpoint"
 [Automated planning, development, testing]
 ```
@@ -92,21 +92,21 @@ Combine commands for complete workflows:
 
 **Not Supported**:
 - Claude Desktop app (Mekong CLI CLI only)
-- Projects without Git (Mekong Marketing requires version control)
+- Projects without Git (AgencyOS requires version control)
 
 ## FAQs
 
 **Q: Do I need to rewrite existing commands?**
-A: No. Mekong Marketing commands coexist with your custom .claude/commands/
+A: No. AgencyOS commands coexist with your custom .claude/commands/
 
 **Q: Can I still use regular chat?**
-A: Yes. Mekong Marketing adds slash commands, doesn't remove chat.
+A: Yes. AgencyOS adds slash commands, doesn't remove chat.
 
-**Q: What if I don't like Mekong Marketing?**
+**Q: What if I don't like AgencyOS?**
 A: Uninstall and delete .claude/CLAUDE.md. No breaking changes.
 
 ## Next Steps
 
-1. [Install Mekong Marketing](/docs/getting-started/installation)
+1. [Install AgencyOS](/docs/getting-started/installation)
 2. [Try Quick Start](/docs/getting-started/quick-start)
 3. [Explore Commands](/docs/commands)

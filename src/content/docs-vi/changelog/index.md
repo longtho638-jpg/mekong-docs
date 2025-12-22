@@ -1,6 +1,6 @@
 ---
 title: "Changelog"
-description: "Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong Marketing"
+description: "Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho AgencyOS"
 section: changelog
 order: 0
 published: true
@@ -8,7 +8,7 @@ published: true
 
 # Changelog
 
-Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong Marketing.
+Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho AgencyOS.
 
 ## Phiên bản mới nhất
 
@@ -46,7 +46,7 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong 
 **Cải thiện kiến trúc thông tin**:
 - Hệ thống điều hướng theo ngữ cảnh mới
 - Tách onboarding khỏi nội dung marketing
-- Tạo trang "Why Mekong Marketing" riêng
+- Tạo trang "Why AgencyOS" riêng
 - Thêm hướng dẫn workflow toàn diện
 - Tái cấu trúc nội dung thành 5 section chính
 
@@ -67,16 +67,16 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho Mekong 
 ### Giai đoạn Beta Testing - 2024-10-15 đến 2024-11-30
 
 **Bài học chính**:
-- Người dùng hoàn thành tính năng nhanh hơn 10x với Mekong Marketing
+- Người dùng hoàn thành tính năng nhanh hơn 10x với AgencyOS
 - Multi-agent collaboration giảm bug 80%
 - Testing tự động phát hiện issue trước production
 - Đồng bộ tài liệu loại bỏ docs lỗi thời
 - Team đạt chất lượng code nhất quán giữa các thành viên
 
 **Phản hồi Beta Tester**:
-> "Mekong Marketing đã thay đổi cách team chúng tôi build tính năng. Những gì trước đây mất nhiều ngày giờ chỉ mất vài giờ." - Senior Developer, Tech Startup
+> "AgencyOS đã thay đổi cách team chúng tôi build tính năng. Những gì trước đây mất nhiều ngày giờ chỉ mất vài giờ." - Senior Developer, Tech Startup
 
-> "Chất lượng code do Mekong Marketing agent tạo ra rất ấn tượng. Nó tự động tuân theo pattern và best practice của chúng tôi." - Engineering Manager, Enterprise
+> "Chất lượng code do AgencyOS agent tạo ra rất ấn tượng. Nó tự động tuân theo pattern và best practice của chúng tôi." - Engineering Manager, Enterprise
 
 ## Lịch sử phiên bản
 
@@ -156,13 +156,13 @@ mk doctor
 ```
 Triển khai tính năng (Complex CRUD):
 - Thủ công: 8 giờ, 15 bug
-- Mekong Marketing v0.9: 45 phút, 2 bug
-- Mekong Marketing v1.0: 20 phút, 0 bug
+- AgencyOS v0.9: 45 phút, 2 bug
+- AgencyOS v1.0: 20 phút, 0 bug
 
 Giải quyết bug:
 - Debug thủ công: trung bình 2 giờ
-- Mekong Marketing v0.9: trung bình 20 phút
-- Mekong Marketing v1.0: trung bình 5 phút
+- AgencyOS v0.9: trung bình 20 phút
+- AgencyOS v1.0: trung bình 5 phút
 ```
 
 ## Đóng góp cộng đồng
@@ -212,19 +212,19 @@ Giải quyết bug:
 ## Hỗ trợ và tài nguyên
 
 ### Nhận trợ giúp
-- [Discord Community](https://mekongmarketing.com/discord) - Chat real-time với cộng đồng
+- [Discord Community](https://agencyos.network/discord) - Chat real-time với cộng đồng
 - [GitHub Issues](https://github.com/mekong/mekong/issues) - Báo cáo bug và yêu cầu tính năng
 - [Documentation](../) - Tài liệu tham khảo đầy đủ
-- [Email Support](mailto:support@mekongmarketing.com) - Hỗ trợ doanh nghiệp
+- [Email Support](mailto:support@agencyos.network) - Hỗ trợ doanh nghiệp
 
 ### Đóng góp
-- [Contributing Guide](../development/contributing.md) - Cách đóng góp cho Mekong Marketing
+- [Contributing Guide](../development/contributing.md) - Cách đóng góp cho AgencyOS
 - [Skill Development](../development/creating-skills.md) - Tạo skill tùy chỉnh
-- [Plugin Development](../development/plugins.md) - Mở rộng chức năng Mekong Marketing
-- [Translation Project](https://translate.mekongmarketing.com) - Giúp dịch Mekong Marketing
+- [Plugin Development](../development/plugins.md) - Mở rộng chức năng AgencyOS
+- [Translation Project](https://translate.agencyos.network) - Giúp dịch AgencyOS
 
 ---
 
-**Cập nhật**: Tham gia [Discord](https://mekongmarketing.com/discord) để nhận thông báo và cập nhật.
+**Cập nhật**: Tham gia [Discord](https://agencyos.network/discord) để nhận thông báo và cập nhật.
 
 **Chu kỳ phát hành**: Phát hành định kỳ vào ngày 1 mỗi tháng. Bản vá bảo mật phát hành khi cần.

@@ -14,7 +14,7 @@ published: true
 
 # Starting a New Project
 
-Learn how to bootstrap a new project with Mekong Marketing, from initial requirements to deployed application. This guide walks through a real-world example of building a task management API.
+Learn how to bootstrap a new project with AgencyOS, from initial requirements to deployed application. This guide walks through a real-world example of building a task management API.
 
 ## Overview
 
@@ -26,7 +26,7 @@ Learn how to bootstrap a new project with Mekong Marketing, from initial require
 ## Prerequisites
 
 - Node.js 18+ installed
-- Mekong Marketing CLI installed (`npm install -g mekong-cli`)
+- AgencyOS CLI installed (`npm install -g mekong-cli`)
 - GitHub account
 - Basic understanding of REST APIs
 
@@ -51,7 +51,7 @@ claude
 **Interactive Q&A:**
 
 ```
-🤖 Mekong Marketing: I'll help you bootstrap a REST API for task management. Let me ask a few questions:
+🤖 AgencyOS: I'll help you bootstrap a REST API for task management. Let me ask a few questions:
 
 Q1: What's your primary tech stack preference?
    1. Node.js + Express
@@ -192,7 +192,7 @@ Next steps:
 4. npm run dev
 ```
 
-### Option B: Using Mekong Marketing CLI
+### Option B: Using AgencyOS CLI
 
 ```bash
 # Interactive setup
@@ -204,7 +204,7 @@ mk new
 ? Authentication: JWT
 
 ✓ Project created
-✓ Mekong Marketing configured
+✓ AgencyOS configured
 ✓ Dependencies installed
 
 cd task-api
@@ -353,7 +353,7 @@ Coverage:    87.3%
 ### If Tests Fail
 
 ```bash
-# Use Mekong Marketing to fix
+# Use AgencyOS to fix
 /fix:test
 ```
 
@@ -490,7 +490,7 @@ cat docs/architecture.md
 git status
 git diff
 
-# Commit with Mekong Marketing
+# Commit with AgencyOS
 /git:cm
 ```
 
@@ -507,7 +507,7 @@ feat: initialize task management API
 - Add Swagger API documentation
 - Configure Docker for deployment
 
-🤖 Generated with Mekong Marketing
+🤖 Generated with AgencyOS
 ```
 
 ## Step 9: Set Up CI/CD
@@ -728,4 +728,4 @@ npx prisma migrate reset
 
 ---
 
-**Congratulations!** You've built a complete, production-ready REST API with Mekong Marketing in under an hour. This same approach works for any type of project.
+**Congratulations!** You've built a complete, production-ready REST API with AgencyOS in under an hour. This same approach works for any type of project.

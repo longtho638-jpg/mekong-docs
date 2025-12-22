@@ -10,11 +10,11 @@ lastUpdated: 2025-11-07
 
 # Brownfield Projects
 
-Integrate Mekong Marketing into your existing projects to enhance development workflow with AI-powered agents. Perfect for legacy codebases, team projects, and gradual AI adoption.
+Integrate AgencyOS into your existing projects to enhance development workflow with AI-powered agents. Perfect for legacy codebases, team projects, and gradual AI adoption.
 
 ## Installation
 
-### 1. Install Mekong Marketing CLI
+### 1. Install AgencyOS CLI
 
 ```bash
 npm i -g mekong-cli@latest
@@ -32,7 +32,7 @@ cd /path/to/your/existing/project
 claude
 ```
 
-This will start Mekong CLI (CC) with Mekong Marketing agents in your project directory.
+This will start Mekong CLI (CC) with AgencyOS agents in your project directory.
 
 ## Initial Setup
 
@@ -281,7 +281,7 @@ Share `.claude/` directory and generated specs with your team via git.
 # 1. Clone repository
 git clone <repo-url>
 
-# 2. Install Mekong Marketing
+# 2. Install AgencyOS
 npm i -g mekong-cli@latest
 
 # 3. Navigate to project
@@ -304,7 +304,7 @@ claude
 
 ### Commands Not Working
 ```bash
-# Verify Mekong Marketing installation
+# Verify AgencyOS installation
 mk --version
 
 # Restart Mekong CLI

@@ -1,6 +1,6 @@
 ---
-title: "Mekong Marketing Cheatsheet"
-description: "Quick reference for Mekong Marketing commands - essential commands for AI-powered development workflow."
+title: "AgencyOS Cheatsheet"
+description: "Quick reference for AgencyOS commands - essential commands for AI-powered development workflow."
 section: getting-started
 category: "getting-started"
 order: 5
@@ -8,27 +8,27 @@ published: true
 lastUpdated: 2025-11-07
 ---
 
-# Mekong Marketing Cheatsheet
+# AgencyOS Cheatsheet
 
-Quick reference guide for Mekong Marketing CLI commands and workflows.
+Quick reference guide for AgencyOS CLI commands and workflows.
 
 ## Installation
 
 ```bash
-# Install Mekong Marketing globally
+# Install AgencyOS globally
 npm i -g mekong-cli@latest
 
 # Check version
 mk --version
 ```
 
-## Starting Mekong Marketing
+## Starting AgencyOS
 
 ```bash
 # Navigate to your project
 cd /path/to/project
 
-# Start Mekong CLI with Mekong Marketing
+# Start Mekong CLI with AgencyOS
 claude
 ```
 
@@ -205,7 +205,7 @@ mk init --kit engineer --dir /path/to/project
 ### Brownfield Project Setup
 
 ```bash
-# 1. Install Mekong Marketing
+# 1. Install AgencyOS
 npm i -g mekong-cli@latest
 
 # 2. Go to project
@@ -224,7 +224,7 @@ claude
 ### Greenfield Project Setup
 
 ```bash
-# 1. Install Mekong Marketing
+# 1. Install AgencyOS
 npm i -g mekong-cli@latest
 
 # 2. Initialize project
@@ -420,7 +420,7 @@ More detailed descriptions = better results
 ### Command Not Working
 
 ```bash
-# Check Mekong Marketing version
+# Check AgencyOS version
 mk --version
 
 # Restart Mekong CLI
@@ -540,7 +540,7 @@ mk --version
 
 ## Resources
 
-- [Full Documentation](https://docs.mekongmarketing.com)
+- [Full Documentation](https://docs.agencyos.network)
 - [All Commands](/docs/commands/)
 - [AI Agents](/docs/agents/)
 - [Workflows](/docs/docs/configuration/workflows)
@@ -549,4 +549,4 @@ mk --version
 
 ---
 
-**Print this page** or keep it open while working with Mekong Marketing for quick command reference!
+**Print this page** or keep it open while working with AgencyOS for quick command reference!

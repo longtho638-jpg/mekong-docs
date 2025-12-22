@@ -18,7 +18,7 @@ export const ui = {
     'theme.toggle': 'Toggle theme',
     'language.switch': 'Switch language',
     'header.search': 'Search',
-    'footer.copyright': '© 2025 Mekong Marketing. All rights reserved.',
+    'footer.copyright': '© 2025 AgencyOS. All rights reserved.',
     'toc.title': 'On this page',
   },
   vi: {
@@ -40,7 +40,7 @@ export const ui = {
     'theme.toggle': 'Đổi chủ đề',
     'language.switch': 'Đổi ngôn ngữ',
     'header.search': 'Tìm kiếm',
-    'footer.copyright': '© 2025 Mekong Marketing. Mọi quyền được bảo lưu.',
+    'footer.copyright': '© 2025 AgencyOS. Mọi quyền được bảo lưu.',
     'toc.title': 'Trong trang này',
   },
 } as const;

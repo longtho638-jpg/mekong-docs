@@ -125,7 +125,7 @@ Dùng slash commands bên trong phiên uỷ nhiệm:
 # Thực thi lệnh /cook trong phiên GLM
 ccs glm -p "/cook tạo landing page responsive"
 
-# Sử dụng lệnh Mekong Marketing
+# Sử dụng lệnh AgencyOS
 ccs glm -p "/fix:test chạy tất cả tests và sửa lỗi"
 ```
 
@@ -233,7 +233,7 @@ ccs glm:continue -p "cũng cập nhật ví dụ trong README"
 ccs glm:continue -p "thêm error handling"
 ```
 
-## Tích hợp với Mekong Marketing
+## Tích hợp với AgencyOS
 
 ### Quy trình khuyến nghị
 
@@ -290,8 +290,8 @@ rm -rf ~/.ccs
 
 ## Bước tiếp theo
 
-- [Hướng Dẫn Cài Đặt](/vi/docs/getting-started/installation) - Thiết lập Mekong Marketing
-- [Quy Trình](/vi/docs/workflows/) - Học quy trình Mekong Marketing
+- [Hướng Dẫn Cài Đặt](/vi/docs/getting-started/installation) - Thiết lập AgencyOS
+- [Quy Trình](/vi/docs/workflows/) - Học quy trình AgencyOS
 - [FAQ](/vi/docs/support/troubleshooting) - Câu hỏi thường gặp
 
 ---

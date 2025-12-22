@@ -53,7 +53,7 @@ ${pageContent}`;
   const openInClaude = () => {
     // Claude.ai doesn't currently support URL parameter pre-fill (stopped working ~Oct 2024)
     // Best approach: copy to clipboard + open Claude, with toast notification
-    const prompt = `Help me understand this Mekong Marketing documentation:\n\n${getPrompt()}`;
+    const prompt = `Help me understand this AgencyOS documentation:\n\n${getPrompt()}`;
     navigator.clipboard.writeText(prompt).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
@@ -64,7 +64,7 @@ ${pageContent}`;
   const openInChatGPT = () => {
     // ChatGPT supports ?q= URL parameter for pre-filling prompts
     // Note: Very long prompts may get truncated, so we limit to ~6000 chars
-    const prompt = `Help me understand this Mekong Marketing documentation:\n\n${getPrompt()}`;
+    const prompt = `Help me understand this AgencyOS documentation:\n\n${getPrompt()}`;
     const truncatedPrompt = prompt.slice(0, 6000);
     const encoded = encodeURIComponent(truncatedPrompt);
     window.open(`https://chatgpt.com/?q=${encoded}`, '_blank');

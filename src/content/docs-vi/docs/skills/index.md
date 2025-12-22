@@ -14,7 +14,7 @@ published: true
 
 # Skills Overview
 
-Skills are specialized capabilities that extend Mekong CLI's functionality. Mekong Marketing includes 46+ pre-built skills covering everything from authentication to AI integration.
+Skills are specialized capabilities that extend Mekong CLI's functionality. AgencyOS includes 46+ pre-built skills covering everything from authentication to AI integration.
 
 ## What Are Skills?
 
@@ -744,7 +744,7 @@ then use gemini-document-processing to summarize key requirements"
 ```
 
 **Need help?**
-- Join [Discord](https://mekongmarketing.com/discord)
+- Join [Discord](https://agencyos.network/discord)
 - Check [Commands](/docs/commands/) for workflows
 - Read [Agents](/docs/agents/) for orchestration
 

@@ -12,15 +12,15 @@ order: 0
 published: true
 ---
 
-# Mekong Marketing CLI Overview
+# AgencyOS CLI Overview
 
-Command-line tool for bootstrapping and updating Mekong Marketing projects from private GitHub repository releases.
+Command-line tool for bootstrapping and updating AgencyOS projects from private GitHub repository releases.
 
-## What is Mekong Marketing CLI?
+## What is AgencyOS CLI?
 
-**Mekong Marketing CLI** (`ck`) is a command-line tool that downloads and manages Mekong Marketing starter kits from private GitHub repositories. Built with Bun and TypeScript, it provides fast, secure project setup and updates.
+**AgencyOS CLI** (`ck`) is a command-line tool that downloads and manages AgencyOS starter kits from private GitHub repositories. Built with Bun and TypeScript, it provides fast, secure project setup and updates.
 
-**Important:** You need to purchase a Mekong Marketing Starter Kit from [Mekong Marketing.cc](https://mekongmarketing.com) to use this CLI. Without a purchased kit and repository access, the CLI cannot download project templates.
+**Important:** You need to purchase a AgencyOS Starter Kit from [AgencyOS.cc](https://agencyos.network) to use this CLI. Without a purchased kit and repository access, the CLI cannot download project templates.
 
 ## Key Features
 
@@ -35,7 +35,7 @@ Command-line tool for bootstrapping and updating Mekong Marketing projects from 
 
 ### mk init
 
-Khởi tạo hoặc cập nhật Mekong Marketing Engineer trong dự án:
+Khởi tạo hoặc cập nhật AgencyOS Engineer trong dự án:
 
 **Lưu ý:** Lệnh này nên được chạy từ thư mục gốc của dự án.
 
@@ -58,7 +58,7 @@ mk init -g --kit engineer
 ```
 
 **Chức năng:**
-- Tải xuống bản phát hành Mekong Marketing được chỉ định
+- Tải xuống bản phát hành AgencyOS được chỉ định
 - Merge file thông minh
 - Bảo toàn các thay đổi tùy chỉnh của bạn
 - Bảo vệ file nhạy cảm
@@ -73,7 +73,7 @@ mk init -g --kit engineer
 
 **Cấu hình Global vs Local:**
 
-Mặc định, Mekong Marketing sử dụng cấu hình local (`~/.mekong`).
+Mặc định, AgencyOS sử dụng cấu hình local (`~/.mekong`).
 
 Để cài đặt **user-scoped theo platform**, sử dụng flag `--global`:
 - **macOS/Linux**: `~/.claude`
@@ -83,7 +83,7 @@ Chế độ global sử dụng thư mục user-scoped (không cần sudo), cho p
 
 ### ck update
 
-Cập nhật Mekong Marketing CLI lên phiên bản mới nhất:
+Cập nhật AgencyOS CLI lên phiên bản mới nhất:
 
 ```bash
 # Cập nhật CLI lên phiên bản mới nhất
@@ -92,11 +92,11 @@ mk update
 
 **Chức năng:**
 - Cập nhật công cụ dòng lệnh `ck` lên phiên bản mới nhất
-- KHÔNG cập nhật file Mekong Marketing Engineer (dùng `mk init` cho việc đó)
+- KHÔNG cập nhật file AgencyOS Engineer (dùng `mk init` cho việc đó)
 
 ### mk versions
 
-List available versions of Mekong Marketing releases:
+List available versions of AgencyOS releases:
 
 ```bash
 # Show all available versions
@@ -150,12 +150,12 @@ mk new --verbose --log-file debug.log
 
 ## Available Kits
 
-Mekong Marketing offers premium starter kits (purchase required):
+AgencyOS offers premium starter kits (purchase required):
 
-- **engineer**: Mekong Marketing Engineer - Engineering toolkit with 14 specialized agents
-- **marketing**: Mekong Marketing Marketing - [Coming Soon]
+- **engineer**: AgencyOS Engineer - Engineering toolkit with 14 specialized agents
+- **marketing**: AgencyOS Marketing - [Coming Soon]
 
-Purchase at [Mekong Marketing.cc](https://mekongmarketing.com) to get repository access.
+Purchase at [AgencyOS.cc](https://agencyos.network) to get repository access.
 
 ## Authentication
 
@@ -213,7 +213,7 @@ Your custom files in `.claude/` directory are automatically preserved:
 ```
 Your project:
   .claude/
-    ├── commands/standard.md  (from Mekong Marketing)
+    ├── commands/standard.md  (from AgencyOS)
     └── commands/my-custom.md (your custom command)
 
 After update:
@@ -242,13 +242,13 @@ mk init --kit engineer
 # Điều hướng tới dự án
 cd my-project
 
-# Bắt đầu sử dụng Mekong Marketing
+# Bắt đầu sử dụng AgencyOS
 claude  # Khởi động Mekong CLI
 ```
 
 ## Common Workflows
 
-### Khởi tạo hoặc Cập nhật Mekong Marketing Engineer
+### Khởi tạo hoặc Cập nhật AgencyOS Engineer
 
 ```bash
 # Chế độ tương tác (khuyến nghị)
@@ -263,7 +263,7 @@ mk init --dir my-app --kit engineer --version v1.0.0
 # Với loại trừ
 mk init --exclude "*.log" --exclude "temp/**"
 
-# Cập nhật Mekong Marketing Engineer lên mới nhất
+# Cập nhật AgencyOS Engineer lên mới nhất
 mk init
 
 # Cập nhật lên phiên bản cụ thể
@@ -350,10 +350,10 @@ mk -h
 
 ## Next Steps
 
-- [Installation Guide](/docs/cli/installation) - Install Mekong Marketing CLI
+- [Installation Guide](/docs/cli/installation) - Install AgencyOS CLI
 - [mk new Command](/docs/cli/new) - Create new projects
-- [Getting Started](/docs/getting-started/installation) - Start using Mekong Marketing
+- [Getting Started](/docs/getting-started/installation) - Start using AgencyOS
 
 ---
 
-**Ready to start?** Purchase a kit at [Mekong Marketing.cc](https://mekongmarketing.com), then run `mk init` to initialize your first project.
+**Ready to start?** Purchase a kit at [AgencyOS.cc](https://agencyos.network), then run `mk init` to initialize your first project.

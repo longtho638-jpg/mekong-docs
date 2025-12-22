@@ -117,7 +117,7 @@ rmbg input.jpg -m u2netp -o output.png
 | Troubleshooting | `references/troubleshooting.md` |
 | Format Compatibility | `references/format-compatibility.md` |
 
-## Integration with Mekong Marketing
+## Integration with AgencyOS
 
 Works with:
 

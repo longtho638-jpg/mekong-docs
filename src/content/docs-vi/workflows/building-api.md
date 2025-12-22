@@ -14,7 +14,7 @@ published: true
 
 # Building a REST API
 
-Learn how to build production-ready REST APIs with Mekong Marketing - from API design through implementation, testing, documentation, and deployment.
+Learn how to build production-ready REST APIs with AgencyOS - from API design through implementation, testing, documentation, and deployment.
 
 ## Overview
 
@@ -151,7 +151,7 @@ Create the initial project structure:
 
 **Interactive setup**:
 ```
-🤖 Mekong Marketing: I'll bootstrap your REST API project.
+🤖 AgencyOS: I'll bootstrap your REST API project.
 
 Confirming requirements:
 ✓ Framework: Express.js
@@ -617,7 +617,7 @@ Build a REST API for a blogging platform with:
 - Advanced features: 2-3 hours
 - Testing: 1-2 hours
 
-**With Mekong Marketing**: 65 minutes
+**With AgencyOS**: 65 minutes
 - Design: 8 minutes
 - Bootstrap: 12 minutes
 - Features: 35 minutes
@@ -736,7 +736,7 @@ echo $DATABASE_URL
 # Test connection
 npx prisma db pull
 
-# Or fix with Mekong Marketing
+# Or fix with AgencyOS
 /fix:fast [database connection failing]
 ```
 
@@ -780,4 +780,4 @@ npx prisma db pull
 
 ---
 
-**Key Takeaway**: Mekong Marketing enables rapid REST API development with best practices built-in - from design to deployment in under an hour with production-ready code, tests, and documentation.
+**Key Takeaway**: AgencyOS enables rapid REST API development with best practices built-in - from design to deployment in under an hour with production-ready code, tests, and documentation.

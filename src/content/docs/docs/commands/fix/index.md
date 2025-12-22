@@ -19,7 +19,7 @@ Intelligent issue router. Analyzes your issue description and automatically rout
 
 ## When to Use
 
-- **Any Bug or Issue**: Let Mekong Marketing decide the approach
+- **Any Bug or Issue**: Let AgencyOS decide the approach
 - **Unknown Complexity**: Don't know if simple or complex
 - **Quick Workflow**: Describe problem, let router decide
 - **Multiple Issues**: Can detect and route to parallel fixing

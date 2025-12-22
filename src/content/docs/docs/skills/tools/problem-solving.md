@@ -100,7 +100,7 @@ Test at extremes (1000x bigger/smaller, instant/year-long) to expose fundamental
 | Scale Game | `references/scale-game.md` |
 | Attribution | `references/attribution.md` |
 
-## Integration with Mekong Marketing
+## Integration with AgencyOS
 
 Works with:
 

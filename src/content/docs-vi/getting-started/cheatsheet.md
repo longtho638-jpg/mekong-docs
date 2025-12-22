@@ -1,6 +1,6 @@
 ---
-title: "Mekong Marketing Cheatsheet"
-description: "Tham khảo nhanh các lệnh Mekong Marketing - lệnh thiết yếu cho quy trình phát triển AI-powered."
+title: "AgencyOS Cheatsheet"
+description: "Tham khảo nhanh các lệnh AgencyOS - lệnh thiết yếu cho quy trình phát triển AI-powered."
 section: getting-started
 category: getting-started
 order: 5
@@ -8,27 +8,27 @@ published: true
 lastUpdated: 2025-11-07
 ---
 
-# Mekong Marketing Cheatsheet
+# AgencyOS Cheatsheet
 
-Hướng dẫn tham khảo nhanh cho Mekong Marketing CLI commands và workflows.
+Hướng dẫn tham khảo nhanh cho AgencyOS CLI commands và workflows.
 
 ## Cài Đặt
 
 ```bash
-# Cài Mekong Marketing globally
+# Cài AgencyOS globally
 npm i -g mekong-cli@latest
 
 # Kiểm tra phiên bản
 mk --version
 ```
 
-## Khởi Động Mekong Marketing
+## Khởi Động AgencyOS
 
 ```bash
 # Di chuyển đến dự án
 cd /đường/dẫn/đến/dự/án
 
-# Khởi động Mekong CLI với Mekong Marketing
+# Khởi động Mekong CLI với AgencyOS
 claude
 ```
 
@@ -205,7 +205,7 @@ mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 ### Thiết Lập Dự Án Brownfield
 
 ```bash
-# 1. Cài Mekong Marketing
+# 1. Cài AgencyOS
 npm i -g mekong-cli@latest
 
 # 2. Đi đến dự án
@@ -224,7 +224,7 @@ claude
 ### Thiết Lập Dự Án Greenfield
 
 ```bash
-# 1. Cài Mekong Marketing
+# 1. Cài AgencyOS
 npm i -g mekong-cli@latest
 
 # 2. Tạo dự án
@@ -420,7 +420,7 @@ Mô tả chi tiết hơn = kết quả tốt hơn
 ### Lệnh Không Hoạt Động
 
 ```bash
-# Kiểm tra phiên bản Mekong Marketing
+# Kiểm tra phiên bản AgencyOS
 mk --version
 
 # Khởi động lại Mekong CLI
@@ -540,7 +540,7 @@ mk --version
 
 ## Tài Nguyên
 
-- [Tài Liệu Đầy Đủ](https://docs.mekongmarketing.com)
+- [Tài Liệu Đầy Đủ](https://docs.agencyos.network)
 - [Tất Cả Lệnh](/vi/docs/commands/)
 - [AI Agents](/vi/docs/agents/)
 - [Workflows](/vi/docs/core-concepts/workflows)
@@ -549,4 +549,4 @@ mk --version
 
 ---
 
-**In trang này** hoặc giữ mở khi làm việc với Mekong Marketing để tham khảo lệnh nhanh!
+**In trang này** hoặc giữ mở khi làm việc với AgencyOS để tham khảo lệnh nhanh!

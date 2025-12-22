@@ -1,6 +1,6 @@
 ---
 title: "Support"
-description: "Get help with Mekong Marketing through community, documentation, and direct support channels"
+description: "Get help with AgencyOS through community, documentation, and direct support channels"
 section: support
 order: 0
 published: true
@@ -8,14 +8,14 @@ published: true
 
 # Support
 
-Get help with Mekong Marketing through our community resources, documentation, and direct support channels.
+Get help with AgencyOS through our community resources, documentation, and direct support channels.
 
 ## Quick Help
 
 ### Stuck on something specific?
 - [FAQ](/docs/support/faq) - Answers to common questions
 - [Troubleshooting](/docs/support/troubleshooting) - Solutions to common issues
-- [Discord Community](https://mekongmarketing.com/discord) - Real-time help from community
+- [Discord Community](https://agencyos.network/discord) - Real-time help from community
 
 ### Looking for how-to guides?
 - [Getting Started](/docs/getting-started) - Learn the basics
@@ -25,10 +25,10 @@ Get help with Mekong Marketing through our community resources, documentation, a
 ## Community Support
 
 ### Discord Community
-[**Join Mekong Marketing Discord**](https://mekongmarketing.com/discord)
+[**Join AgencyOS Discord**](https://agencyos.network/discord)
 
 **What you'll find**:
-- Real-time chat with Mekong Marketing users and developers
+- Real-time chat with AgencyOS users and developers
 - Help with specific commands and workflows
 - Share your projects and get feedback
 - Feature request discussions
@@ -46,13 +46,13 @@ Get help with Mekong Marketing through our community resources, documentation, a
 
 **Best for**:
 - Feature requests and ideas
-- General questions about Mekong Marketing
+- General questions about AgencyOS
 - Sharing workflows and techniques
 - Community feedback and polls
 - Long-form discussions
 
 ### Stack Overflow
-[**Mekong Marketing on Stack Overflow**](https://stackoverflow.com/questions/tagged/mekong)
+[**AgencyOS on Stack Overflow**](https://stackoverflow.com/questions/tagged/mekong)
 
 **Use when**:
 - You have a specific technical question
@@ -75,7 +75,7 @@ Get help with Mekong Marketing through our community resources, documentation, a
 - [Workflow Examples](/docs/workflows) - Real-world workflows
 - [Use Cases](/docs/workflows) - Practical applications
 - [Quick Start Guide](/docs/getting-started/quick-start) - First project in 15 minutes
-- [Migration Guide](/docs/getting-started/upgrade-guide) - From Mekong CLI to Mekong Marketing
+- [Migration Guide](/docs/getting-started/upgrade-guide) - From Mekong CLI to AgencyOS
 
 ### Code Examples
 - [GitHub Repository](https://github.com/mekong/examples) - Example projects
@@ -85,7 +85,7 @@ Get help with Mekong Marketing through our community resources, documentation, a
 ## Direct Support
 
 ### Email Support
-**support@mekongmarketing.com**
+**support@agencyos.network**
 
 **Response time**: Within 24 business hours
 
@@ -97,7 +97,7 @@ Get help with Mekong Marketing through our community resources, documentation, a
 - Security vulnerability reports
 
 ### Business Support
-**Business@mekongmarketing.com**
+**Business@agencyos.network**
 
 **For**:
 - Enterprise deployments
@@ -107,7 +107,7 @@ Get help with Mekong Marketing through our community resources, documentation, a
 - SLA and support agreements
 
 ### Security Issues
-**security@mekongmarketing.com**
+**security@agencyos.network**
 
 **For**:
 - Security vulnerability reports
@@ -129,7 +129,7 @@ Get help with Mekong Marketing through our community resources, documentation, a
 ### When Asking for Help
 
 **Include in your request**:
-- Mekong Marketing version (`mekong --version`)
+- AgencyOS version (`mekong --version`)
 - Operating system and version
 - Node.js version (`node --version`)
 - Specific command or workflow you're using
@@ -141,7 +141,7 @@ Get help with Mekong Marketing through our community resources, documentation, a
 ```
 Hi! I'm having trouble with the /cook command on my Next.js project.
 
-Mekong Marketing version: 1.0.0
+AgencyOS version: 1.0.0
 OS: macOS 14.0
 Node.js: v18.17.0
 
@@ -155,7 +155,7 @@ Project structure:
 - package.json includes better-auth
 - .claude/CLAUDE.md configured
 
-I've tried running /skill:refresh and restarting Mekong Marketing.
+I've tried running /skill:refresh and restarting AgencyOS.
 ```
 
 ### Where to Ask
@@ -172,7 +172,7 @@ I've tried running /skill:refresh and restarting Mekong Marketing.
 - Discord `#feature-requests`
 
 **Business inquiries**:
-- Email support@mekongmarketing.com
+- Email support@agencyos.network
 - Direct message on Discord
 
 ## Contributing
@@ -183,7 +183,7 @@ I've tried running /skill:refresh and restarting Mekong Marketing.
 - Suggest improvements via Discord
 
 ### Share Your Experience
-- Write blog posts about your Mekong Marketing workflows
+- Write blog posts about your AgencyOS workflows
 - Share custom skills with the community
 - Create video tutorials
 - Contribute to GitHub discussions
@@ -212,29 +212,29 @@ I've tried running /skill:refresh and restarting Mekong Marketing.
 ## Additional Resources
 
 ### Learning Resources
-- [Blog](https://mekongmarketing.com/blog) - Tips, tricks, and announcements
+- [Blog](https://agencyos.network/blog) - Tips, tricks, and announcements
 - [YouTube Channel](https://youtube.com/@mekong) - Video tutorials and demos
-- [Newsletter](https://mekongmarketing.com/newsletter) - Weekly tips and updates
+- [Newsletter](https://agencyos.network/newsletter) - Weekly tips and updates
 
 ### Professional Services
-- [Mekong Marketing Pro Services](https://mekongmarketing.com/pro) - Enterprise consulting
-- [Training Programs](https://mekongmarketing.com/training) - Team workshops and onboarding
-- [Certification](https://mekongmarketing.com/certification) - Become a Mekong Marketing expert
+- [AgencyOS Pro Services](https://agencyos.network/pro) - Enterprise consulting
+- [Training Programs](https://agencyos.network/training) - Team workshops and onboarding
+- [Certification](https://agencyos.network/certification) - Become a AgencyOS expert
 
 ### Developer Resources
-- [API Documentation](/docs/api) - For extending Mekong Marketing
+- [API Documentation](/docs/api) - For extending AgencyOS
 - [Plugin Development](/docs/development/plugins) - Create extensions
 - [Skill Development](/docs/development/creating-skills) - Build custom skills
 
 ## Feedback
 
-We value your feedback! Help us improve Mekong Marketing:
+We value your feedback! Help us improve AgencyOS:
 
 - [Feature Requests](https://github.com/mekong/mekong/discussions/categories/feature-requests)
 - [Bug Reports](https://github.com/mekong/mekong/issues)
 - [Documentation Feedback](https://github.com/mekong/mekong/discussions/categories/documentation)
-- [Community Survey](https://mekongmarketing.com/survey) - Share your experience
+- [Community Survey](https://agencyos.network/survey) - Share your experience
 
 ---
 
-**Need immediate help?** Join our [Discord community](https://mekongmarketing.com/discord) for real-time assistance from fellow users and the Mekong Marketing team.
+**Need immediate help?** Join our [Discord community](https://agencyos.network/discord) for real-time assistance from fellow users and the AgencyOS team.

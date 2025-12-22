@@ -1,6 +1,6 @@
 ---
 title: "Công Cụ & Tiện Ích"
-description: "Các công cụ và tiện ích trong hệ sinh thái giúp nâng cao quy trình làm việc với Mekong Marketing"
+description: "Các công cụ và tiện ích trong hệ sinh thái giúp nâng cao quy trình làm việc với AgencyOS"
 section: tools
 category: tools
 order: 1
@@ -9,7 +9,7 @@ published: true
 
 # Công cụ & tiện ích
 
-Các công cụ trong hệ sinh thái giúp bổ trợ cho Mekong Marketing và nâng cao quy trình phát triển của bạn.
+Các công cụ trong hệ sinh thái giúp bổ trợ cho AgencyOS và nâng cao quy trình phát triển của bạn.
 
 ## Công cụ chính thức
 
@@ -26,7 +26,7 @@ Chuyển đổi giữa nhiều tài khoản Claude và các mô hình AI (GLM, K
 - 🔐 Xác thực OAuth và API key
 
 **Trường hợp sử dụng:**
-- Người dùng Mekong Marketing liên tục thường xuyên chạm giới hạn sử dụng
+- Người dùng AgencyOS liên tục thường xuyên chạm giới hạn sử dụng
 - Nhóm chia sẻ tài khoản Claude
 - Tối ưu chi phí cho các tác vụ đơn giản
 - Quy trình làm việc đa dự án
@@ -53,13 +53,13 @@ Chuyển đổi giữa nhiều tài khoản Claude và các mô hình AI (GLM, K
 
 ## Đóng góp công cụ
 
-Bạn có công cụ giúp nâng cao Mekong Marketing? Chúng tôi rất muốn giới thiệu nó!
+Bạn có công cụ giúp nâng cao AgencyOS? Chúng tôi rất muốn giới thiệu nó!
 
 **Yêu Cầu:**
 - Mã nguồn mở (MIT, Apache 2.0, hoặc tương tự)
 - Tài liệu đầy đủ
 - Được bảo trì tích cực
-- Giải quyết vấn đề thực tế của người dùng Mekong Marketing
+- Giải quyết vấn đề thực tế của người dùng AgencyOS
 
 **Gửi qua:**
 - [GitHub](https://github.com/mekong/mekong-docs/pulls)

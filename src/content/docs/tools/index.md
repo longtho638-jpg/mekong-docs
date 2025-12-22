@@ -1,6 +1,6 @@
 ---
 title: "Tools & Utilities"
-description: "Ecosystem tools and utilities that enhance your Mekong Marketing workflow"
+description: "Ecosystem tools and utilities that enhance your AgencyOS workflow"
 section: tools
 category: tools
 order: 1
@@ -9,7 +9,7 @@ published: true
 
 # Tools & Utilities
 
-Ecosystem tools that complement Mekong Marketing and enhance your development workflow.
+Ecosystem tools that complement AgencyOS and enhance your development workflow.
 
 ## Official Tools
 
@@ -26,7 +26,7 @@ Switch between multiple Claude accounts and AI models (GLM, Kimi) instantly to a
 - 🔐 OAuth and API key authentication
 
 **Use Cases:**
-- Heavy Mekong Marketing users hitting rate limits
+- Heavy AgencyOS users hitting rate limits
 - Teams sharing Claude accounts
 - Cost optimization for simple tasks
 - Multi-project workflows
@@ -53,13 +53,13 @@ Switch between multiple Claude accounts and AI models (GLM, Kimi) instantly to a
 
 ## Contributing Tools
 
-Have a tool that enhances Mekong Marketing? We'd love to feature it!
+Have a tool that enhances AgencyOS? We'd love to feature it!
 
 **Requirements:**
 - Open source (MIT, Apache 2.0, or similar)
 - Well-documented
 - Actively maintained
-- Solves a real Mekong Marketing user problem
+- Solves a real AgencyOS user problem
 
 **Submit via:**
 - [GitHub](https://github.com/mekong/mekong-docs/pulls)

@@ -125,7 +125,7 @@ Use slash commands inside delegated sessions:
 # Execute /cook command in GLM session
 ccs glm -p "/cook create responsive landing page"
 
-# Use Mekong Marketing commands
+# Use AgencyOS commands
 ccs glm -p "/fix:test run all tests and fix failures"
 ```
 
@@ -247,7 +247,7 @@ ccs glm:continue -p "also update the README examples"
 ccs glm:continue -p "add error handling"
 ```
 
-## Integration with Mekong Marketing
+## Integration with AgencyOS
 
 ### Recommended Workflow
 
@@ -375,8 +375,8 @@ rm -rf ~/.ccs
 
 ## Next Steps
 
-- [Installation Guide](/docs/getting-started/installation) - Setup Mekong Marketing
-- [Workflows](/docs/workflows/) - Learn Mekong Marketing workflows
+- [Installation Guide](/docs/getting-started/installation) - Setup AgencyOS
+- [Workflows](/docs/workflows/) - Learn AgencyOS workflows
 - [FAQ](/docs/support/faq) - Common questions
 
 ---

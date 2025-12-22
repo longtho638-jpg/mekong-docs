@@ -124,7 +124,7 @@ python scripts/gemini_batch_process.py \
   --prompt "Describe each image"
 ```
 
-## Integration with Mekong Marketing
+## Integration with AgencyOS
 
 The ai-multimodal skill integrates with:
 

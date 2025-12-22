@@ -32,7 +32,7 @@ ls .claude/commands/
 # 3. Verify specific command file
 cat .claude/commands/core/cook.md
 
-# If files missing, reinitialize Mekong Marketing
+# If files missing, reinitialize AgencyOS
 mk init --kit engineer
 ```
 
@@ -299,7 +299,7 @@ description: My custom cook implementation
 **Solution**:
 
 ```bash
-# Initialize Mekong Marketing
+# Initialize AgencyOS
 mk init --kit engineer
 
 # Verify structure
@@ -349,7 +349,7 @@ icacls .claude /grant Everyone:F /T
 
 ### Required Files
 
-Mekong Marketing requires this structure:
+AgencyOS requires this structure:
 
 ```
 .claude/
@@ -434,7 +434,7 @@ mk diagnose --verbose
 echo "Node: $(node --version)"
 echo "npm: $(npm --version)"
 echo "Mekong CLI: $(claude --version)"
-echo "Mekong Marketing CLI: $(ck --version)"
+echo "AgencyOS CLI: $(ck --version)"
 echo "Working directory: $(pwd)"
 echo ".claude exists: $([ -d .claude ] && echo yes || echo no)"
 ```
@@ -443,7 +443,7 @@ echo ".claude exists: $([ -d .claude ] && echo yes || echo no)"
 
 ## Common Quick Fixes
 
-### Reset Mekong Marketing
+### Reset AgencyOS
 
 ```bash
 # Backup custom files
@@ -492,7 +492,7 @@ claude --dangerously-skip-permissions
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep Mekong Marketing updated: `mk init`
+- Keep AgencyOS updated: `mk init`
 - Backup .claude before modifications
 - Use correct frontmatter syntax
 - Verify command names are unique
@@ -501,7 +501,7 @@ claude --dangerously-skip-permissions
 ❌ **Don't**:
 - Modify core command files directly
 - Delete .claude directory without backup
-- Mix Mekong Marketing versions
+- Mix AgencyOS versions
 - Create commands without frontmatter
 - Use special characters in command names
 
@@ -543,7 +543,7 @@ claude --dangerously-skip-permissions
 ### Get Help
 
 1. **GitHub Issues**: [Report command problems](https://github.com/mekong/mekong-engineer/issues)
-2. **Discord**: [Ask community](https://mekongmarketing.com/discord)
+2. **Discord**: [Ask community](https://agencyos.network/discord)
 3. **Include**: Debug report, error message, steps to reproduce
 
 ---

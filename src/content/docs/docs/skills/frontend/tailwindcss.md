@@ -53,22 +53,22 @@ export default { plugins: [tailwindcss()] }
 ### Startup founder building MVP landing page
 **Prompt:** "Create a landing page with hero section, feature cards, and pricing table"
 
-**What happens:** Mekong Marketing generates mobile-first layout using Tailwind grid/flexbox utilities, consistent spacing scale (p-4, gap-6), responsive breakpoints (md:, lg:), and hover states - zero custom CSS files.
+**What happens:** AgencyOS generates mobile-first layout using Tailwind grid/flexbox utilities, consistent spacing scale (p-4, gap-6), responsive breakpoints (md:, lg:), and hover states - zero custom CSS files.
 
 ### Product designer implementing design system
 **Prompt:** "Build component library with our brand colors: primary #0066FF, secondary #00CC88"
 
-**What happens:** Mekong Marketing configures custom theme in `tailwind.config.js`, extends color palette with 50-950 shades, applies brand colors across buttons/cards/inputs, implements dark mode variants.
+**What happens:** AgencyOS configures custom theme in `tailwind.config.js`, extends color palette with 50-950 shades, applies brand colors across buttons/cards/inputs, implements dark mode variants.
 
 ### Developer adding responsive dashboard
 **Prompt:** "Create admin dashboard with sidebar, stats cards, and data table"
 
-**What happens:** Mekong Marketing uses Tailwind utilities for layout (`grid grid-cols-1 md:grid-cols-3`), spacing (`space-y-4`), shadows (`shadow-lg`), and breakpoint-specific navigation (`hidden md:block`).
+**What happens:** AgencyOS uses Tailwind utilities for layout (`grid grid-cols-1 md:grid-cols-3`), spacing (`space-y-4`), shadows (`shadow-lg`), and breakpoint-specific navigation (`hidden md:block`).
 
 ### SaaS team implementing dark mode
 **Prompt:** "Add dark mode toggle with system preference detection"
 
-**What happens:** Mekong Marketing configures `darkMode: 'class'`, adds dark variants (`bg-white dark:bg-gray-900`), implements toggle component with localStorage persistence, applies theme to all UI elements.
+**What happens:** AgencyOS configures `darkMode: 'class'`, adds dark variants (`bg-white dark:bg-gray-900`), implements toggle component with localStorage persistence, applies theme to all UI elements.
 
 ## Key Differences
 
@@ -182,4 +182,4 @@ function Button({ children }) {
 
 ## Key Takeaway
 
-Tailwind eliminates context switching between HTML/CSS by putting all styling in utility classes. Mekong Marketing leverages this for rapid prototyping - responsive layouts, dark mode, custom themes - all without writing a single CSS file.
+Tailwind eliminates context switching between HTML/CSS by putting all styling in utility classes. AgencyOS leverages this for rapid prototyping - responsive layouts, dark mode, custom themes - all without writing a single CSS file.

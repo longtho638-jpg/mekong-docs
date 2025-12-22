@@ -10,11 +10,11 @@ lastUpdated: 2025-11-07
 
 # Dự Án Brownfield
 
-Tích hợp Mekong Marketing vào dự án hiện tại để nâng cao quy trình phát triển với AI agents. Hoàn hảo cho legacy codebase, dự án nhóm, và áp dụng AI dần dần.
+Tích hợp AgencyOS vào dự án hiện tại để nâng cao quy trình phát triển với AI agents. Hoàn hảo cho legacy codebase, dự án nhóm, và áp dụng AI dần dần.
 
 ## Cài Đặt
 
-### 1. Cài Mekong Marketing CLI
+### 1. Cài AgencyOS CLI
 
 ```bash
 npm i -g mekong-cli@latest
@@ -32,7 +32,7 @@ cd /đường/dẫn/đến/dự/án/hiện/tại
 claude
 ```
 
-Lệnh này sẽ khởi động Mekong CLI (CC) với Mekong Marketing agents trong thư mục dự án.
+Lệnh này sẽ khởi động Mekong CLI (CC) với AgencyOS agents trong thư mục dự án.
 
 ## Thiết Lập Ban Đầu
 
@@ -281,7 +281,7 @@ Chia sẻ thư mục `.claude/` và specs đã tạo với team qua git.
 # 1. Clone repository
 git clone <repo-url>
 
-# 2. Cài Mekong Marketing
+# 2. Cài AgencyOS
 npm i -g mekong-cli@latest
 
 # 3. Di chuyển đến project
@@ -304,7 +304,7 @@ claude
 
 ### Lệnh Không Hoạt Động
 ```bash
-# Kiểm tra cài đặt Mekong Marketing
+# Kiểm tra cài đặt AgencyOS
 mk --version
 
 # Khởi động lại Mekong CLI

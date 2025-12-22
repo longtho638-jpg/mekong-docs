@@ -433,11 +433,11 @@ subscription_payments:
 
 Email reminder example:
 ---
-Tiêu đề: Gia hạn gói Mekong Marketing Pro
+Tiêu đề: Gia hạn gói AgencyOS Pro
 
 Xin chào [Tên],
 
-Gói Mekong Marketing Pro của bạn sẽ hết hạn vào 3 ngày nữa
+Gói AgencyOS Pro của bạn sẽ hết hạn vào 3 ngày nữa
 (ngày 15/11/2025).
 
 Để tiếp tục sử dụng, vui lòng thanh toán:
@@ -449,7 +449,7 @@ Nội dung: SUB[user_id]
 
 [Thanh toán ngay]
 
-Cảm ơn bạn đã tin dùng Mekong Marketing!
+Cảm ơn bạn đã tin dùng AgencyOS!
 ---
 
 ✓ Subscription billing complete (5 minutes)

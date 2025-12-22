@@ -16,7 +16,7 @@ published: true
 
 **Đội Ngũ Phát Triển AI Triển Khai Code Production**
 
-Mekong Marketing là 14 AI agents chuyên biệt được xây dựng trên Mekong CLI. Chúng lập kế hoạch, nghiên cứu, viết code, kiểm tra, review và triển khai tính năng - giống như thuê một đội senior dev mà không tốn chi phí.
+AgencyOS là 14 AI agents chuyên biệt được xây dựng trên Mekong CLI. Chúng lập kế hoạch, nghiên cứu, viết code, kiểm tra, review và triển khai tính năng - giống như thuê một đội senior dev mà không tốn chi phí.
 
 [Thử Quick Start →](/vi/docs/getting-started/quick-start)
 
@@ -25,4 +25,4 @@ Mekong Marketing là 14 AI agents chuyên biệt được xây dựng trên Meko
 **Fast track** (6 phút):
 1. [Quick Start](/vi/docs/getting-started/quick-start)
 
-[Lấy Mekong Marketing →](https://mekongmarketing.com)
+[Lấy AgencyOS →](https://agencyos.network)
