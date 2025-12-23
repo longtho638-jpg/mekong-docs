@@ -52,6 +52,22 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <!-- Urgency Countdown Banner -->
+    <div class="countdown-banner" id="countdown-banner">
+      <div class="banner-content">
+        <span class="fire-icon">🔥</span>
+        <span class="banner-text">
+          <strong>Early Bird Special:</strong> 50% OFF Pro Plan
+        </span>
+        <span class="countdown-timer">
+          <span class="timer-label">Ends in:</span>
+          <span class="timer" id="countdown-timer">00:00:00</span>
+        </span>
+        <a href="/pricing" class="banner-cta">Claim Now →</a>
+      </div>
+      <button class="banner-close" id="banner-close" aria-label="Close">✕</button>
+    </div>
+
     <!-- Simple Header -->
     <header class="landing-header">
       <div class="header-container">
@@ -698,5 +714,174 @@ const {
         widget.classList.remove('open');
       }
     });
+
+    // Countdown Banner
+    const banner = document.getElementById('countdown-banner');
+    const closeBtn = document.getElementById('banner-close');
+    const timerEl = document.getElementById('countdown-timer');
+    
+    // Check if dismissed
+    if (localStorage.getItem('banner-dismissed') === 'true') {
+      banner?.remove();
+    } else {
+      // Set end date (7 days from now or fixed date)
+      const endDate = new Date();
+      endDate.setDate(endDate.getDate() + 3); // 3 days from now
+      endDate.setHours(23, 59, 59, 0);
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endDate.getTime() - now;
+
+        if (distance < 0) {
+          if (timerEl) timerEl.textContent = '00:00:00';
+          return;
+        }
+
+        const hours = Math.floor(distance / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (timerEl) {
+          timerEl.textContent = 
+            `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // Close button
+      closeBtn?.addEventListener('click', () => {
+        banner?.remove();
+        localStorage.setItem('banner-dismissed', 'true');
+      });
+    }
   });
 </script>
+
+<style>
+  /* Countdown Banner */
+  .countdown-banner {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background: linear-gradient(90deg, #ef4444, #f97316, #eab308);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .banner-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fire-icon {
+    font-size: 1.25rem;
+    animation: bounce 0.5s infinite alternate;
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-3px); }
+  }
+
+  .banner-text {
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .banner-text strong {
+    font-weight: 700;
+  }
+
+  .countdown-timer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+  }
+
+  .timer-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+  }
+
+  .timer {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .banner-cta {
+    background: white;
+    color: #ef4444;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .banner-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .banner-close {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .banner-close:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .countdown-banner {
+      padding: 8px 12px;
+    }
+
+    .banner-content {
+      gap: 8px;
+    }
+
+    .banner-text {
+      font-size: 0.8rem;
+    }
+
+    .timer {
+      font-size: 0.9rem;
+    }
+
+    .banner-cta {
+      padding: 4px 12px;
+      font-size: 0.75rem;
+    }
+  }
+</style>

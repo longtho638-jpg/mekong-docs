@@ -32,10 +32,10 @@ Quick fixes for common issues. Most problems resolve in under 5 minutes.
 **Fix**:
 ```bash
 # Verify installation
-npm list -g agencyos-cli
+ls agencyos-starter
 
 # Reinstall if needed
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Verify
 mk --version

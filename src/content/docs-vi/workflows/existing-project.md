@@ -17,7 +17,7 @@ Tích hợp AgencyOS vào dự án hiện tại để nâng cao quy trình phát
 ### 1. Cài AgencyOS CLI
 
 ```bash
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ### 2. Di Chuyển Đến Dự Án
@@ -282,7 +282,7 @@ Chia sẻ thư mục `.claude/` và specs đã tạo với team qua git.
 git clone <repo-url>
 
 # 2. Cài AgencyOS
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # 3. Di chuyển đến project
 cd project-name

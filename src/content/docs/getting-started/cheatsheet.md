@@ -16,7 +16,7 @@ Quick reference guide for AgencyOS CLI commands and workflows.
 
 ```bash
 # Install AgencyOS globally
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Check version
 mk --version
@@ -206,7 +206,7 @@ mk init --kit engineer --dir /path/to/project
 
 ```bash
 # 1. Install AgencyOS
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # 2. Go to project
 cd /path/to/existing/project
@@ -225,7 +225,7 @@ claude
 
 ```bash
 # 1. Install AgencyOS
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # 2. Initialize project
 mk init --kit engineer --dir /path/to/project

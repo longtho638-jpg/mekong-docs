@@ -17,7 +17,7 @@ Tạo dự án mới từ đầu với quy trình phát triển AI-powered của
 ### 1. Cài AgencyOS CLI
 
 ```bash
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ## Bắt Đầu Nhanh

@@ -100,10 +100,10 @@ Install AgencyOS CLI globally:
 
 ```bash
 # npm
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # bun
-bun add -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Verify installation
 mk --version
@@ -219,7 +219,7 @@ mk update
 On macOS/Linux, you may need sudo:
 
 ```bash
-sudo npm install -g agencyos-cli
+sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 Or configure npm to use a different directory:

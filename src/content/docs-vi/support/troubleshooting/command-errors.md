@@ -120,10 +120,10 @@ Detailed implementation instructions...
 
 ```bash
 # Check if CLI installed
-npm list -g agencyos-cli
+ls agencyos-starter
 
 # If not installed
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Verify
 mk --version

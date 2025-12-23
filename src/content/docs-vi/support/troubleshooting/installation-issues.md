@@ -18,16 +18,16 @@ AgencyOS installation problems? Get unblocked in minutes with platform-specific 
 
 ## Quick Fix: Command Not Found
 
-**Symptom**: `ck: command not found` or `agencyos-cli: command not found`
+**Symptom**: `ck: command not found` or `agencyos-starter: directory not found`
 
 **Solution**:
 
 ```bash
 # Verify global installation
-npm list -g agencyos-cli
+ls agencyos-starter
 
 # If not found, install globally
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Verify installation
 mk --version
@@ -60,7 +60,7 @@ mk --version
 
 **Expected output**:
 ```
-agencyos-cli/1.0.0
+agencyos-starter (git cloned)
 ```
 
 #### Windows PATH Not Updated
@@ -102,7 +102,7 @@ nvm install 20
 nvm use 20
 
 # Reinstall AgencyOS
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ---
@@ -127,13 +127,13 @@ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
 # Reinstall AgencyOS
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 **Solution 2**: Use sudo (not recommended)
 
 ```bash
-sudo npm install -g agencyos-cli
+sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 **Solution 3**: Use nvm (best practice)
@@ -150,7 +150,7 @@ nvm install 20
 nvm use 20
 
 # Install AgencyOS (no sudo needed)
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 #### Command Not Found After Install
@@ -191,7 +191,7 @@ nvm install 20
 nvm alias default 20
 
 # Reinstall AgencyOS
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ---
@@ -209,14 +209,14 @@ npm install -g agencyos-cli
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install 20
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Option 2: Change npm global directory
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 #### Missing Dependencies
@@ -237,7 +237,7 @@ sudo dnf install -y gcc-c++ make python3
 sudo pacman -S base-devel python
 
 # Reinstall AgencyOS
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 #### PATH Not Set
@@ -277,7 +277,7 @@ npm cache clean --force
 npm install -g npm@latest
 
 # Retry installation
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ### Network/Proxy Issues
@@ -298,7 +298,7 @@ npm config set https-proxy http://proxy.company.com:8080
 npm config set registry https://registry.npmjs.org/
 
 # Retry installation
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ### Version Conflicts
@@ -309,13 +309,13 @@ npm install -g agencyos-cli
 
 ```bash
 # Uninstall old version
-npm uninstall -g agencyos-cli
+rm -rf agencyos-starter
 
 # Clear cache
 npm cache clean --force
 
 # Install latest version
-npm install -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git@latest
 
 # Verify
 mk --version
@@ -377,7 +377,7 @@ After fixing installation issues, verify everything works:
 # Check CLI version
 mk --version
 
-# Expected: agencyos-cli/1.0.0
+# Expected: agencyos-starter (git cloned)
 
 # Check available commands
 mk --help
@@ -435,13 +435,13 @@ npm config list
 npm config get prefix
 
 # Installation status
-npm list -g agencyos-cli
+ls agencyos-starter
 which ck
 ```
 
 ### Get Help
 
-1. **Check logs**: Look for errors during `npm install -g agencyos-cli`
+1. **Check logs**: Look for errors during `git clone https://github.com/longtho638-jpg/agencyos-starter.git`
 2. **GitHub Issues**: [Report installation problems](https://github.com/longtho638-jpg/agencyos-engineer/issues)
 3. **Discord**: [Join AgencyOS community](https://agencyos.network/discord)
 

@@ -28,7 +28,7 @@ Already using AgencyOS CLI? AgencyOS enhances your workflow without breaking exi
 
 ```bash
 # Install AgencyOS CLI (doesn't replace AgencyOS CLI)
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Initialize in existing project
 mk init
@@ -43,7 +43,7 @@ mk init
 mk update
 
 # Alternative: npm global update
-npm install -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git@latest
 ```
 
 ## Gradual Migration Path

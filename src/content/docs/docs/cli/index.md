@@ -226,7 +226,7 @@ After update:
 
 ```bash
 # Install CLI
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Verify installation
 mk --version
@@ -315,10 +315,10 @@ mk versions --limit 50
 **Solutions:**
 ```bash
 # Reinstall globally
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Check installation
-npm list -g agencyos-cli
+ls agencyos-starter
 
 # Restart terminal
 ```

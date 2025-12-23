@@ -92,10 +92,10 @@ Cài đặt AgencyOS CLI toàn cục:
 
 ```bash
 # npm
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # bun
-bun add -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Xác minh cài đặt
 mk --version
@@ -201,7 +201,7 @@ mk update
 Trên macOS/Linux, bạn có thể cần sudo:
 
 ```bash
-sudo npm install -g agencyos-cli
+sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 Hoặc cấu hình npm để sử dụng thư mục khác:

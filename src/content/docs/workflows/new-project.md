@@ -17,7 +17,7 @@ Create new projects from scratch with AgencyOS's AI-powered development workflow
 ### 1. Install AgencyOS CLI
 
 ```bash
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ## Quick Start

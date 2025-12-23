@@ -16,7 +16,7 @@ Hướng dẫn tham khảo nhanh cho AgencyOS CLI commands và workflows.
 
 ```bash
 # Cài AgencyOS globally
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # Kiểm tra phiên bản
 mk --version
@@ -206,7 +206,7 @@ mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 
 ```bash
 # 1. Cài AgencyOS
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # 2. Đi đến dự án
 cd /đường/dẫn/đến/dự/án/hiện/tại
@@ -225,7 +225,7 @@ claude
 
 ```bash
 # 1. Cài AgencyOS
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # 2. Tạo dự án
 mk new --kit engineer --dir /đường/dẫn/đến/dự/án

@@ -17,7 +17,7 @@ Integrate AgencyOS into your existing projects to enhance development workflow w
 ### 1. Install AgencyOS CLI
 
 ```bash
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 ### 2. Navigate to Your Project
@@ -282,7 +282,7 @@ Share `.claude/` directory and generated specs with your team via git.
 git clone <repo-url>
 
 # 2. Install AgencyOS
-npm i -g agencyos-cli@latest
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 # 3. Navigate to project
 cd project-name

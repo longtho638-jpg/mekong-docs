@@ -11,8 +11,13 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
 <div class="relative overflow-hidden pb-10 lg:pb-16">
   <div class="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8 text-center">
     <div class="mx-auto max-w-3xl">
-      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-accent-green)] to-[var(--color-accent-cyan)]">
-        Run your entire agency with AI.
+      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+        <span class="static-text">Run your </span>
+        <span class="typewriter-container">
+          <span class="typewriter-text" id="typewriter"></span>
+          <span class="cursor">|</span>
+        </span>
+        <span class="static-text"> with AI.</span>
       </h1>
 
       <p class="mt-4 text-xl leading-relaxed text-[var(--color-text-secondary)] mb-6">
@@ -620,6 +625,34 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
 </LandingLayout>
 
 <style>
+  /* Typewriter Animation Styles */
+  .static-text {
+    color: var(--color-text-primary);
+  }
+
+  .typewriter-container {
+    display: inline;
+  }
+
+  .typewriter-text {
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cursor {
+    display: inline-block;
+    color: #22c55e;
+    animation: blink 1s infinite;
+    font-weight: 400;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
   /* Stats Counter Styles */
   .stats-counter {
     padding: 48px 0;
@@ -848,4 +881,50 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
   if (statsSection) {
     observer.observe(statsSection);
   }
+
+  // Typewriter Animation
+  const phrases = [
+    'entire agency',
+    'marketing',
+    'sales',
+    'finances',
+    'content',
+    'operations'
+  ];
+  
+  const typewriterEl = document.getElementById('typewriter');
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  
+  function typeWriter() {
+    if (!typewriterEl) return;
+    
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+      typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+    }
+    
+    let delay = isDeleting ? 50 : 100;
+    
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      delay = 2000; // Pause at end
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      delay = 500; // Pause before next word
+    }
+    
+    setTimeout(typeWriter, delay);
+  }
+  
+  // Start typewriter after page load
+  typeWriter();
 </script>
+

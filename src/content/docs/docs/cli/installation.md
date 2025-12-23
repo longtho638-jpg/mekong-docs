@@ -38,7 +38,7 @@ git --version   # Any recent version
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g agencyos-cli
+git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
 This installs the `mk` command globally, available from any directory.
@@ -217,7 +217,7 @@ mk --version
 Remove AgencyOS CLI:
 
 ```bash
-npm uninstall -g agencyos-cli
+rm -rf agencyos-starter
 ```
 
 Remove configuration (optional):
@@ -237,7 +237,7 @@ rm -rf ~/.agencyos
 
 2. **Check installation:**
    ```bash
-   npm list -g agencyos-cli
+   ls agencyos-starter
    ```
 
 3. **Verify npm global bin in PATH:**
@@ -252,8 +252,8 @@ rm -rf ~/.agencyos
 
 4. **Reinstall:**
    ```bash
-   npm uninstall -g agencyos-cli
-   npm install -g agencyos-cli
+   rm -rf agencyos-starter
+   git clone https://github.com/longtho638-jpg/agencyos-starter.git
    ```
 
 ### Authentication failed
@@ -292,12 +292,12 @@ rm -rf ~/.agencyos
    mkdir ~/.npm-global
    npm config set prefix '~/.npm-global'
    export PATH=~/.npm-global/bin:$PATH
-   npm install -g agencyos-cli
+   git clone https://github.com/longtho638-jpg/agencyos-starter.git
    ```
 
 3. **Use sudo (not recommended):**
    ```bash
-   sudo npm install -g agencyos-cli
+   sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
    ```
 
 ### Download fails
