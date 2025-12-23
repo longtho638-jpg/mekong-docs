@@ -1,0 +1,293 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = 'Welcome to AgencyOS!';
+const description = 'Your account is ready. Start automating your agency today.';
+---
+
+<LandingLayout title={title} description={description}>
+  <section class="success-section">
+    <div class="success-card">
+      
+      <div class="success-icon">🎉</div>
+      
+      <h1>Welcome to AgencyOS!</h1>
+      
+      <div class="welcome-message" id="welcome-message">
+        <p>Your account has been created successfully.</p>
+      </div>
+
+      <div class="account-info" id="account-info">
+        <div class="info-row">
+          <span class="label">Email:</span>
+          <span class="value" id="user-email">-</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Plan:</span>
+          <span class="value" id="user-plan">Pro</span>
+        </div>
+        <div class="info-row" id="discount-info" style="display: none;">
+          <span class="label">Discount:</span>
+          <span class="value text-green" id="user-discount">100% OFF</span>
+        </div>
+      </div>
+
+      <div class="next-steps">
+        <h3>🚀 Next Steps:</h3>
+        <ol>
+          <li>
+            <strong>Install AgencyOS CLI</strong>
+            <p>Follow our quick installation guide</p>
+          </li>
+          <li>
+            <strong>Run your first command</strong>
+            <p>Try <code>/help</code> to see all 85+ commands</p>
+          </li>
+          <li>
+            <strong>Join the community</strong>
+            <p>Connect with other agency owners</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="/docs/getting-started/installation" class="btn-primary">
+          📦 Install Now →
+        </a>
+        <a href="/quickstart" class="btn-secondary">
+          📚 View Quick Start
+        </a>
+      </div>
+
+      <div class="support-note">
+        <p>Need help? Email us at <a href="mailto:support@agencyos.network">support@agencyos.network</a></p>
+      </div>
+
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  .success-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .success-card {
+    background: var(--color-bg-secondary);
+    border: 2px solid #22c55e;
+    border-radius: 16px;
+    padding: 48px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+    margin-bottom: 16px;
+  }
+
+  .success-card h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin: 0 0 16px 0;
+  }
+
+  .welcome-message {
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+  }
+
+  .welcome-message p {
+    margin: 0;
+  }
+
+  .account-info {
+    background: var(--color-bg-tertiary);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .info-row:last-child {
+    border-bottom: none;
+  }
+
+  .info-row .label {
+    color: var(--color-text-muted);
+  }
+
+  .info-row .value {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  .text-green {
+    color: #22c55e !important;
+  }
+
+  .next-steps {
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  .next-steps h3 {
+    color: var(--color-text-primary);
+    margin: 0 0 16px 0;
+  }
+
+  .next-steps ol {
+    list-style: decimal;
+    padding-left: 24px;
+    margin: 0;
+  }
+
+  .next-steps li {
+    margin-bottom: 16px;
+    color: var(--color-text-secondary);
+  }
+
+  .next-steps li strong {
+    color: var(--color-text-primary);
+    display: block;
+  }
+
+  .next-steps li p {
+    margin: 4px 0 0 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .next-steps code {
+    background: var(--color-bg-tertiary);
+    color: #22c55e;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-bg-secondary);
+  }
+
+  .support-note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .support-note a {
+    color: #22c55e;
+    text-decoration: none;
+  }
+
+  .support-note a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    .success-card {
+      padding: 24px;
+    }
+
+    .success-card h1 {
+      font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  // Get user data
+  const urlParams = new URLSearchParams(window.location.search);
+  const isFree = urlParams.get('free') === 'true';
+  const plan = urlParams.get('plan') || 'pro';
+  const emailFromUrl = urlParams.get('email');
+
+  // Get from localStorage
+  const userData = localStorage.getItem('agencyos_user');
+  const appliedCode = localStorage.getItem('agencyos_applied_code');
+
+  // Update UI
+  const userEmailEl = document.getElementById('user-email');
+  const userPlanEl = document.getElementById('user-plan');
+  const discountInfoEl = document.getElementById('discount-info');
+  const userDiscountEl = document.getElementById('user-discount');
+  const welcomeMessage = document.getElementById('welcome-message');
+
+  if (userData) {
+    const user = JSON.parse(userData);
+    
+    if (userEmailEl) userEmailEl.textContent = user.email || emailFromUrl || '-';
+    if (userPlanEl) userPlanEl.textContent = user.plan?.charAt(0).toUpperCase() + user.plan?.slice(1) || 'Pro';
+    
+    if (user.discount > 0 && discountInfoEl && userDiscountEl) {
+      discountInfoEl.style.display = 'flex';
+      userDiscountEl.textContent = user.discount === 100 ? '100% FREE!' : user.discount + '% OFF';
+    }
+  } else if (emailFromUrl) {
+    if (userEmailEl) userEmailEl.textContent = emailFromUrl;
+  }
+
+  // Show special message for free users
+  if (isFree && welcomeMessage) {
+    welcomeMessage.innerHTML = `
+      <p>🎉 <strong>Congratulations!</strong> You've unlocked FREE access to AgencyOS!</p>
+      <p>You're one of the first 100 users. Enjoy lifetime access at no cost.</p>
+    `;
+  }
+
+  // Clear stored data (optional - keep for reference)
+  // localStorage.removeItem('agencyos_user');
+  // localStorage.removeItem('agencyos_applied_code');
+</script>
