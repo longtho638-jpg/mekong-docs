@@ -328,7 +328,8 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
     }
 
     // Check for LAUNCH100 pattern (first 100 free)
-    if (code.startsWith('AGENCYOS-') && code.length === 17) {
+    // AGENCYOS-XXXX-XXXX = 8+1+4+1+4 = 18 characters
+    if (code.startsWith('AGENCYOS-') && code.length === 18) {
       // Check if it looks like a valid generated code
       const validPattern = /^AGENCYOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
       if (validPattern.test(code)) {
