@@ -3,23 +3,77 @@ import LandingLayout from '../layouts/LandingLayout.astro';
 
 const title = 'Checkout - AgencyOS';
 const description = 'Complete your AgencyOS subscription.';
+
+// Polar.sh Product Configuration
+// Replace with actual Polar.sh product URLs when ready
+const POLAR_PRODUCTS = {
+  starter: {
+    monthly: 'https://buy.polar.sh/agencyos/starter-monthly',
+    annual: 'https://buy.polar.sh/agencyos/starter-annual'
+  },
+  pro: {
+    monthly: 'https://buy.polar.sh/agencyos/pro-monthly',
+    annual: 'https://buy.polar.sh/agencyos/pro-annual'
+  },
+  franchise: {
+    monthly: 'https://buy.polar.sh/agencyos/franchise-monthly',
+    annual: 'https://buy.polar.sh/agencyos/franchise-annual'
+  }
+};
+
+// Set to true when Polar.sh products are configured
+const POLAR_READY = false;
 ---
 
 <LandingLayout title={title} description={description}>
   <section class="checkout-section">
     <div class="checkout-card">
       
+      <!-- Loading State -->
       <div class="loading-state" id="loading-state">
         <div class="spinner"></div>
         <h2>Preparing Checkout...</h2>
         <p>Redirecting to secure payment...</p>
       </div>
 
+      <!-- Error State -->
       <div class="error-state hidden" id="error-state">
         <span class="error-icon">⚠️</span>
         <h2>Something went wrong</h2>
         <p id="error-message">Unable to process checkout.</p>
-        <a href="/signup" class="btn-primary">← Go Back</a>
+        <a href="/pricing" class="btn-primary">← Back to Pricing</a>
+      </div>
+
+      <!-- Demo Mode State -->
+      <div class="demo-state hidden" id="demo-state">
+        <span class="demo-icon">🏯</span>
+        <h2>Demo Mode Active</h2>
+        <p>Polar.sh checkout is not yet configured.</p>
+        <p class="demo-note">In production, you would be redirected to Polar.sh for payment.</p>
+        
+        <div class="demo-info">
+          <h3>Selected Plan: <span id="selected-plan">Pro</span></h3>
+          <p id="selected-email"></p>
+        </div>
+        
+        <div class="demo-actions">
+          <a href="/success?demo=true&plan=pro" class="btn-primary">
+            Continue to Success (Demo)
+          </a>
+          <a href="/pricing" class="btn-secondary">
+            ← Back to Pricing
+          </a>
+        </div>
+        
+        <div class="setup-note">
+          <h4>🔧 To enable real payments:</h4>
+          <ol>
+            <li>Create products in <a href="https://polar.sh" target="_blank">Polar.sh</a></li>
+            <li>Update POLAR_PRODUCTS in checkout.astro</li>
+            <li>Set POLAR_READY = true</li>
+            <li>Configure webhook URL: /api/webhook/polar</li>
+          </ol>
+        </div>
       </div>
 
     </div>
@@ -28,7 +82,7 @@ const description = 'Complete your AgencyOS subscription.';
 
 <style>
   .checkout-section {
-    min-height: 60vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,11 +95,11 @@ const description = 'Complete your AgencyOS subscription.';
     border-radius: 16px;
     padding: 48px;
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
   }
 
-  .loading-state {
+  .loading-state, .error-state, .demo-state {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,37 +119,19 @@ const description = 'Complete your AgencyOS subscription.';
     to { transform: rotate(360deg); }
   }
 
-  .loading-state h2 {
+  .loading-state h2, .error-state h2, .demo-state h2 {
     font-size: 1.5rem;
     color: var(--color-text-primary);
     margin: 0;
   }
 
-  .loading-state p {
+  .loading-state p, .error-state p, .demo-state p {
     color: var(--color-text-muted);
     margin: 0;
   }
 
-  .error-state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .error-icon {
+  .error-icon, .demo-icon {
     font-size: 3rem;
-  }
-
-  .error-state h2 {
-    font-size: 1.5rem;
-    color: var(--color-text-primary);
-    margin: 0;
-  }
-
-  .error-state p {
-    color: var(--color-text-muted);
-    margin: 0;
   }
 
   .hidden {
@@ -111,73 +147,155 @@ const description = 'Complete your AgencyOS subscription.';
     font-weight: 600;
     text-decoration: none;
     margin-top: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 8px;
+  }
+
+  .demo-info {
+    background: var(--color-bg-tertiary);
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin: 16px 0;
+  }
+
+  .demo-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+  }
+
+  .demo-info #selected-plan {
+    color: #22c55e;
+  }
+
+  .demo-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .demo-note {
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .setup-note {
+    margin-top: 24px;
+    padding: 16px;
+    background: var(--color-bg-tertiary);
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .setup-note h4 {
+    margin: 0 0 12px 0;
+    color: var(--color-text-primary);
+  }
+
+  .setup-note ol {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--color-text-muted);
+  }
+
+  .setup-note li {
+    margin-bottom: 8px;
+  }
+
+  .setup-note a {
+    color: #22c55e;
   }
 </style>
 
-<script>
-  // Polar.sh checkout URL (update with actual product URL)
-  const POLAR_CHECKOUT_URL = 'https://polar.sh/agencyos/checkout';
-
+<script define:vars={{ POLAR_PRODUCTS, POLAR_READY }}>
   const loadingState = document.getElementById('loading-state');
   const errorState = document.getElementById('error-state');
+  const demoState = document.getElementById('demo-state');
   const errorMessage = document.getElementById('error-message');
+  const selectedPlanEl = document.getElementById('selected-plan');
+  const selectedEmailEl = document.getElementById('selected-email');
 
   // Get params
   const urlParams = new URLSearchParams(window.location.search);
   const plan = urlParams.get('plan') || 'pro';
+  const billing = urlParams.get('billing') || 'monthly';
   const email = urlParams.get('email');
-  const name = urlParams.get('name');
   const promo = urlParams.get('promo');
 
-  // Also check localStorage
-  const userData = localStorage.getItem('agencyos_user');
+  // Also check localStorage for user data
+  let userData = null;
+  try {
+    userData = JSON.parse(localStorage.getItem('agencyos_user') || '{}');
+  } catch (e) {}
 
-  function showError(message: string) {
+  const userEmail = email || userData?.email;
+
+  function showError(message) {
     if (loadingState) loadingState.classList.add('hidden');
+    if (demoState) demoState.classList.add('hidden');
     if (errorState) errorState.classList.remove('hidden');
     if (errorMessage) errorMessage.textContent = message;
   }
 
+  function showDemo() {
+    if (loadingState) loadingState.classList.add('hidden');
+    if (errorState) errorState.classList.add('hidden');
+    if (demoState) demoState.classList.remove('hidden');
+    
+    if (selectedPlanEl) selectedPlanEl.textContent = plan.charAt(0).toUpperCase() + plan.slice(1);
+    if (selectedEmailEl && userEmail) selectedEmailEl.textContent = `Email: ${userEmail}`;
+  }
+
   function redirectToCheckout() {
-    // Build Polar.sh URL with prefilled data
-    let checkoutUrl = POLAR_CHECKOUT_URL;
-    
-    // Add plan-specific product
-    const productIds: Record<string, string> = {
-      starter: 'prod_starter',  // Replace with actual Polar.sh product IDs
-      pro: 'prod_pro',
-      franchise: 'prod_franchise'
-    };
+    // Check if Polar.sh is configured
+    if (!POLAR_READY) {
+      // Show demo mode
+      setTimeout(showDemo, 1500);
+      return;
+    }
 
+    // Get product URL
+    const productUrls = POLAR_PRODUCTS[plan];
+    if (!productUrls) {
+      showError(`Invalid plan: ${plan}`);
+      return;
+    }
+
+    let checkoutUrl = billing === 'annual' ? productUrls.annual : productUrls.monthly;
+
+    // Add query params
     const params = new URLSearchParams();
-    
-    if (email) params.set('email', email);
+    if (userEmail) params.set('email', userEmail);
     if (promo) params.set('discount_code', promo);
-    params.set('success_url', window.location.origin + '/success');
-    params.set('cancel_url', window.location.origin + '/signup');
+    params.set('success_url', window.location.origin + '/success?plan=' + plan);
+    params.set('cancel_url', window.location.origin + '/pricing');
 
-    checkoutUrl += '?' + params.toString();
+    if (params.toString()) {
+      checkoutUrl += (checkoutUrl.includes('?') ? '&' : '?') + params.toString();
+    }
 
-    // Simulate redirect (in production, this goes to Polar.sh)
-    // For demo, we'll just redirect to success after 2s
-    setTimeout(() => {
-      // In production: window.location.href = checkoutUrl;
-      // For demo:
-      if (!email) {
-        showError('Email is required. Please go back and try again.');
-        return;
-      }
-      
-      // Demo mode - simulate successful checkout
-      console.log('Would redirect to:', checkoutUrl);
-      window.location.href = '/success?plan=' + plan + '&email=' + encodeURIComponent(email || '');
-    }, 2000);
+    // Redirect to Polar.sh
+    window.location.href = checkoutUrl;
   }
 
-  // Check if we have required data
-  if (!email && !userData) {
-    showError('Missing registration data. Please start from the signup page.');
-  } else {
-    redirectToCheckout();
-  }
+  // Start checkout process
+  setTimeout(redirectToCheckout, 1000);
 </script>

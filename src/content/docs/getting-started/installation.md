@@ -1,11 +1,6 @@
 ---
 title: Installation
-description: "Documentation for Installation
-description:
-section: getting-started
-category: getting-started
-order: 2
-published: true"
+description: How to install AgencyOS - the AI-Native Agency Operating System
 section: getting-started
 category: getting-started
 order: 2
@@ -14,7 +9,7 @@ published: true
 
 # Installation
 
-This guide will help you install AgencyOS and set up your development environment. You can choose between manual setup or using the AgencyOS CLI.
+This guide will help you install AgencyOS and set up your agency automation environment.
 
 ## Video Guide
 
@@ -22,253 +17,122 @@ Prefer video? Watch the complete installation walkthrough:
 
 <div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🏯</div><h3 style="margin: 0 0 0.5rem 0;">Demo Video Coming Soon</h3><p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p></div>
 
-*More tutorials: [
-
 ## Prerequisites
 
 Before installing AgencyOS, ensure you have:
 
-- **Node.js** v18 or higher
-- **npm** v10 or higher (or bun, pnpm, yarn)
-- **Git** for version control
-- **AgencyOS CLI CLI** installed (`claude`)
-- **Google Gemini API Key** from [Google AI Studio](https://aistudio.google.com)
+- **Python** 3.8 or higher
+- **Git** for cloning the repository
+- **pip** for installing dependencies
+- **AgencyOS License Key** (get from [agencyos.network/pricing](/pricing))
 
-## Method 1: Manual Setup
+## Quick Installation
 
-This method gives you full control over the installation process.
-
-### Step 1: Copy AgencyOS Files
-
-Copy all directories and files from the `agencyos` repo to your project:
+### Step 1: Clone the Repository
 
 ```bash
-# Copy these files and directories:
-.claude/*
-docs/*
-plans/*
-CLAUDE.md
-```
-
-### Step 2: Configure Gemini API Key (Optional)
-
-**WHY?**
-AgencyOS utilized [Human MCP](https://www.npmjs.com/package/human-analyzer) to analyze images and videos since Gemini models have better vision capabilities. But Anthropic already released [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) which is much better for context engineering, so we already converted all tools of Human MCP to Agent Skills.
-
-**Notes:** Gemini API have a pretty generous free requests limit at the moment.
-
-1. Go to [Google AI Studio](https://aistudio.google.com) and grab your API Key
-2. Copy `.claude/skills/.env.example` to `.claude/skills/.env` and paste the key into the `GEMINI_API_KEY` environment variable
-
-Now you're good to go.
-
-### Step 3: Start AgencyOS CLI
-
-Start AgencyOS CLI in your working project:
-
-```bash
-# Standard mode
-claude
-
-# Skip permissions (use with caution)
-claude --dangerously-skip-permissions
-```
-
-### Step 4: Initialize Documentation
-
-Run the `/docs:init` command to scan and create specs for your project:
-
-```bash
-/docs:init
-```
-
-This generates markdown files in the `docs` directory:
-- `codebase-summary.md`
-- `code-standards.md`
-- `system-architecture.md`
-- And more...
-
-Now your project is ready for development!
-
-## Method 2: AgencyOS CLI
-
-The CLI provides an automated way to set up AgencyOS projects.
-
-### Installation
-
-Install AgencyOS CLI globally:
-
-```bash
-# npm
+# Clone AgencyOS Starter
 git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
-# bun
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
-
-# Verify installation
-mk --version
+# Navigate to directory
+cd agencyos-starter
 ```
 
-### Initialize or Update AgencyOS Engineer
-
-**Note:** This command should be run from the root directory of your project.
+### Step 2: Install Dependencies
 
 ```bash
-# Interactive mode (recommended)
-mk init
-
-# With options
-mk init --kit engineer
-
-# Specific version
-mk init --kit engineer --version v1.0.0
-
-# With exclude patterns
-mk init --exclude "local-config/**" --exclude "*.local"
-
-# Global mode - use platform-specific user configuration
-mk init --global
-mk init -g --kit engineer
+# Install Python dependencies
+pip install -r requirements.txt
 ```
 
-### Update the CLI Itself
-
-To update the `mk` command-line tool to the latest version:
+### Step 3: Activate Your License
 
 ```bash
-mk update
+# Activate with your license key
+python activate.py YOUR-LICENSE-KEY
 ```
 
-**Note:** This updates the CLI tool only, not AgencyOS Engineer files. Use `mk init` to update AgencyOS Engineer.
+Replace `YOUR-LICENSE-KEY` with the key you received after purchase.
 
-**Global vs Local Configuration:**
-
-By default, AgencyOS uses local configuration (`~/.agencyos`).
-
-For platform-specific **user-scoped settings**, use the `--global` flag:
-- **macOS/Linux**: `~/.claude`
-- **Windows**: `%LOCALAPPDATA%\.claude`
-
-Global mode uses user-scoped directories (no sudo required), allowing separate configurations for different projects.
-
-### Authentication
-
-The CLI requires a **GitHub Personal Access Token (PAT)** to download releases from private repositories (`agencyos` and `mekong-marketing`).
-
-**Authentication Fallback Chain:**
-
-1. **GitHub CLI**: Uses `gh auth token` if GitHub CLI is installed and authenticated
-2. **Environment Variables**: Checks `GITHUB_TOKEN` or `GH_TOKEN`
-3. **OS Keychain**: Retrieves stored token from system keychain
-4. **User Prompt**: Prompts for token input and offers to save it securely
-
-**Creating a Personal Access Token:**
-
-1. Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
-2. Generate new token with `repo` scope (for private repositories)
-3. Copy the token
-
-**Setting Token via Environment Variable:**
+### Step 4: Verify Installation
 
 ```bash
-export GITHUB_TOKEN=ghp_your_token_here
+# Show available commands
+python -m core.help
+
+# Check installed modules
+ls core/
 ```
 
-## Verify Installation
+## Running Commands
 
-After installation (either method), verify everything is set up correctly:
+AgencyOS commands are Python modules. Run them like this:
 
 ```bash
-# Check if AgencyOS CLI is available
-claude --version
+# Marketing commands
+python -m core.marketing_hub
 
-# Check if .claude directory exists
-ls -la .claude/
+# Sales commands
+python -m core.sales_hub
+
+# Finance commands
+python -m core.finance_hub
+
+# Strategy (Binh Pháp)
+python -m core.strategy_officer
 ```
 
-## Update AgencyOS
+## IDE Integration (Recommended)
 
-Keep AgencyOS Engineer up to date:
+For the best experience, open in an AI-powered IDE:
 
-```bash
-# Update AgencyOS Engineer to latest version
-mk init
+### Cursor IDE
+[![Open in Cursor](https://img.shields.io/badge/Open%20in-Cursor-blue?style=for-the-badge&logo=cursor)](https://cursor.com)
 
-# Update to specific version
-mk init --version v1.2.0
-```
+1. Open Cursor IDE
+2. Clone: `git clone https://github.com/longtho638-jpg/agencyos-starter.git`
+3. Open the folder in Cursor
+4. Use the integrated terminal to run commands
 
-**Exclude specific files during update:**
-
-```bash
-# Don't overwrite CLAUDE.md
-mk init --exclude CLAUDE.md
-```
-
-**Update the CLI itself:**
-
-```bash
-# Update ck command-line tool
-mk update
-```
+### VS Code
+1. Open VS Code
+2. Clone and open the agencyos-starter folder
+3. Install Python extension
+4. Use integrated terminal
 
 ## Troubleshooting
 
-### Permission Errors
-
-On macOS/Linux, you may need sudo:
-
+### Python not found
 ```bash
-sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
+# Check Python version
+python --version
+
+# If not found, install Python 3.8+
+# macOS: brew install python
+# Ubuntu: sudo apt install python3
+# Windows: Download from python.org
 ```
 
-Or configure npm to use a different directory:
-
+### Permission errors
 ```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-export PATH=~/.npm-global/bin:$PATH
+# Use pip with user flag
+pip install --user -r requirements.txt
 ```
 
-### AgencyOS CLI Not Found
-
-If `claude` command is not found:
-
-1. Install AgencyOS CLI CLI from [claude.ai/code](https://claude.ai/code)
-2. Restart your terminal
-3. Verify with `claude --version`
-
-### GitHub Authentication Failed
-
-If CLI can't authenticate:
-
-1. Install GitHub CLI: `brew install gh` (macOS) or see [cli.github.com](https://cli.github.com)
-2. Authenticate: `gh auth login`
-3. Verify: `gh auth status`
-4. Or set environment variable: `export GITHUB_TOKEN=your_token`
-
-## Optional Tools
-
-### CCS - AgencyOS CLI Switch (Recommended for Heavy Users)
-
-If you're a heavy AgencyOS user or frequently hit Claude's rate limits, consider installing **CCS**:
-
-```bash
-npm install -g @kaitranntt/ccs
-```
-
-**Benefits:**
-- Switch between multiple Claude accounts instantly
-- Delegate simple tasks to cheaper models (81% cost savings)
-- Keep working without interruption when hitting limits
-- Optimize costs for high-volume usage
-
-[**Learn more about CCS →**](/docs/tools/ccs)
+### License activation failed
+- Check your license key is correct
+- Ensure internet connection
+- Contact support@agencyos.network
 
 ## Next Steps
 
-Now that AgencyOS is installed, proceed to:
+After installation:
 
-- [Quick Start Guide](/docs/getting-started/quick-start) - Build your first project
-- [CLAUDE.md Explained](/docs/docs/configuration/claude-md) - Understand the configuration file
-- [Workflows](/docs/docs/configuration/workflows) - Learn about development workflows
+1. 📖 Read the [Quick Start Guide](/docs/getting-started/quick-start)
+2. 📋 Explore [85+ Commands](/commands)
+3. 🖥️ Try the [Interactive Demo](/demo)
+4. 💰 Calculate your [ROI](/roi-calculator)
+
+---
+
+**Need help?** Contact us at [hello@agencyos.network](mailto:hello@agencyos.network)

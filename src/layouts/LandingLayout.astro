@@ -173,6 +173,56 @@ const {
       </div>
     </div>
 
+    <!-- Keyboard Shortcuts Modal -->
+    <div class="shortcuts-modal" id="shortcuts-modal">
+      <div class="shortcuts-overlay" id="shortcuts-overlay"></div>
+      <div class="shortcuts-content">
+        <div class="shortcuts-header">
+          <h3>⌨️ Keyboard Shortcuts</h3>
+          <button class="shortcuts-close" id="shortcuts-close">ESC</button>
+        </div>
+        <div class="shortcuts-body">
+          <div class="shortcut-section">
+            <h4>Navigation</h4>
+            <div class="shortcut-row">
+              <span class="shortcut-keys"><kbd>G</kbd> then <kbd>H</kbd></span>
+              <span class="shortcut-desc">Go to Home</span>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-keys"><kbd>G</kbd> then <kbd>P</kbd></span>
+              <span class="shortcut-desc">Go to Pricing</span>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-keys"><kbd>G</kbd> then <kbd>D</kbd></span>
+              <span class="shortcut-desc">Go to Demo</span>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-keys"><kbd>G</kbd> then <kbd>C</kbd></span>
+              <span class="shortcut-desc">Go to Commands</span>
+            </div>
+          </div>
+          <div class="shortcut-section">
+            <h4>Actions</h4>
+            <div class="shortcut-row">
+              <span class="shortcut-keys"><kbd>/</kbd></span>
+              <span class="shortcut-desc">Focus Search</span>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-keys"><kbd>⌘</kbd> <kbd>K</kbd></span>
+              <span class="shortcut-desc">Quick Commands</span>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-keys"><kbd>?</kbd></span>
+              <span class="shortcut-desc">Show Shortcuts</span>
+            </div>
+          </div>
+        </div>
+        <div class="shortcuts-footer">
+          Press <kbd>ESC</kbd> to close
+        </div>
+      </div>
+    </div>
+
     <script>
       const theme = localStorage.getItem('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', theme);
@@ -884,4 +934,181 @@ const {
       font-size: 0.75rem;
     }
   }
+
+  /* Keyboard Shortcuts Modal */
+  .shortcuts-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+  }
+
+  .shortcuts-modal.open {
+    display: block;
+  }
+
+  .shortcuts-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+  }
+
+  .shortcuts-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    animation: modalSlideIn 0.2s ease;
+  }
+
+  @keyframes modalSlideIn {
+    from { opacity: 0; transform: translate(-50%, -45%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+  }
+
+  .shortcuts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .shortcuts-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+  }
+
+  .shortcuts-close {
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .shortcuts-close:hover {
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  .shortcuts-body {
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .shortcut-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+  }
+
+  .shortcut-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  .shortcut-keys {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+  }
+
+  .shortcuts-modal kbd {
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--color-text-primary);
+  }
+
+  .shortcut-desc {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  .shortcuts-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .shortcuts-body {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
+
+<script>
+  // Keyboard Shortcuts
+  const modal = document.getElementById('shortcuts-modal');
+  const closeBtn = document.getElementById('shortcuts-close');
+  const overlay = document.getElementById('shortcuts-overlay');
+  let gPressed = false;
+
+  function openShortcuts() { modal?.classList.add('open'); }
+  function closeShortcuts() { modal?.classList.remove('open'); }
+
+  document.addEventListener('keydown', (e) => {
+    // Don't trigger if typing in input
+    if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+
+    // ? to open shortcuts
+    if (e.key === '?' && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      openShortcuts();
+    }
+
+    // Cmd+K to open quick help
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      document.getElementById('quick-help')?.classList.toggle('open');
+    }
+
+    // ESC to close
+    if (e.key === 'Escape') {
+      closeShortcuts();
+      document.getElementById('quick-help')?.classList.remove('open');
+    }
+
+    // G + key navigation
+    if (e.key.toLowerCase() === 'g') {
+      gPressed = true;
+      setTimeout(() => { gPressed = false; }, 1000);
+    } else if (gPressed) {
+      switch (e.key.toLowerCase()) {
+        case 'h': window.location.href = '/agencyos'; break;
+        case 'p': window.location.href = '/pricing'; break;
+        case 'd': window.location.href = '/demo'; break;
+        case 'c': window.location.href = '/commands'; break;
+      }
+      gPressed = false;
+    }
+  });
+
+  closeBtn?.addEventListener('click', closeShortcuts);
+  overlay?.addEventListener('click', closeShortcuts);
+</script>

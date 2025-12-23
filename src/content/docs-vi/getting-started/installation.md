@@ -1,238 +1,138 @@
 ---
-title: Cài Đặt
-description: "Documentation for Cài Đặt
-description:
-section: getting-started
-category: getting-started
-order: 2
-published: true"
+title: Cài đặt
+description: Hướng dẫn cài đặt AgencyOS - Hệ điều hành AI cho Agency
 section: getting-started
 category: getting-started
 order: 2
 published: true
 ---
 
-# Cài Đặt
+# Cài đặt
 
-Hướng dẫn này sẽ giúp bạn cài đặt AgencyOS và thiết lập môi trường phát triển. Bạn có thể chọn giữa cài đặt thủ công hoặc sử dụng AgencyOS CLI.
+Hướng dẫn này sẽ giúp bạn cài đặt AgencyOS và thiết lập môi trường tự động hóa agency.
+
+## Video Hướng Dẫn
+
+Thích xem video? Xem hướng dẫn cài đặt đầy đủ:
+
+<div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🏯</div><h3 style="margin: 0 0 0.5rem 0;">Video Demo Sắp Ra Mắt</h3><p style="margin: 0; color: var(--color-text-muted);">Xem tài liệu để bắt đầu</p></div>
 
 ## Yêu Cầu
 
 Trước khi cài đặt AgencyOS, đảm bảo bạn có:
 
-- **Node.js** v18 trở lên
-- **npm** v10 trở lên (hoặc bun, pnpm, yarn)
-- **Git** để quản lý phiên bản
-- **AgencyOS CLI CLI** đã cài đặt (`claude`)
-- **Google Gemini API Key** từ [Google AI Studio](https://aistudio.google.com)
+- **Python** 3.8 trở lên
+- **Git** để clone repository
+- **pip** để cài đặt dependencies
+- **License Key AgencyOS** (lấy từ [agencyos.network/pricing](/pricing))
 
-## Phương Pháp 1: Cài Đặt Thủ Công
+## Cài Đặt Nhanh
 
-Phương pháp này cho bạn quyền kiểm soát hoàn toàn quá trình cài đặt.
-
-### Bước 1: Sao Chép Các File AgencyOS
-
-Sao chép tất cả thư mục và file từ repo `agencyos` vào dự án của bạn:
+### Bước 1: Clone Repository
 
 ```bash
-# Sao chép các file và thư mục sau:
-.claude/*
-docs/*
-plans/*
-CLAUDE.md
-```
-
-### Bước 2: Cấu Hình API Key Gemini (Tuỳ Chọn)
-
-**TẠI SAO?**  
-AgencyOS từng sử dụng [Human MCP](https://www.npmjs.com/package/human-analyzer) để phân tích hình ảnh và video vì Gemini có khả năng xử lý vision tốt. Tuy nhiên, Anthropic đã ra mắt [**Agent Skills**](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) hỗ trợ context engineering tốt hơn, nên toàn bộ công cụ Human MCP đã được chuyển thành Agent Skills.
-
-**Lưu ý:** Gemini API hiện đang có hạn mức miễn phí khá rộng rãi.
-
-1. Vào [Google AI Studio](https://aistudio.google.com) và lấy API Key của bạn
-2. Sao chép file `.claude/skills/.env.example` thành `.claude/skills/.env` rồi dán key vào biến môi trường `GEMINI_API_KEY`
-
-Vậy là bạn đã sẵn sàng sử dụng.
-
-### Bước 3: Khởi Động AgencyOS CLI
-
-Khởi động AgencyOS CLI trong dự án làm việc của bạn:
-
-```bash
-# Chế độ tiêu chuẩn
-claude
-
-# Bỏ qua permissions (sử dụng cẩn thận)
-claude --dangerously-skip-permissions
-```
-
-### Bước 4: Khởi Tạo Tài Liệu
-
-Chạy lệnh `/docs:init` để quét và tạo specs cho dự án:
-
-```bash
-/docs:init
-```
-
-Lệnh này tạo ra các file markdown trong thư mục `docs`:
-- `codebase-summary.md`
-- `code-standards.md`
-- `system-architecture.md`
-- Và nhiều hơn nữa...
-
-Bây giờ dự án của bạn đã sẵn sàng để phát triển!
-
-## Phương Pháp 2: AgencyOS CLI
-
-CLI cung cấp cách tự động để thiết lập các dự án AgencyOS.
-
-### Cài Đặt
-
-Cài đặt AgencyOS CLI toàn cục:
-
-```bash
-# npm
+# Clone AgencyOS Starter
 git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
-# bun
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
-
-# Xác minh cài đặt
-mk --version
+# Vào thư mục
+cd agencyos-starter
 ```
 
-### Khởi Tạo hoặc Cập Nhật AgencyOS Engineer
-
-**Lưu ý:** Lệnh này nên được chạy từ thư mục gốc của dự án.
+### Bước 2: Cài Đặt Dependencies
 
 ```bash
-# Chế độ tương tác (khuyến nghị)
-mk init
-
-# Với tùy chọn
-mk init --kit engineer
-
-# Phiên bản cụ thể
-mk init --kit engineer --version v1.0.0
-
-# Với mẫu loại trừ
-mk init --exclude "local-config/**" --exclude "*.local"
-
-# Chế độ global - sử dụng thư mục cấu hình theo platform
-mk init --global
-mk init -g --kit engineer
+# Cài đặt Python dependencies
+pip install -r requirements.txt
 ```
 
-### Cập Nhật CLI
-
-Để cập nhật công cụ dòng lệnh `mk` lên phiên bản mới nhất:
+### Bước 3: Kích Hoạt License
 
 ```bash
-mk update
+# Kích hoạt với license key
+python activate.py YOUR-LICENSE-KEY
 ```
 
-**Lưu ý:** Lệnh này chỉ cập nhật CLI, không cập nhật file AgencyOS Engineer. Dùng `mk init` để cập nhật AgencyOS Engineer.
+Thay `YOUR-LICENSE-KEY` bằng key bạn nhận được sau khi mua.
 
-### Xác Thực
-
-CLI yêu cầu **GitHub Personal Access Token (PAT)** để tải xuống các bản phát hành từ repository riêng tư (`agencyos` và `mekong-marketing`).
-
-**Chuỗi Dự Phòng Xác Thực:**
-
-1. **GitHub CLI**: Sử dụng `gh auth token` nếu GitHub CLI đã cài đặt và xác thực
-2. **Biến Môi Trường**: Kiểm tra `GITHUB_TOKEN` hoặc `GH_TOKEN`
-3. **OS Keychain**: Lấy token đã lưu từ keychain hệ thống
-4. **Nhắc Người Dùng**: Nhắc nhập token và đề nghị lưu an toàn
-
-**Tạo Personal Access Token:**
-
-1. Vào GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
-2. Tạo token mới với scope `repo` (cho repository riêng tư)
-3. Sao chép token
-
-**Thiết Lập Token Qua Biến Môi Trường:**
+### Bước 4: Xác Minh Cài Đặt
 
 ```bash
-export GITHUB_TOKEN=ghp_your_token_here
+# Hiển thị các commands có sẵn
+python -m core.help
+
+# Kiểm tra modules đã cài
+ls core/
 ```
 
-## Xác Minh Cài Đặt
+## Chạy Commands
 
-Sau khi cài đặt (bất kỳ phương pháp nào), xác minh mọi thứ đã được thiết lập đúng:
+Các commands AgencyOS là Python modules. Chạy như sau:
 
 ```bash
-# Kiểm tra AgencyOS CLI có sẵn
-claude --version
+# Marketing commands
+python -m core.marketing_hub
 
-# Kiểm tra thư mục .claude tồn tại
-ls -la .claude/
+# Sales commands
+python -m core.sales_hub
+
+# Finance commands
+python -m core.finance_hub
+
+# Chiến lược (Binh Pháp)
+python -m core.strategy_officer
 ```
 
-## Cập Nhật AgencyOS
+## Tích Hợp IDE (Khuyến Nghị)
 
-Giữ AgencyOS Engineer luôn cập nhật:
+Để có trải nghiệm tốt nhất, mở trong IDE có AI:
 
+### Cursor IDE
+[![Open in Cursor](https://img.shields.io/badge/Open%20in-Cursor-blue?style=for-the-badge&logo=cursor)](https://cursor.com)
+
+1. Mở Cursor IDE
+2. Clone: `git clone https://github.com/longtho638-jpg/agencyos-starter.git`
+3. Mở thư mục trong Cursor
+4. Sử dụng terminal tích hợp để chạy commands
+
+### VS Code
+1. Mở VS Code
+2. Clone và mở thư mục agencyos-starter
+3. Cài đặt Python extension
+4. Sử dụng terminal tích hợp
+
+## Xử Lý Lỗi
+
+### Không tìm thấy Python
 ```bash
-# Cập nhật AgencyOS Engineer lên phiên bản mới nhất
-mk init
+# Kiểm tra phiên bản Python
+python --version
 
-# Cập nhật lên phiên bản cụ thể
-mk init --version v1.2.0
+# Nếu không tìm thấy, cài đặt Python 3.8+
+# macOS: brew install python
+# Ubuntu: sudo apt install python3
+# Windows: Tải từ python.org
 ```
 
-**Loại trừ các file cụ thể khi cập nhật:**
-
+### Lỗi quyền truy cập
 ```bash
-# Không ghi đè CLAUDE.md
-mk init --exclude CLAUDE.md
+# Sử dụng pip với cờ user
+pip install --user -r requirements.txt
 ```
 
-**Cập nhật CLI:**
-
-```bash
-# Cập nhật công cụ dòng lệnh ck
-mk update
-```
-
-## Khắc Phục Sự Cố
-
-### Lỗi Quyền
-
-Trên macOS/Linux, bạn có thể cần sudo:
-
-```bash
-sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
-```
-
-Hoặc cấu hình npm để sử dụng thư mục khác:
-
-```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-export PATH=~/.npm-global/bin:$PATH
-```
-
-### Không Tìm Thấy AgencyOS CLI
-
-Nếu lệnh `claude` không được tìm thấy:
-
-1. Cài đặt AgencyOS CLI CLI từ [claude.ai/code](https://claude.ai/code)
-2. Khởi động lại terminal
-3. Xác minh với `claude --version`
-
-### Xác Thực GitHub Thất Bại
-
-Nếu CLI không thể xác thực:
-
-1. Cài đặt GitHub CLI: `brew install gh` (macOS) hoặc xem [cli.github.com](https://cli.github.com)
-2. Xác thực: `gh auth login`
-3. Xác minh: `gh auth status`
-4. Hoặc thiết lập biến môi trường: `export GITHUB_TOKEN=your_token`
+### Kích hoạt license thất bại
+- Kiểm tra license key đúng
+- Đảm bảo kết nối internet
+- Liên hệ support@agencyos.network
 
 ## Bước Tiếp Theo
 
-Bây giờ AgencyOS đã được cài đặt, tiếp tục với:
+Sau khi cài đặt:
 
-- [Hướng Dẫn Bắt Đầu Nhanh](/docs/getting-started/quick-start) - Xây dựng dự án đầu tiên
-- [Giải Thích CLAUDE.md](/docs/core-concepts/claude-md) - Hiểu file cấu hình
-- [Workflows](/docs/core-concepts/workflows) - Tìm hiểu về quy trình phát triển
+1. 📖 Đọc [Hướng Dẫn Nhanh](/vi/docs/getting-started/quick-start)
+2. 📋 Khám phá [85+ Commands](/commands)
+3. 🖥️ Thử [Demo Tương Tác](/demo)
+4. 💰 Tính [ROI của bạn](/roi-calculator)
+
+---
+
+**Cần hỗ trợ?** Liên hệ chúng tôi tại [hello@agencyos.network](mailto:hello@agencyos.network)
