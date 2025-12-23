@@ -2,7 +2,7 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 
 const title = 'Welcome to AgencyOS!';
-const description = 'Your account is ready. Start automating your agency today.';
+const description = 'Your account is ready. Get your license key and start automating your agency.';
 ---
 
 <LandingLayout title={title} description={description}>
@@ -17,6 +17,17 @@ const description = 'Your account is ready. Start automating your agency today.'
         <p>Your account has been created successfully.</p>
       </div>
 
+      <!-- License Key Section -->
+      <div class="license-section" id="license-section">
+        <h3>🔑 Your License Key</h3>
+        <div class="license-box">
+          <code id="license-key">AGENCYOS-XXXX-XXXX-XXXX</code>
+          <button id="copy-license" class="btn-copy" title="Copy license key">📋</button>
+        </div>
+        <p class="license-note">Keep this key safe. You'll need it to activate your CLI.</p>
+      </div>
+
+      <!-- Account Info -->
       <div class="account-info" id="account-info">
         <div class="info-row">
           <span class="label">Email:</span>
@@ -27,40 +38,97 @@ const description = 'Your account is ready. Start automating your agency today.'
           <span class="value" id="user-plan">Pro</span>
         </div>
         <div class="info-row" id="discount-info" style="display: none;">
-          <span class="label">Discount:</span>
-          <span class="value text-green" id="user-discount">100% OFF</span>
+          <span class="label">Status:</span>
+          <span class="value text-green" id="user-discount">LIFETIME FREE</span>
         </div>
       </div>
 
-      <div class="next-steps">
-        <h3>🚀 Next Steps:</h3>
-        <ol>
-          <li>
+      <!-- Installation Steps -->
+      <div class="install-steps">
+        <h3>🚀 Quick Setup (2 minutes)</h3>
+        
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
             <strong>Install AgencyOS CLI</strong>
-            <p>Follow our quick installation guide</p>
-          </li>
-          <li>
+            <div class="code-block">
+              <code>npm install -g @agencyos/cli</code>
+              <button class="btn-copy-small" data-copy="npm install -g @agencyos/cli">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <strong>Activate your license</strong>
+            <div class="code-block">
+              <code id="activate-cmd">mk activate YOUR-LICENSE-KEY</code>
+              <button class="btn-copy-small" id="copy-activate">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <strong>Open in your IDE</strong>
+            <div class="ide-buttons">
+              <a href="vscode://vscode.git/clone?url=https://github.com/agencyos/starter" class="ide-btn" title="Open in VS Code">
+                <span>VS Code</span>
+              </a>
+              <a href="cursor://vscode.git/clone?url=https://github.com/agencyos/starter" class="ide-btn" title="Open in Cursor">
+                <span>Cursor</span>
+              </a>
+              <a href="https://antigravity.google/?repo=agencyos/starter" class="ide-btn antigravity" title="Open in Antigravity">
+                <span>🚀 Antigravity</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
             <strong>Run your first command</strong>
-            <p>Try <code>/help</code> to see all 85+ commands</p>
-          </li>
-          <li>
-            <strong>Join the community</strong>
-            <p>Connect with other agency owners</p>
-          </li>
-        </ol>
+            <div class="code-block">
+              <code>mk help</code>
+              <button class="btn-copy-small" data-copy="mk help">📋</button>
+            </div>
+            <p class="step-note">Access all 85+ AI commands instantly!</p>
+          </div>
+        </div>
       </div>
 
+      <!-- IDE Compatibility -->
+      <div class="ide-compatibility">
+        <h4>✅ Compatible with:</h4>
+        <div class="ide-logos">
+          <span class="ide-logo">VS Code</span>
+          <span class="ide-logo">Cursor</span>
+          <span class="ide-logo highlight">Antigravity</span>
+          <span class="ide-logo">Windsurf</span>
+          <span class="ide-logo">Claude Code</span>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
       <div class="cta-buttons">
         <a href="/docs/getting-started/installation" class="btn-primary">
-          📦 Install Now →
+          📖 Full Documentation →
         </a>
         <a href="/quickstart" class="btn-secondary">
-          📚 View Quick Start
+          🎯 Quick Start Guide
         </a>
+      </div>
+
+      <!-- Email Sent Notice -->
+      <div class="email-notice" id="email-notice">
+        <p>📧 We've also sent these instructions to your email.</p>
       </div>
 
       <div class="support-note">
-        <p>Need help? Email us at <a href="mailto:support@agencyos.network">support@agencyos.network</a></p>
+        <p>Need help? <a href="mailto:support@agencyos.network">support@agencyos.network</a> | <a href="/license">Manage License</a></p>
       </div>
 
     </div>
@@ -69,7 +137,7 @@ const description = 'Your account is ready. Start automating your agency today.'
 
 <style>
   .success-section {
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,121 +148,262 @@ const description = 'Your account is ready. Start automating your agency today.'
     background: var(--color-bg-secondary);
     border: 2px solid #22c55e;
     border-radius: 16px;
-    padding: 48px;
-    text-align: center;
-    max-width: 600px;
+    padding: 40px;
+    max-width: 700px;
     width: 100%;
   }
 
   .success-icon {
-    font-size: 4rem;
-    margin-bottom: 16px;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 8px;
   }
 
   .success-card h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 800;
     color: var(--color-text-primary);
-    margin: 0 0 16px 0;
+    margin: 0 0 8px 0;
+    text-align: center;
   }
 
   .welcome-message {
     color: var(--color-text-muted);
     margin-bottom: 24px;
+    text-align: center;
   }
 
-  .welcome-message p {
-    margin: 0;
+  .welcome-message p { margin: 4px 0; }
+
+  /* License Section */
+  .license-section {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(6, 182, 212, 0.1));
+    border: 2px dashed #22c55e;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    text-align: center;
   }
 
+  .license-section h3 {
+    margin: 0 0 12px 0;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+  }
+
+  .license-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--color-bg-tertiary);
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+
+  .license-box code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    color: #22c55e;
+    letter-spacing: 1px;
+  }
+
+  .btn-copy {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+
+  .btn-copy:hover { background: #22c55e; }
+
+  .license-note {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin: 8px 0 0 0;
+  }
+
+  /* Account Info */
   .account-info {
     background: var(--color-bg-tertiary);
     border-radius: 12px;
     padding: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   .info-row {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 6px 0;
     border-bottom: 1px solid var(--color-border);
-  }
-
-  .info-row:last-child {
-    border-bottom: none;
-  }
-
-  .info-row .label {
-    color: var(--color-text-muted);
-  }
-
-  .info-row .value {
-    color: var(--color-text-primary);
-    font-weight: 600;
-  }
-
-  .text-green {
-    color: #22c55e !important;
-  }
-
-  .next-steps {
-    text-align: left;
-    margin-bottom: 32px;
-  }
-
-  .next-steps h3 {
-    color: var(--color-text-primary);
-    margin: 0 0 16px 0;
-  }
-
-  .next-steps ol {
-    list-style: decimal;
-    padding-left: 24px;
-    margin: 0;
-  }
-
-  .next-steps li {
-    margin-bottom: 16px;
-    color: var(--color-text-secondary);
-  }
-
-  .next-steps li strong {
-    color: var(--color-text-primary);
-    display: block;
-  }
-
-  .next-steps li p {
-    margin: 4px 0 0 0;
     font-size: 0.9rem;
-    color: var(--color-text-muted);
   }
 
-  .next-steps code {
-    background: var(--color-bg-tertiary);
-    color: #22c55e;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-family: 'JetBrains Mono', monospace;
-  }
+  .info-row:last-child { border-bottom: none; }
 
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
+  .info-row .label { color: var(--color-text-muted); }
+  .info-row .value { color: var(--color-text-primary); font-weight: 600; }
+  .text-green { color: #22c55e !important; }
+
+  /* Install Steps */
+  .install-steps {
     margin-bottom: 24px;
   }
 
+  .install-steps h3 {
+    color: var(--color-text-primary);
+    margin: 0 0 16px 0;
+    font-size: 1.1rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    width: 28px;
+    height: 28px;
+    background: #22c55e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .step-content {
+    flex: 1;
+  }
+
+  .step-content strong {
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .code-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-bg-tertiary);
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+  }
+
+  .code-block code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #22c55e;
+    flex: 1;
+  }
+
+  .btn-copy-small {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+
+  .btn-copy-small:hover { opacity: 1; }
+
+  .step-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin: 6px 0 0 0;
+  }
+
+  /* IDE Buttons */
+  .ide-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .ide-btn {
+    padding: 8px 16px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .ide-btn:hover { border-color: #22c55e; }
+
+  .ide-btn.antigravity {
+    background: linear-gradient(135deg, #4285f4, #34a853);
+    border: none;
+    color: white;
+  }
+
+  /* IDE Compatibility */
+  .ide-compatibility {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: var(--color-bg-tertiary);
+    border-radius: 12px;
+  }
+
+  .ide-compatibility h4 {
+    margin: 0 0 12px 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .ide-logos {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .ide-logo {
+    padding: 4px 12px;
+    background: var(--color-bg-secondary);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .ide-logo.highlight {
+    background: linear-gradient(135deg, #4285f4, #34a853);
+    color: white;
+  }
+
+  /* CTA Buttons */
+  .cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
   .btn-primary {
-    display: inline-block;
-    padding: 14px 28px;
+    padding: 12px 24px;
     background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
   }
 
   .btn-primary:hover {
@@ -203,23 +412,27 @@ const description = 'Your account is ready. Start automating your agency today.'
   }
 
   .btn-secondary {
-    display: inline-block;
-    padding: 14px 28px;
+    padding: 12px 24px;
     background: var(--color-bg-tertiary);
     color: var(--color-text-primary);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s ease;
   }
 
-  .btn-secondary:hover {
-    background: var(--color-bg-secondary);
+  .email-notice {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
   }
+
+  .email-notice p { margin: 0; }
 
   .support-note {
-    font-size: 0.85rem;
+    text-align: center;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
   }
 
@@ -228,66 +441,104 @@ const description = 'Your account is ready. Start automating your agency today.'
     text-decoration: none;
   }
 
-  .support-note a:hover {
-    text-decoration: underline;
-  }
-
   @media (max-width: 480px) {
-    .success-card {
-      padding: 24px;
-    }
-
-    .success-card h1 {
-      font-size: 1.5rem;
-    }
-
-    .cta-buttons {
-      flex-direction: column;
-    }
+    .success-card { padding: 24px; }
+    .success-card h1 { font-size: 1.5rem; }
+    .ide-buttons { flex-direction: column; }
+    .cta-buttons { flex-direction: column; }
   }
 </style>
 
 <script>
+  // Generate license key
+  function generateLicenseKey(): string {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const segments = [];
+    for (let s = 0; s < 3; s++) {
+      let segment = '';
+      for (let i = 0; i < 4; i++) {
+        segment += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      segments.push(segment);
+    }
+    return 'AGENCYOS-' + segments.join('-');
+  }
+
   // Get user data
   const urlParams = new URLSearchParams(window.location.search);
   const isFree = urlParams.get('free') === 'true';
   const plan = urlParams.get('plan') || 'pro';
   const emailFromUrl = urlParams.get('email');
 
-  // Get from localStorage
   const userData = localStorage.getItem('agencyos_user');
-  const appliedCode = localStorage.getItem('agencyos_applied_code');
-
-  // Update UI
+  const licenseKeyEl = document.getElementById('license-key');
+  const activateCmdEl = document.getElementById('activate-cmd');
   const userEmailEl = document.getElementById('user-email');
   const userPlanEl = document.getElementById('user-plan');
   const discountInfoEl = document.getElementById('discount-info');
   const userDiscountEl = document.getElementById('user-discount');
   const welcomeMessage = document.getElementById('welcome-message');
 
+  // Generate or retrieve license key
+  let licenseKey = localStorage.getItem('agencyos_license_key');
+  if (!licenseKey) {
+    licenseKey = generateLicenseKey();
+    localStorage.setItem('agencyos_license_key', licenseKey);
+  }
+
+  // Display license key
+  if (licenseKeyEl) licenseKeyEl.textContent = licenseKey;
+  if (activateCmdEl) activateCmdEl.textContent = `mk activate ${licenseKey}`;
+
+  // Update user info
   if (userData) {
     const user = JSON.parse(userData);
-    
     if (userEmailEl) userEmailEl.textContent = user.email || emailFromUrl || '-';
-    if (userPlanEl) userPlanEl.textContent = user.plan?.charAt(0).toUpperCase() + user.plan?.slice(1) || 'Pro';
+    if (userPlanEl) userPlanEl.textContent = (user.plan || plan).charAt(0).toUpperCase() + (user.plan || plan).slice(1);
     
     if (user.discount > 0 && discountInfoEl && userDiscountEl) {
       discountInfoEl.style.display = 'flex';
-      userDiscountEl.textContent = user.discount === 100 ? '100% FREE!' : user.discount + '% OFF';
+      userDiscountEl.textContent = user.discount === 100 ? 'LIFETIME FREE 🎉' : user.discount + '% OFF';
     }
   } else if (emailFromUrl) {
     if (userEmailEl) userEmailEl.textContent = emailFromUrl;
   }
 
-  // Show special message for free users
+  // Free user message
   if (isFree && welcomeMessage) {
     welcomeMessage.innerHTML = `
-      <p>🎉 <strong>Congratulations!</strong> You've unlocked FREE access to AgencyOS!</p>
-      <p>You're one of the first 100 users. Enjoy lifetime access at no cost.</p>
+      <p>🎉 <strong>You're one of the first 100!</strong></p>
+      <p>Enjoy lifetime access to AgencyOS - completely FREE!</p>
     `;
+    if (discountInfoEl && userDiscountEl) {
+      discountInfoEl.style.display = 'flex';
+      userDiscountEl.textContent = 'LIFETIME FREE 🎉';
+    }
   }
 
-  // Clear stored data (optional - keep for reference)
-  // localStorage.removeItem('agencyos_user');
-  // localStorage.removeItem('agencyos_applied_code');
+  // Copy buttons
+  document.getElementById('copy-license')?.addEventListener('click', () => {
+    navigator.clipboard.writeText(licenseKey || '');
+    alert('License key copied!');
+  });
+
+  document.getElementById('copy-activate')?.addEventListener('click', () => {
+    navigator.clipboard.writeText(`mk activate ${licenseKey}`);
+    alert('Command copied!');
+  });
+
+  document.querySelectorAll('.btn-copy-small[data-copy]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.getAttribute('data-copy');
+      if (text) navigator.clipboard.writeText(text);
+      alert('Copied!');
+    });
+  });
+
+  // Save license with user data
+  if (userData) {
+    const user = JSON.parse(userData);
+    user.licenseKey = licenseKey;
+    localStorage.setItem('agencyos_user', JSON.stringify(user));
+  }
 </script>
