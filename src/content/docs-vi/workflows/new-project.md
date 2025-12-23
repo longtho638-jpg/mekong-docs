@@ -17,7 +17,7 @@ Tạo dự án mới từ đầu với quy trình phát triển AI-powered của
 ### 1. Cài AgencyOS CLI
 
 ```bash
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 ```
 
 ## Bắt Đầu Nhanh
@@ -408,4 +408,4 @@ Sau khi bootstrap dự án:
 
 **Sẵn sàng xây dựng?** Bắt đầu với `/bootstrap` và để AI agents xử lý phần nặng nhọc. Nhớ **xem kỹ kế hoạch** trước khi đồng ý!
 
-**Cần giúp?** Truy cập [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
+**Cần giúp?** Truy cập [GitHub Discussions](https://github.com/mrgoonie/agencyos-cli/discussions)

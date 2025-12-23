@@ -42,7 +42,7 @@ Get help with AgencyOS through our community resources, documentation, and direc
 - `#workflows` - Discuss workflow patterns
 
 ### GitHub Discussions
-[**GitHub Discussions**](https://github.com/mekong/mekong/discussions)
+[**GitHub Discussions**](https://github.com/longtho638-jpg/agencyos/discussions)
 
 **Best for**:
 - Feature requests and ideas
@@ -52,7 +52,7 @@ Get help with AgencyOS through our community resources, documentation, and direc
 - Long-form discussions
 
 ### Stack Overflow
-[**AgencyOS on Stack Overflow**](https://stackoverflow.com/questions/tagged/mekong)
+[**AgencyOS on Stack Overflow**](https://stackoverflow.com/questions/tagged/agencyos)
 
 **Use when**:
 - You have a specific technical question
@@ -78,9 +78,9 @@ Get help with AgencyOS through our community resources, documentation, and direc
 - [Migration Guide](/docs/getting-started/upgrade-guide) - From AgencyOS CLI to AgencyOS
 
 ### Code Examples
-- [GitHub Repository](https://github.com/mekong/examples) - Example projects
-- [Templates](https://github.com/mekong/templates) - Starter templates
-- [Community Skills](https://github.com/mekong/community-skills) - User-contributed skills
+- [GitHub Repository](https://github.com/longtho638-jpg/examples) - Example projects
+- [Templates](https://github.com/longtho638-jpg/templates) - Starter templates
+- [Community Skills](https://github.com/longtho638-jpg/community-skills) - User-contributed skills
 
 ## Direct Support
 
@@ -189,7 +189,7 @@ I've tried running /skill:refresh and restarting AgencyOS.
 - Contribute to GitHub discussions
 
 ### Report Bugs
-- [GitHub Issues](https://github.com/mekong/mekong/issues)
+- [GitHub Issues](https://github.com/longtho638-jpg/agencyos/issues)
 - Include detailed reproduction steps
 - Provide system information
 - Share error logs and output
@@ -213,7 +213,7 @@ I've tried running /skill:refresh and restarting AgencyOS.
 
 ### Learning Resources
 - [Blog](https://agencyos.network/blog) - Tips, tricks, and announcements
-- [YouTube Channel](https://youtube.com/@mekong) - Video tutorials and demos
+- [YouTube Channel](https://youtube.com/@agencyos) - Video tutorials and demos
 - [Newsletter](https://agencyos.network/newsletter) - Weekly tips and updates
 
 ### Professional Services
@@ -230,9 +230,9 @@ I've tried running /skill:refresh and restarting AgencyOS.
 
 We value your feedback! Help us improve AgencyOS:
 
-- [Feature Requests](https://github.com/mekong/mekong/discussions/categories/feature-requests)
-- [Bug Reports](https://github.com/mekong/mekong/issues)
-- [Documentation Feedback](https://github.com/mekong/mekong/discussions/categories/documentation)
+- [Feature Requests](https://github.com/longtho638-jpg/agencyos/discussions/categories/feature-requests)
+- [Bug Reports](https://github.com/longtho638-jpg/agencyos/issues)
+- [Documentation Feedback](https://github.com/longtho638-jpg/agencyos/discussions/categories/documentation)
 - [Community Survey](https://agencyos.network/survey) - Share your experience
 
 ---

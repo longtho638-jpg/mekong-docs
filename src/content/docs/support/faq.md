@@ -267,7 +267,7 @@ echo "node_modules/\ndist/\nbuild/\ncoverage/" > .claudeignore
 ### Q: How do I get help?
 **A:** Multiple support channels:
 - [Discord Community](https://agencyos.network/discord) - Real-time help
-- [GitHub Issues](https://github.com/mekong/mekong/issues) - Bug reports
+- [GitHub Issues](https://github.com/longtho638-jpg/agencyos/issues) - Bug reports
 - [Documentation](/docs) - Complete reference
 - [Email Support](mailto:support@agencyos.network) - Direct assistance
 
@@ -305,4 +305,4 @@ echo "node_modules/\ndist/\nbuild/\ncoverage/" > .claudeignore
 
 ---
 
-**Don't see your question here?** Ask in our [Discord community](https://agencyos.network/discord) or [open an issue](https://github.com/mekong/mekong/issues). We're here to help!
+**Don't see your question here?** Ask in our [Discord community](https://agencyos.network/discord) or [open an issue](https://github.com/longtho638-jpg/agencyos/issues). We're here to help!

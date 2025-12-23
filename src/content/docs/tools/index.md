@@ -62,7 +62,7 @@ Have a tool that enhances AgencyOS? We'd love to feature it!
 - Solves a real AgencyOS user problem
 
 **Submit via:**
-- [GitHub](https://github.com/mekong/mekong-docs/pulls)
+- [GitHub](https://github.com/longtho638-jpg/agencyos-docs/pulls)
 - [Discord Community](https://discord.gg/GnCRPpSw)
 
 ---

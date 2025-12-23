@@ -32,7 +32,7 @@ Phương pháp này cho bạn quyền kiểm soát hoàn toàn quá trình cài 
 
 ### Bước 1: Sao Chép Các File AgencyOS
 
-Sao chép tất cả thư mục và file từ repo `mekong-engineer` vào dự án của bạn:
+Sao chép tất cả thư mục và file từ repo `agencyos` vào dự án của bạn:
 
 ```bash
 # Sao chép các file và thư mục sau:
@@ -92,10 +92,10 @@ Cài đặt AgencyOS CLI toàn cục:
 
 ```bash
 # npm
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # bun
-bun add -g mekong-cli
+bun add -g agencyos-cli
 
 # Xác minh cài đặt
 mk --version
@@ -135,7 +135,7 @@ mk update
 
 ### Xác Thực
 
-CLI yêu cầu **GitHub Personal Access Token (PAT)** để tải xuống các bản phát hành từ repository riêng tư (`mekong-engineer` và `mekong-marketing`).
+CLI yêu cầu **GitHub Personal Access Token (PAT)** để tải xuống các bản phát hành từ repository riêng tư (`agencyos` và `mekong-marketing`).
 
 **Chuỗi Dự Phòng Xác Thực:**
 
@@ -201,7 +201,7 @@ mk update
 Trên macOS/Linux, bạn có thể cần sudo:
 
 ```bash
-sudo npm install -g mekong-cli
+sudo npm install -g agencyos-cli
 ```
 
 Hoặc cấu hình npm để sử dụng thư mục khác:

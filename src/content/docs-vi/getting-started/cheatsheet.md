@@ -16,7 +16,7 @@ Hướng dẫn tham khảo nhanh cho AgencyOS CLI commands và workflows.
 
 ```bash
 # Cài AgencyOS globally
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # Kiểm tra phiên bản
 mk --version
@@ -206,7 +206,7 @@ mk new --kit engineer --dir /đường/dẫn/đến/dự/án
 
 ```bash
 # 1. Cài AgencyOS
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # 2. Đi đến dự án
 cd /đường/dẫn/đến/dự/án/hiện/tại
@@ -225,7 +225,7 @@ claude
 
 ```bash
 # 1. Cài AgencyOS
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # 2. Tạo dự án
 mk new --kit engineer --dir /đường/dẫn/đến/dự/án
@@ -545,7 +545,7 @@ mk --version
 - [AI Agents](/vi/docs/agents/)
 - [Workflows](/vi/docs/core-concepts/workflows)
 - [Troubleshooting](/vi/docs/troubleshooting/)
-- [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
+- [GitHub Discussions](https://github.com/mrgoonie/agencyos-cli/discussions)
 
 ---
 

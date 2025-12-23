@@ -62,7 +62,7 @@ Bạn có công cụ giúp nâng cao AgencyOS? Chúng tôi rất muốn giới t
 - Giải quyết vấn đề thực tế của người dùng AgencyOS
 
 **Gửi qua:**
-- [GitHub](https://github.com/mekong/mekong-docs/pulls)
+- [GitHub](https://github.com/longtho638-jpg/agencyos-docs/pulls)
 - [Discord Community](https://discord.gg/GnCRPpSw)
 
 ---

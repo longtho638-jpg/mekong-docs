@@ -28,7 +28,7 @@ Already using AgencyOS CLI? AgencyOS enhances your workflow without breaking exi
 
 ```bash
 # Install AgencyOS CLI (doesn't replace AgencyOS CLI)
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Initialize in existing project
 mk init
@@ -43,7 +43,7 @@ mk init
 mk update
 
 # Alternative: npm global update
-npm install -g mekong-cli@latest
+npm install -g agencyos-cli@latest
 ```
 
 ## Gradual Migration Path

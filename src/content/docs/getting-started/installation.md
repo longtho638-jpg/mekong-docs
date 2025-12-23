@@ -40,7 +40,7 @@ This method gives you full control over the installation process.
 
 ### Step 1: Copy AgencyOS Files
 
-Copy all directories and files from the `mekong-engineer` repo to your project:
+Copy all directories and files from the `agencyos` repo to your project:
 
 ```bash
 # Copy these files and directories:
@@ -100,10 +100,10 @@ Install AgencyOS CLI globally:
 
 ```bash
 # npm
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # bun
-bun add -g mekong-cli
+bun add -g agencyos-cli
 
 # Verify installation
 mk --version
@@ -143,7 +143,7 @@ mk update
 
 **Global vs Local Configuration:**
 
-By default, AgencyOS uses local configuration (`~/.mekong`).
+By default, AgencyOS uses local configuration (`~/.agencyos`).
 
 For platform-specific **user-scoped settings**, use the `--global` flag:
 - **macOS/Linux**: `~/.claude`
@@ -153,7 +153,7 @@ Global mode uses user-scoped directories (no sudo required), allowing separate c
 
 ### Authentication
 
-The CLI requires a **GitHub Personal Access Token (PAT)** to download releases from private repositories (`mekong-engineer` and `mekong-marketing`).
+The CLI requires a **GitHub Personal Access Token (PAT)** to download releases from private repositories (`agencyos` and `mekong-marketing`).
 
 **Authentication Fallback Chain:**
 
@@ -219,7 +219,7 @@ mk update
 On macOS/Linux, you may need sudo:
 
 ```bash
-sudo npm install -g mekong-cli
+sudo npm install -g agencyos-cli
 ```
 
 Or configure npm to use a different directory:

@@ -20,8 +20,8 @@ AgencyOS CLI được xây dựng trên nền tảng AgencyOS Engineer với cá
 
 ```bash
 # Cài đặt
-git clone https://github.com/your-org/mekong-cli
-cd mekong-cli
+git clone https://github.com/your-org/agencyos-cli
+cd agencyos-cli
 
 # Mở trong AgencyOS CLI
 claude

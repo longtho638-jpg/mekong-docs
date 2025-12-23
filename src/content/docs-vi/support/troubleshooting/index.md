@@ -32,10 +32,10 @@ Quick fixes for common issues. Most problems resolve in under 5 minutes.
 **Fix**:
 ```bash
 # Verify installation
-npm list -g mekong-cli
+npm list -g agencyos-cli
 
 # Reinstall if needed
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Verify
 mk --version
@@ -136,7 +136,7 @@ rm -rf node_modules
 npm install
 
 # Clear AgencyOS cache
-rm -rf ~/.mekong/cache
+rm -rf ~/.agencyos/cache
 ```
 
 ### Verify Setup
@@ -174,7 +174,7 @@ tree .claude -L 2
    ```
 
 3. **Report issue**:
-   - GitHub: https://github.com/mekong/mekong-engineer/issues
+   - GitHub: https://github.com/longtho638-jpg/agencyos-engineer/issues
    - Include: OS, CLI version, error message, steps to reproduce
 
 ### Community

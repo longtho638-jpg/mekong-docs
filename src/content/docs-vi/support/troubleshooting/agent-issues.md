@@ -636,7 +636,7 @@ done
 
 ### Get Help
 
-1. **GitHub Issues**: [Report agent problems](https://github.com/mekong/mekong-engineer/issues)
+1. **GitHub Issues**: [Report agent problems](https://github.com/longtho638-jpg/agencyos-engineer/issues)
 2. **Discord**: [Agent troubleshooting channel](https://agencyos.network/discord)
 3. **Include**: Agent debug report, specific agent name, command used, expected vs actual behavior
 

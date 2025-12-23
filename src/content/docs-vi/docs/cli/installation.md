@@ -38,7 +38,7 @@ git --version   # Any recent version
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 This installs the `mk` command globally, available from any directory.
@@ -183,7 +183,7 @@ Please purchase a AgencyOS kit at https://agencyos.network
 
 ## Configuration
 
-AgencyOS CLI stores configuration in `~/.mekong/config.json`:
+AgencyOS CLI stores configuration in `~/.agencyos/config.json`:
 
 ```json
 {
@@ -204,7 +204,7 @@ AgencyOS CLI stores configuration in `~/.mekong/config.json`:
 Keep the CLI updated for latest features:
 
 ```bash
-npm update -g mekong-cli
+npm update -g agencyos-cli
 ```
 
 Check installed version:
@@ -217,12 +217,12 @@ mk --version
 Remove AgencyOS CLI:
 
 ```bash
-npm uninstall -g mekong-cli
+npm uninstall -g agencyos-cli
 ```
 
 Remove configuration (optional):
 ```bash
-rm -rf ~/.mekong
+rm -rf ~/.agencyos
 ```
 
 ## Troubleshooting
@@ -237,7 +237,7 @@ rm -rf ~/.mekong
 
 2. **Check installation:**
    ```bash
-   npm list -g mekong-cli
+   npm list -g agencyos-cli
    ```
 
 3. **Verify npm global bin in PATH:**
@@ -252,8 +252,8 @@ rm -rf ~/.mekong
 
 4. **Reinstall:**
    ```bash
-   npm uninstall -g mekong-cli
-   npm install -g mekong-cli
+   npm uninstall -g agencyos-cli
+   npm install -g agencyos-cli
    ```
 
 ### Authentication failed
@@ -284,7 +284,7 @@ rm -rf ~/.mekong
 
 1. **Use npx (no installation needed):**
    ```bash
-   npx mekong-cli new --kit engineer
+   npx agencyos-cli new --kit engineer
    ```
 
 2. **Fix npm permissions:**
@@ -292,12 +292,12 @@ rm -rf ~/.mekong
    mkdir ~/.npm-global
    npm config set prefix '~/.npm-global'
    export PATH=~/.npm-global/bin:$PATH
-   npm install -g mekong-cli
+   npm install -g agencyos-cli
    ```
 
 3. **Use sudo (not recommended):**
    ```bash
-   sudo npm install -g mekong-cli
+   sudo npm install -g agencyos-cli
    ```
 
 ### Download fails
@@ -332,7 +332,7 @@ Now that the CLI is installed:
 ## Need Help?
 
 - **Documentation**: [docs.agencyos.network](https://docs.agencyos.network)
-- **GitHub Issues**: [github.com/mrgoonie/mekong-cli/issues](https://github.com/mrgoonie/mekong-cli/issues)
+- **GitHub Issues**: [github.com/mrgoonie/agencyos-cli/issues](https://github.com/mrgoonie/agencyos-cli/issues)
 - **Purchase Support**: [agencyos.network](https://agencyos.network)
 
 ---

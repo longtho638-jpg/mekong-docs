@@ -120,7 +120,7 @@ Các thay đổi gần đây, cập nhật, và ghi chú phát hành cho AgencyO
 ### Hướng dẫn Migration
 ```bash
 # Cập nhật lên v1.0.0
-npm update mekong-cli
+npm update agencyos-cli
 
 # Migrate cấu hình
 mk migrate
@@ -213,7 +213,7 @@ Giải quyết bug:
 
 ### Nhận trợ giúp
 - [Discord Community](https://agencyos.network/discord) - Chat real-time với cộng đồng
-- [GitHub Issues](https://github.com/mekong/mekong/issues) - Báo cáo bug và yêu cầu tính năng
+- [GitHub Issues](https://github.com/longtho638-jpg/agencyos/issues) - Báo cáo bug và yêu cầu tính năng
 - [Documentation](../) - Tài liệu tham khảo đầy đủ
 - [Email Support](mailto:support@agencyos.network) - Hỗ trợ doanh nghiệp
 

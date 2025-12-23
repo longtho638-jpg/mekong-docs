@@ -17,7 +17,7 @@ Create new projects from scratch with AgencyOS's AI-powered development workflow
 ### 1. Install AgencyOS CLI
 
 ```bash
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 ```
 
 ## Quick Start
@@ -446,4 +446,4 @@ After bootstrapping your project:
 
 **Ready to build?** Start with `/bootstrap` and let AI agents handle the heavy lifting. Remember to **review plans carefully** before approval!
 
-**Need help?** Visit [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
+**Need help?** Visit [GitHub Discussions](https://github.com/mrgoonie/agencyos-cli/discussions)

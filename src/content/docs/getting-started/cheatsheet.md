@@ -16,7 +16,7 @@ Quick reference guide for AgencyOS CLI commands and workflows.
 
 ```bash
 # Install AgencyOS globally
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # Check version
 mk --version
@@ -206,7 +206,7 @@ mk init --kit engineer --dir /path/to/project
 
 ```bash
 # 1. Install AgencyOS
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # 2. Go to project
 cd /path/to/existing/project
@@ -225,7 +225,7 @@ claude
 
 ```bash
 # 1. Install AgencyOS
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # 2. Initialize project
 mk init --kit engineer --dir /path/to/project
@@ -545,7 +545,7 @@ mk --version
 - [AI Agents](/docs/agents/)
 - [Workflows](/docs/docs/configuration/workflows)
 - [Troubleshooting](/docs/support/troubleshooting/)
-- [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
+- [GitHub Discussions](https://github.com/mrgoonie/agencyos-cli/discussions)
 
 ---
 

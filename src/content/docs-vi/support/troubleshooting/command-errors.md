@@ -120,10 +120,10 @@ Detailed implementation instructions...
 
 ```bash
 # Check if CLI installed
-npm list -g mekong-cli
+npm list -g agencyos-cli
 
 # If not installed
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Verify
 mk --version
@@ -411,7 +411,7 @@ export AGENCYOS_VERBOSE=1
 /cook implement feature --verbose
 
 # Method 3: Check logs
-cat ~/.mekong/logs/latest.log
+cat ~/.agencyos/logs/latest.log
 ```
 
 ### Test Individual Components
@@ -539,13 +539,13 @@ claude --dangerously-skip-permissions
   find .claude/commands -name "*.md"
 
   echo -e "\n=== Recent Errors ==="
-  tail -50 ~/.mekong/logs/latest.log
+  tail -50 ~/.agencyos/logs/latest.log
 } > mekong-debug.txt
 ```
 
 ### Get Help
 
-1. **GitHub Issues**: [Report command problems](https://github.com/mekong/mekong-engineer/issues)
+1. **GitHub Issues**: [Report command problems](https://github.com/longtho638-jpg/agencyos-engineer/issues)
 2. **Discord**: [Ask community](https://agencyos.network/discord)
 3. **Include**: Debug report, error message, steps to reproduce
 

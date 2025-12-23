@@ -18,16 +18,16 @@ AgencyOS installation problems? Get unblocked in minutes with platform-specific 
 
 ## Quick Fix: Command Not Found
 
-**Symptom**: `ck: command not found` or `mekong-cli: command not found`
+**Symptom**: `ck: command not found` or `agencyos-cli: command not found`
 
 **Solution**:
 
 ```bash
 # Verify global installation
-npm list -g mekong-cli
+npm list -g agencyos-cli
 
 # If not found, install globally
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Verify installation
 mk --version
@@ -60,7 +60,7 @@ mk --version
 
 **Expected output**:
 ```
-mekong-cli/1.0.0
+agencyos-cli/1.0.0
 ```
 
 #### Windows PATH Not Updated
@@ -102,7 +102,7 @@ nvm install 20
 nvm use 20
 
 # Reinstall AgencyOS
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 ---
@@ -127,13 +127,13 @@ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
 # Reinstall AgencyOS
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 **Solution 2**: Use sudo (not recommended)
 
 ```bash
-sudo npm install -g mekong-cli
+sudo npm install -g agencyos-cli
 ```
 
 **Solution 3**: Use nvm (best practice)
@@ -150,7 +150,7 @@ nvm install 20
 nvm use 20
 
 # Install AgencyOS (no sudo needed)
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 #### Command Not Found After Install
@@ -191,7 +191,7 @@ nvm install 20
 nvm alias default 20
 
 # Reinstall AgencyOS
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 ---
@@ -209,14 +209,14 @@ npm install -g mekong-cli
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install 20
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Option 2: Change npm global directory
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 #### Missing Dependencies
@@ -237,7 +237,7 @@ sudo dnf install -y gcc-c++ make python3
 sudo pacman -S base-devel python
 
 # Reinstall AgencyOS
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 #### PATH Not Set
@@ -277,7 +277,7 @@ npm cache clean --force
 npm install -g npm@latest
 
 # Retry installation
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 ### Network/Proxy Issues
@@ -298,7 +298,7 @@ npm config set https-proxy http://proxy.company.com:8080
 npm config set registry https://registry.npmjs.org/
 
 # Retry installation
-npm install -g mekong-cli
+npm install -g agencyos-cli
 ```
 
 ### Version Conflicts
@@ -309,13 +309,13 @@ npm install -g mekong-cli
 
 ```bash
 # Uninstall old version
-npm uninstall -g mekong-cli
+npm uninstall -g agencyos-cli
 
 # Clear cache
 npm cache clean --force
 
 # Install latest version
-npm install -g mekong-cli@latest
+npm install -g agencyos-cli@latest
 
 # Verify
 mk --version
@@ -377,7 +377,7 @@ After fixing installation issues, verify everything works:
 # Check CLI version
 mk --version
 
-# Expected: mekong-cli/1.0.0
+# Expected: agencyos-cli/1.0.0
 
 # Check available commands
 mk --help
@@ -435,14 +435,14 @@ npm config list
 npm config get prefix
 
 # Installation status
-npm list -g mekong-cli
+npm list -g agencyos-cli
 which ck
 ```
 
 ### Get Help
 
-1. **Check logs**: Look for errors during `npm install -g mekong-cli`
-2. **GitHub Issues**: [Report installation problems](https://github.com/mekong/mekong-engineer/issues)
+1. **Check logs**: Look for errors during `npm install -g agencyos-cli`
+2. **GitHub Issues**: [Report installation problems](https://github.com/longtho638-jpg/agencyos-engineer/issues)
 3. **Discord**: [Join AgencyOS community](https://agencyos.network/discord)
 
 Include in your report:

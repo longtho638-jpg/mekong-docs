@@ -20,7 +20,7 @@ export class OpenRouterClient {
       baseURL: 'https://openrouter.ai/api/v1',
       apiKey: apiKey || process.env.OPENROUTER_API_KEY,
       defaultHeaders: {
-        'HTTP-Referer': 'https://docs.mekongmarketing.com',
+        'HTTP-Referer': 'https://agencyos.network',
         'X-Title': 'AgencyOS Documentation',
       },
     });

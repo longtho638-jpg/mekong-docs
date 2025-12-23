@@ -17,7 +17,7 @@ Integrate AgencyOS into your existing projects to enhance development workflow w
 ### 1. Install AgencyOS CLI
 
 ```bash
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 ```
 
 ### 2. Navigate to Your Project
@@ -282,7 +282,7 @@ Share `.claude/` directory and generated specs with your team via git.
 git clone <repo-url>
 
 # 2. Install AgencyOS
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # 3. Navigate to project
 cd project-name
@@ -325,4 +325,4 @@ After successful integration:
 
 ---
 
-**Need help?** Check [Troubleshooting Guide](/docs/support/troubleshooting/) or [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
+**Need help?** Check [Troubleshooting Guide](/docs/support/troubleshooting/) or [GitHub Discussions](https://github.com/mrgoonie/agencyos-cli/discussions)

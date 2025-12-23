@@ -213,7 +213,7 @@ Bug Resolution:
 
 ### Getting Help
 - [Discord Community](https://agencyos.network/discord) - Real-time chat with community
-- [GitHub Issues](https://github.com/mekong/mekong/issues) - Bug reports and feature requests
+- [GitHub Issues](https://github.com/longtho638-jpg/agencyos/issues) - Bug reports and feature requests
 - [Documentation](/docs) - Complete reference documentation
 - [Email Support](mailto:support@agencyos.network) - Enterprise support inquiries
 

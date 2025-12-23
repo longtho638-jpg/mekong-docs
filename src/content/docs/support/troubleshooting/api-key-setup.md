@@ -540,7 +540,7 @@ nano .env
 
 ### Get Help
 
-1. **GitHub Issues**: [Report API key problems](https://github.com/mekong/mekong-engineer/issues)
+1. **GitHub Issues**: [Report API key problems](https://github.com/longtho638-jpg/agencyos-engineer/issues)
 2. **Discord**: [API configuration help](https://agencyos.network/discord)
 3. **Include**: API debug report (keys masked), error messages, provider (Gemini/SearchAPI/OpenRouter)
 

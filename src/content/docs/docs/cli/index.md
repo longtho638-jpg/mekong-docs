@@ -73,7 +73,7 @@ mk init -g --kit engineer
 
 **Global vs Local Configuration:**
 
-By default, AgencyOS uses local configuration (`~/.mekong`).
+By default, AgencyOS uses local configuration (`~/.agencyos`).
 
 For platform-specific **user-scoped settings**, use the `--global` flag:
 - **macOS/Linux**: `~/.claude`
@@ -182,7 +182,7 @@ export GITHUB_TOKEN=ghp_your_token_here
 
 ## Configuration
 
-Configuration stored in `~/.mekong/config.json`:
+Configuration stored in `~/.agencyos/config.json`:
 
 ```json
 {
@@ -226,7 +226,7 @@ After update:
 
 ```bash
 # Install CLI
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Verify installation
 mk --version
@@ -315,10 +315,10 @@ mk versions --limit 50
 **Solutions:**
 ```bash
 # Reinstall globally
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Check installation
-npm list -g mekong-cli
+npm list -g agencyos-cli
 
 # Restart terminal
 ```

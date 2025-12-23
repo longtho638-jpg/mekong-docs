@@ -17,7 +17,7 @@ Tích hợp AgencyOS vào dự án hiện tại để nâng cao quy trình phát
 ### 1. Cài AgencyOS CLI
 
 ```bash
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 ```
 
 ### 2. Di Chuyển Đến Dự Án
@@ -282,7 +282,7 @@ Chia sẻ thư mục `.claude/` và specs đã tạo với team qua git.
 git clone <repo-url>
 
 # 2. Cài AgencyOS
-npm i -g mekong-cli@latest
+npm i -g agencyos-cli@latest
 
 # 3. Di chuyển đến project
 cd project-name
@@ -325,4 +325,4 @@ Sau khi tích hợp thành công:
 
 ---
 
-**Cần giúp?** Xem [Troubleshooting Guide](/vi/docs/troubleshooting/) hoặc [GitHub Discussions](https://github.com/mrgoonie/mekong-cli/discussions)
+**Cần giúp?** Xem [Troubleshooting Guide](/vi/docs/troubleshooting/) hoặc [GitHub Discussions](https://github.com/mrgoonie/agencyos-cli/discussions)

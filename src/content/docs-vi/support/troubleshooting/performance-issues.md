@@ -611,7 +611,7 @@ EOF
 
 ### Get Help
 
-1. **GitHub Issues**: [Report performance problems](https://github.com/mekong/mekong-engineer/issues)
+1. **GitHub Issues**: [Report performance problems](https://github.com/longtho638-jpg/agencyos-engineer/issues)
 2. **Discord**: [Performance optimization channel](https://agencyos.network/discord)
 3. **Include**: Performance report, project size, specific slow command, expected vs actual time
 

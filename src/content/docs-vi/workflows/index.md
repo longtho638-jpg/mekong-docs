@@ -188,7 +188,7 @@ Want to contribute use case examples? We're looking for:
 
 **Contact us:**
 - [Discord Community](https://agencyos.network/discord)
-- [GitHub Discussions](https://github.com/mekong/discussions)
+- [GitHub Discussions](https://github.com/longtho638-jpg/discussions)
 
 ## Request Use Cases
 

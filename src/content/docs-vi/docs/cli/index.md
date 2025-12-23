@@ -73,7 +73,7 @@ mk init -g --kit engineer
 
 **Cấu hình Global vs Local:**
 
-Mặc định, AgencyOS sử dụng cấu hình local (`~/.mekong`).
+Mặc định, AgencyOS sử dụng cấu hình local (`~/.agencyos`).
 
 Để cài đặt **user-scoped theo platform**, sử dụng flag `--global`:
 - **macOS/Linux**: `~/.claude`
@@ -182,7 +182,7 @@ export GITHUB_TOKEN=ghp_your_token_here
 
 ## Configuration
 
-Configuration stored in `~/.mekong/config.json`:
+Configuration stored in `~/.agencyos/config.json`:
 
 ```json
 {
@@ -226,7 +226,7 @@ After update:
 
 ```bash
 # Cài đặt CLI
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Kiểm tra cài đặt
 mk --version
@@ -315,10 +315,10 @@ mk versions --limit 50
 **Solutions:**
 ```bash
 # Reinstall globally
-npm install -g mekong-cli
+npm install -g agencyos-cli
 
 # Check installation
-npm list -g mekong-cli
+npm list -g agencyos-cli
 
 # Restart terminal
 ```

@@ -26,7 +26,7 @@ Learn how to bootstrap a new project with AgencyOS, from initial requirements to
 ## Prerequisites
 
 - Node.js 18+ installed
-- AgencyOS CLI installed (`npm install -g mekong-cli`)
+- AgencyOS CLI installed (`npm install -g agencyos-cli`)
 - GitHub account
 - Basic understanding of REST APIs
 
