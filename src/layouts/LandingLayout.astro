@@ -20,12 +20,34 @@ const {
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     
-    <link rel="icon" type="image/png" href="/logo-512-transparent.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo-512-dark.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo-512-dark.png" />
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#22c55e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agencyos.network" />
+    <meta property="og:image" content="https://agencyos.network/og-image.png" />
+    <meta property="og:site_name" content="AgencyOS" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://agencyos.network/og-image.png" />
+    
+    <!-- Brand -->
+    <meta name="author" content="AgencyOS - Binh Pháp Venture Studio" />
+    <meta name="keywords" content="agency os, ai agency, automation, marketing automation, sales automation" />
     
     <title>{title}</title>
   </head>
