@@ -9,6 +9,33 @@ const description = '85+ AI commands for developers, marketers, sales, finance, 
   <section class="commands-hero">
     <h1>📋 85+ Commands</h1>
     <p>Gõ command nào để làm việc đó?</p>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="command-search" 
+          placeholder="Search commands... (e.g. marketing, invoice, fix)" 
+          autocomplete="off"
+        />
+        <span class="search-clear" id="search-clear">✕</span>
+      </div>
+      <div class="search-stats">
+        <span id="results-count">85</span> commands found
+      </div>
+    </div>
+    
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="tech">🧑‍💻 Tech</button>
+      <button class="filter-btn" data-category="marketing">📣 Marketing</button>
+      <button class="filter-btn" data-category="sales">💼 Sales</button>
+      <button class="filter-btn" data-category="finance">💰 Finance</button>
+      <button class="filter-btn" data-category="strategy">🎯 Strategy</button>
+    </div>
   </section>
 
   <!-- Tôi muốn Index -->
@@ -368,6 +395,110 @@ const description = '85+ AI commands for developers, marketers, sales, finance, 
     box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
   }
 
+  /* Search Styles */
+  .search-container {
+    max-width: 500px;
+    margin: 24px auto 0;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: var(--color-bg-secondary);
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    transition: border-color 0.2s;
+  }
+
+  .search-box:focus-within {
+    border-color: #22c55e;
+  }
+
+  .search-icon {
+    margin-right: 12px;
+    font-size: 1.2rem;
+  }
+
+  .search-box input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .search-box input::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .search-clear {
+    cursor: pointer;
+    color: var(--color-text-muted);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .search-clear.visible {
+    opacity: 1;
+  }
+
+  .search-stats {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 8px;
+  }
+
+  .search-stats span {
+    color: #22c55e;
+    font-weight: 700;
+  }
+
+  .category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover {
+    border-color: #22c55e;
+  }
+
+  .filter-btn.active {
+    background: #22c55e;
+    border-color: #22c55e;
+    color: white;
+  }
+
+  .command-group.hidden {
+    display: none;
+  }
+
+  .commands-row code.hidden {
+    display: none;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 48px;
+    color: var(--color-text-muted);
+  }
+
   @media (max-width: 768px) {
     .commands-hero h1 {
       font-size: 2rem;
@@ -376,5 +507,104 @@ const description = '85+ AI commands for developers, marketers, sales, finance, 
     .want-table {
       overflow-x: auto;
     }
+    
+    .category-filter {
+      gap: 6px;
+    }
+    
+    .filter-btn {
+      padding: 6px 12px;
+      font-size: 0.75rem;
+    }
   }
 </style>
+
+<script>
+  // Search functionality
+  const searchInput = document.getElementById('command-search') as HTMLInputElement;
+  const searchClear = document.getElementById('search-clear');
+  const resultsCount = document.getElementById('results-count');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const commandCodes = document.querySelectorAll('.commands-row code');
+  const commandGroups = document.querySelectorAll('.command-group');
+  const wantTable = document.querySelector('.want-index');
+
+  let activeCategory = 'all';
+
+  function filterCommands() {
+    const query = searchInput?.value.toLowerCase().trim() || '';
+    let count = 0;
+
+    // Show/hide clear button
+    if (searchClear) {
+      searchClear.classList.toggle('visible', query.length > 0);
+    }
+
+    // Hide "want" table when searching
+    if (wantTable) {
+      (wantTable as HTMLElement).style.display = query ? 'none' : 'block';
+    }
+
+    commandCodes.forEach(code => {
+      const text = code.textContent?.toLowerCase() || '';
+      const group = code.closest('.command-group');
+      const category = code.closest('.commands-category');
+      
+      // Check category
+      let categoryMatch = activeCategory === 'all';
+      if (category?.classList.contains('business')) {
+        // Business commands
+        const groupTitle = group?.querySelector('h3')?.textContent?.toLowerCase() || '';
+        if (activeCategory === 'marketing' && (groupTitle.includes('marketing') || groupTitle.includes('video'))) categoryMatch = true;
+        if (activeCategory === 'sales' && groupTitle.includes('sales')) categoryMatch = true;
+        if (activeCategory === 'finance' && (groupTitle.includes('finance') || groupTitle.includes('operations'))) categoryMatch = true;
+        if (activeCategory === 'strategy' && (groupTitle.includes('strategy') || groupTitle.includes('intel') || groupTitle.includes('risk'))) categoryMatch = true;
+      } else {
+        // Tech commands
+        if (activeCategory === 'tech') categoryMatch = true;
+      }
+
+      // Check search query
+      const searchMatch = !query || text.includes(query);
+
+      const visible = categoryMatch && searchMatch;
+      (code as HTMLElement).classList.toggle('hidden', !visible);
+      
+      if (visible) count++;
+    });
+
+    // Update count
+    if (resultsCount) {
+      resultsCount.textContent = count.toString();
+    }
+
+    // Hide empty groups
+    commandGroups.forEach(group => {
+      const visibleCodes = group.querySelectorAll('code:not(.hidden)');
+      (group as HTMLElement).classList.toggle('hidden', visibleCodes.length === 0);
+    });
+  }
+
+  // Event listeners
+  searchInput?.addEventListener('input', filterCommands);
+  
+  searchClear?.addEventListener('click', () => {
+    if (searchInput) {
+      searchInput.value = '';
+      filterCommands();
+      searchInput.focus();
+    }
+  });
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.getAttribute('data-category') || 'all';
+      filterCommands();
+    });
+  });
+
+  // Initial count
+  filterCommands();
+</script>
