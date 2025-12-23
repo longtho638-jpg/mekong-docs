@@ -17,6 +17,37 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
   </p>
 </div>
 
+<!-- Promo Code Input -->
+<section class="py-4 mb-8">
+  <div class="max-w-md mx-auto">
+    <div id="promo-box" class="p-4 rounded-xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
+      <label class="block text-sm font-medium mb-2 text-[var(--color-text-primary)]">
+        🎟️ Have a promo code?
+      </label>
+      <div class="flex gap-2">
+        <input 
+          type="text" 
+          id="promo-input" 
+          placeholder="Enter code (e.g. AGENCYOS-XXXX)"
+          class="flex-1 px-4 py-2 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent-green)]"
+        />
+        <button 
+          id="apply-promo-btn"
+          class="px-6 py-2 bg-[var(--color-accent-green)] text-white rounded-lg font-medium hover:brightness-110 transition-all"
+        >
+          Apply
+        </button>
+      </div>
+      <div id="promo-result" class="mt-3 hidden">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-green-500">✓</span>
+          <span id="promo-message" class="text-green-500"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Pricing Cards -->
 <section id="pricing-plans" class="py-8">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -259,5 +290,126 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
     </a>
   </div>
 </section>
+
+<script>
+  // Promo code validation
+  const promoInput = document.getElementById('promo-input') as HTMLInputElement;
+  const applyBtn = document.getElementById('apply-promo-btn');
+  const promoResult = document.getElementById('promo-result');
+  const promoMessage = document.getElementById('promo-message');
+  const promoBox = document.getElementById('promo-box');
+
+  // Original prices
+  const prices = {
+    starter: 29,
+    pro: 99,
+    franchise: 299
+  };
+
+  applyBtn?.addEventListener('click', () => {
+    const code = promoInput?.value.trim().toUpperCase();
+    
+    if (!code) {
+      showError('Please enter a promo code');
+      return;
+    }
+
+    // Check localStorage for generated codes
+    const storedCampaign = localStorage.getItem('agencyos_promo_codes');
+    let discount = 0;
+    let isValid = false;
+
+    if (storedCampaign) {
+      const campaign = JSON.parse(storedCampaign);
+      if (campaign.codes && campaign.codes.includes(code)) {
+        discount = campaign.discount;
+        isValid = true;
+      }
+    }
+
+    // Check for LAUNCH100 pattern (first 100 free)
+    if (code.startsWith('AGENCYOS-') && code.length === 17) {
+      // Check if it looks like a valid generated code
+      const validPattern = /^AGENCYOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
+      if (validPattern.test(code)) {
+        discount = 100; // First 100 get 100% off
+        isValid = true;
+      }
+    }
+
+    if (isValid) {
+      showSuccess(discount);
+      updatePrices(discount);
+      // Save applied code
+      localStorage.setItem('agencyos_applied_code', JSON.stringify({ code, discount }));
+    } else {
+      showError('Invalid promo code');
+    }
+  });
+
+  function showSuccess(discount: number) {
+    if (promoResult && promoMessage && promoBox) {
+      promoResult.classList.remove('hidden');
+      promoMessage.classList.remove('text-red-500');
+      promoMessage.classList.add('text-green-500');
+      
+      if (discount === 100) {
+        promoMessage.textContent = `🎉 FREE ACCESS! 100% discount applied!`;
+        promoBox.classList.add('border-green-500');
+      } else {
+        promoMessage.textContent = `${discount}% discount applied!`;
+        promoBox.classList.add('border-green-500');
+      }
+    }
+  }
+
+  function showError(message: string) {
+    if (promoResult && promoMessage && promoBox) {
+      promoResult.classList.remove('hidden');
+      promoMessage.classList.remove('text-green-500');
+      promoMessage.classList.add('text-red-500');
+      promoMessage.textContent = message;
+      promoBox.classList.remove('border-green-500');
+    }
+  }
+
+  function updatePrices(discount: number) {
+    // Update displayed prices
+    const priceElements = document.querySelectorAll('[data-price]');
+    priceElements.forEach(el => {
+      const originalPrice = parseInt(el.getAttribute('data-price') || '0');
+      const newPrice = Math.round(originalPrice * (1 - discount / 100));
+      
+      if (discount === 100) {
+        el.innerHTML = `<span class="line-through text-red-500">$${originalPrice}</span> <span class="text-green-500">FREE</span>`;
+      } else if (discount > 0) {
+        el.innerHTML = `<span class="line-through text-[var(--color-text-muted)]">$${originalPrice}</span> $${newPrice}`;
+      }
+    });
+
+    // Add discount badge to pricing cards
+    if (discount > 0) {
+      const pricingCards = document.querySelectorAll('#pricing-plans > div > div');
+      pricingCards.forEach(card => {
+        if (!card.querySelector('.discount-badge')) {
+          const badge = document.createElement('div');
+          badge.className = 'discount-badge absolute -top-3 -right-3 px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full';
+          badge.textContent = discount === 100 ? 'FREE!' : `-${discount}%`;
+          (card as HTMLElement).style.position = 'relative';
+          card.appendChild(badge);
+        }
+      });
+    }
+  }
+
+  // Check for previously applied code
+  const appliedCode = localStorage.getItem('agencyos_applied_code');
+  if (appliedCode) {
+    const { code, discount } = JSON.parse(appliedCode);
+    if (promoInput) promoInput.value = code;
+    showSuccess(discount);
+    updatePrices(discount);
+  }
+</script>
 
 </LandingLayout>

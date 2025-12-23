@@ -1,0 +1,476 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = 'Promo Admin - AgencyOS';
+const description = 'Generate and manage promo codes for AgencyOS campaigns.';
+---
+
+<LandingLayout title={title} description={description}>
+  <section class="admin-hero">
+    <h1>🎟️ Promo Code Generator</h1>
+    <p>Create discount codes for campaigns</p>
+  </section>
+
+  <section class="generator-section">
+    <div class="generator-card">
+      
+      <!-- Campaign Settings -->
+      <div class="settings-group">
+        <label for="campaign-name">Campaign Name</label>
+        <input type="text" id="campaign-name" value="LAUNCH100" placeholder="e.g. LAUNCH100, BLACKFRIDAY" />
+      </div>
+
+      <div class="settings-group">
+        <label for="discount-slider">
+          Discount: <span id="discount-value">100</span>%
+        </label>
+        <input type="range" id="discount-slider" min="0" max="100" value="100" />
+        <div class="slider-labels">
+          <span>0%</span>
+          <span>50%</span>
+          <span>100%</span>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <label for="num-codes">Number of Codes</label>
+        <input type="number" id="num-codes" value="100" min="1" max="1000" />
+      </div>
+
+      <div class="settings-group">
+        <label for="prefix">Code Prefix</label>
+        <input type="text" id="prefix" value="AGENCYOS" placeholder="e.g. AGENCYOS, VIP" />
+      </div>
+
+      <button id="generate-btn" class="btn-primary">
+        🎲 Generate Codes
+      </button>
+
+    </div>
+
+    <!-- Generated Codes -->
+    <div class="codes-section" id="codes-section" style="display: none;">
+      <div class="codes-header">
+        <h3>Generated Codes</h3>
+        <div class="codes-actions">
+          <button id="copy-all-btn" class="btn-secondary">📋 Copy All</button>
+          <button id="export-btn" class="btn-secondary">📥 Export CSV</button>
+        </div>
+      </div>
+
+      <div class="codes-stats">
+        <div class="stat">
+          <span class="stat-value" id="total-codes">0</span>
+          <span class="stat-label">Total Codes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="discount-display">100%</span>
+          <span class="stat-label">Discount</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="campaign-display">LAUNCH100</span>
+          <span class="stat-label">Campaign</span>
+        </div>
+      </div>
+
+      <div class="codes-list" id="codes-list">
+        <!-- Codes will be inserted here -->
+      </div>
+    </div>
+
+    <!-- Pre-generated First 100 -->
+    <div class="pregenerated-section">
+      <h3>🚀 First 100 Users - Pre-Generated Codes</h3>
+      <p class="pregenerated-desc">100% discount codes ready for launch</p>
+      <button id="load-first100-btn" class="btn-outline">Load First 100 Codes</button>
+    </div>
+
+  </section>
+</LandingLayout>
+
+<style>
+  .admin-hero {
+    text-align: center;
+    padding: 64px 24px 32px;
+  }
+
+  .admin-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #22c55e, #eab308);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+
+  .admin-hero p {
+    color: var(--color-text-muted);
+  }
+
+  .generator-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .generator-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+
+  .settings-group {
+    margin-bottom: 24px;
+  }
+
+  .settings-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+  }
+
+  .settings-group input[type="text"],
+  .settings-group input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+  }
+
+  .settings-group input[type="text"]:focus,
+  .settings-group input[type="number"]:focus {
+    outline: none;
+    border-color: #22c55e;
+  }
+
+  .settings-group input[type="range"] {
+    width: 100%;
+    height: 8px;
+    background: var(--color-bg-tertiary);
+    border-radius: 4px;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .settings-group input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #22c55e;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  #discount-value {
+    color: #22c55e;
+    font-weight: 700;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+  }
+
+  .codes-section {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .codes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .codes-header h3 {
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+
+  .codes-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn-secondary {
+    padding: 8px 16px;
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-bg-secondary);
+    border-color: #22c55e;
+  }
+
+  .codes-stats {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #22c55e;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .codes-list {
+    max-height: 300px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+  }
+
+  .code-item {
+    background: var(--color-bg-tertiary);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: #22c55e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .code-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+
+  .code-item button:hover {
+    opacity: 1;
+  }
+
+  .pregenerated-section {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(234, 179, 8, 0.1));
+    border: 2px dashed var(--color-border);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .pregenerated-section h3 {
+    color: var(--color-text-primary);
+    margin: 0 0 8px 0;
+  }
+
+  .pregenerated-desc {
+    color: var(--color-text-muted);
+    margin: 0 0 16px 0;
+  }
+
+  .btn-outline {
+    padding: 12px 24px;
+    background: transparent;
+    color: #22c55e;
+    border: 2px solid #22c55e;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    background: #22c55e;
+    color: white;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #22c55e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+</style>
+
+<script>
+  // Generate random code
+  function generateCode(prefix: string): string {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let code = prefix + '-';
+    for (let i = 0; i < 4; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    code += '-';
+    for (let i = 0; i < 4; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+  }
+
+  // Toast notification
+  function showToast(message: string): void {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+  }
+
+  // DOM elements
+  const slider = document.getElementById('discount-slider') as HTMLInputElement;
+  const discountValue = document.getElementById('discount-value');
+  const generateBtn = document.getElementById('generate-btn');
+  const codesSection = document.getElementById('codes-section');
+  const codesList = document.getElementById('codes-list');
+  const totalCodes = document.getElementById('total-codes');
+  const discountDisplay = document.getElementById('discount-display');
+  const campaignDisplay = document.getElementById('campaign-display');
+  const copyAllBtn = document.getElementById('copy-all-btn');
+  const exportBtn = document.getElementById('export-btn');
+  const loadFirst100Btn = document.getElementById('load-first100-btn');
+
+  let generatedCodes: string[] = [];
+
+  // Update slider value
+  slider?.addEventListener('input', () => {
+    if (discountValue) discountValue.textContent = slider.value;
+  });
+
+  // Generate codes
+  generateBtn?.addEventListener('click', () => {
+    const campaignName = (document.getElementById('campaign-name') as HTMLInputElement).value;
+    const numCodes = parseInt((document.getElementById('num-codes') as HTMLInputElement).value);
+    const prefix = (document.getElementById('prefix') as HTMLInputElement).value;
+    const discount = slider?.value || '100';
+
+    generatedCodes = [];
+    for (let i = 0; i < numCodes; i++) {
+      generatedCodes.push(generateCode(prefix));
+    }
+
+    // Update display
+    if (codesList) {
+      codesList.innerHTML = generatedCodes.map(code => `
+        <div class="code-item">
+          <span>${code}</span>
+          <button onclick="navigator.clipboard.writeText('${code}'); document.querySelector('.toast')?.remove(); const t = document.createElement('div'); t.className='toast'; t.textContent='Copied!'; document.body.appendChild(t); setTimeout(()=>t.remove(),2000);">📋</button>
+        </div>
+      `).join('');
+    }
+
+    if (totalCodes) totalCodes.textContent = generatedCodes.length.toString();
+    if (discountDisplay) discountDisplay.textContent = discount + '%';
+    if (campaignDisplay) campaignDisplay.textContent = campaignName;
+    if (codesSection) codesSection.style.display = 'block';
+
+    // Save to localStorage
+    const campaign = {
+      name: campaignName,
+      discount: parseInt(discount),
+      codes: generatedCodes,
+      createdAt: new Date().toISOString()
+    };
+    localStorage.setItem('agencyos_promo_codes', JSON.stringify(campaign));
+
+    showToast(`✅ Generated ${numCodes} codes!`);
+  });
+
+  // Copy all codes
+  copyAllBtn?.addEventListener('click', () => {
+    navigator.clipboard.writeText(generatedCodes.join('\n'));
+    showToast('📋 All codes copied!');
+  });
+
+  // Export CSV
+  exportBtn?.addEventListener('click', () => {
+    const campaignName = (document.getElementById('campaign-name') as HTMLInputElement).value;
+    const discount = slider?.value || '100';
+    
+    let csv = 'Code,Discount,Campaign\n';
+    generatedCodes.forEach(code => {
+      csv += `${code},${discount}%,${campaignName}\n`;
+    });
+
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${campaignName}_promo_codes.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+
+    showToast('📥 CSV downloaded!');
+  });
+
+  // Load first 100
+  loadFirst100Btn?.addEventListener('click', () => {
+    (document.getElementById('campaign-name') as HTMLInputElement).value = 'LAUNCH100';
+    (document.getElementById('num-codes') as HTMLInputElement).value = '100';
+    (document.getElementById('prefix') as HTMLInputElement).value = 'AGENCYOS';
+    if (slider) {
+      slider.value = '100';
+      if (discountValue) discountValue.textContent = '100';
+    }
+    generateBtn?.click();
+  });
+</script>
