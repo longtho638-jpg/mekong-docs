@@ -50,21 +50,22 @@ const description = 'Your account is ready. Get your license key and start autom
         <div class="step">
           <div class="step-number">1</div>
           <div class="step-content">
-            <strong>Install AgencyOS CLI</strong>
+            <strong>Clone AgencyOS CLI</strong>
             <div class="code-block">
-              <code>npm install -g @agencyos/cli</code>
-              <button class="btn-copy-small" data-copy="npm install -g @agencyos/cli">📋</button>
+              <code>git clone https://github.com/longtho638-jpg/mekong-cli.git</code>
+              <button class="btn-copy-small" data-copy="git clone https://github.com/longtho638-jpg/mekong-cli.git">📋</button>
             </div>
+            <p class="step-note">Or download from <a href="https://github.com/longtho638-jpg/mekong-cli" target="_blank">GitHub</a></p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-number">2</div>
           <div class="step-content">
-            <strong>Activate your license</strong>
+            <strong>Setup your project</strong>
             <div class="code-block">
-              <code id="activate-cmd">mk activate YOUR-LICENSE-KEY</code>
-              <button class="btn-copy-small" id="copy-activate">📋</button>
+              <code>cd mekong-cli && pip install -r requirements.txt</code>
+              <button class="btn-copy-small" data-copy="cd mekong-cli && pip install -r requirements.txt">📋</button>
             </div>
           </div>
         </div>
