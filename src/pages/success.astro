@@ -45,60 +45,41 @@ const description = 'Your account is ready. Get your license key and start autom
 
       <!-- Installation Steps -->
       <div class="install-steps">
-        <h3>🚀 Quick Setup (2 minutes)</h3>
+        <h3>🚀 Quick Setup (1 minute)</h3>
         
-        <div class="step">
+        <div class="step featured">
           <div class="step-number">1</div>
           <div class="step-content">
-            <strong>Clone AgencyOS CLI</strong>
-            <div class="code-block">
-              <code>git clone https://github.com/longtho638-jpg/mekong-cli.git</code>
-              <button class="btn-copy-small" data-copy="git clone https://github.com/longtho638-jpg/mekong-cli.git">📋</button>
+            <strong>Open in your IDE (1-click clone)</strong>
+            <p class="step-desc">Click a button below. It will automatically clone the project and open it:</p>
+            <div class="ide-buttons">
+              <a href="vscode://vscode.git/clone?url=https://github.com/longtho638-jpg/mekong-cli" class="ide-btn" title="Open in VS Code">
+                <span>💻 VS Code</span>
+              </a>
+              <a href="cursor://vscode.git/clone?url=https://github.com/longtho638-jpg/mekong-cli" class="ide-btn" title="Open in Cursor">
+                <span>🖱️ Cursor</span>
+              </a>
+              <a href="https://antigravity.google/?repo=longtho638-jpg/mekong-cli" class="ide-btn antigravity" title="Open in Antigravity (Recommended)">
+                <span>🚀 Antigravity</span>
+              </a>
             </div>
-            <p class="step-note">Or download from <a href="https://github.com/longtho638-jpg/mekong-cli" target="_blank">GitHub</a></p>
+            <p class="step-note">Don't have an IDE? <a href="https://code.visualstudio.com/download" target="_blank">Download VS Code</a> (free)</p>
           </div>
         </div>
 
         <div class="step">
           <div class="step-number">2</div>
           <div class="step-content">
-            <strong>Setup your project</strong>
+            <strong>Run in IDE terminal</strong>
+            <p class="step-desc">Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open terminal, then paste:</p>
             <div class="code-block">
-              <code>cd mekong-cli && pip install -r requirements.txt</code>
-              <button class="btn-copy-small" data-copy="cd mekong-cli && pip install -r requirements.txt">📋</button>
+              <code>/help</code>
+              <button class="btn-copy-small" data-copy="/help">📋</button>
             </div>
+            <p class="step-note">That's it! Start using 85+ AI commands 🎉</p>
           </div>
         </div>
 
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <strong>Open in your IDE</strong>
-            <div class="ide-buttons">
-              <a href="vscode://vscode.git/clone?url=https://github.com/agencyos/starter" class="ide-btn" title="Open in VS Code">
-                <span>VS Code</span>
-              </a>
-              <a href="cursor://vscode.git/clone?url=https://github.com/agencyos/starter" class="ide-btn" title="Open in Cursor">
-                <span>Cursor</span>
-              </a>
-              <a href="https://antigravity.google/?repo=agencyos/starter" class="ide-btn antigravity" title="Open in Antigravity">
-                <span>🚀 Antigravity</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <strong>Run your first command</strong>
-            <div class="code-block">
-              <code>mk help</code>
-              <button class="btn-copy-small" data-copy="mk help">📋</button>
-            </div>
-            <p class="step-note">Access all 85+ AI commands instantly!</p>
-          </div>
-        </div>
       </div>
 
       <!-- IDE Compatibility -->
@@ -281,6 +262,13 @@ const description = 'Your account is ready. Get your license key and start autom
     flex-shrink: 0;
   }
 
+  .step.featured {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(6, 182, 212, 0.1));
+    border: 2px solid #22c55e;
+    border-radius: 12px;
+    padding: 16px;
+  }
+
   .step-content {
     flex: 1;
   }
@@ -290,6 +278,22 @@ const description = 'Your account is ready. Get your license key and start autom
     font-size: 0.95rem;
     display: block;
     margin-bottom: 8px;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0 0 12px 0;
+  }
+
+  kbd {
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--color-text-primary);
   }
 
   .code-block {
