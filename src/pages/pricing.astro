@@ -306,7 +306,7 @@ const description = 'All plans include 125+ AI commands. Pick what fits your age
     franchise: 299
   };
 
-  applyBtn?.addEventListener('click', () => {
+  applyBtn?.addEventListener('click', async () => {
     const code = promoInput?.value.trim().toUpperCase();
     
     if (!code) {
@@ -314,51 +314,58 @@ const description = 'All plans include 125+ AI commands. Pick what fits your age
       return;
     }
 
-    // Check localStorage for generated codes
-    const storedCampaign = localStorage.getItem('agencyos_promo_codes');
-    let discount = 0;
-    let isValid = false;
-
-    if (storedCampaign) {
-      const campaign = JSON.parse(storedCampaign);
-      if (campaign.codes && campaign.codes.includes(code)) {
-        discount = campaign.discount;
-        isValid = true;
-      }
+    // Show loading state
+    if (applyBtn) {
+      (applyBtn as HTMLButtonElement).disabled = true;
+      applyBtn.textContent = '...';
     }
 
-    // Check for LAUNCH100 pattern (first 100 free)
-    // AGENCYOS-XXXX-XXXX = 8+1+4+1+4 = 18 characters
-    if (code.startsWith('AGENCYOS-') && code.length === 18) {
-      // Check if it looks like a valid generated code
-      const validPattern = /^AGENCYOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
-      if (validPattern.test(code)) {
-        discount = 100; // First 100 get 100% off
-        isValid = true;
-      }
-    }
+    try {
+      // Validate via API (checks Polar.sh discounts first)
+      const response = await fetch('/api/promo/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code })
+      });
 
-    if (isValid) {
-      showSuccess(discount);
-      updatePrices(discount);
-      // Save applied code
-      localStorage.setItem('agencyos_applied_code', JSON.stringify({ code, discount }));
-    } else {
-      showError('Invalid promo code');
+      const result = await response.json();
+
+      if (result.valid) {
+        showSuccess(result.value, result.name);
+        updatePrices(result.value);
+        // Save applied code with discountId
+        localStorage.setItem('agencyos_applied_code', JSON.stringify({
+          code: result.code,
+          discount: result.value,
+          discountId: result.discountId,
+          source: result.source
+        }));
+      } else {
+        showError(result.error || 'Invalid promo code');
+      }
+    } catch (error) {
+      console.error('Promo validation error:', error);
+      showError('Failed to validate code');
+    } finally {
+      // Reset button
+      if (applyBtn) {
+        (applyBtn as HTMLButtonElement).disabled = false;
+        applyBtn.textContent = 'Apply';
+      }
     }
   });
 
-  function showSuccess(discount: number) {
+  function showSuccess(discount: number, name?: string) {
     if (promoResult && promoMessage && promoBox) {
       promoResult.classList.remove('hidden');
       promoMessage.classList.remove('text-red-500');
       promoMessage.classList.add('text-green-500');
       
       if (discount === 100) {
-        promoMessage.textContent = `🎉 FREE ACCESS! 100% discount applied!`;
+        promoMessage.textContent = `🎉 FREE ACCESS! ${name || '100% discount'} applied!`;
         promoBox.classList.add('border-green-500');
       } else {
-        promoMessage.textContent = `${discount}% discount applied!`;
+        promoMessage.textContent = `${name || discount + '% discount'} applied!`;
         promoBox.classList.add('border-green-500');
       }
     }

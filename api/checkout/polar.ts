@@ -38,7 +38,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     try {
-        const { plan, billing, email, affiliateCode } = req.body;
+        const { plan, billing, email, affiliateCode, discountId, promoCode } = req.body;
 
         // Validate plan
         if (!plan || !['starter', 'pro', 'franchise'].includes(plan)) {
@@ -60,8 +60,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             });
         }
 
-        // Create checkout session
-        const checkout = await polar.checkouts.create({
+        // Build checkout options
+        const checkoutOptions: any = {
             productId: productId,
             successUrl: `${process.env.POLAR_SUCCESS_URL || 'https://agencyos.network/success'}?checkout_id={CHECKOUT_ID}`,
             customerEmail: email || undefined,
@@ -69,8 +69,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 plan,
                 billing,
                 affiliateCode: affiliateCode || null,
+                promoCode: promoCode || null,
             },
-        });
+        };
+
+        // Add discount if provided (from Polar discount lookup)
+        if (discountId) {
+            checkoutOptions.discountId = discountId;
+        }
+
+        // Create checkout session
+        const checkout = await polar.checkouts.create(checkoutOptions);
 
         return res.status(200).json({
             success: true,

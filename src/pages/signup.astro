@@ -357,6 +357,8 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
   const ORIGINAL_PRICE = 99;
   let currentDiscount = 0;
   let validPromoCode = '';
+  let validDiscountId: string | null = null; // Polar discount ID
+  let discountSource = ''; // 'polar', 'fallback', 'pattern'
 
   // Check URL params for plan
   const urlParams = new URLSearchParams(window.location.search);
@@ -368,8 +370,8 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
     promoInput.value = promoFromUrl;
   }
 
-  // Apply promo code
-  applyPromoBtn?.addEventListener('click', () => {
+  // Apply promo code via API
+  applyPromoBtn?.addEventListener('click', async () => {
     const code = promoInput?.value.trim().toUpperCase();
     
     if (!code) {
@@ -377,38 +379,50 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
       return;
     }
 
-    // Validate code pattern
-    const validPattern = /^AGENCYOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
-    
-    // Check localStorage first
-    const storedCampaign = localStorage.getItem('agencyos_promo_codes');
-    let isValid = false;
-    let discount = 0;
+    // Show loading state
+    if (applyPromoBtn) {
+      (applyPromoBtn as HTMLButtonElement).disabled = true;
+      (applyPromoBtn as HTMLButtonElement).textContent = '...';
+    }
 
-    if (storedCampaign) {
-      const campaign = JSON.parse(storedCampaign);
-      if (campaign.codes && campaign.codes.includes(code)) {
-        discount = campaign.discount;
-        isValid = true;
+    try {
+      // Validate via API (checks Polar.sh discounts first)
+      const response = await fetch('/api/promo/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code })
+      });
+
+      const result = await response.json();
+
+      if (result.valid) {
+        currentDiscount = result.value;
+        validPromoCode = result.code;
+        validDiscountId = result.discountId; // Store for checkout
+        discountSource = result.source;
+        
+        updatePricing(result.value);
+        showPromoStatus(`✅ ${result.name}: ${result.value}% off!`, 'success');
+        
+        // Save to localStorage for persistence
+        localStorage.setItem('agencyos_applied_code', JSON.stringify({
+          code: result.code,
+          discount: result.value,
+          discountId: result.discountId,
+          source: result.source
+        }));
+      } else {
+        showPromoStatus(`❌ ${result.error || 'Invalid promo code'}`, 'error');
       }
-    }
-
-    // Check pattern (all valid pattern codes = 100% off for first 100)
-    if (!isValid && validPattern.test(code)) {
-      discount = 100;
-      isValid = true;
-    }
-
-    if (isValid) {
-      currentDiscount = discount;
-      validPromoCode = code;
-      updatePricing(discount);
-      showPromoStatus(`✅ ${discount}% discount applied!`, 'success');
-      
-      // Save to localStorage
-      localStorage.setItem('agencyos_applied_code', JSON.stringify({ code, discount }));
-    } else {
-      showPromoStatus('❌ Invalid promo code', 'error');
+    } catch (error) {
+      console.error('Promo validation error:', error);
+      showPromoStatus('❌ Failed to validate code', 'error');
+    } finally {
+      // Reset button
+      if (applyPromoBtn) {
+        (applyPromoBtn as HTMLButtonElement).disabled = false;
+        (applyPromoBtn as HTMLButtonElement).textContent = 'Apply';
+      }
     }
   });
 
@@ -466,7 +480,9 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
       email,
       name,
       promoCode: validPromoCode,
+      discountId: validDiscountId,
       discount: currentDiscount,
+      discountSource,
       plan: plan,
       timestamp: new Date().toISOString()
     };
@@ -474,13 +490,20 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
     localStorage.setItem('agencyos_user', JSON.stringify(userData));
 
     // Determine destination
-    if (currentDiscount === 100) {
-      // 100% off = go directly to success
+    if (currentDiscount === 100 && discountSource !== 'polar') {
+      // 100% off from fallback/pattern = go directly to success (no Polar checkout needed)
       window.location.href = '/success?free=true';
     } else {
-      // Go to checkout (Polar.sh or checkout page)
-      // For now, redirect to checkout page
-      window.location.href = `/checkout?plan=${plan}&email=${encodeURIComponent(email)}&name=${encodeURIComponent(name)}${validPromoCode ? '&promo=' + validPromoCode : ''}`;
+      // Go to checkout with discountId for Polar to apply
+      const params = new URLSearchParams({
+        plan,
+        email,
+        name,
+      });
+      if (validPromoCode) params.set('promo', validPromoCode);
+      if (validDiscountId) params.set('discountId', validDiscountId);
+      
+      window.location.href = `/checkout?${params.toString()}`;
     }
   });
 
