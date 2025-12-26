@@ -96,7 +96,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             if (affiliateCode) {
                 const { data: affiliate } = await supabase
                     .from('affiliates')
-                    .select('id')
+                    .select('id, user_id')
                     .eq('referral_code', String(affiliateCode))
                     .eq('is_active', true)
                     .single();
@@ -107,6 +107,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                     const orderAmount = ((order as any).amount || (order as any).total || 0) / 100;
                     const commissionAmount = orderAmount * commissionRate;
 
+                    // Record affiliate conversion
                     await supabase
                         .from('affiliate_conversions')
                         .insert({
@@ -116,11 +117,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                             product_price: orderAmount,
                             commission_rate: commissionRate,
                             commission_amount: commissionAmount,
-                            status: 'pending',
+                            status: 'credited', // Changed from 'pending' to 'credited'
                             customer_email: order.customer?.email,
                         });
 
-                    console.log(`Recorded affiliate conversion: $${commissionAmount} for ${affiliateCode}`);
+                    // TÍCH SẢN: Award AG Credits instead of cash
+                    if (affiliate.user_id) {
+                        await supabase.rpc('add_ag_credits', {
+                            p_user_id: affiliate.user_id,
+                            p_amount: commissionAmount,
+                            p_type: 'earn',
+                            p_description: `Commission: ${planStr} plan sale`,
+                            p_reference_id: order.id,
+                        });
+                        console.log(`🎯 TÍCH SẢN: Awarded ${commissionAmount} AGC to affiliate ${affiliateCode}`);
+                    }
+
+                    console.log(`Recorded affiliate conversion: ${commissionAmount} AGC for ${affiliateCode}`);
                 }
             }
 
