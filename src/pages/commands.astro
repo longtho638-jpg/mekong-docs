@@ -2,7 +2,7 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 
 const title = 'All Commands - AgencyOS';
-const description = '85+ AI commands for developers, marketers, sales, finance, and founders. Find the exact command you need.';
+const description = '125+ AI commands for developers, marketers, sales, finance, and founders. Find the exact command you need.';
 ---
 
 <LandingLayout title={title} description={description}>
@@ -607,4 +607,124 @@ const description = '85+ AI commands for developers, marketers, sales, finance, 
 
   // Initial count
   filterCommands();
+
+  // Copy to Clipboard Feature
+  const allCodes = document.querySelectorAll('code');
+  
+  allCodes.forEach(code => {
+    // Skip if in pre tag (code blocks)
+    if (code.parentElement?.tagName === 'PRE') return;
+    
+    // Add copyable styling
+    code.classList.add('copyable');
+    code.title = 'Click to copy';
+    
+    code.addEventListener('click', async (e) => {
+      const text = code.textContent || '';
+      
+      try {
+        await navigator.clipboard.writeText(text);
+        
+        // Visual feedback
+        code.classList.add('copied');
+        
+        // Show toast
+        showToast(`Copied: ${text}`);
+        
+        // Reset after animation
+        setTimeout(() => {
+          code.classList.remove('copied');
+        }, 1000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+  });
+
+  // Toast notification
+  function showToast(message: string) {
+    // Remove existing toast
+    const existing = document.querySelector('.copy-toast');
+    if (existing) existing.remove();
+    
+    // Create toast
+    const toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.innerHTML = `<span class="toast-icon">✓</span> ${message}`;
+    document.body.appendChild(toast);
+    
+    // Animate in
+    requestAnimationFrame(() => {
+      toast.classList.add('visible');
+    });
+    
+    // Remove after 2s
+    setTimeout(() => {
+      toast.classList.remove('visible');
+      setTimeout(() => toast.remove(), 300);
+    }, 2000);
+  }
 </script>
+
+<style>
+  /* Copy to Clipboard */
+  code.copyable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  code.copyable:hover {
+    background: rgba(34, 197, 94, 0.2);
+    transform: scale(1.02);
+  }
+
+  code.copyable:hover::after {
+    content: '📋';
+    position: absolute;
+    right: -20px;
+    opacity: 0.7;
+    font-size: 0.75rem;
+  }
+
+  code.copied {
+    background: rgba(34, 197, 94, 0.4) !important;
+    animation: copyPulse 0.3s ease;
+  }
+
+  @keyframes copyPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* Toast Notification */
+  .copy-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+    z-index: 99999;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .copy-toast.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .toast-icon {
+    font-size: 1rem;
+  }
+</style>

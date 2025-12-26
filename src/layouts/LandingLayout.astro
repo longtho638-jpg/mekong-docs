@@ -68,10 +68,23 @@ const {
       <button class="banner-close" id="banner-close" aria-label="Close">✕</button>
     </div>
 
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress">
+      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <span>↑</span>
+    </button>
+
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
     <!-- Simple Header -->
     <header class="landing-header">
       <div class="header-container">
-        <a href="/" class="logo">
+        <a href="/" class="logo animated-logo">
           <span class="logo-icon">🏯</span>
           <span class="logo-text">AgencyOS</span>
         </a>
@@ -221,6 +234,16 @@ const {
           Press <kbd>ESC</kbd> to close
         </div>
       </div>
+    </div>
+
+    <!-- Social Proof Notification -->
+    <div class="social-proof" id="social-proof">
+      <div class="proof-avatar" id="proof-avatar">👤</div>
+      <div class="proof-content">
+        <p class="proof-text" id="proof-text">Someone just signed up</p>
+        <p class="proof-time" id="proof-time">2 minutes ago</p>
+      </div>
+      <button class="proof-close" id="proof-close">×</button>
     </div>
 
     <script>
@@ -1111,4 +1134,391 @@ const {
 
   closeBtn?.addEventListener('click', closeShortcuts);
   overlay?.addEventListener('click', closeShortcuts);
+</script>
+
+<style>
+  /* Scroll Progress Indicator */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(34, 197, 94, 0.2);
+    z-index: 99998;
+  }
+
+  .scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22c55e, #06b6d4);
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  }
+
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 9998;
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+  }
+
+  .back-to-top span {
+    display: block;
+    animation: bounce-up 1s infinite;
+  }
+
+  @keyframes bounce-up {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+</style>
+
+<script>
+  // Scroll Progress Indicator
+  const progressBar = document.getElementById('scroll-progress-bar');
+  const backToTop = document.getElementById('back-to-top');
+
+  function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    if (progressBar) {
+      progressBar.style.width = `${Math.min(scrollPercent, 100)}%`;
+    }
+
+    // Show/hide back to top button
+    if (backToTop) {
+      if (scrollTop > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }
+  }
+
+  // Throttle scroll events for performance
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateScrollProgress();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Back to top click handler
+  backToTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Initial update
+  updateScrollProgress();
+</script>
+
+<style>
+  /* Social Proof Notification */
+  .social-proof {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9990;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .social-proof.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .proof-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+  }
+
+  .proof-content {
+    flex: 1;
+  }
+
+  .proof-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+    font-weight: 500;
+  }
+
+  .proof-time {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .proof-close {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0 4px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .proof-close:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .social-proof {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+</style>
+
+<script>
+  // Social Proof Notifications
+  const proofEl = document.getElementById('social-proof');
+  const proofText = document.getElementById('proof-text');
+  const proofTime = document.getElementById('proof-time');
+  const proofAvatar = document.getElementById('proof-avatar');
+  const proofClose = document.getElementById('proof-close');
+
+  const signups = [
+    { name: 'Minh', location: 'Vietnam', emoji: '🇻🇳', action: 'started Pro trial' },
+    { name: 'Sarah', location: 'USA', emoji: '🇺🇸', action: 'upgraded to Pro' },
+    { name: 'Alex', location: 'UK', emoji: '🇬🇧', action: 'joined AgencyOS' },
+    { name: 'Yuki', location: 'Japan', emoji: '🇯🇵', action: 'started Franchise' },
+    { name: 'Hans', location: 'Germany', emoji: '🇩🇪', action: 'purchased Pro' },
+    { name: 'Marie', location: 'France', emoji: '🇫🇷', action: 'activated license' },
+    { name: 'Carlos', location: 'Brazil', emoji: '🇧🇷', action: 'started Pro trial' },
+    { name: 'Kim', location: 'Korea', emoji: '🇰🇷', action: 'joined AgencyOS' },
+    { name: 'Raj', location: 'India', emoji: '🇮🇳', action: 'upgraded to Pro' },
+    { name: 'Emma', location: 'Australia', emoji: '🇦🇺', action: 'purchased Starter' },
+  ];
+
+  const times = ['just now', '1 minute ago', '2 minutes ago', '3 minutes ago', '5 minutes ago'];
+
+  let proofDismissed = false;
+  let proofTimeout: ReturnType<typeof setTimeout>;
+
+  function showProof() {
+    if (proofDismissed || !proofEl) return;
+    
+    const signup = signups[Math.floor(Math.random() * signups.length)];
+    const time = times[Math.floor(Math.random() * times.length)];
+    
+    if (proofText) proofText.textContent = `${signup.name} from ${signup.location} ${signup.action}`;
+    if (proofTime) proofTime.textContent = time;
+    if (proofAvatar) proofAvatar.textContent = signup.emoji;
+    
+    proofEl.classList.add('visible');
+    
+    // Hide after 5 seconds
+    setTimeout(() => {
+      proofEl?.classList.remove('visible');
+    }, 5000);
+  }
+
+  function scheduleNextProof() {
+    if (proofDismissed) return;
+    // Random delay between 15-30 seconds
+    const delay = 15000 + Math.random() * 15000;
+    proofTimeout = setTimeout(() => {
+      showProof();
+      scheduleNextProof();
+    }, delay);
+  }
+
+  // Close button
+  proofClose?.addEventListener('click', () => {
+    proofEl?.classList.remove('visible');
+    proofDismissed = true;
+    clearTimeout(proofTimeout);
+  });
+
+  // Start after 8 seconds
+  setTimeout(() => {
+    showProof();
+    scheduleNextProof();
+  }, 8000);
+</script>
+
+<style>
+  /* Animated Logo */
+  .animated-logo .logo-icon {
+    display: inline-block;
+    animation: logoBreathe 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 0 transparent);
+    transition: all 0.3s ease;
+  }
+
+  .animated-logo:hover .logo-icon {
+    animation: logoSpin 0.6s ease-out;
+    filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.6));
+  }
+
+  @keyframes logoBreathe {
+    0%, 100% { 
+      transform: scale(1);
+      filter: drop-shadow(0 0 4px rgba(34, 197, 94, 0.3));
+    }
+    50% { 
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.5));
+    }
+  }
+
+  @keyframes logoSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-10deg) scale(1.1); }
+    75% { transform: rotate(10deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+
+  .animated-logo .logo-text {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animated-logo:hover .logo-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(34, 197, 94, 0.3),
+      transparent
+    );
+    animation: logoShine 0.6s ease-out;
+  }
+
+  @keyframes logoShine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+</style>
+
+<style>
+  /* Cursor Glow Effect */
+  .cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(34, 197, 94, 0.15) 0%,
+      rgba(34, 197, 94, 0.05) 30%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    mix-blend-mode: screen;
+  }
+
+  .cursor-glow.visible {
+    opacity: 1;
+  }
+
+  /* Hide on touch devices */
+  @media (hover: none) {
+    .cursor-glow {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Cursor Glow Effect
+  const cursorGlow = document.getElementById('cursor-glow');
+  
+  let mouseX = 0;
+  let mouseY = 0;
+  let glowX = 0;
+  let glowY = 0;
+  
+  // Track mouse position
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    if (cursorGlow && !cursorGlow.classList.contains('visible')) {
+      cursorGlow.classList.add('visible');
+    }
+  });
+
+  // Hide when mouse leaves window
+  document.addEventListener('mouseleave', () => {
+    cursorGlow?.classList.remove('visible');
+  });
+
+  // Smooth follow animation
+  function animateGlow() {
+    // Lerp for smooth following
+    glowX += (mouseX - glowX) * 0.1;
+    glowY += (mouseY - glowY) * 0.1;
+    
+    if (cursorGlow) {
+      cursorGlow.style.left = `${glowX}px`;
+      cursorGlow.style.top = `${glowY}px`;
+    }
+    
+    requestAnimationFrame(animateGlow);
+  }
+  
+  // Start animation
+  animateGlow();
 </script>

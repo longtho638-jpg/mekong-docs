@@ -2,7 +2,7 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 
 const title = 'AgencyOS Pricing - Simple Plans, Massive Value';
-const description = 'All plans include 85+ AI commands. Pick what fits your agency. 7-day free trial.';
+const description = 'All plans include 125+ AI commands. Pick what fits your agency. 7-day free trial.';
 ---
 
 <LandingLayout title={title} description={description}>
@@ -13,7 +13,7 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
     Simple pricing. Massive value.
   </h1>
   <p class="text-lg text-[var(--color-text-muted)]">
-    All plans include 85+ AI commands. Pick what fits your agency.
+    All plans include 125+ AI commands. Pick what fits your agency.
   </p>
 </div>
 
@@ -53,7 +53,7 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
     
     <!-- Starter -->
-    <div class="p-8 rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-green)] transition-all">
+    <div class="tilt-card p-8 rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-green)] transition-all">
       <h3 class="text-xl font-semibold mb-2 text-[var(--color-text-primary)]">Starter</h3>
       <div class="text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
         $29<span class="text-lg font-normal text-[var(--color-text-muted)]">/month</span>
@@ -66,7 +66,7 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
       
       <ul class="space-y-3 text-sm">
         <li class="flex items-center gap-2 text-[var(--color-text-secondary)]">
-          <span class="text-green-500">✓</span> 85+ AI commands
+          <span class="text-green-500">✓</span> 125+ AI commands
         </li>
         <li class="flex items-center gap-2 text-[var(--color-text-secondary)]">
           <span class="text-green-500">✓</span> Marketing automation
@@ -90,7 +90,7 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
     </div>
 
     <!-- Pro -->
-    <div class="p-8 rounded-2xl bg-[var(--color-bg-secondary)] border-2 border-[var(--color-accent-green)] relative transform scale-105 shadow-xl">
+    <div class="tilt-card p-8 rounded-2xl bg-[var(--color-bg-secondary)] border-2 border-[var(--color-accent-green)] relative transform scale-105 shadow-xl">
       <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[var(--color-accent-green)] text-white text-sm font-semibold rounded-full">
         MOST POPULAR
       </div>
@@ -130,7 +130,7 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
     </div>
 
     <!-- Franchise -->
-    <div class="p-8 rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-purple)] transition-all">
+    <div class="tilt-card p-8 rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-purple)] transition-all">
       <h3 class="text-xl font-semibold mb-2 text-[var(--color-text-primary)]">Franchise</h3>
       <div class="text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
         $299<span class="text-lg font-normal text-[var(--color-text-muted)]">/month</span>
@@ -197,9 +197,9 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
       <tbody class="text-[var(--color-text-secondary)]">
         <tr class="border-b border-[var(--color-border)]">
           <td class="py-3 px-4">AI Commands</td>
-          <td class="py-3 px-4 text-center">85+</td>
-          <td class="py-3 px-4 text-center">85+</td>
-          <td class="py-3 px-4 text-center">85+</td>
+          <td class="py-3 px-4 text-center">125+</td>
+          <td class="py-3 px-4 text-center">125+</td>
+          <td class="py-3 px-4 text-center">125+</td>
         </tr>
         <tr class="border-b border-[var(--color-border)]">
           <td class="py-3 px-4">Team Seats</td>
@@ -411,6 +411,79 @@ const description = 'All plans include 85+ AI commands. Pick what fits your agen
     showSuccess(discount);
     updatePrices(discount);
   }
+</script>
+
+<style>
+  /* 3D Tilt Card Effect */
+  .tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+    will-change: transform;
+  }
+
+  .tilt-card:hover {
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 60px rgba(34, 197, 94, 0.15);
+  }
+
+  .tilt-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(34, 197, 94, 0.1),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .tilt-card:hover::before {
+    opacity: 1;
+  }
+
+  .tilt-card > * {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<script>
+  // 3D Tilt Card Effect
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  
+  tiltCards.forEach(card => {
+    const cardEl = card as HTMLElement;
+    
+    cardEl.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = cardEl.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+      
+      cardEl.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      
+      // Update gradient position
+      const percentX = (x / rect.width) * 100;
+      const percentY = (y / rect.height) * 100;
+      cardEl.style.setProperty('--mouse-x', `${percentX}%`);
+      cardEl.style.setProperty('--mouse-y', `${percentY}%`);
+    });
+    
+    cardEl.addEventListener('mouseleave', () => {
+      cardEl.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    });
+  });
 </script>
 
 </LandingLayout>

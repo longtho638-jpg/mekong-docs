@@ -2,13 +2,21 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 
 const title = 'AgencyOS - Run Your Entire Agency with AI';
-const description = '85+ AI commands for marketing, sales, affiliate, and finance. The one-person agency operating system.';
+const description = '125+ AI commands for marketing, sales, affiliate, and finance. The one-person agency operating system.';
 ---
 
 <LandingLayout title={title} description={description}>
 
 <!-- Hero Section -->
 <div class="relative overflow-hidden pb-10 lg:pb-16">
+  <!-- Animated Background -->
+  <div class="hero-bg-effects">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-pattern"></div>
+  </div>
+
   <div class="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8 text-center">
     <div class="mx-auto max-w-3xl">
       <h1 class="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
@@ -21,7 +29,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
       </h1>
 
       <p class="mt-4 text-xl leading-relaxed text-[var(--color-text-secondary)] mb-6">
-        85+ commands. Zero employees. Infinite scale.
+        125+ commands. Zero employees. Infinite scale.
       </p>
 
       <p class="text-sm text-[var(--color-text-muted)] mb-10">
@@ -29,10 +37,10 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-        <a href="/docs/getting-started/installation" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-[var(--color-accent-green)] rounded-[var(--radius-md)] hover:brightness-110 transition-all duration-200 shadow-green hover:shadow-lg transform hover:-translate-y-0.5">
+        <a href="/docs/getting-started/installation" class="magnetic-btn inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-[var(--color-accent-green)] rounded-[var(--radius-md)] hover:brightness-110 transition-all duration-200 shadow-green hover:shadow-lg">
           Start Free Trial
         </a>
-        <a href="#how-it-works" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[var(--color-text-primary)] bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] rounded-[var(--radius-md)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200">
+        <a href="#how-it-works" class="magnetic-btn inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-[var(--color-text-primary)] bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] rounded-[var(--radius-md)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200">
           Watch Demo →
         </a>
       </div>
@@ -44,7 +52,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
   <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
     <div class="stats-grid">
       <div class="stat-item">
-        <span class="stat-number" data-target="85">0</span>
+        <span class="stat-number" data-target="125">0</span>
         <span class="stat-suffix">+</span>
         <span class="stat-label">AI Commands</span>
       </div>
@@ -70,7 +78,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
 <!-- Problem Section -->
 <section class="py-12 bg-[var(--color-bg-tertiary)]/30 border-y border-[var(--color-border)]">
   <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-    <h2 id="the-problem" class="text-3xl font-bold text-center mb-8 text-[var(--color-text-primary)]">
+    <h2 id="the-problem" class="gradient-animate text-3xl font-bold text-center mb-8">
       Running an agency is exhausting.
     </h2>
     
@@ -102,14 +110,14 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
 <!-- Solution Section -->
 <section class="py-12">
   <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-    <h2 id="the-solution" class="text-3xl font-bold text-center mb-8 text-[var(--color-text-primary)]">
+    <h2 id="the-solution" class="gradient-animate text-3xl font-bold text-center mb-8">
       What if AI could run your agency?
     </h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
       <div class="flex items-start gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
         <span class="text-green-500 text-xl">✅</span>
-        <span class="text-[var(--color-text-secondary)]">85+ AI commands handle everything</span>
+        <span class="text-[var(--color-text-secondary)]">125+ AI commands handle everything</span>
       </div>
       <div class="flex items-start gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
         <span class="text-green-500 text-xl">✅</span>
@@ -137,7 +145,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
       
       <div class="stat-card">
-        <div class="stat-number text-[var(--color-accent-green)]">85+</div>
+        <div class="stat-number text-[var(--color-accent-green)]">125+</div>
         <div class="stat-label">AI Commands</div>
       </div>
       
@@ -270,7 +278,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
       <div class="text-center">
         <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[var(--color-accent-purple)] flex items-center justify-center text-2xl font-bold text-white">3</div>
         <h3 class="font-semibold mb-2 text-[var(--color-text-primary)]">Run Commands</h3>
-        <p class="text-sm text-[var(--color-text-muted)]">Type /help to see 85+ commands. Pick one.</p>
+        <p class="text-sm text-[var(--color-text-muted)]">Type /help to see 125+ commands. Pick one.</p>
       </div>
 
       <div class="text-center">
@@ -288,7 +296,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
     <h2 id="pricing" class="text-3xl font-bold text-center mb-4 text-[var(--color-text-primary)]">
       Simple Pricing. Massive Value.
     </h2>
-    <p class="text-center text-[var(--color-text-muted)] mb-12">All plans include 85+ AI commands</p>
+    <p class="text-center text-[var(--color-text-muted)] mb-12">All plans include 125+ AI commands</p>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
       <!-- Starter -->
@@ -297,7 +305,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
         <div class="text-3xl font-bold mb-4 text-[var(--color-text-primary)]">$29<span class="text-sm font-normal text-[var(--color-text-muted)]">/month</span></div>
         <p class="text-sm text-[var(--color-text-muted)] mb-6">Perfect for solo operators</p>
         <ul class="space-y-2 text-sm text-[var(--color-text-secondary)]">
-          <li>✅ 85+ AI commands</li>
+          <li>✅ 125+ AI commands</li>
           <li>✅ Marketing automation</li>
           <li>✅ Sales proposals</li>
           <li>✅ Community support</li>
@@ -476,7 +484,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
       <!-- Testimonial 2 -->
       <div class="testimonial-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p class="quote">"85 commands means I never run out of ways to automate. Best investment this year."</p>
+        <p class="quote">"125 commands means I never run out of ways to automate. Best investment this year."</p>
         <div class="author">
           <div class="avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">S</div>
           <div class="info">
@@ -553,7 +561,7 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
       
       <div class="testimonial-card">
         <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p class="quote">"85 commands means I never run out of ways to automate. Best investment this year."</p>
+        <p class="quote">"125 commands means I never run out of ways to automate. Best investment this year."</p>
         <div class="author">
           <div class="avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">S</div>
           <div class="info">
@@ -625,6 +633,77 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
 </LandingLayout>
 
 <style>
+  /* Hero Background Effects */
+  .hero-bg-effects {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+  }
+
+  .orb-1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #22c55e 0%, transparent 70%);
+    top: -100px;
+    right: -100px;
+    animation: float-1 8s ease-in-out infinite;
+  }
+
+  .orb-2 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+    bottom: -50px;
+    left: -50px;
+    animation: float-2 10s ease-in-out infinite;
+  }
+
+  .orb-3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: float-3 12s ease-in-out infinite;
+  }
+
+  @keyframes float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-30px, 30px) scale(1.1); }
+    66% { transform: translate(20px, -20px) scale(0.9); }
+  }
+
+  @keyframes float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, -40px) scale(1.15); }
+  }
+
+  @keyframes float-3 {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.5; }
+  }
+
+  .grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, black 40%, transparent 100%);
+  }
+
   /* Typewriter Animation Styles */
   .static-text {
     color: var(--color-text-primary);
@@ -927,4 +1006,157 @@ const description = '85+ AI commands for marketing, sales, affiliate, and financ
   // Start typewriter after page load
   typeWriter();
 </script>
+
+<style>
+  /* Magnetic Button Effect */
+  .magnetic-btn {
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .magnetic-btn::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+  // Magnetic Button Effect
+  const magneticBtns = document.querySelectorAll('.magnetic-btn');
+  
+  magneticBtns.forEach(btn => {
+    const btnEl = btn as HTMLElement;
+    
+    btnEl.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = btnEl.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      // Magnetic pull strength (lower = stronger pull)
+      const strength = 4;
+      
+      btnEl.style.transform = `translate(${x / strength}px, ${y / strength}px)`;
+    });
+    
+    btnEl.addEventListener('mouseleave', () => {
+      btnEl.style.transform = 'translate(0, 0)';
+    });
+  });
+</script>
+
+<style>
+  /* Reveal on Scroll Animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delay classes */
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* Different reveal directions */
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal-left.revealed,
+  .reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+  }
+</style>
+
+<script>
+  // Reveal on Scroll with Intersection Observer
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        // Optionally stop observing after reveal
+        // revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // Auto-add reveal class to major sections
+  const sections = document.querySelectorAll('section:not(.stats-counter)');
+  sections.forEach((section, index) => {
+    if (!section.classList.contains('reveal')) {
+      section.classList.add('reveal');
+      if (index % 2 === 1) {
+        section.classList.add('reveal-delay-1');
+      }
+      revealObserver.observe(section);
+    }
+  });
+</script>
+
+<style>
+  /* Animated Gradient Text */
+  .gradient-animate {
+    background: linear-gradient(
+      90deg,
+      #22c55e,
+      #06b6d4,
+      #a855f7,
+      #22c55e
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Hover pause */
+  .gradient-animate:hover {
+    animation-play-state: paused;
+  }
+</style>
 

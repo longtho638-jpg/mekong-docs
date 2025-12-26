@@ -1,140 +1,177 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import crypto from 'crypto';
+import { validateEvent, WebhookVerificationError } from '@polar-sh/sdk/webhooks';
+import { createClient } from '@supabase/supabase-js';
 
-// License key generator utility
+// Initialize Supabase
+const supabaseUrl = process.env.SUPABASE_URL!;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY!;
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+// Commission rates by plan
+const COMMISSION_RATES: Record<string, number> = {
+    'starter': 0.40,
+    'pro': 0.40,
+    'franchise': 0.30,
+};
+
+// Generate license key
 function generateLicenseKey(): string {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const segments = 4;
-    const segmentLength = 4;
-
-    const parts: string[] = [];
-    for (let i = 0; i < segments; i++) {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    const segments = [];
+    for (let s = 0; s < 4; s++) {
         let segment = '';
-        for (let j = 0; j < segmentLength; j++) {
+        for (let i = 0; i < 4; i++) {
             segment += chars.charAt(Math.floor(Math.random() * chars.length));
         }
-        parts.push(segment);
+        segments.push(segment);
     }
-
-    return `AGENCYOS-${parts.join('-')}`;
+    return `AGOS-${segments.join('-')}`;
 }
 
-// Simple in-memory store for demo (replace with Supabase in production)
-// In production, this would use Supabase client
-const licenses: Map<string, any> = new Map();
-
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    // Only accept POST
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
     try {
-        const body = req.body;
-
-        // Verify webhook signature (in production)
-        const signature = req.headers['x-polar-signature'];
+        // Verify webhook signature
         const webhookSecret = process.env.POLAR_WEBHOOK_SECRET;
-
-        // For now, skip signature verification if no secret configured
-        if (webhookSecret && signature) {
-            const expectedSignature = crypto
-                .createHmac('sha256', webhookSecret)
-                .update(JSON.stringify(body))
-                .digest('hex');
-
-            if (signature !== `sha256=${expectedSignature}`) {
-                console.error('Invalid webhook signature');
-                return res.status(401).json({ error: 'Invalid signature' });
-            }
+        if (!webhookSecret) {
+            console.error('POLAR_WEBHOOK_SECRET not configured');
+            return res.status(500).json({ error: 'Webhook secret not configured' });
         }
 
-        // Handle different event types
-        const eventType = body.event || body.type;
-
-        if (eventType === 'order.created' || eventType === 'checkout.completed') {
-            const data = body.data;
-            const email = data?.customer?.email || data?.email;
-            const productName = data?.product?.name || data?.items?.[0]?.product?.name || 'Pro';
-            const orderId = data?.id || data?.order_id;
-
-            if (!email) {
-                console.error('No email in webhook payload');
-                return res.status(400).json({ error: 'Missing email' });
+        let event;
+        try {
+            event = validateEvent(
+                JSON.stringify(req.body),
+                req.headers as Record<string, string>,
+                webhookSecret
+            );
+        } catch (error) {
+            if (error instanceof WebhookVerificationError) {
+                console.error('Webhook verification failed:', error.message);
+                return res.status(401).json({ error: 'Invalid signature' });
             }
+            throw error;
+        }
+
+        console.log(`Processing Polar event: ${event.type}`);
+
+        // Handle checkout.created
+        if (event.type === 'checkout.created') {
+            console.log('Checkout created:', event.data.id);
+            return res.status(200).json({ received: true });
+        }
+
+        // Handle order.created (successful payment)
+        if (event.type === 'order.created') {
+            const order = event.data;
+            const metadata = order.metadata || {};
+            const plan = metadata.plan || 'pro';
+            const affiliateCode = metadata.affiliateCode;
 
             // Generate license key
             const licenseKey = generateLicenseKey();
 
-            // Store license (in production, use Supabase)
-            const licenseData = {
-                license_key: licenseKey,
-                email: email,
-                plan: productName.toLowerCase(),
-                status: 'active',
-                polar_order_id: orderId,
-                created_at: new Date().toISOString(),
-                expires_at: null // Lifetime license
-            };
+            // Store license in Supabase
+            const { error: licenseError } = await supabase
+                .from('licenses')
+                .insert({
+                    license_key: licenseKey,
+                    email: order.customer?.email,
+                    plan: plan,
+                    status: 'active',
+                    polar_order_id: order.id,
+                    polar_customer_id: order.customer?.id,
+                    created_at: new Date().toISOString(),
+                    expires_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
+                });
 
-            licenses.set(licenseKey, licenseData);
+            if (licenseError) {
+                console.error('Failed to store license:', licenseError);
+            }
 
-            // In production with Supabase:
-            // const { error } = await supabase.from('licenses').insert(licenseData);
+            // Track affiliate conversion if referral code exists
+            if (affiliateCode) {
+                const { data: affiliate } = await supabase
+                    .from('affiliates')
+                    .select('id')
+                    .eq('referral_code', String(affiliateCode))
+                    .eq('is_active', true)
+                    .single();
 
-            console.log('License created:', { email, plan: productName, licenseKey });
+                if (affiliate) {
+                    const planStr = String(plan);
+                    const commissionRate = COMMISSION_RATES[planStr] || 0.30;
+                    const orderAmount = ((order as any).amount || (order as any).total || 0) / 100;
+                    const commissionAmount = orderAmount * commissionRate;
 
-            // Send email with license key (in production, use Resend)
-            if (process.env.RESEND_API_KEY) {
-                try {
-                    await fetch('https://api.resend.com/emails', {
-                        method: 'POST',
-                        headers: {
-                            'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            from: 'AgencyOS <noreply@agencyos.network>',
-                            to: email,
-                            subject: '🏯 Your AgencyOS License Key',
-                            html: `
-                <h1>Welcome to AgencyOS!</h1>
-                <p>Thank you for your purchase. Here's your license key:</p>
-                <div style="background: #1a1a1a; padding: 20px; border-radius: 8px; margin: 20px 0;">
-                  <code style="font-size: 24px; color: #22c55e;">${licenseKey}</code>
-                </div>
-                <h2>Quick Start:</h2>
-                <pre style="background: #1a1a1a; padding: 16px; border-radius: 8px;">
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
-cd agencyos-starter
-pip install -r requirements.txt
-python activate.py ${licenseKey}
-                </pre>
-                <p>Need help? Reply to this email or visit <a href="https://agencyos.network/docs">our docs</a>.</p>
-                <p>🏯 Win Without Fighting!</p>
-              `
-                        })
-                    });
-                    console.log('Email sent to:', email);
-                } catch (emailError) {
-                    console.error('Failed to send email:', emailError);
-                    // Continue anyway - license is created
+                    await supabase
+                        .from('affiliate_conversions')
+                        .insert({
+                            affiliate_id: affiliate.id,
+                            order_id: order.id,
+                            product_name: planStr.charAt(0).toUpperCase() + planStr.slice(1),
+                            product_price: orderAmount,
+                            commission_rate: commissionRate,
+                            commission_amount: commissionAmount,
+                            status: 'pending',
+                            customer_email: order.customer?.email,
+                        });
+
+                    console.log(`Recorded affiliate conversion: $${commissionAmount} for ${affiliateCode}`);
                 }
             }
 
-            return res.status(200).json({
-                success: true,
-                license_key: licenseKey,
-                message: 'License created successfully'
-            });
+            console.log(`Order processed: ${order.id}, License: ${licenseKey}`);
+            return res.status(200).json({ received: true, licenseKey });
         }
 
-        // Handle other events
-        console.log('Unhandled webhook event:', eventType);
-        return res.status(200).json({ received: true, event: eventType });
+        // Handle subscription.created
+        if (event.type === 'subscription.created') {
+            console.log('Subscription created:', event.data.id);
+            return res.status(200).json({ received: true });
+        }
 
-    } catch (error) {
+        // Handle subscription.updated
+        if (event.type === 'subscription.updated') {
+            const subscription = event.data;
+
+            // Update license status based on subscription status
+            if (subscription.status === 'canceled') {
+                await supabase
+                    .from('licenses')
+                    .update({ status: 'canceled' })
+                    .eq('polar_customer_id', subscription.customer?.id);
+            }
+
+            return res.status(200).json({ received: true });
+        }
+
+        // Handle refund
+        if (event.type === 'refund.created') {
+            const refund = event.data;
+
+            // Mark affiliate conversion as refunded
+            await supabase
+                .from('affiliate_conversions')
+                .update({ status: 'refunded' })
+                .eq('order_id', refund.orderId);
+
+            // Deactivate license
+            await supabase
+                .from('licenses')
+                .update({ status: 'refunded' })
+                .eq('polar_order_id', refund.orderId);
+
+            return res.status(200).json({ received: true });
+        }
+
+        return res.status(200).json({ received: true, type: event.type });
+
+    } catch (error: any) {
         console.error('Webhook error:', error);
-        return res.status(500).json({ error: 'Internal server error' });
+        return res.status(500).json({ error: error.message });
     }
 }
