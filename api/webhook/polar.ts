@@ -137,6 +137,36 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 }
             }
 
+            // 📧 SEND WELCOME EMAIL
+            const customerEmail = order.customer?.email;
+            const customerName = order.customer?.name || 'there';
+
+            if (customerEmail) {
+                // Send welcome email immediately
+                try {
+                    await fetch(`${process.env.VERCEL_URL || 'https://agencyos.network'}/api/email/send`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            to: customerEmail,
+                            template: 'welcome',
+                            data: { name: customerName, licenseKey, plan },
+                        }),
+                    });
+                    console.log(`📧 Welcome email sent to ${customerEmail}`);
+                } catch (emailError) {
+                    console.error('Failed to send welcome email:', emailError);
+                }
+
+                // Queue onboarding sequence (Day 1, 3, 7)
+                await supabase.rpc('queue_onboarding_emails', {
+                    p_email: customerEmail,
+                    p_name: customerName,
+                    p_order_id: order.id,
+                });
+                console.log(`📧 Onboarding sequence queued for ${customerEmail}`);
+            }
+
             console.log(`Order processed: ${order.id}, License: ${licenseKey}`);
             return res.status(200).json({ received: true, licenseKey });
         }
