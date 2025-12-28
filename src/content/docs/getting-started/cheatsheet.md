@@ -10,7 +10,13 @@ lastUpdated: 2025-11-07
 
 # AgencyOS Cheatsheet
 
-Quick reference guide for AgencyOS CLI commands and workflows.
+Quick reference guide for AgencyOS CLI: **18 agents**, **125+ commands**, **5 business suites**.
+
+## System Overview
+
+- **18 Specialized Agents**: planner, researcher, developer, tester, debugger, and 13 more
+- **125+ Commands**: Organized across 5 business suites
+- **5 Business Suites**: Marketing 🔥, Sales 💼, Finance 💰, Strategic 🏯, Operations ⚡
 
 ## Installation
 
@@ -30,6 +36,140 @@ cd /path/to/project
 
 # Start AgencyOS CLI with AgencyOS
 claude
+```
+
+## Commands by Business Suite
+
+### 🔥 Marketing Suite
+
+```bash
+# Strategy
+/ke-hoach-tiep-thi          # Marketing plan
+/marketing-strategy          # EN alias
+/content-marketing          # Content strategy
+/noi-dung-tiep-thi          # VI alias
+
+# Channels
+/seo                        # SEO optimization
+/ppc                        # Paid ads
+/email                      # Email marketing
+/social                     # Social media
+/influencer                 # Influencer campaigns
+/pr                         # Public relations
+/ke-hoach-pr                # VI PR plan
+
+# Content Creation
+/content:good               # WOW content
+/content:fast               # Quick content
+/content:cro                # Conversion-optimized
+/content:enhance            # Enhance existing
+```
+
+### 💼 Sales Suite
+
+```bash
+# Pipeline
+/chien-luoc-ban-hang        # Sales strategy
+/sales                      # EN alias
+/crm                        # CRM management
+/leadgen                    # Lead generation
+/ban-hang                   # VI sales ops
+
+# Customer Intelligence
+/khach-hang                 # Customer profile (VI)
+/customer-profile           # EN alias
+/buyer-persona              # Persona building
+
+# Tools
+/tao-bao-gia                # Quote generation (VI)
+/pricing                    # Pricing strategy
+/sdr                        # Sales dev rep
+/ae                         # Account executive
+/bdm                        # Business development
+/abm                        # Account-based marketing
+```
+
+### 💰 Finance Suite
+
+```bash
+# Core Finance
+/bao-cao-tai-chinh          # Financial reports (VI)
+/ngan-sach                  # Budget planning (VI)
+/finance                    # General finance ops
+
+# Operations
+/hoa-don                    # Invoice (VI)
+/invoice                    # EN invoice
+/expense                    # Expense tracking
+/theo-doi-chi-phi           # VI expense tracking
+/runway                     # Cash runway analysis
+/finance/runway             # Runway deep-dive
+```
+
+### 🏯 Strategic Suite
+
+```bash
+# Business Planning
+/ke-hoach-kinh-doanh        # 9-question business plan
+/business-plan              # EN alias
+/ke-hoach-tang-truong       # Growth strategy (VI)
+/growth-strategy           # EN alias
+
+# Framework
+/binh-phap                  # 13-chapter Binh Phap framework
+/intel                      # Competitive intelligence
+/competitive-analysis       # Market analysis
+
+# Crisis Management
+/crisis                     # Crisis response
+/risk-assessment            # Risk analysis
+/pivot-strategy             # Pivot planning
+```
+
+### ⚡ Operations Suite
+
+```bash
+# Core Development
+/cook                       # Full feature (8-agent workflow)
+/code                       # Code-only (no planning)
+/bootstrap                  # New project setup
+/plan                       # Planning only
+/brainstorm                 # Idea generation
+
+# Testing & Debugging
+/test                       # Run test suite
+/debug                      # Investigate issues
+/fix:fast                   # Quick fixes
+/fix:hard                   # Complex debugging
+/fix:test                   # Fix test failures
+/fix:types                  # TypeScript errors
+/fix:ui                     # UI/UX fixes
+/fix:ci                     # CI/CD failures
+/fix:logs                   # Log-based fixes
+
+# Design
+/design:good                # WOW-level design
+/design:fast                # Rapid prototyping
+/design:3d                  # 3D visualizations
+/design:video               # Video animations
+/design:screenshot          # Screenshot → code
+
+# Documentation
+/docs:init                  # Initialize docs
+/docs:update                # Update docs
+/docs:summarize             # Generate summaries
+
+# Version Control
+/git:cm                     # Conventional commit
+/git:commit                 # Commit changes
+/git:commit-push            # Commit + push
+/git:cp                     # Alias for commit-push
+/git:pr                     # Create pull request
+
+# Integration
+/integrate:polar            # Polar.sh
+/integrate:sepay            # SePay payment
+/mcp:*                      # MCP tools
 ```
 
 ## Initial Setup

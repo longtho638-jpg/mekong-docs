@@ -2,17 +2,25 @@
 import { getCollection } from 'astro:content';
 import DocsLayout from '../../../layouts/DocsLayout.astro';
 
-export async function getStaticPaths() {
-  const docsEntries = await getCollection('docs-vi');
+// In SSR mode, getStaticPaths is ignored. We need to fetch the entry dynamically.
+const { slug } = Astro.params;
 
-  // Normalize slug: remove leading 'docs/' to avoid /docs/docs/... duplication
-  return docsEntries.map((entry) => ({
-    params: { slug: entry.slug.startsWith('docs/') ? entry.slug.slice(5) : entry.slug },
-    props: { entry },
-  }));
+// Fetch all Vietnamese docs entries
+const docsEntries = await getCollection('docs-vi');
+
+// Find the entry that matches the URL slug
+const entry = docsEntries.find((e) => {
+  const normalizedSlug = e.slug.startsWith('docs/') 
+    ? e.slug.slice(5) 
+    : e.slug;
+  return normalizedSlug === slug;
+});
+
+// Safety check for entry
+if (!entry) {
+  return Astro.redirect('/vi/404');
 }
 
-const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 ---
 

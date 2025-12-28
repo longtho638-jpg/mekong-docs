@@ -24,18 +24,43 @@ New to AgencyOS? Watch our step-by-step walkthrough covering CLI installation, s
 
 ## What is AgencyOS?
 
-AgencyOS transforms a general AI assistant into a focused agency toolkit. Instead of writing prompts from scratch, you invoke battle-tested workflows optimized for speed and quality.
+AgencyOS is a comprehensive AI-powered operating system for agencies, featuring **18 specialized agents**, **125+ commands**, and **5 business suites** that automate marketing, sales, finance, strategy, and operations.
+
+**System Overview**:
+- **18 Specialized Agents**: From planner to debugger, copywriter to revenue optimizer
+- **125+ Commands**: Organized across 5 business suites for every agency need
+- **5 Business Suites**: Marketing 🔥, Sales 💼, Finance 💰, Strategic 🏯, Operations ⚡
+- **Interactive Patterns**: Each command guides you with 5-9 contextual questions
+- **WIN³ Framework**: Aligned for Owner, Agency, and Client success
+
+### 5 Business Suites
+
+| Suite | Focus | Example Commands | Key Agents |
+|-------|-------|------------------|------------|
+| 🔥 **Marketing** | Growth & Content | `/ke-hoach-tiep-thi`, `/seo`, `/pr` | copywriter, scout |
+| 💼 **Sales** | Revenue & CRM | `/khach-hang`, `/crm`, `/leadgen` | researcher, planner |
+| 💰 **Finance** | Budget & Reporting | `/bao-cao-tai-chinh`, `/ngan-sach` | planner, analyst |
+| 🏯 **Strategic** | Planning & Intel | `/binh-phap`, `/intel`, `/crisis` | planner, researcher |
+| ⚡ **Operations** | Dev & Automation | `/cook`, `/fix:*`, `/test`, `/docs:*` | developer, tester, debugger |
 
 **Core Components**:
-- **Agents**: Specialized AI assistants (planner, researcher, tester, debugger)
-- **Commands**: Slash commands for common tasks (`/cook`, `/fix`, `/plan`, `/bootstrap`)
-- **Skills**: Reusable knowledge modules (Next.js, Better Auth, Docker)
+- **Agents**: 18 specialized AI assistants working in orchestrated workflows
+- **Commands**: 125+ slash commands organized by business function
+- **Skills**: Reusable knowledge modules (Next.js, Better Auth, Docker, Supabase)
 
 ## How It Works
 
 1. **Invoke Command**: Type `/cook "add user authentication"`
-2. **Agent Activates**: System spawns planner → researcher → developer → tester
-3. **Workflow Executes**: Agents collaborate, write code, run tests, commit changes
+2. **Interactive Questions**: System asks 5-9 contextual questions (auth provider? user roles? features?)
+3. **Agent Orchestration**: Spawns 8-agent workflow:
+   - `planner` → Creates implementation plan
+   - `scout` → Analyzes existing codebase
+   - `researcher` → Gathers best practices
+   - `fullstack-developer` → Writes code
+   - `tester` → Generates and runs tests
+   - `code-reviewer` → Quality assurance
+   - `docs-manager` → Updates documentation
+   - `git-manager` → Commits with conventional format
 4. **You Review**: Check output, provide feedback, iterate
 
 ## Why Use AgencyOS?
