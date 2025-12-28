@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
+import node from '@astrojs/node';
 import pagefind from 'astro-pagefind';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -215,6 +216,9 @@ export default defineConfig({
       wrap: true,
     },
   },
-  output: 'static', // SSG for documentation
+  output: 'server', // Server mode for dynamic API routes with query params
+  adapter: (await import('@astrojs/vercel')).default({
+    webAnalytics: { enabled: true }
+  }),
   // Path aliases will be handled by TypeScript
 });
