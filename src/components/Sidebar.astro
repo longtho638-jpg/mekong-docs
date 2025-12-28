@@ -120,7 +120,7 @@ const { currentPath } = Astro.props;
 </script>
 
 <style>
-  /* Sidebar (Polar v1.1) */
+  /* Sidebar (Polar v1.1 + WOW) */
   .sidebar {
     width: var(--layout-sidebar-width);
     height: 100vh;
@@ -177,13 +177,14 @@ const { currentPath } = Astro.props;
     background: var(--color-bg-secondary);
     border-color: var(--color-border);
     text-decoration: none;
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.15);
   }
 
   .llms-link svg {
     flex-shrink: 0;
   }
 
-  /* Logo Styles */
+  /* Logo Styles - WOW */
   .logo {
     display: flex;
     align-items: center;
@@ -192,27 +193,41 @@ const { currentPath } = Astro.props;
     font-size: 1.125rem;
     font-weight: var(--font-bold);
     text-decoration: none;
-    transition: opacity var(--duration-normal) var(--ease-out);
+    transition: all var(--duration-normal) var(--ease-out);
   }
 
   .logo:hover {
     text-decoration: none;
-    opacity: 0.8;
+    transform: scale(1.02);
   }
 
   .logo-icon {
     font-size: 1.5rem;
+    animation: logo-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes logo-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
   }
 
   .logo-text {
     font-size: 1.25rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--color-accent-green), var(--color-accent-cyan));
+    background: linear-gradient(135deg, var(--color-accent-green), var(--color-accent-cyan), var(--color-accent-green));
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: text-shine 4s linear infinite;
   }
 
+  @keyframes text-shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  /* Search Trigger - WOW glow */
   .sidebar-search-trigger {
     display: flex;
     align-items: center;
@@ -226,21 +241,22 @@ const { currentPath } = Astro.props;
     font-size: var(--text-sm);
     color: var(--color-text-muted);
     cursor: pointer;
-    transition: all var(--duration-normal) var(--ease-out);
+    transition: all 0.3s ease;
     text-align: left;
     box-shadow: var(--shadow-xs);
   }
 
   .sidebar-search-trigger:hover {
-    border-color: var(--color-border-hover);
+    border-color: #22c55e;
     color: var(--color-text-primary);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15), 0 0 20px rgba(34, 197, 94, 0.1);
+    transform: translateY(-1px);
   }
 
   .sidebar-search-trigger:focus {
     outline: none;
-    border-color: var(--color-border-focus);
-    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2), 0 0 25px rgba(34, 197, 94, 0.15);
   }
 
   .sidebar-search-trigger .search-icon {
@@ -248,11 +264,12 @@ const { currentPath } = Astro.props;
     width: 14px;
     height: 14px;
     color: var(--color-text-muted);
-    transition: color var(--duration-normal) var(--ease-out);
+    transition: all 0.3s ease;
   }
 
   .sidebar-search-trigger:hover .search-icon {
-    color: var(--color-text-primary);
+    color: #22c55e;
+    transform: scale(1.1);
   }
 
   .sidebar-search-trigger .search-placeholder {
@@ -275,6 +292,12 @@ const { currentPath } = Astro.props;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     opacity: 1;
+    transition: all 0.2s ease;
+  }
+
+  .sidebar-search-trigger:hover .search-kbd {
+    border-color: rgba(34, 197, 94, 0.3);
+    background: rgba(34, 197, 94, 0.05);
   }
 
   /* Theme Toggle Styles */
