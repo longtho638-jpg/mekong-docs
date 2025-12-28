@@ -90,18 +90,19 @@ const description = 'All plans include 125+ AI commands. Pick what fits your age
     </div>
 
     <!-- Pro -->
-    <div class="tilt-card p-8 rounded-2xl bg-[var(--color-bg-secondary)] border-2 border-[var(--color-accent-green)] relative transform scale-105 shadow-xl">
-      <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[var(--color-accent-green)] text-white text-sm font-semibold rounded-full">
-        MOST POPULAR
+    <div class="tilt-card pro-card p-8 rounded-2xl bg-[var(--color-bg-secondary)] border-2 border-[var(--color-accent-green)] relative transform scale-105 shadow-xl">
+      <div class="pricing-particles"></div>
+      <div class="popular-badge absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-white text-sm font-semibold rounded-full">
+        ✨ MOST POPULAR
       </div>
       <h3 class="text-xl font-semibold mb-2 text-[var(--color-text-primary)]">Pro</h3>
-      <div class="text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+      <div class="text-4xl font-bold mb-2 text-[var(--color-text-primary)] price-animate">
         $99<span class="text-lg font-normal text-[var(--color-text-muted)]">/month</span>
       </div>
       <p class="text-sm text-[var(--color-text-muted)] mb-6">For serious agency builders</p>
       
-      <a href="/signup?plan=pro" class="block w-full py-3 text-center bg-[var(--color-accent-green)] text-white rounded-lg font-medium hover:brightness-110 transition-all mb-6">
-        Start Free Trial
+      <a href="/signup?plan=pro" class="cta-btn block w-full py-3 text-center bg-[var(--color-accent-green)] text-white rounded-lg font-medium hover:brightness-110 transition-all mb-6">
+        Start Free Trial →
       </a>
       
       <ul class="space-y-3 text-sm">
@@ -426,6 +427,24 @@ const description = 'All plans include 125+ AI commands. Pick what fits your age
     transform-style: preserve-3d;
     transition: transform 0.15s ease-out, box-shadow 0.3s ease;
     will-change: transform;
+    position: relative;
+    overflow: hidden;
+    animation: card-entrance 0.6s ease-out both;
+  }
+
+  .tilt-card:nth-child(1) { animation-delay: 0.1s; }
+  .tilt-card:nth-child(2) { animation-delay: 0.2s; }
+  .tilt-card:nth-child(3) { animation-delay: 0.3s; }
+
+  @keyframes card-entrance {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
   .tilt-card:hover {
@@ -434,6 +453,7 @@ const description = 'All plans include 125+ AI commands. Pick what fits your age
       0 0 60px rgba(34, 197, 94, 0.15);
   }
 
+  /* Mouse-follow gradient */
   .tilt-card::before {
     content: '';
     position: absolute;
@@ -454,9 +474,135 @@ const description = 'All plans include 125+ AI commands. Pick what fits your age
     opacity: 1;
   }
 
+  /* Shine sweep effect on hover */
+  .tilt-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .tilt-card:hover::after {
+    left: 100%;
+  }
+
   .tilt-card > * {
     position: relative;
     z-index: 2;
+  }
+
+  /* Pro card special glow */
+  .tilt-card.pro-card {
+    animation: card-entrance 0.6s ease-out both, pro-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pro-glow {
+    0%, 100% {
+      box-shadow: 
+        0 0 20px rgba(34, 197, 94, 0.3),
+        0 0 40px rgba(34, 197, 94, 0.1);
+    }
+    50% {
+      box-shadow: 
+        0 0 30px rgba(34, 197, 94, 0.5),
+        0 0 60px rgba(34, 197, 94, 0.2);
+    }
+  }
+
+  /* Floating particles */
+  .pricing-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .pricing-particles::before,
+  .pricing-particles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--color-accent-green);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float-particle 6s ease-in-out infinite;
+  }
+
+  .pricing-particles::before {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .pricing-particles::after {
+    top: 60%;
+    right: 15%;
+    animation-delay: 3s;
+  }
+
+  @keyframes float-particle {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+    50% { transform: translateY(-20px) scale(1.5); opacity: 0.6; }
+  }
+
+  /* Price counter animation */
+  .price-animate {
+    display: inline-block;
+    animation: price-pop 0.4s ease-out;
+  }
+
+  @keyframes price-pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Popular badge shine */
+  .popular-badge {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #22c55e 100%);
+    background-size: 200% auto;
+    animation: badge-shine 3s linear infinite;
+  }
+
+  @keyframes badge-shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  /* Feature list hover effect */
+  .tilt-card li {
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .tilt-card:hover li {
+    transform: translateX(4px);
+  }
+
+  .tilt-card li:hover {
+    color: var(--color-text-primary);
+  }
+
+  /* CTA button pulse on Pro */
+  .pro-card .cta-btn {
+    animation: btn-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
   }
 </style>
 
