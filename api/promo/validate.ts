@@ -9,11 +9,21 @@ const polar = new Polar({
 // Fallback promo codes (when Polar discount not found)
 // These can be managed in Supabase or here for quick testing
 const FALLBACK_CODES: Record<string, { discount: number; type: 'percentage' | 'fixed'; name: string }> = {
+    // 100% off codes - Founder/VIP access
+    'FOUNDER100': { discount: 100, type: 'percentage', name: 'Founder Edition' },
+    'MEKONG': { discount: 100, type: 'percentage', name: 'Internal Use' },
+    'VIP100': { discount: 100, type: 'percentage', name: 'VIP Access' },
+    'LAUNCH100': { discount: 100, type: 'percentage', name: 'Launch Day' },
+    'AGENCYOS100': { discount: 100, type: 'percentage', name: 'AgencyOS Launch' },
+    'VIPFREE': { discount: 100, type: 'percentage', name: 'VIP Free Access' },
+    // Partial discount codes
+    'BETA50': { discount: 50, type: 'percentage', name: 'Beta Tester' },
+    'AFFILIATE50': { discount: 50, type: 'percentage', name: 'Affiliate Special' },
+    'WELCOME25': { discount: 25, type: 'percentage', name: 'Welcome Discount' },
     'LAUNCH20': { discount: 20, type: 'percentage', name: 'Launch Discount' },
     'EARLYBIRD': { discount: 30, type: 'percentage', name: 'Early Bird' },
-    'AFFILIATE50': { discount: 50, type: 'percentage', name: 'Affiliate Special' },
-    'VIPFREE': { discount: 100, type: 'percentage', name: 'VIP Free Access' },
 };
+
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     // CORS
