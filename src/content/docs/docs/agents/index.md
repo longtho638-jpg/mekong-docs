@@ -1,161 +1,185 @@
 ---
-title: Agents Overview
-description: AgencyOS's 18 specialized agents for software development
-section: docs
-category: agents
-order: 1
-published: true
+title: "AI Agents"
+description: "7 AI agents powering Mekong CLI automation"
+section: "docs"
 ---
 
-# Agents Overview
+# Mekong AI Agents
 
-18 specialized agents that handle every aspect of software development—automatically orchestrated through predefined workflows.
+> 🤖 7 specialized AI agents for agency automation
 
-## Quick Reference
+---
 
-### Development & Implementation
+## 🎯 Quad-Agent System
 
-| Agent | Purpose |
-|-------|---------|
-| [planner](/docs/agents/planner) | Research, analyze, create implementation plans before coding |
-| [fullstack-developer](/docs/agents/fullstack-developer) | Execute implementation phases with strict file ownership |
-| [scout](/docs/agents/scout) | Parallel file search across large codebases |
-| [scout-external](/docs/agents/scout-external) | External search using Gemini CLI and OpenCode |
-| [debugger](/docs/agents/debugger) | Root cause analysis, log investigation, issue diagnosis |
-| [tester](/docs/agents/tester) | Test execution, coverage analysis, quality validation |
+The core 4-agent system for content production:
 
-### Quality & Review
+### 🔍 Scout Agent
 
-| Agent | Purpose |
-|-------|---------|
-| [code-reviewer](/docs/agents/code-reviewer) | Security audits, performance analysis, code quality |
-| [database-admin](/docs/agents/database-admin) | Query optimization, schema design, performance tuning |
+**Role:** Thu thập thông tin thị trường
 
-### Documentation & Management
+**Capabilities:**
+- Analyze git commits to find "shippable units"
+- Scan Product Hunt, X, Reddit for trends
+- Generate Intelligence Briefs (JSON)
 
-| Agent | Purpose |
-|-------|---------|
-| [docs-manager](/docs/agents/docs-manager) | Technical documentation, API docs, architecture guides |
-| [project-manager](/docs/agents/project-manager) | Progress tracking, cross-agent coordination, status reports |
-| [journal-writer](/docs/agents/journal-writer) | Document failures and setbacks with brutal honesty |
-| [git-manager](/docs/agents/git-manager) | Conventional commits, security scanning, token-optimized |
+**MCP Tools:**
+- git-mcp: Read commit history
+- playwright-scraper: Web scraping
+- analytics-mcp: Traffic data
 
-### Creative & Research
-
-| Agent | Purpose |
-|-------|---------|
-| [ui-ux-designer](/docs/agents/ui-ux-designer) | Award-winning UI with Three.js, responsive layouts |
-| [copywriter](/docs/agents/copywriter) | High-converting marketing copy, viral content |
-| [brainstormer](/docs/agents/brainstormer) | Explore approaches, challenge assumptions, debate decisions |
-| [researcher](/docs/agents/researcher) | Multi-source research, documentation analysis |
-
-### Integration
-
-| Agent | Purpose |
-|-------|---------|
-| [mcp-manager](/docs/agents/mcp-manager) | MCP server integrations, tool discovery, execution |
-
-## How to Use
-
-**Automatic (recommended):** Commands orchestrate agents automatically
 ```bash
-/cook [feature]     # planner → code → tester → reviewer → git-manager
-/fix:hard [bug]     # scout → debugger → planner → code → tester
-/plan [task]        # planner + researcher
+mekong run-scout "AI productivity tools"
 ```
 
-**Explicit:** Request specific agents in prompts
-```
-"Use scout agent to find auth files, then planner to create migration strategy"
-```
+---
 
-## Under the Hood
+### ✏️ Editor Agent
 
-### Orchestration Patterns
+**Role:** Biên tập nội dung
 
-**Sequential** (default): Agents run in order, each building on previous output
-```
-planner → code → tester → code-reviewer → git-manager
-```
+**Capabilities:**
+- Convert code/commits into blog posts
+- Generate Twitter threads
+- Write video scripts
 
-**Parallel**: Independent agents run simultaneously
-```
-scout (dir1) ┐
-scout (dir2) ├─→ Aggregate → planner
-scout (dir3) ┘
-```
+**Output Formats:**
+- Markdown articles
+- Social media posts
+- Video scripts
 
-**Hybrid**: Mix of sequential and parallel for complex tasks
+---
 
-### Agent Communication
+### 🎬 Director Agent
 
-Agents share context through:
-- **Shared files**: `docs/`, `plans/`, code standards
-- **Handoff protocols**: Each agent receives previous output, performs task, passes results
-- **TodoWrite**: Real-time progress tracking visible to user
+**Role:** Đạo diễn video
 
-### Handoff Example
+**Capabilities:**
+- Generate voiceover (ElevenLabs)
+- Render video with FFmpeg
+- Add auto-subtitles
 
-```
-planner output → plans/auth-feature.md
-    ↓
-code reads plan → implements → creates files + tests
-    ↓
-tester runs tests → validates coverage
-    ↓
-code-reviewer audits → security + quality report
-    ↓
-git-manager commits → conventional commit + push
-```
+**Output:**
+- .mp4 files (9:16 for Shorts/Reels)
+- .mp4 files (16:9 for YouTube)
 
-### Troubleshooting
+**Tools:**
+- elevenlabs-mcp: Text-to-Speech
+- ffmpeg: Video processing
+- genmedia-mcp: Image/Video AI
 
-**Agent not activating?**
-- Check command matches task complexity (`/fix:fast` vs `/fix:hard`)
-- Verify workflow files exist in `.claude/agents/`
-- Try explicit invocation: "Use [agent] to..."
+---
 
-**Slow response?**
-- Use parallel orchestration when tasks are independent
-- Scope tasks more specifically
-- Use simpler commands for simple tasks
+### 🤝 Community Agent
 
-**Conflicts?**
-- Review orchestration order in workflow files
-- Check handoff protocols between agents
+**Role:** Đăng bài & tương tác
 
-## AgencyOS Integration
+**Capabilities:**
+- Post to X, Reddit, YouTube
+- Manage rate limits
+- Track engagement metrics
 
-All agents integrate with the AgencyOS framework:
+**MCP Tools:**
+- twitter-mcp: X/Twitter API
+- reddit-mcp: Reddit API
+- youtube-mcp: YouTube upload
 
-```tsx
-import { useAgentOS, useTaskTracker, AgentReport } from '@/agencyos';
+---
 
-function AgentDashboard() {
-  const { state, startTask } = useAgentOS({ agentName: 'planner' });
-  const { progress, initTask } = useTaskTracker();
-  
-  return (
-    <>
-      <TaskTrackerWidget {...state} progress={progress} />
-      <AgentReport type="plan" {...artifact} />
-    </>
-  );
-}
+## 🌾 Mekong-Specific Agents
+
+3 specialized agents for Vietnamese markets:
+
+### 📊 Market Analyst
+
+**Role:** Phân tích giá nông sản ĐBSCL
+
+**Focus:**
+- Real-time commodity prices
+- Mekong Delta market analysis
+- Price trend forecasting
+
+**Use Case:**
+```bash
+/nong-san "gạo ST25"
+/commodity "coffee arabica"
 ```
 
-### Available Hooks
+---
 
-| Hook | Purpose |
-|------|---------|
-| `useAgentOS` | Connect agent to UI, manage state |
-| `useTaskTracker` | Track step-by-step progress |
-| `useApprovalGate` | Human-in-the-loop approval |
-| `useDashboardAction` | Trigger UI actions |
+### 💬 Zalo Integrator
 
-See [Vibe Coding Guide](/docs/guides/antigravity-vibe-coding) for details.
+**Role:** Tích hợp Zalo OA/Mini App
 
-## Key Takeaway
+**Capabilities:**
+- Zalo Official Account automation
+- Mini App integration
+- Vietnamese messaging optimization
 
-17 agents work together automatically—use commands to orchestrate them, or invoke explicitly for specific tasks. No manual coordination needed.
+---
 
+### 🎤 Local Copywriter
+
+**Role:** Viết content giọng địa phương
+
+**Vibes Supported:**
+| Region | Tone | Keywords |
+|--------|------|----------|
+| Miền Tây | Thân thiện, ấm áp | hen, nghen, tui |
+| Miền Bắc | Lịch sự, trang trọng | ạ, nhé, xin phép |
+| Miền Trung | Mộc mạc, thật thà | mô, tê, răng, rứa |
+| Gen Z | Trendy, năng động | slay, vibe, chill |
+
+---
+
+## 📊 Agent Pipeline
+
+```
+Git Commit → Scout → Intelligence Brief
+                ↓
+         Editor → Blog + Script
+                ↓
+         Director → Video
+                ↓
+         Community → Published
+```
+
+---
+
+## 🔧 Agent Status
+
+Check all agents with:
+
+```bash
+mekong agents
+```
+
+**Output:**
+```
+🤖 MEKONG-CLI AI Agents
+
+   Quad-Agent System:
+      🔍 Scout: Thu thập thông tin [Ready]
+      ✏️ Editor: Biên tập nội dung [Ready]
+      🎬 Director: Đạo diễn video [Ready]
+      🤝 Community: Đăng bài & tương tác [Ready]
+
+   Mekong-Specific Agents:
+      📊 Market Analyst: Phân tích giá nông sản [Ready]
+      💬 Zalo Integrator: Tích hợp Zalo OA [Ready]
+      🎤 Local Copywriter: Content giọng địa phương [Ready]
+
+   Total: 7 agents ready
+```
+
+---
+
+## 🔗 Related
+
+- [CLI Commands](/docs/cli)
+- [Business Commands](/docs/mekong)
+- [Workflows](/docs/workflows)
+
+---
+
+*Mekong CLI v2.0 | 7 AI Agents | Quad-Agent + Mekong-Specific*
