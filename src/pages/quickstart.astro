@@ -128,25 +128,45 @@ const description = 'Choose your path: Developer, Marketing, Sales, Finance, or 
 </LandingLayout>
 
 <style>
+  /* ===================== HERO WOW ===================== */
   .quickstart-hero {
     text-align: center;
     padding: 64px 24px 32px;
+    animation: hero-entrance 0.8s ease-out;
+  }
+
+  @keyframes hero-entrance {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .quickstart-hero h1 {
     font-size: 3rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #22c55e, #06b6d4, #8b5cf6);
+    background: linear-gradient(135deg, #22c55e, #06b6d4, #8b5cf6, #22c55e);
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 16px;
+    animation: title-shine 5s linear infinite;
+  }
+
+  @keyframes title-shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
   }
 
   .tagline {
     font-size: 1.25rem;
     color: var(--color-text-muted);
     font-style: italic;
+    animation: fade-up 0.6s ease-out 0.2s both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .personas-grid {
@@ -158,6 +178,27 @@ const description = 'Choose your path: Developer, Marketing, Sales, Finance, or 
     gap: 24px;
   }
 
+  /* ===================== PERSONA CARDS WOW ===================== */
+  .persona-card {
+    background: var(--color-bg-secondary);
+    border: 2px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    animation: card-entrance 0.6s ease-out both;
+  }
+
+  .persona-card:nth-child(1) { animation-delay: 0.3s; }
+  .persona-card:nth-child(2) { animation-delay: 0.4s; }
+  .persona-card:nth-child(3) { animation-delay: 0.5s; }
+  .persona-card:nth-child(4) { animation-delay: 0.6s; }
+  .persona-card:nth-child(5) { animation-delay: 0.7s; }
+
+  @keyframes card-entrance {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .persona-card {
     background: var(--color-bg-secondary);
     border: 2px solid var(--color-border);
@@ -167,8 +208,8 @@ const description = 'Choose your path: Developer, Marketing, Sales, Finance, or 
   }
 
   .persona-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   }
 
   .persona-card.developer:hover { border-color: #22c55e; }
@@ -187,6 +228,18 @@ const description = 'Choose your path: Developer, Marketing, Sales, Finance, or 
 
   .persona-icon {
     font-size: 2rem;
+    animation: icon-bounce 2s ease-in-out infinite;
+  }
+
+  .persona-card:nth-child(1) .persona-icon { animation-delay: 0s; }
+  .persona-card:nth-child(2) .persona-icon { animation-delay: 0.2s; }
+  .persona-card:nth-child(3) .persona-icon { animation-delay: 0.4s; }
+  .persona-card:nth-child(4) .persona-icon { animation-delay: 0.6s; }
+  .persona-card:nth-child(5) .persona-icon { animation-delay: 0.8s; }
+
+  @keyframes icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
   }
 
   .persona-header h2 {
@@ -258,11 +311,18 @@ const description = 'Choose your path: Developer, Marketing, Sales, Finance, or 
     border-color: #22c55e;
   }
 
+  /* ===================== CTA WOW ===================== */
   .cta-section {
     text-align: center;
     padding: 64px 24px;
     background: linear-gradient(180deg, transparent, rgba(34, 197, 94, 0.05));
     border-top: 1px solid var(--color-border);
+    animation: cta-entrance 0.6s ease-out 0.8s both;
+  }
+
+  @keyframes cta-entrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .cta-section h2 {
@@ -285,12 +345,18 @@ const description = 'Choose your path: Developer, Marketing, Sales, Finance, or 
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    animation: btn-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+    50% { box-shadow: 0 0 20px 5px rgba(34, 197, 94, 0.2); }
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4);
   }
 
   @media (max-width: 768px) {
