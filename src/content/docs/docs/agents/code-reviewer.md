@@ -90,6 +90,38 @@ Enforce 80%+ test coverage, zero `any` types, security scan pass before producti
 - [Tester](/docs/agents/tester) - Validates fixes with comprehensive tests
 - [Scout External](/docs/agents/scout-external) - Researches best practices for fixes
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, DynamicCard } from '@/agencyos';
+
+function ReviewerPanel() {
+  const { state } = useAgentOS({ agentName: 'code-reviewer' });
+  
+  return (
+    <DynamicCard
+      title="Code Review"
+      icon="👁️"
+      status={issues.critical > 0 ? 'error' : 'completed'}
+      metrics={[
+        { label: 'Critical', value: issues.critical },
+        { label: 'High', value: issues.high },
+        { label: 'Coverage', value: '85%' }
+      ]}
+    />
+  );
+}
+```
+
+### Vibe Coding Pattern
+```
+/@code-reviewer review auth module
+    ↓
+Scan: Security + Type Safety + Performance
+    ↓
+Output: DynamicCard with issue counts
+```
+
 ## Key Takeaway
 
 The code reviewer agent prevents production incidents by catching security vulnerabilities, type safety violations, and performance issues before merge. Use it as a quality gate in every PR workflow.

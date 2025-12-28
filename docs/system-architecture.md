@@ -592,9 +592,101 @@ spec:
         averageUtilization: 70
 ```
 
-### 12. Future Architecture Evolution
+### 12. AgencyOS Agent Framework
 
-#### 12.1 Planned Enhancements
+#### 12.1 Architecture Overview
+
+AgencyOS provides a native agent framework for building AI-powered interactive dashboards:
+
+```
+┌────────────────────────────────────────────────┐
+│          AgencyOS Agent Framework              │
+├────────────────────────────────────────────────┤
+│  useAgentOS()      - Connect agent to UI       │
+│  useTaskTracker()  - Track agent progress      │
+│  useApprovalGate() - Human approval flow       │
+│  useDashboardAction() - Interactive widgets    │
+│  <AgentReport/>    - Agent-generated reports   │
+│  <DynamicCard/>    - Dynamic content cards     │
+└────────────────────────────────────────────────┘
+```
+
+#### 12.2 Core Hooks
+
+**useAgentOS**: Connect agents to the UI with real-time status updates
+```typescript
+const { state, startTask, updateStatus, completeTask } = useAgentOS({
+  agentName: 'planner'
+});
+```
+
+**useTaskTracker**: Track task progress with step-by-step execution
+```typescript
+const { progress, currentStepName, initTask, completeStep } = useTaskTracker();
+```
+
+**useApprovalGate**: Human-in-the-loop approval flows
+```typescript
+const { requestApproval, approve, reject } = useApprovalGate();
+const approved = await requestApproval('Deploy to production', 'This updates live');
+```
+
+**useDashboardAction**: Agent-triggered UI actions
+```typescript
+const { navigate, refreshWidget, showNotification } = useDashboardAction();
+```
+
+#### 12.3 Components
+
+| Component | Purpose |
+|-----------|---------|
+| `<AgentReport/>` | Render plans, walkthroughs, task reports |
+| `<DynamicCard/>` | Agent-generated cards with metrics |
+| `<TaskTrackerWidget/>` | Real-time task progress |
+| `<ApprovalDialog/>` | Human approval modal |
+| `<AgentActivityFeed/>` | Live agent activity stream |
+
+#### 12.4 Agent Integration Pattern
+
+```
+User Request
+    ↓
+AgencyOSProvider
+    ↓
+useAgentOS (connect)
+    ↓
+useTaskTracker (progress)
+    ↓
+useApprovalGate (if needed)
+    ↓
+AgentReport/DynamicCard (output)
+```
+
+#### 12.5 File Structure
+
+```
+src/
+├── hooks/
+│   ├── useAgentOS.ts
+│   ├── useTaskTracker.ts
+│   ├── useApprovalGate.ts
+│   └── useDashboardAction.ts
+├── components/agencyos/
+│   ├── AgentReport.tsx
+│   ├── DynamicCard.tsx
+│   ├── TaskTrackerWidget.tsx
+│   ├── ApprovalDialog.tsx
+│   └── AgentActivityFeed.tsx
+├── providers/
+│   └── AgencyOSProvider.tsx
+└── agencyos.ts (exports)
+```
+
+---
+
+### 13. Future Architecture Evolution
+
+#### 13.1 Planned Enhancements
 
 **Phase 1** (Q1 2026):
 - OpenRouter API backend for AI chat

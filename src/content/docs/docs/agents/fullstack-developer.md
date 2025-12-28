@@ -107,6 +107,46 @@ No overlap → Safe for parallel execution
 - [Planner Agent](/docs/agents/planner) - Creates implementation plans
 - [Scout Agent](/docs/agents/scout-external) - Gathers external context before planning
 
+## AgencyOS Integration
+
+Connect Fullstack Developer with multi-step task tracking:
+
+### Hook Setup
+
+```tsx
+import { useAgentOS, useTaskTracker, TaskTrackerWidget } from '@/agencyos';
+
+function FullstackPanel() {
+  const { state, setMode } = useAgentOS({ agentName: 'fullstack-developer' });
+  const { progress, initTask, completeStep } = useTaskTracker();
+
+  async function executePhase(phase: ImplementationPhase) {
+    setMode('execution');
+    initTask(`Phase ${phase.number}: ${phase.topic}`, phase.steps);
+    
+    for (const step of phase.steps) {
+      // Execute step
+      completeStep(step.id);
+    }
+  }
+
+  return <TaskTrackerWidget {...state} progress={progress} />;
+}
+```
+
+### Vibe Coding Pattern
+
+```
+/@fullstack implement phase-02-api.md
+    ↓
+Mode: execution
+    ↓
+TaskTracker: Step 1 → 2 → 3 → 4
+    ↓
+Output: Code + tests + report
+```
+
 ## Key Takeaway
 
 **Fullstack Developer executes implementation phases with file-level isolation, enabling safe parallel backend/frontend development while maintaining code quality through automated testing.**
+

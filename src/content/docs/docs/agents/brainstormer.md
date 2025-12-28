@@ -78,6 +78,39 @@ Your technical advisor who challenges assumptions, debates approaches, and provi
 - [Researcher Agent](/docs/agents/researcher) - Provides data for brainstorming decisions
 - [Docs-Manager Agent](/docs/agents/docs-manager) - Documents architectural decision records
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, DynamicCard } from '@/agencyos';
+
+function BrainstormerPanel() {
+  const { state } = useAgentOS({ agentName: 'brainstormer' });
+  
+  return (
+    <DynamicCard
+      title="Approach Analysis"
+      icon="🧠"
+      metrics={[
+        { label: 'Options', value: 3 },
+        { label: 'YAGNI Score', value: '8/10' }
+      ]}
+      actions={[
+        { id: 'accept', label: 'Accept Recommendation', variant: 'primary' }
+      ]}
+    />
+  );
+}
+```
+
+### Vibe Coding Pattern
+```
+/@brainstormer evaluate caching strategy
+    ↓
+Analysis: 3-5 approaches with trade-offs
+    ↓
+Output: DynamicCard with recommendation
+```
+
 ## Key Takeaway
 
 Brainstormer doesn't write code. It saves you from writing the wrong code. Use it before committing to complex architectural decisions. 10 minutes of brainstorming prevents weeks of refactoring.

@@ -81,6 +81,36 @@ echo "What does authentication middleware do in app/middleware/auth.ts?" | gemin
 - [Scout Agent](/docs/agents/scout) - Internal searches (Glob/Grep/Read)
 - [Fullstack Developer](/docs/agents/fullstack-developer) - Implements features after discovery
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, useTaskTracker, AgentActivityFeed } from '@/agencyos';
+
+function ScoutExternalPanel() {
+  const { state } = useAgentOS({ agentName: 'scout-external' });
+  const { progress, initTask } = useTaskTracker();
+
+  async function parallelSearch(query: string) {
+    initTask(`External Scout: ${query}`, [
+      'Gemini search lib/', 'OpenCode search app/',
+      'Aggregate results'
+    ]);
+  }
+
+  return <AgentActivityFeed activities={searchResults} />;
+}
+```
+
+### Vibe Coding Pattern
+```
+/@scout-external find auth files across all dirs
+    ↓
+Parallel: Gemini + OpenCode agents
+    ↓
+Output: Aggregated file list
+```
+
 ## Key Takeaway
 
 Scout External parallelizes AI-powered searches using external tools for 3-5x faster file discovery in large codebases. Use for comprehensive coverage when internal Scout is too slow.
+

@@ -142,6 +142,35 @@ Authenticate user and return JWT token.
 - [Scout Agent](/docs/agents/scout) - Locates files → docs-manager uses for context
 - [Project Manager](/docs/agents/project-manager) - Coordinates tasks → docs-manager provides status
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, AgentReport } from '@/agencyos';
+
+function DocsPanel() {
+  const { state, addArtifact } = useAgentOS({ agentName: 'docs-manager' });
+  
+  // After docs generated
+  addArtifact({
+    type: 'walkthrough',
+    path: 'docs/system-architecture.md',
+    summary: 'Updated with new API endpoints'
+  });
+
+  return <AgentReport type="walkthrough" {...artifact} />;
+}
+```
+
+### Vibe Coding Pattern
+```
+/@docs-manager update docs
+    ↓
+Scan: Git diff → affected docs
+    ↓
+Output: AgentReport with changes
+```
+
 ## Key Takeaway
 
 **Docs-manager keeps documentation synchronized with code automatically.** Run `/docs:init` for initial setup, `/docs:update` after features, `/docs:summarize` for overview. Integrates with Repomix and Scout for comprehensive analysis. Part of AgencyOS $99 toolkit.
+

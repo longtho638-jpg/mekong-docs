@@ -146,7 +146,13 @@ When you run this command:
 4. **Entry Generation**: Creates structured journal entry
 5. **Save**: Writes to `journals/` directory with timestamp
 
-**Agents Invoked**: `journal-writer` subagent
+## Agents Orchestrated
+
+| Agent | Purpose |
+|-------|---------|
+| [journal-writer](/docs/agents/journal-writer) | **Primary** - Document work sessions, decisions, challenges |
+| [project-manager](/docs/agents/project-manager) | Provide progress tracking context |
+| [scout](/docs/agents/scout) | Locate relevant code changes |
 
 ## Complete Example
 

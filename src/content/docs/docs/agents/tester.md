@@ -76,6 +76,52 @@ Runs: Flutter analyze + Jest + pytest in sequence
 - [Code Reviewer](/docs/agents/code-reviewer) - Pre-test code quality
 - [Fullstack Developer](/docs/agents/fullstack-developer) - Post-test build verification
 
+## AgencyOS Integration
+
+Display test results with AgentReport:
+
+### Hook Setup
+
+```tsx
+import { useAgentOS, AgentReport, DynamicCard } from '@/agencyos';
+
+function TesterPanel() {
+  const { state, addArtifact } = useAgentOS({ agentName: 'tester' });
+
+  // After test run completes
+  addArtifact({
+    type: 'report',
+    path: 'reports/test-results.md',
+    summary: 'Coverage: 85% | Passed: 142 | Failed: 0'
+  });
+
+  return (
+    <DynamicCard
+      title="Test Results"
+      icon="🧪"
+      status={testsPassed ? 'completed' : 'error'}
+      metrics={[
+        { label: 'Coverage', value: '85%', change: 5 },
+        { label: 'Passed', value: 142 },
+        { label: 'Failed', value: 0 }
+      ]}
+    />
+  );
+}
+```
+
+### Vibe Coding Pattern
+
+```
+/@tester run tests
+    ↓
+Execute: Jest/Vitest/pytest
+    ↓
+Output: AgentReport with coverage
+    ↓
+Dashboard: DynamicCard with metrics
+```
+
 ## Key Takeaway
 
 Test execution isn't about 100% coverage - it's about 80%+ on critical paths with zero flaky tests. The tester agent finds failures, diagnoses root causes, and ensures your coverage targets before any commit goes through.

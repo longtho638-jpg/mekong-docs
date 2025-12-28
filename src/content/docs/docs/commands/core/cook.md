@@ -107,6 +107,27 @@ Provides completion report:
 - Coverage metrics
 - Next steps
 
+## Agents Orchestrated
+
+The `/cook` command intelligently orchestrates **multiple agents** from AgencyOS's 18-agent system:
+
+| Phase | Agent | Purpose |
+|-------|-------|---------|
+| **Planning** | [planner](/docs/agents/planner) | Create implementation plan, research best practices |
+| **Discovery** | [scout](/docs/agents/scout) | Locate relevant files across codebase |
+| **Research** | [researcher](/docs/agents/researcher) | Find libraries, security patterns, best practices |
+| **Implementation** | [fullstack-developer](/docs/agents/fullstack-developer) | Execute code changes with file ownership |
+| **Testing** | [tester](/docs/agents/tester) | Generate and run comprehensive test suites |
+| **Quality** | [code-reviewer](/docs/agents/code-reviewer) | Security audits, performance analysis |
+| **Database** | [database-admin](/docs/agents/database-admin) | Schema design, query optimization (when needed) |
+| **Documentation** | [docs-manager](/docs/agents/docs-manager) | Update technical documentation |
+| **Commit** | [git-manager](/docs/agents/git-manager) | Conventional commits (when using /git:cm) |
+
+**Additional agents invoked as needed:**
+- [debugger](/docs/agents/debugger) - If errors occur during implementation
+- [ui-ux-designer](/docs/agents/ui-ux-designer) - For frontend features
+- [brainstormer](/docs/agents/brainstormer) - For complex architectural decisions
+
 ## Examples
 
 ### Basic Feature

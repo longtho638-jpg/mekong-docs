@@ -78,6 +78,25 @@ Runs tests to ensure:
 - Code follows standards
 - Documentation is complete
 
+## Agents Orchestrated
+
+The `/bootstrap` command orchestrates **8+ agents** for complete project initialization:
+
+| Phase | Agent | Purpose |
+|-------|-------|---------|
+| **Requirements** | [planner](/docs/agents/planner) | Gather requirements, create architecture |
+| **Research** | [researcher](/docs/agents/researcher) | Best practices, libraries, patterns |
+| **Ideation** | [brainstormer](/docs/agents/brainstormer) | Explore approaches, challenge assumptions |
+| **Implementation** | [fullstack-developer](/docs/agents/fullstack-developer) | Generate project structure, core features |
+| **Database** | [database-admin](/docs/agents/database-admin) | Schema design, migrations |
+| **Testing** | [tester](/docs/agents/tester) | Comprehensive test suite generation |
+| **Quality** | [code-reviewer](/docs/agents/code-reviewer) | Security, performance validation |
+| **Documentation** | [docs-manager](/docs/agents/docs-manager) | Technical docs, API docs, guides |
+| **UI/UX** | [ui-ux-designer](/docs/agents/ui-ux-designer) | For web apps: responsive layouts |
+| **Git Setup** | [git-manager](/docs/agents/git-manager) | Initial commit with conventions |
+
+**Agent count**: Up to **10 agents** work together for greenfield projects
+
 ## Examples
 
 ### Basic Usage

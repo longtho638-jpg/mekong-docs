@@ -64,6 +64,60 @@ Profiles endpoints, finds N+1 queries or missing indexes, provides EXPLAIN ANALY
 - [Code Reviewer](/docs/agents/code-reviewer) - Review fix quality before merge
 - [Fullstack Developer](/docs/agents/fullstack-developer) - Implement suggested fixes
 
+## AgencyOS Integration
+
+Connect the Debugger Agent to your dashboard with approval gates:
+
+### Hook Setup
+
+```tsx
+import { useAgentOS, useApprovalGate, ApprovalDialog } from '@/agencyos';
+
+function DebuggerPanel() {
+  const { state, startTask } = useAgentOS({ agentName: 'debugger' });
+  const { pendingRequest, requestApproval, approve, reject } = useApprovalGate();
+
+  async function applyFix(fix: DebugFix) {
+    const approved = await requestApproval(
+      `Apply Fix: ${fix.title}`,
+      fix.description,
+      { files: fix.affectedFiles, risk: fix.riskLevel }
+    );
+    
+    if (approved) {
+      // Apply the fix
+    }
+  }
+
+  return (
+    <>
+      <ApprovalDialog
+        isOpen={!!pendingRequest}
+        action={pendingRequest?.action || ''}
+        description={pendingRequest?.description || ''}
+        details={pendingRequest?.details}
+        onApprove={approve}
+        onReject={reject}
+      />
+    </>
+  );
+}
+```
+
+### Vibe Coding Pattern
+
+```
+/@debugger [API returning 500 errors]
+    ↓
+Analysis: Logs → Root cause → Fix options
+    ↓
+ApprovalGate: "Apply fix to auth/service.ts?"
+    ↓
+Human: ✅ Approve
+    ↓
+Fix applied + verified
+```
+
 ## Key Takeaway
 
 Debugger agent systematically investigates technical issues from symptoms to root cause, providing actionable solutions with validation steps and prevention measures - turning hours of troubleshooting into 30-minute structured analysis.

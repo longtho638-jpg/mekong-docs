@@ -26,6 +26,12 @@ Uses `git-manager` agent to:
 
 **Important**: Does NOT push changes to remote repository.
 
+## Agents Orchestrated
+
+| Agent | Purpose |
+|-------|---------|
+| [git-manager](/docs/agents/git-manager) | Conventional commits, security scanning, token-optimized messages |
+
 ## Workflow
 
 ```bash

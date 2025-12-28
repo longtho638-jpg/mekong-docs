@@ -130,6 +130,36 @@ Multi-source technology intelligence that explores docs, videos, GitHub repos, a
 - [Brainstormer Agent](/docs/agents/brainstormer) - Debates technical trade-offs discovered in research
 - [Scout Agent](/docs/agents/scout) - Locates existing implementations in your codebase
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, useTaskTracker, AgentReport } from '@/agencyos';
+
+function ResearcherPanel() {
+  const { state, addArtifact } = useAgentOS({ agentName: 'researcher' });
+  const { progress, initTask } = useTaskTracker();
+
+  async function startResearch(topic: string) {
+    initTask(`Research: ${topic}`, [
+      'Search Google', 'Search YouTube', 
+      'Analyze GitHub', 'Read docs', 'Synthesize'
+    ]);
+  }
+
+  return <AgentReport type="report" {...researchReport} />;
+}
+```
+
+### Vibe Coding Pattern
+```
+/@researcher investigate Stripe vs PayPal
+    ↓
+Parallel: Google + YouTube + GitHub + Docs
+    ↓
+Output: AgentReport with 15+ sources
+```
+
 ## Key Takeaway
 
 Researcher eliminates "tutorial hell" by validating 15+ sources in parallel, surfacing security risks, and delivering production-ready intelligence before you write a single line of code. Part of AgencyOS $99 toolkit.
+

@@ -147,6 +147,65 @@ Plans saved to: `plans/[feature-name]-YYYYMMDD-HHMMSS.md`
 - [Researcher Agent](/docs/agents/researcher) - Deep dives on specific topics
 - [Scout](/docs/agents/scout) - Explores codebase for context
 
+## AgencyOS Integration
+
+Connect the Planner Agent to your dashboard with AgencyOS hooks:
+
+### Hook Setup
+
+```tsx
+import { useAgentOS, useTaskTracker, AgentReport } from '@/agencyos';
+
+function PlannerPanel() {
+  const { state, startTask, addArtifact } = useAgentOS({ 
+    agentName: 'planner' 
+  });
+  
+  const { progress, initTask, completeStep } = useTaskTracker();
+
+  async function createPlan(description: string) {
+    startTask(`Planning: ${description}`);
+    initTask('Create Plan', [
+      'Research best practices',
+      'Analyze codebase',
+      'Generate plan',
+      'Review & refine'
+    ]);
+    
+    // Agent executes...
+    
+    addArtifact({
+      type: 'plan',
+      path: 'plans/implementation.md',
+      summary: 'Generated implementation plan'
+    });
+  }
+
+  return (
+    <div>
+      <TaskTrackerWidget {...state} progress={progress} />
+      {state.artifacts.map(a => (
+        <AgentReport key={a.path} type="plan" {...a} />
+      ))}
+    </div>
+  );
+}
+```
+
+### Vibe Coding Pattern
+
+```
+/@planner [create authentication system]
+    ↓
+Task: "Planning: authentication system"
+    ↓
+Steps: Research → Analyze → Generate → Review
+    ↓
+Output: implementation_plan.md
+    ↓
+Ready for: /@fullstack implement
+```
+
 ## Key Takeaway
 
 Planning prevents waste. 10 minutes of research and analysis saves hours of refactoring when you discover you picked the wrong approach halfway through implementation.

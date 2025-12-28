@@ -356,10 +356,17 @@ The `/docs:update` command uses the `docs-manager` agent with this workflow:
 - Design system
 - Accessibility guidelines
 
-## Agent Invoked
+## Agents Orchestrated
 
-The command uses the **docs-manager agent** with these capabilities:
+The `/docs:update` command primarily uses the [docs-manager](/docs/agents/docs-manager) agent with support:
 
+| Agent | Purpose |
+|-------|---------|
+| [docs-manager](/docs/agents/docs-manager) | **Primary** - Technical documentation, API docs, architecture guides |
+| [scout](/docs/agents/scout) | Locate relevant code changes and file structure |
+| [code-reviewer](/docs/agents/code-reviewer) | Validate code examples in documentation |
+
+**Capabilities**:
 - **Documentation Analysis**: Systematic review of all documentation
 - **Codebase Synchronization**: Cross-referencing docs with code
 - **Standards Enforcement**: Consistent formatting and terminology

@@ -76,6 +76,36 @@ Research trending designs, create production-ready interfaces, and ship conversi
 - [Scout](/docs/agents/scout) - Explore existing components and patterns
 - [Code Reviewer](/docs/agents/code-reviewer) - Validate HTML semantics, CSS performance, accessibility
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, useTaskTracker, AgentReport } from '@/agencyos';
+
+function DesignerPanel() {
+  const { state, addArtifact } = useAgentOS({ agentName: 'ui-ux-designer' });
+  const { progress, initTask } = useTaskTracker();
+
+  async function designLanding() {
+    initTask('Design Landing Page', [
+      'Research trends', 'Wireframe', 'Visual design', 
+      'Implement HTML/CSS', 'Optimize'
+    ]);
+  }
+
+  return <AgentReport type="walkthrough" title="Design Complete" />;
+}
+```
+
+### Vibe Coding Pattern
+```
+/@design:good create landing page
+    ↓
+Research → Wireframe → Code → Optimize
+    ↓
+Output: HTML/CSS + Lighthouse 90+ score
+```
+
 ## Key Takeaway
 
 AgencyOS UI/UX Designer agent ships award-winning interfaces in minutes, not days. Research-backed designs with production-ready code, WCAG compliance, and Lighthouse 90+ scores out of the box. No Figma needed.
+

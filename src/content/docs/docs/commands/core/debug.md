@@ -87,7 +87,17 @@ When you run this command:
 4. **Explanation Generation**: Creates detailed diagnostic report
 5. **User Communication**: Explains findings in clear, actionable terms
 
-**Agents Invoked**: `debugger` subagent
+## Agents Orchestrated
+
+The `/debug` command primarily uses the [debugger](/docs/agents/debugger) agent, with support from other specialists:
+
+| Agent | Purpose |
+|-------|---------|
+| [debugger](/docs/agents/debugger) | **Primary** - Root cause analysis, log investigation, stack trace analysis |
+| [scout](/docs/agents/scout) | Locate relevant files when issue spans multiple components |
+| [researcher](/docs/agents/researcher) | Research known issues, CVEs, or library bugs |
+| [database-admin](/docs/agents/database-admin) | For database-related issues: query analysis, deadlocks |
+| [tester](/docs/agents/tester) | Analyze test failures and coverage gaps |
 
 **Important**: `/debug` does NOT implement fixes automatically. It only diagnoses and explains.
 

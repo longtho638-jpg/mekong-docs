@@ -10,6 +10,18 @@ published: true
 
 Systematic approach to debugging and fixing issues using AgencyOS's specialized debugging agents.
 
+## 🚀 Vibe Coding Quick Start
+
+```
+/@debugger [issue description]
+    ↓
+TaskTracker: Analyze → Root cause → Fix
+    ↓
+ApprovalGate: "Apply fix?"
+    ↓
+/@git-manager commit fix
+```
+
 ## Overview
 
 The bug fixing workflow combines investigation, root cause analysis, fixing, and validation into a comprehensive debugging process.

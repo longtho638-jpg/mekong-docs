@@ -95,6 +95,52 @@ Parallel AI file search across large codebases—organized results in <5 minutes
 - [Debugger Agent](/docs/agents/debugger) - Leverages scout to find debugging targets
 - [Fullstack Developer](/docs/agents/fullstack-developer) - Runs scout before full-stack features
 
+## AgencyOS Integration
+
+Track parallel search progress with TaskTracker:
+
+### Hook Setup
+
+```tsx
+import { useAgentOS, useTaskTracker, AgentActivityFeed } from '@/agencyos';
+
+function ScoutPanel() {
+  const { state } = useAgentOS({ agentName: 'scout' });
+  const { progress, initTask, completeStep } = useTaskTracker();
+
+  async function runScout(query: string, agentCount: number) {
+    initTask(`Scout: ${query}`, 
+      Array.from({ length: agentCount }, (_, i) => `Agent ${i + 1} search`)
+    );
+    
+    // As each parallel agent completes
+    completeStep(`step_${agentIndex}`);
+  }
+
+  return (
+    <AgentActivityFeed
+      activities={searchResults.map(r => ({
+        agentName: 'scout',
+        action: `Found ${r.fileCount} files in ${r.category}`,
+        type: 'success'
+      }))}
+    />
+  );
+}
+```
+
+### Vibe Coding Pattern
+
+```
+/@scout "find auth files" 5
+    ↓
+Parallel: 5 agents searching
+    ↓
+Progress: TaskTracker shows each agent
+    ↓
+Output: Organized file list by category
+```
+
 ## Key Takeaway
 
 Scout parallelizes file discovery across multiple AI agents (Gemini + OpenCode), delivering organized, actionable file lists in under 5 minutes—even for massive codebases. No guessing where authentication lives or which files handle payments. Scout maps it, you build it.

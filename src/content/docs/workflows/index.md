@@ -10,6 +10,25 @@ published: true
 
 Task-oriented guides for common development scenarios using AgencyOS's slash commands and agents.
 
+## 🚀 Vibe Coding with Antigravity
+
+For Antigravity IDE users, all workflows integrate with AgencyOS hooks:
+
+```tsx
+import { useAgentOS, useTaskTracker, useApprovalGate } from '@/agencyos';
+
+// All workflows use these patterns:
+// 1. useAgentOS() - Connect to agents
+// 2. useTaskTracker() - Track workflow progress
+// 3. useApprovalGate() - Approve critical steps
+```
+
+**Quick Commands:**
+- `/@planner` → Create plans
+- `/@fullstack` → Implement code
+- `/@debugger` → Fix bugs
+- `/@git-manager` → Commit changes
+
 ## Popular Workflows
 
 ### Feature Development

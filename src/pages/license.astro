@@ -109,6 +109,7 @@ const description = 'View and manage your AgencyOS license key.';
     padding: 24px;
   }
 
+  /* ===================== WOW ENTRANCE ===================== */
   .license-card {
     background: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
@@ -116,6 +117,13 @@ const description = 'View and manage your AgencyOS license key.';
     padding: 40px;
     max-width: 600px;
     width: 100%;
+    animation: card-entrance 0.6s ease-out;
+    box-shadow: 0 20px 60px rgba(34, 197, 94, 0.15);
+  }
+
+  @keyframes card-entrance {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
   }
 
   .license-card h1 {
@@ -123,6 +131,12 @@ const description = 'View and manage your AgencyOS license key.';
     color: var(--color-text-primary);
     margin: 0 0 16px 0;
     text-align: center;
+    animation: title-fade 0.6s ease-out 0.2s both;
+  }
+
+  @keyframes title-fade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .license-status {
@@ -138,6 +152,12 @@ const description = 'View and manage your AgencyOS license key.';
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    animation: badge-pop 0.5s ease-out 0.3s both;
+  }
+
+  @keyframes badge-pop {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .status-badge.active {
@@ -169,6 +189,7 @@ const description = 'View and manage your AgencyOS license key.';
     margin-bottom: 8px;
   }
 
+  /* ===================== LICENSE KEY WOW ===================== */
   .key-box {
     display: flex;
     gap: 12px;
@@ -176,6 +197,31 @@ const description = 'View and manage your AgencyOS license key.';
     border: 2px solid #22c55e;
     border-radius: 8px;
     padding: 16px;
+    position: relative;
+    overflow: hidden;
+    animation: key-box-entrance 0.6s ease-out 0.4s both;
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
+  }
+
+  .key-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.3), transparent);
+    animation: shine-sweep 3s ease-in-out 1s infinite;
+  }
+
+  @keyframes shine-sweep {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
+
+  @keyframes key-box-entrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .key-box code {
@@ -194,10 +240,19 @@ const description = 'View and manage your AgencyOS license key.';
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+    animation: button-pulse 2.5s ease-in-out infinite;
   }
 
-  .btn-copy:hover { transform: scale(1.05); }
+  @keyframes button-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+    50% { box-shadow: 0 0 20px 5px rgba(34, 197, 94, 0.2); }
+  }
+
+  .btn-copy:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+  }
 
   .license-details {
     background: var(--color-bg-tertiary);
@@ -220,8 +275,20 @@ const description = 'View and manage your AgencyOS license key.';
   .detail-row .value { color: var(--color-text-primary); font-weight: 600; }
   .text-green { color: #22c55e; }
 
-  .cli-section, .ide-section {
+  /* ===================== SECTION STAGGER ===================== */
+  .cli-section {
     margin-bottom: 24px;
+    animation: section-fade 0.6s ease-out 0.6s both;
+  }
+
+  .ide-section {
+    margin-bottom: 24px;
+    animation: section-fade 0.6s ease-out 0.8s both;
+  }
+
+  @keyframes section-fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .cli-section h3, .ide-section h3 {
@@ -282,7 +349,11 @@ const description = 'View and manage your AgencyOS license key.';
     transition: all 0.2s;
   }
 
-  .ide-link:hover { border-color: #22c55e; }
+  .ide-link:hover {
+    border-color: #22c55e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.2);
+  }
 
   .ide-link.featured {
     background: linear-gradient(135deg, #4285f4, #34a853);
@@ -308,6 +379,12 @@ const description = 'View and manage your AgencyOS license key.';
   .btn-primary {
     background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
+    animation: cta-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes cta-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.5); }
   }
 
   .btn-secondary {

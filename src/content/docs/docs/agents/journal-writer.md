@@ -98,6 +98,32 @@ Output: Slow query log, missing index discovery, query plan analysis, why stagin
 - [Project Manager](/docs/agents/project-manager) - Track improvements from learnings
 - [Fullstack Developer](/docs/agents/fullstack-developer) - Implement preventive fixes
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, AgentReport } from '@/agencyos';
+
+function JournalPanel() {
+  const { state, addArtifact } = useAgentOS({ agentName: 'journal-writer' });
+  
+  addArtifact({
+    type: 'walkthrough',
+    path: 'journals/incident-20251228.md',
+    summary: 'Production incident postmortem'
+  });
+
+  return <AgentReport type="walkthrough" {...journal} />;
+}
+```
+
+### Vibe Coding Pattern
+```
+/@journal document payment race condition
+    ↓
+Output: Incident report + lessons learned
+```
+
 ## Key Takeaway
 
 Journal Writer transforms expensive failures into permanent institutional knowledge through brutally honest documentation - capturing technical details, emotional reality, failed attempts, and systemic causes so teams learn once instead of failing repeatedly. Part of AgencyOS $99 toolkit.
+

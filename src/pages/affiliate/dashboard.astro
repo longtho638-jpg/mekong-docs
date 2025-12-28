@@ -26,7 +26,7 @@ const description = 'Track your affiliate earnings, clicks, and conversions in r
       <div class="stat-card earnings">
         <div class="stat-icon">💰</div>
         <div class="stat-content">
-          <div class="stat-value">$0.00</div>
+          <div class="stat-value" id="earnings-value">$0.00</div>
           <div class="stat-label">This Month</div>
         </div>
         <div class="stat-trend up">+0%</div>
@@ -34,7 +34,7 @@ const description = 'Track your affiliate earnings, clicks, and conversions in r
       <div class="stat-card clicks">
         <div class="stat-icon">👆</div>
         <div class="stat-content">
-          <div class="stat-value">0</div>
+          <div class="stat-value" id="clicks-value">0</div>
           <div class="stat-label">Clicks</div>
         </div>
         <div class="stat-trend">-</div>
@@ -42,7 +42,7 @@ const description = 'Track your affiliate earnings, clicks, and conversions in r
       <div class="stat-card conversions">
         <div class="stat-icon">✅</div>
         <div class="stat-content">
-          <div class="stat-value">0</div>
+          <div class="stat-value" id="conversions-value">0</div>
           <div class="stat-label">Conversions</div>
         </div>
         <div class="stat-trend">-</div>
@@ -50,7 +50,7 @@ const description = 'Track your affiliate earnings, clicks, and conversions in r
       <div class="stat-card rate">
         <div class="stat-icon">📊</div>
         <div class="stat-content">
-          <div class="stat-value">0%</div>
+          <div class="stat-value" id="rate-value">0%</div>
           <div class="stat-label">Conversion Rate</div>
         </div>
         <div class="stat-trend">-</div>
@@ -103,8 +103,8 @@ const description = 'Track your affiliate earnings, clicks, and conversions in r
             <h2>🏆 Your Rank</h2>
           </div>
           <div class="rank-content">
-            <div class="rank-number">#-</div>
-            <div class="rank-label">Not ranked yet</div>
+            <div class="rank-number" id="rank-display">#-</div>
+            <div class="rank-label" id="rank-label">Not ranked yet</div>
             <div class="rank-hint">Make your first sale to get ranked!</div>
           </div>
         </section>
@@ -165,7 +165,7 @@ const description = 'Track your affiliate earnings, clicks, and conversions in r
             <h2>💳 Next Payout</h2>
           </div>
           <div class="payout-content">
-            <div class="payout-amount">$0.00</div>
+            <div class="payout-amount" id="payout-value">$0.00</div>
             <div class="payout-threshold">
               <div class="progress-bar">
                 <div class="progress-fill" style="width: 0%"></div>
@@ -671,15 +671,102 @@ const description = 'Track your affiliate earnings, clicks, and conversions in r
 </style>
 
 <script>
+  // ===================== AFFILIATE DASHBOARD - LIVE API INTEGRATION =====================
+  
+  // Counter animation
+  function animateValue(id: string, start: number, end: number, duration: number, prefix = '', suffix = '') {
+    const element = document.getElementById(id);
+    if (!element) return;
+    
+    const range = end - start;
+    const increment = range / (duration / 16);
+    let current = start;
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+        current = end;
+        clearInterval(timer);
+      }
+      element.textContent = prefix + (suffix === '%' ? current.toFixed(2) : Math.floor(current).toLocaleString()) + suffix;
+    }, 16);
+  }
+
+  // Fetch affiliate stats from API
+  async function fetchAffiliateStats(userId: string) {
+    try {
+      const response = await fetch(`/api/affiliate/stats?user_id=${encodeURIComponent(userId)}`);
+      const data = await response.json();
+      
+      if (!response.ok) {
+        console.error('API Error:', data);
+        return null;
+      }
+      
+      return data;
+    } catch (error) {
+      console.error('Failed to fetch affiliate stats:', error);
+      return null;
+    }
+  }
+
+  // Render stats with animation
+  function renderStats(data: any) {
+    const stats = data.stats;
+    const rank = data.rank;
+    
+    animateValue('earnings-value', 0, stats.total_earnings || 0, 2000, '$', '');
+    animateValue('clicks-value', 0, stats.total_clicks || 0, 2000);
+    animateValue('conversions-value', 0, stats.conversions || 0, 2000);
+    animateValue('rate-value', 0, stats.conversion_rate || 0, 2000, '', '%');
+    animateValue('payout-value', 0, stats.pending_payout || 0, 2000, '$', '');
+    
+    // Update rank
+    const rankDisplay = document.getElementById('rank-display');
+    const rankLabel = document.getElementById('rank-label');
+    if (rankDisplay) rankDisplay.textContent = rank.current || '#-';
+    if (rankLabel) rankLabel.textContent = rank.current ? `${rank.current} Rank` : 'Not ranked yet';
+    
+    // Update payout progress
+    const progressFill = document.querySelector('.progress-fill') as HTMLElement;
+    if (progressFill) {
+      const progress = Math.min((stats.pending_payout / 50) * 100, 100);
+      progressFill.style.width = `${progress}%`;
+    }
+    const thresholdText = document.querySelector('.threshold-text');
+    if (thresholdText) {
+      thresholdText.textContent = `$${stats.pending_payout.toFixed(2)} / $50 threshold`;
+    }
+  }
+
+  // Copy link function
   function copyLink() {
-    const input = document.getElementById('refLink');
+    const input = document.getElementById('refLink') as HTMLInputElement;
     input.select();
     document.execCommand('copy');
     
     const btn = document.querySelector('.copy-btn');
-    btn.textContent = '✅ Copied!';
-    setTimeout(() => {
-      btn.textContent = '📋 Copy';
-    }, 2000);
+    if (btn) {
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => {
+        btn.textContent = '📋 Copy';
+      }, 2000);
+    }
   }
+
+  // Initialize - try to use demo user
+  (async () => {
+    const data = await fetchAffiliateStats('user_demo');
+    if (data) {
+      setTimeout(() => renderStats(data), 500);
+    }
+  })();
+
+  // Auto-refresh every 30 seconds
+  setInterval(async () => {
+    const data = await fetchAffiliateStats('user_demo');
+    if (data) {
+      renderStats(data);
+    }
+  }, 30000);
 </script>

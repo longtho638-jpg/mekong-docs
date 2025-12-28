@@ -23,6 +23,22 @@ Learn the complete workflow for adding new features to your project with AgencyO
 **Agents Used**: planner, scout, tester, code-reviewer, docs-manager
 **Commands**: /plan, /code, /test, /docs:update, /git:cm
 
+## 🚀 Vibe Coding Quick Start
+
+```
+/@planner [feature description]
+    ↓
+Review → implementation_plan.md
+    ↓
+/@fullstack implement
+    ↓
+TaskTracker: Progress tracking
+    ↓
+/@tester verify
+    ↓
+/@git-manager commit
+```
+
 ## Prerequisites
 
 - Existing project with AgencyOS configured

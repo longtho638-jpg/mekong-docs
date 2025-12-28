@@ -56,6 +56,14 @@ The `/watzup` command provides a comprehensive overview of:
 
 **IMPORTANT**: This command does NOT start implementation. It only analyzes and reports.
 
+## Agents Orchestrated
+
+| Agent | Purpose |
+|-------|---------|
+| [project-manager](/docs/agents/project-manager) | **Primary** - Progress tracking, status reporting, cross-agent coordination |
+| [scout](/docs/agents/scout) | Analyze file changes and code patterns |
+| [code-reviewer](/docs/agents/code-reviewer) | Quality assessment and impact analysis |
+
 ## Quick Example
 
 ```bash

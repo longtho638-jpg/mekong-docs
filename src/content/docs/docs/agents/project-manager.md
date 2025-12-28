@@ -74,6 +74,50 @@ Senior orchestrator for tracking progress, collecting agent reports, maintaining
 - [Git Manager](/docs/agents/git-manager) - Provides commit reports to PM
 - [Tester](/docs/agents/tester) - Sends test results for quality tracking
 
+## AgencyOS Integration
+
+Display project status with DynamicCard:
+
+### Hook Setup
+
+```tsx
+import { useAgentOS, DynamicCard, AgentActivityFeed } from '@/agencyos';
+
+function ProjectManagerPanel() {
+  const { state } = useAgentOS({ agentName: 'project-manager' });
+
+  return (
+    <>
+      <DynamicCard
+        title="Project Status"
+        icon="📊"
+        metrics={[
+          { label: 'Velocity', value: '42 pts', change: 8 },
+          { label: 'Completed', value: '15/20' },
+          { label: 'Blockers', value: 0 }
+        ]}
+        status="active"
+        glowing={true}
+      />
+      <AgentActivityFeed activities={agentReports} />
+    </>
+  );
+}
+```
+
+### Vibe Coding Pattern
+
+```
+/@watzup
+    ↓
+Collect: Reports from all agents
+    ↓
+Dashboard: DynamicCard with velocity
+    ↓
+Output: Consolidated status report
+```
+
 ## Key Takeaway
 
 The project-manager is AgencyOS's orchestration layer: it doesn't code, test, or write docs—it tracks, reports, delegates, and maintains the single source of truth (project-roadmap.md) so your multi-agent system stays aligned.
+

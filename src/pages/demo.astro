@@ -95,12 +95,24 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     padding: 24px;
   }
 
+  /* ===================== TERMINAL WOW ===================== */
   .terminal-window {
     background: #0d1117;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     border: 1px solid #30363d;
+    animation: terminal-entrance 0.6s ease-out, terminal-glow 3s ease-in-out 1s infinite;
+  }
+
+  @keyframes terminal-entrance {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes terminal-glow {
+    0%, 100% { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 rgba(34, 197, 94, 0); }
+    50% { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(34, 197, 94, 0.3); }
   }
 
   .terminal-header {
@@ -154,6 +166,12 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     font-size: 0.65rem;
     line-height: 1.2;
     margin: 0 0 12px 0;
+    animation: ascii-fade 0.8s ease-out 0.3s both;
+  }
+
+  @keyframes ascii-fade {
+    from { opacity: 0; filter: blur(4px); }
+    to { opacity: 1; filter: blur(0); }
   }
 
   .welcome-text {
@@ -246,6 +264,7 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     flex-wrap: wrap;
   }
 
+  /* ===================== SUGGESTIONS WOW ===================== */
   .suggestion-btn {
     background: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
@@ -255,12 +274,28 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+    animation: btn-float 3s ease-in-out infinite;
+    animation-delay: calc(var(--index) * 0.1s);
+  }
+
+  .suggestion-btn:nth-child(1) { --index: 0; }
+  .suggestion-btn:nth-child(2) { --index: 1; }
+  .suggestion-btn:nth-child(3) { --index: 2; }
+  .suggestion-btn:nth-child(4) { --index: 3; }
+  .suggestion-btn:nth-child(5) { --index: 4; }
+  .suggestion-btn:nth-child(6) { --index: 5; }
+
+  @keyframes btn-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
   }
 
   .suggestion-btn:hover {
     border-color: #22c55e;
     background: rgba(34, 197, 94, 0.1);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
   }
 
   .cta-section {
@@ -286,6 +321,7 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     justify-content: center;
   }
 
+  /* ===================== CTA WOW ===================== */
   .btn-primary {
     padding: 16px 32px;
     background: linear-gradient(135deg, #22c55e, #16a34a);
@@ -293,12 +329,18 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+    animation: btn-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.5); }
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4);
   }
 
   .btn-secondary {
@@ -326,6 +368,7 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     51%, 100% { opacity: 0; }
   }
 
+  /* ===================== SPINNER WOW ===================== */
   .spinner {
     display: inline-block;
     width: 16px;
@@ -333,9 +376,14 @@ const description = 'Try AgencyOS commands in your browser. See the power of 125
     border: 2px solid #30363d;
     border-top-color: #22c55e;
     border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+    animation: spin 0.8s linear infinite, spinner-glow 2s ease-in-out infinite;
     margin-right: 8px;
     vertical-align: middle;
+  }
+
+  @keyframes spinner-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    50% { box-shadow: 0 0 8px 2px rgba(34, 197, 94, 0.4); }
   }
 
   @keyframes spin {

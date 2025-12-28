@@ -26,6 +26,13 @@ Uses `tester` subagent to:
 
 **Important**: Does not implement fixes - only reports test status.
 
+## Agents Orchestrated
+
+| Agent | Purpose |
+|-------|---------|
+| [tester](/docs/agents/tester) | Execute test suite, analyze coverage, report results |
+| [debugger](/docs/agents/debugger) | Automatically invoked if tests fail for diagnosis |
+
 ## Example Output
 
 ```

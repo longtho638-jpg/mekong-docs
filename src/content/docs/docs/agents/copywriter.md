@@ -108,6 +108,32 @@ Every output includes test recommendations:
 - [Planner](/docs/agents/planner) - Campaign strategy and content calendar
 - [Tester](/docs/agents/tester) - A/B test implementation and analysis
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, AgentReport } from '@/agencyos';
+
+function CopywriterPanel() {
+  const { state, addArtifact } = useAgentOS({ agentName: 'copywriter' });
+  
+  addArtifact({
+    type: 'report',
+    path: 'content/landing-copy.md',
+    summary: 'Hero + CTAs + A/B variants'
+  });
+
+  return <AgentReport type="report" {...copyOutput} />;
+}
+```
+
+### Vibe Coding Pattern
+```
+/@content:good create landing page copy
+    ↓
+Output: Multiple versions + A/B test plan
+```
+
 ## Key Takeaway
 
 The copywriter agent creates brutally honest, conversion-focused copy using psychological triggers, platform optimization, and specific metrics. No theory, no fluff—just copy that converts visitors into customers. Delivers multiple versions with A/B test plans and expected performance metrics. Part of AgencyOS $99 toolkit.
+

@@ -90,6 +90,39 @@ GROUP BY u.id ORDER BY SUM(o.total) DESC LIMIT 100;"
 - [Fullstack Developer](/docs/agents/fullstack-developer) - Implement schema changes in app
 - [Tester](/docs/agents/tester) - Validate database migrations
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, DynamicCard } from '@/agencyos';
+
+function DBAPanel() {
+  const { state } = useAgentOS({ agentName: 'database-admin' });
+  
+  return (
+    <DynamicCard
+      title="Query Performance"
+      icon="🗄️"
+      metrics={[
+        { label: 'Before', value: '45s' },
+        { label: 'After', value: '0.8s', change: -98 },
+        { label: 'Savings', value: '$4K/mo' }
+      ]}
+      status="completed"
+    />
+  );
+}
+```
+
+### Vibe Coding Pattern
+```
+/@database-admin optimize slow query
+    ↓
+EXPLAIN ANALYZE → Index recommendations
+    ↓
+Output: DynamicCard with performance metrics
+```
+
 ## Key Takeaway
 
 Database Admin agent turns 45-second queries into 0.8-second queries with index strategies and query rewrites. Designs production-ready schemas with proper normalization, constraints, and partitioning. Delivers actionable health reports with specific SQL fixes and cost impact ($4K/month savings typical).
+

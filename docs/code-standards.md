@@ -247,6 +247,62 @@ export default function AIChat({ initialMessages = [] }: AIChatProps) {
 - Prefer `client:visible` or `client:idle` for non-critical components
 - TypeScript strict mode
 
+### AgencyOS Hooks
+
+Custom hooks for agent integration follow specific patterns:
+
+**Structure**:
+```typescript
+import { useState, useCallback } from 'react';
+
+interface UseAgentOSOptions {
+  agentName: string;
+  onStateChange?: (state: AgentState) => void;
+}
+
+export function useAgentOS(options: UseAgentOSOptions) {
+  const [state, setState] = useState<AgentState>(initialState);
+  
+  const startTask = useCallback((taskName: string) => {
+    // Implementation
+  }, []);
+  
+  return { state, startTask, /* ... */ };
+}
+```
+
+**Naming Conventions**:
+- Hook names: `use` prefix + feature (e.g., `useAgentOS`, `useTaskTracker`)
+- State interfaces: `PascalCase` with descriptive names
+- Callbacks: `camelCase` verbs (e.g., `startTask`, `completeStep`)
+
+**AgencyOS Hook Patterns**:
+| Hook | Purpose | Return Type |
+|------|---------|-------------|
+| `useAgentOS` | Agent connection | `{ state, startTask, updateStatus }` |
+| `useTaskTracker` | Progress tracking | `{ progress, initTask, completeStep }` |
+| `useApprovalGate` | Human approval | `{ requestApproval, approve, reject }` |
+| `useDashboardAction` | UI interactions | `{ navigate, refreshWidget }` |
+
+**Best Practices**:
+- Return object with named properties (not array)
+- Use `useCallback` for stable function references
+- Provide TypeScript interfaces for all options/returns
+- Include cleanup in useEffect if needed
+- Log agent actions: `console.log(\`[AgentOS:${agentName}] ${action}\`)`
+
+**Example Usage**:
+```tsx
+import { useAgentOS, useTaskTracker } from '@/agencyos';
+
+function AgentDashboard() {
+  const { state, startTask } = useAgentOS({ agentName: 'planner' });
+  const { progress, initTask } = useTaskTracker();
+  
+  // ...
+}
+```
+
 ### Layout Patterns
 
 **BaseLayout.astro**:

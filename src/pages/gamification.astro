@@ -159,19 +159,33 @@ const description = 'Level up while you earn. XP system, achievement badges, and
 </LandingLayout>
 
 <style>
+  /* ===================== HERO WOW ===================== */
   .gaming-hero {
     text-align: center;
     padding: 64px 24px 32px;
+    animation: hero-entrance 0.8s ease-out;
+  }
+
+  @keyframes hero-entrance {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .gaming-hero h1 {
     font-size: 3rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #8b5cf6, #ec4899, #f97316);
+    background: linear-gradient(135deg, #8b5cf6, #ec4899, #f97316, #8b5cf6);
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 16px;
+    animation: rainbow-shine 4s linear infinite;
+  }
+
+  @keyframes rainbow-shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
   }
 
   .gaming-hero p {
@@ -239,6 +253,12 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border-radius: 20px;
     font-weight: 700;
     font-size: 0.875rem;
+    animation: xp-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes xp-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
   }
 
   .xp-badge.gold {
@@ -251,6 +271,7 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     gap: 16px;
   }
 
+  /* ===================== BADGES WOW ===================== */
   .badge-card {
     background: var(--color-bg-secondary);
     border: 2px solid var(--color-border);
@@ -258,11 +279,36 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     padding: 20px;
     text-align: center;
     transition: all 0.3s ease;
+    animation: badge-pop 0.5s ease-out both;
+  }
+
+  .badge-card:nth-child(1) { animation-delay: 0.3s; }
+  .badge-card:nth-child(2) { animation-delay: 0.4s; }
+  .badge-card:nth-child(3) { animation-delay: 0.5s; }
+  .badge-card:nth-child(4) { animation-delay: 0.6s; }
+  .badge-card:nth-child(5) { animation-delay: 0.7s; }
+  .badge-card:nth-child(6) { animation-delay: 0.8s; }
+
+  @keyframes badge-pop {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .badge-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px) rotate(2deg);
     border-color: #8b5cf6;
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.2);
+  }
+
+  .badge-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .badge-card:hover .badge-icon {
+    transform: scale(1.2) rotate(-5deg);
   }
 
   .badge-card.gold {
@@ -308,6 +354,7 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     gap: 12px;
   }
 
+  /* ===================== LEVELS WOW ===================== */
   .level-item {
     display: flex;
     align-items: center;
@@ -316,6 +363,23 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 16px;
+    animation: level-slide 0.5s ease-out both;
+    transition: all 0.3s ease;
+  }
+
+  .level-item:nth-child(1) { animation-delay: 0.5s; }
+  .level-item:nth-child(2) { animation-delay: 0.6s; }
+  .level-item:nth-child(3) { animation-delay: 0.7s; }
+  .level-item:nth-child(4) { animation-delay: 0.8s; }
+
+  @keyframes level-slide {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .level-item:hover {
+    transform: translateX(4px);
+    border-color: #8b5cf6;
   }
 
   .level-item.legendary {
@@ -372,11 +436,18 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     margin: 0;
   }
 
+  /* ===================== CTA WOW ===================== */
   .cta-section {
     text-align: center;
     padding: 64px 24px;
     background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.05));
     border-top: 1px solid var(--color-border);
+    animation: cta-entrance 0.6s ease-out 0.9s both;
+  }
+
+  @keyframes cta-entrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .cta-section h2 {
@@ -394,12 +465,18 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    animation: btn-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+    50% { box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.2); }
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.4);
   }
 
   @media (max-width: 768px) {

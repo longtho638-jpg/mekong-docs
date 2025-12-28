@@ -1,6 +1,6 @@
 ---
 title: Agents Overview
-description: AgencyOS's 17 specialized agents for software development
+description: AgencyOS's 18 specialized agents for software development
 section: docs
 category: agents
 order: 1
@@ -9,7 +9,7 @@ published: true
 
 # Agents Overview
 
-17 specialized agents that handle every aspect of software development—automatically orchestrated through predefined workflows.
+18 specialized agents that handle every aspect of software development—automatically orchestrated through predefined workflows.
 
 ## Quick Reference
 
@@ -124,6 +124,38 @@ git-manager commits → conventional commit + push
 - Review orchestration order in workflow files
 - Check handoff protocols between agents
 
+## AgencyOS Integration
+
+All agents integrate with the AgencyOS framework:
+
+```tsx
+import { useAgentOS, useTaskTracker, AgentReport } from '@/agencyos';
+
+function AgentDashboard() {
+  const { state, startTask } = useAgentOS({ agentName: 'planner' });
+  const { progress, initTask } = useTaskTracker();
+  
+  return (
+    <>
+      <TaskTrackerWidget {...state} progress={progress} />
+      <AgentReport type="plan" {...artifact} />
+    </>
+  );
+}
+```
+
+### Available Hooks
+
+| Hook | Purpose |
+|------|---------|
+| `useAgentOS` | Connect agent to UI, manage state |
+| `useTaskTracker` | Track step-by-step progress |
+| `useApprovalGate` | Human-in-the-loop approval |
+| `useDashboardAction` | Trigger UI actions |
+
+See [Vibe Coding Guide](/docs/guides/antigravity-vibe-coding) for details.
+
 ## Key Takeaway
 
 17 agents work together automatically—use commands to orchestrate them, or invoke explicitly for specific tasks. No manual coordination needed.
+

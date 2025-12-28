@@ -20,6 +20,25 @@ Create new projects from scratch with AgencyOS's AI-powered development workflow
 git clone https://github.com/longtho638-jpg/agencyos-starter.git
 ```
 
+## 🚀 Vibe Coding Quick Start
+
+For Antigravity IDE users, the fastest path to a working project:
+
+```
+1. Open Antigravity IDE
+2. Create new workspace
+3. Type: /@planner create [your idea]
+4. Review implementation_plan.md
+5. Type: /@fullstack implement
+6. Watch TaskTracker progress
+7. Approve commits via ApprovalGate
+```
+
+**AgencyOS Hooks Activated:**
+- `useAgentOS` → Agent connection
+- `useTaskTracker` → Progress tracking
+- `useApprovalGate` → Human approval for commits
+
 ## Quick Start
 
 ### Method 1: Bootstrap New Project

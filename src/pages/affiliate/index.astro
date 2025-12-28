@@ -601,6 +601,53 @@ const description = 'Earn 40% recurring commission promoting AgencyOS. Get banne
     padding: 0 20px;
   }
 
+  /* WOW Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .affiliate-hero { animation: fadeInUp 0.6s ease-out; }
+  .badge { animation: pulse 2s ease-in-out infinite; }
+  .earning-card { animation: scaleIn 0.5s ease-out backwards; }
+  .earning-card:nth-child(1) { animation-delay: 0.1s; }
+  .earning-card:nth-child(2) { animation-delay: 0.2s; }
+  .earning-card:nth-child(3) { animation-delay: 0.3s; }
+  .step-card { animation: fadeInUp 0.6s ease-out backwards; }
+  .step-card:nth-child(1) { animation-delay: 0.1s; }
+  .step-card:nth-child(2) { animation-delay: 0.2s; }
+  .step-card:nth-child(3) { animation-delay: 0.3s; }
+  .step-card:nth-child(4) { animation-delay: 0.4s; }
+  .step-number { animation: float 3s ease-in-out infinite; }
+  .feature-card { animation: scaleIn 0.5s ease-out backwards; }
+  .bonus-card { animation: fadeInUp 0.6s ease-out backwards; }
+  
+  .gradient-text {
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+  }
+
   @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     .earnings-preview, .stat-grid, .steps-grid, .features-grid, .bonus-grid {

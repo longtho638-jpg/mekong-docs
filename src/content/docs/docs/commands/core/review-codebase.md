@@ -62,16 +62,19 @@ Report: plans/reports/codebase-review-251129.md
 
 - `[tasks-or-prompt]`: Optional focus area. If empty, reviews entire codebase.
 
-## What It Does
+## Agents Orchestrated
 
-### Agents Invoked
+The `/review:codebase` command orchestrates **5+ agents** in parallel and sequential phases:
 
-| Agent | Role | Focus |
+| Agent | Role | Usage |
 |-------|------|-------|
-| scout (x5) | Explore | Directory-parallel exploration |
-| researcher | Analyze | Architecture patterns, best practices |
-| code-reviewer | Review | Code quality, standards compliance |
-| planner | Plan | Improvement roadmap creation |
+| [scout](/docs/agents/scout) | **Parallel (x5)** - Explore different directories simultaneously |
+| [researcher](/docs/agents/researcher) | Analyze architecture patterns and best practices |
+| [code-reviewer](/docs/agents/code-reviewer) | Quality assessment and standards compliance |
+| [planner](/docs/agents/planner) | Create improvement roadmap |
+| [database-admin](/docs/agents/database-admin) | Database schema and query analysis (when applicable) |
+
+**Total agents**: Up to 5 parallel scouts + 3-4 specialists = **8-9 agents**
 
 ### Workflow
 

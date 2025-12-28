@@ -50,3 +50,4 @@ playwright-*.png
 # Tony's research folder
 tony/
 .vercel
+.env*.local

@@ -119,6 +119,52 @@ git pull --rebase origin main  # Pull latest
 - [Project Manager](/docs/agents/project-manager) - Overall project coordination
 - [Tester](/docs/agents/tester) - Pre-commit test verification
 
+## AgencyOS Integration
+
+Connect Git Manager with human approval for safe commits:
+
+### Hook Setup
+
+```tsx
+import { useAgentOS, useApprovalGate } from '@/agencyos';
+
+function GitPanel() {
+  const { state } = useAgentOS({ agentName: 'git-manager' });
+  const { requestApproval } = useApprovalGate();
+
+  async function commitAndPush(message: string, files: string[]) {
+    const approved = await requestApproval(
+      'Commit & Push',
+      `Commit "${message}" and push to origin?`,
+      { files, branch: 'main' }
+    );
+    
+    if (approved) {
+      // Execute git commit && git push
+    }
+  }
+
+  return (/* UI */);
+}
+```
+
+### Vibe Coding Pattern
+
+```
+/@git-manager commit changes
+    ↓
+Scan: Security check for secrets
+    ↓
+Generate: Conventional commit message
+    ↓
+ApprovalGate: "Commit 'feat(auth): add OAuth2'?"
+    ↓
+Human: ✅ Approve
+    ↓
+Commit + Push complete
+```
+
 ## Key Takeaway
 
 **git-manager automates professional Git operations with security-first conventional commits at 81% lower cost than baseline—no AI attribution, just clean commit history.**
+

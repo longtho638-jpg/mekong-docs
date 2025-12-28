@@ -261,6 +261,11 @@ Worth checking out if you're a solo operator.
     font-weight: 700;
     margin-bottom: 16px;
     max-height: 150px;
+    transition: transform 0.3s ease;
+  }
+
+  .banner-card:hover .placeholder-banner {
+    transform: scale(1.05);
   }
 
   .placeholder-banner .size {
@@ -288,11 +293,19 @@ Worth checking out if you're a solo operator.
     color: var(--color-text-primary);
     cursor: pointer;
     font-size: 0.9rem;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
+    animation: button-glow 2.5s ease-in-out infinite;
+  }
+
+  @keyframes button-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    50% { box-shadow: 0 0 15px 3px rgba(16, 185, 129, 0.2); }
   }
 
   .download-btn:hover, .copy-btn:hover {
     border-color: #10b981;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
   }
 
   .emails-grid {
@@ -301,6 +314,7 @@ Worth checking out if you're a solo operator.
     gap: 12px;
   }
 
+  /* ===================== EMAIL CARDS WOW ===================== */
   .email-card {
     background: var(--color-bg-tertiary);
     border: 1px solid var(--color-border);
@@ -309,6 +323,24 @@ Worth checking out if you're a solo operator.
     display: flex;
     align-items: center;
     gap: 16px;
+    animation: slide-right 0.5s ease-out both;
+    transition: all 0.3s ease;
+  }
+
+  .email-card:nth-child(1) { animation-delay: 0.1s; }
+  .email-card:nth-child(2) { animation-delay: 0.2s; }
+  .email-card:nth-child(3) { animation-delay: 0.3s; }
+  .email-card:nth-child(4) { animation-delay: 0.4s; }
+  .email-card:nth-child(5) { animation-delay: 0.5s; }
+
+  @keyframes slide-right {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .email-card:hover {
+    transform: translateX(4px);
+    border-color: #10b981;
   }
 
   .email-number {
@@ -343,11 +375,24 @@ Worth checking out if you're a solo operator.
     gap: 20px;
   }
 
+  /* ===================== SOCIAL CARDS WOW ===================== */
   .social-card {
     background: var(--color-bg-tertiary);
     border: 1px solid var(--color-border);
     border-radius: 16px;
     padding: 24px;
+    animation: card-pop 0.5s ease-out both;
+    transition: all 0.3s ease;
+  }
+
+  .social-card:nth-child(1) { animation-delay: 0.2s; }
+  .social-card:nth-child(2) { animation-delay: 0.3s; }
+  .social-card:nth-child(3) { animation-delay: 0.4s; }
+
+  .social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(16, 185, 129, 0.15);
+    border-color: #10b981;
   }
 
   .platform {
@@ -420,6 +465,12 @@ Worth checking out if you're a solo operator.
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 4px;
+    animation: swatch-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes swatch-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
   }
 
   .swatch span {

@@ -66,6 +66,34 @@ Execute MCP server tools (screenshots, browser automation, docs lookup) in isola
 - [Scout External](/docs/agents/scout-external) - External research + MCP docs lookup synergy
 - [Fullstack Developer](/docs/agents/fullstack-developer) - Uses MCP Manager for visual regression testing
 
+## AgencyOS Integration
+
+```tsx
+import { useAgentOS, useDashboardAction } from '@/agencyos';
+
+function MCPPanel() {
+  const { state } = useAgentOS({ agentName: 'mcp-manager' });
+  const { showNotification } = useDashboardAction();
+
+  async function runMCPTask(task: string) {
+    // Execute MCP tool
+    showNotification('success', 'MCP task completed');
+  }
+
+  return (/* UI */);
+}
+```
+
+### Vibe Coding Pattern
+```
+/@use-mcp screenshot staging dashboard
+    ↓
+Execute: Browser automation
+    ↓
+Output: Screenshot + notification
+```
+
 ## Key Takeaway
 
 MCP Manager isolates complex tool execution (browser automation, docs queries, screenshots) from your main Claude context - you get clean outputs, Claude stays fast. Access 100+ MCP tools via `/use-mcp [natural language task]`.
+
