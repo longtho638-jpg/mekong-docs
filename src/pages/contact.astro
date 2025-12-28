@@ -116,19 +116,33 @@ const description = 'Have questions? We would love to hear from you. Contact the
     margin: 0 auto;
   }
 
+  /* ===================== HEADER WOW ===================== */
   .contact-header {
     text-align: center;
     margin-bottom: 48px;
+    animation: hero-entrance 0.8s ease-out;
+  }
+
+  @keyframes hero-entrance {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .contact-title {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    background: linear-gradient(135deg, #22c55e, #06b6d4, #8b5cf6, #22c55e);
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 12px;
+    animation: title-shine 5s linear infinite;
+  }
+
+  @keyframes title-shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
   }
 
   .contact-subtitle {
@@ -148,12 +162,29 @@ const description = 'Have questions? We would love to hear from you. Contact the
     }
   }
 
+  /* ===================== CARDS WOW ===================== */
   .contact-form-card,
   .contact-info-card {
     padding: 32px;
     background: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
     border-radius: 16px;
+    animation: card-entrance 0.6s ease-out both;
+    transition: all 0.3s ease;
+  }
+
+  .contact-form-card { animation-delay: 0.3s; }
+  .contact-info-card { animation-delay: 0.4s; }
+
+  @keyframes card-entrance {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .contact-form-card:hover,
+  .contact-info-card:hover {
+    border-color: rgba(34, 197, 94, 0.3);
+    transform: translateY(-4px);
   }
 
   .form-title,
@@ -200,18 +231,24 @@ const description = 'Have questions? We would love to hear from you. Contact the
   .submit-btn {
     width: 100%;
     padding: 14px;
-    background: #22c55e;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
     font-weight: 600;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+    animation: btn-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+    50% { box-shadow: 0 0 15px 3px rgba(34, 197, 94, 0.2); }
   }
 
   .submit-btn:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
   }
 
   .info-items {
@@ -225,10 +262,26 @@ const description = 'Have questions? We would love to hear from you. Contact the
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    transition: all 0.2s ease;
+  }
+
+  .info-item:hover {
+    transform: translateX(4px);
   }
 
   .info-icon {
     font-size: 1.5rem;
+    animation: icon-bounce 2s ease-in-out infinite;
+  }
+
+  .info-item:nth-child(1) .info-icon { animation-delay: 0s; }
+  .info-item:nth-child(2) .info-icon { animation-delay: 0.2s; }
+  .info-item:nth-child(3) .info-icon { animation-delay: 0.4s; }
+  .info-item:nth-child(4) .info-icon { animation-delay: 0.6s; }
+
+  @keyframes icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
   }
 
   .info-content h3 {
