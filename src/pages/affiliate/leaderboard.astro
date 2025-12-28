@@ -159,6 +159,7 @@ const topAffiliates = [
 </LandingLayout>
 
 <style>
+  /* ===================== CONTAINER WOW ===================== */
   .leaderboard-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -170,20 +171,50 @@ const topAffiliates = [
     text-decoration: none;
     display: inline-block;
     margin-bottom: 16px;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: #10b981;
+    transform: translateX(-4px);
   }
 
   .page-header {
     text-align: center;
     margin-bottom: 50px;
+    animation: hero-entrance 0.8s ease-out;
+  }
+
+  @keyframes hero-entrance {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffd700, #10b981, #ffd700);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: title-shine 4s linear infinite;
   }
 
+  @keyframes title-shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  /* ===================== PRIZES WOW ===================== */
   .prizes-section {
     margin-bottom: 50px;
+    animation: fade-up 0.6s ease-out 0.2s both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .prizes-section h2 {
@@ -203,16 +234,31 @@ const topAffiliates = [
     border-radius: 16px;
     padding: 30px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
+    animation: prize-entrance 0.5s ease-out both;
+  }
+
+  .prize-card:nth-child(1) { animation-delay: 0.3s; }
+  .prize-card:nth-child(2) { animation-delay: 0.4s; }
+  .prize-card:nth-child(3) { animation-delay: 0.5s; }
+
+  @keyframes prize-entrance {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .prize-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   }
 
   .prize-card.gold {
     border-color: #ffd700;
     background: linear-gradient(135deg, rgba(255,215,0,0.1), transparent);
+  }
+
+  .prize-card.gold:hover {
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
   }
 
   .prize-card.silver {
@@ -239,8 +285,10 @@ const topAffiliates = [
     color: var(--color-text-secondary);
   }
 
+  /* ===================== PODIUM WOW ===================== */
   .podium-section {
     margin-bottom: 50px;
+    animation: fade-up 0.6s ease-out 0.5s both;
   }
 
   .podium {
@@ -254,16 +302,42 @@ const topAffiliates = [
   .podium-place {
     text-align: center;
     width: 150px;
+    animation: podium-rise 0.6s ease-out both;
+  }
+
+  .podium-place.second { animation-delay: 0.6s; }
+  .podium-place.first { animation-delay: 0.5s; }
+  .podium-place.third { animation-delay: 0.7s; }
+
+  @keyframes podium-rise {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .podium-place {
+    text-align: center;
+    width: 150px;
   }
 
   .podium-place .crown {
     font-size: 2rem;
     margin-bottom: 8px;
+    animation: crown-bounce 1.5s ease-in-out infinite;
+  }
+
+  @keyframes crown-bounce {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
   }
 
   .podium-place .avatar {
     font-size: 3rem;
     margin-bottom: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .podium-place:hover .avatar {
+    transform: scale(1.2);
   }
 
   .podium-place .name {
@@ -327,12 +401,23 @@ const topAffiliates = [
     text-transform: uppercase;
   }
 
+  /* ===================== TABLE WOW ===================== */
   tr {
     border-bottom: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  tr:hover {
+    background: rgba(16, 185, 129, 0.05);
+    transform: translateX(4px);
   }
 
   tr.top-three {
     background: linear-gradient(135deg, rgba(16,185,129,0.1), transparent);
+  }
+
+  tr.top-three:hover {
+    background: linear-gradient(135deg, rgba(16,185,129,0.15), transparent);
   }
 
   .rank .medal {
@@ -360,8 +445,10 @@ const topAffiliates = [
     font-weight: 700;
   }
 
+  /* ===================== POSITION CARD WOW ===================== */
   .your-position {
     margin-bottom: 50px;
+    animation: fade-up 0.6s ease-out 0.7s both;
   }
 
   .position-card {
@@ -372,10 +459,22 @@ const topAffiliates = [
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .position-card:hover {
+    border-color: #10b981;
+    transform: translateY(-4px);
   }
 
   .position-icon {
     font-size: 2.5rem;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
   }
 
   .position-content {
@@ -406,6 +505,23 @@ const topAffiliates = [
     border-radius: 12px;
     font-weight: 600;
     text-decoration: none;
+    transition: all 0.3s ease;
+    animation: btn-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    50% { box-shadow: 0 0 15px 3px rgba(16, 185, 129, 0.2); }
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  }
+
+  /* ===================== BADGES WOW ===================== */
+  .badges-section {
+    animation: fade-up 0.6s ease-out 0.8s both;
   }
 
   .badges-section h2 {
@@ -425,11 +541,34 @@ const topAffiliates = [
     border-radius: 16px;
     padding: 24px;
     text-align: center;
+    transition: all 0.3s ease;
+    animation: badge-pop 0.4s ease-out both;
+  }
+
+  .badge-card:nth-child(1) { animation-delay: 0.9s; }
+  .badge-card:nth-child(2) { animation-delay: 0.95s; }
+  .badge-card:nth-child(3) { animation-delay: 1s; }
+  .badge-card:nth-child(4) { animation-delay: 1.05s; }
+
+  @keyframes badge-pop {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .badge-card:hover {
+    transform: translateY(-6px) rotate(2deg);
+    border-color: #10b981;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
   }
 
   .badge-icon {
     font-size: 2.5rem;
     margin-bottom: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .badge-card:hover .badge-icon {
+    transform: scale(1.2) rotate(-5deg);
   }
 
   .badge-name {
