@@ -159,33 +159,19 @@ const description = 'Level up while you earn. XP system, achievement badges, and
 </LandingLayout>
 
 <style>
-  /* ===================== HERO WOW ===================== */
   .gaming-hero {
     text-align: center;
     padding: 64px 24px 32px;
-    animation: hero-entrance 0.8s ease-out;
-  }
-
-  @keyframes hero-entrance {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
   }
 
   .gaming-hero h1 {
     font-size: 3rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #8b5cf6, #ec4899, #f97316, #8b5cf6);
-    background-size: 300% auto;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 16px;
-    animation: title-shine 4s linear infinite;
-  }
-
-  @keyframes title-shine {
-    0% { background-position: 0% center; }
-    100% { background-position: 300% center; }
   }
 
   .gaming-hero p {
@@ -193,7 +179,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     color: var(--color-text-muted);
   }
 
-  /* ===================== SECTIONS ===================== */
   .xp-section,
   .badges-section,
   .levels-section,
@@ -201,17 +186,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     max-width: 900px;
     margin: 0 auto;
     padding: 48px 24px;
-    animation: fade-up 0.6s ease-out both;
-  }
-
-  .xp-section { animation-delay: 0.2s; }
-  .badges-section { animation-delay: 0.3s; }
-  .levels-section { animation-delay: 0.4s; }
-  .coming-soon { animation-delay: 0.5s; }
-
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
   }
 
   .xp-section h2,
@@ -258,7 +232,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     color: var(--color-text-secondary);
   }
 
-  /* ===================== XP BADGES WOW ===================== */
   .xp-badge {
     background: #8b5cf6;
     color: white;
@@ -266,13 +239,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border-radius: 20px;
     font-weight: 700;
     font-size: 0.875rem;
-    display: inline-block;
-    animation: xp-pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes xp-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
   }
 
   .xp-badge.gold {
@@ -285,7 +251,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     gap: 16px;
   }
 
-  /* ===================== BADGE CARDS WOW ===================== */
   .badge-card {
     background: var(--color-bg-secondary);
     border: 2px solid var(--color-border);
@@ -293,36 +258,11 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     padding: 20px;
     text-align: center;
     transition: all 0.3s ease;
-    animation: badge-pop 0.4s ease-out both;
-  }
-
-  .badges-grid .badge-card:nth-child(1) { animation-delay: 0.35s; }
-  .badges-grid .badge-card:nth-child(2) { animation-delay: 0.4s; }
-  .badges-grid .badge-card:nth-child(3) { animation-delay: 0.45s; }
-  .badges-grid .badge-card:nth-child(4) { animation-delay: 0.5s; }
-  .badges-grid .badge-card:nth-child(5) { animation-delay: 0.55s; }
-  .badges-grid .badge-card:nth-child(6) { animation-delay: 0.6s; }
-
-  @keyframes badge-pop {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
   }
 
   .badge-card:hover {
-    transform: translateY(-6px) rotate(2deg);
+    transform: translateY(-4px);
     border-color: #8b5cf6;
-    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
-  }
-
-  .badge-icon {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
-  }
-
-  .badge-card:hover .badge-icon {
-    transform: scale(1.2);
   }
 
   .badge-card.gold {
@@ -368,7 +308,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     gap: 12px;
   }
 
-  /* ===================== LEVEL ITEMS WOW ===================== */
   .level-item {
     display: flex;
     align-items: center;
@@ -377,12 +316,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 16px;
-    transition: all 0.3s ease;
-  }
-
-  .level-item:hover {
-    transform: translateX(8px);
-    border-color: #8b5cf6;
   }
 
   .level-item.legendary {
@@ -431,17 +364,6 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     font-size: 2rem;
     display: block;
     margin-bottom: 8px;
-    transition: all 0.3s ease;
-  }
-
-  .coming-card:hover span {
-    transform: scale(1.2);
-  }
-
-  .coming-card:hover {
-    opacity: 1;
-    border-style: solid;
-    border-color: #8b5cf6;
   }
 
   .coming-card p {
@@ -450,13 +372,11 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     margin: 0;
   }
 
-  /* ===================== CTA WOW ===================== */
   .cta-section {
     text-align: center;
     padding: 64px 24px;
     background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.05));
     border-top: 1px solid var(--color-border);
-    animation: fade-up 0.6s ease-out 0.6s both;
   }
 
   .cta-section h2 {
@@ -474,18 +394,12 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
-    animation: btn-pulse 2.5s ease-in-out infinite;
-  }
-
-  @keyframes btn-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
-    50% { box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.2); }
+    transition: all 0.2s ease;
   }
 
   .btn-primary:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
   }
 
   @media (max-width: 768px) {
