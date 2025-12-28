@@ -1,0 +1,617 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = 'Affiliate Dashboard - AgencyOS';
+const description = 'Track your referrals, earnings, and AG Credits. Share your link and earn 40% commission.';
+---
+
+<LandingLayout title={title} description={description}>
+  <!-- Hero -->
+  <section class="affiliate-hero">
+    <h1>🤝 Affiliate Dashboard</h1>
+    <p>Earn 40% commission on every referral</p>
+  </section>
+
+  <!-- Stats Overview -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card glow-green">
+        <span class="stat-icon">💰</span>
+        <div class="stat-info">
+          <span class="stat-label">Total Earned</span>
+          <span class="stat-value" id="total-earned">0.00 AGC</span>
+        </div>
+      </div>
+      <div class="stat-card glow-amber">
+        <span class="stat-icon">👥</span>
+        <div class="stat-info">
+          <span class="stat-label">Total Referrals</span>
+          <span class="stat-value" id="total-referrals">0</span>
+        </div>
+      </div>
+      <div class="stat-card glow-blue">
+        <span class="stat-icon">📈</span>
+        <div class="stat-info">
+          <span class="stat-label">Conversion Rate</span>
+          <span class="stat-value" id="conversion-rate">0%</span>
+        </div>
+      </div>
+      <div class="stat-card glow-purple">
+        <span class="stat-icon">🎖️</span>
+        <div class="stat-info">
+          <span class="stat-label">Your Rank</span>
+          <span class="stat-value" id="rank">Chiến Binh</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referral Link Section -->
+  <section class="referral-section">
+    <div class="referral-card">
+      <h2>🔗 Your Referral Link</h2>
+      <div class="referral-link-box">
+        <input type="text" id="referral-link" readonly value="Loading..." />
+        <button class="btn-copy" id="copy-link">
+          <span id="copy-text">📋 Copy</span>
+        </button>
+      </div>
+      <p class="referral-note">Share this link and earn 40% commission when someone subscribes!</p>
+      
+      <!-- Share Buttons -->
+      <div class="share-buttons">
+        <button class="share-btn twitter" id="share-twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Share on X
+        </button>
+        <button class="share-btn facebook" id="share-facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Share
+        </button>
+        <button class="share-btn whatsapp" id="share-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commission Structure -->
+  <section class="commission-section">
+    <h2>💵 Commission Structure</h2>
+    <div class="commission-grid">
+      <div class="commission-card">
+        <span class="plan-name">Starter</span>
+        <span class="price">$29/mo</span>
+        <span class="commission">You earn: <strong>11.6 AGC</strong></span>
+        <span class="percent">40%</span>
+      </div>
+      <div class="commission-card featured">
+        <span class="badge">Most Popular</span>
+        <span class="plan-name">Pro</span>
+        <span class="price">$99/mo</span>
+        <span class="commission">You earn: <strong>39.6 AGC</strong></span>
+        <span class="percent">40%</span>
+      </div>
+      <div class="commission-card">
+        <span class="plan-name">Franchise</span>
+        <span class="price">$299/mo</span>
+        <span class="commission">You earn: <strong>119.6 AGC</strong></span>
+        <span class="percent">40%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Referrals -->
+  <section class="referrals-section">
+    <h2>📋 Recent Referrals</h2>
+    <div class="referrals-list" id="referrals-list">
+      <div class="loading">Loading referrals...</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-card">
+      <h3>💡 Pro Tip</h3>
+      <p>Rank up to <strong>Nguyên Soái</strong> and earn <strong>+15% bonus</strong> on all commissions!</p>
+      <a href="/wallet" class="btn-wallet">View Wallet →</a>
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  .affiliate-hero {
+    text-align: center;
+    padding: 64px 24px 32px;
+  }
+
+  .affiliate-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #22c55e, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+
+  .affiliate-hero p {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+
+  /* Stats */
+  .stats-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .stat-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .stat-card.glow-green:hover {
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.5);
+  }
+
+  .stat-card.glow-amber:hover {
+    box-shadow: 0 8px 32px rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.5);
+  }
+
+  .stat-card.glow-blue:hover {
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .stat-card.glow-purple:hover {
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.5);
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  /* Referral Section */
+  .referral-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  .referral-card {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(245, 158, 11, 0.1));
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .referral-card h2 {
+    color: var(--color-text-primary);
+    margin-bottom: 20px;
+  }
+
+  .referral-link-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .referral-link-box input {
+    flex: 1;
+    padding: 14px 16px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+  }
+
+  .btn-copy {
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-copy:hover {
+    transform: scale(1.05);
+  }
+
+  .btn-copy.copied {
+    background: #22c55e;
+  }
+
+  .referral-note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .share-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .share-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .share-btn.twitter:hover {
+    background: #1DA1F2;
+    color: white;
+    border-color: #1DA1F2;
+  }
+
+  .share-btn.facebook:hover {
+    background: #4267B2;
+    color: white;
+    border-color: #4267B2;
+  }
+
+  .share-btn.whatsapp:hover {
+    background: #25D366;
+    color: white;
+    border-color: #25D366;
+  }
+
+  /* Commission Structure */
+  .commission-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  .commission-section h2 {
+    text-align: center;
+    color: var(--color-text-primary);
+    margin-bottom: 24px;
+  }
+
+  .commission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .commission-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+  }
+
+  .commission-card.featured {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+  }
+
+  .commission-card .badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #f59e0b, #22c55e);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+
+  .commission-card .plan-name {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+  }
+
+  .commission-card .price {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+  }
+
+  .commission-card .commission {
+    display: block;
+    color: #22c55e;
+    margin-bottom: 8px;
+  }
+
+  .commission-card .commission strong {
+    font-size: 1.1rem;
+  }
+
+  .commission-card .percent {
+    display: inline-block;
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+
+  /* Referrals List */
+  .referrals-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  .referrals-section h2 {
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+  }
+
+  .referrals-list {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .loading {
+    padding: 24px;
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+
+  .referral-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .referral-item:last-child {
+    border-bottom: none;
+  }
+
+  .referral-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .referral-email {
+    color: var(--color-text-primary);
+    font-weight: 500;
+  }
+
+  .referral-date {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .referral-amount {
+    font-weight: 600;
+    color: #22c55e;
+  }
+
+  /* CTA */
+  .cta-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 24px 80px;
+  }
+
+  .cta-card {
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .cta-card h3 {
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+  }
+
+  .cta-card p {
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .btn-wallet {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .btn-wallet:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .commission-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .referral-link-box {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  // Elements
+  const totalEarnedEl = document.getElementById('total-earned');
+  const totalReferralsEl = document.getElementById('total-referrals');
+  const conversionRateEl = document.getElementById('conversion-rate');
+  const rankEl = document.getElementById('rank');
+  const referralLinkEl = document.getElementById('referral-link') as HTMLInputElement;
+  const copyLinkBtn = document.getElementById('copy-link');
+  const copyTextEl = document.getElementById('copy-text');
+  const referralsListEl = document.getElementById('referrals-list');
+
+  // Get user data
+  const token = localStorage.getItem('agencyos_token') || '';
+  const userData = JSON.parse(localStorage.getItem('agencyos_user') || '{}');
+  const userEmail = userData.email || 'demo@example.com';
+  
+  // Generate referral code from email
+  const referralCode = userEmail.split('@')[0].toUpperCase().slice(0, 8);
+  const referralLink = `https://agencyos.network/signup?ref=${referralCode}`;
+  
+  if (referralLinkEl) {
+    referralLinkEl.value = referralLink;
+  }
+
+  // Copy link
+  copyLinkBtn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(referralLink);
+      if (copyTextEl) copyTextEl.textContent = '✅ Copied!';
+      copyLinkBtn.classList.add('copied');
+      setTimeout(() => {
+        if (copyTextEl) copyTextEl.textContent = '📋 Copy';
+        copyLinkBtn.classList.remove('copied');
+      }, 2000);
+    } catch (e) {
+      console.error('Copy failed:', e);
+    }
+  });
+
+  // Share buttons
+  document.getElementById('share-twitter')?.addEventListener('click', () => {
+    const text = encodeURIComponent('🏯 I\'m using AgencyOS to automate my agency with AI! Get 125+ commands to save 20+ hours/week. Use my link for a discount:');
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(referralLink)}`, '_blank');
+  });
+
+  document.getElementById('share-facebook')?.addEventListener('click', () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}`, '_blank');
+  });
+
+  document.getElementById('share-whatsapp')?.addEventListener('click', () => {
+    const text = encodeURIComponent(`🏯 Check out AgencyOS - AI commands to automate your agency! ${referralLink}`);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+  });
+
+  // Load affiliate stats
+  async function loadStats() {
+    try {
+      const res = await fetch('/api/credits', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const data = await res.json();
+
+      if (totalEarnedEl) totalEarnedEl.textContent = `${data.lifetime_earned?.toFixed(2) || '0.00'} AGC`;
+      
+      // Demo data for referrals
+      if (totalReferralsEl) totalReferralsEl.textContent = '0';
+      if (conversionRateEl) conversionRateEl.textContent = '0%';
+      
+      const ranks: Record<string, string> = {
+        chien_binh: '🥉 Chiến Binh',
+        tuong_quan: '🥈 Tướng Quân',
+        thong_soai: '🥇 Thống Soái',
+        nguyen_soai: '👑 Nguyên Soái',
+      };
+      if (rankEl) rankEl.textContent = ranks[data.rank] || '🥉 Chiến Binh';
+
+    } catch (e) {
+      console.error('Error loading stats:', e);
+    }
+  }
+
+  // Load referrals
+  async function loadReferrals() {
+    // Demo: No referrals yet
+    if (referralsListEl) {
+      referralsListEl.innerHTML = `
+        <div class="loading">
+          <p>No referrals yet. Share your link to start earning!</p>
+        </div>
+      `;
+    }
+  }
+
+  // Init
+  loadStats();
+  loadReferrals();
+</script>
