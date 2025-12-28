@@ -271,24 +271,44 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
 </LandingLayout>
 
 <style>
+  /* ===================== HERO WOW ===================== */
   .compare-hero {
     text-align: center;
     padding: 64px 24px 32px;
+    animation: hero-entrance 0.8s ease-out;
+  }
+
+  @keyframes hero-entrance {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .compare-hero h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #22c55e, #f59e0b);
+    background: linear-gradient(135deg, #22c55e, #f59e0b, #22c55e);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 16px;
+    animation: title-shine 4s linear infinite;
+  }
+
+  @keyframes title-shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
   }
 
   .compare-hero p {
     color: var(--color-text-muted);
     font-size: 1.1rem;
+    animation: fade-up 0.6s ease-out 0.2s both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .comparison-section {
@@ -302,12 +322,32 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
     min-width: 800px;
   }
 
+  /* ===================== TABLE WOW ===================== */
   .table-header, .table-row {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
     gap: 8px;
     padding: 16px 0;
     border-bottom: 1px solid var(--color-border);
+    animation: row-entrance 0.5s ease-out both;
+  }
+
+  .table-row:nth-child(2) { animation-delay: 0.3s; }
+  .table-row:nth-child(3) { animation-delay: 0.35s; }
+  .table-row:nth-child(4) { animation-delay: 0.4s; }
+  .table-row:nth-child(5) { animation-delay: 0.45s; }
+  .table-row:nth-child(6) { animation-delay: 0.5s; }
+  .table-row:nth-child(7) { animation-delay: 0.55s; }
+  .table-row:nth-child(8) { animation-delay: 0.6s; }
+  .table-row:nth-child(9) { animation-delay: 0.65s; }
+  .table-row:nth-child(10) { animation-delay: 0.7s; }
+  .table-row:nth-child(11) { animation-delay: 0.75s; }
+  .table-row:nth-child(12) { animation-delay: 0.8s; }
+  .table-row:nth-child(13) { animation-delay: 0.85s; }
+
+  @keyframes row-entrance {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
   }
 
   .table-header {
@@ -373,12 +413,25 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
     padding: 24px;
   }
 
+  /* ===================== SAVINGS CARD WOW ===================== */
   .savings-card {
     background: var(--color-bg-secondary);
     border: 2px solid #22c55e;
     border-radius: 16px;
     padding: 32px;
     text-align: center;
+    animation: card-entrance 0.6s ease-out 0.9s both;
+    transition: all 0.3s ease;
+  }
+
+  @keyframes card-entrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .savings-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(34, 197, 94, 0.2);
   }
 
   .savings-card h2 {
@@ -415,10 +468,12 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
     font-weight: 800;
   }
 
+  /* ===================== CTA WOW ===================== */
   .cta-section {
     text-align: center;
     padding: 64px 24px;
     background: linear-gradient(180deg, transparent, var(--color-bg-secondary));
+    animation: fade-up 0.6s ease-out 1s both;
   }
 
   .cta-section h2 {
@@ -445,12 +500,18 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+    animation: btn-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+    50% { box-shadow: 0 0 20px 5px rgba(34, 197, 94, 0.2); }
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4);
   }
 
   .btn-secondary {
