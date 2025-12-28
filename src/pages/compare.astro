@@ -303,12 +303,6 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
   .compare-hero p {
     color: var(--color-text-muted);
     font-size: 1.1rem;
-    animation: fade-up 0.6s ease-out 0.2s both;
-  }
-
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
   }
 
   .comparison-section {
@@ -320,6 +314,12 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
 
   .comparison-table {
     min-width: 800px;
+    animation: fade-up 0.6s ease-out 0.2s both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   /* ===================== TABLE WOW ===================== */
@@ -329,25 +329,11 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
     gap: 8px;
     padding: 16px 0;
     border-bottom: 1px solid var(--color-border);
-    animation: row-entrance 0.5s ease-out both;
+    transition: all 0.2s ease;
   }
 
-  .table-row:nth-child(2) { animation-delay: 0.3s; }
-  .table-row:nth-child(3) { animation-delay: 0.35s; }
-  .table-row:nth-child(4) { animation-delay: 0.4s; }
-  .table-row:nth-child(5) { animation-delay: 0.45s; }
-  .table-row:nth-child(6) { animation-delay: 0.5s; }
-  .table-row:nth-child(7) { animation-delay: 0.55s; }
-  .table-row:nth-child(8) { animation-delay: 0.6s; }
-  .table-row:nth-child(9) { animation-delay: 0.65s; }
-  .table-row:nth-child(10) { animation-delay: 0.7s; }
-  .table-row:nth-child(11) { animation-delay: 0.75s; }
-  .table-row:nth-child(12) { animation-delay: 0.8s; }
-  .table-row:nth-child(13) { animation-delay: 0.85s; }
-
-  @keyframes row-entrance {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
+  .table-row:hover {
+    background: rgba(34, 197, 94, 0.03);
   }
 
   .table-header {
@@ -407,31 +393,26 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
     border: none;
   }
 
+  /* ===================== SAVINGS WOW ===================== */
   .bottom-line {
     max-width: 600px;
     margin: 48px auto;
     padding: 24px;
+    animation: fade-up 0.6s ease-out 0.4s both;
   }
 
-  /* ===================== SAVINGS CARD WOW ===================== */
   .savings-card {
     background: var(--color-bg-secondary);
     border: 2px solid #22c55e;
     border-radius: 16px;
     padding: 32px;
     text-align: center;
-    animation: card-entrance 0.6s ease-out 0.9s both;
-    transition: all 0.3s ease;
+    animation: savings-glow 3s ease-in-out infinite;
   }
 
-  @keyframes card-entrance {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
-
-  .savings-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(34, 197, 94, 0.2);
+  @keyframes savings-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.2); }
+    50% { box-shadow: 0 0 30px 5px rgba(34, 197, 94, 0.15); }
   }
 
   .savings-card h2 {
@@ -473,7 +454,7 @@ const description = 'See why 500+ agencies choose AgencyOS over traditional tool
     text-align: center;
     padding: 64px 24px;
     background: linear-gradient(180deg, transparent, var(--color-bg-secondary));
-    animation: fade-up 0.6s ease-out 1s both;
+    animation: fade-up 0.6s ease-out 0.5s both;
   }
 
   .cta-section h2 {

@@ -209,12 +209,6 @@ const description = '3 proven workflows to make money with AgencyOS: Affiliate, 
   .workflows-hero p {
     font-size: 1.25rem;
     color: var(--color-text-muted);
-    animation: fade-up 0.6s ease-out 0.2s both;
-  }
-
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
   }
 
   .workflow-section {
@@ -233,9 +227,9 @@ const description = '3 proven workflows to make money with AgencyOS: Affiliate, 
     animation: card-entrance 0.6s ease-out both;
   }
 
-  .workflow-section:nth-of-type(2) .workflow-card { animation-delay: 0.3s; }
-  .workflow-section:nth-of-type(3) .workflow-card { animation-delay: 0.5s; }
-  .workflow-section:nth-of-type(4) .workflow-card { animation-delay: 0.7s; }
+  .workflow-section:nth-child(2) .workflow-card { animation-delay: 0.3s; }
+  .workflow-section:nth-child(3) .workflow-card { animation-delay: 0.5s; }
+  .workflow-section:nth-child(4) .workflow-card { animation-delay: 0.7s; }
 
   @keyframes card-entrance {
     from { opacity: 0; transform: translateY(30px); }
@@ -265,12 +259,6 @@ const description = '3 proven workflows to make money with AgencyOS: Affiliate, 
     border-radius: 8px;
     font-weight: 700;
     font-size: 1.25rem;
-    animation: number-pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes number-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
   }
 
   .workflow-header h2 {
@@ -287,6 +275,12 @@ const description = '3 proven workflows to make money with AgencyOS: Affiliate, 
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 600;
+    animation: badge-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
   }
 
   .workflow-flow {
@@ -339,12 +333,6 @@ const description = '3 proven workflows to make money with AgencyOS: Affiliate, 
   .flow-arrow {
     color: var(--color-text-muted);
     font-size: 1.25rem;
-    animation: arrow-slide 1.5s ease-in-out infinite;
-  }
-
-  @keyframes arrow-slide {
-    0%, 100% { transform: translateX(0); opacity: 1; }
-    50% { transform: translateX(4px); opacity: 0.6; }
   }
 
   .workflow-steps {
@@ -383,7 +371,12 @@ const description = '3 proven workflows to make money with AgencyOS: Affiliate, 
     padding: 64px 24px;
     background: linear-gradient(180deg, transparent, rgba(34, 197, 94, 0.05));
     border-top: 1px solid var(--color-border);
-    animation: fade-up 0.6s ease-out 0.9s both;
+    animation: cta-entrance 0.6s ease-out 0.9s both;
+  }
+
+  @keyframes cta-entrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .cta-section h2 {
