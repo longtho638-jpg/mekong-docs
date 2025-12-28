@@ -180,7 +180,7 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 16px;
-    animation: title-shine 5s linear infinite;
+    animation: title-shine 4s linear infinite;
   }
 
   @keyframes title-shine {
@@ -193,6 +193,7 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     color: var(--color-text-muted);
   }
 
+  /* ===================== SECTIONS ===================== */
   .xp-section,
   .badges-section,
   .levels-section,
@@ -257,7 +258,7 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     color: var(--color-text-secondary);
   }
 
-  /* ===================== XP BADGE WOW ===================== */
+  /* ===================== XP BADGES WOW ===================== */
   .xp-badge {
     background: #8b5cf6;
     color: white;
@@ -265,6 +266,7 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border-radius: 20px;
     font-weight: 700;
     font-size: 0.875rem;
+    display: inline-block;
     animation: xp-pulse 2s ease-in-out infinite;
   }
 
@@ -291,17 +293,17 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     padding: 20px;
     text-align: center;
     transition: all 0.3s ease;
-    animation: badge-entrance 0.5s ease-out both;
+    animation: badge-pop 0.4s ease-out both;
   }
 
-  .badge-card:nth-child(1) { animation-delay: 0.4s; }
-  .badge-card:nth-child(2) { animation-delay: 0.5s; }
-  .badge-card:nth-child(3) { animation-delay: 0.6s; }
-  .badge-card:nth-child(4) { animation-delay: 0.7s; }
-  .badge-card:nth-child(5) { animation-delay: 0.8s; }
-  .badge-card:nth-child(6) { animation-delay: 0.9s; }
+  .badges-grid .badge-card:nth-child(1) { animation-delay: 0.35s; }
+  .badges-grid .badge-card:nth-child(2) { animation-delay: 0.4s; }
+  .badges-grid .badge-card:nth-child(3) { animation-delay: 0.45s; }
+  .badges-grid .badge-card:nth-child(4) { animation-delay: 0.5s; }
+  .badges-grid .badge-card:nth-child(5) { animation-delay: 0.55s; }
+  .badges-grid .badge-card:nth-child(6) { animation-delay: 0.6s; }
 
-  @keyframes badge-entrance {
+  @keyframes badge-pop {
     from { opacity: 0; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1); }
   }
@@ -316,12 +318,26 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     font-size: 2.5rem;
     display: block;
     margin-bottom: 12px;
-    animation: icon-bounce 2s ease-in-out infinite;
+    transition: all 0.3s ease;
   }
 
-  @keyframes icon-bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+  .badge-card:hover .badge-icon {
+    transform: scale(1.2);
+  }
+
+  .badge-card.gold {
+    border-color: #eab308;
+  }
+
+  .badge-card.legendary {
+    border-color: #ec4899;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+  }
+
+  .badge-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 12px;
   }
 
   .badge-card h3 {
@@ -352,6 +368,7 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     gap: 12px;
   }
 
+  /* ===================== LEVEL ITEMS WOW ===================== */
   .level-item {
     display: flex;
     align-items: center;
@@ -360,6 +377,12 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .level-item:hover {
+    transform: translateX(8px);
+    border-color: #8b5cf6;
   }
 
   .level-item.legendary {
@@ -408,6 +431,17 @@ const description = 'Level up while you earn. XP system, achievement badges, and
     font-size: 2rem;
     display: block;
     margin-bottom: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .coming-card:hover span {
+    transform: scale(1.2);
+  }
+
+  .coming-card:hover {
+    opacity: 1;
+    border-style: solid;
+    border-color: #8b5cf6;
   }
 
   .coming-card p {
