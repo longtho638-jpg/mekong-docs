@@ -1,42 +1,36 @@
-name: Deploy Workflow
+name: Deploy to Vercel
 
-# TRIGGERS
 on:
   push:
     branches:
-      # - deploy/*
       - main
 
-# ENVIRONMENT VARIABLES
 env:
-  GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
-  BRANCH_NAME: ${{ github.head_ref || github.ref }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-# CI/CD STEPS
 jobs:
   deploy:
-    name: Deploy to [docs.claudekit.cc]
+    name: Deploy to Vercel
     runs-on: ubuntu-latest
-    if: always() && !cancelled() && !failure() && contains(github.ref, 'main')
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v4
 
-      - name: Deploy with DXUP
-        uses: "digitopvn/diginext-actions@v2"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          api_key: ${{ secrets.DX_API_KEY }}
-          cluster: dxupprod
-          registry: digitopdockerhub
-          deploy_env: prod
-          tail: true
-          port: 3000
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Send Discord Notification
-        uses: sarisia/actions-status-discord@v1
-        if: always()
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_DEPLOY }}
-          title: "[docs.claudekit.cc] Deploy process finished"
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
