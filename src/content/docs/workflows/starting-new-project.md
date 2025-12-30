@@ -724,3 +724,28 @@ npx prisma migrate reset
 ---
 
 **Congratulations!** You've built a complete, production-ready REST API with AgencyOS in under an hour. This same approach works for any type of project.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **始計篇** (Thủy Kế) - Initial Assessment - Complete strategy
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

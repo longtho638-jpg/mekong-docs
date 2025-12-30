@@ -466,3 +466,28 @@ After bootstrapping your project:
 **Ready to build?** Start with `/bootstrap` and let AI agents handle the heavy lifting. Remember to **review plans carefully** before approval!
 
 **Need help?** Visit [GitHub Discussions](https://github.com/mrgoonie/agencyos-cli/discussions)
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **始計篇** (Thủy Kế) - Initial Assessment - Complete strategy
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

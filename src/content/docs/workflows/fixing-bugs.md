@@ -676,3 +676,28 @@ After fixing bugs, improve processes:
 ---
 
 **Key Takeaway**: AgencyOS's debugging workflow provides systematic bug resolution with root cause analysis, automated testing, and prevention measures - turning hours of debugging into minutes.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **火攻篇** (Hoả Công) - Disruption tactics - Swift resolution
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

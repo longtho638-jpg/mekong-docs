@@ -96,3 +96,28 @@ Typically, skills will be automatically activated depending on the context the a
 But if you need to manually activate this skill, just prompt like this: `use ai-multimodal to analyze this screenshot: ...`
 
 It's that simple.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Leverage external tools
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

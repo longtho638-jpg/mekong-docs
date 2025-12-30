@@ -730,3 +730,28 @@ Before production:
 ---
 
 **Key Takeaway**: AgencyOS enables rapid payment integration with built-in security, webhook handling, and best practices - from simple one-time payments to complex subscription systems in under an hour.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **作戰篇** (Tác Chiến) - Waging war - Resource efficiency
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

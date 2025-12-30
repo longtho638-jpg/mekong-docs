@@ -799,3 +799,28 @@ Metrics:
 ---
 
 **Key Takeaway**: AgencyOS enables systematic performance optimization with profiling, analysis, and implementation of best practices - turning slow applications into fast ones in under an hour with measurable improvements.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍爭篇** (Quân Tranh) - Speed - Every millisecond counts
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

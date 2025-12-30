@@ -312,3 +312,28 @@ docs/
 - [Feature Development](/docs/workflows/feature-development) - Building features that need documentation
 - [Code Review](/docs/workflows/code-review) - Reviewing documentation alongside code
 - [Release Management](/docs/workflows/release-management) - Preparing release notes
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **法篇** (Pháp) - Organization - Structure and discipline
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

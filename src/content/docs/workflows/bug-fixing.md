@@ -260,3 +260,28 @@ const sessionConfig = {
 - [Feature Development](/docs/workflows/feature-development) - Building new features
 - [Code Review](/docs/workflows/code-review) - Maintaining quality
 - [Performance Optimization](/docs/workflows/performance-optimization) - Speed improvements
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **火攻篇** (Hoả Công) - Disruption tactics - Swift resolution
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

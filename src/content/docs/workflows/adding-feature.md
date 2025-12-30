@@ -669,3 +669,28 @@ git checkout -b feature/password-reset
 ---
 
 **Key Takeaway**: Use AgencyOS's systematic workflow (plan → implement → test → document → commit) to add production-ready features 10x faster than manual development.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **勢篇** (Thế) - Momentum - Build on existing strength
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

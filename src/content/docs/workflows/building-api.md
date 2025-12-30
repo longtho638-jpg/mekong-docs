@@ -776,3 +776,28 @@ npx prisma db pull
 ---
 
 **Key Takeaway**: AgencyOS enables rapid REST API development with best practices built-in - from design to deployment in under an hour with production-ready code, tests, and documentation.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍形篇** (Quân Hình) - Formation - Strong defensive structure
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

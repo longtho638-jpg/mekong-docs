@@ -538,3 +538,28 @@ gkg_repo_map \
 ---
 
 **GitLab Knowledge Graph** enables AI agents to truly understand your codebase, making code analysis, refactoring, and implementation more intelligent and context-aware.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **地形篇** (Địa Hình) - Terrain - Know the landscape
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

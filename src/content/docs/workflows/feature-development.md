@@ -191,3 +191,28 @@ After mastering feature development:
 - [Bug Fixing](/docs/workflows/bug-fixing) - For when things go wrong
 - [Code Review](/docs/workflows/code-review) - Maintaining code quality
 - [Documentation](/docs/workflows/documentation) - Keeping docs current
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **謀攻篇** (Mưu Công) - Win-without-fighting - Plan before action
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

@@ -660,3 +660,28 @@ Before production deployment:
 ---
 
 **Key Takeaway**: AgencyOS enables rapid implementation of secure, production-ready authentication with industry best practices built-in - from basic JWT to OAuth2 and 2FA in under an hour.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍形篇** (Quân Hình) - Formation - Secure architecture
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)

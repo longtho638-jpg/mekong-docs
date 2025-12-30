@@ -648,3 +648,28 @@ Improvement: +36 points maintainability
 ---
 
 **Key Takeaway**: AgencyOS enables safe, incremental refactoring with automated testing and validation - improving code quality without breaking functionality, turning days of risky refactoring into hours of confident improvement.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **九變篇** (Cửu Biến) - Adaptability - Transform weakness to strength
+
+### Zero-Effort Commands
+
+Thay vì làm từng bước, dùng commands tự động:
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+### Related Sync Commands
+
+```bash
+# Sync patterns từ Antigravity
+/sync-all
+```
+
+📖 [Xem tất cả Sync Commands](/docs/commands/sync-commands)
