@@ -38,7 +38,7 @@ git --version   # Any recent version
 ### Global Installation (Recommended)
 
 ```bash
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 This installs the `mk` command globally, available from any directory.
@@ -46,7 +46,7 @@ This installs the `mk` command globally, available from any directory.
 ### Verify Installation
 
 ```bash
-mk --version
+python main.py --version
 ```
 
 **Expected output:**
@@ -76,8 +76,8 @@ Options:
   --help, -h      Show help
 
 Examples:
-  mk init --kit engineer
-  mk init --global
+  python main.py init --kit engineer
+  python main.py init --global
   mk versions --kit engineer
 
 For more info: https://docs.agencyos.network
@@ -209,7 +209,7 @@ npm update -g agencyos-cli
 
 Check installed version:
 ```bash
-mk --version
+python main.py --version
 ```
 
 ## Uninstall
@@ -217,7 +217,7 @@ mk --version
 Remove AgencyOS CLI:
 
 ```bash
-rm -rf agencyos-starter
+rm -rf mekong-cli
 ```
 
 Remove configuration (optional):
@@ -237,7 +237,7 @@ rm -rf ~/.agencyos
 
 2. **Check installation:**
    ```bash
-   ls agencyos-starter
+   ls mekong-cli
    ```
 
 3. **Verify npm global bin in PATH:**
@@ -252,8 +252,8 @@ rm -rf ~/.agencyos
 
 4. **Reinstall:**
    ```bash
-   rm -rf agencyos-starter
-   git clone https://github.com/longtho638-jpg/agencyos-starter.git
+   rm -rf mekong-cli
+   git clone https://github.com/longtho638-jpg/mekong-cli.git
    ```
 
 ### Authentication failed
@@ -292,12 +292,12 @@ rm -rf ~/.agencyos
    mkdir ~/.npm-global
    npm config set prefix '~/.npm-global'
    export PATH=~/.npm-global/bin:$PATH
-   git clone https://github.com/longtho638-jpg/agencyos-starter.git
+   git clone https://github.com/longtho638-jpg/mekong-cli.git
    ```
 
 3. **Use sudo (not recommended):**
    ```bash
-   sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
+   sudo git clone https://github.com/longtho638-jpg/mekong-cli.git
    ```
 
 ### Download fails
@@ -315,7 +315,7 @@ rm -rf ~/.agencyos
 
 3. **Try with verbose logging:**
    ```bash
-   mk init --kit engineer --verbose
+   python main.py init --kit engineer --verbose
    ```
 
 4. **Check GitHub status:**
@@ -325,7 +325,7 @@ rm -rf ~/.agencyos
 
 Now that the CLI is installed:
 
-1. **Initialize a project** - Run `mk init --kit engineer`
+1. **Initialize a project** - Run `python main.py init --kit engineer`
 2. **Browse available versions** - Run `mk versions`
 3. **Start developing** - Follow [Getting Started](/docs/getting-started/installation)
 
@@ -337,4 +337,4 @@ Now that the CLI is installed:
 
 ---
 
-**Ready to start?** Run `mk init --kit engineer` to initialize your first project.
+**Ready to start?** Run `python main.py init --kit engineer` to initialize your first project.

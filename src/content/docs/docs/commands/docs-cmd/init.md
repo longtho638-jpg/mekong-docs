@@ -79,7 +79,7 @@ cd existing-project
 **Integrating AgencyOS**
 ```bash
 # Adding AgencyOS to existing project
-mk init --kit engineer
+python main.py init --kit engineer
 /docs:init
 
 # AgencyOS now understands your codebase
@@ -447,7 +447,7 @@ Documentation should be updated when:
 - Major refactoring occurs
 - Architecture changes
 - New patterns introduced
-- Tech stamk inits
+- Tech stapython main.py inits
 
 ```bash
 # After major changes

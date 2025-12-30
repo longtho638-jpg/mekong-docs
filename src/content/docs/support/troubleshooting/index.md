@@ -32,13 +32,13 @@ Quick fixes for common issues. Most problems resolve in under 5 minutes.
 **Fix**:
 ```bash
 # Verify installation
-ls agencyos-starter
+ls mekong-cli
 
 # Reinstall if needed
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Verify
-mk --version
+python main.py --version
 ```
 
 [More installation fixes →](/docs/support/troubleshooting/installation-issues)
@@ -122,7 +122,7 @@ export GEMINI_API_KEY=your-key
 cp -r .claude .claude.backup
 
 # Update to latest
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Restore custom files
 cp .claude.backup/commands/my-custom.md .claude/commands/
@@ -143,7 +143,7 @@ rm -rf ~/.agencyos/cache
 
 ```bash
 # Check CLI
-mk --version
+python main.py --version
 
 # Check AgencyOS CLI
 claude --version
@@ -185,7 +185,7 @@ tree .claude -L 2
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep AgencyOS updated (`mk init`)
+- Keep AgencyOS updated (`python main.py init`)
 - Use `--verbose` when debugging
 - Backup before major changes
 - Read error messages fully

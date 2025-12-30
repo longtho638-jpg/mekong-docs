@@ -33,7 +33,7 @@ ls .claude/commands/
 cat .claude/commands/core/cook.md
 
 # If files missing, reinitialize AgencyOS
-mk init --kit engineer
+python main.py init --kit engineer
 ```
 
 ---
@@ -114,19 +114,19 @@ Detailed implementation instructions...
 
 ### ck Commands Don't Work
 
-**Symptom**: `mk init` shows "command not found"
+**Symptom**: `python main.py init` shows "command not found"
 
 **Solution**:
 
 ```bash
 # Check if CLI installed
-ls agencyos-starter
+ls mekong-cli
 
 # If not installed
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Verify
-mk --version
+python main.py --version
 
 # If still not found, check PATH
 which ck
@@ -211,7 +211,7 @@ ls .claude/agents/
 cat .claude/agents/planner.md
 
 # Reinitialize if missing
-mk init --kit engineer
+python main.py init --kit engineer
 ```
 
 See [Agent Issues](/docs/support/troubleshooting/agent-issues) for agent-specific problems.
@@ -300,7 +300,7 @@ description: My custom cook implementation
 
 ```bash
 # Initialize AgencyOS
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Verify structure
 tree .claude -L 2
@@ -317,7 +317,7 @@ tree .claude -L 2
 cp -r .claude .claude.backup
 
 # Update to fresh version
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Restore custom files if needed
 cp .claude.backup/commands/my-custom.md .claude/commands/
@@ -450,7 +450,7 @@ echo ".claude exists: $([ -d .claude ] && echo yes || echo no)"
 cp -r .claude .claude.backup
 
 # Update to latest
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Restore custom commands
 cp .claude.backup/commands/my-custom.md .claude/commands/
@@ -492,7 +492,7 @@ claude --dangerously-skip-permissions
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep AgencyOS updated: `mk init`
+- Keep AgencyOS updated: `python main.py init`
 - Backup .claude before modifications
 - Use correct frontmatter syntax
 - Verify command names are unique
@@ -548,4 +548,4 @@ claude --dangerously-skip-permissions
 
 ---
 
-**Most command issues stem from missing files or incorrect structure.** Run `mk init --kit engineer` to fix 80% of problems instantly.
+**Most command issues stem from missing files or incorrect structure.** Run `python main.py init --kit engineer` to fix 80% of problems instantly.

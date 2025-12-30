@@ -89,7 +89,7 @@ This keeps CLAUDE.md lightweight while maintaining access to detailed guidelines
 
 ## Important: Do Not Modify
 
-**[Important]** You should not modify `CLAUDE.md` directly, as it will be overwritten each time you update AgencyOS using `mk init`.
+**[Important]** You should not modify `CLAUDE.md` directly, as it will be overwritten each time you update AgencyOS using `python main.py init`.
 
 ### Why?
 
@@ -103,7 +103,7 @@ If you want to modify `CLAUDE.md` without it being overwritten:
 
 ```bash
 # Use the exclude flag during updates
-mk init --exclude CLAUDE.md
+python main.py init --exclude CLAUDE.md
 ```
 
 **Better approach**: Instead of modifying CLAUDE.md, customize the referenced files in `.claude/workflows/` which are less likely to change during updates.
@@ -184,7 +184,7 @@ Updates documentation
 ✅ Keep CLAUDE.md concise with links to detailed docs
 ✅ Update workflow files in `.claude/workflows/` as needed
 ✅ Maintain project docs in `docs/` directory
-✅ Use `mk init --exclude CLAUDE.md` if you must customize
+✅ Use `python main.py init --exclude CLAUDE.md` if you must customize
 
 ### Don'ts
 

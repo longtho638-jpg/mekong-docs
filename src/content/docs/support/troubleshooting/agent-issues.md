@@ -299,7 +299,7 @@ cat .claude/agents/planner.md | grep -i "spawn\|delegate"
 
 ```bash
 # Update AgencyOS to latest version
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Verify planner agent updated
 cat .claude/agents/planner.md | head -20
@@ -327,7 +327,7 @@ ls -la plans/reports/
 
 # If missing, agents not writing reports correctly
 # Update AgencyOS
-mk init --kit engineer
+python main.py init --kit engineer
 ```
 
 ---
@@ -590,7 +590,7 @@ done
 ## Prevention Tips
 
 ✅ **Do**:
-- Keep agents updated: `mk init`
+- Keep agents updated: `python main.py init`
 - Use appropriate agents for task complexity
 - Provide clear, specific task descriptions
 - Monitor API rate limits
@@ -642,4 +642,4 @@ done
 
 ---
 
-**Most agent issues resolve with updated AgencyOS.** Run `mk init --kit engineer` first, then retest your command.
+**Most agent issues resolve with updated AgencyOS.** Run `python main.py init --kit engineer` first, then retest your command.

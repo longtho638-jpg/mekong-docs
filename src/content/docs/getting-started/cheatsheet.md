@@ -22,10 +22,10 @@ Quick reference guide for AgencyOS CLI: **18 agents**, **125+ commands**, **5 bu
 
 ```bash
 # Install AgencyOS globally
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Check version
-mk --version
+python main.py --version
 ```
 
 ## Starting AgencyOS
@@ -179,7 +179,7 @@ claude
 /docs:init
 
 # For new projects (greenfield)
-mk init --kit engineer --dir /path/to/project
+python main.py init --kit engineer --dir /path/to/project
 ```
 
 ## Core Commands
@@ -346,7 +346,7 @@ mk init --kit engineer --dir /path/to/project
 
 ```bash
 # 1. Install AgencyOS
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # 2. Go to project
 cd /path/to/existing/project
@@ -365,10 +365,10 @@ claude
 
 ```bash
 # 1. Install AgencyOS
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # 2. Initialize project
-mk init --kit engineer --dir /path/to/project
+python main.py init --kit engineer --dir /path/to/project
 
 # 3. Navigate to project
 cd /path/to/project
@@ -561,7 +561,7 @@ More detailed descriptions = better results
 
 ```bash
 # Check AgencyOS version
-mk --version
+python main.py --version
 
 # Restart AgencyOS CLI
 # Exit and run: claude

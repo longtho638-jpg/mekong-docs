@@ -266,7 +266,7 @@ claude
 npm cache clean --force
 
 # 3. Update AgencyOS
-mk init --kit engineer
+python main.py init --kit engineer
 
 # 4. Update Node.js
 node --version  # Should be 18+

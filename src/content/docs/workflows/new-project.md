@@ -17,7 +17,7 @@ Create new projects from scratch with AgencyOS's AI-powered development workflow
 ### 1. Install AgencyOS CLI
 
 ```bash
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 ## 🚀 Vibe Coding Quick Start
@@ -45,7 +45,7 @@ For Antigravity IDE users, the fastest path to a working project:
 
 ```bash
 # Initialize project with AgencyOS Engineer kit
-mk init --kit engineer --dir /path/to/project
+python main.py init --kit engineer --dir /path/to/project
 ```
 
 **Options:**

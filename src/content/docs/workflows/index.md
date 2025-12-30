@@ -60,7 +60,7 @@ import { useAgentOS, useTaskTracker, useApprovalGate } from '@/agencyos';
 
 ### Setup New Project
 ```bash
-mk init my-project --kit engineer
+python main.py init my-project --kit engineer
 cd my-project
 /plan "set up project structure"
 /code @plans/project-setup.md

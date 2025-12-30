@@ -18,19 +18,19 @@ AgencyOS installation problems? Get unblocked in minutes with platform-specific 
 
 ## Quick Fix: Command Not Found
 
-**Symptom**: `ck: command not found` or `agencyos-starter: directory not found`
+**Symptom**: `ck: command not found` or `mekong-cli: directory not found`
 
 **Solution**:
 
 ```bash
 # Verify global installation
-ls agencyos-starter
+ls mekong-cli
 
 # If not found, install globally
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Verify installation
-mk --version
+python main.py --version
 ```
 
 If still not working, check your PATH (see [PATH issues](#path-issues) below).
@@ -55,12 +55,12 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # Verify
-mk --version
+python main.py --version
 ```
 
 **Expected output**:
 ```
-agencyos-starter (git cloned)
+mekong-cli (git cloned)
 ```
 
 #### Windows PATH Not Updated
@@ -102,7 +102,7 @@ nvm install 20
 nvm use 20
 
 # Reinstall AgencyOS
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 ---
@@ -127,13 +127,13 @@ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
 # Reinstall AgencyOS
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 **Solution 2**: Use sudo (not recommended)
 
 ```bash
-sudo git clone https://github.com/longtho638-jpg/agencyos-starter.git
+sudo git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 **Solution 3**: Use nvm (best practice)
@@ -150,7 +150,7 @@ nvm install 20
 nvm use 20
 
 # Install AgencyOS (no sudo needed)
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 #### Command Not Found After Install
@@ -168,7 +168,7 @@ echo 'export PATH="$(npm config get prefix)/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
 # Verify
-mk --version
+python main.py --version
 ```
 
 #### Apple Silicon (M1/M2/M3) Issues
@@ -191,7 +191,7 @@ nvm install 20
 nvm alias default 20
 
 # Reinstall AgencyOS
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 ---
@@ -209,14 +209,14 @@ git clone https://github.com/longtho638-jpg/agencyos-starter.git
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install 20
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Option 2: Change npm global directory
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 #### Missing Dependencies
@@ -237,7 +237,7 @@ sudo dnf install -y gcc-c++ make python3
 sudo pacman -S base-devel python
 
 # Reinstall AgencyOS
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 #### PATH Not Set
@@ -256,7 +256,7 @@ source ~/.bashrc
 
 # Verify
 which ck
-mk --version
+python main.py --version
 ```
 
 ---
@@ -277,7 +277,7 @@ npm cache clean --force
 npm install -g npm@latest
 
 # Retry installation
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 ### Network/Proxy Issues
@@ -298,7 +298,7 @@ npm config set https-proxy http://proxy.company.com:8080
 npm config set registry https://registry.npmjs.org/
 
 # Retry installation
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 ### Version Conflicts
@@ -309,16 +309,16 @@ git clone https://github.com/longtho638-jpg/agencyos-starter.git
 
 ```bash
 # Uninstall old version
-rm -rf agencyos-starter
+rm -rf mekong-cli
 
 # Clear cache
 npm cache clean --force
 
 # Install latest version
-git clone https://github.com/longtho638-jpg/agencyos-starter.git@latest
+git clone https://github.com/longtho638-jpg/mekong-cli.git@latest
 
 # Verify
-mk --version
+python main.py --version
 ```
 
 ---
@@ -375,9 +375,9 @@ After fixing installation issues, verify everything works:
 
 ```bash
 # Check CLI version
-mk --version
+python main.py --version
 
-# Expected: agencyos-starter (git cloned)
+# Expected: mekong-cli (git cloned)
 
 # Check available commands
 mk --help
@@ -387,7 +387,7 @@ mk --help
 # Test with demo project
 mkdir test-project
 cd test-project
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Expected: Downloads AgencyOS Engineer successfully
 ```
@@ -401,7 +401,7 @@ mk init --kit engineer
 - Keep Node.js updated (18+)
 - Use npm global directory in home folder
 - Check PATH after installation
-- Update AgencyOS regularly: `mk init`
+- Update AgencyOS regularly: `python main.py init`
 
 ❌ **Don't**:
 - Use sudo with npm (except as last resort)
@@ -435,13 +435,13 @@ npm config list
 npm config get prefix
 
 # Installation status
-ls agencyos-starter
+ls mekong-cli
 which ck
 ```
 
 ### Get Help
 
-1. **Check logs**: Look for errors during `git clone https://github.com/longtho638-jpg/agencyos-starter.git`
+1. **Check logs**: Look for errors during `git clone https://github.com/longtho638-jpg/mekong-cli.git`
 2. **GitHub Issues**: [Report installation problems](https://github.com/longtho638-jpg/agencyos-engineer/issues)
 3. **Discord**: [Join AgencyOS community](https://agencyos.network/discord)
 

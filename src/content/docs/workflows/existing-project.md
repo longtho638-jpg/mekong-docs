@@ -17,7 +17,7 @@ Integrate AgencyOS into your existing projects to enhance development workflow w
 ### 1. Install AgencyOS CLI
 
 ```bash
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 ```
 
 ### 2. Navigate to Your Project
@@ -282,7 +282,7 @@ Share `.claude/` directory and generated specs with your team via git.
 git clone <repo-url>
 
 # 2. Install AgencyOS
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # 3. Navigate to project
 cd project-name
@@ -305,7 +305,7 @@ claude
 ### Commands Not Working
 ```bash
 # Verify AgencyOS installation
-mk --version
+python main.py --version
 
 # Restart AgencyOS CLI
 # Exit CC and run: claude

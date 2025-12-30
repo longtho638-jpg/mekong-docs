@@ -213,7 +213,7 @@ If activation fails, automatically restores:
 
 ```
 Activation failed!
-Auto-rollbamk initiated...
+Auto-rollbapython main.py initiated...
 Restored from backup.
 Skill working again.
 ```

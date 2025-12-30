@@ -26,7 +26,7 @@ Learn how to bootstrap a new project with AgencyOS, from initial requirements to
 ## Prerequisites
 
 - Node.js 18+ installed
-- AgencyOS CLI installed (`git clone https://github.com/longtho638-jpg/agencyos-starter.git`)
+- AgencyOS CLI installed (`git clone https://github.com/longtho638-jpg/mekong-cli.git`)
 - GitHub account
 - Basic understanding of REST APIs
 
@@ -196,7 +196,7 @@ Next steps:
 
 ```bash
 # Interactive setup
-mk init
+python main.py init
 
 ? Project name: task-api
 ? Template: Node.js API

@@ -150,7 +150,7 @@ AgencyOS provides a comprehensive set of slash commands to accelerate your devel
 ```bash
 1. /bootstrap [project description]
    # OR
-   mk init --kit engineer
+   python main.py init --kit engineer
 
 2. # Customize requirements through Q&A
 
@@ -417,7 +417,7 @@ Next: Review changes, then /git:cm
 **Solutions:**
 1. Verify you're in a AgencyOS project (`ls .claude/`)
 2. Check command exists (`ls .claude/commands/`)
-3. Run `mk init` to get latest commands
+3. Run `python main.py init` to get latest commands
 4. Restart AgencyOS CLI
 
 ### Command Fails

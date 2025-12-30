@@ -33,7 +33,7 @@ Command-line tool for bootstrapping and updating AgencyOS projects from private 
 
 ## Core Commands
 
-### mk init
+### python main.py init
 
 Initialize or update AgencyOS Engineer in your project:
 
@@ -41,20 +41,20 @@ Initialize or update AgencyOS Engineer in your project:
 
 ```bash
 # Interactive mode (recommended)
-mk init
+python main.py init
 
 # With options
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Specific version
-mk init --kit engineer --version v1.0.0
+python main.py init --kit engineer --version v1.0.0
 
 # With exclude patterns
-mk init --exclude "local-config/**" --exclude "*.local"
+python main.py init --exclude "local-config/**" --exclude "*.local"
 
 # Global mode - use platform-specific user configuration
-mk init --global
-mk init -g --kit engineer
+python main.py init --global
+python main.py init -g --kit engineer
 ```
 
 **What it does:**
@@ -92,7 +92,7 @@ mk update
 
 **What it does:**
 - Updates the `mk` command-line tool to the latest version
-- Does NOT update AgencyOS Engineer files (use `mk init` for that)
+- Does NOT update AgencyOS Engineer files (use `python main.py init` for that)
 
 ### mk versions
 
@@ -127,8 +127,8 @@ All commands support these global options:
 Enable verbose logging for debugging:
 
 ```bash
-mk init --verbose
-mk init -v  # Short form
+python main.py init --verbose
+python main.py init -v  # Short form
 ```
 
 **Shows:**
@@ -143,7 +143,7 @@ mk init -v  # Short form
 Write logs to file for sharing:
 
 ```bash
-mk init --verbose --log-file debug.log
+python main.py init --verbose --log-file debug.log
 ```
 
 **Note:** All sensitive data (tokens, credentials) is automatically sanitized in logs.
@@ -226,10 +226,10 @@ After update:
 
 ```bash
 # Install CLI
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Verify installation
-mk --version
+python main.py --version
 
 # Authenticate with GitHub
 gh auth login
@@ -237,7 +237,7 @@ gh auth login
 export GITHUB_TOKEN=ghp_your_token
 
 # Initialize project
-mk init --kit engineer
+python main.py init --kit engineer
 
 # Navigate to project
 cd my-project
@@ -252,28 +252,28 @@ claude  # Start AgencyOS CLI
 
 ```bash
 # Interactive mode (recommended)
-mk init
+python main.py init
 
 # Direct with options
-mk init --dir my-app --kit engineer
+python main.py init --dir my-app --kit engineer
 
 # Specific version
-mk init --dir my-app --kit engineer --version v1.0.0
+python main.py init --dir my-app --kit engineer --version v1.0.0
 
 # With exclusions
-mk init --exclude "*.log" --exclude "temp/**"
+python main.py init --exclude "*.log" --exclude "temp/**"
 
 # Update AgencyOS Engineer to latest
-mk init
+python main.py init
 
 # Update to specific version
-mk init --version v1.2.0
+python main.py init --version v1.2.0
 
 # Update with exclusions
-mk init --exclude "local-config/**" --exclude "*.local"
+python main.py init --exclude "local-config/**" --exclude "*.local"
 
 # Update with verbose output
-mk init --verbose
+python main.py init --verbose
 ```
 
 ### Update the CLI Itself
@@ -315,10 +315,10 @@ mk versions --limit 50
 **Solutions:**
 ```bash
 # Reinstall globally
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Check installation
-ls agencyos-starter
+ls mekong-cli
 
 # Restart terminal
 ```
@@ -331,7 +331,7 @@ ls agencyos-starter
 1. Check internet connection
 2. Verify GitHub token is valid: `gh auth status`
 3. Confirm you have repository access (purchased kit)
-4. Try with verbose flag: `mk init --verbose`
+4. Try with verbose flag: `python main.py init --verbose`
 
 ## Version Information
 
@@ -339,7 +339,7 @@ Current version: **1.2.1**
 
 Check version:
 ```bash
-mk --version
+python main.py --version
 ```
 
 View help:
@@ -355,4 +355,4 @@ mk -h
 
 ---
 
-**Ready to start?** Purchase a kit at [AgencyOS.cc](https://agencyos.network), then run `mk init` to initialize your first project.
+**Ready to start?** Purchase a kit at [AgencyOS.cc](https://agencyos.network), then run `python main.py init` to initialize your first project.

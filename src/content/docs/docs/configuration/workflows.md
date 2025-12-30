@@ -362,7 +362,7 @@ cat .claude/workflows/development-rules.md
 
 **Solutions:**
 1. Review and update workflow files
-2. Run `mk init` to get latest AgencyOS workflows
+2. Run `python main.py init` to get latest AgencyOS workflows
 3. Merge custom changes with updates
 4. Document customizations
 

@@ -28,10 +28,10 @@ Already using AgencyOS CLI? AgencyOS enhances your workflow without breaking exi
 
 ```bash
 # Install AgencyOS CLI (doesn't replace AgencyOS CLI)
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Initialize in existing project
-mk init
+python main.py init
 # → Adds .claude/CLAUDE.md, skills/, workflows/
 # → Existing .claude/commands/ preserved
 ```
@@ -43,7 +43,7 @@ mk init
 mk update
 
 # Alternative: npm global update
-git clone https://github.com/longtho638-jpg/agencyos-starter.git@latest
+git clone https://github.com/longtho638-jpg/mekong-cli.git@latest
 ```
 
 ## Gradual Migration Path
