@@ -124,3 +124,19 @@ AgencyOS:
 - [Why AgencyOS](/docs/getting-started/why-mekong) - Comparisons, ROI calculations, pricing
 - [Use Cases](/docs/workflows) - Real-world workflows
 - [FAQ](/docs/support/faq) - Common questions answered
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **始計篇** (Thủy Kế) - Initial Assessment - Welcome to AgencyOS
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -68,3 +68,18 @@ Have a tool that enhances AgencyOS? We'd love to feature it!
 ---
 
 **Next:** Explore individual tools or return to [Documentation](/docs/agents)
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Tool ecosystem
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/scout` | Tự search codebase |
+| `/setup-mcp` | Tự cấu hình tools |
+
+📖 [Xem tất cả Commands](/docs/commands)

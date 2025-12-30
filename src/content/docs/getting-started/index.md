@@ -153,3 +153,19 @@ pip install -r requirements.txt
 ---
 
 **Need help?** Join our community or contact [hello@agencyos.network](mailto:hello@agencyos.network)
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **始計篇** (Thủy Kế) - Initial Assessment - Getting started
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

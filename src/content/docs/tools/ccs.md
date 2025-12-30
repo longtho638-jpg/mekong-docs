@@ -383,3 +383,17 @@ rm -rf ~/.ccs
 
 **Key Takeaway:** CCS transforms rate limits from blockers into opportunities for cost optimization and parallel workflows. Use it to maintain flow state and reduce AI costs by 81%.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Code Context Search
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/scout` | Tự search codebase |
+| `/setup-mcp` | Tự cấu hình tools |
+
+📖 [Xem tất cả Commands](/docs/commands)

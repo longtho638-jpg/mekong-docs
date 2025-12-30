@@ -262,3 +262,19 @@ Quick reference: Which agents does each major command invoke?
 - **[Quick Start](/docs/getting-started/quick-start)** - Try the 5 Business Suites
 - **[Commands Reference](/docs/commands)** - Explore all 125+ commands
 - **[Agents Reference](/docs/agents)** - Deep dive into each agent
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍形篇** (Quân Hình) - Formation - System structure
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

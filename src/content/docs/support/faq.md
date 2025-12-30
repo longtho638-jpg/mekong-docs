@@ -306,3 +306,18 @@ echo "node_modules/\ndist/\nbuild/\ncoverage/" > .claudeignore
 ---
 
 **Don't see your question here?** Ask in our [Discord community](https://agencyos.network/discord) or [open an issue](https://github.com/longtho638-jpg/agencyos/issues). We're here to help!
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **虛實篇** (Hư Thực) - Clarity - Common questions
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/help` | Tự tìm câu trả lời |
+| `/debugger` | Tự fix issues |
+
+📖 [Xem tất cả Commands](/docs/commands)

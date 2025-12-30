@@ -110,3 +110,19 @@ A: Uninstall and delete .agencyos/AGENCYOS.md. No breaking changes.
 1. [Install AgencyOS](/docs/getting-started/installation)
 2. [Try Quick Start](/docs/getting-started/quick-start)
 3. [Explore Commands](/docs/commands)
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **勢篇** (Thế) - Momentum - Stay current
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

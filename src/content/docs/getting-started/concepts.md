@@ -186,3 +186,19 @@ All agent behaviors, skills, and workflows configured in `.agencyos/AGENCYOS.md`
 - **[Quick Start](/docs/getting-started/quick-start)** - Try your first command
 - **[Commands Reference](/docs/commands)** - Explore all commands
 - **[Agents Reference](/docs/agents)** - Learn about each agent
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **計篇** (Kế) - Strategic calculations - Core concepts
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

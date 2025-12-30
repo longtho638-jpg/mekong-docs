@@ -238,3 +238,18 @@ We value your feedback! Help us improve AgencyOS:
 ---
 
 **Need immediate help?** Join our [Discord community](https://agencyos.network/discord) for real-time assistance from fellow users and the AgencyOS team.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **九地篇** (Cửu Địa) - Situations - Support resources
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/help` | Tự tìm câu trả lời |
+| `/debugger` | Tự fix issues |
+
+📖 [Xem tất cả Commands](/docs/commands)

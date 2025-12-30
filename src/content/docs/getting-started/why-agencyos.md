@@ -155,3 +155,19 @@ python main.py deploy
 **Time reclaimed**: Build your agency instead of infrastructure.
 
 [Get Started →](/docs/getting-started/installation)
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **謀攻篇** (Mưu Công) - Strategy - Why choose us
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

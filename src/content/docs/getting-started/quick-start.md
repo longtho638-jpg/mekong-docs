@@ -188,3 +188,19 @@ A: For basic features, no. For advanced (Gemini, ElevenLabs), yes.
 **You just set up agency automation in 15 minutes.** Traditional tools can't do that.
 
 **Ready to automate?** Your AI team is waiting.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍爭篇** (Quân Tranh) - Speed - Quick execution
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

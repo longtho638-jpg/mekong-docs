@@ -182,3 +182,19 @@ After installation:
 ---
 
 **Need help?** Contact us at [hello@agencyos.network](mailto:hello@agencyos.network)
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **地形篇** (Địa Hình) - Terrain - Setup environment
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

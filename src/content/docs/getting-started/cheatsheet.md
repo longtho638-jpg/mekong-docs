@@ -690,3 +690,19 @@ python main.py --version
 ---
 
 **Print this page** or keep it open while working with AgencyOS for quick command reference!
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **九變篇** (Cửu Biến) - Adaptability - Quick reference
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/plan` | Tự tạo plan |
+| `/ship` | Tự deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)
