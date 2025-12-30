@@ -24,7 +24,7 @@ Anthropic has focused on training Claude models for coding capabilities, so they
 1. Get your Gemini key at [Google AI Studio](https://aistudio.google.com/api-keys)
 2. Find the `.env.example` file: 
 - If you installed AgencyOS at project scope: copy `.agencyos/.env.example` to `.agencyos/.env`
-- If you installed AgencyOS at global scope: copy `~/.agencyos/.env.example` to `~/.agencyos/.env` (for Windows users: `%USERPROFILE%\.claude\.env`)
+- If you installed AgencyOS at global scope: copy `~/.agencyos/.env.example` to `~/.agencyos/.env` (for Windows users: `%USERPROFILE%.agencyos\.env`)
 3. Open the `.env` file and fill in the value for `GEMINI_API_KEY`
 
 That's it!
