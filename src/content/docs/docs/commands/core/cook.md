@@ -558,7 +558,7 @@ git push
 **Problem:** Generated code doesn't meet standards
 
 **Solution:**
-- Review `.claude/workflows/development-rules.md`
+- Review `.agencyos/workflows/development-rules.md`
 - Update code standards in `docs/code-standards.md`
 - Re-run `/cook` with updated context
 

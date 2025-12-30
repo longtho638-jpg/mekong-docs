@@ -24,13 +24,13 @@ Commands not working? Get them running in minutes with these step-by-step fixes.
 
 ```bash
 # 1. Verify .claude directory exists
-ls -la .claude/
+ls -la .agencyos/
 
 # 2. Check commands directory
-ls .claude/commands/
+ls .agencyos/commands/
 
 # 3. Verify specific command file
-cat .claude/commands/core/cook.md
+cat .agencyos/commands/core/cook.md
 
 # If files missing, reinitialize AgencyOS
 python main.py init --kit engineer
@@ -59,7 +59,7 @@ claude --version
 
 ```bash
 # Should show:
-# .claude/
+# .agencyos/
 # ├── agents/
 # ├── commands/
 # ├── skills/
@@ -68,19 +68,19 @@ claude --version
 tree .claude -L 2
 
 # Or without tree command
-ls -R .claude/
+ls -R .agencyos/
 ```
 
 **Step 3: Verify command files exist**
 
 ```bash
 # List all commands
-find .claude/commands -name "*.md"
+find .agencyos/commands -name "*.md"
 
 # Should show files like:
-# .claude/commands/core/cook.md
-# .claude/commands/core/plan.md
-# .claude/commands/fix/fast.md
+# .agencyos/commands/core/cook.md
+# .agencyos/commands/core/plan.md
+# .agencyos/commands/fix/fast.md
 # etc.
 ```
 
@@ -88,7 +88,7 @@ find .claude/commands -name "*.md"
 
 ```bash
 # View command file
-cat .claude/commands/core/cook.md
+cat .agencyos/commands/core/cook.md
 
 # Must have frontmatter:
 # ---
@@ -182,7 +182,7 @@ See [API Key Setup](/docs/support/troubleshooting/api-key-setup) for complete co
 
 ```bash
 # Check command syntax in file
-cat .claude/commands/core/cook.md
+cat .agencyos/commands/core/cook.md
 
 # Use correct format:
 /cook implement feature name
@@ -199,7 +199,7 @@ cat .claude/commands/core/cook.md
 
 ```bash
 # Check agents directory
-ls .claude/agents/
+ls .agencyos/agents/
 
 # Should show:
 # planner.md
@@ -208,7 +208,7 @@ ls .claude/agents/
 # etc.
 
 # Verify agent file
-cat .claude/agents/planner.md
+cat .agencyos/agents/planner.md
 
 # Reinitialize if missing
 python main.py init --kit engineer
@@ -228,7 +228,7 @@ See [Agent Issues](/docs/support/troubleshooting/agent-issues) for agent-specifi
 
 ```bash
 # Check frontmatter format
-head -n 10 .claude/commands/core/cook.md
+head -n 10 .agencyos/commands/core/cook.md
 ```
 
 ✅ **Correct format**:
@@ -276,7 +276,7 @@ description: Implement a feature
 
 ```bash
 # Find duplicates
-find .claude/commands -name "*.md" -exec grep -l "^name: cook$" {} \;
+find .agencyos/commands -name "*.md" -exec grep -l "^name: cook$" {} \;
 
 # Should show only one file
 
@@ -320,7 +320,7 @@ cp -r .claude .claude.backup
 python main.py init --kit engineer
 
 # Restore custom files if needed
-cp .claude.backup/commands/my-custom.md .claude/commands/
+cp .claude.backup/commands/my-custom.md .agencyos/commands/
 
 # Verify
 /cook test command
@@ -334,10 +334,10 @@ cp .claude.backup/commands/my-custom.md .claude/commands/
 
 ```bash
 # Check file permissions
-ls -la .claude/
+ls -la .agencyos/
 
 # Fix permissions (Unix/Linux/macOS)
-chmod -R 755 .claude/
+chmod -R 755 .agencyos/
 
 # On Windows (PowerShell as Admin)
 icacls .claude /grant Everyone:F /T
@@ -352,7 +352,7 @@ icacls .claude /grant Everyone:F /T
 AgencyOS requires this structure:
 
 ```
-.claude/
+.agencyos/
 ├── agents/          # AI agent definitions
 │   ├── planner.md
 │   ├── researcher.md
@@ -377,19 +377,19 @@ CLAUDE.md           # Configuration
 ```bash
 # Check all required directories
 for dir in agents commands skills workflows; do
-  if [ -d ".claude/$dir" ]; then
-    echo "✅ .claude/$dir exists"
+  if [ -d ".agencyos/$dir" ]; then
+    echo "✅ .agencyos/$dir exists"
   else
-    echo "❌ .claude/$dir missing"
+    echo "❌ .agencyos/$dir missing"
   fi
 done
 
 # Count command files
-find .claude/commands -name "*.md" | wc -l
+find .agencyos/commands -name "*.md" | wc -l
 # Should show 30+
 
 # Count agent files
-find .claude/agents -name "*.md" | wc -l
+find .agencyos/agents -name "*.md" | wc -l
 # Should show 12+
 ```
 
@@ -415,10 +415,10 @@ cat ~/.agencyos/logs/latest.log
 
 ```bash
 # Test agent directly
-cat .claude/agents/planner.md
+cat .agencyos/agents/planner.md
 
 # Test command parsing
-head -n 20 .claude/commands/core/cook.md
+head -n 20 .agencyos/commands/core/cook.md
 
 # Test AgencyOS CLI
 claude --version
@@ -453,7 +453,7 @@ cp -r .claude .claude.backup
 python main.py init --kit engineer
 
 # Restore custom commands
-cp .claude.backup/commands/my-custom.md .claude/commands/
+cp .claude.backup/commands/my-custom.md .agencyos/commands/
 
 # Test
 /cook hello world
@@ -533,7 +533,7 @@ claude --dangerously-skip-permissions
   tree .claude -L 2
 
   echo -e "\n=== Command Files ==="
-  find .claude/commands -name "*.md"
+  find .agencyos/commands -name "*.md"
 
   echo -e "\n=== Recent Errors ==="
   tail -50 ~/.agencyos/logs/latest.log

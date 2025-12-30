@@ -87,7 +87,7 @@ cat llms.txt | node scripts/analyze-llms-txt.js -
 
 **Environment Config:**
 ```
-process.env > .claude/skills/docs-seeker/.env > .claude/skills/.env > .claude/.env
+process.env > .agencyos/skills/docs-seeker/.env > .agencyos/skills/.env > .agencyos/.env
 ```
 
 ## Pro Tips

@@ -273,7 +273,7 @@ Run `/test` frequently to catch issues early.
 ## Team Collaboration
 
 ### Sharing Configuration
-Share `.claude/` directory and generated specs with your team via git.
+Share `.agencyos/` directory and generated specs with your team via git.
 
 ### Onboarding Team Members
 

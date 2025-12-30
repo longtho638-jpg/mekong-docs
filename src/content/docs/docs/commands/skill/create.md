@@ -147,7 +147,7 @@ Structure:
 9. Troubleshooting
 
 File created:
-.claude/skills/mongodb.md (2,847 words)
+.agencyos/skills/mongodb.md (2,847 words)
 
 Key sections included:
 ✓ Clear use cases
@@ -239,7 +239,7 @@ Minor improvements needed:
 
 Summary:
 ---
-✓ Skill created: .claude/skills/mongodb.md
+✓ Skill created: .agencyos/skills/mongodb.md
 ✓ 2,847 words
 ✓ 17 examples
 ✓ 8 major sections
@@ -248,7 +248,7 @@ Summary:
 ✓ Quality score: 9.2/10
 
 Next steps:
-1. Review skill: cat .claude/skills/mongodb.md
+1. Review skill: cat .agencyos/skills/mongodb.md
 2. Test skill: /ask [mongodb question]
 3. Iterate if needed: /skill:fix-logs
 ```
@@ -309,7 +309,7 @@ Skill structure:
 10. Troubleshooting
 
 File created:
-.claude/skills/polar.md (3,124 words)
+.agencyos/skills/polar.md (3,124 words)
 
 ✓ 23 code examples extracted from llms.txt
 ✓ API endpoints documented
@@ -407,7 +407,7 @@ Skill sections:
 10. Troubleshooting
 
 File created:
-.claude/skills/cloudflare-workers.md (4,126 words)
+.agencyos/skills/cloudflare-workers.md (4,126 words)
 
 ✓ 31 code examples
 ✓ CLI commands documented
@@ -611,14 +611,14 @@ Standard workflow:
 /skill:create [description or URL]
 
 # 2. Review skill
-cat .claude/skills/[skill-name].md
+cat .agencyos/skills/[skill-name].md
 
 # 3. Test skill
 /ask [question related to skill]
 # Skill should automatically activate
 
 # 4. If issues found
-/skill:fix-logs .claude/skills/[skill-name].md
+/skill:fix-logs .agencyos/skills/[skill-name].md
 
 # 5. Iterate until satisfied
 
@@ -633,7 +633,7 @@ After `/skill:create` completes:
 ### Skill File
 
 ```
-.claude/skills/[skill-name].md
+.agencyos/skills/[skill-name].md
 ```
 
 Complete skill prompt ready to use
@@ -722,14 +722,14 @@ Once created, skills activate automatically:
 **Check:**
 ```bash
 # 1. Verify skill exists
-ls .claude/skills/
+ls .agencyos/skills/
 
 # 2. Check skill format
-cat .claude/skills/[name].md
+cat .agencyos/skills/[name].md
 # Should have clear "When to Use" section
 
 # 3. Fix if needed
-/skill:fix-logs .claude/skills/[name].md
+/skill:fix-logs .agencyos/skills/[name].md
 ```
 
 ### Low Quality Score
@@ -758,7 +758,7 @@ cat plans/skill-evaluation-*.md
 
 # Or manually edit skill file
 # Then validate
-/skill:fix-logs .claude/skills/[name].md
+/skill:fix-logs .agencyos/skills/[name].md
 ```
 
 ## Next Steps

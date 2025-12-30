@@ -27,7 +27,7 @@ Fix agent skills based on errors and issues found in `logs.txt`. This command an
 ### 1. Skill File Path
 
 ```bash
-/skill:fix-logs .claude/skills/mongodb.md
+/skill:fix-logs .agencyos/skills/mongodb.md
 ```
 
 ### 2. Natural Language (finds skill automatically)
@@ -91,7 +91,7 @@ Invokes **tester** agent to:
 ### Fix Skill After Usage Errors
 
 ```bash
-/skill:fix-logs .claude/skills/polar.md
+/skill:fix-logs .agencyos/skills/polar.md
 ```
 
 **logs.txt content:**
@@ -151,7 +151,7 @@ Phase 2: Skill Diagnosis (30 seconds)
 ---
 Agent: debugger
 
-Analyzing .claude/skills/polar.md...
+Analyzing .agencyos/skills/polar.md...
 
 Current state:
 - 3,124 words
@@ -412,7 +412,7 @@ Lines changed: 87
 Quality improvement: 9.2 → 9.8
 
 Files updated:
-✓ .claude/skills/polar.md
+✓ .agencyos/skills/polar.md
 
 Next steps:
 1. Test skill with original questions
@@ -423,7 +423,7 @@ Next steps:
 ### Fix Skill with Missing Documentation
 
 ```bash
-/skill:fix-logs .claude/skills/cloudflare-workers.md
+/skill:fix-logs .agencyos/skills/cloudflare-workers.md
 ```
 
 **logs.txt content:**
@@ -698,7 +698,7 @@ Webhook verification wrong
 
 ```bash
 # 1. Fix skill
-/skill:fix-logs .claude/skills/polar.md
+/skill:fix-logs .agencyos/skills/polar.md
 
 # 2. Test with original question
 /ask [how do I verify Polar webhooks]
@@ -715,7 +715,7 @@ After `/skill:fix-logs` completes:
 ### Updated Skill
 
 ```
-.claude/skills/[skill-name].md
+.agencyos/skills/[skill-name].md
 ```
 
 Fixed and improved
@@ -760,7 +760,7 @@ touch logs.txt
 **Check:**
 ```bash
 # 1. Verify skill file updated
-cat .claude/skills/[name].md
+cat .agencyos/skills/[name].md
 
 # 2. Test skill activation
 /ask [test question]
@@ -781,7 +781,7 @@ cat .claude/skills/[name].md
 /skill:fix-logs [skill-path with detailed description of issue from logs]
 
 # Or manually search
-grep -n "keyword" .claude/skills/[name].md
+grep -n "keyword" .agencyos/skills/[name].md
 ```
 
 ## After Fixing
@@ -790,10 +790,10 @@ Standard workflow:
 
 ```bash
 # 1. Fix skill
-/skill:fix-logs .claude/skills/[name].md
+/skill:fix-logs .agencyos/skills/[name].md
 
 # 2. Review changes
-git diff .claude/skills/[name].md
+git diff .agencyos/skills/[name].md
 
 # 3. Test skill
 /ask [original failing question]

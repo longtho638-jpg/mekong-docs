@@ -150,7 +150,7 @@ AgencyOS creates standard project structure:
 
 ```
 my-project/
-├── .claude/           # AgencyOS configuration
+├── .agencyos/           # AgencyOS configuration
 ├── docs/              # Generated documentation
 │   ├── project-overview-pdr.md
 │   ├── system-architecture.md
@@ -452,7 +452,7 @@ After bootstrapping your project:
 2. **Testing**: Regular `/test` runs
 3. **Documentation**: Keep `/docs:update` current
 4. **Deployment**: Set up CI/CD with `/plan ci`
-5. **Team Collaboration**: Share `.claude/` configuration
+5. **Team Collaboration**: Share `.agencyos/` configuration
 
 ## Resources
 

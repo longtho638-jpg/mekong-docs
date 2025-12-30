@@ -19,7 +19,7 @@ Quick planning without research. Analyzes codebase and creates implementation pl
 
 ## How It Works
 
-1. **Pre-Creation Check**: Checks for active plan in `.claude/active-plan`
+1. **Pre-Creation Check**: Checks for active plan in `.agencyos/active-plan`
 2. **Codebase Analysis**: Reads `codebase-summary.md`, `code-standards.md`, `system-architecture.md`, `project-overview-pdr.md`
 3. **Plan Creation**: Uses `planner` subagent to create implementation plan
 4. **User Review**: Asks for approval before proceeding

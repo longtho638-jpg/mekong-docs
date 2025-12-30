@@ -72,7 +72,7 @@ node console.js --url https://example.com --types error,warn --duration 10000
 ## Quick Reference
 
 ### Available Scripts
-All located in `.claude/skills/chrome-devtools/scripts/`:
+All located in `.agencyos/skills/chrome-devtools/scripts/`:
 
 **Automation**: `navigate.js`, `screenshot.js`, `click.js`, `fill.js`, `evaluate.js`
 **Analysis**: `snapshot.js`, `console.js`, `network.js`, `performance.js`
@@ -87,7 +87,7 @@ All located in `.claude/skills/chrome-devtools/scripts/`:
 
 ### Setup
 ```bash
-cd .claude/skills/chrome-devtools/scripts
+cd .agencyos/skills/chrome-devtools/scripts
 npm install                    # Install dependencies
 ./install-deps.sh              # Linux/WSL only: system libs
 brew install imagemagick       # Optional: screenshot compression

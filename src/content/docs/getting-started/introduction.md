@@ -55,7 +55,7 @@ AgencyOS operates in two complementary modes:
 | Mode | Entry Point | Focus |
 |------|-------------|-------|
 | **Mekong-CLI** | `python main.py` | Agency automation, deployment |
-| **Claude Code** | Slash commands `/cook` | Software development |
+| **AgencyOS IDE** | Slash commands `/cook` | Software development |
 
 **Mekong-CLI** (standalone Python CLI):
 ```bash
@@ -64,13 +64,13 @@ python main.py agents
 python main.py deploy
 ```
 
-**Claude Code** (requires IDE):
+**AgencyOS IDE** (requires IDE):
 ```
 /cook add user authentication
 /plan project roadmap
 ```
 
-> **Note**: Slash commands like `/cook`, `/plan`, `/fix` require Claude Code IDE with AgencyOS installed.
+> **Note**: Slash commands like `/cook`, `/plan`, `/fix` require AgencyOS IDE IDE with AgencyOS installed.
 
 ## How It Works
 

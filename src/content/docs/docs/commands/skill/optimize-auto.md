@@ -34,7 +34,7 @@ Automatic skill optimization without approval gates. Applies improvements direct
 **Output**:
 ```
 Creating backup...
-Backup: $HOME/.claude/skills/better-auth/.backup-251129-2030/
+Backup: $HOME/.agencyos/skills/better-auth/.backup-251129-2030/
 
 Analyzing skill: better-auth
 Goal: reduce token usage
@@ -77,8 +77,8 @@ Optimization complete!
 
 ```
 Creating backup...
-Source: $HOME/.claude/skills/better-auth/
-Backup: $HOME/.claude/skills/better-auth/.backup-251129-2030/
+Source: $HOME/.agencyos/skills/better-auth/
+Backup: $HOME/.agencyos/skills/better-auth/.backup-251129-2030/
 
 Backed up:
 ├── prompt.md
@@ -185,7 +185,7 @@ Skill restored to previous state.
 Every optimization creates a timestamped backup:
 
 ```
-$HOME/.claude/skills/{skill-name}/
+$HOME/.agencyos/skills/{skill-name}/
 ├── prompt.md (current)
 ├── references/
 ├── scripts/
@@ -349,10 +349,10 @@ Backups kept for manual cleanup:
 
 ```
 # List backups
-ls $HOME/.claude/skills/my-skill/.backup-*/
+ls $HOME/.agencyos/skills/my-skill/.backup-*/
 
 # Clean old backups
-rm -rf $HOME/.claude/skills/my-skill/.backup-251128-*/
+rm -rf $HOME/.agencyos/skills/my-skill/.backup-251128-*/
 ```
 
 ## Related Commands

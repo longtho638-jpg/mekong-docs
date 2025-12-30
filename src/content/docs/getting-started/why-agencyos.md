@@ -138,7 +138,7 @@ python main.py deploy
 
 **Best for**: Agency automation, deployment, regional vibes
 
-### 2. Claude Code Integration (Development)
+### 2. AgencyOS IDE Integration (Development)
 
 ```
 /cook add user authentication

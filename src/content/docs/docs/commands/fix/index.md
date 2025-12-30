@@ -59,7 +59,7 @@ Active plan found: plans/251128-auth-system/plan.md
 → Routing to /code plans/251128-auth-system/plan.md
 ```
 
-If an active plan exists at `<WORKING-DIR>/.claude/active-plan`, routes to `/code` instead.
+If an active plan exists at `<WORKING-DIR>/.agencyos/active-plan`, routes to `/code` instead.
 
 ## Decision Tree
 

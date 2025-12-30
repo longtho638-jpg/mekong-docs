@@ -235,7 +235,7 @@ pie title WIN³ Alignment Target
 | **LLM** | OpenRouter + LangChain | Agent orchestration, context management |
 | **Models** | Gemini 2.0 Flash, GPT-4o | Primary reasoning engines |
 | **CLI** | Node.js + Commander.js | Command interface |
-| **Config** | `.claude/` directory | Agents, commands, skills definitions |
+| **Config** | `.agencyos/` directory | Agents, commands, skills definitions |
 | **Context** | MCP (Model Context Protocol) | Tool integration, memory |
 | **Database** | Supabase PostgreSQL + RLS | State persistence, logs |
 

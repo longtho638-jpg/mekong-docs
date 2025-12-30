@@ -96,7 +96,7 @@ No overlap → Safe for parallel execution
 
 ## Pro Tips
 
-1. **Read First**: Check `.claude/active-plan` for current plan path
+1. **Read First**: Check `.agencyos/active-plan` for current plan path
 2. **Ownership Strict**: If not in ownership list, don't touch it
 3. **Phase Order**: Sequential phases (01, 04) must run in order; parallel phases (02, 03) can run simultaneously
 4. **YAGNI**: Only implement what's in the phase spec, nothing more

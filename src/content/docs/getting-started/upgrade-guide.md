@@ -15,7 +15,7 @@ Already using AgencyOS CLI? AgencyOS enhances your workflow without breaking exi
 **Stays the Same**:
 - AgencyOS CLI CLI and interface
 - Existing project structure
-- .claude/ directory (extended, not replaced)
+- .agencyos/ directory (extended, not replaced)
 - Chat-based interaction
 
 **New Capabilities**:
@@ -32,8 +32,8 @@ git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Initialize in existing project
 python main.py init
-# → Adds .claude/CLAUDE.md, skills/, workflows/
-# → Existing .claude/commands/ preserved
+# → Adds .agencyos/CLAUDE.md, skills/, workflows/
+# → Existing .agencyos/commands/ preserved
 ```
 
 ### Upgrading AgencyOS
@@ -87,7 +87,7 @@ Combine commands for complete workflows:
 
 **Supported**:
 - AgencyOS CLI v1.0+
-- Existing .claude/commands/ (fully compatible)
+- Existing .agencyos/commands/ (fully compatible)
 - Custom prompts (still work as-is)
 
 **Not Supported**:
@@ -97,13 +97,13 @@ Combine commands for complete workflows:
 ## FAQs
 
 **Q: Do I need to rewrite existing commands?**
-A: No. AgencyOS commands coexist with your custom .claude/commands/
+A: No. AgencyOS commands coexist with your custom .agencyos/commands/
 
 **Q: Can I still use regular chat?**
 A: Yes. AgencyOS adds slash commands, doesn't remove chat.
 
 **Q: What if I don't like AgencyOS?**
-A: Uninstall and delete .claude/CLAUDE.md. No breaking changes.
+A: Uninstall and delete .agencyos/CLAUDE.md. No breaking changes.
 
 ## Next Steps
 

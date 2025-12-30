@@ -30,7 +30,7 @@ Anthropic's agentic coding tool combining autonomous planning, execution, and va
 |---------|-------------|
 | **Subagents** | Specialized agents (planner, code-reviewer, tester, debugger, docs-manager, ui-ux-designer, database-admin) |
 | **Agent Skills** | Modular capabilities with SKILL.md + bundled resources loaded progressively |
-| **Slash Commands** | User-defined operations in `.claude/commands/` expanding to prompts |
+| **Slash Commands** | User-defined operations in `.agencyos/commands/` expanding to prompts |
 | **Hooks** | Event-driven shell commands (SessionStart, PreToolUse, PostToolUse, Stop, SubagentStop) |
 | **MCP Servers** | Model Context Protocol integrations for external tools |
 | **Plugins** | Packaged collections distributed via marketplace |

@@ -13,7 +13,7 @@ Hooks allow you to extend AgencyOS CLI with custom scripts that run at specific 
 
 ## Overview
 
-Hooks are configured in `.claude/settings.json` and execute shell commands in response to AgencyOS CLI events.
+Hooks are configured in `.agencyos/settings.json` and execute shell commands in response to AgencyOS CLI events.
 
 ### Available Hook Events
 
@@ -27,7 +27,7 @@ Hooks are configured in `.claude/settings.json` and execute shell commands in re
 
 ## Configuration
 
-Hooks are defined in `.claude/settings.json`:
+Hooks are defined in `.agencyos/settings.json`:
 
 ```json
 {
@@ -37,7 +37,7 @@ Hooks are defined in `.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "node .claude/hooks/dev-rules-reminder.cjs"
+            "command": "node .agencyos/hooks/dev-rules-reminder.cjs"
           }
         ]
       }
@@ -48,7 +48,7 @@ Hooks are defined in `.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "node .claude/hooks/scout-block.cjs"
+            "command": "node .agencyos/hooks/scout-block.cjs"
           }
         ]
       }
@@ -67,7 +67,7 @@ Hooks are defined in `.claude/settings.json`:
 
 ### 1. Development Rules Reminder
 
-**File:** `.claude/hooks/dev-rules-reminder.cjs`
+**File:** `.agencyos/hooks/dev-rules-reminder.cjs`
 
 **Purpose:** Reminds Claude about development rules before processing prompts.
 
@@ -82,7 +82,7 @@ Hooks are defined in `.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "node .claude/hooks/dev-rules-reminder.cjs"
+            "command": "node .agencyos/hooks/dev-rules-reminder.cjs"
           }
         ]
       }
@@ -92,13 +92,13 @@ Hooks are defined in `.claude/settings.json`:
 ```
 
 **What it does:**
-- Checks `.claude/workflows/development-rules.md`
+- Checks `.agencyos/workflows/development-rules.md`
 - Injects rule reminders into Claude's context
 - Ensures consistent code quality standards
 
 ### 2. Scout Block
 
-**File:** `.claude/hooks/scout-block.cjs`
+**File:** `.agencyos/hooks/scout-block.cjs`
 
 **Purpose:** Prevents file operations during scout mode to keep context focused.
 
@@ -114,7 +114,7 @@ Hooks are defined in `.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "node .claude/hooks/scout-block.cjs"
+            "command": "node .agencyos/hooks/scout-block.cjs"
           }
         ]
       }
@@ -130,7 +130,7 @@ Hooks are defined in `.claude/settings.json`:
 
 ### 3. Discord Notifications (Manual)
 
-**File:** `.claude/hooks/send-discord.sh`
+**File:** `.agencyos/hooks/send-discord.sh`
 
 **Purpose:** Sends rich notifications to Discord when tasks complete.
 
@@ -144,25 +144,25 @@ Hooks are defined in `.claude/settings.json`:
 
 2. **Configure Environment:**
    ```bash
-   # .env or .claude/.env
+   # .env or .agencyos/.env
    DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/YOUR_ID/YOUR_TOKEN
    ```
 
 3. **Make Executable:**
    ```bash
-   chmod +x .claude/hooks/send-discord.sh
+   chmod +x .agencyos/hooks/send-discord.sh
    ```
 
 4. **Test:**
    ```bash
-   ./.claude/hooks/send-discord.sh 'Test notification'
+   ./.agencyos/hooks/send-discord.sh 'Test notification'
    ```
 
 **Usage in Workflows:**
 ```markdown
-<!-- In .claude/workflows/development-rules.md -->
+<!-- In .agencyos/workflows/development-rules.md -->
 - When implementation complete, run:
-  `./.claude/hooks/send-discord.sh 'Task completed: [summary]'`
+  `./.agencyos/hooks/send-discord.sh 'Task completed: [summary]'`
 ```
 
 **Message Format:**
@@ -183,7 +183,7 @@ Hooks are defined in `.claude/settings.json`:
 
 ### 4. Telegram Notifications
 
-**File:** `.claude/hooks/telegram_notify.sh`
+**File:** `.agencyos/hooks/telegram_notify.sh`
 
 **Purpose:** Sends detailed notifications to Telegram with tool usage stats.
 
@@ -202,12 +202,12 @@ Hooks are defined in `.claude/settings.json`:
 
 3. **Configure Environment:**
    ```bash
-   # .env or .claude/.env
+   # .env or .agencyos/.env
    TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
    TELEGRAM_CHAT_ID=987654321
    ```
 
-4. **Configure Hook (add to `.claude/settings.json`):**
+4. **Configure Hook (add to `.agencyos/settings.json`):**
 
    > **Note:** Telegram hooks are not configured by default. Add this to your `settings.json` to enable automatic notifications.
 
@@ -219,7 +219,7 @@ Hooks are defined in `.claude/settings.json`:
            "hooks": [
              {
                "type": "command",
-               "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/telegram_notify.sh"
+               "command": "${CLAUDE_PROJECT_DIR}/.agencyos/hooks/telegram_notify.sh"
              }
            ]
          }
@@ -229,7 +229,7 @@ Hooks are defined in `.claude/settings.json`:
            "hooks": [
              {
                "type": "command",
-               "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/telegram_notify.sh"
+               "command": "${CLAUDE_PROJECT_DIR}/.agencyos/hooks/telegram_notify.sh"
              }
            ]
          }
@@ -266,7 +266,7 @@ Files Modified:
 ### Basic Hook Structure
 
 ```javascript
-// .claude/hooks/my-hook.cjs
+// .agencyos/hooks/my-hook.cjs
 
 // Read hook input from stdin (JSON)
 let input = '';
@@ -323,7 +323,7 @@ process.stdin.on('end', () => {
 ### Example: Logging Hook
 
 ```javascript
-// .claude/hooks/log-tools.cjs
+// .agencyos/hooks/log-tools.cjs
 const fs = require('fs');
 
 let input = '';
@@ -346,7 +346,7 @@ process.stdin.on('end', () => {
 ### Example: Blocking Hook
 
 ```javascript
-// .claude/hooks/prevent-secrets.cjs
+// .agencyos/hooks/prevent-secrets.cjs
 let input = '';
 process.stdin.on('data', chunk => input += chunk);
 process.stdin.on('end', () => {
@@ -377,8 +377,8 @@ Hooks can access these environment variables:
 AgencyOS hooks load environment variables in this priority:
 
 1. System environment variables
-2. `.claude/.env` (project-level)
-3. `.claude/hooks/.env` (hook-specific)
+2. `.agencyos/.env` (project-level)
+3. `.agencyos/hooks/.env` (hook-specific)
 
 ## Best Practices
 

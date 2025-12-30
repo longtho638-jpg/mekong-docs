@@ -375,7 +375,7 @@ cat plans/*/plan.md | grep -A 20 "Dependency Graph"
 If no path provided, uses active plan:
 ```bash
 /code:parallel
-# Uses plan from .claude/active-plan
+# Uses plan from .agencyos/active-plan
 ```
 
 ## Related Commands

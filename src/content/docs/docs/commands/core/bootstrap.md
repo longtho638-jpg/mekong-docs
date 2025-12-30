@@ -182,7 +182,7 @@ After running `/bootstrap`, you'll have:
 
 ```
 my-project/
-├── .claude/              # AgencyOS configuration
+├── .agencyos/              # AgencyOS configuration
 │   ├── commands/         # Custom slash commands
 │   ├── agents/           # Agent definitions
 │   └── workflows/        # Development workflows

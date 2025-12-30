@@ -53,7 +53,7 @@ Execute MCP server tools (screenshots, browser automation, docs lookup) in isola
 
 **Gemini CLI Required:** Install `npm i -g @google/gemini-cli` for primary execution (direct scripts auto-fallback if missing)
 
-**Config Location:** `.claude/.mcp.json` - add servers like context7, human-mcp with API keys in `env` section
+**Config Location:** `.agencyos/.mcp.json` - add servers like context7, human-mcp with API keys in `env` section
 
 **Error Handling:** Agent reports failures with actionable fixes (timeout → check URL, connection → verify .mcp.json)
 

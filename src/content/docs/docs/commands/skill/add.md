@@ -33,7 +33,7 @@ Extend existing skills with new references or executable scripts. Uses progressi
 **Output**:
 ```
 Validating skill: better-auth
-Found: $HOME/.claude/skills/better-auth/
+Found: $HOME/.agencyos/skills/better-auth/
 
 Analyzing reference: https://better-auth.dev/docs/api
 Type: URL (documentation)
@@ -50,7 +50,7 @@ Token impact: +2,400 tokens (loaded on-demand)
 
 ## Arguments
 
-- `[skill-name]`: Target skill name (must exist in `$HOME/.claude/skills/`)
+- `[skill-name]`: Target skill name (must exist in `$HOME/.agencyos/skills/`)
 - `[reference-or-script-prompt]`: URL, file path, or script description
 
 ## Reference Types
@@ -116,7 +116,7 @@ Processing:
 
 ```
 Checking skill existence...
-Found: $HOME/.claude/skills/better-auth/
+Found: $HOME/.agencyos/skills/better-auth/
 ├── prompt.md
 ├── references/
 └── scripts/
@@ -221,7 +221,7 @@ Token-efficient loading strategy:
 
 ```
 Validating skill: better-auth
-Found at: $HOME/.claude/skills/better-auth/
+Found at: $HOME/.agencyos/skills/better-auth/
 
 Current structure:
 ├── prompt.md (core instructions)

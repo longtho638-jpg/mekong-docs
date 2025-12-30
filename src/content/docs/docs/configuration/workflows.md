@@ -18,7 +18,7 @@ Workflows are the backbone of AgencyOS's agent coordination system. They provide
 
 ## What are Workflows?
 
-Workflows are markdown files stored in `.claude/workflows/` that contain:
+Workflows are markdown files stored in `.agencyos/workflows/` that contain:
 
 - Development guidelines and rules
 - Agent coordination protocols
@@ -322,7 +322,7 @@ Ensure workflows are properly configured:
 
 ```bash
 # Check workflow files exist
-ls .claude/workflows/
+ls .agencyos/workflows/
 
 # Should show:
 # - development-rules.md
@@ -331,7 +331,7 @@ ls .claude/workflows/
 # - primary-workflow.md
 
 # Verify file contents
-cat .claude/workflows/development-rules.md
+cat .agencyos/workflows/development-rules.md
 ```
 
 ## Common Issues
@@ -372,7 +372,7 @@ Now that you understand workflows:
 
 - [Agents](/docs/agents/) - Learn about the 14 specialized agents
 - [Commands](/docs/commands/) - Explore available commands
-- [Development Rules](/.claude/workflows/development-rules.md) - Read the full development rules
+- [Development Rules](/.agencyos/workflows/development-rules.md) - Read the full development rules
 
 ---
 

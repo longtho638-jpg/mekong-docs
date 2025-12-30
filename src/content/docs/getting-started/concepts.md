@@ -134,7 +134,7 @@ Reusable knowledge modules injected into agent context.
 - **Tools**: FFmpeg, ImageMagick, MCP Builder
 
 **How Skills Work**:
-1. Skill files stored in `.claude/skills/`
+1. Skill files stored in `.agencyos/skills/`
 2. Auto-activated based on codebase detection (e.g., detects `next.config.js` → activates Next.js skill)
 3. Skill provides agent with best practices, examples, gotchas
 4. Agent makes better decisions (uses right patterns, avoids common mistakes)
@@ -163,7 +163,7 @@ System:
 
 ## CLAUDE.md Configuration
 
-All agent behaviors, skills, and workflows configured in `.claude/CLAUDE.md`:
+All agent behaviors, skills, and workflows configured in `.agencyos/CLAUDE.md`:
 
 ```markdown
 # CLAUDE.md

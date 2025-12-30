@@ -28,8 +28,8 @@ Anthropic has focused on training Claude models for coding capabilities, so they
 
 1. Get your Gemini key at [Google AI Studio](https://aistudio.google.com/api-keys)
 2. Find the `.env.example` file: 
-- If you installed AgencyOS at project scope: copy `.claude/.env.example` to `.claude/.env`
-- If you installed AgencyOS at global scope: copy `~/.claude/.env.example` to `~/.claude/.env` (for Windows users: `%USERPROFILE%\.claude\.env`)
+- If you installed AgencyOS at project scope: copy `.agencyos/.env.example` to `.agencyos/.env`
+- If you installed AgencyOS at global scope: copy `~/.agencyos/.env.example` to `~/.agencyos/.env` (for Windows users: `%USERPROFILE%\.claude\.env`)
 3. Open the `.env` file and fill in the value for `GEMINI_API_KEY`
 
 That's it!
@@ -94,7 +94,7 @@ And Agent Skills was created to solve that problem.
 
 So I've converted all Human MCP tools into Agent Skills, so we can have more free space in the context window for agents to work.
 
-Therefore, `GEMINI_API_KEY` has been moved to `.claude/.env`, you just need to enter the value there.
+Therefore, `GEMINI_API_KEY` has been moved to `.agencyos/.env`, you just need to enter the value there.
 
 Typically, skills will be automatically activated depending on the context the agent is handling.
 

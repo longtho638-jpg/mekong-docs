@@ -62,7 +62,7 @@ python main.py init -g --kit engineer
 - Intelligently merges files
 - Preserves your custom changes
 - Protects sensitive files
-- Maintains custom `.claude/` files
+- Maintains custom `.agencyos/` files
 
 **Options:**
 - `--dir <dir>` - Target directory (default: current directory)
@@ -207,17 +207,17 @@ These files are **never overwritten** during updates:
 
 ### Custom .claude Files
 
-Your custom files in `.claude/` directory are automatically preserved:
+Your custom files in `.agencyos/` directory are automatically preserved:
 
 **Example:**
 ```
 Your project:
-  .claude/
+  .agencyos/
     ├── commands/standard.md  (from AgencyOS)
     └── commands/my-custom.md (your custom command)
 
 After update:
-  .claude/
+  .agencyos/
     ├── commands/standard.md  (updated from release)
     └── commands/my-custom.md (preserved automatically)
 ```

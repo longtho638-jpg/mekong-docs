@@ -111,16 +111,16 @@ python main.py deploy
 
 ## CLI vs Slash Commands
 
-> **Important**: Mekong-CLI and Claude Code slash commands are different systems.
+> **Important**: Mekong-CLI and AgencyOS IDE slash commands are different systems.
 
-| Feature | Mekong-CLI | Claude Code |
+| Feature | Mekong-CLI | AgencyOS IDE |
 |---------|------------|-------------|
 | **Entry** | `python main.py` | Slash commands `/cook` |
-| **Runs in** | Any terminal | Claude Code IDE |
+| **Runs in** | Any terminal | AgencyOS IDE IDE |
 | **Focus** | Agency automation | Development workflows |
 | **Commands** | `init`, `agents`, `deploy` | `/cook`, `/plan`, `/fix` |
 
-**Slash commands** (`/cook`, `/plan`, `/fix`) require **Claude Code IDE** with AgencyOS installed.
+**Slash commands** (`/cook`, `/plan`, `/fix`) require **AgencyOS IDE IDE** with AgencyOS installed.
 
 **Mekong-CLI** is a standalone Python CLI for agency automation.
 
@@ -178,7 +178,7 @@ python main.py run-scout <feature>  # Test Scout agent
 A: Mekong-CLI is Python-based and stack-agnostic. It automates agency operations, not code generation.
 
 **Q: What if I want code generation features?**
-A: Install AgencyOS in Claude Code IDE for `/cook`, `/plan`, `/fix` commands.
+A: Install AgencyOS in AgencyOS IDE IDE for `/cook`, `/plan`, `/fix` commands.
 
 **Q: Do I need API keys?**
 A: For basic features, no. For advanced (Gemini, ElevenLabs), yes.

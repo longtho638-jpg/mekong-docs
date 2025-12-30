@@ -58,7 +58,7 @@ Transform your workflow knowledge into reusable AI skills that Claude can activa
 ### Skill Structure
 
 ```
-.claude/skills/skill-name/
+.agencyos/skills/skill-name/
 ├── SKILL.md              # <100 lines, core instructions
 ├── scripts/              # Python/Node scripts with tests
 ├── references/           # Documentation loaded as needed
@@ -72,7 +72,7 @@ Transform your workflow knowledge into reusable AI skills that Claude can activa
 3. **Initialize** - Runs `init_skill.py` to create template
 4. **Implement** - Writes SKILL.md, adds bundled resources, writes tests
 5. **Validate** - Runs `package_skill.py` to check structure and package
-6. **Save** - Outputs to `.claude/skills/` for immediate use
+6. **Save** - Outputs to `.agencyos/skills/` for immediate use
 
 ### Key Requirements
 

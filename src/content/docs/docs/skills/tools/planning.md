@@ -93,7 +93,7 @@ Ensure plan is actionable by junior developers. Include code snippets/pseudocode
 
 **Not activating?** Say: *"Use planning skill to create a detailed implementation plan with research and trade-off analysis."*
 
-**Active Plan State**: Planning skill creates `.claude/active-plan` to prevent version proliferation. It prompts "Continue with existing plan? [Y/n]" when resuming work.
+**Active Plan State**: Planning skill creates `.agencyos/active-plan` to prevent version proliferation. It prompts "Continue with existing plan? [Y/n]" when resuming work.
 
 **Directory Structure**:
 ```

@@ -24,10 +24,10 @@ Agents not responding or behaving unexpectedly? Debug and fix agent problems fas
 
 ```bash
 # 1. Verify agent file exists
-ls .claude/agents/ | grep planner
+ls .agencyos/agents/ | grep planner
 
 # 2. Check agent file format
-cat .claude/agents/planner.md
+cat .agencyos/agents/planner.md
 
 # 3. Verify AgencyOS CLI is running
 claude --version
@@ -49,7 +49,7 @@ claude
 
 ```bash
 # Check agent file exists
-ls -la .claude/agents/
+ls -la .agencyos/agents/
 
 # Should show:
 # planner.md
@@ -64,7 +64,7 @@ ls -la .claude/agents/
 
 ```bash
 # View agent file
-cat .claude/agents/planner.md
+cat .agencyos/agents/planner.md
 ```
 
 **Required structure**:
@@ -223,7 +223,7 @@ Commands are designed to orchestrate agents sequentially. If conflicts occur:
 
 ```bash
 # Check command implementation
-cat .claude/commands/core/cook.md
+cat .agencyos/commands/core/cook.md
 
 # Look for orchestration logic:
 # 1. Planner (creates plan)
@@ -257,7 +257,7 @@ git stash
 ^C
 
 # Check if agent file has infinite loop logic
-cat .claude/agents/problematic-agent.md
+cat .agencyos/agents/problematic-agent.md
 
 # Look for:
 # - Missing completion conditions
@@ -288,7 +288,7 @@ Planner agent starts
 
 ```bash
 # Check planner agent file
-cat .claude/agents/planner.md | grep -i "spawn\|delegate"
+cat .agencyos/agents/planner.md | grep -i "spawn\|delegate"
 
 # Should contain instructions like:
 # "Spawn researcher agents in parallel"
@@ -302,7 +302,7 @@ cat .claude/agents/planner.md | grep -i "spawn\|delegate"
 python main.py init --kit engineer
 
 # Verify planner agent updated
-cat .claude/agents/planner.md | head -20
+cat .agencyos/agents/planner.md | head -20
 
 # Test delegation
 /plan implement user authentication
@@ -354,7 +354,7 @@ python main.py init --kit engineer
 
 ```bash
 # View agent model
-cat .claude/agents/planner.md | grep model:
+cat .agencyos/agents/planner.md | grep model:
 
 # Fast models:
 # - gemini-2.5-flash-agent
@@ -417,7 +417,7 @@ See [Performance Issues](/docs/support/troubleshooting/performance-issues) for o
 
 ```bash
 # Check researcher agent exists
-cat .claude/agents/researcher.md
+cat .agencyos/agents/researcher.md
 
 # Review researcher agent logic
 ```
@@ -450,7 +450,7 @@ curl "https://www.searchapi.io/api/v1/search?q=test&api_key=$SEARCH_API_KEY"
 
 ```bash
 # Check review criteria in agent file
-cat .claude/agents/code-reviewer.md
+cat .agencyos/agents/code-reviewer.md
 
 # Adjust sensitivity if needed (custom agent):
 # - Set review_level: strict/moderate/lenient
@@ -535,7 +535,7 @@ tail -f plans/reports/*.md
 
 ```bash
 # View agent prompt
-cat .claude/agents/planner.md
+cat .agencyos/agents/planner.md
 
 # Test with minimal command
 /plan hello world feature
@@ -552,7 +552,7 @@ cat .claude/agents/planner.md
 
 ```bash
 # List all agents
-ls -1 .claude/agents/
+ls -1 .agencyos/agents/
 
 # Expected output (12 agents):
 # code-reviewer.md
@@ -569,7 +569,7 @@ ls -1 .claude/agents/
 # tester.md
 
 # Verify count
-ls .claude/agents/*.md | wc -l
+ls .agencyos/agents/*.md | wc -l
 # Should show: 12
 ```
 
@@ -577,7 +577,7 @@ ls .claude/agents/*.md | wc -l
 
 ```bash
 # Check each agent has required frontmatter
-for agent in .claude/agents/*.md; do
+for agent in .agencyos/agents/*.md; do
   echo "Checking $agent..."
   grep -q "^name:" "$agent" && echo "✅ Has name" || echo "❌ Missing name"
   grep -q "^model:" "$agent" && echo "✅ Has model" || echo "❌ Missing model"
@@ -621,7 +621,7 @@ done
 # Collect agent diagnostics
 {
   echo "=== Agent Files ==="
-  ls -lh .claude/agents/
+  ls -lh .agencyos/agents/
 
   echo -e "\n=== Agent Reports ==="
   ls -lh plans/reports/

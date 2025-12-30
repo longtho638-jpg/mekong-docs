@@ -415,8 +415,8 @@ Next: Review changes, then /git:cm
 **Problem**: `/command` not recognized
 
 **Solutions:**
-1. Verify you're in a AgencyOS project (`ls .claude/`)
-2. Check command exists (`ls .claude/commands/`)
+1. Verify you're in a AgencyOS project (`ls .agencyos/`)
+2. Check command exists (`ls .agencyos/commands/`)
 3. Run `python main.py init` to get latest commands
 4. Restart AgencyOS CLI
 

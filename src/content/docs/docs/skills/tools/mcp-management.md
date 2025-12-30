@@ -86,7 +86,7 @@ gemini -p "Take screenshot" -y -m gemini-2.5-flash
 
 ## Configuration
 
-MCP servers configured in `.claude/.mcp.json`:
+MCP servers configured in `.agencyos/.mcp.json`:
 
 ```json
 {
@@ -105,7 +105,7 @@ MCP servers configured in `.claude/.mcp.json`:
 
 **Gemini CLI Integration** (recommended):
 ```bash
-mkdir -p .gemini && ln -sf .claude/.mcp.json .gemini/settings.json
+mkdir -p .gemini && ln -sf .agencyos/.mcp.json .gemini/settings.json
 ```
 
 ## Quick Start
@@ -117,7 +117,7 @@ mkdir -p .gemini && ln -sf .claude/.mcp.json .gemini/settings.json
 npm install -g @google/gemini-cli
 
 # Create symlink for shared config
-mkdir -p .gemini && ln -sf .claude/.mcp.json .gemini/settings.json
+mkdir -p .gemini && ln -sf .agencyos/.mcp.json .gemini/settings.json
 
 # Execute with stdin piping
 echo "Take a screenshot of https://example.com. Return JSON only per GEMINI.md instructions." | gemini -y -m gemini-2.5-flash
@@ -131,7 +131,7 @@ echo "Take a screenshot of https://example.com. Return JSON only per GEMINI.md i
 ### Method 2: Direct Scripts
 
 ```bash
-cd .claude/skills/mcp-management/scripts && npm install
+cd .agencyos/skills/mcp-management/scripts && npm install
 
 # List tools (saves to assets/tools.json)
 npx tsx cli.ts list-tools

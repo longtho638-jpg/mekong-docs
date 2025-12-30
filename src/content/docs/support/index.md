@@ -153,7 +153,7 @@ Expected: Should detect Next.js project and activate Better Auth skill
 Project structure:
 - next.config.js exists
 - package.json includes better-auth
-- .claude/CLAUDE.md configured
+- .agencyos/CLAUDE.md configured
 
 I've tried running /skill:refresh and restarting AgencyOS.
 ```

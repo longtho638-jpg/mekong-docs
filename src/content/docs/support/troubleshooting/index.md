@@ -48,16 +48,16 @@ python main.py --version
 **Issue**: `/command` does nothing
 
 **Fix**:
-1. Check `.claude/commands/` exists
+1. Check `.agencyos/commands/` exists
 2. Verify command file exists
 3. Check frontmatter is valid
 
 ```bash
 # List available commands
-ls .claude/commands/**/*.md
+ls .agencyos/commands/**/*.md
 
 # Test specific command
-cat .claude/commands/core/cook.md
+cat .agencyos/commands/core/cook.md
 ```
 
 [More command fixes →](/docs/support/troubleshooting/command-errors)
@@ -67,16 +67,16 @@ cat .claude/commands/core/cook.md
 **Issue**: Agent not activating
 
 **Fix**:
-1. Verify `.claude/agents/` exists
+1. Verify `.agencyos/agents/` exists
 2. Check agent file format
 3. Confirm AgencyOS CLI is running
 
 ```bash
 # List agents
-ls .claude/agents/*.md
+ls .agencyos/agents/*.md
 
 # Verify agent file
-cat .claude/agents/planner.md
+cat .agencyos/agents/planner.md
 ```
 
 [More agent fixes →](/docs/support/troubleshooting/agent-issues)
@@ -125,7 +125,7 @@ cp -r .claude .claude.backup
 python main.py init --kit engineer
 
 # Restore custom files
-cp .claude.backup/commands/my-custom.md .claude/commands/
+cp .claude.backup/commands/my-custom.md .agencyos/commands/
 ```
 
 ### Clear Cache
@@ -191,10 +191,10 @@ tree .claude -L 2
 - Read error messages fully
 
 ❌ **Don't**:
-- Modify core `.claude/` files directly
+- Modify core `.agencyos/` files directly
 - Ignore API rate limits
 - Skip version updates
-- Delete `.claude/` directory
+- Delete `.agencyos/` directory
 
 ---
 

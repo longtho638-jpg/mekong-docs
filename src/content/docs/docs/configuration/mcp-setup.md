@@ -20,14 +20,14 @@ AgencyOS delegates MCP (Model Context Protocol) servers to the dedicated **mcp-m
 
 1. **Copy the template config**
    ```bash
-   cp .claude/.mcp.json.example .claude/.mcp.json
+   cp .agencyos/.mcp.json.example .agencyos/.mcp.json
    ```
 2. **Customize the MCP roster**
    - Remove the default sample servers: `context7`, `human-mcp`, `chrome-devtools`, `sequential-thinking`.
    - Add only the MCP servers you truly need to avoid unnecessary token use.
-3. **Save the configuration** so the subagent can bootstrap clients from `.claude/.mcp.json` on demand.
+3. **Save the configuration** so the subagent can bootstrap clients from `.agencyos/.mcp.json` on demand.
 
-> 💡 Keep `.claude/.mcp.json` outside your main prompts so the core agent never loads server manifests unless explicitly requested.
+> 💡 Keep `.agencyos/.mcp.json` outside your main prompts so the core agent never loads server manifests unless explicitly requested.
 
 ---
 
@@ -61,10 +61,10 @@ Anthropic's “Code Execution with MCP” pattern inspired a lightweight approac
 
 ### How It Works
 
-1. The **mcp-management** skill bundle stores script snippets that instantiate MCP clients from `.claude/.mcp.json`.
+1. The **mcp-management** skill bundle stores script snippets that instantiate MCP clients from `.agencyos/.mcp.json`.
 2. The **mcp-manager** subagent is granted these skills and remains dormant until a `/use-mcp` command fires.
 3. When invoked, the subagent:
-   - Loads `.claude/.mcp.json`.
+   - Loads `.agencyos/.mcp.json`.
    - Connects to the declared MCP servers.
    - Enumerates available tools and selects the best option for the prompt.
    - Executes the tool invocation and streams the response back to the main agent.
@@ -79,7 +79,7 @@ Even with subagent isolation, processing massive MCP catalogs still burns tokens
 
 ## Next Steps
 
-- Keep refining `.claude/.mcp.json` as your toolset evolves.
+- Keep refining `.agencyos/.mcp.json` as your toolset evolves.
 - Version-control the file privately if it includes API endpoints or sensitive details.
 - Pair `/use-mcp` with automation commands (e.g., `/cook`, `/fix`, `/plan`) to mix bespoke tools with AgencyOS’s native agents.
 

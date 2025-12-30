@@ -818,7 +818,7 @@ Journal will pick up these comments.
 
 ### Custom Journal Sections
 
-Add file: `.claude/journal-template.md`
+Add file: `.agencyos/journal-template.md`
 ```markdown
 # Custom Section
 

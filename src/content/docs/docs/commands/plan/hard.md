@@ -19,7 +19,7 @@ Thorough planning with research. Uses multiple researcher agents for comprehensi
 
 ## How It Works
 
-1. **Pre-Creation Check**: Checks for active plan in `.claude/active-plan`
+1. **Pre-Creation Check**: Checks for active plan in `.agencyos/active-plan`
 2. **Research Phase**: Multiple `researcher` agents (max 2) research in parallel
 3. **Codebase Analysis**: Reads docs; uses `/scout` if `codebase-summary.md` unavailable or >3 days old
 4. **Gather & Plan**: Main agent gathers research/scout reports, passes to `planner` subagent

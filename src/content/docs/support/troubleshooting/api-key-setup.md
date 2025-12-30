@@ -280,7 +280,7 @@ Edit agent files to use OpenRouter models:
 
 ```bash
 # Example: Use Claude Opus for planning
-cat > .claude/agents/planner.md << 'EOF'
+cat > .agencyos/agents/planner.md << 'EOF'
 ---
 name: planner
 description: Creates implementation plans

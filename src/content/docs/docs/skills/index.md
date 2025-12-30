@@ -128,7 +128,7 @@ Skills activate through **semantic matching** on your prompt:
 
 Every skill contains:
 ```
-.claude/skills/[skill-name]/
+.agencyos/skills/[skill-name]/
 ├── SKILL.md          # Core instructions (<100 lines)
 ├── references/       # Detailed documentation
 └── scripts/          # Automation scripts (optional)
@@ -156,7 +156,7 @@ skill-creator will:
 2. Design skill structure
 3. Create SKILL.md with proper frontmatter
 4. Add references if needed
-5. Save to `.claude/skills/`
+5. Save to `.agencyos/skills/`
 
 ### Troubleshooting
 

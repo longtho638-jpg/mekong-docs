@@ -41,10 +41,10 @@ and ensure cohesive delivery of features that meet specifications and architectu
 
 ## Workflows
 
-- Primary workflow: `./.claude/workflows/primary-workflow.md`
-- Development rules: `./.claude/workflows/development-rules.md`
-- Orchestration protocols: `./.claude/workflows/orchestration-protocol.md`
-- Documentation management: `./.claude/workflows/documentation-management.md`
+- Primary workflow: `./.agencyos/workflows/primary-workflow.md`
+- Development rules: `./.agencyos/workflows/development-rules.md`
+- Orchestration protocols: `./.agencyos/workflows/orchestration-protocol.md`
+- Documentation management: `./.agencyos/workflows/documentation-management.md`
 
 ## Documentation Management
 
@@ -82,7 +82,7 @@ AgencyOS uses references:
 ✅ Good Approach (File System As Context)
 # CLAUDE.md
 ## Workflows
-- Development rules: `./.claude/workflows/development-rules.md`
+- Development rules: `./.agencyos/workflows/development-rules.md`
 ```
 
 This keeps CLAUDE.md lightweight while maintaining access to detailed guidelines.
@@ -106,13 +106,13 @@ If you want to modify `CLAUDE.md` without it being overwritten:
 python main.py init --exclude CLAUDE.md
 ```
 
-**Better approach**: Instead of modifying CLAUDE.md, customize the referenced files in `.claude/workflows/` which are less likely to change during updates.
+**Better approach**: Instead of modifying CLAUDE.md, customize the referenced files in `.agencyos/workflows/` which are less likely to change during updates.
 
 ## Structure Overview
 
 CLAUDE.md links to several key directories:
 
-### `.claude/workflows/`
+### `.agencyos/workflows/`
 
 Contains detailed workflow instructions:
 
@@ -182,7 +182,7 @@ Updates documentation
 ### Do's
 
 ✅ Keep CLAUDE.md concise with links to detailed docs
-✅ Update workflow files in `.claude/workflows/` as needed
+✅ Update workflow files in `.agencyos/workflows/` as needed
 ✅ Maintain project docs in `docs/` directory
 ✅ Use `python main.py init --exclude CLAUDE.md` if you must customize
 
@@ -215,7 +215,7 @@ Ensure your CLAUDE.md is properly configured:
 cat CLAUDE.md
 
 # Verify linked files exist
-ls .claude/workflows/
+ls .agencyos/workflows/
 
 # Check documentation structure
 ls docs/
