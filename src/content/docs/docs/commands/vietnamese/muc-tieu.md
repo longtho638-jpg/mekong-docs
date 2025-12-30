@@ -1,6 +1,10 @@
 ---
 title: "Muc Tieu"
 description: "ZERO-EFFORT Muc Tieu automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /muc-tieu

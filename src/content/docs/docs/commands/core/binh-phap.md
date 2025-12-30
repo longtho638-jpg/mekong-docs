@@ -1,6 +1,10 @@
 ---
 title: "Binh Pháp Strategic"
 description: "Apply strategic principles"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /binh-phap

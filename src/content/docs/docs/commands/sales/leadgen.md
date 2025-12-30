@@ -1,6 +1,10 @@
 ---
 title: "Leadgen"
 description: "ZERO-EFFORT Leadgen automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /leadgen

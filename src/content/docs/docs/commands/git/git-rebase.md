@@ -1,6 +1,10 @@
 ---
 title: "Git Rebase"
 description: "Rebase operations"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /git-rebase

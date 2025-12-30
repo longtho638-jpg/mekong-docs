@@ -1,6 +1,10 @@
 ---
 title: "Intelligence Gathering"
 description: "Market intel"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /intel

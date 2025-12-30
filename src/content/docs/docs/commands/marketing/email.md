@@ -1,6 +1,10 @@
 ---
 title: "Email"
 description: "ZERO-EFFORT Email automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /email

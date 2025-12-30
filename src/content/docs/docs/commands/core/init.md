@@ -1,6 +1,10 @@
 ---
 title: "Initialize Project"
 description: "Setup AgencyOS"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /init

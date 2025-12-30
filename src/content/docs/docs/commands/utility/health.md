@@ -1,6 +1,10 @@
 ---
 title: "Health"
 description: "ZERO-EFFORT Health automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /health

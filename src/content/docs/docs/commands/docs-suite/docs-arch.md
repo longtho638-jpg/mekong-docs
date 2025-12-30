@@ -1,6 +1,10 @@
 ---
 title: "Docs Arch"
 description: "ZERO-EFFORT Docs Arch automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /docs-arch

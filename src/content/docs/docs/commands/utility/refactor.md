@@ -1,6 +1,10 @@
 ---
 title: "Refactor"
 description: "ZERO-EFFORT Refactor automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /refactor

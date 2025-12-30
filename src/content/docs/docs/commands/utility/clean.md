@@ -1,6 +1,10 @@
 ---
 title: "Clean"
 description: "ZERO-EFFORT Clean automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /clean

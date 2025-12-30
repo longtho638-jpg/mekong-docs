@@ -1,6 +1,10 @@
 ---
 title: "Timeline"
 description: "ZERO-EFFORT Timeline automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /timeline

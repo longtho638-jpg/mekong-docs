@@ -1,6 +1,10 @@
 ---
 title: "Feedback"
 description: "ZERO-EFFORT Feedback automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /feedback

@@ -1,6 +1,10 @@
 ---
 title: "Hop Dong"
 description: "ZERO-EFFORT Hop Dong automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /hop-dong

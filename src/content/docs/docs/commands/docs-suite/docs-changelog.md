@@ -1,6 +1,10 @@
 ---
 title: "Docs Changelog"
 description: "ZERO-EFFORT Docs Changelog automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /docs-changelog

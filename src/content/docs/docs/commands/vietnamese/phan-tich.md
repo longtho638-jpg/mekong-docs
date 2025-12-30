@@ -1,6 +1,10 @@
 ---
 title: "Phan Tich"
 description: "ZERO-EFFORT Phan Tich automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /phan-tich

@@ -1,6 +1,10 @@
 ---
 title: "Branding"
 description: "ZERO-EFFORT Branding automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /branding

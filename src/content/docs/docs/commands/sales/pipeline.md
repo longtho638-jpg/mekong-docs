@@ -1,6 +1,10 @@
 ---
 title: "Pipeline"
 description: "ZERO-EFFORT Pipeline automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /pipeline

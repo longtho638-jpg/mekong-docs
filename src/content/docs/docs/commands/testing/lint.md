@@ -1,6 +1,10 @@
 ---
 title: "Lint"
 description: "ZERO-EFFORT Lint automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /lint

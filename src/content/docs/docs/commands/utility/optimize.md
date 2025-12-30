@@ -1,6 +1,10 @@
 ---
 title: "Optimize"
 description: "ZERO-EFFORT Optimize automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /optimize

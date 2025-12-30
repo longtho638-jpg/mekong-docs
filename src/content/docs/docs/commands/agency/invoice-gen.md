@@ -1,6 +1,10 @@
 ---
 title: "Invoice Gen"
 description: "ZERO-EFFORT Invoice Gen automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /invoice-gen

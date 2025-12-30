@@ -1,6 +1,10 @@
 ---
 title: "E2E Test"
 description: "ZERO-EFFORT E2E Test automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /e2e-test

@@ -1,6 +1,10 @@
 ---
 title: "Api"
 description: "ZERO-EFFORT Api automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /api

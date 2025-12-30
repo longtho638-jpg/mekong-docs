@@ -1,6 +1,10 @@
 ---
 title: "Smoke"
 description: "ZERO-EFFORT Smoke automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /smoke

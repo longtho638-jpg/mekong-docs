@@ -1,6 +1,10 @@
 ---
 title: "Install"
 description: "ZERO-EFFORT Install automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /install

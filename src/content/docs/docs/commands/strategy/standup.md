@@ -1,6 +1,10 @@
 ---
 title: "Standup"
 description: "ZERO-EFFORT Standup automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /standup

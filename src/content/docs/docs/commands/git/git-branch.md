@@ -1,6 +1,10 @@
 ---
 title: "Git Branch"
 description: "Branch management"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /git-branch

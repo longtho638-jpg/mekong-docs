@@ -1,6 +1,10 @@
 ---
 title: "Seo"
 description: "ZERO-EFFORT Seo automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /seo

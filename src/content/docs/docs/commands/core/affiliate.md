@@ -1,6 +1,10 @@
 ---
 title: "Affiliate Program"
 description: "Manage affiliate partnerships"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /affiliate

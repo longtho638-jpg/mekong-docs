@@ -1,6 +1,10 @@
 ---
 title: "Crisis Management"
 description: "Handle emergencies"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /crisis

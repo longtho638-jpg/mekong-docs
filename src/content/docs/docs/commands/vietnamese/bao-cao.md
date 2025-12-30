@@ -1,6 +1,10 @@
 ---
 title: "Bao Cao"
 description: "ZERO-EFFORT Bao Cao automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /bao-cao

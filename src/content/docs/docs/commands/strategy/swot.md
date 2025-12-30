@@ -1,6 +1,10 @@
 ---
 title: "Swot"
 description: "ZERO-EFFORT Swot automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /swot

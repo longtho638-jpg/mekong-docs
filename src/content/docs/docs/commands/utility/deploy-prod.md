@@ -1,6 +1,10 @@
 ---
 title: "Deploy Prod"
 description: "ZERO-EFFORT Deploy Prod automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /deploy-prod

@@ -1,6 +1,10 @@
 ---
 title: "Ngan Sach"
 description: "ZERO-EFFORT Ngan Sach automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /ngan-sach

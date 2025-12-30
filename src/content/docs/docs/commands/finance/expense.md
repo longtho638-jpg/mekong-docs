@@ -1,6 +1,10 @@
 ---
 title: "Expense"
 description: "ZERO-EFFORT Expense automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /expense

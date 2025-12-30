@@ -1,6 +1,10 @@
 ---
 title: "Video Production"
 description: "Create videos"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /video

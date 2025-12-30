@@ -1,6 +1,10 @@
 ---
 title: "Setup MCP"
 description: "Configure MCP servers"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /setup-mcp

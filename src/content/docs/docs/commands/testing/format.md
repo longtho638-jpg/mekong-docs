@@ -1,6 +1,10 @@
 ---
 title: "Format"
 description: "ZERO-EFFORT Format automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /format

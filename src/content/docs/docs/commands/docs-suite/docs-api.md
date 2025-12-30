@@ -1,6 +1,10 @@
 ---
 title: "Docs Api"
 description: "ZERO-EFFORT Docs Api automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /docs-api

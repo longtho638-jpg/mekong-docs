@@ -1,6 +1,10 @@
 ---
 title: "Close"
 description: "ZERO-EFFORT Close automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /close

@@ -1,6 +1,10 @@
 ---
 title: "Typecheck"
 description: "ZERO-EFFORT Typecheck automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /typecheck

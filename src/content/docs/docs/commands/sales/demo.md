@@ -1,6 +1,10 @@
 ---
 title: "Demo"
 description: "ZERO-EFFORT Demo automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /demo

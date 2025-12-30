@@ -1,6 +1,10 @@
 ---
 title: "Pr"
 description: "ZERO-EFFORT Pr automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /pr

@@ -1,6 +1,10 @@
 ---
 title: "Git Tag"
 description: "Release tagging"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /git-tag

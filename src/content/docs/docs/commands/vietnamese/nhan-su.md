@@ -1,6 +1,10 @@
 ---
 title: "Nhan Su"
 description: "ZERO-EFFORT Nhan Su automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /nhan-su

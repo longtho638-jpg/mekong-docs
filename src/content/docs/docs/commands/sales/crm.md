@@ -1,6 +1,10 @@
 ---
 title: "Crm"
 description: "ZERO-EFFORT Crm automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /crm

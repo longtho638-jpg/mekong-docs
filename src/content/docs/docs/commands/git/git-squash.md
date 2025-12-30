@@ -1,6 +1,10 @@
 ---
 title: "Git Squash"
 description: "Squash commits"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /git-squash

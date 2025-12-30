@@ -1,6 +1,10 @@
 ---
 title: "Estimate"
 description: "ZERO-EFFORT Estimate automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /estimate

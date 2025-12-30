@@ -1,6 +1,10 @@
 ---
 title: "Roadmap"
 description: "ZERO-EFFORT Roadmap automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /roadmap

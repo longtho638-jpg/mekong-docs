@@ -1,6 +1,10 @@
 ---
 title: "Git Merge"
 description: "Merge branches"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /git-merge

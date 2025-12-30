@@ -1,6 +1,10 @@
 ---
 title: "Ads"
 description: "ZERO-EFFORT Ads automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /ads

@@ -1,6 +1,10 @@
 ---
 title: "Danh Gia"
 description: "ZERO-EFFORT Danh Gia automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /danh-gia

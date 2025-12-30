@@ -1,6 +1,10 @@
 ---
 title: "Doi Tac"
 description: "ZERO-EFFORT Doi Tac automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /doi-tac

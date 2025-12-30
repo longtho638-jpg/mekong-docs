@@ -1,6 +1,10 @@
 ---
 title: "Git Cherry Pick"
 description: "Cherry pick commits"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /git-cherry

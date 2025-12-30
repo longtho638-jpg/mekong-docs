@@ -1,6 +1,10 @@
 ---
 title: "Operations"
 description: "Daily operations"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /ops

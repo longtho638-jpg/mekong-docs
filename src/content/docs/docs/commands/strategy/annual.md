@@ -1,6 +1,10 @@
 ---
 title: "Annual"
 description: "ZERO-EFFORT Annual automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /annual

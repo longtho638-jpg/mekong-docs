@@ -1,6 +1,10 @@
 ---
 title: "Pricing"
 description: "ZERO-EFFORT Pricing automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /pricing

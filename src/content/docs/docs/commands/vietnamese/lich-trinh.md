@@ -1,6 +1,10 @@
 ---
 title: "Lich Trinh"
 description: "ZERO-EFFORT Lich Trinh automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /lich-trinh

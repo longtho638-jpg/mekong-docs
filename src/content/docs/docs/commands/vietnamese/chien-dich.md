@@ -1,6 +1,10 @@
 ---
 title: "Chien Dich"
 description: "ZERO-EFFORT Chien Dich automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /chien-dich

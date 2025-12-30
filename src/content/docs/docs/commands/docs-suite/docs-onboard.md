@@ -1,6 +1,10 @@
 ---
 title: "Docs Onboard"
 description: "ZERO-EFFORT Docs Onboard automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /docs-onboard

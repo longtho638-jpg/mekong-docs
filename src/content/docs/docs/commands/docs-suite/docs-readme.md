@@ -1,6 +1,10 @@
 ---
 title: "Docs Readme"
 description: "ZERO-EFFORT Docs Readme automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /docs-readme

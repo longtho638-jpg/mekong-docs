@@ -1,6 +1,10 @@
 ---
 title: "Unit Test"
 description: "ZERO-EFFORT Unit Test automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /unit-test

@@ -1,6 +1,10 @@
 ---
 title: "Invoice"
 description: "ZERO-EFFORT Invoice automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /invoice

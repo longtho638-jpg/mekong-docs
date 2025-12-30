@@ -1,6 +1,10 @@
 ---
 title: "Forecast"
 description: "ZERO-EFFORT Forecast automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /forecast

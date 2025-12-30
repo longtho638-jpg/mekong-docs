@@ -1,6 +1,10 @@
 ---
 title: "Handoff"
 description: "ZERO-EFFORT Handoff automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /handoff

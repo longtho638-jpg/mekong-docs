@@ -1,6 +1,10 @@
 ---
 title: "Update"
 description: "ZERO-EFFORT Update automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /update

@@ -1,6 +1,10 @@
 ---
 title: "Proposal"
 description: "ZERO-EFFORT Proposal automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /proposal

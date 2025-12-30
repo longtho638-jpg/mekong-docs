@@ -1,6 +1,10 @@
 ---
 title: "Bao Cao Tai Chinh"
 description: "ZERO-EFFORT Bao Cao Tai Chinh automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /bao-cao-tai-chinh

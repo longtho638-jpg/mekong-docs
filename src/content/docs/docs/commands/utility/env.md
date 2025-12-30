@@ -1,6 +1,10 @@
 ---
 title: "Env"
 description: "ZERO-EFFORT Env automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /env

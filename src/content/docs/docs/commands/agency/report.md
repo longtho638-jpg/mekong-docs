@@ -1,6 +1,10 @@
 ---
 title: "Report"
 description: "ZERO-EFFORT Report automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /report

@@ -1,6 +1,10 @@
 ---
 title: "Integration"
 description: "ZERO-EFFORT Integration automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /integration

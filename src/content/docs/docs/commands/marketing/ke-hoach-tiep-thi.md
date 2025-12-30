@@ -1,6 +1,10 @@
 ---
 title: "Ke Hoach Tiep Thi"
 description: "ZERO-EFFORT Ke Hoach Tiep Thi automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /ke-hoach-tiep-thi

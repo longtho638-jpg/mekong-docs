@@ -1,6 +1,10 @@
 ---
 title: "Du An"
 description: "ZERO-EFFORT Du An automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /du-an

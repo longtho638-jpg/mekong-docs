@@ -1,6 +1,10 @@
 ---
 title: "Docs Deploy"
 description: "ZERO-EFFORT Docs Deploy automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /docs-deploy

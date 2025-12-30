@@ -1,6 +1,10 @@
 ---
 title: "Git Bisect"
 description: "Find bug commits"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /git-bisect

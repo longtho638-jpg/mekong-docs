@@ -1,6 +1,10 @@
 ---
 title: "Contract"
 description: "ZERO-EFFORT Contract automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /contract

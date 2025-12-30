@@ -1,6 +1,10 @@
 ---
 title: "Project"
 description: "ZERO-EFFORT Project automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /project

@@ -1,6 +1,10 @@
 ---
 title: "Component"
 description: "ZERO-EFFORT Component automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /component

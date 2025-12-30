@@ -1,6 +1,10 @@
 ---
 title: "Scope"
 description: "ZERO-EFFORT Scope automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /scope

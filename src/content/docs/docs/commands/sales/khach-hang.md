@@ -1,6 +1,10 @@
 ---
 title: "Khach Hang"
 description: "ZERO-EFFORT Khach Hang automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /khach-hang

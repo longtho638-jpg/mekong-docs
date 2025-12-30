@@ -1,6 +1,10 @@
 ---
 title: "Content"
 description: "ZERO-EFFORT Content automation"
+section: docs
+category: commands
+order: 100
+published: true
 ---
 
 # /content
