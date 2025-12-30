@@ -125,3 +125,19 @@ Output: DynamicCard with issue counts
 ## Key Takeaway
 
 The code reviewer agent prevents production incidents by catching security vulnerabilities, type safety violations, and performance issues before merge. Use it as a quality gate in every PR workflow.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍形篇** (Quân Hình) - Formation - Code defense
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

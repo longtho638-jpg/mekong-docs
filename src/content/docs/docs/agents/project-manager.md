@@ -121,3 +121,18 @@ Output: Consolidated status report
 
 The project-manager is AgencyOS's orchestration layer: it doesn't code, test, or write docs—it tracks, reports, delegates, and maintains the single source of truth (project-roadmap.md) so your multi-agent system stays aligned.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **始計篇** (Thủy Kế) - Initial assessment - Project strategy
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

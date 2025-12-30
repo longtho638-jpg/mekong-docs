@@ -372,3 +372,18 @@ Now that you understand workflows:
 ---
 
 **Key Takeaway**: Workflows ensure all agents follow consistent patterns and coordinate effectively, resulting in high-quality, maintainable code.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **計篇** (Kế) - Strategic planning - Workflow design
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/setup-mcp` | Tự cấu hình MCP |
+
+📖 [Xem tất cả Commands](/docs/commands)

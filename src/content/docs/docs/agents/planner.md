@@ -209,3 +209,19 @@ Ready for: /@fullstack implement
 ## Key Takeaway
 
 Planning prevents waste. 10 minutes of research and analysis saves hours of refactoring when you discover you picked the wrong approach halfway through implementation.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **計篇** (Kế) - Strategic planning
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

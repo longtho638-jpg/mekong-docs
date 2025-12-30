@@ -109,3 +109,18 @@ Output: HTML/CSS + Lighthouse 90+ score
 
 AgencyOS UI/UX Designer agent ships award-winning interfaces in minutes, not days. Research-backed designs with production-ready code, WCAG compliance, and Lighthouse 90+ scores out of the box. No Figma needed.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **勢篇** (Thế) - Momentum - Visual impact
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

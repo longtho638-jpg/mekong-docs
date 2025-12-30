@@ -442,3 +442,18 @@ AgencyOS hooks load environment variables in this priority:
 ---
 
 **Key Takeaway**: Hooks extend AgencyOS CLI with custom automation - from development rule enforcement to real-time notifications. Use built-in Discord/Telegram hooks or create custom hooks to fit your workflow.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **九變篇** (Cửu Biến) - Adaptability - Custom behavior
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/setup-mcp` | Tự cấu hình MCP |
+
+📖 [Xem tất cả Commands](/docs/commands)

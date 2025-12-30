@@ -168,3 +168,18 @@ Commit + Push complete
 
 **git-manager automates professional Git operations with security-first conventional commits at 81% lower cost than baseline—no AI attribution, just clean commit history.**
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **行軍篇** (Hành Quân) - Marching - Version control
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -121,3 +121,19 @@ Fix applied + verified
 ## Key Takeaway
 
 Debugger agent systematically investigates technical issues from symptoms to root cause, providing actionable solutions with validation steps and prevention measures - turning hours of troubleshooting into 30-minute structured analysis.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **火攻篇** (Hoả Công) - Fire attack - Swift resolution
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

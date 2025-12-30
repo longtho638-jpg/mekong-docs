@@ -29,3 +29,19 @@ Generate a complete **Marketing Plan** tailored to your business and market.
 1. **Define clear objectives** - What success looks like
 2. **Know your budget** - Be realistic about resources
 3. **Test and iterate** - Marketing is ongoing optimization
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **作戰篇** (Tác Chiến) - Marketing execution
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

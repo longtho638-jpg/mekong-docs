@@ -150,3 +150,18 @@ Output: Code + tests + report
 
 **Fullstack Developer executes implementation phases with file-level isolation, enabling safe parallel backend/frontend development while maintaining code quality through automated testing.**
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **作戰篇** (Tác Chiến) - Waging war - Full implementation
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -227,3 +227,18 @@ Now that you understand AGENCYOS.md:
 ---
 
 **Key Takeaway**: AGENCYOS.md is a lightweight entry point that uses the file system as context, making AgencyOS efficient and maintainable.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **法篇** (Pháp) - Organization - Project constitution
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/setup-mcp` | Tự cấu hình MCP |
+
+📖 [Xem tất cả Commands](/docs/commands)

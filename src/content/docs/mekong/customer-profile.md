@@ -71,3 +71,19 @@ Create detailed **Customer Profiles** for your products or services, optimized f
 1. **Be specific** - More detailed input = more accurate output
 2. **Validate** - Cross-check with real customer data
 3. **Update** - Review and refresh quarterly
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **地形篇** (Địa Hình) - Terrain - Know your customer
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

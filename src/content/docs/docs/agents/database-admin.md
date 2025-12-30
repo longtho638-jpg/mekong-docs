@@ -126,3 +126,18 @@ Output: DynamicCard with performance metrics
 
 Database Admin agent turns 45-second queries into 0.8-second queries with index strategies and query rewrites. Designs production-ready schemas with proper normalization, constraints, and partitioning. Delivers actionable health reports with specific SQL fixes and cost impact ($4K/month savings typical).
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **地形篇** (Địa Hình) - Terrain - Data foundation
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

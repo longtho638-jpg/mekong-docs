@@ -114,3 +114,19 @@ Output: DynamicCard with recommendation
 ## Key Takeaway
 
 Brainstormer doesn't write code. It saves you from writing the wrong code. Use it before committing to complex architectural decisions. 10 minutes of brainstorming prevents weeks of refactoring.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **謀攻篇** (Mưu Công) - Offensive strategy - Ideas
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -127,3 +127,18 @@ Output: Incident report + lessons learned
 
 Journal Writer transforms expensive failures into permanent institutional knowledge through brutally honest documentation - capturing technical details, emotional reality, failed attempts, and systemic causes so teams learn once instead of failing repeatedly. Part of AgencyOS $99 toolkit.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **地形篇** (Địa Hình) - Terrain - Document journey
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

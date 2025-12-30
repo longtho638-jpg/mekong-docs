@@ -29,3 +29,19 @@ Create a comprehensive **Brand Identity** package for your business.
 1. **Start with values** - Define what you stand for
 2. **Be consistent** - Apply everywhere
 3. **Document everything** - Create a brand bible
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **勢篇** (Thế) - Momentum - Brand power
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

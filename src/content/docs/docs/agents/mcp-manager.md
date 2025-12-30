@@ -97,3 +97,18 @@ Output: Screenshot + notification
 
 MCP Manager isolates complex tool execution (browser automation, docs queries, screenshots) from your main Claude context - you get clean outputs, Claude stays fast. Access 100+ MCP tools via `/use-mcp [natural language task]`.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Tool integration
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

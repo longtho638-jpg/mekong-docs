@@ -29,3 +29,19 @@ Create compelling **Marketing Messages** and value propositions.
 1. **Lead with benefits** - What's in it for them?
 2. **Be specific** - Vague claims don't convert
 3. **Test variations** - A/B test your messaging
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **虛實篇** (Hư Thực) - Perception vs Reality
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

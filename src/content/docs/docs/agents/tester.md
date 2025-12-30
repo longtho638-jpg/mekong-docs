@@ -125,3 +125,19 @@ Dashboard: DynamicCard with metrics
 ## Key Takeaway
 
 Test execution isn't about 100% coverage - it's about 80%+ on critical paths with zero flaky tests. The tester agent finds failures, diagnoses root causes, and ensures your coverage targets before any commit goes through.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **虛實篇** (Hư Thực) - Illusion vs Reality - Find weak points
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

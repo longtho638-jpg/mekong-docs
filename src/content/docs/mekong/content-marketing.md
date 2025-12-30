@@ -29,3 +29,19 @@ Build a complete **Content Marketing** strategy for your business.
 1. **Quality over quantity** - Focus on value
 2. **Repurpose content** - One idea, many formats
 3. **Track engagement** - Optimize based on data
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **火攻篇** (Hoả Công) - Content disruption
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

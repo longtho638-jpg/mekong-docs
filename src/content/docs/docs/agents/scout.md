@@ -144,3 +144,19 @@ Output: Organized file list by category
 ## Key Takeaway
 
 Scout parallelizes file discovery across multiple AI agents (Gemini + OpenCode), delivering organized, actionable file lists in under 5 minutes—even for massive codebases. No guessing where authentication lives or which files handle payments. Scout maps it, you build it.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Gather market intel
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -150,3 +150,19 @@ All commands have **interactive mode** - just type the command without arguments
 ---
 
 *Mekong Business Commands v2.0 | 28 Commands | 106 Questions | Global Ready*
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **始計篇** (Thủy Kế) - Initial Assessment - Agency overview
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

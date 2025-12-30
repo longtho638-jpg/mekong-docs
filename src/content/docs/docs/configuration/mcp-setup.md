@@ -84,3 +84,18 @@ Even with subagent isolation, processing massive MCP catalogs still burns tokens
 - Pair `/use-mcp` with automation commands (e.g., `/cook`, `/fix`, `/plan`) to mix bespoke tools with AgencyOS’s native agents.
 
 With this workflow, you get the power of MCP without the usual context penalty.
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Tool integration
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/init` | Tự setup AgencyOS |
+| `/setup-mcp` | Tự cấu hình MCP |
+
+📖 [Xem tất cả Commands](/docs/commands)

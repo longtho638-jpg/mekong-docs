@@ -29,3 +29,19 @@ Develop a comprehensive **Growth Strategy** for sustainable expansion.
 1. **Focus on retention** - Growth without retention is a leaky bucket
 2. **Double down on what works** - Find your growth engine
 3. **Invest in systems** - Scale processes, not just people
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **勢篇** (Thế) - Momentum - Growth
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -114,3 +114,18 @@ Output: Aggregated file list
 
 Scout External parallelizes AI-powered searches using external tools for 3-5x faster file discovery in large codebases. Use for comprehensive coverage when internal Scout is too slow.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - External sources
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

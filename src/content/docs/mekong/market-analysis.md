@@ -57,3 +57,19 @@ Wholesale: $12.00
 1. **Run daily** to get the most current data
 2. **Compare across categories** to find opportunities
 3. **Track trends** rather than instant prices
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Market intel
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -137,3 +137,18 @@ Output: Multiple versions + A/B test plan
 
 The copywriter agent creates brutally honest, conversion-focused copy using psychological triggers, platform optimization, and specific metrics. No theory, no fluff—just copy that converts visitors into customers. Delivers multiple versions with A/B test plans and expected performance metrics. Part of AgencyOS $99 toolkit.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **九變篇** (Cửu Biến) - Adaptability - Content for context
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

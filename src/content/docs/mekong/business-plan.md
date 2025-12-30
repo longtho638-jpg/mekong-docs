@@ -30,3 +30,19 @@ Generate a complete **Business Plan** for your venture.
 1. **Be specific** about your target market
 2. **Include realistic** financial projections
 3. **Update regularly** as your business evolves
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **計篇** (Kế) - Strategic planning
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

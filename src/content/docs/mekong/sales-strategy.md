@@ -59,3 +59,19 @@ Create comprehensive **Sales Strategies** tailored to your market and offerings.
 1. **Start with positioning** - Know your unique value
 2. **Test pricing early** - Don't compete on price alone
 3. **Track metrics** - Optimize based on data
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **謀攻篇** (Mưu Công) - Sales strategy
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

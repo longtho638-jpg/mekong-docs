@@ -30,3 +30,19 @@ Your complete marketing toolkit within Agency OS.
 - **Work systematically** - Strategy first, tactics second
 - **Test and learn** - Marketing is iterative
 - **Stay consistent** - Brand building takes time
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **謀攻篇** (Mưu Công) - Marketing strategy
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

@@ -29,3 +29,19 @@ Generate creative **Social Media** content ideas for any platform.
 1. **Know your platform** - Each has different rules
 2. **Be authentic** - Don't just sell, connect
 3. **Engage daily** - Social is a two-way street
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍爭篇** (Quân Tranh) - Speed - Social engagement
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

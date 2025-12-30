@@ -174,3 +174,18 @@ Output: AgentReport with changes
 
 **Docs-manager keeps documentation synchronized with code automatically.** Run `/docs:init` for initial setup, `/docs:update` after features, `/docs:summarize` for overview. Integrates with Repomix and Scout for comprehensive analysis. Part of AgencyOS $99 toolkit.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **法篇** (Pháp) - Organization - Structure docs
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

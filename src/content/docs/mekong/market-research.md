@@ -29,3 +29,19 @@ Conduct comprehensive **Market Research** for your business.
 1. **Be specific** about your niche
 2. **Update quarterly** - Markets change fast
 3. **Act on insights** - Research without action is waste
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Research
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

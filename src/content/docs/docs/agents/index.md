@@ -183,3 +183,19 @@ mekong agents
 ---
 
 *Mekong CLI v2.0 | 7 AI Agents | Quad-Agent + Mekong-Specific*
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **計篇** (Kế) - Strategic calculations
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)

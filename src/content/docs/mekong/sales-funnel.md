@@ -29,3 +29,19 @@ Create high-converting **Sales Funnels** for your business.
 1. **Map the journey** - Understand each step
 2. **Reduce friction** - Remove unnecessary steps
 3. **Track everything** - Measure conversion at each stage
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **軍形篇** (Quân Hình) - Formation - Sales structure
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

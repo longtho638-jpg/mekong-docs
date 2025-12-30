@@ -29,3 +29,19 @@ Build an effective **PR Strategy** for your brand.
 1. **Build relationships** before you need them
 2. **Be newsworthy** - Create genuine stories
 3. **Measure impact** - Track media mentions
+
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **九變篇** (Cửu Biến) - Adaptability - PR pivot
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Auto-execute |
+|---------|--------------|
+| `/plan` | Tự tạo plan |
+| `/marketing` | Tự phân tích market |
+| `/scout` | Tự thu thập intel |
+
+📖 [Xem tất cả Commands](/docs/commands)

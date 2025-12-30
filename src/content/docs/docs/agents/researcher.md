@@ -163,3 +163,18 @@ Output: AgentReport with 15+ sources
 
 Researcher eliminates "tutorial hell" by validating 15+ sources in parallel, surfacing security risks, and delivering production-ready intelligence before you write a single line of code. Part of AgencyOS $99 toolkit.
 
+---
+
+## 🏯 Binh Pháp Alignment
+
+> **用間篇** (Dụng Gián) - Intelligence - Best practices
+
+### Zero-Effort Commands
+
+| Gõ lệnh | Agent tự động làm |
+|---------|-------------------|
+| `/plan` | Tự tạo implementation plan |
+| `/code` | Tự implement theo plan |
+| `/ship` | Tự test, review, deploy |
+
+📖 [Xem tất cả Commands](/docs/commands)
