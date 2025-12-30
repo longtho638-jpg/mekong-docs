@@ -125,27 +125,27 @@ const description = 'Real-time agency metrics, system health monitoring, and qui
           <h2>🚀 Quick Actions</h2>
         </div>
         <div class="actions-grid">
-          <button class="action-btn">
+          <button class="action-btn" data-action="proposal" data-url="/docs/commands/agency/proposal">
             <span class="action-icon">📝</span>
             <span class="action-label">New Proposal</span>
           </button>
-          <button class="action-btn">
+          <button class="action-btn" data-action="invoice" data-url="/docs/commands/finance/invoice">
             <span class="action-icon">💳</span>
             <span class="action-label">Create Invoice</span>
           </button>
-          <button class="action-btn">
+          <button class="action-btn" data-action="meeting" data-url="/docs/commands/agency/timeline">
             <span class="action-icon">📅</span>
             <span class="action-label">Schedule Meeting</span>
           </button>
-          <button class="action-btn">
+          <button class="action-btn" data-action="client" data-url="/docs/commands/agency/client">
             <span class="action-icon">👤</span>
             <span class="action-label">Add Client</span>
           </button>
-          <button class="action-btn">
+          <button class="action-btn" data-action="report" data-url="/docs/commands/agency/report">
             <span class="action-icon">📊</span>
             <span class="action-label">Run Report</span>
           </button>
-          <button class="action-btn">
+          <button class="action-btn" data-action="campaign" data-url="/docs/commands/marketing/email">
             <span class="action-icon">📧</span>
             <span class="action-label">Send Campaign</span>
           </button>
@@ -868,6 +868,48 @@ const description = 'Real-time agency metrics, system health monitoring, and qui
       renderMetrics(data);
     }
   }, 30000);
+
+  // ===================== QUICK ACTIONS CLICK HANDLERS =====================
+  
+  // Quick Actions buttons - navigate to command docs
+  document.querySelectorAll('.action-btn[data-url]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const url = btn.getAttribute('data-url');
+      if (url) {
+        // Show click feedback
+        btn.classList.add('clicked');
+        setTimeout(() => btn.classList.remove('clicked'), 200);
+        
+        // Navigate to command page
+        window.location.href = url;
+      }
+    });
+  });
+
+  // Suite chips - navigate to agentops filtered by suite
+  document.querySelectorAll('.suite-chip[data-suite]').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const suite = chip.getAttribute('data-suite');
+      // Navigate to AgentOps and highlight suite
+      window.location.href = `/agentops-architecture?suite=${suite}`;
+    });
+  });
+
+  // Priorities - toggle completion on click
+  document.querySelectorAll('.priority-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('done');
+      const text = item.querySelector('.priority-text');
+      if (item.classList.contains('done') && text) {
+        text.style.textDecoration = 'line-through';
+        text.style.opacity = '0.5';
+      } else if (text) {
+        text.style.textDecoration = 'none';
+        text.style.opacity = '1';
+      }
+    });
+  });
+
 </script>
 
 </LandingLayout>
