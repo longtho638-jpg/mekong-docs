@@ -1,11 +1,6 @@
 ---
 title: CLI Overview
-description: "Documentation for CLI Overview
-description:
-section: docs
-category: cli
-order: 0
-published: true"
+description: "Command-line tool for AgencyOS"
 section: docs
 category: cli
 order: 0
@@ -76,7 +71,7 @@ python main.py init -g --kit engineer
 By default, AgencyOS uses local configuration (`~/.agencyos`).
 
 For platform-specific **user-scoped settings**, use the `--global` flag:
-- **macOS/Linux**: `~/.claude`
+- **macOS/Linux**: `~/.agencyos`
 - **Windows**: `%LOCALAPPDATA%\.claude`
 
 Global mode uses user-scoped directories (no sudo required), allowing separate configurations for different projects.
@@ -87,30 +82,30 @@ Update the AgencyOS CLI itself to the latest version:
 
 ```bash
 # Update CLI to latest
-mk update
+git pull origin main
 ```
 
 **What it does:**
 - Updates the `mk` command-line tool to the latest version
 - Does NOT update AgencyOS Engineer files (use `python main.py init` for that)
 
-### mk versions
+### python3 main.py versions
 
 List available versions of AgencyOS releases:
 
 ```bash
 # Show all available versions
-mk versions
+python3 main.py versions
 
 # Filter by specific kit
-mk versions --kit engineer
-mk versions --kit marketing
+python3 main.py versions --kit engineer
+python3 main.py versions --kit marketing
 
 # Show more versions (default: 30)
-mk versions --limit 50
+python3 main.py versions --limit 50
 
 # Include prereleases and drafts
-mk versions --all
+python3 main.py versions --all
 ```
 
 **Options:**
@@ -280,20 +275,20 @@ python main.py init --verbose
 
 ```bash
 # Update ck CLI to latest version
-mk update
+git pull origin main
 ```
 
 ### Check Available Versions
 
 ```bash
 # List all versions
-mk versions
+python3 main.py versions
 
 # Filter by kit
-mk versions --kit engineer
+python3 main.py versions --kit engineer
 
 # Show more releases
-mk versions --limit 50
+python3 main.py versions --limit 50
 ```
 
 ## Troubleshooting
@@ -344,8 +339,8 @@ python main.py --version
 
 View help:
 ```bash
-mk --help
-mk -h
+python3 main.py --help
+python3 main.py -h
 ```
 
 ## Next Steps
