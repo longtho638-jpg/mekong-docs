@@ -48,6 +48,30 @@ AgencyOS is a comprehensive AI-powered operating system for agencies, featuring 
 - **Commands**: 125+ slash commands organized by business function
 - **Skills**: Reusable knowledge modules (Next.js, Better Auth, Docker, Supabase)
 
+## Two Usage Modes
+
+AgencyOS operates in two complementary modes:
+
+| Mode | Entry Point | Focus |
+|------|-------------|-------|
+| **Mekong-CLI** | `python main.py` | Agency automation, deployment |
+| **Claude Code** | Slash commands `/cook` | Software development |
+
+**Mekong-CLI** (standalone Python CLI):
+```bash
+python main.py init my-agency
+python main.py agents
+python main.py deploy
+```
+
+**Claude Code** (requires IDE):
+```
+/cook add user authentication
+/plan project roadmap
+```
+
+> **Note**: Slash commands like `/cook`, `/plan`, `/fix` require Claude Code IDE with AgencyOS installed.
+
 ## How It Works
 
 1. **Invoke Command**: Type `/cook "add user authentication"`

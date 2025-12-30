@@ -1,11 +1,6 @@
 ---
 title: Quick Start
-description: "Documentation for Quick Start
-description:
-section: getting-started
-category: getting-started
-order: 4
-published: true"
+description: Ship your first feature in 15 minutes with Mekong-CLI
 section: getting-started
 category: getting-started
 order: 4
@@ -14,297 +9,182 @@ published: true
 
 # Quick Start
 
-Ship production feature in 15 minutes. No boilerplate, no setup hell.
+Ship your first agency automation in 15 minutes with Mekong-CLI.
 
 ## Video Demo
 
-See AgencyOS in action - from installation to building UI from a screenshot:
-
-<div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🏯</div><h3 style="margin: 0 0 0.5rem 0;">Demo Video Coming Soon</h3><p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p></div>
-
-*More tutorials: [
+<div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🌊</div><h3 style="margin: 0 0 0.5rem 0;">Demo Video Coming Soon</h3><p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p></div>
 
 ## Prerequisites
 
-- AgencyOS CLI installed (`mk --version` works)
-- AgencyOS CLI running
-- Project initialized with AgencyOS
+- Mekong-CLI installed (`python main.py --help` works)
+- Python 3.8+
+- Project initialized
 
 **Don't have these?** See [Installation Guide](/docs/getting-started/installation)
 
-## Your First Feature
+## Your First Agency Project
 
-Add user authentication to Next.js app in 15 minutes.
-
-### Step 1: Bootstrap Project
+### Step 1: Initialize Project
 
 ```bash
-mk init my-app --kit engineer
-cd my-app
+# Clone and setup
+git clone https://github.com/longtho638-jpg/mekong-cli.git
+cd mekong-cli
+pip install -r requirements.txt
+
+# Initialize new agency project
+python main.py init my-agency
+cd my-agency
 ```
 
-**Created**:
-- `.claude/` - 14 AI agents, 30+ commands, 45 skills
-- `docs/` - Auto-generated project docs
-- `plans/` - Implementation plans storage
+**Created:**
+- Project directory from template
+- Configuration files
+- Agent setup files
 
-### Step 2: Plan Authentication
+### Step 2: Configure Your Vibe
 
 ```bash
-/plan add user authentication with email/password and OAuth
+# Set up regional voice/tone
+python main.py setup-vibe --location "Can Tho"
 ```
 
-**What happens** (30 seconds):
-1. `planner` agent spawns 3 `researcher` agents in parallel
-2. Researches Next.js 15 + Better Auth best practices
-3. Analyzes your codebase structure
-4. Creates detailed implementation plan
+**Select your niche:**
+| # | Niche | Description |
+|---|-------|-------------|
+| 1 | 🌾 rice-trading | Lúa Gạo |
+| 2 | 🐟 fish-seafood | Cá Tra |
+| 3 | 🛋️ furniture | Nội Thất |
+| 4 | 🏗️ construction | Vật Liệu XD |
+| 5 | 🚜 agriculture | Máy Nông Nghiệp |
 
-**Output**:
-```
-✓ planner: Research complete (3 sources analyzed)
-✓ planner: Plan created
-
-📄 plans/251030-auth-implementation.md
-
-Summary:
-• Better Auth with credentials + OAuth (Google, GitHub)
-• Session management with JWT
-• Login/signup/reset pages
-• Protected routes middleware
-• Files to create: 8
-• Files to modify: 4
-• Tests: 12 test cases
-• Estimated: 2 hours manually, 5 minutes with AgencyOS
-
-Next: /code plans/251030-auth-implementation.md
-```
-
-### Step 3: Review Plan
+### Step 3: Check Your AI Agents
 
 ```bash
-cat plans/251030-auth-implementation.md
+python main.py agents
 ```
 
-Scan the plan. Architecture solid? Continue.
+**Output:**
+```
+🌊 MEKONG-CLI AI Agents
 
-### Step 4: Implement
+   Quad-Agent System:
+      🔍 Scout: Thu thập thông tin [Ready]
+      ✏️ Editor: Biên tập nội dung [Ready]
+      🎬 Director: Đạo diễn video [Ready]
+      🤝 Community: Đăng bài & tương tác [Ready]
+
+   Mekong-Specific Agents:
+      📊 Market Analyst: Phân tích giá nông sản [Ready]
+      💬 Zalo Integrator: Tích hợp Zalo OA [Ready]
+      🎤 Local Copywriter: Content giọng địa phương [Ready]
+
+   Total: 7 agents ready
+```
+
+### Step 4: Setup Secrets
 
 ```bash
-/code plans/251030-auth-implementation.md
+python main.py generate-secrets
 ```
 
-**What happens** (5 minutes):
+**Prompts for:**
+- SUPABASE_URL
+- SUPABASE_KEY  
+- GOOGLE_API_KEY
+- OPENROUTER_API_KEY
+- ELEVENLABS_API_KEY
 
-**Clarification** (15 sec):
-```
-code: Which OAuth providers?
-You: Google and GitHub
-```
-
-**Implementation** (4 min):
-1. Installs `better-auth` + dependencies
-2. Creates auth config with providers
-3. Generates login/signup/reset pages with shadcn/ui
-4. Adds API routes
-5. Implements middleware for protected routes
-6. Writes 12 test cases
-7. Updates documentation
-
-**Real-time output**:
-```
-✓ Installing dependencies... (15s)
-✓ Creating auth.ts config
-✓ Generating UI components
-  • app/login/page.tsx (Google OAuth button)
-  • app/signup/page.tsx (Email + OAuth)
-  • app/reset-password/page.tsx
-✓ Creating API routes
-  • app/api/auth/[...all]/route.ts
-✓ Adding middleware.ts (protect /dashboard/*)
-✓ Writing tests (12 cases)
-✓ Updating docs/system-architecture.md
-
-tester: Running test suite...
-✓ Unit tests: 45 passed
-✓ Auth tests: 12 passed
-✓ Coverage: 89%
-
-code-reviewer: Quality check...
-✓ No security issues
-✓ Type-safe (0 errors)
-✓ Performance: Fast (< 100ms auth check)
-
-✓ Implementation complete (4m 32s)
-```
-
-### Step 5: See It Work
+### Step 5: Activate License (Optional)
 
 ```bash
-npm run dev
+# For Pro features
+python main.py activate --key mk_live_xxxxx
 ```
 
-Visit:
-- `http://localhost:3000/login` - Login with email or OAuth
-- `http://localhost:3000/signup` - Create account
-- `http://localhost:3000/dashboard` - Protected route (redirects if not logged in)
-
-**Try it**:
-1. Sign up with email
-2. Login redirects to dashboard
-3. Logout, try OAuth with Google
-4. Check session persistence
-
-### Step 6: Commit
+### Step 6: Deploy
 
 ```bash
-/git:cm
+python main.py deploy
 ```
 
-**Output**:
-```
-git-manager: Analyzing changes...
-✓ Staged: 12 files
-✓ Secret scan: Clean
-✓ Commit message generated
+## CLI vs Slash Commands
 
-feat(auth): add Better Auth with email and OAuth
+> **Important**: Mekong-CLI and Claude Code slash commands are different systems.
 
-- Add Better Auth configuration
-- Implement login/signup/reset pages
-- Add Google and GitHub OAuth
-- Protect routes with middleware
-- Add 12 auth test cases
-- Update documentation
+| Feature | Mekong-CLI | Claude Code |
+|---------|------------|-------------|
+| **Entry** | `python main.py` | Slash commands `/cook` |
+| **Runs in** | Any terminal | Claude Code IDE |
+| **Focus** | Agency automation | Development workflows |
+| **Commands** | `init`, `agents`, `deploy` | `/cook`, `/plan`, `/fix` |
 
-✓ Committed: abc1234
-✓ Pushed to origin/main
+**Slash commands** (`/cook`, `/plan`, `/fix`) require **Claude Code IDE** with AgencyOS installed.
 
-Done!
-```
+**Mekong-CLI** is a standalone Python CLI for agency automation.
 
 ## What Just Happened?
 
 **Traditional approach** (8-12 hours):
-1. Research auth libraries (1h)
-2. Read documentation (1h)
-3. Setup configuration (1h)
-4. Build UI components (3h)
-5. Implement OAuth flows (2h)
-6. Write tests (1h)
-7. Debug issues (1h)
-8. Documentation (30min)
+1. Research tools and templates (2h)
+2. Setup configuration (2h)
+3. Configure integrations (2h)
+4. Build automations (3h)
+5. Debug issues (2h)
 
-**AgencyOS approach** (6 minutes):
-1. Plan: AI researches, analyzes, designs (30s)
-2. Implement: AI codes, tests, documents (4m)
-3. Review: AI validates security, performance (30s)
-4. Commit: AI creates professional commit (30s)
+**Mekong-CLI approach** (15 minutes):
+1. Clone + Install (2 min)
+2. Init project (1 min)
+3. Configure vibe (2 min)
+4. Setup secrets (5 min)
+5. Deploy (5 min)
 
-**Time saved**: 8-12 hours → **~800% faster**
+**Time saved**: 8+ hours → **~3000% faster**
 
-## Why It Works
-
-### 14 Specialized Agents
-- **planner**: Creates implementation plans
-- **researcher**: Finds best practices (3 run in parallel)
-- **tester**: Validates everything works
-- **code-reviewer**: Security + performance checks
-- **git-manager**: Professional commits
-- **docs-manager**: Keeps docs current
-- ...and 8 more
-
-### 45 Built-in Skills
-- **better-auth**: Auth implementation expertise
-- **shadcn-ui**: Pre-configured UI components
-- **nextjs**: Next.js 15 best practices
-- **gemini-image-gen**: Generate logos, assets
-- ...and 41 more
-
-### Living System
-- Updates with Claude improvements
-- No tech stack lock-in
-- Learns your patterns
-- Gets smarter over time
-
-## Next: Real Work
-
-Try more complex features:
+## Available Commands
 
 ```bash
-# Add payment processing (Stripe + webhooks)
-/cook add Stripe payment with subscriptions and webhooks
+# Project Management
+python main.py init <name>           # Initialize project
+python main.py setup-vibe            # Configure AI voice/tone
+python main.py generate-secrets      # Create .env file
+python main.py mcp-setup             # Setup MCP servers
 
-# Build REST API with validation
-/cook create REST API for blog posts with Zod validation
+# Deployment
+python main.py deploy                # Deploy to Cloud Run
 
-# Implement real-time chat
-/cook add real-time chat using WebSockets
+# License
+python main.py activate --key KEY   # Activate license
+python main.py status               # Show license status
 
-# Database migrations
-/cook migrate from SQLite to PostgreSQL with zero downtime
+# Info & Debug
+python main.py agents               # Show AI agents
+python main.py costs                # Show cost analysis
+python main.py vibes                # Show vibe options
+python main.py run-scout <feature>  # Test Scout agent
 ```
 
-Each takes 5-20 minutes instead of days.
+## Next Steps
 
-## Learn Workflows
-
-### Full Feature Cycle
-```bash
-/plan [feature]           # Research + plan
-/code [plan]              # Implement
-/test                     # Validate
-/fix:fast [issue]         # Quick fixes
-/git:cm                   # Commit
-```
-
-### Debug + Fix
-```bash
-/debug [issue]            # Root cause analysis
-/fix:hard [complex-issue] # Multi-agent fix
-/fix:ci [actions-url]     # Fix failing CI/CD
-```
-
-### Design + Content
-```bash
-/design:good [feature]    # UI/UX design
-/content:good [page]      # Marketing copy
-/brainstorm [idea]        # Explore solutions
-```
+1. 📖 **[CLI Reference](/docs/docs/cli)** - All 11 commands documented
+2. 🤖 **[AI Agents](/docs/agents)** - Meet your 7 AI agents
+3. 🏯 **[Binh Pháp Strategy](/docs/docs/binh-phap)** - Win-without-fighting approach
+4. 💰 **[ROI Calculator](/roi-calculator)** - Calculate your savings
 
 ## Common Questions
 
 **Q: Does it work with my tech stack?**
-A: Yes. Next.js, Django, Laravel, Go, Rust, Flutter - any stack. AgencyOS adapts to your patterns.
+A: Mekong-CLI is Python-based and stack-agnostic. It automates agency operations, not code generation.
 
-**Q: What if AI makes mistakes?**
-A: `code-reviewer` catches issues before commit. Plus, you review PRs as normal. AI augments, doesn't replace judgment.
+**Q: What if I want code generation features?**
+A: Install AgencyOS in Claude Code IDE for `/cook`, `/plan`, `/fix` commands.
 
 **Q: Do I need API keys?**
-A: For basic features, no. For advanced skills (Gemini, Search), yes. See [API Key Setup](/docs/support/troubleshooting/api-key-setup).
-
-**Q: Can I customize agents?**
-A: Yes. Edit `.claude/agents/*.md` to tune behavior. See [Custom Agents](/docs/hooks/custom-agents).
-
-## Explore More
-
-**Core Concepts**:
-- [Architecture](/docs/docs/agents) - How AgencyOS works
-- [Agents Overview](/docs/agents/) - Meet your AI team
-- [Commands Guide](/docs/commands/) - All 30+ commands
-
-**Real-World Uses**:
-- [Starting New Project](/docs/workflows/new-project)
-- [Adding Features](/docs/workflows/adding-feature)
-- [Fixing Bugs](/docs/workflows/fixing-bugs)
-
-**Troubleshooting**:
-- [Installation Issues](/docs/support/troubleshooting/installation-issues)
-- [Command Errors](/docs/support/troubleshooting/command-errors)
-- [Performance Issues](/docs/support/troubleshooting/performance-issues)
+A: For basic features, no. For advanced (Gemini, ElevenLabs), yes.
 
 ---
 
-**You just shipped production auth in 6 minutes.** Boilerplates can't do that. AI chat assistants can't do that. Only AgencyOS.
+**You just set up agency automation in 15 minutes.** Traditional tools can't do that.
 
-**Ready to ship?** Your AI dev team is waiting.
+**Ready to automate?** Your AI team is waiting.

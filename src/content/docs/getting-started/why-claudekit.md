@@ -2,7 +2,7 @@
 title: "Why AgencyOS"
 description: "Compare AgencyOS vs alternatives and see ROI calculations and pricing"
 section: getting-started
-order: 4
+order: 5
 published: true
 ---
 
@@ -11,103 +11,147 @@ published: true
 ## 5-Minute Quick Win
 
 ```bash
-mk init my-app --kit engineer
-cd my-app
-/cook add user authentication with OAuth
+# Clone and setup
+git clone https://github.com/longtho638-jpg/mekong-cli.git
+cd mekong-cli
+pip install -r requirements.txt
+
+# Initialize your agency
+python main.py init my-agency
+cd my-agency
+
+# Configure and deploy
+python main.py setup-vibe --location "Can Tho"
+python main.py agents
 ```
 
-**Result**: Production auth system with login/signup pages, OAuth (Google/GitHub), protected routes, tests, and docs. **Time: 6 minutes vs 8 hours manually.**
+**Result**: Full agency automation with 7 AI agents ready. **Time: 5 minutes vs 8 hours manually.**
 
 [Try Quick Start →](/docs/getting-started/quick-start)
 
 ## What You Get
 
-**14 AI Agents**:
-- **planner** - Implementation plans
-- **researcher** - Best practices (parallel search)
-- **tester** - Validates everything works
-- **code-reviewer** - Security + performance checks
-- **debugger** - Root cause analysis
-- **ui-ux-designer** - Interface design + wireframes
-- **database-admin** - Query optimization
-- **git-manager** - Professional commits
-- **docs-manager** - Keeps docs current
-- **project-manager** - Progress tracking
-- **copywriter** - Conversion-focused content
-- **journal-writer** - Decision documentation
-- **brainstormer** - Solution exploration
-- **scout** - Codebase navigation
+### 7 AI Agents (Mekong-CLI)
 
-**30+ Slash Commands**:
-- `/cook` - Implement features end-to-end
-- `/plan` - Research + create implementation plan
-- `/fix:hard` - Multi-agent bug fixing
-- `/design:good` - UI/UX design
-- `/git:cm` - Commit with conventional format
-- [See all commands →](/docs/commands)
+| Agent | Role |
+|-------|------|
+| 🔍 **Scout** | Thu thập thông tin thị trường |
+| ✏️ **Editor** | Biên tập nội dung |
+| 🎬 **Director** | Đạo diễn video |
+| 🤝 **Community** | Đăng bài & tương tác |
+| 📊 **Market Analyst** | Phân tích giá nông sản ĐBSCL |
+| 💬 **Zalo Integrator** | Tích hợp Zalo OA/Mini App |
+| 🎤 **Local Copywriter** | Content giọng địa phương |
 
-**45 Built-in Skills**:
-- Frontend: Next.js, shadcn/ui, Tailwind CSS
-- Auth: Better Auth
-- E-commerce: Shopify
-- Cloud: Cloudflare Workers, R2, Docker
-- AI: Gemini (audio, video, images, vision)
-- Database: PostgreSQL, MongoDB
-- [See all skills →](/docs/skills)
+### 11 CLI Commands
+
+| Command | Description |
+|---------|-------------|
+| `init` | Initialize new project |
+| `setup-vibe` | Configure AI voice/tone |
+| `generate-secrets` | Create .env file |
+| `mcp-setup` | Setup MCP servers |
+| `deploy` | Deploy to Cloud Run |
+| `activate` | Activate license |
+| `status` | Show license status |
+| `agents` | Show AI agents |
+| `costs` | Show cost analysis |
+| `vibes` | Show vibe options |
+| `run-scout` | Test Scout agent |
+
+[See CLI Reference →](/docs/docs/cli)
+
+### 154+ Core Modules
+
+Backend automation modules for every agency need:
+- Marketing automation
+- Sales pipeline
+- Finance & invoicing
+- Strategy planning
+- CRM & analytics
+
+[See Core Modules →](/docs/docs/core)
 
 ## AgencyOS vs Alternatives
 
-| Feature | AgencyOS | Boilerplates | AI Chat |
-|---------|-----------|--------------|---------|
-| **Tech Stack** | Any (Next.js, Django, Go, Rust) | Locked to specific stack | Limited support |
-| **Setup Time** | 2 min | 30-60 min | N/A |
-| **Feature Shipping** | 5-20 min | 4-12 hours | Copy-paste, manual fixes |
-| **Quality** | Production-ready, tested | Copy-paste required | Unvalidated code |
-| **Testing** | Automated (tester agent) | Manual | You write tests |
-| **Code Review** | Built-in (code-reviewer) | Manual or external | None |
-| **Updates** | Evolves with Claude | Becomes outdated | N/A |
-| **Documentation** | Auto-generated | Manual | None |
-| **Visual Assets** | AI-generated (Gemini) | You design | Not applicable |
-| **Time Savings** | **10+ hours/feature** | None (is the baseline) | 2-3 hours |
-| **Cost** | $99 one-time | $0-$200 one-time | $20/month ongoing |
+| Feature | AgencyOS | DIY Setup | Competitors |
+|---------|----------|-----------|-------------|
+| **Setup Time** | 5 min | 8+ hours | 2-4 hours |
+| **AI Agents** | 7 specialized | None | 1-2 generic |
+| **Regional Vibes** | Miền Tây, Gen Z, etc. | Manual config | Not available |
+| **Vietnamese Focus** | Native support | Translation needed | Limited |
+| **Cost Analysis** | Built-in | Manual tracking | Extra tools |
+| **Deployment** | One command | Complex | Varies |
 
-**Verdict**: AgencyOS is the only solution that ships production features end-to-end with testing, review, and docs.
+**Verdict**: AgencyOS is the only solution built specifically for Vietnamese agencies with regional voice tuning.
 
 ## Why It Works
 
-### Living System, Not Dead Code
-Traditional boilerplates are snapshots in time. AgencyOS improves with every Claude update. Your dev team gets smarter automatically.
+### Hybrid Router Architecture
+- Smart routing between fast/cheap and powerful models
+- 70% cost reduction vs GPT-4 only
+- Real-time cost monitoring
 
-### Tech Stack Agnostic
-Works with your existing codebase. Next.js today, migrate to Django tomorrow. No lock-in.
+### Regional Vibe Tuning
+- **Miền Tây**: Thân thiện, ấm áp (hen, nghen, tui)
+- **Miền Bắc**: Lịch sự, trang trọng (ạ, nhé, vâng)
+- **Miền Trung**: Mộc mạc, thật thà (mô, tê, răng)
+- **Gen Z**: Trendy, năng động (slay, vibe, chill)
 
 ### Full Lifecycle
-Not just code generation. **Plan → Research → Implement → Test → Review → Document → Commit**. Complete workflow, not fragments.
+Not just setup. **Init → Configure → Deploy → Monitor → Optimize**. Complete workflow.
 
 ### Real ROI
-**First feature**: 10 hours saved at $100/hr = $1,000 value
-**Cost**: $99 one-time
-**Net profit day 1**: $901
+**First month**: 40+ hours saved at $50/hr = $2,000 value
+**Cost**: One-time license
+**Net profit day 1**: Significant
 
 ## Who Uses AgencyOS
 
-- **Solo developers** - Entire dev team in your terminal
-- **Indie makers** - Validate ideas 800% faster
-- **Small teams** - Augment with AI specialists
-- **Anyone frustrated with boilerplates** - Escape tech stack prison
+- **Solo agency owners** - Run entire agency with AI team
+- **Marketing agencies** - Automate content & campaigns
+- **E-commerce sellers** - Mekong Delta market focus
+- **Content creators** - Multi-platform publishing
+- **Anyone in ĐBSCL** - Local market expertise
 
 ## Pricing
 
-**$99 one-time** (save $50 from $149):
-- Lifetime access + unlimited updates
-- 30-day money-back guarantee
-- All future features included
-- No monthly fees
+| Tier | Features | Best For |
+|------|----------|----------|
+| **Starter** | 1 video/day, 1 niche | Testing |
+| **Pro** | 10 videos/day, 10 niches, white-label | Growing agencies |
+| **Enterprise** | Unlimited, custom support | Large operations |
 
-[Get AgencyOS →](https://agencyos.network)
+[Get Pricing →](/pricing)
 
 ---
 
-**Traditional dev**: 40 hours/feature
-**With AgencyOS**: 5-20 minutes/feature
-**Time reclaimed**: Build your product instead of infrastructure.
+## Two Ways to Use AgencyOS
+
+### 1. Mekong-CLI (Standalone)
+
+```bash
+python main.py init my-agency
+python main.py agents
+python main.py deploy
+```
+
+**Best for**: Agency automation, deployment, regional vibes
+
+### 2. Claude Code Integration (Development)
+
+```
+/cook add user authentication
+/plan project roadmap
+/fix:hard complex bug
+```
+
+**Best for**: Software development, code generation
+
+---
+
+**Traditional setup**: 8+ hours
+**With AgencyOS**: 5 minutes
+**Time reclaimed**: Build your agency instead of infrastructure.
+
+[Get Started →](/docs/getting-started/installation)
