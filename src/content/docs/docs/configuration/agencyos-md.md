@@ -1,24 +1,19 @@
 ---
-title: CLAUDE.md
-description: "Documentation for CLAUDE.md
-description:
-section: docs
-category: configuration
-order: 2
-published: true"
+title: AGENCYOS.md
+description: "Primary configuration file for AgencyOS CLI"
 section: docs
 category: configuration
 order: 2
 published: true
 ---
 
-# CLAUDE.md
+# AGENCYOS.md
 
-The `CLAUDE.md` file is the primary configuration file that provides guidance to AgencyOS CLI when working with your codebase. Understanding this file is crucial for effective use of AgencyOS.
+The `AGENCYOS.md` file is the primary configuration file that provides guidance to AgencyOS CLI when working with your codebase. Understanding this file is crucial for effective use of AgencyOS.
 
-## What is CLAUDE.md?
+## What is AGENCYOS.md?
 
-`CLAUDE.md` serves as the entry point for AgencyOS CLI's understanding of your project. It contains:
+`AGENCYOS.md` serves as the entry point for AgencyOS CLI's understanding of your project. It contains:
 
 - Role and responsibilities definitions
 - Links to detailed workflow documentation
@@ -27,10 +22,10 @@ The `CLAUDE.md` file is the primary configuration file that provides guidance to
 
 ## File Structure
 
-A typical `CLAUDE.md` file looks like this:
+A typical `AGENCYOS.md` file looks like this:
 
 ```markdown
-# CLAUDE.md
+# AGENCYOS.md
 
 This file provides guidance to AgencyOS CLI when working with code in this repository.
 
@@ -57,18 +52,18 @@ AgencyOS follows Manus's approach to Context Engineering: **Use File System As C
 
 ### Benefits
 
-1. **Token Efficiency**: CLAUDE.md contains just a few lines with links to detailed files
+1. **Token Efficiency**: AGENCYOS.md contains just a few lines with links to detailed files
 2. **On-Demand Loading**: Detailed instructions are loaded only when needed
 3. **Better Organization**: Related documentation is grouped in logical directories
-4. **Easier Maintenance**: Update specific files without touching CLAUDE.md
+4. **Easier Maintenance**: Update specific files without touching AGENCYOS.md
 
 ### Example
 
-Instead of putting all development rules in CLAUDE.md:
+Instead of putting all development rules in AGENCYOS.md:
 
 ```markdown
-❌ Bad Approach (All in CLAUDE.md)
-# CLAUDE.md
+❌ Bad Approach (All in AGENCYOS.md)
+# AGENCYOS.md
 ## Development Rules
 1. Always write tests
 2. Follow TypeScript strict mode
@@ -80,16 +75,16 @@ AgencyOS uses references:
 
 ```markdown
 ✅ Good Approach (File System As Context)
-# CLAUDE.md
+# AGENCYOS.md
 ## Workflows
 - Development rules: `./.agencyos/workflows/development-rules.md`
 ```
 
-This keeps CLAUDE.md lightweight while maintaining access to detailed guidelines.
+This keeps AGENCYOS.md lightweight while maintaining access to detailed guidelines.
 
 ## Important: Do Not Modify
 
-**[Important]** You should not modify `CLAUDE.md` directly, as it will be overwritten each time you update AgencyOS using `python main.py init`.
+**[Important]** You should not modify `AGENCYOS.md` directly, as it will be overwritten each time you update AgencyOS using `python main.py init`.
 
 ### Why?
 
@@ -99,18 +94,18 @@ This keeps CLAUDE.md lightweight while maintaining access to detailed guidelines
 
 ### What if I need to customize?
 
-If you want to modify `CLAUDE.md` without it being overwritten:
+If you want to modify `AGENCYOS.md` without it being overwritten:
 
 ```bash
 # Use the exclude flag during updates
-python main.py init --exclude CLAUDE.md
+python main.py init --exclude AGENCYOS.md
 ```
 
-**Better approach**: Instead of modifying CLAUDE.md, customize the referenced files in `.agencyos/workflows/` which are less likely to change during updates.
+**Better approach**: Instead of modifying AGENCYOS.md, customize the referenced files in `.agencyos/workflows/` which are less likely to change during updates.
 
 ## Structure Overview
 
-CLAUDE.md links to several key directories:
+AGENCYOS.md links to several key directories:
 
 ### `.agencyos/workflows/`
 
@@ -142,11 +137,11 @@ These files help AgencyOS CLI:
 - Understand project-specific patterns
 - Follow established conventions
 
-## How AgencyOS CLI Uses CLAUDE.md
+## How AgencyOS CLI Uses AGENCYOS.md
 
 ### Initial Load
 
-1. AgencyOS CLI reads `CLAUDE.md` when started
+1. AgencyOS CLI reads `AGENCYOS.md` when started
 2. Understands the project's role and structure
 3. Knows where to find detailed instructions
 
@@ -164,7 +159,7 @@ When performing specific tasks, AgencyOS CLI:
 ```
 User: "Add user authentication"
   ↓
-Claude reads CLAUDE.md
+Claude reads AGENCYOS.md
   ↓
 Loads development-rules.md
   ↓
@@ -181,15 +176,15 @@ Updates documentation
 
 ### Do's
 
-✅ Keep CLAUDE.md concise with links to detailed docs
+✅ Keep AGENCYOS.md concise with links to detailed docs
 ✅ Update workflow files in `.agencyos/workflows/` as needed
 ✅ Maintain project docs in `docs/` directory
-✅ Use `python main.py init --exclude CLAUDE.md` if you must customize
+✅ Use `python main.py init --exclude AGENCYOS.md` if you must customize
 
 ### Don'ts
 
-❌ Don't put all documentation in CLAUDE.md
-❌ Don't modify CLAUDE.md without understanding update implications
+❌ Don't put all documentation in AGENCYOS.md
+❌ Don't modify AGENCYOS.md without understanding update implications
 ❌ Don't ignore the linked workflow files
 ❌ Don't skip documentation management
 
@@ -198,21 +193,21 @@ Updates documentation
 Using File System As Context significantly reduces token usage:
 
 **Without File System As Context:**
-- Initial load: ~5000 tokens (everything in CLAUDE.md)
+- Initial load: ~5000 tokens (everything in AGENCYOS.md)
 - Every task: Same 5000 tokens loaded
 
 **With File System As Context (AgencyOS approach):**
-- Initial load: ~500 tokens (just CLAUDE.md)
+- Initial load: ~500 tokens (just AGENCYOS.md)
 - Specific task: +1000 tokens (only relevant file)
 - Total: 1500 tokens vs 5000 tokens (70% savings)
 
 ## Validation
 
-Ensure your CLAUDE.md is properly configured:
+Ensure your AGENCYOS.md is properly configured:
 
 ```bash
-# Check if CLAUDE.md exists
-cat CLAUDE.md
+# Check if AGENCYOS.md exists
+cat AGENCYOS.md
 
 # Verify linked files exist
 ls .agencyos/workflows/
@@ -223,7 +218,7 @@ ls docs/
 
 ## Next Steps
 
-Now that you understand CLAUDE.md:
+Now that you understand AGENCYOS.md:
 
 - [Workflows](/docs/docs/configuration/workflows) - Learn about workflow files
 - [Agents](/docs/agents/) - Understand the agent system
@@ -231,4 +226,4 @@ Now that you understand CLAUDE.md:
 
 ---
 
-**Key Takeaway**: CLAUDE.md is a lightweight entry point that uses the file system as context, making AgencyOS efficient and maintainable.
+**Key Takeaway**: AGENCYOS.md is a lightweight entry point that uses the file system as context, making AgencyOS efficient and maintainable.

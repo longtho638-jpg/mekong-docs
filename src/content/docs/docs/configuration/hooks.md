@@ -219,7 +219,7 @@ Hooks are defined in `.agencyos/settings.json`:
            "hooks": [
              {
                "type": "command",
-               "command": "${CLAUDE_PROJECT_DIR}/.agencyos/hooks/telegram_notify.sh"
+               "command": "${AGENCYOS_PROJECT_DIR}/.agencyos/hooks/telegram_notify.sh"
              }
            ]
          }
@@ -229,7 +229,7 @@ Hooks are defined in `.agencyos/settings.json`:
            "hooks": [
              {
                "type": "command",
-               "command": "${CLAUDE_PROJECT_DIR}/.agencyos/hooks/telegram_notify.sh"
+               "command": "${AGENCYOS_PROJECT_DIR}/.agencyos/hooks/telegram_notify.sh"
              }
            ]
          }
@@ -368,8 +368,8 @@ Hooks can access these environment variables:
 
 | Variable | Description |
 |----------|-------------|
-| `CLAUDE_PROJECT_DIR` | Project root directory |
-| `CLAUDE_SESSION_ID` | Current session identifier |
+| `AGENCYOS_PROJECT_DIR` | Project root directory |
+| `AGENCYOS_SESSION_ID` | Current session identifier |
 | Custom variables | From `.env` files |
 
 ### Loading .env Files
@@ -435,7 +435,7 @@ AgencyOS hooks load environment variables in this priority:
 
 ## Related
 
-- [CLAUDE.md](/docs/configuration/claude-md) - Project instructions
+- [AGENCYOS.md](/docs/configuration/claude-md) - Project instructions
 - [MCP Setup](/docs/configuration/mcp-setup) - MCP server configuration
 - [Workflows](/docs/configuration/workflows) - Development workflows
 

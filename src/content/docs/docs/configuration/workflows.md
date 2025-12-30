@@ -1,11 +1,6 @@
 ---
 title: Workflows
-description: "Documentation for Workflows
-description:
-section: docs
-category: configuration
-order: 3
-published: true"
+description: "Configure AgencyOS workflow files for agent coordination"
 section: docs
 category: configuration
 order: 3
@@ -281,7 +276,7 @@ Well-defined workflows make it easier to:
 
 ## Customizing Workflows
 
-While CLAUDE.md shouldn't be modified, workflow files can be customized:
+While AGENCYOS.md shouldn't be modified, workflow files can be customized:
 
 ### Safe to Modify
 
@@ -343,7 +338,7 @@ cat .agencyos/workflows/development-rules.md
 **Solutions:**
 1. Verify workflow files are in correct location
 2. Check file permissions (must be readable)
-3. Ensure CLAUDE.md references correct paths
+3. Ensure AGENCYOS.md references correct paths
 4. Review agent logs for errors
 
 ### Conflicting Workflows
@@ -354,7 +349,7 @@ cat .agencyos/workflows/development-rules.md
 1. Review all workflow files for conflicts
 2. Establish clear priority order
 3. Consolidate overlapping rules
-4. Update CLAUDE.md if needed
+4. Update AGENCYOS.md if needed
 
 ### Outdated Workflows
 
