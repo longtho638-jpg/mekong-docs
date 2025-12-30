@@ -1,11 +1,6 @@
 ---
 title: Optimizing Performance
-description: "Documentation for Optimizing Performance
-description:
-section: workflows
-category: workflows
-order: 9
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 9

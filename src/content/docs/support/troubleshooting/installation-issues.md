@@ -1,11 +1,6 @@
 ---
 title: Installation Issues
-description: "Documentation for Installation Issues
-description:
-section: support
-category: support/troubleshooting
-order: 2
-published: true"
+description: "Documentation"
 section: support
 category: support/troubleshooting
 order: 2

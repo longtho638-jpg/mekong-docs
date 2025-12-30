@@ -1,11 +1,6 @@
 ---
 title: Troubleshooting
-description: "Documentation for Troubleshooting
-description:
-section: support
-category: support/troubleshooting
-order: 1
-published: true"
+description: "Documentation"
 section: support
 category: support/troubleshooting
 order: 1

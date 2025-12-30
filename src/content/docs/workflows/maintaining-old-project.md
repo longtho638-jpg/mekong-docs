@@ -1,11 +1,6 @@
 ---
 title: Maintaining an Old Project
-description: "Documentation for Maintaining an Old Project
-description:
-section: workflows
-category: workflows
-order: 2
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 2

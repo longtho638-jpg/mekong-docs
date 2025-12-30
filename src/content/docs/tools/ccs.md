@@ -183,10 +183,10 @@ If Claude is in a non-standard location:
 
 ```bash
 # Unix/macOS
-export CCS_CLAUDE_PATH="/path/to/claude"
+export CCS_AGENCYOS_PATH="/path/to/claude"
 
 # Windows
-$env:CCS_CLAUDE_PATH = "D:\Tools\Claude\claude.exe"
+$env:CCS_AGENCYOS_PATH = "D:\Tools\Claude\claude.exe"
 ```
 
 ## Usage Examples

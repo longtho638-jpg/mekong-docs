@@ -1,11 +1,6 @@
 ---
 title: Refactoring Code
-description: "Documentation for Refactoring Code
-description:
-section: workflows
-category: workflows
-order: 5
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 5

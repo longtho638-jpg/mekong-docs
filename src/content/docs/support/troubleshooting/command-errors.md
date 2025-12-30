@@ -1,11 +1,6 @@
 ---
 title: Command Errors
-description: "Documentation for Command Errors
-description:
-section: support
-category: support/troubleshooting
-order: 3
-published: true"
+description: "Documentation"
 section: support
 category: support/troubleshooting
 order: 3
@@ -368,7 +363,7 @@ AgencyOS requires this structure:
 │   └── ...
 ├── skills/          # Specialized skills
 ├── workflows/       # Workflow definitions
-CLAUDE.md           # Configuration
+AGENCYOS.md           # Configuration
 .mcp.json           # MCP server config [DEPRECATED]
 ```
 

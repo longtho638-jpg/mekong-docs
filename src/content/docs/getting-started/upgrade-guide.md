@@ -32,7 +32,7 @@ git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Initialize in existing project
 python main.py init
-# → Adds .agencyos/CLAUDE.md, skills/, workflows/
+# → Adds .agencyos/AGENCYOS.md, skills/, workflows/
 # → Existing .agencyos/commands/ preserved
 ```
 
@@ -103,7 +103,7 @@ A: No. AgencyOS commands coexist with your custom .agencyos/commands/
 A: Yes. AgencyOS adds slash commands, doesn't remove chat.
 
 **Q: What if I don't like AgencyOS?**
-A: Uninstall and delete .agencyos/CLAUDE.md. No breaking changes.
+A: Uninstall and delete .agencyos/AGENCYOS.md. No breaking changes.
 
 ## Next Steps
 

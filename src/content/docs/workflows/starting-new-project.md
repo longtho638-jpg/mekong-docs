@@ -1,11 +1,6 @@
 ---
 title: Starting a New Project
-description: "Documentation for Starting a New Project
-description:
-section: workflows
-category: workflows
-order: 1
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 1

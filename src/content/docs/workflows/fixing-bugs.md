@@ -1,11 +1,6 @@
 ---
 title: Fixing Bugs
-description: "Documentation for Fixing Bugs
-description:
-section: workflows
-category: workflows
-order: 4
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 4

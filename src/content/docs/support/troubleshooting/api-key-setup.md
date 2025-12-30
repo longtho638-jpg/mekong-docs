@@ -1,11 +1,6 @@
 ---
 title: API Key Setup
-description: "Documentation for API Key Setup
-description:
-section: support
-category: support/troubleshooting
-order: 5
-published: true"
+description: "Documentation"
 section: support
 category: support/troubleshooting
 order: 5

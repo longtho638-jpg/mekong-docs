@@ -1,11 +1,6 @@
 ---
 title: Implementing Authentication
-description: "Documentation for Implementing Authentication
-description:
-section: workflows
-category: workflows
-order: 7
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 7

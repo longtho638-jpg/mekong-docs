@@ -1,11 +1,6 @@
 ---
 title: Integrating Payment Processing
-description: "Documentation for Integrating Payment Processing
-description:
-section: workflows
-category: workflows
-order: 8
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 8

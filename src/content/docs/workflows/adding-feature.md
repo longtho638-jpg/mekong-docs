@@ -1,11 +1,6 @@
 ---
 title: Adding a New Feature
-description: "Documentation for Adding a New Feature
-description:
-section: workflows
-category: workflows
-order: 3
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 3

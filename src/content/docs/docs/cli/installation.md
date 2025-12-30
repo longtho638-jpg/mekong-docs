@@ -90,12 +90,12 @@ Check version:
 python3 main.py --help
 ```
 
-### Migration from .claude to .agencyos
+### Migration from .agencyos to .agencyos
 
-If you had an older version with `.claude/` folder:
+If you had an older version with `.agencyos/` folder:
 
 ```bash
-mv .claude .agencyos
+mv .agencyos .agencyos
 ```
 
 ## Configuration

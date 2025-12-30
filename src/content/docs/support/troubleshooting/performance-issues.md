@@ -1,11 +1,6 @@
 ---
 title: Performance Issues
-description: "Documentation for Performance Issues
-description:
-section: support
-category: support/troubleshooting
-order: 6
-published: true"
+description: "Documentation"
 section: support
 category: support/troubleshooting
 order: 6

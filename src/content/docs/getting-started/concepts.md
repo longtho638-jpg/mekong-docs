@@ -161,12 +161,12 @@ System:
 6. Output: Fully implemented, tested authentication
 ```
 
-## CLAUDE.md Configuration
+## AGENCYOS.md Configuration
 
-All agent behaviors, skills, and workflows configured in `.agencyos/CLAUDE.md`:
+All agent behaviors, skills, and workflows configured in `.agencyos/AGENCYOS.md`:
 
 ```markdown
-# CLAUDE.md
+# AGENCYOS.md
 ## Agents
 - planner: Creates implementation plans
 - researcher: Analyzes technical decisions

@@ -1,11 +1,6 @@
 ---
 title: Building a REST API
-description: "Documentation for Building a REST API
-description:
-section: workflows
-category: workflows
-order: 6
-published: true"
+description: "Documentation"
 section: workflows
 category: workflows
 order: 6

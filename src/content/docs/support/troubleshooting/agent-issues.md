@@ -1,11 +1,6 @@
 ---
 title: Agent Issues
-description: "Documentation for Agent Issues
-description:
-section: support
-category: support/troubleshooting
-order: 4
-published: true"
+description: "Documentation"
 section: support
 category: support/troubleshooting
 order: 4
