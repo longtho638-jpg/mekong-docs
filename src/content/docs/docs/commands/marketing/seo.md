@@ -1,0 +1,22 @@
+---
+title: "Seo"
+description: "ZERO-EFFORT Seo automation"
+---
+
+# /seo
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/seo
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

@@ -1,0 +1,22 @@
+---
+title: "Scope"
+description: "ZERO-EFFORT Scope automation"
+---
+
+# /scope
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/scope
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

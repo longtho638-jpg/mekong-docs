@@ -1,0 +1,22 @@
+---
+title: "Docs Changelog"
+description: "ZERO-EFFORT Docs Changelog automation"
+---
+
+# /docs-changelog
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/docs-changelog
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

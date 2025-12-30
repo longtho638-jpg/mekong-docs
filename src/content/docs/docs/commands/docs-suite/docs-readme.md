@@ -1,0 +1,22 @@
+---
+title: "Docs Readme"
+description: "ZERO-EFFORT Docs Readme automation"
+---
+
+# /docs-readme
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/docs-readme
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

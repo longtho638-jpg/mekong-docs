@@ -1,6 +1,6 @@
 ---
 title: Commands Overview
-description: "Documentation"
+description: "135+ ZERO-EFFORT Commands with Binh Pháp alignment"
 section: docs
 category: commands
 order: 0
@@ -9,7 +9,28 @@ published: true
 
 # Commands Overview
 
-AgencyOS provides a comprehensive set of slash commands to accelerate your development workflow. Each command is designed for specific tasks and automatically orchestrates the appropriate agents.
+> 🏯 **135+ Commands** × **13 Binh Pháp Clusters** × **ZERO-EFFORT Automation**
+
+AgencyOS provides **135 ZERO-EFFORT slash commands** across 11 business suites. Each command is Binh Pháp aligned and automatically orchestrates the appropriate agents - **NO USER INPUT REQUIRED**.
+
+## 🏯 Business Suites (135 Commands)
+
+| Suite | Commands | Binh Pháp |
+|-------|----------|-----------|
+| 🔥 [Marketing](/docs/commands/marketing/) | 8 | 謀攻篇 Mưu Công |
+| 🛒 [Sales](/docs/commands/sales/) | 8 | 作戰篇 Tác Chiến |
+| 💰 [Finance](/docs/commands/finance/) | 8 | 計篇 Kế |
+| 📚 [Docs](/docs/commands/docs-suite/) | 6 | 法篇 Pháp |
+| ⚡ [Development](/docs/commands/utility/) | 18 | 九變篇 Cửu Biến |
+| 🧪 [Testing](/docs/commands/testing/) | 10 | 虛實篇 Hư Thực |
+| 📦 [Git](/docs/commands/git/) | 8 | 行軍篇 Hành Quân |
+| 🎯 [Strategy](/docs/commands/strategy/) | 10 | 計篇 Kế |
+| 🏢 [Agency](/docs/commands/agency/) | 10 | 始計篇 Thủy Kế |
+| 🇻🇳 [Vietnamese](/docs/commands/vietnamese/) | 10 | 地形篇 Địa Hình |
+| 🔄 [Sync](/docs/commands/sync-commands) | 8 | 用間篇 Dụng Gián |
+| [Core](/docs/commands/core/) | 31 | Mixed |
+
+---
 
 ## Command Categories
 

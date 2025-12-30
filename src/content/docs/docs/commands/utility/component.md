@@ -1,0 +1,22 @@
+---
+title: "Component"
+description: "ZERO-EFFORT Component automation"
+---
+
+# /component
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/component
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

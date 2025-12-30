@@ -1,0 +1,22 @@
+---
+title: "Benchmark"
+description: "ZERO-EFFORT Benchmark automation"
+---
+
+# /benchmark
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/benchmark
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

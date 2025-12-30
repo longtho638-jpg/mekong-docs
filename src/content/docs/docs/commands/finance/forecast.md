@@ -1,0 +1,22 @@
+---
+title: "Forecast"
+description: "ZERO-EFFORT Forecast automation"
+---
+
+# /forecast
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/forecast
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

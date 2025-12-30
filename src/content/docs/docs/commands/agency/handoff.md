@@ -1,0 +1,22 @@
+---
+title: "Handoff"
+description: "ZERO-EFFORT Handoff automation"
+---
+
+# /handoff
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/handoff
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

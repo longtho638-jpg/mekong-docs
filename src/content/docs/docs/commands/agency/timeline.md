@@ -1,0 +1,22 @@
+---
+title: "Timeline"
+description: "ZERO-EFFORT Timeline automation"
+---
+
+# /timeline
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/timeline
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

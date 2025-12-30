@@ -1,0 +1,22 @@
+---
+title: "Content"
+description: "ZERO-EFFORT Content automation"
+---
+
+# /content
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/content
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

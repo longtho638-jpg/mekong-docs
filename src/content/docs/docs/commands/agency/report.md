@@ -1,0 +1,22 @@
+---
+title: "Report"
+description: "ZERO-EFFORT Report automation"
+---
+
+# /report
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/report
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

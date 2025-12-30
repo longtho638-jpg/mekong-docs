@@ -1,0 +1,22 @@
+---
+title: "E2E Test"
+description: "ZERO-EFFORT E2E Test automation"
+---
+
+# /e2e-test
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/e2e-test
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

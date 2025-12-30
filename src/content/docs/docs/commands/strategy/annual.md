@@ -1,0 +1,22 @@
+---
+title: "Annual"
+description: "ZERO-EFFORT Annual automation"
+---
+
+# /annual
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/annual
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

@@ -1,0 +1,22 @@
+---
+title: "Competitor"
+description: "ZERO-EFFORT Competitor automation"
+---
+
+# /competitor
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/competitor
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

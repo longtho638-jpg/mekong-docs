@@ -1,0 +1,22 @@
+---
+title: "Git Tag"
+description: "Release tagging"
+---
+
+# /git-tag
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/git-tag
+```
+
+## What Agent Does
+
+Agent tự động thực hiện - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)

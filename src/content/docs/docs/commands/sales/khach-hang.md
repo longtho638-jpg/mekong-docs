@@ -1,0 +1,22 @@
+---
+title: "Khach Hang"
+description: "ZERO-EFFORT Khach Hang automation"
+---
+
+# /khach-hang
+
+> 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
+
+## Usage
+
+```bash
+/khach-hang
+```
+
+## What Agent Does
+
+Agent tự động thực hiện tất cả bước - **NO INPUT REQUIRED**.
+
+---
+
+📖 [Back to Commands](/docs/commands)
