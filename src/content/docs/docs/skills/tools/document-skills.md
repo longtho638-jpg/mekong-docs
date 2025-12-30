@@ -1,11 +1,6 @@
 ---
 title: document-skills
-description: "Documentation for document-skills
-description:
-section: docs
-category: skills/tools
-order: 14
-published: true"
+description: "Documentation"
 section: docs
 category: skills/tools
 order: 14

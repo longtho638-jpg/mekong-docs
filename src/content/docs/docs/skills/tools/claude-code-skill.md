@@ -68,9 +68,9 @@ When answering questions:
 
 - Context7: `https://context7.com/websites/claude_en_claude-code/llms.txt?tokens=10000`
 - Topic search: `https://context7.com/websites/claude_en_claude-code/llms.txt?topic=<topic>&tokens=5000`
-- [Official docs](https://docs.claude.com/en/docs/claude-code/)
+- [Official docs](https://docs.agencyos.com/en/docs/claude-code/)
 - [GitHub](https://github.com/anthropics/claude-code)
-- Support: support.claude.com
+- Support: support.agencyos.com
 
 ## Integration with AgencyOS
 

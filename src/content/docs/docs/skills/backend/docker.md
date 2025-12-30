@@ -1,11 +1,6 @@
 ---
 title: docker
-description: "Documentation for docker
-description:
-section: docs
-category: skills/backend
-order: 11
-published: true"
+description: "Documentation"
 section: docs
 category: skills/backend
 order: 11

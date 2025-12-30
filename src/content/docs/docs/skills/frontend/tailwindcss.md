@@ -1,11 +1,6 @@
 ---
 title: Tailwind CSS Skill
-description: "Documentation for Tailwind CSS Skill
-description:
-section: docs
-category: skills/frontend
-order: 3
-published: true"
+description: "Documentation"
 section: docs
 category: skills/frontend
 order: 3

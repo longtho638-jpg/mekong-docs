@@ -1,11 +1,6 @@
 ---
 title: shadcn/ui Skill
-description: "Documentation for shadcn/ui Skill
-description:
-section: docs
-category: skills/frontend
-order: 4
-published: true"
+description: "Documentation"
 section: docs
 category: skills/frontend
 order: 4

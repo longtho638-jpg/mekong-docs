@@ -1,11 +1,6 @@
 ---
 title: postgresql-psql
-description: "Documentation for postgresql-psql
-description:
-section: docs
-category: skills/backend
-order: 16
-published: true"
+description: "Documentation"
 section: docs
 category: skills/backend
 order: 16
