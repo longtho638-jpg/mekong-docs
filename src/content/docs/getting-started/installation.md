@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: How to install AgencyOS - the AI-Native Agency Operating System
+description: How to install Mekong-CLI - Deploy Your Agency in 15 Minutes
 section: getting-started
 category: getting-started
 order: 2
@@ -9,33 +9,31 @@ published: true
 
 # Installation
 
-This guide will help you install AgencyOS and set up your agency automation environment.
+Get started with Mekong-CLI and automate your agency operations.
 
 ## Video Guide
 
-Prefer video? Watch the complete installation walkthrough:
-
-<div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🏯</div><h3 style="margin: 0 0 0.5rem 0;">Demo Video Coming Soon</h3><p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p></div>
+<div style="text-align: center; padding: 3rem; background: var(--color-bg-tertiary); border-radius: 0.75rem; border: 1px solid var(--color-border); margin-bottom: 1rem;"><div style="font-size: 3rem; margin-bottom: 1rem;">🌊</div><h3 style="margin: 0 0 0.5rem 0;">Demo Video Coming Soon</h3><p style="margin: 0; color: var(--color-text-muted);">Check our documentation to get started</p></div>
 
 ## Prerequisites
 
-Before installing AgencyOS, ensure you have:
+Before installing, ensure you have:
 
 - **Python** 3.8 or higher
 - **Git** for cloning the repository
 - **pip** for installing dependencies
-- **AgencyOS License Key** (get from [agencyos.network/pricing](/pricing))
+- **API Keys** (optional): Supabase, OpenRouter, ElevenLabs for full features
 
 ## Quick Installation
 
 ### Step 1: Clone the Repository
 
 ```bash
-# Clone AgencyOS Starter
-git clone https://github.com/longtho638-jpg/agencyos-starter.git
+# Clone Mekong-CLI
+git clone https://github.com/longtho638-jpg/mekong-cli.git
 
 # Navigate to directory
-cd agencyos-starter
+cd mekong-cli
 ```
 
 ### Step 2: Install Dependencies
@@ -45,58 +43,100 @@ cd agencyos-starter
 pip install -r requirements.txt
 ```
 
-### Step 3: Activate Your License
-
-```bash
-# Activate with your license key
-python activate.py YOUR-LICENSE-KEY
-```
-
-Replace `YOUR-LICENSE-KEY` with the key you received after purchase.
-
-### Step 4: Verify Installation
+### Step 3: Verify Installation
 
 ```bash
 # Show available commands
-python -m core.help
+python main.py --help
 
-# Check installed modules
-ls core/
+# Show AI agents status
+python main.py agents
 ```
 
-## Running Commands
+**Expected output:**
+```
+🌊 MEKONG-CLI AI Agents
 
-AgencyOS commands are Python modules. Run them like this:
+   Quad-Agent System:
+      🔍 Scout: Thu thập thông tin [Ready]
+      ✏️ Editor: Biên tập nội dung [Ready]
+      🎬 Director: Đạo diễn video [Ready]
+      🤝 Community: Đăng bài & tương tác [Ready]
+
+   Mekong-Specific Agents:
+      📊 Market Analyst: Phân tích giá nông sản [Ready]
+      💬 Zalo Integrator: Tích hợp Zalo OA [Ready]
+      🎤 Local Copywriter: Content giọng địa phương [Ready]
+
+   Total: 7 agents ready
+```
+
+### Step 4: (Optional) Activate Pro License
 
 ```bash
-# Marketing commands
-python -m core.marketing_hub
-
-# Sales commands
-python -m core.sales_hub
-
-# Finance commands
-python -m core.finance_hub
-
-# Strategy (Binh Pháp)
-python -m core.strategy_officer
+# Activate with your license key
+python main.py activate --key mk_live_xxxxx
 ```
 
-## IDE Integration (Recommended)
+Get your license key from [agencyos.network/pricing](/pricing).
 
-For the best experience, open in an AI-powered IDE:
+## CLI Commands
+
+Mekong-CLI uses Typer for a rich command-line experience:
+
+```bash
+# Initialize new project
+python main.py init my-agency
+
+# Configure AI voice/tone (Miền Tây, Gen Z, etc.)
+python main.py setup-vibe --location "Can Tho"
+
+# Setup MCP servers
+python main.py mcp-setup
+
+# Generate secrets (.env file)
+python main.py generate-secrets
+
+# Show cost analysis
+python main.py costs
+
+# Show available vibes
+python main.py vibes
+
+# Deploy to Cloud Run
+python main.py deploy
+```
+
+## Core Modules
+
+The `/core/` directory contains **154+ automation modules**:
+
+| Module | Description |
+|--------|-------------|
+| `marketing_hub.py` | Marketing automation & campaigns |
+| `sales_hub.py` | Sales pipeline & CRM |
+| `finance_hub.py` | Invoicing, expense tracking |
+| `strategy_officer.py` | Binh Pháp strategic planning |
+| `crm.py` | Customer relationship management |
+| `analytics.py` | Data analytics & reporting |
+| `proposal_generator.py` | AI proposal creation |
+| `content_generator.py` | Content creation automation |
+
+These modules are used internally by CLI commands - not run directly.
+
+## IDE Integration (Recommended)
 
 ### Cursor IDE
 [![Open in Cursor](https://img.shields.io/badge/Open%20in-Cursor-blue?style=for-the-badge&logo=cursor)](https://cursor.com)
 
 1. Open Cursor IDE
-2. Clone: `git clone https://github.com/longtho638-jpg/agencyos-starter.git`
+2. Clone: `git clone https://github.com/longtho638-jpg/mekong-cli.git`
 3. Open the folder in Cursor
-4. Use the integrated terminal to run commands
+4. Use integrated terminal for CLI commands
 
 ### VS Code
 1. Open VS Code
-2. Clone and open the agencyos-starter folder
+2. Clone and open the mekong-cli folder
 3. Install Python extension
 4. Use integrated terminal
 
@@ -113,6 +153,12 @@ python --version
 # Windows: Download from python.org
 ```
 
+### Typer/Rich not installed
+```bash
+# Install required packages
+pip install typer rich
+```
+
 ### Permission errors
 ```bash
 # Use pip with user flag
@@ -120,7 +166,7 @@ pip install --user -r requirements.txt
 ```
 
 ### License activation failed
-- Check your license key is correct
+- Check your license key format: `mk_live_xxxxx`
 - Ensure internet connection
 - Contact support@agencyos.network
 
@@ -129,9 +175,9 @@ pip install --user -r requirements.txt
 After installation:
 
 1. 📖 Read the [Quick Start Guide](/docs/getting-started/quick-start)
-2. 📋 Explore [85+ Commands](/commands)
-3. 🖥️ Try the [Interactive Demo](/demo)
-4. 💰 Calculate your [ROI](/roi-calculator)
+2. 🤖 Explore [7 AI Agents](/docs/agents)
+3. 📋 Browse [85+ Commands](/commands)
+4. 🖥️ Try the [Interactive Demo](/demo)
 
 ---
 
