@@ -1,11 +1,6 @@
 ---
 title: /watzup
-description: "Documentation for /watzup
-description:
-section: docs
-category: commands/core
-order: 7
-published: true"
+description: "Documentation"
 section: docs
 category: commands/core
 order: 7

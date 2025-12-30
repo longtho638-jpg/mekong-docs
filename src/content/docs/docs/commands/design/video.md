@@ -1,11 +1,6 @@
 ---
 title: /design:video
-description: "Documentation for /design:video
-description:
-section: docs
-category: commands/design
-order: 45
-published: true"
+description: "Documentation"
 section: docs
 category: commands/design
 order: 45

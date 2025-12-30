@@ -1,11 +1,6 @@
 ---
 title: /cook
-description: "Documentation for /cook
-description:
-section: docs
-category: commands/core
-order: 2
-published: true"
+description: "Documentation"
 section: docs
 category: commands/core
 order: 2

@@ -1,11 +1,6 @@
 ---
 title: /content:good
-description: "Documentation for /content:good
-description:
-section: docs
-category: commands/content
-order: 53
-published: true"
+description: "Documentation"
 section: docs
 category: commands/content
 order: 53

@@ -1,11 +1,6 @@
 ---
 title: Commands Overview
-description: "Documentation for Commands Overview
-description:
-section: docs
-category: commands
-order: 0
-published: true"
+description: "Documentation"
 section: docs
 category: commands
 order: 0

@@ -1,11 +1,6 @@
 ---
 title: /fix:fast
-description: "Documentation for /fix:fast
-description:
-section: docs
-category: commands/fix
-order: 20
-published: true"
+description: "Documentation"
 section: docs
 category: commands/fix
 order: 20

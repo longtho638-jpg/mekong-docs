@@ -1,11 +1,6 @@
 ---
 title: /docs:summarize
-description: "Documentation for /docs:summarize
-description:
-section: docs
-category: commands/docs-cmd
-order: 62
-published: true"
+description: "Documentation"
 section: docs
 category: commands/docs-cmd
 order: 62

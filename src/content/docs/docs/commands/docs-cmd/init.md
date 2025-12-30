@@ -1,11 +1,6 @@
 ---
 title: /docs:init
-description: "Documentation for /docs:init
-description:
-section: docs
-category: commands/docs-cmd
-order: 60
-published: true"
+description: "Documentation"
 section: docs
 category: commands/docs-cmd
 order: 60

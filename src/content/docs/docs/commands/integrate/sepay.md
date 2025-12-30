@@ -1,11 +1,6 @@
 ---
 title: /integrate:sepay
-description: "Documentation for /integrate:sepay
-description:
-section: docs
-category: commands/integrate
-order: 71
-published: true"
+description: "Documentation"
 section: docs
 category: commands/integrate
 order: 71

@@ -1,11 +1,6 @@
 ---
 title: /plan:ci
-description: "Documentation for /plan:ci
-description:
-section: docs
-category: commands/plan
-order: 10
-published: true"
+description: "Documentation"
 section: docs
 category: commands/plan
 order: 10

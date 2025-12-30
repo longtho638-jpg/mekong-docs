@@ -1,11 +1,6 @@
 ---
 title: /design:describe
-description: "Documentation for /design:describe
-description:
-section: docs
-category: commands/design
-order: 41
-published: true"
+description: "Documentation"
 section: docs
 category: commands/design
 order: 41

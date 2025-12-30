@@ -1,11 +1,6 @@
 ---
 title: /git:cm
-description: "Documentation for /git:cm
-description:
-section: docs
-category: commands/git
-order: 30
-published: true"
+description: "Documentation"
 section: docs
 category: commands/git
 order: 30

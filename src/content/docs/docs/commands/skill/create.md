@@ -1,11 +1,6 @@
 ---
 title: /skill:create
-description: "Documentation for /skill:create
-description:
-section: docs
-category: commands/skill
-order: 80
-published: true"
+description: "Documentation"
 section: docs
 category: commands/skill
 order: 80

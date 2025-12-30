@@ -1,11 +1,6 @@
 ---
 title: /design:fast
-description: "Documentation for /design:fast
-description:
-section: docs
-category: commands/design
-order: 42
-published: true"
+description: "Documentation"
 section: docs
 category: commands/design
 order: 42

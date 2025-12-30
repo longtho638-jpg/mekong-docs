@@ -1,11 +1,6 @@
 ---
 title: /content:enhance
-description: "Documentation for /content:enhance
-description:
-section: docs
-category: commands/content
-order: 51
-published: true"
+description: "Documentation"
 section: docs
 category: commands/content
 order: 51

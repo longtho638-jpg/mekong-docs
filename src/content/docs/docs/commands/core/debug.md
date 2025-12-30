@@ -1,11 +1,6 @@
 ---
 title: /debug
-description: "Documentation for /debug
-description:
-section: docs
-category: commands/core
-order: 5
-published: true"
+description: "Documentation"
 section: docs
 category: commands/core
 order: 5

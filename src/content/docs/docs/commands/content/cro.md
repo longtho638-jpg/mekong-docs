@@ -1,11 +1,6 @@
 ---
 title: /content:cro
-description: "Documentation for /content:cro
-description:
-section: docs
-category: commands/content
-order: 50
-published: true"
+description: "Documentation"
 section: docs
 category: commands/content
 order: 50

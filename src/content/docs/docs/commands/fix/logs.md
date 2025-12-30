@@ -1,11 +1,6 @@
 ---
 title: /fix:logs
-description: "Documentation for /fix:logs
-description:
-section: docs
-category: commands/fix
-order: 23
-published: true"
+description: "Documentation"
 section: docs
 category: commands/fix
 order: 23

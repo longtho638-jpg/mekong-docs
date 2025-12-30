@@ -1,11 +1,6 @@
 ---
 title: /bootstrap
-description: "Documentation for /bootstrap
-description:
-section: docs
-category: commands/core
-order: 1
-published: true"
+description: "Documentation"
 section: docs
 category: commands/core
 order: 1

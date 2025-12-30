@@ -1,11 +1,6 @@
 ---
 title: /design:screenshot
-description: "Documentation for /design:screenshot
-description:
-section: docs
-category: commands/design
-order: 44
-published: true"
+description: "Documentation"
 section: docs
 category: commands/design
 order: 44

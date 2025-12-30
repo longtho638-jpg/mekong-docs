@@ -1,11 +1,6 @@
 ---
 title: /journal
-description: "Documentation for /journal
-description:
-section: docs
-category: commands/core
-order: 6
-published: true"
+description: "Documentation"
 section: docs
 category: commands/core
 order: 6

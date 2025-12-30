@@ -1,11 +1,6 @@
 ---
 title: /fix:ui
-description: "Documentation for /fix:ui
-description:
-section: docs
-category: commands/fix
-order: 24
-published: true"
+description: "Documentation"
 section: docs
 category: commands/fix
 order: 24

@@ -1,11 +1,6 @@
 ---
 title: /design:good
-description: "Documentation for /design:good
-description:
-section: docs
-category: commands/design
-order: 43
-published: true"
+description: "Documentation"
 section: docs
 category: commands/design
 order: 43

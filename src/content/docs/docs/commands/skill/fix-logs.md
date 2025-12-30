@@ -1,11 +1,6 @@
 ---
 title: /skill:fix-logs
-description: "Documentation for /skill:fix-logs
-description:
-section: docs
-category: commands/skill
-order: 81
-published: true"
+description: "Documentation"
 section: docs
 category: commands/skill
 order: 81

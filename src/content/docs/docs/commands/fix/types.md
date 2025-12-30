@@ -1,11 +1,6 @@
 ---
 title: /fix:types
-description: "Documentation for /fix:types
-description:
-section: docs
-category: commands/fix
-order: 25
-published: true"
+description: "Documentation"
 section: docs
 category: commands/fix
 order: 25

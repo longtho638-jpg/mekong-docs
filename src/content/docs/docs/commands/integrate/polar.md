@@ -1,11 +1,6 @@
 ---
 title: /integrate:polar
-description: "Documentation for /integrate:polar
-description:
-section: docs
-category: commands/integrate
-order: 70
-published: true"
+description: "Documentation"
 section: docs
 category: commands/integrate
 order: 70

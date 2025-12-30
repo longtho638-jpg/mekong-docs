@@ -1,11 +1,6 @@
 ---
 title: /scout
-description: "Documentation for /scout
-description:
-section: docs
-category: commands/core
-order: 4
-published: true"
+description: "Documentation"
 section: docs
 category: commands/core
 order: 4

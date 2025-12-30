@@ -1,11 +1,6 @@
 ---
 title: /git:pr
-description: "Documentation for /git:pr
-description:
-section: docs
-category: commands/git
-order: 32
-published: true"
+description: "Documentation"
 section: docs
 category: commands/git
 order: 32

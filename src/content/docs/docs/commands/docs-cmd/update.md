@@ -1,11 +1,6 @@
 ---
 title: /docs:update
-description: "Documentation for /docs:update
-description:
-section: docs
-category: commands/docs-cmd
-order: 61
-published: true"
+description: "Documentation"
 section: docs
 category: commands/docs-cmd
 order: 61
