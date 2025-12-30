@@ -2,7 +2,7 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 
 const title = 'AgentOps - AI Agent Architecture';
-const description = '17 specialized AI agents, 85+ commands, 5 business suites. The intelligent backbone of AgencyOS.';
+const description = '18 specialized AI agents, 135 ZERO-EFFORT commands, 11 business suites. Binh Pháp × Antigravity powered.';
 
 // Agent data
 const agents = [
@@ -25,42 +25,84 @@ const agents = [
   { name: 'Journal Writer', icon: '📝', desc: 'Documentation', color: '#eab308' },
 ];
 
-// Business suites
+// Business suites - 11 total with Binh Pháp × Antigravity
 const suites = [
   { 
     name: 'Marketing', 
     icon: '🔥', 
-    binh_phap: 'Hỏa Công',
+    binh_phap: '謀攻篇 Mưu Công',
     color: '#ef4444',
-    commands: ['/marketing-strategy', '/content-marketing', '/social-media', '/pr-plan']
+    commands: ['/ke-hoach-tiep-thi', '/seo', '/pr', '/content', '/social', '/ads', '/branding', '/email']
   },
   { 
     name: 'Sales', 
-    icon: '💼', 
-    binh_phap: 'Địa Hình',
+    icon: '🛒', 
+    binh_phap: '作戰篇 Tác Chiến',
     color: '#3b82f6',
-    commands: ['/sales-strategy', '/customer-profile', '/sales', '/pricing']
+    commands: ['/khach-hang', '/crm', '/leadgen', '/pipeline', '/proposal', '/pricing', '/demo', '/close']
   },
   { 
     name: 'Finance', 
     icon: '💰', 
-    binh_phap: 'Hư Thực',
+    binh_phap: '計篇 Kế',
     color: '#22c55e',
-    commands: ['/finance', '/invoice', '/expense', '/budget']
+    commands: ['/bao-cao-tai-chinh', '/ngan-sach', '/invoice', '/cashflow', '/tax', '/forecast', '/expense', '/revenue']
   },
   { 
-    name: 'Strategic', 
-    icon: '🏯', 
-    binh_phap: 'Kế Hoạch',
-    color: '#f59e0b',
-    commands: ['/business-plan', '/growth-strategy', '/binh-phap', '/intel']
-  },
-  { 
-    name: 'Operations', 
+    name: 'Development', 
     icon: '⚡', 
-    binh_phap: 'Tác Chiến',
+    binh_phap: '九變篇 Cửu Biến',
     color: '#8b5cf6',
-    commands: ['/code', '/ship', '/sprint', '/test']
+    commands: ['/refactor', '/migrate', '/api', '/component', '/optimize', '/security', '/deploy:prod', '/rollback']
+  },
+  { 
+    name: 'Testing', 
+    icon: '🧪', 
+    binh_phap: '虛實篇 Hư Thực',
+    color: '#d946ef',
+    commands: ['/test:unit', '/test:e2e', '/coverage', '/lint', '/format', '/typecheck', '/audit', '/benchmark']
+  },
+  { 
+    name: 'Git', 
+    icon: '📦', 
+    binh_phap: '行軍篇 Hành Quân',
+    color: '#6366f1',
+    commands: ['/git:branch', '/git:merge', '/git:rebase', '/git:squash', '/git:tag', '/git:stash', '/git:cherry', '/git:bisect']
+  },
+  { 
+    name: 'Strategy', 
+    icon: '🎯', 
+    binh_phap: '計篇 Kế',
+    color: '#f59e0b',
+    commands: ['/swot', '/competitor', '/market', '/persona', '/roadmap', '/kpi', '/retro', '/quarterly']
+  },
+  { 
+    name: 'Agency', 
+    icon: '🏢', 
+    binh_phap: '始計篇 Thủy Kế',
+    color: '#06b6d4',
+    commands: ['/client', '/project', '/scope', '/estimate', '/timeline', '/handoff', '/feedback', '/report']
+  },
+  { 
+    name: 'Vietnamese', 
+    icon: '🇻🇳', 
+    binh_phap: '地形篇 Địa Hình',
+    color: '#dc2626',
+    commands: ['/phan-tich', '/bao-cao', '/du-an', '/nhan-su', '/hop-dong', '/lich-trinh', '/muc-tieu', '/danh-gia']
+  },
+  { 
+    name: 'Sync', 
+    icon: '🔄', 
+    binh_phap: '用間篇 Dụng Gián',
+    color: '#10b981',
+    commands: ['/sync-agent', '/sync-rules', '/sync-tasks', '/sync-browser', '/sync-mcp', '/sync-artifacts', '/sync-editor', '/sync-all']
+  },
+  { 
+    name: 'Docs', 
+    icon: '📚', 
+    binh_phap: '法篇 Pháp',
+    color: '#84cc16',
+    commands: ['/docs:api', '/docs:readme', '/docs:changelog', '/docs:onboard', '/docs:arch', '/docs:deploy']
   },
 ];
 
@@ -80,7 +122,7 @@ const win3 = [
       <div class="hero">
         <div class="hero-icon">🤖</div>
         <h1 class="hero-title">AgentOps</h1>
-        <p class="hero-subtitle">17 Specialized AI Agents • 85+ Commands • 5 Business Suites</p>
+        <p class="hero-subtitle">18 Specialized AI Agents • 135 ZERO-EFFORT Commands • 11 Business Suites</p>
         <p class="hero-desc">The intelligent nervous system powering your agency automation</p>
       </div>
 
@@ -147,7 +189,7 @@ const win3 = [
 
       <!-- Business Suites -->
       <div class="suites-section">
-        <h2 class="section-title">📦 5 Business Suites</h2>
+        <h2 class="section-title">📦 11 Business Suites × Binh Pháp</h2>
         <div class="suites-grid">
           {suites.map((suite, i) => (
             <div class="suite-card" style={`--suite-color: ${suite.color}; --delay: ${i}`}>
