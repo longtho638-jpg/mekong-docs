@@ -51,4 +51,21 @@ Every decision must create 3 WINs:
 
 ---
 
-*AgencyOS v10.0 | 13 Binh Pháp Clusters | WIN³ Aligned*
+## Antigravity IDE Integration
+
+AgencyOS Binh Pháp is fully integrated with [Google Antigravity](https://antigravity.google/):
+
+```bash
+# In Antigravity IDE
+/binh-phap "Your strategic question or goal"
+```
+
+### Learn More
+
+- 🚀 **[Full-Stack Workflow](/docs/antigravity/full-stack-workflow)** - Build products end-to-end
+- 🗺️ **[Cluster Mapping](/docs/antigravity/binh-phap-mapping)** - Deep dive each cluster
+- 🏯 **[Antigravity Guide](/docs/antigravity)** - Main Antigravity docs
+
+---
+
+*AgencyOS v10.0 | 13 Binh Pháp Clusters | WIN³ Aligned | Antigravity Ready*
