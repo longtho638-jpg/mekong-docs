@@ -1,7 +1,7 @@
 ---
 title: "Full-Stack Workflow"
 description: "Build complete products end-to-end with Binh Pháp methodology"
-section: "antigravity"
+section: "docs"
 order: 2
 published: true
 ---

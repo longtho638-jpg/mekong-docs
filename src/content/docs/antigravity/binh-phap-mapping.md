@@ -1,7 +1,7 @@
 ---
 title: "Binh Pháp Mapping"
 description: "Deep mapping of 13 Binh Pháp clusters to Antigravity IDE commands"
-section: "antigravity"
+section: "docs"
 order: 3
 published: true
 ---

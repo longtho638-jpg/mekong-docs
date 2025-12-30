@@ -1,7 +1,7 @@
 ---
 title: "AgencyOS on Antigravity"
 description: "Run your entire agency on Google's Antigravity platform with 13 Binh Pháp clusters"
-section: "antigravity"
+section: "docs"
 order: 1
 published: true
 ---
