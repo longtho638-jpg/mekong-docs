@@ -1,11 +1,6 @@
 ---
 title: CLI Installation
-description: "Documentation for CLI Installation
-description:
-section: docs
-category: cli
-order: 1
-published: true"
+description: "How to install and update AgencyOS CLI"
 section: docs
 category: cli
 order: 1
@@ -14,202 +9,107 @@ published: true
 
 # CLI Installation
 
-Install AgencyOS CLI (`mk`) to download and manage AgencyOS starter kits from private GitHub repository releases.
+Install AgencyOS CLI (Mekong-CLI) to download and manage AgencyOS starter kits.
 
 ## Prerequisites
 
 Before installing, ensure you have:
 
-- **Node.js 18+** - [Download from nodejs.org](https://nodejs.org)
-- **npm 9+** - Comes with Node.js
+- **Python 3.8+** - [Download from python.org](https://python.org)
+- **pip** - Comes with Python
 - **Git** - For repository access
-- **AgencyOS purchase** - Required for repository access from [AgencyOS.cc](https://agencyos.network)
+- **AgencyOS purchase** - Required for full access from [agencyos.network](https://agencyos.network)
 
 Verify installations:
 
 ```bash
-node --version  # Should be v18.0.0+
-npm --version   # Should be 9.0.0+
-git --version   # Any recent version
+python3 --version  # Should be 3.8+
+pip --version
+git --version
 ```
 
 ## Install CLI
 
-### Global Installation (Recommended)
+### Clone Repository
 
 ```bash
 git clone https://github.com/longtho638-jpg/mekong-cli.git
+cd mekong-cli
+pip install -r requirements.txt
 ```
-
-This installs the `mk` command globally, available from any directory.
 
 ### Verify Installation
 
 ```bash
-python main.py --version
+python3 main.py --help
 ```
 
 **Expected output:**
 ```
-1.2.1
+🌊 MEKONG-CLI: Deploy Your Agency in 15 Minutes
+
+Commands:
+  init             Initialize a new Hybrid Agent project
+  setup-vibe       Customize the Agent's soul
+  generate-secrets Interactive secret generation
+  agents           List available AI agents
+  ...
 ```
 
-View help:
+### Check Agents
+
 ```bash
-mk --help
+python3 main.py agents
 ```
 
 **Output:**
 ```
-AgencyOS CLI v1.2.1
+🤖 🌊 MEKONG-CLI AI Agents
 
-Usage:
-  ck <command> [options]
+   Quad-Agent System:
+      🔍 Scout: Thu thập thông tin [Ready]
+      ✏️ Editor: Biên tập nội dung [Ready]
+      🎬 Director: Đạo diễn video [Ready]
+      🤝 Community: Đăng bài & tương tác [Ready]
 
-Commands:
-  init      Initialize or update project from AgencyOS release
-  update    (deprecated) Use 'init' instead
-  versions  List available AgencyOS releases
-
-Options:
-  --version, -v   Show version number
-  --help, -h      Show help
-
-Examples:
-  python main.py init --kit engineer
-  python main.py init --global
-  mk versions --kit engineer
-
-For more info: https://docs.agencyos.network
+   Total: 7 agents ready
 ```
-
-## GitHub Authentication
-
-AgencyOS CLI requires GitHub authentication to download from private repositories.
-
-### Authentication Methods
-
-The CLI uses **multi-tier authentication** with automatic fallback:
-
-1. **GitHub CLI** - `gh auth token` (if authenticated)
-2. **OS Keychain** - Stored token
-3. **User Prompt** - Interactive prompt (with secure storage option)
-
-### Option 1: GitHub CLI (Recommended)
-
-Install and authenticate with GitHub CLI:
-
-**macOS:**
-```bash
-brew install gh
-```
-
-**Windows:**
-```bash
-winget install GitHub.cli
-```
-
-**Linux (Ubuntu/Debian):**
-```bash
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
-```
-
-**Authenticate:**
-```bash
-gh auth login
-```
-
-Follow prompts:
-1. Select "GitHub.com"
-2. Select "HTTPS"
-3. Choose "Login with web browser"
-4. Copy one-time code
-5. Complete authentication in browser
-
-**Verify:**
-```bash
-gh auth status
-```
-
-### Option 2: Interactive Prompt
-
-If no authentication is found, the CLI will prompt you:
-
-```
-GitHub authentication required.
-
-Please enter your GitHub Personal Access Token (PAT):
-> ghp_your_token_here
-
-Would you like to store this token securely in your OS keychain? (y/n)
-> y
-
-✓ Token stored securely
-```
-
-The token is encrypted and stored in your OS keychain:
-- **macOS**: Keychain Access
-- **Windows**: Windows Credential Manager
-- **Linux**: libsecret
-
-## Verify Access
-
-After authentication, verify you can access AgencyOS repositories:
-
-```bash
-# List available versions
-mk versions --kit engineer
-```
-
-If authentication is successful, you'll see available releases. If not, you'll see an error about repository access.
-
-## Repository Access
-
-**Important:** You must purchase a AgencyOS starter kit from [AgencyOS.cc](https://agencyos.network) to access the private repositories.
-
-After purchase:
-1. You'll be added to the GitHub repository
-2. Your GitHub account gets access to releases
-3. The CLI can download using your authenticated account
-
-Without purchase, you'll see:
-```
-Error: Repository not found or access denied
-Please purchase a AgencyOS kit at https://agencyos.network
-```
-
-## Configuration
-
-AgencyOS CLI stores configuration in `~/.agencyos/config.json`:
-
-```json
-{
-  "github": {
-    "token": "stored_in_keychain"
-  },
-  "defaults": {
-    "kit": "engineer",
-    "dir": "."
-  }
-}
-```
-
-**Note:** The actual token is stored in your OS keychain, not in the config file.
 
 ## Update CLI
 
 Keep the CLI updated for latest features:
 
 ```bash
-npm update -g agencyos-cli
+cd mekong-cli
+git pull origin main
+pip install -r requirements.txt
 ```
 
-Check installed version:
+Check version:
 ```bash
-python main.py --version
+python3 main.py --help
+```
+
+### Migration from .claude to .agencyos
+
+If you had an older version with `.claude/` folder:
+
+```bash
+mv .claude .agencyos
+```
+
+## Configuration
+
+AgencyOS CLI stores configuration in `.agencyos/` directory:
+
+```
+.agencyos/
+├── agents/       # 18 AI agents
+├── commands/     # 49+ slash commands
+├── workflows/    # Workflow definitions
+├── skills/       # Skill collections
+├── hooks/        # Git/Discord/Telegram hooks
+└── settings.json # CLI settings
 ```
 
 ## Uninstall
@@ -217,6 +117,7 @@ python main.py --version
 Remove AgencyOS CLI:
 
 ```bash
+cd ..
 rm -rf mekong-cli
 ```
 
@@ -227,114 +128,59 @@ rm -rf ~/.agencyos
 
 ## Troubleshooting
 
-### Command not found: ck
-
-**Problem:** Terminal doesn't recognize `mk` command
+### python3: command not found
 
 **Solutions:**
 
-1. **Restart terminal** - Sometimes PATH needs refresh
+1. **Install Python:**
+   - macOS: `brew install python`
+   - Windows: Download from python.org
+   - Linux: `sudo apt install python3`
 
-2. **Check installation:**
+2. **Use python instead:**
    ```bash
-   ls mekong-cli
+   python main.py --help
    ```
 
-3. **Verify npm global bin in PATH:**
-   ```bash
-   npm config get prefix
-   ```
+### Module not found
 
-   Add to PATH if needed:
-   ```bash
-   export PATH="$PATH:$(npm config get prefix)/bin"
-   ```
+**Problem:** Missing dependencies
 
-4. **Reinstall:**
-   ```bash
-   rm -rf mekong-cli
-   git clone https://github.com/longtho638-jpg/mekong-cli.git
-   ```
-
-### Authentication failed
-
-**Problem:** "Authentication failed" or "Repository not found"
-
-**Solutions:**
-
-1. **Check GitHub authentication:**
-   ```bash
-   gh auth status
-   ```
-
-   If not authenticated:
-   ```bash
-   gh auth login
-   ```
-
-2. **Verify repository access:**
-   - Ensure you purchased a AgencyOS kit
-   - Check you can access the repository on GitHub
+**Solution:**
+```bash
+pip install -r requirements.txt
+```
 
 ### Permission denied
 
-**Problem:** Cannot install globally
+**Problem:** Cannot clone or run
 
 **Solutions:**
 
-1. **Use npx (no installation needed):**
+1. **Check Git access:**
    ```bash
-   npx agencyos-cli new --kit engineer
+   git config --global user.name
+   git config --global user.email
    ```
 
-2. **Fix npm permissions:**
+2. **Use sudo (not recommended):**
    ```bash
-   mkdir ~/.npm-global
-   npm config set prefix '~/.npm-global'
-   export PATH=~/.npm-global/bin:$PATH
-   git clone https://github.com/longtho638-jpg/mekong-cli.git
+   sudo pip install -r requirements.txt
    ```
-
-3. **Use sudo (not recommended):**
-   ```bash
-   sudo git clone https://github.com/longtho638-jpg/mekong-cli.git
-   ```
-
-### Download fails
-
-**Problem:** "Failed to download release"
-
-**Solutions:**
-
-1. **Check internet connection**
-
-2. **Verify authentication:**
-   ```bash
-   gh auth status
-   ```
-
-3. **Try with verbose logging:**
-   ```bash
-   python main.py init --kit engineer --verbose
-   ```
-
-4. **Check GitHub status:**
-   - Visit [githubstatus.com](https://www.githubstatus.com)
 
 ## Next Steps
 
 Now that the CLI is installed:
 
-1. **Initialize a project** - Run `python main.py init --kit engineer`
-2. **Browse available versions** - Run `mk versions`
+1. **Initialize a project** - Run `python3 main.py init`
+2. **Check agents** - Run `python3 main.py agents`
 3. **Start developing** - Follow [Getting Started](/docs/getting-started/installation)
 
 ## Need Help?
 
-- **Documentation**: [docs.agencyos.network](https://docs.agencyos.network)
-- **GitHub Issues**: [github.com/mrgoonie/agencyos-cli/issues](https://github.com/mrgoonie/agencyos-cli/issues)
-- **Purchase Support**: [agencyos.network](https://agencyos.network)
+- **Documentation**: [agencyos.network](https://www.agencyos.network/docs)
+- **GitHub Issues**: [github.com/longtho638-jpg/mekong-cli/issues](https://github.com/longtho638-jpg/mekong-cli/issues)
 
 ---
 
-**Ready to start?** Run `python main.py init --kit engineer` to initialize your first project.
+**Ready to start?** Run `python3 main.py init` to initialize your first project.
