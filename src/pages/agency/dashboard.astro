@@ -92,27 +92,27 @@ const description = 'Real-time agency metrics, system health monitoring, and qui
           <span class="status-badge all-operational">All Systems Operational</span>
         </div>
         <div class="systems-grid">
-          <div class="system-item operational">
+          <div class="system-item operational" data-system="crm">
             <span class="system-status">🟢</span>
             <span class="system-name">CRM</span>
           </div>
-          <div class="system-item operational">
+          <div class="system-item operational" data-system="invoicing">
             <span class="system-status">🟢</span>
             <span class="system-name">Invoicing</span>
           </div>
-          <div class="system-item operational">
+          <div class="system-item operational" data-system="analytics">
             <span class="system-status">🟢</span>
             <span class="system-name">Analytics</span>
           </div>
-          <div class="system-item operational">
+          <div class="system-item operational" data-system="email">
             <span class="system-status">🟢</span>
             <span class="system-name">Email</span>
           </div>
-          <div class="system-item operational">
+          <div class="system-item operational" data-system="webhooks">
             <span class="system-status">🟢</span>
             <span class="system-name">Webhooks</span>
           </div>
-          <div class="system-item operational">
+          <div class="system-item operational" data-system="calendar">
             <span class="system-status">🟢</span>
             <span class="system-name">Calendar</span>
           </div>
@@ -238,6 +238,38 @@ const description = 'Real-time agency metrics, system health monitoring, and qui
         <span class="cta-hint">to open Command Palette</span>
       </div>
     </section>
+
+    <!-- 🏯 MISSION CONTROL MODAL -->
+    <div id="system-modal" class="system-modal hidden">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-status">🟢</span>
+            <h3 id="modal-title">System Name</h3>
+            <span class="modal-badge">Operational</span>
+          </div>
+          <button class="modal-close" aria-label="Close">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-metrics" id="modal-metrics">
+            <!-- Dynamic metrics -->
+          </div>
+          <div class="modal-actions">
+            <h4>⚡ Quick Actions</h4>
+            <div class="modal-action-grid" id="modal-actions">
+              <!-- Dynamic actions -->
+            </div>
+          </div>
+          <div class="modal-activity">
+            <h4>📈 Recent Activity</h4>
+            <ul id="modal-activity">
+              <!-- Dynamic activity -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Navigation Footer -->
     <nav class="dashboard-nav">
@@ -772,6 +804,225 @@ const description = 'Real-time agency metrics, system health monitoring, and qui
     font-size: 0.8rem;
     color: var(--color-text-secondary);
   }
+
+  /* ===================== MISSION CONTROL MODAL ===================== */
+  .system-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .system-modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-content {
+    position: relative;
+    background: linear-gradient(145deg, rgba(30, 30, 40, 0.95), rgba(20, 20, 30, 0.98));
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow: hidden;
+    animation: modal-in 0.3s ease-out;
+  }
+
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.1), rgba(6, 182, 212, 0.1));
+  }
+
+  .modal-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .modal-status {
+    font-size: 1.5rem;
+  }
+
+  .modal-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
+  }
+
+  .modal-badge {
+    padding: 4px 12px;
+    background: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  .modal-close {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  .modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    max-height: calc(80vh - 100px);
+  }
+
+  .modal-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .metric-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .metric-box .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #22c55e;
+    margin-bottom: 4px;
+  }
+
+  .metric-box .label {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+  }
+
+  .modal-actions h4,
+  .modal-activity h4 {
+    margin: 0 0 12px 0;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+  }
+
+  .modal-action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .modal-action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .modal-action-btn:hover {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .modal-action-btn .icon {
+    font-size: 1.25rem;
+  }
+
+  .modal-activity ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .modal-activity li {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .modal-activity .time {
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .modal-activity .event {
+    color: #fff;
+    font-size: 0.85rem;
+  }
+
+  /* System item hover for clickability */
+  .system-item[data-system] {
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .system-item[data-system]:hover {
+    transform: scale(1.05);
+    background: rgba(34, 197, 94, 0.1);
+  }
+
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 95%;
+      margin: 20px;
+    }
+    .modal-metrics,
+    .modal-action-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 </style>
 
 <script>
@@ -908,6 +1159,208 @@ const description = 'Real-time agency metrics, system health monitoring, and qui
         text.style.opacity = '1';
       }
     });
+  });
+
+  // ===================== MISSION CONTROL MODAL =====================
+  
+  // System data for each module
+  const systemData: Record<string, {
+    title: string;
+    metrics: { value: string; label: string }[];
+    actions: { icon: string; label: string; url: string }[];
+    activity: { time: string; event: string }[];
+  }> = {
+    crm: {
+      title: 'CRM System',
+      metrics: [
+        { value: '1,234', label: 'Contacts' },
+        { value: '28', label: 'Active Deals' },
+        { value: '$45.6K', label: 'Pipeline' }
+      ],
+      actions: [
+        { icon: '👤', label: 'New Contact', url: '/docs/commands/agency/client' },
+        { icon: '📝', label: 'New Deal', url: '/docs/commands/sales/proposal' },
+        { icon: '📊', label: 'View Pipeline', url: '/agency/deals' }
+      ],
+      activity: [
+        { time: '2m ago', event: '✅ Contact "TechFlow AI" added' },
+        { time: '15m ago', event: '📝 Deal #28 moved to Negotiation' },
+        { time: '1h ago', event: '📧 Follow-up email sent to 5 leads' }
+      ]
+    },
+    invoicing: {
+      title: 'Invoicing System',
+      metrics: [
+        { value: '$25.4K', label: 'Outstanding' },
+        { value: '12', label: 'Pending' },
+        { value: '95%', label: 'Collection Rate' }
+      ],
+      actions: [
+        { icon: '💳', label: 'New Invoice', url: '/docs/commands/finance/invoice' },
+        { icon: '📤', label: 'Send Reminders', url: '/docs/commands/finance/reminder' },
+        { icon: '📊', label: 'View Report', url: '/docs/commands/agency/report' }
+      ],
+      activity: [
+        { time: '5m ago', event: '💰 Invoice #INV-045 paid ($3,200)' },
+        { time: '30m ago', event: '📧 Reminder sent for INV-003' },
+        { time: '2h ago', event: '📄 Invoice #INV-046 created' }
+      ]
+    },
+    analytics: {
+      title: 'Analytics Engine',
+      metrics: [
+        { value: '12.5K', label: 'Page Views' },
+        { value: '2.4K', label: 'Unique Visitors' },
+        { value: '3.2%', label: 'Conversion' }
+      ],
+      actions: [
+        { icon: '📊', label: 'Run Report', url: '/docs/commands/agency/report' },
+        { icon: '📈', label: 'View Trends', url: '/docs/commands/strategy/growth-analysis' },
+        { icon: '🎯', label: 'Set Goals', url: '/docs/commands/strategy/kpi-dashboard' }
+      ],
+      activity: [
+        { time: '1m ago', event: '📊 Dashboard refreshed' },
+        { time: '1h ago', event: '📈 Weekly report generated' },
+        { time: '3h ago', event: '🎯 Conversion goal exceeded' }
+      ]
+    },
+    email: {
+      title: 'Email Marketing',
+      metrics: [
+        { value: '4,521', label: 'Subscribers' },
+        { value: '68%', label: 'Open Rate' },
+        { value: '12%', label: 'Click Rate' }
+      ],
+      actions: [
+        { icon: '📧', label: 'New Campaign', url: '/docs/commands/marketing/email' },
+        { icon: '👥', label: 'Manage Lists', url: '/docs/commands/marketing/audience' },
+        { icon: '📊', label: 'View Stats', url: '/docs/commands/marketing/analytics' }
+      ],
+      activity: [
+        { time: '10m ago', event: '📧 Campaign "December Newsletter" sent' },
+        { time: '2h ago', event: '👥 45 new subscribers added' },
+        { time: '5h ago', event: '✅ A/B test completed' }
+      ]
+    },
+    webhooks: {
+      title: 'Webhooks & Integrations',
+      metrics: [
+        { value: '18', label: 'Active Hooks' },
+        { value: '99.9%', label: 'Uptime' },
+        { value: '1.2K', label: 'Events/Day' }
+      ],
+      actions: [
+        { icon: '🔗', label: 'New Webhook', url: '/docs/commands/dev/webhook-create' },
+        { icon: '⚙️', label: 'Configure', url: '/docs/commands/sync/config' },
+        { icon: '📋', label: 'View Logs', url: '/docs/commands/sync/log' }
+      ],
+      activity: [
+        { time: '30s ago', event: '✅ Stripe webhook processed' },
+        { time: '2m ago', event: '✅ Slack notification sent' },
+        { time: '5m ago', event: '✅ GitHub deploy hook triggered' }
+      ]
+    },
+    calendar: {
+      title: 'Calendar & Scheduling',
+      metrics: [
+        { value: '8', label: 'Today\'s Events' },
+        { value: '23', label: 'This Week' },
+        { value: '15', label: 'Pending Confirms' }
+      ],
+      actions: [
+        { icon: '📅', label: 'New Event', url: '/docs/commands/agency/timeline' },
+        { icon: '👥', label: 'Schedule Meeting', url: '/docs/commands/agency/client' },
+        { icon: '🔄', label: 'Sync Calendars', url: '/docs/commands/sync/calendar' }
+      ],
+      activity: [
+        { time: '15m ago', event: '📅 Meeting with TechFlow confirmed' },
+        { time: '1h ago', event: '🔔 Reminder: Team standup in 30min' },
+        { time: '3h ago', event: '✅ Weekly review scheduled' }
+      ]
+    }
+  };
+
+  // Modal elements
+  const modal = document.getElementById('system-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalMetrics = document.getElementById('modal-metrics');
+  const modalActions = document.getElementById('modal-actions');
+  const modalActivity = document.getElementById('modal-activity');
+  const closeBtn = document.querySelector('.modal-close');
+  const backdrop = document.querySelector('.modal-backdrop');
+
+  // Open modal with system data
+  function openSystemModal(systemId: string) {
+    const data = systemData[systemId];
+    if (!data || !modal) return;
+
+    // Set title
+    if (modalTitle) modalTitle.textContent = data.title;
+
+    // Render metrics
+    if (modalMetrics) {
+      modalMetrics.innerHTML = data.metrics.map(m => `
+        <div class="metric-box">
+          <div class="value">${m.value}</div>
+          <div class="label">${m.label}</div>
+        </div>
+      `).join('');
+    }
+
+    // Render actions
+    if (modalActions) {
+      modalActions.innerHTML = data.actions.map(a => `
+        <button class="modal-action-btn" data-url="${a.url}">
+          <span class="icon">${a.icon}</span>
+          <span>${a.label}</span>
+        </button>
+      `).join('');
+      
+      // Add click handlers to action buttons
+      modalActions.querySelectorAll('.modal-action-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const url = btn.getAttribute('data-url');
+          if (url) window.location.href = url;
+        });
+      });
+    }
+
+    // Render activity
+    if (modalActivity) {
+      modalActivity.innerHTML = data.activity.map(a => `
+        <li>
+          <span class="time">${a.time}</span>
+          <span class="event">${a.event}</span>
+        </li>
+      `).join('');
+    }
+
+    // Show modal
+    modal.classList.remove('hidden');
+  }
+
+  // Close modal
+  function closeModal() {
+    if (modal) modal.classList.add('hidden');
+  }
+
+  // System item click handlers
+  document.querySelectorAll('.system-item[data-system]').forEach(item => {
+    item.addEventListener('click', () => {
+      const systemId = item.getAttribute('data-system');
+      if (systemId) openSystemModal(systemId);
+    });
+  });
+
+  // Close button
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  // Backdrop click to close
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  // ESC key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
   });
 
 </script>
