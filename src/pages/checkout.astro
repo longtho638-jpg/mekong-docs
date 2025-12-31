@@ -382,28 +382,13 @@ const POLAR_READY = true;
       return;
     }
 
-    // Get product URL
-    const productUrls = POLAR_PRODUCTS[plan];
-    if (!productUrls) {
-      showError(`Invalid plan: ${plan}`);
-      return;
-    }
-
-    let checkoutUrl = billing === 'annual' ? productUrls.annual : productUrls.monthly;
-
-    // Add query params
+    // Use dynamic API endpoint to create checkout session
     const params = new URLSearchParams();
+    params.set('plan', plan);
     if (userEmail) params.set('email', userEmail);
-    if (promo) params.set('discount_code', promo);
-    params.set('success_url', window.location.origin + '/success?plan=' + plan);
-    params.set('cancel_url', window.location.origin + '/pricing');
-
-    if (params.toString()) {
-      checkoutUrl += (checkoutUrl.includes('?') ? '&' : '?') + params.toString();
-    }
-
-    // Redirect to Polar.sh
-    window.location.href = checkoutUrl;
+    
+    // Redirect to API which creates Polar checkout and redirects
+    window.location.href = '/api/checkout?' + params.toString();
   }
 
   // Start checkout process
