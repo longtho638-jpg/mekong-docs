@@ -60,17 +60,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             });
         }
 
+        // Build metadata (only include non-null values)
+        const metadata: Record<string, string> = { plan, billing };
+        if (affiliateCode) metadata.affiliateCode = affiliateCode;
+        if (promoCode) metadata.promoCode = promoCode;
+
         // Build checkout options
         const checkoutOptions: any = {
             products: [productId],
             successUrl: `${process.env.POLAR_SUCCESS_URL || 'https://agencyos.network/success'}?checkout_id={CHECKOUT_ID}`,
             customerEmail: email || undefined,
-            metadata: {
-                plan,
-                billing,
-                affiliateCode: affiliateCode || null,
-                promoCode: promoCode || null,
-            },
+            metadata,
         };
 
         // Add discount if provided (from Polar discount lookup)
