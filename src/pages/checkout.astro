@@ -5,19 +5,23 @@ const title = 'Checkout - AgencyOS';
 const description = 'Complete your AgencyOS subscription.';
 
 // Polar.sh Product Configuration
-// Replace with actual Polar.sh product URLs when ready
+// Use Product IDs from setup-polar.js (created 2025-12-31)
+const PRODUCT_STARTER = 'af7a521d-142b-45b5-9dd2-337417b0d6b2';
+const PRODUCT_PRO = 'a8323c67-a6f4-4055-8609-aea2f5687e63';
+const PRODUCT_FRANCHISE = 'c2a5666b-bb41-43e5-9d0d-0dc30aee76df';
+
 const POLAR_PRODUCTS = {
   starter: {
-    monthly: 'https://buy.polar.sh/agencyos/starter-monthly',
-    annual: 'https://buy.polar.sh/agencyos/starter-annual'
+    monthly: `https://polar.sh/checkout?products=${PRODUCT_STARTER}`,
+    annual: `https://polar.sh/checkout?products=${PRODUCT_STARTER}`
   },
   pro: {
-    monthly: 'https://buy.polar.sh/agencyos/pro-monthly',
-    annual: 'https://buy.polar.sh/agencyos/pro-annual'
+    monthly: `https://polar.sh/checkout?products=${PRODUCT_PRO}`,
+    annual: `https://polar.sh/checkout?products=${PRODUCT_PRO}`
   },
   franchise: {
-    monthly: 'https://buy.polar.sh/agencyos/franchise-monthly',
-    annual: 'https://buy.polar.sh/agencyos/franchise-annual'
+    monthly: `https://polar.sh/checkout?products=${PRODUCT_FRANCHISE}`,
+    annual: `https://polar.sh/checkout?products=${PRODUCT_FRANCHISE}`
   }
 };
 
