@@ -3,23 +3,22 @@ import { Polar } from '@polar-sh/sdk';
 
 // Initialize Polar SDK
 const polar = new Polar({
-    accessToken: process.env.POLAR_ACCESS_TOKEN!,
+    accessToken: process.env.POLAR_ACCESS_TOKEN?.trim() || '',
 });
 
-// Product IDs from Polar.sh dashboard
-// Replace these with actual product IDs after creating products in Polar
+// Product IDs from Polar.sh - trim to remove any newlines from env vars
 const PRODUCTS = {
     starter: {
-        monthly: process.env.POLAR_PRODUCT_STARTER_MONTHLY,
-        annual: process.env.POLAR_PRODUCT_STARTER_ANNUAL,
+        monthly: process.env.POLAR_PRODUCT_STARTER_MONTHLY?.trim(),
+        annual: process.env.POLAR_PRODUCT_STARTER_ANNUAL?.trim(),
     },
     pro: {
-        monthly: process.env.POLAR_PRODUCT_PRO_MONTHLY,
-        annual: process.env.POLAR_PRODUCT_PRO_ANNUAL,
+        monthly: process.env.POLAR_PRODUCT_PRO_MONTHLY?.trim(),
+        annual: process.env.POLAR_PRODUCT_PRO_ANNUAL?.trim(),
     },
     franchise: {
-        monthly: process.env.POLAR_PRODUCT_FRANCHISE_MONTHLY,
-        annual: process.env.POLAR_PRODUCT_FRANCHISE_ANNUAL,
+        monthly: process.env.POLAR_PRODUCT_FRANCHISE_MONTHLY?.trim(),
+        annual: process.env.POLAR_PRODUCT_FRANCHISE_ANNUAL?.trim(),
     },
 };
 
@@ -61,9 +60,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
 
         // Build checkout options (keep it simple - no metadata to avoid validation issues)
+        const successUrl = 'https://agencyos.network/success';
         const checkoutOptions: any = {
-            products: [productId],
-            successUrl: `${process.env.POLAR_SUCCESS_URL || 'https://agencyos.network/success'}?checkout_id={CHECKOUT_ID}&plan=${plan}`,
+            products: [productId.trim()],
+            successUrl: `${successUrl}?checkout_id={CHECKOUT_ID}&plan=${plan}`,
             ...(email && { customerEmail: email }),
         };
 
