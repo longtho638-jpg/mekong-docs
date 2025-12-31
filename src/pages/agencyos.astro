@@ -32,6 +32,11 @@ const description = '125+ AI commands for marketing, sales, affiliate, and finan
         125+ commands. Zero employees. Infinite scale.
       </p>
 
+      <div class="target-badge mb-4">
+        <span class="badge-icon">🧑‍💻</span>
+        <span class="badge-text">For Technical Agency Founders</span>
+      </div>
+
       <p class="text-sm text-[var(--color-text-muted)] mb-10">
         Join 500+ agencies worldwide • 4.9/5 rating • 30-day guarantee
       </p>
@@ -633,6 +638,30 @@ const description = '125+ AI commands for marketing, sales, affiliate, and finan
 </LandingLayout>
 
 <style>
+  /* Target Audience Badge */
+  .target-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(6, 182, 212, 0.15));
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 24px;
+    animation: badge-pulse 3s ease-in-out infinite;
+  }
+
+  .badge-icon { font-size: 1.2rem; }
+  .badge-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #22c55e;
+  }
+
+  @keyframes badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+
   /* Floating Promo Badge */
   .promo-badge {
     position: fixed;

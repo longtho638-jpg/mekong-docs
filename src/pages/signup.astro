@@ -8,7 +8,7 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
 <LandingLayout title={title} description={description}>
   <section class="signup-hero">
     <h1>🚀 Start Your Free Trial</h1>
-    <p>Enter your email to get started. No credit card required.</p>
+    <p>Enter your email to get started. 7-day free trial, cancel anytime.</p>
   </section>
 
   <section class="signup-section">
@@ -504,16 +504,41 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
   const planPrice = document.getElementById('plan-price');
   const submitBtn = document.getElementById('submit-btn');
 
-  const ORIGINAL_PRICE = 99;
+  // Plan configuration
+  const PLAN_CONFIG = {
+    starter: { name: 'Starter Plan', price: 29, icon: '⭐' },
+    pro: { name: 'Pro Plan', price: 99, icon: '🚀' },
+    franchise: { name: 'Franchise Plan', price: 299, icon: '🏯' }
+  };
+
+  // Check URL params for plan FIRST (before using planParam)
+  const urlParams = new URLSearchParams(window.location.search);
+  const planParam = urlParams.get('plan') || 'pro';
+  const promoFromUrl = urlParams.get('promo');
+
+  // Now use planParam to get the correct price
+  const planConfig = PLAN_CONFIG[planParam as keyof typeof PLAN_CONFIG] || PLAN_CONFIG.pro;
+  const ORIGINAL_PRICE = planConfig.price;
   let currentDiscount = 0;
   let validPromoCode = '';
   let validDiscountId: string | null = null; // Polar discount ID
   let discountSource = ''; // 'polar', 'fallback', 'pattern'
 
-  // Check URL params for plan
-  const urlParams = new URLSearchParams(window.location.search);
-  const plan = urlParams.get('plan') || 'pro';
-  const promoFromUrl = urlParams.get('promo');
+  // Update plan badge dynamically
+  const planBadge = document.getElementById('plan-badge');
+  const planIconEl = planBadge?.querySelector('.plan-icon');
+  const planNameEl = planBadge?.querySelector('.plan-name');
+  const planPriceEl = document.getElementById('plan-price');
+  const originalPriceDisplay = document.getElementById('original-price');
+  const summaryPlanText = document.querySelector('.summary-row span');
+  const totalPriceEl = document.getElementById('total-price');
+  
+  if (planIconEl) planIconEl.textContent = planConfig.icon;
+  if (planNameEl) planNameEl.textContent = planConfig.name;
+  if (planPriceEl) planPriceEl.textContent = `$${planConfig.price}/month`;
+  if (originalPriceDisplay) originalPriceDisplay.textContent = `$${planConfig.price}.00`;
+  if (totalPriceEl) totalPriceEl.textContent = `$${planConfig.price}.00`;
+  if (summaryPlanText) summaryPlanText.textContent = `${planConfig.name} (Monthly)`;
 
   // Pre-fill promo from URL
   if (promoFromUrl && promoInput) {
@@ -697,7 +722,7 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
       discountId: validDiscountId,
       discount: currentDiscount,
       discountSource,
-      plan: plan,
+      plan: planParam,
       timestamp: new Date().toISOString()
     };
 
@@ -721,7 +746,7 @@ const description = 'Enter your email to start your 7-day free trial of AgencyOS
       } else {
         // Go to checkout with discountId for Polar to apply
         const params = new URLSearchParams({
-          plan,
+          plan: planParam,
           email,
           name,
         });

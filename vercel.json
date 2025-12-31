@@ -1,4 +1,17 @@
 {
+    "redirects": [
+        {
+            "source": "/app",
+            "destination": "/app/dashboard",
+            "permanent": false
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/app/:path*",
+            "destination": "https://dashboard-rm4rowo86-minh-longs-projects-f5c82c9b.vercel.app/:path*"
+        }
+    ],
     "crons": [
         {
             "path": "/api/cron/emails",
