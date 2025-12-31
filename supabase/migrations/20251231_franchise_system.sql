@@ -7,7 +7,7 @@
 -- TERRITORIES TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.territories (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   country VARCHAR(100) NOT NULL,
   region VARCHAR(100) NOT NULL,
   city VARCHAR(100),
@@ -37,7 +37,7 @@ CREATE POLICY "Service role can manage territories" ON public.territories
 -- FRANCHISEES TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.franchisees (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
@@ -72,7 +72,7 @@ CREATE POLICY "Service role can manage franchisees" ON public.franchisees
 -- FRANCHISE REVENUE TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.franchise_revenue (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   franchisee_id UUID REFERENCES public.franchisees(id) ON DELETE CASCADE,
   period VARCHAR(7) NOT NULL, -- YYYY-MM format
   local_revenue DECIMAL(12,2) DEFAULT 0, -- Revenue from local services
@@ -107,7 +107,7 @@ CREATE POLICY "Service role can manage franchise revenue" ON public.franchise_re
 -- FRANCHISE ONBOARDING STEPS
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.franchise_onboarding (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   franchisee_id UUID REFERENCES public.franchisees(id) ON DELETE CASCADE,
   step_number INT NOT NULL,
   step_name VARCHAR(100) NOT NULL,

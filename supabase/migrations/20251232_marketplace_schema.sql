@@ -7,7 +7,7 @@
 -- MARKETPLACE ITEMS TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.marketplace_items (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   creator_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
   type VARCHAR(50) NOT NULL, -- skill, template, agent, workflow
   name VARCHAR(255) NOT NULL,
@@ -53,7 +53,7 @@ CREATE POLICY "Service role can manage all items" ON public.marketplace_items
 -- MARKETPLACE PURCHASES TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.marketplace_purchases (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   buyer_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
   item_id UUID REFERENCES public.marketplace_items(id) ON DELETE SET NULL,
   price_paid DECIMAL(10,2) NOT NULL,
@@ -81,7 +81,7 @@ CREATE POLICY "Creators can view sales" ON public.marketplace_purchases
 -- MARKETPLACE REVIEWS TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.marketplace_reviews (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   item_id UUID REFERENCES public.marketplace_items(id) ON DELETE CASCADE,
   reviewer_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
   purchase_id UUID REFERENCES public.marketplace_purchases(id),
@@ -108,7 +108,7 @@ CREATE POLICY "Reviewers can manage own reviews" ON public.marketplace_reviews
 -- CREATOR PAYOUTS TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.creator_payouts (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   creator_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
   period VARCHAR(7) NOT NULL, -- YYYY-MM
   total_sales DECIMAL(12,2) DEFAULT 0,

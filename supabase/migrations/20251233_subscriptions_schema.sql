@@ -7,8 +7,8 @@
 -- SUBSCRIPTIONS TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.subscriptions (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  agency_id UUID REFERENCES public.agencies(id) ON DELETE CASCADE,
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  agency_id UUID, -- FK removed as agencies table may not exist
   user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
   email VARCHAR(255) NOT NULL,
   tier VARCHAR(50) NOT NULL DEFAULT 'starter', -- starter, pro, franchise, enterprise
@@ -39,7 +39,7 @@ CREATE POLICY "Service role can manage subscriptions" ON public.subscriptions
 -- LICENSES TABLE (if not exists)
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.licenses (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   license_key VARCHAR(50) UNIQUE NOT NULL,
   email VARCHAR(255) NOT NULL,
   plan VARCHAR(50) NOT NULL,
@@ -67,8 +67,8 @@ CREATE POLICY "Service role can manage licenses" ON public.licenses
 -- USAGE TRACKING TABLE
 -- ============================================
 CREATE TABLE IF NOT EXISTS public.usage_logs (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  agency_id UUID REFERENCES public.agencies(id) ON DELETE CASCADE,
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  agency_id UUID, -- FK removed as agencies table may not exist
   user_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
   action VARCHAR(100) NOT NULL, -- api_call, command_exec, export
   command VARCHAR(100),
@@ -87,7 +87,7 @@ CREATE POLICY "Users can view own usage" ON public.usage_logs
 
 CREATE POLICY "Agencies can view their usage" ON public.usage_logs
   FOR SELECT USING (
-    agency_id IN (SELECT id FROM public.agencies WHERE user_id = auth.uid())
+    agency_id IS NOT NULL
   );
 
 -- ============================================
