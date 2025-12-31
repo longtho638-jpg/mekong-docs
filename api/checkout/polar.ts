@@ -62,7 +62,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         // Build checkout options
         const checkoutOptions: any = {
-            productId: productId,
+            products: [productId],
             successUrl: `${process.env.POLAR_SUCCESS_URL || 'https://agencyos.network/success'}?checkout_id={CHECKOUT_ID}`,
             customerEmail: email || undefined,
             metadata: {

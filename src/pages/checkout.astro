@@ -374,7 +374,7 @@ const POLAR_READY = true;
     if (selectedEmailEl && userEmail) selectedEmailEl.textContent = `Email: ${userEmail}`;
   }
 
-  function redirectToCheckout() {
+  async function redirectToCheckout() {
     // Check if Polar.sh is configured
     if (!POLAR_READY) {
       // Show demo mode
@@ -382,13 +382,30 @@ const POLAR_READY = true;
       return;
     }
 
-    // Use dynamic API endpoint to create checkout session
-    const params = new URLSearchParams();
-    params.set('plan', plan);
-    if (userEmail) params.set('email', userEmail);
-    
-    // Redirect to API which creates Polar checkout and redirects
-    window.location.href = '/api/checkout?' + params.toString();
+    try {
+      // POST to Vercel API function to create checkout session
+      const response = await fetch('/api/checkout/polar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          plan: plan,
+          billing: billing,
+          email: userEmail,
+          promoCode: promo
+        })
+      });
+      
+      const data = await response.json();
+      
+      if (data.success && data.checkoutUrl) {
+        // Redirect to Polar checkout
+        window.location.href = data.checkoutUrl;
+      } else {
+        showError(data.error || 'Failed to create checkout');
+      }
+    } catch (error) {
+      showError('Network error. Please try again.');
+    }
   }
 
   // Start checkout process
