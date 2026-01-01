@@ -4,6 +4,8 @@ description: "Build consistent brand identity for agencies"
 section: "workflows"
 order: 15
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 🎨 Brand System Workflow
@@ -12,70 +14,61 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Create a consistent brand system that builds recognition and trust.
-
----
-
-## Brand Elements
-
-### 1. Logo Suite
-- Primary logo
-- Icon version
-- Dark/light variants
-- Minimum sizes
-
-### 2. Color Palette
-| Type | Colors |
-|------|--------|
-| Primary | 1-2 colors |
-| Secondary | 2-3 colors |
-| Neutral | Grays |
-| Semantic | Success, Warning, Error |
-
-### 3. Typography
-| Use | Font |
-|-----|------|
-| Headlines | Display font |
-| Body | Sans-serif |
-| Code | Monospace |
-
-### 4. Voice & Tone
-- Professional yet approachable
-- Clear and concise
-- Consistent across channels
+```
+Execute workflow: https://agencyos.network/docs/workflows/brand-system
+```
 
 ---
 
-## Brand Guidelines
+## ⚡ Step-by-Step Execution
 
-| Element | Rule |
-|---------|------|
-| Logo spacing | 2x logo height |
-| Color usage | Primary for CTAs |
-| Font sizes | Scale system |
-| Image style | Consistent filters |
+### Step 1: Generate Color Palette (3 min)
+```bash
+mekong brand:colors \
+  --primary "#10b981" \
+  --secondary "#3b82f6" \
+  --neutral "slate"
+
+# Expected: ✅ Color system generated
+```
+
+### Step 2: Setup Typography (3 min)
+```bash
+mekong brand:fonts \
+  --heading "Inter" \
+  --body "Inter" \
+  --mono "JetBrains Mono"
+
+# Expected: ✅ Font stack configured
+```
+
+### Step 3: Generate Logo Variants (3 min)
+```bash
+mekong brand:logo \
+  --name "ABC Corp" \
+  --variants "primary,icon,dark,light"
+
+# Expected: ✅ 4 logo variants created
+```
+
+### Step 4: Create Brand Guide (3 min)
+```bash
+mekong brand:guide \
+  --output "./brand/abc-corp-guidelines.pdf"
+
+# Expected: ✅ Brand guide generated
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `graphic_designer.py` | Design assets |
-| `web_designer.py` | Web design |
-| `art_director.py` | Creative direction |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 4: Hình Thế** - Positioning power
-
-- Consistency builds trust
-- Premium brands command premium prices
-- Design is competitive advantage
+- [ ] Color palette defined
+- [ ] Typography system set
+- [ ] Logo variants created
+- [ ] Brand guide documented
 
 ---
 

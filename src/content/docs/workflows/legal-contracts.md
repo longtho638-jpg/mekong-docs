@@ -4,6 +4,8 @@ description: "MSA, NDA, and SOW templates for agencies"
 section: "workflows"
 order: 12
 published: true
+ai_executable: true
+estimated_time: "10 minutes"
 ---
 
 # ⚖️ Legal Contracts Workflow
@@ -12,63 +14,64 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Protect your agency and clients with proper legal documentation.
-
----
-
-## Essential Contracts
-
-### 1. Master Service Agreement (MSA)
-- Scope of services
-- Payment terms
-- Liability limits
-- Termination clause
-
-### 2. Statement of Work (SOW)
-- Specific deliverables
-- Timeline
-- Milestones
-- Acceptance criteria
-
-### 3. Non-Disclosure Agreement (NDA)
-- Confidential information
-- Duration
-- Exceptions
-- Remedies
+```
+Execute workflow: https://agencyos.network/docs/workflows/legal-contracts
+```
 
 ---
 
-## Contract Checklist
+## ⚡ Step-by-Step Execution
 
-| Item | Required |
-|------|----------|
-| Payment terms | ✅ Net 15-30 |
-| Termination | ✅ 30-day notice |
-| IP ownership | ✅ Client owns deliverables |
-| Liability cap | ✅ = Contract value |
-| Dispute resolution | ✅ Arbitration |
+### Step 1: Generate MSA (3 min)
+```bash
+mekong legal:msa \
+  --client "ABC Corp" \
+  --tier "warrior" \
+  --payment "net-15"
+
+# Expected: ✅ MSA generated: ./contracts/abc-corp-msa.pdf
+```
+
+### Step 2: Generate NDA (2 min)
+```bash
+mekong legal:nda \
+  --client "ABC Corp" \
+  --type "mutual" \
+  --duration "2 years"
+
+# Expected: ✅ NDA generated
+```
+
+### Step 3: Generate SOW (3 min)
+```bash
+mekong legal:sow \
+  --client "ABC Corp" \
+  --deliverables "CRM setup, Training, Support" \
+  --timeline "90 days"
+
+# Expected: ✅ SOW generated
+```
+
+### Step 4: Send for Signature (2 min)
+```bash
+mekong legal:sign \
+  --docs "msa,nda,sow" \
+  --to "john@abccorp.com" \
+  --provider "docusign"
+
+# Expected: ✅ Contracts sent for e-signature
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `contract_manager.py` | Contract lifecycle |
-| `contract.py` | Template management |
-| `compliance_officer.py` | Legal compliance |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 6: Hư Thực** - Protect weaknesses
-
-- Never start work without contract
-- Clear scope prevents disputes
-- Fair terms = long-term relationships
+- [ ] MSA signed before work starts
+- [ ] NDA in place for sensitive projects
+- [ ] SOW clearly defines deliverables
+- [ ] All contracts stored securely
 
 ---
 

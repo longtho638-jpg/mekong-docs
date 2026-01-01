@@ -4,6 +4,8 @@ description: "Build your agency team efficiently"
 section: "workflows"
 order: 11
 published: true
+ai_executable: true
+estimated_time: "15 minutes"
 ---
 
 # 👥 HR Hiring Workflow
@@ -12,68 +14,71 @@ published: true
 
 ---
 
-## Overview
-
-Hire the right people to scale your agency from 1 to 15+ team members.
-
----
-
-## Hiring Process
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│  Stage 1: DEFINE                               │
-│  ├── Role requirements                         │
-│  └── Salary range                              │
-├─────────────────────────────────────────────────┤
-│  Stage 2: SOURCE                               │
-│  ├── Job posting                               │
-│  └── Referrals (2x quality)                    │
-├─────────────────────────────────────────────────┤
-│  Stage 3: SCREEN                               │
-│  ├── Resume review                             │
-│  └── Initial call (15 min)                     │
-├─────────────────────────────────────────────────┤
-│  Stage 4: INTERVIEW                            │
-│  ├── Skills assessment                         │
-│  └── Culture fit                               │
-├─────────────────────────────────────────────────┤
-│  Stage 5: OFFER                                │
-│  ├── Compensation package                      │
-│  └── Start date                                │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/hr-hiring
 ```
 
 ---
 
-## Key Roles to Hire
+## ⚡ Step-by-Step Execution
 
-| Phase | Role | When |
-|-------|------|------|
-| 1 | VA/Admin | 10 clients |
-| 2 | Account Manager | 20 clients |
-| 3 | Specialist | 30 clients |
-| 4 | Team Lead | 40 clients |
+### Step 1: Define Role (3 min)
+```bash
+mekong hr:role \
+  --title "Account Manager" \
+  --type "full-time" \
+  --salary "50000-70000" \
+  --location "remote"
+
+# Expected: ✅ Role created
+```
+
+### Step 2: Create Job Posting (3 min)
+```bash
+mekong hr:posting \
+  --role "Account Manager" \
+  --template "agency"
+
+# Expected: ✅ Job posting generated
+```
+
+### Step 3: Setup Interview Pipeline (3 min)
+```bash
+mekong hr:pipeline \
+  --stage "resume" \
+  --stage "phone-screen" \
+  --stage "skills-test" \
+  --stage "final-interview" \
+  --stage "offer"
+
+# Expected: ✅ 5-stage pipeline created
+```
+
+### Step 4: Post to Job Boards (3 min)
+```bash
+mekong hr:post \
+  --boards "linkedin,indeed,wellfound"
+
+# Expected: ✅ Posted to 3 boards
+```
+
+### Step 5: Track Candidates (3 min)
+```bash
+mekong hr:candidates --list
+
+# Shows: Name, Stage, Score, Next Action
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `talent_acquisition.py` | Recruiting pipeline |
-| `hr_analytics.py` | Team metrics |
-| `compensation_manager.py` | Salary management |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 5: Thế Trận** - Team momentum
-
-- Hire slow, fire fast
-- Culture > skills
-- Referrals are gold
+- [ ] Role defined with salary range
+- [ ] Job posting published
+- [ ] 5-stage interview pipeline
+- [ ] 10+ qualified applicants
 
 ---
 

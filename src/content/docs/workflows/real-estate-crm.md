@@ -4,6 +4,8 @@ description: "Property sales and client management for real estate"
 section: "workflows"
 order: 21
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 🏠 Real Estate CRM Workflow
@@ -12,76 +14,59 @@ published: true
 
 ---
 
-## Overview
-
-Help real estate clients manage listings, leads, and close more deals.
-
----
-
-## Lead Pipeline
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│  Stage 1: INQUIRY                              │
-│  └── Website, Referral, Portal                 │
-├─────────────────────────────────────────────────┤
-│  Stage 2: QUALIFIED                            │
-│  └── Budget, Timeline, Preferences             │
-├─────────────────────────────────────────────────┤
-│  Stage 3: SHOWING                              │
-│  └── Property tours scheduled                  │
-├─────────────────────────────────────────────────┤
-│  Stage 4: OFFER                                │
-│  └── Negotiation in progress                   │
-├─────────────────────────────────────────────────┤
-│  Stage 5: CLOSED                               │
-│  └── Deal completed                            │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/real-estate-crm
 ```
 
 ---
 
-## Property Listing Process
+## ⚡ Step-by-Step Execution
 
-- [ ] Property assessment
-- [ ] Photography & video
-- [ ] Listing copy
-- [ ] Portal syndication
-- [ ] Marketing campaign
-- [ ] Open house schedule
+### Step 1: Initialize RE CRM (3 min)
+```bash
+mekong realestate:init --type "residential"
+
+# Expected: ✅ Real estate CRM ready
+```
+
+### Step 2: Setup Listing Pipeline (3 min)
+```bash
+mekong realestate:pipeline \
+  --stages "new,photography,listed,showing,offer,closed"
+
+# Expected: ✅ 6-stage pipeline created
+```
+
+### Step 3: Add First Listing (3 min)
+```bash
+mekong realestate:listing \
+  --address "123 Main St" \
+  --price 500000 \
+  --beds 3 --baths 2 \
+  --sqft 1800
+
+# Expected: ✅ Listing added
+```
+
+### Step 4: Create Lead Capture (3 min)
+```bash
+mekong realestate:leadform \
+  --embed "website" \
+  --fields "name,email,phone,budget"
+
+# Expected: ✅ Lead form generated
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `real_estate_hub.py` | RE operations |
-| `listing_manager.py` | Property listings |
-| `re_lead_manager.py` | Lead management |
-| `re_market_analyst.py` | Market analysis |
-| `property_portfolio.py` | Portfolio tracking |
-
----
-
-## Success Metrics
-
-| Metric | Target |
-|--------|--------|
-| Lead Response Time | < 5 min |
-| Showing Rate | 30%+ |
-| Close Rate | 10%+ |
-| Days on Market | < 60 |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 10: Địa Hình** - Territory knowledge
-
-- Know every neighborhood
-- Speed wins in real estate
-- Relationships are everything
+- [ ] CRM active with listings
+- [ ] Lead capture on website
+- [ ] Response time < 5 min
+- [ ] Close rate > 10%
 
 ---
 

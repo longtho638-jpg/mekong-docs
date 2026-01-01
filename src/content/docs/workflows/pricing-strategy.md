@@ -4,6 +4,8 @@ description: "Design pricing packages for Bootstrap and VC-Ready clients"
 section: "workflows"
 order: 4
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 💰 Pricing Strategy Workflow
@@ -12,72 +14,116 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Design pricing that serves both Bootstrap (70%) and VC-Ready (30%) clients.
-
----
-
-## Tier Structure
-
-### Bootstrap Path (70%)
-
-| Tier | Price | Best For |
-|------|-------|----------|
-| **Starter** | $49/mo | Freelancers |
-| **Growth** | $199/mo | Small agencies |
-| **Scale** | $499/mo | Growing teams |
-
-### VC-Ready Path (30%)
-
-| Tier | Price | Best For |
-|------|-------|----------|
-| **Warrior** | $2,000/mo | Pre-Seed |
-| **General** | $5,000/mo | Seed/Series A |
-| **Tướng Quân** | Equity | Venture Studio |
+```
+Execute workflow: https://agencyos.network/docs/workflows/pricing-strategy
+```
 
 ---
 
-## Pricing Psychology
+## ⚡ Step-by-Step Execution
 
-| Principle | Implementation |
-|-----------|----------------|
-| Anchoring | Show highest tier first |
-| Decoy | Middle tier = best value |
-| Urgency | Limited-time offers |
-| Social proof | "Most popular" badge |
+### Step 1: Analyze Current Pricing (2 min)
+```bash
+# View current pricing structure
+mekong pricing:current
+
+# If not set: "No pricing configured"
+```
+
+### Step 2: Setup Tier Structure (3 min)
+```bash
+# Create 3-tier pricing (Bootstrap path)
+mekong pricing:create \
+  --tier "starter" --price 49 --currency "USD" \
+  --tier "growth" --price 199 --currency "USD" \
+  --tier "scale" --price 499 --currency "USD"
+
+# Expected: ✅ 3 tiers created
+```
+
+### Step 3: Add VC-Ready Tiers (3 min)
+```bash
+# Add high-touch tiers
+mekong pricing:create \
+  --tier "warrior" --price 2000 --type "retainer" \
+  --tier "general" --price 5000 --type "retainer" \
+  --tier "tuong-quan" --price 0 --type "equity" --equity "15-30%"
+
+# Expected: ✅ VC-Ready tiers added
+```
+
+### Step 4: Configure Margins (2 min)
+```bash
+# Set target margins
+mekong pricing:margins \
+  --tier "starter" --target 80 \
+  --tier "growth" --target 80 \
+  --tier "warrior" --target 60
+
+# Expected: ✅ Margin targets set
+```
+
+### Step 5: Generate Pricing Page (2 min)
+```bash
+# Create pricing page component
+mekong pricing:page --output "./pages/pricing.tsx"
+
+# Expected: ✅ Pricing page created
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `pricing.py` | Dynamic pricing engine |
-| `pricing_intel.py` | Competitor analysis |
-| `roi_calculator.py` | Value justification |
-
----
-
-## Margin Targets
-
-| Tier | Revenue | COGS | Margin |
-|------|---------|------|--------|
-| Starter | $49 | $10 | 80% |
-| Growth | $199 | $40 | 80% |
-| Scale | $499 | $100 | 80% |
-| Warrior | $2,000 | $800 | 60% |
-| General | $5,000 | $2,000 | 60% |
+- [ ] 6 tiers configured (3 Bootstrap + 3 VC-Ready)
+- [ ] Margins set (60-80%)
+- [ ] Pricing page generated
+- [ ] `mekong pricing:test` passes
 
 ---
 
-## Binh Pháp Alignment
+## 📋 Pricing Config Template
 
-> **Chapter 4: Hình Thế** - Positioning power
+```yaml
+# config/pricing.yaml
+tiers:
+  # Bootstrap Path (70%)
+  starter:
+    price: 49
+    currency: USD
+    billing: monthly
+    target_margin: 80
+    features:
+      - "Core tools"
+      - "Email support"
+      
+  growth:
+    price: 199
+    currency: USD
+    billing: monthly
+    target_margin: 80
+    features:
+      - "All Starter features"
+      - "Priority support"
+      - "API access"
+      
+  # VC-Ready Path (30%)
+  warrior:
+    price: 2000
+    type: retainer
+    target_margin: 60
+    includes:
+      - "Strategy sessions"
+      - "Dedicated CSM"
+```
 
-- Price reflects value, not cost
-- Premium positioning attracts premium clients
-- Never compete on price alone
+---
+
+## 🔗 Next Workflow
+
+→ [Retention Plays](/docs/workflows/retention-plays)
 
 ---
 

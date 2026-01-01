@@ -4,6 +4,8 @@ description: "Learning management system for education clients"
 section: "workflows"
 order: 22
 published: true
+ai_executable: true
+estimated_time: "15 minutes"
 ---
 
 # 🎓 Education LMS Workflow
@@ -12,75 +14,62 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Help education clients build and manage online learning platforms.
-
----
-
-## LMS Components
-
-| Component | Purpose |
-|-----------|---------|
-| Course Builder | Create curriculum |
-| Video Hosting | Lesson delivery |
-| Quizzes | Assessment |
-| Certificates | Completion proof |
-| Community | Student interaction |
+```
+Execute workflow: https://agencyos.network/docs/workflows/education-lms
+```
 
 ---
 
-## Course Launch Process
+## ⚡ Step-by-Step Execution
 
-### Pre-Launch (Week 1-2)
-- [ ] Curriculum outline
-- [ ] Video scripts
-- [ ] Slide decks
-- [ ] Quiz questions
+### Step 1: Initialize LMS (3 min)
+```bash
+mekong education:init --platform "custom"
 
-### Production (Week 3-4)
-- [ ] Video recording
-- [ ] Editing
-- [ ] Platform upload
-- [ ] Testing
+# Expected: ✅ LMS structure created
+```
 
-### Launch (Week 5)
-- [ ] Sales page
-- [ ] Email sequence
-- [ ] Social campaign
-- [ ] Live webinar
+### Step 2: Create Course (5 min)
+```bash
+mekong education:course \
+  --title "Agency Automation 101" \
+  --modules 5 \
+  --price 297
 
----
+# Expected: ✅ Course structure created
+```
 
-## AgencyOS Modules
+### Step 3: Add Lessons (5 min)
+```bash
+mekong education:lesson \
+  --course "agency-automation-101" \
+  --title "Getting Started" \
+  --type "video" \
+  --duration "10min"
 
-| Module | Purpose |
-|--------|---------|
-| `education_hub.py` | Education ops |
-| `course_manager.py` | Course management |
-| `knowledge_base.py` | Content library |
-| `training_tracker.py` | Progress tracking |
+# Expected: ✅ Lesson added
+```
 
----
+### Step 4: Setup Payment (2 min)
+```bash
+mekong education:payment \
+  --provider "stripe" \
+  --price 297 \
+  --trial 7
 
-## Pricing Models
-
-| Model | Example |
-|-------|---------|
-| One-time | $297 course |
-| Subscription | $47/mo membership |
-| Cohort | $1,997 live program |
-| Enterprise | $10K+ team license |
+# Expected: ✅ Payment enabled with 7-day trial
+```
 
 ---
 
-## Binh Pháp Alignment
+## ✅ Success Criteria
 
-> **Chapter 5: Thế Trận** - Build momentum
-
-- Content compounds over time
-- Community is retention
-- Transformation > information
+- [ ] Course published
+- [ ] Payment processing active
+- [ ] 5+ lessons uploaded
+- [ ] First student enrolled
 
 ---
 

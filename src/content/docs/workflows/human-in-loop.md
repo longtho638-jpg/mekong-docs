@@ -4,6 +4,8 @@ description: "Approval workflows with suspend/resume capability"
 section: "workflows"
 order: 18
 published: true
+ai_executable: true
+estimated_time: "10 minutes"
 ---
 
 # 👤 Human-in-Loop Workflow
@@ -12,91 +14,64 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Build approval workflows that pause for human decision-making.
-
----
-
-## Suspend/Resume Pattern
-
-```typescript
-import { createWorkflowChain } from "@voltagent/core";
-
-export const proposalApprovalWorkflow = createWorkflowChain({
-  id: "proposal-approval",
-  name: "Proposal Approval",
-  purpose: "Get manager approval for large proposals",
-})
-.andThen({
-  id: "check-approval-needed",
-  resumeSchema: z.object({
-    approved: z.boolean(),
-    comments: z.string().optional(),
-  }),
-  execute: async ({ data, suspend, resumeData }) => {
-    // If resuming with decision
-    if (resumeData) {
-      return { ...data, approved: resumeData.approved };
-    }
-    
-    // Proposals over $10K need approval
-    if (data.amount > 10000) {
-      await suspend("Manager approval required", {
-        proposalId: data.id,
-        amount: data.amount,
-      });
-    }
-    
-    // Auto-approve smaller proposals
-    return { ...data, approved: true };
-  },
-});
+```
+Execute workflow: https://agencyos.network/docs/workflows/human-in-loop
 ```
 
 ---
 
-## Approval Types
+## ⚡ Step-by-Step Execution
 
-| Type | Threshold | Approver |
-|------|-----------|----------|
-| Proposal | > $10K | Manager |
-| Contract | All | Legal |
-| Expense | > $500 | Finance |
-| Content | Sensitive | Editor |
+### Step 1: Setup Approval Rules (3 min)
+```bash
+mekong approval:rules \
+  --type "proposal" --threshold 10000 --approver "manager" \
+  --type "contract" --threshold 0 --approver "legal" \
+  --type "expense" --threshold 500 --approver "finance"
 
----
-
-## Workflow States
-
-```
-┌─────────────────────────────────────────────────┐
-│  RUNNING → SUSPENDED → RESUMED → COMPLETED     │
-│     │                      │                    │
-│     └──────────────────────┘                    │
-│            (auto-approve)                       │
-└─────────────────────────────────────────────────┘
+# Expected: ✅ 3 approval rules created
 ```
 
+### Step 2: Create Approval Workflow (3 min)
+```bash
+mekong approval:workflow \
+  --name "proposal-approval" \
+  --steps "auto-check,manager-review,send"
+
+# Expected: ✅ Workflow with suspend point
+```
+
+### Step 3: Test Approval Flow (2 min)
+```bash
+mekong approval:test \
+  --workflow "proposal-approval" \
+  --amount 15000
+
+# Expected: 
+# Step 1: ✅ Auto-check passed
+# Step 2: ⏸️ SUSPENDED - Waiting for manager
+```
+
+### Step 4: Resume After Approval (2 min)
+```bash
+mekong approval:resume \
+  --id "prop-123" \
+  --decision "approved" \
+  --approver "manager@agency.com"
+
+# Expected: ✅ Workflow completed
+```
+
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `notifications.py` | Approval notifications |
-| `scheduler.py` | Deadline tracking |
-| `meeting.py` | Approval meetings |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 8: Cửu Biến** - Flexibility
-
-- Not everything should be automated
-- Critical decisions need humans
-- Balance speed with quality
+- [ ] Approval rules defined
+- [ ] Suspend/resume working
+- [ ] Notifications sent
+- [ ] Audit trail maintained
 
 ---
 

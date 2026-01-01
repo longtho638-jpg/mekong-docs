@@ -4,6 +4,8 @@ description: "Plan and execute content marketing for agencies"
 section: "workflows"
 order: 13
 published: true
+ai_executable: true
+estimated_time: "10 minutes"
 ---
 
 # 📅 Content Calendar Workflow
@@ -12,75 +14,63 @@ published: true
 
 ---
 
-## Overview
-
-Create consistent content that attracts leads and builds authority.
-
----
-
-## Content Pillars (4)
-
-| Pillar | Purpose | % |
-|--------|---------|---|
-| Educational | Teach skills | 40% |
-| Case Studies | Social proof | 25% |
-| Behind-the-scenes | Build trust | 20% |
-| Promotional | Convert | 15% |
-
----
-
-## Weekly Rhythm
-
-| Day | Platform | Content Type |
-|-----|----------|--------------|
-| Mon | Blog | Long-form article |
-| Tue | X/Twitter | Thread |
-| Wed | LinkedIn | Carousel |
-| Thu | YouTube | Video |
-| Fri | Email | Newsletter |
-
----
-
-## Content Process
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│  1. IDEATE (Weekly)                            │
-│  └── Brainstorm 10 ideas                       │
-├─────────────────────────────────────────────────┤
-│  2. CREATE (Daily)                             │
-│  └── Write/record content                      │
-├─────────────────────────────────────────────────┤
-│  3. EDIT (Same day)                            │
-│  └── Review and polish                         │
-├─────────────────────────────────────────────────┤
-│  4. SCHEDULE (Weekly batch)                    │
-│  └── Queue in scheduler                        │
-├─────────────────────────────────────────────────┤
-│  5. ANALYZE (Weekly)                           │
-│  └── Review metrics                            │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/content-calendar
 ```
 
 ---
 
-## AgencyOS Modules
+## ⚡ Step-by-Step Execution
 
-| Module | Purpose |
-|--------|---------|
-| `content_generator.py` | AI content creation |
-| `content_writer.py` | Writing support |
-| `social_media_manager.py` | Scheduling |
+### Step 1: Initialize Calendar (2 min)
+```bash
+mekong content:init --platform "notion"
+
+# Expected: ✅ Content calendar created
+```
+
+### Step 2: Setup Content Pillars (3 min)
+```bash
+mekong content:pillars \
+  --pillar "educational" --percent 40 \
+  --pillar "case-studies" --percent 25 \
+  --pillar "behind-scenes" --percent 20 \
+  --pillar "promotional" --percent 15
+
+# Expected: ✅ 4 pillars configured
+```
+
+### Step 3: Generate Weekly Schedule (2 min)
+```bash
+mekong content:schedule \
+  --mon "blog" \
+  --tue "twitter-thread" \
+  --wed "linkedin-carousel" \
+  --thu "youtube" \
+  --fri "newsletter"
+
+# Expected: ✅ 5-day schedule created
+```
+
+### Step 4: Create First Week Content (3 min)
+```bash
+mekong content:generate \
+  --week 1 \
+  --topic "agency automation"
+
+# Expected: ✅ 5 content pieces drafted
+```
 
 ---
 
-## Binh Pháp Alignment
+## ✅ Success Criteria
 
-> **Chapter 5: Thế Trận** - Build momentum
-
-- Consistency > perfection
-- Compound content effects
-- Content is your moat
+- [ ] Calendar tool connected
+- [ ] 4 content pillars defined
+- [ ] Weekly publishing rhythm
+- [ ] 30+ days content scheduled
 
 ---
 

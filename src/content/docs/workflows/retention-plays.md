@@ -4,6 +4,8 @@ description: "Keep clients longer and reduce churn"
 section: "workflows"
 order: 5
 published: true
+ai_executable: true
+estimated_time: "10 minutes"
 ---
 
 # 🔄 Retention Plays Workflow
@@ -12,75 +14,121 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Reduce churn and maximize customer lifetime value with proactive retention plays.
-
----
-
-## Churn Prevention Signals
-
-| Signal | Risk Level | Action |
-|--------|------------|--------|
-| No login 7+ days | 🟡 Medium | Check-in email |
-| Support ticket spike | 🟡 Medium | Manager call |
-| Usage declining | 🟠 High | Success review |
-| Payment failed | 🔴 Critical | Immediate outreach |
-| Cancellation request | 🔴 Critical | Save call |
+```
+Execute workflow: https://agencyos.network/docs/workflows/retention-plays
+```
 
 ---
 
-## Retention Plays
+## ⚡ Step-by-Step Execution
 
-### Play 1: Proactive Check-in
-- Trigger: 14 days no login
-- Action: Personalized email + call
-- Goal: Understand blockers
+### Step 1: Setup Health Monitoring (3 min)
+```bash
+# Enable client health scoring
+mekong health:init
 
-### Play 2: Value Reminder
-- Trigger: Monthly
-- Action: Usage report email
-- Goal: Show ROI delivered
+# Configure alert thresholds
+mekong health:config \
+  --green 80 \
+  --yellow 50 \
+  --red 0
 
-### Play 3: Expansion Offer
-- Trigger: High usage
-- Action: Upgrade conversation
-- Goal: Increase deal size
+# Expected: ✅ Health monitoring active
+```
 
-### Play 4: Save Call
-- Trigger: Cancel request
-- Action: Discovery + offer
-- Goal: Retain or learn
+### Step 2: Create Alert Rules (2 min)
+```bash
+# Setup churn signals
+mekong health:alerts \
+  --trigger "no_login_7_days" --action "email_checkin" \
+  --trigger "support_spike" --action "manager_call" \
+  --trigger "usage_decline" --action "success_review" \
+  --trigger "payment_failed" --action "urgent_outreach"
+
+# Expected: ✅ 4 alert rules created
+```
+
+### Step 3: Setup Save Plays (3 min)
+```bash
+# Create retention playbooks
+mekong retention:play \
+  --name "green_expansion" \
+  --trigger "score >= 80" \
+  --action "upsell_call"
+
+mekong retention:play \
+  --name "yellow_rescue" \
+  --trigger "score 50-79" \
+  --action "monthly_checkin"
+
+mekong retention:play \
+  --name "red_save" \
+  --trigger "score < 50" \
+  --action "executive_escalation"
+
+# Expected: ✅ 3 playbooks active
+```
+
+### Step 4: Test Health Check (2 min)
+```bash
+# Run health check on all clients
+mekong health:check --all
+
+# Expected output:
+# ┌─────────────────────────────────┐
+# │ Health Report                   │
+# │ Green: 80%  Yellow: 15%  Red: 5%│
+# └─────────────────────────────────┘
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `client_health.py` | Health scoring |
-| `csm.py` | Success management |
-| `referral.py` | Referral program |
-
----
-
-## Target Metrics
-
-| Metric | Target |
-|--------|--------|
-| Monthly Churn | < 3% |
-| Net Revenue Retention | 110%+ |
-| Expansion Revenue | $15K/mo |
+- [ ] Health monitoring active
+- [ ] 4 alert rules configured
+- [ ] 3 retention playbooks created
+- [ ] Churn < 3% monthly
 
 ---
 
-## Binh Pháp Alignment
+## 📋 Retention Playbook Template
 
-> **Chapter 11: Cửu Địa** - Crisis management
+```yaml
+# config/retention.yaml
+playbooks:
+  green_expansion:
+    trigger: "health_score >= 80"
+    cadence: quarterly
+    actions:
+      - expansion_conversation
+      - referral_ask
+      - case_study_request
+      
+  yellow_rescue:
+    trigger: "health_score 50-79"
+    cadence: monthly
+    actions:
+      - checkin_call
+      - training_offer
+      - usage_optimization
+      
+  red_save:
+    trigger: "health_score < 50"
+    cadence: weekly
+    actions:
+      - executive_escalation
+      - save_offer
+      - root_cause_analysis
+```
 
-- Prevent fires, don't just fight them
-- Early intervention saves clients
-- Every churned client is a lesson
+---
+
+## 🔗 Next Workflow
+
+→ [Binh Pháp Analysis](/docs/workflows/binh-phap-analysis)
 
 ---
 

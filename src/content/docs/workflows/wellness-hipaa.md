@@ -4,6 +4,8 @@ description: "HIPAA-compliant marketing for healthcare clients"
 section: "workflows"
 order: 23
 published: true
+ai_executable: true
+estimated_time: "15 minutes"
 ---
 
 # ❤️ Wellness & Healthcare Workflow
@@ -12,65 +14,58 @@ published: true
 
 ---
 
-## Overview
-
-Help healthcare and wellness clients with HIPAA-compliant marketing.
-
----
-
-## HIPAA Compliance Checklist
-
-| Requirement | Implementation |
-|-------------|----------------|
-| Data encryption | End-to-end |
-| Access controls | Role-based |
-| Audit logs | All access logged |
-| BAA | Signed with vendors |
-| Training | Staff certified |
-
----
-
-## Compliant Marketing Channels
-
-| Channel | Notes |
-|---------|-------|
-| Website | SSL, privacy policy |
-| Email | Encrypted, consent |
-| Social | No PHI sharing |
-| Reviews | HIPAA-compliant |
-| Ads | No retargeting with PHI |
-
----
-
-## Patient Journey
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│  AWARENESS → CONSIDERATION → BOOKING →         │
-│  VISIT → FOLLOW-UP → RETENTION                 │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/wellness-hipaa
 ```
 
 ---
 
-## AgencyOS Modules
+## ⚡ Step-by-Step Execution
 
-| Module | Purpose |
-|--------|---------|
-| `wellness_hub.py` | Wellness ops |
-| `healthcare_marketing.py` | HIPAA marketing |
-| `wellness_coordinator.py` | Programs |
-| `compliance_officer.py` | Compliance |
+### Step 1: HIPAA Compliance Check (3 min)
+```bash
+mekong hipaa:audit --website "https://clinic.example.com"
+
+# Checks: SSL, BAA, Privacy Policy, Forms
+```
+
+### Step 2: Setup Compliant Forms (5 min)
+```bash
+mekong hipaa:forms \
+  --type "appointment" \
+  --encrypt true \
+  --baa-provider "jotform"
+
+# Expected: ✅ HIPAA-compliant forms ready
+```
+
+### Step 3: Configure Email (4 min)
+```bash
+mekong hipaa:email \
+  --provider "paubox" \
+  --encrypt true
+
+# Expected: ✅ Encrypted email configured
+```
+
+### Step 4: Create Patient Journey (3 min)
+```bash
+mekong wellness:journey \
+  --stages "awareness,booking,visit,followup"
+
+# Expected: ✅ 4-stage journey mapped
+```
 
 ---
 
-## Binh Pháp Alignment
+## ✅ Success Criteria
 
-> **Chapter 11: Cửu Địa** - Handle with care
-
-- Compliance is non-negotiable
-- Trust takes years to build
-- Specialized = premium pricing
+- [ ] HIPAA audit passed
+- [ ] Encrypted forms live
+- [ ] BAA signed with vendors
+- [ ] No PHI in marketing
 
 ---
 

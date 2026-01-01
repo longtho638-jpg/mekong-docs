@@ -4,6 +4,8 @@ description: "Multi-agent coordination with VoltAgent supervisor pattern"
 section: "workflows"
 order: 16
 published: true
+ai_executable: true
+estimated_time: "15 minutes"
 ---
 
 # 🤖 Supervisor Pattern Workflow
@@ -12,83 +14,65 @@ published: true
 
 ---
 
-## Overview
-
-Coordinate multiple AI agents using the VoltAgent supervisor pattern.
-
----
-
-## Architecture
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│              SUPERVISOR AGENT                   │
-│         (orchestration & routing)               │
-├─────────────────────────────────────────────────┤
-│                                                 │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐         │
-│  │ Scout   │  │ Editor  │  │ Director│         │
-│  │ Agent   │  │ Agent   │  │ Agent   │         │
-│  └─────────┘  └─────────┘  └─────────┘         │
-│                                                 │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐         │
-│  │Community│  │Research │  │ Analyst │         │
-│  │ Agent   │  │ Agent   │  │ Agent   │         │
-│  └─────────┘  └─────────┘  └─────────┘         │
-│                                                 │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/supervisor-pattern
 ```
 
 ---
 
-## VoltAgent Implementation
+## ⚡ Step-by-Step Execution
 
-```typescript
-import { VoltAgent, Agent } from "@voltagent/core";
+### Step 1: Initialize VoltAgent (3 min)
+```bash
+npx create-voltagent-app@latest my-agents
+cd my-agents
+npm install
 
-// Supervisor coordinates sub-agents
-const supervisor = new Agent({
+# Expected: ✅ VoltAgent project created
+```
+
+### Step 2: Create Supervisor Agent (5 min)
+```bash
+cat > src/agents/supervisor.ts << 'EOF'
+import { Agent } from "@voltagent/core";
+
+export const supervisor = new Agent({
   name: "supervisor",
   instructions: "Route tasks to specialized agents",
-  subAgents: [scoutAgent, editorAgent, directorAgent],
+  subAgents: ["scout", "editor", "director"],
 });
+EOF
 
-new VoltAgent({
-  agents: { supervisor },
-  workflows: { contentPipeline },
-});
+# Expected: ✅ Supervisor agent created
+```
+
+### Step 3: Create Sub-Agents (5 min)
+```bash
+mekong agent:create scout --purpose "research"
+mekong agent:create editor --purpose "content"
+mekong agent:create director --purpose "video"
+
+# Expected: ✅ 3 sub-agents created
+```
+
+### Step 4: Test Multi-Agent (2 min)
+```bash
+npm run dev
+# Test: "Create a blog post about sales pipelines"
+
+# Expected: Scout researches → Editor writes → Complete
 ```
 
 ---
 
-## AgencyOS Hub Mapping
+## ✅ Success Criteria
 
-| VoltAgent | AgencyOS Hub |
-|-----------|--------------|
-| Scout | `binh-phap-hub` |
-| Editor | `content-hub` |
-| Director | `creative-hub` |
-| Community | `community-hub` |
-| Research | `vc-hub` |
-| Analyst | `finance-hub` |
-
----
-
-## Use Cases
-
-1. **Content Pipeline**: Scout → Editor → Director → Community
-2. **Client Onboarding**: CSM → Tech → Success
-3. **Fundraising**: Research → Pitch → IR
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 9: Hành Quân** - Coordinated execution
-
-- Clear command hierarchy
-- Specialized agents
-- Unified strategy
+- [ ] VoltAgent installed
+- [ ] Supervisor agent configured
+- [ ] 3+ sub-agents connected
+- [ ] Tasks routing correctly
 
 ---
 

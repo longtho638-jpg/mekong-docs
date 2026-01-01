@@ -4,6 +4,8 @@ description: "Permit processing and citizen services"
 section: "workflows"
 order: 26
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 🏛️ Government & Public Sector Workflow
@@ -12,73 +14,60 @@ published: true
 
 ---
 
-## Overview
-
-Help government clients modernize citizen services and internal operations.
-
----
-
-## Citizen Service Portal
-
-### Features
-- Online applications
-- Status tracking
-- Document upload
-- Payment processing
-- Appointment scheduling
-
-### Popular Services
-| Service | Digitization Priority |
-|---------|----------------------|
-| Permits | ⭐⭐⭐⭐⭐ |
-| Licenses | ⭐⭐⭐⭐⭐ |
-| Benefits | ⭐⭐⭐⭐ |
-| Records | ⭐⭐⭐⭐ |
-| Complaints | ⭐⭐⭐ |
-
----
-
-## Procurement Process
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│  1. RFP MONITORING                             │
-│  └── Track opportunities                       │
-├─────────────────────────────────────────────────┤
-│  2. PROPOSAL                                   │
-│  └── Compliance-heavy                          │
-├─────────────────────────────────────────────────┤
-│  3. EVALUATION                                 │
-│  └── Long timeline                             │
-├─────────────────────────────────────────────────┤
-│  4. AWARD                                      │
-│  └── Contract negotiation                      │
-├─────────────────────────────────────────────────┤
-│  5. DELIVERY                                   │
-│  └── Milestone-based                           │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/government
 ```
 
 ---
 
-## Success Metrics
+## ⚡ Step-by-Step Execution
 
-| Metric | Target |
-|--------|--------|
-| Processing Time | -60% |
-| Citizen Satisfaction | 4.0+ |
-| Cost Savings | 40%+ |
-| Accessibility | WCAG 2.1 AA |
+### Step 1: Create Citizen Portal (4 min)
+```bash
+mekong government:portal \
+  --services "permits,licenses,complaints" \
+  --accessibility "wcag-aa"
+
+# Expected: ✅ Citizen portal scaffolded
+```
+
+### Step 2: Setup Permit Workflow (4 min)
+```bash
+mekong government:workflow \
+  --type "permit" \
+  --stages "submit,review,approve,issue" \
+  --sla "5 business days"
+
+# Expected: ✅ Permit workflow created
+```
+
+### Step 3: Add Payment Gateway (2 min)
+```bash
+mekong government:payment \
+  --provider "stripe-gov" \
+  --fees "permit:50,license:25"
+
+# Expected: ✅ Government payment enabled
+```
+
+### Step 4: Create Status Tracker (2 min)
+```bash
+mekong government:tracker \
+  --notifications "email,sms"
+
+# Expected: ✅ Status tracking for citizens
+```
 
 ---
 
-## Binh Pháp Alignment
+## ✅ Success Criteria
 
-> **Chapter 13: Dụng Gián** - Intelligence & relationships
-
-- Long-term relationships matter
-- Compliance is critical
-- Patience = big contracts
+- [ ] Citizen portal live
+- [ ] Permit workflow active
+- [ ] WCAG 2.1 AA compliant
+- [ ] Processing time -60%
 
 ---
 

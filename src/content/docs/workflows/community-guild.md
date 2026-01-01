@@ -4,6 +4,8 @@ description: "Build and manage member communities"
 section: "workflows"
 order: 31
 published: true
+ai_executable: true
+estimated_time: "15 minutes"
 ---
 
 # 🤝 Community Guild Workflow
@@ -12,87 +14,64 @@ published: true
 
 ---
 
-## Overview
-
-Build thriving communities that drive retention and expansion revenue.
-
----
-
-## Guild Structure
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│           GUILD LEADERSHIP                      │
-│         (Agency + Top Members)                  │
-├─────────────────────────────────────────────────┤
-│                                                 │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐         │
-│  │Champions│  │ Mentors │  │ Experts │         │
-│  │ (Top 5%)│  │(Top 10%)│  │(Top 20%)│         │
-│  └─────────┘  └─────────┘  └─────────┘         │
-│                                                 │
-│  ┌───────────────────────────────────────┐     │
-│  │          GENERAL MEMBERS               │     │
-│  │          (All subscribers)            │     │
-│  └───────────────────────────────────────┘     │
-│                                                 │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/community-guild
 ```
 
 ---
 
-## Community Pillars
+## ⚡ Step-by-Step Execution
 
-| Pillar | Activities |
-|--------|------------|
-| **Connect** | Networking, introductions |
-| **Learn** | Courses, workshops |
-| **Share** | Case studies, wins |
-| **Support** | Q&A, troubleshooting |
-| **Celebrate** | Recognition, rewards |
+### Step 1: Create Community (3 min)
+```bash
+mekong community:create \
+  --name "AgencyOS Guild" \
+  --platform "discord"
+
+# Expected: ✅ Community server created
+```
+
+### Step 2: Setup Channels (4 min)
+```bash
+mekong community:channels \
+  --channel "announcements" --type "read-only" \
+  --channel "introductions" \
+  --channel "wins" \
+  --channel "help" \
+  --channel "off-topic"
+
+# Expected: ✅ 5 channels created
+```
+
+### Step 3: Create Member Tiers (4 min)
+```bash
+mekong community:tiers \
+  --tier "member" --access "general" \
+  --tier "champion" --access "vip" \
+  --tier "mentor" --access "all"
+
+# Expected: ✅ 3-tier structure created
+```
+
+### Step 4: Setup Gamification (4 min)
+```bash
+mekong community:gamification \
+  --points "post:1,reply:2,win:10" \
+  --levels "5,25,100,500"
+
+# Expected: ✅ Points and levels active
+```
 
 ---
 
-## Engagement Tactics
+## ✅ Success Criteria
 
-- Daily discussion prompts
-- Weekly challenges
-- Monthly expert AMAs
-- Quarterly summits
-- Annual awards
-
----
-
-## AgencyOS Modules
-
-| Module | Purpose |
-|--------|---------|
-| `community_hub.py` | Community ops |
-| `community_manager.py` | Engagement |
-| `gamification.py` | Rewards |
-| `guild_hub.py` | Guild management |
-| `mutual_defense.py` | Member protection |
-
----
-
-## Success Metrics
-
-| Metric | Target |
-|--------|--------|
-| MAU | 70%+ |
-| DAU/MAU | 30%+ |
-| NPS | 60+ |
-| Member NRR | 120%+ |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 3: Mưu Công** - Win without fighting
-
-- Community sells for you
-- Members recruit members
-- Network effects compound
+- [ ] Community platform live
+- [ ] 70%+ monthly active
+- [ ] Member NRR 120%+
+- [ ] NPS 60+
 
 ---
 

@@ -4,6 +4,8 @@ description: "Claims processing automation for insurance clients"
 section: "workflows"
 order: 24
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 🛡️ Insurance Claims Workflow
@@ -12,65 +14,60 @@ published: true
 
 ---
 
-## Overview
-
-Automate claims processing and policy management for insurance clients.
-
----
-
-## Claims Pipeline
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│  Stage 1: FILED                                │
-│  └── Claim submitted                           │
-├─────────────────────────────────────────────────┤
-│  Stage 2: REVIEW                               │
-│  └── Documentation checked                     │
-├─────────────────────────────────────────────────┤
-│  Stage 3: INVESTIGATION                        │
-│  └── If needed                                 │
-├─────────────────────────────────────────────────┤
-│  Stage 4: DECISION                             │
-│  └── Approved / Denied                         │
-├─────────────────────────────────────────────────┤
-│  Stage 5: SETTLEMENT                           │
-│  └── Payment processed                         │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/insurance-claims
 ```
 
 ---
 
-## Automation Opportunities
+## ⚡ Step-by-Step Execution
 
-| Process | Automation |
-|---------|------------|
-| Document intake | OCR + AI extraction |
-| Initial review | Rule-based triage |
-| Fraud detection | ML models |
-| Communication | Email sequences |
-| Status updates | Portal + SMS |
+### Step 1: Setup Claims Pipeline (3 min)
+```bash
+mekong insurance:init \
+  --stages "filed,review,investigation,decision,settlement"
+
+# Expected: ✅ 5-stage claims pipeline
+```
+
+### Step 2: Create Intake Form (3 min)
+```bash
+mekong insurance:form \
+  --type "claim" \
+  --ocr true \
+  --upload "photos,documents"
+
+# Expected: ✅ Smart intake form with OCR
+```
+
+### Step 3: Setup Automation Rules (4 min)
+```bash
+mekong insurance:rules \
+  --auto-approve "under 1000" \
+  --flag "keywords:fraud,suspicious" \
+  --sla "72 hours"
+
+# Expected: ✅ Automation rules active
+```
+
+### Step 4: Create Dashboard (2 min)
+```bash
+mekong insurance:dashboard \
+  --metrics "avg_time,approval_rate,satisfaction"
+
+# Expected: ✅ Claims dashboard ready
+```
 
 ---
 
-## Success Metrics
+## ✅ Success Criteria
 
-| Metric | Target |
-|--------|--------|
-| Processing Time | -50% |
-| Accuracy | 99%+ |
-| Customer Satisfaction | 4.5+ |
-| Cost per Claim | -30% |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 7: Quân Tranh** - Speed matters
-
-- Fast claims = happy customers
-- Automation = scale
-- Accuracy protects margins
+- [ ] Claims pipeline active
+- [ ] OCR intake working
+- [ ] SLA monitoring live
+- [ ] Processing time -50%
 
 ---
 

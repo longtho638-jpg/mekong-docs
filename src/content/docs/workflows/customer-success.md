@@ -4,6 +4,8 @@ description: "NRR optimization and retention"
 section: "workflows"
 order: 32
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 🏆 Customer Success Workflow
@@ -12,106 +14,80 @@ published: true
 
 ---
 
-## Overview
-
-Maximize customer lifetime value through proactive success management.
-
----
-
-## Customer Success Lifecycle
+## 🤖 Quick Execute
 
 ```
-┌─────────────────────────────────────────────────┐
-│  ONBOARD → ADOPT → EXPAND → RENEW → ADVOCATE   │
-└─────────────────────────────────────────────────┘
+Execute workflow: https://agencyos.network/docs/workflows/customer-success
 ```
 
 ---
 
-## Health Score Components
+## ⚡ Step-by-Step Execution
 
-| Factor | Weight | Score |
-|--------|--------|-------|
-| Usage | 30% | 0-100 |
-| Engagement | 20% | 0-100 |
-| Support tickets | 15% | 0-100 |
-| NPS | 15% | 0-100 |
-| Billing | 20% | 0-100 |
-| **Total** | 100% | **0-100** |
+### Step 1: Initialize CS Module (2 min)
+```bash
+mekong cs:init
 
----
+# Expected: ✅ Customer success module ready
+```
 
-## Success Playbooks
+### Step 2: Configure Health Scoring (3 min)
+```bash
+mekong cs:health \
+  --factor "usage" --weight 30 \
+  --factor "engagement" --weight 20 \
+  --factor "support" --weight 15 \
+  --factor "nps" --weight 15 \
+  --factor "billing" --weight 20
 
-### Green (80-100)
-- Quarterly check-in
-- Expansion conversation
-- Referral ask
-- Case study request
+# Expected: ✅ Health scoring configured
+```
 
-### Yellow (50-79)
-- Monthly check-in
-- Success review
-- Training offer
-- Usage optimization
+### Step 3: Create Playbooks (4 min)
+```bash
+mekong cs:playbook \
+  --name "green" --trigger "score >= 80" --action "expansion" \
+  --name "yellow" --trigger "score 50-79" --action "checkin" \
+  --name "red" --trigger "score < 50" --action "save"
 
-### Red (0-49)
-- Weekly check-in
-- Executive escalation
-- Save offer
-- Root cause analysis
+# Expected: ✅ 3 playbooks active
+```
 
----
+### Step 4: Run Health Check (3 min)
+```bash
+mekong cs:check --all
 
-## AgencyOS Modules
-
-| Module | Purpose |
-|--------|---------|
-| `csm.py` | Success management |
-| `client_health.py` | Health scoring |
-| `client_ltv.py` | LTV tracking |
-| `referral.py` | Referral program |
-| `testimonial.py` | Social proof |
+# Expected output:
+# ┌─────────────────────────────────┐
+# │ Customer Health Report          │
+# │ Green: 80%  Yellow: 15%  Red: 5%│
+# │ NRR: 115%                       │
+# └─────────────────────────────────┘
+```
 
 ---
 
-## Success Metrics
+## ✅ Success Criteria
 
-| Metric | Target |
-|--------|--------|
-| Gross Retention | 95%+ |
-| Net Revenue Retention | 110%+ |
-| NPS | 50+ |
-| Time to Value | < 14 days |
+- [ ] Health scoring active
+- [ ] All clients scored
+- [ ] Gross retention 95%+
+- [ ] Net revenue retention 110%+
 
 ---
 
-## Binh Pháp Alignment
+## 🎯 27/27 WORKFLOWS COMPLETE!
 
-> **Chapter 9: Hành Quân** - Execution excellence
-
-- Proactive > reactive
-- Retention > acquisition
-- Success = referrals
-
----
-
-**🏯 "Họ WIN → Mình WIN"**
-
----
-
-## 🎯 Final Workflow Summary
-
-This is the **27th and final workflow** in the AgencyOS $1M Roadmap.
+This is the final workflow in the $1M roadmap.
 
 | Phase | Workflows | Status |
 |-------|-----------|--------|
-| 1: Foundation | 8 | ✅ |
-| 2: Scaling | 9 | ✅ |
-| 3: Expansion | 7 | ✅ |
-| 4: Dominance | 3 | ✅ |
+| Foundation | 8 | ✅ |
+| Scaling | 9 | ✅ |
+| Expansion | 7 | ✅ |
+| Dominance | 3 | ✅ |
 | **TOTAL** | **27** | **100%** |
 
 ---
 
-**🏯 "$1M Roadmap Complete - Bất chiến nhi khuất nhân chi binh"**
+**🏯 "Bất chiến nhi khuất nhân chi binh"**

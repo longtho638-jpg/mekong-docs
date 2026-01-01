@@ -4,6 +4,8 @@ description: "E-commerce operations for retail clients"
 section: "workflows"
 order: 20
 published: true
+ai_executable: true
+estimated_time: "15 minutes"
 ---
 
 # 🛒 Retail E-commerce Workflow
@@ -12,77 +14,62 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Help retail clients manage e-commerce operations and grow online sales.
-
----
-
-## E-commerce Stack
-
-| Component | Solution |
-|-----------|----------|
-| Storefront | Shopify / WooCommerce |
-| Payments | Stripe / PayPal |
-| Fulfillment | ShipBob / Local 3PL |
-| Analytics | GA4 / Shopify Analytics |
-| Email | Klaviyo / Mailchimp |
+```
+Execute workflow: https://agencyos.network/docs/workflows/retail-ecommerce
+```
 
 ---
 
-## Key Workflows
+## ⚡ Step-by-Step Execution
 
-### 1. Product Launch
-- [ ] Product photography
-- [ ] Description writing
-- [ ] SEO optimization
-- [ ] Inventory setup
-- [ ] Launch campaign
+### Step 1: Audit Store (3 min)
+```bash
+mekong retail:audit --url "https://store.example.com"
 
-### 2. Order Fulfillment
-- [ ] Order received
-- [ ] Inventory checked
-- [ ] Picked & packed
-- [ ] Shipped
-- [ ] Tracking sent
+# Expected: Conversion rate, AOV, cart abandonment
+```
 
-### 3. Customer Recovery
-- [ ] Abandoned cart trigger
-- [ ] Email sequence (3 emails)
-- [ ] SMS follow-up
-- [ ] Retargeting ads
+### Step 2: Setup Analytics (3 min)
+```bash
+mekong retail:analytics \
+  --provider "ga4" \
+  --ecommerce true \
+  --events "add_to_cart,purchase,refund"
 
----
+# Expected: ✅ E-commerce tracking enabled
+```
 
-## AgencyOS Modules
+### Step 3: Create Abandoned Cart Flow (5 min)
+```bash
+mekong retail:flow \
+  --trigger "cart_abandoned" \
+  --email-1 "2 hours" \
+  --email-2 "24 hours" \
+  --email-3 "72 hours"
 
-| Module | Purpose |
-|--------|---------|
-| `retail_hub.py` | Retail operations |
-| `ecommerce_manager.py` | Store management |
-| `inventory_manager.py` | Stock control |
-| `ecommerce_sales.py` | Revenue tracking |
+# Expected: ✅ 3-email recovery sequence
+```
 
----
+### Step 4: Setup Retargeting (4 min)
+```bash
+mekong retail:retarget \
+  --platform "meta,google" \
+  --audience "cart_abandoners" \
+  --budget 50
 
-## Success Metrics
-
-| Metric | Target |
-|--------|--------|
-| Conversion Rate | 2-4% |
-| AOV | +20% |
-| Cart Abandonment | <70% |
-| ROAS | 4:1+ |
+# Expected: ✅ Retargeting ads configured
+```
 
 ---
 
-## Binh Pháp Alignment
+## ✅ Success Criteria
 
-> **Chapter 10: Địa Hình** - Market terrain
-
-- Understand customer journey
-- Optimize every touchpoint
-- Data-driven decisions
+- [ ] Conversion tracking active
+- [ ] Abandoned cart sequence live
+- [ ] Retargeting running
+- [ ] Cart abandonment < 70%
 
 ---
 

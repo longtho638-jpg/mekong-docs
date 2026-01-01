@@ -4,6 +4,8 @@ description: "Launch minimum viable products for startup clients"
 section: "workflows"
 order: 8
 published: true
+ai_executable: true
+estimated_time: "25 minutes"
 ---
 
 # 🚀 MVP Launch Workflow
@@ -12,85 +14,130 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Help clients launch MVPs in 4-6 weeks using AgencyOS tools.
-
----
-
-## 6-Week Timeline
-
-### Week 1: Discovery
-- [ ] Problem validated
-- [ ] User interviews (5+)
-- [ ] Competitor analysis
-- [ ] Feature prioritization
-
-### Week 2: Design
-- [ ] User flows mapped
-- [ ] Wireframes approved
-- [ ] UI design started
-- [ ] Tech stack chosen
-
-### Week 3-4: Development
-- [ ] Core features built
-- [ ] Database setup
-- [ ] API integration
-- [ ] Basic testing
-
-### Week 5: Testing
-- [ ] Bug fixes
-- [ ] User testing (5+)
-- [ ] Performance check
-- [ ] Security review
-
-### Week 6: Launch
-- [ ] Deployment ready
-- [ ] Analytics setup
-- [ ] Launch marketing
-- [ ] First users live
+```
+Execute workflow: https://agencyos.network/docs/workflows/mvp-launch
+```
 
 ---
 
-## AgencyOS Modules
+## ⚡ Step-by-Step Execution
 
-| Module | Purpose |
-|--------|---------|
-| `startup_launcher.py` | Launch automation |
-| `entrepreneur_hub.py` | Founder support |
-| `strategy_officer.py` | Strategic planning |
-| `proposal_generator.py` | Client proposals |
+### Step 1: Initialize Project (3 min)
+```bash
+# Create MVP project structure
+mekong mvp:init \
+  --name "abc-corp-mvp" \
+  --stack "nextjs,supabase,stripe"
+
+# Expected: ✅ Project scaffolded
+```
+
+### Step 2: Setup Database (5 min)
+```bash
+# Initialize Supabase
+mekong db:init --provider supabase
+
+# Create schema
+mekong db:migrate --file "./schema/mvp.sql"
+
+# Expected: ✅ Database ready
+```
+
+### Step 3: Generate Core Features (10 min)
+```bash
+# Create authentication
+mekong feature:auth --provider "supabase"
+
+# Create landing page
+mekong feature:landing --template "saas"
+
+# Create pricing page
+mekong feature:pricing --tiers 3
+
+# Expected: ✅ 3 core features ready
+```
+
+### Step 4: Deploy Preview (3 min)
+```bash
+# Deploy to preview
+mekong deploy:preview
+
+# Expected output:
+# ┌─────────────────────────────────┐
+# │ Preview URL:                    │
+# │ https://abc-mvp.vercel.app      │
+# └─────────────────────────────────┘
+```
+
+### Step 5: User Testing (2 min)
+```bash
+# Send to test users
+mekong test:invite \
+  --emails "tester1@example.com,tester2@example.com" \
+  --url "https://abc-mvp.vercel.app"
+
+# Expected: ✅ 2 test invites sent
+```
+
+### Step 6: Production Launch (2 min)
+```bash
+# Deploy to production
+mekong deploy:production
+
+# Setup analytics
+mekong analytics:init --provider "posthog"
+
+# Expected: ✅ MVP LIVE!
+```
 
 ---
 
-## MVP Packages
+## ✅ Success Criteria
 
-| Package | Timeline | Price |
-|---------|----------|-------|
-| Landing Page | 1 week | $2K |
-| Simple App | 4 weeks | $10K |
-| Full MVP | 6 weeks | $20K |
-
----
-
-## Success Metrics
-
-| Metric | Target |
-|--------|--------|
-| Time to Launch | 6 weeks |
-| First Users | 50+ |
-| Initial Revenue | $1K+ |
-| Pivot Rate | < 30% |
+- [ ] 6-week timeline met
+- [ ] Core features working
+- [ ] 50+ first users
+- [ ] Initial revenue ($1K+)
 
 ---
 
-## Binh Pháp Alignment
+## 📋 6-Week Timeline Template
 
-> **Chapter 7: Quân Tranh** - Speed wins
+```yaml
+# mvp-timeline.yaml
+week_1:
+  - Problem validation
+  - User interviews (5+)
+  - Competitor analysis
+  
+week_2:
+  - Wireframes
+  - UI design
+  - Tech stack finalized
+  
+week_3_4:
+  - Core development
+  - Database setup
+  - API integration
+  
+week_5:
+  - Testing
+  - Bug fixes
+  - Performance optimization
+  
+week_6:
+  - Launch prep
+  - Analytics setup
+  - Go live!
+```
 
-- Ship fast, iterate faster
-- Perfect is the enemy of done
-- First mover advantage
+---
+
+## 🔗 Next Phase
+
+→ [Phase 2: Scaling Workflows](/docs/workflows#-phase-2-scaling)
 
 ---
 

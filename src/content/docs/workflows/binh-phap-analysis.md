@@ -4,6 +4,8 @@ description: "Strategic analysis using Sun Tzu's 13 Chapters"
 section: "workflows"
 order: 6
 published: true
+ai_executable: true
+estimated_time: "15 minutes"
 ---
 
 # 🏯 Binh Pháp Analysis Workflow
@@ -12,72 +14,118 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Apply Sun Tzu's Art of War to business strategy for agency clients.
-
----
-
-## 13 Chapters Framework
-
-| # | Chapter | Business Application |
-|---|---------|---------------------|
-| 1 | Kế Hoạch | SWOT, Ngũ Sự assessment |
-| 2 | Tác Chiến | Runway, burn rate |
-| 3 | Mưu Công | Win without fighting |
-| 4 | Hình Thế | Competitive moats |
-| 5 | Thế Trận | Network effects |
-| 6 | Hư Thực | Anti-Dilution Shield |
-| 7 | Quân Tranh | Speed, first mover |
-| 8 | Cửu Biến | Pivot, exit, walk-away |
-| 9 | Hành Quân | OKRs, execution |
-| 10 | Địa Hình | TAM/SAM/SOM |
-| 11 | Cửu Địa | Crisis management |
-| 12 | Hỏa Công | Disruption |
-| 13 | Dụng Gián | Intelligence |
+```
+Execute workflow: https://agencyos.network/docs/workflows/binh-phap-analysis
+```
 
 ---
 
-## Ngũ Sự Analysis
+## ⚡ Step-by-Step Execution
 
-| Factor | Question |
-|--------|----------|
-| **Đạo** | Is there alignment? |
-| **Thiên** | Is timing right? |
-| **Địa** | Is position strong? |
-| **Tướng** | Is leadership clear? |
-| **Pháp** | Are systems ready? |
+### Step 1: Initialize Analysis (2 min)
+```bash
+# Start Binh Pháp assessment
+mekong binh-phap:init --client "ABC Corp"
+
+# Expected: ✅ Analysis workspace created
+```
+
+### Step 2: Run Ngũ Sự Assessment (5 min)
+```bash
+# Evaluate 5 fundamental factors
+mekong binh-phap:assess \
+  --dao "How aligned are stakeholders?" \
+  --thien "Is timing favorable?" \
+  --dia "What is market position?" \
+  --tuong "Is leadership strong?" \
+  --phap "Are processes ready?"
+
+# Expected: ✅ Ngũ Sự scores calculated
+```
+
+### Step 3: Generate Chapter Analysis (5 min)
+```bash
+# Run all 13 chapters
+mekong binh-phap:chapters --client "ABC Corp"
+
+# Chapters analyzed:
+# 1. Kế Hoạch (Planning)
+# 2. Tác Chiến (Resources)
+# 3. Mưu Công (Strategy)
+# 4. Hình Thế (Positioning)
+# 5. Thế Trận (Momentum)
+# 6. Hư Thực (Weakness/Strength)
+# 7. Quân Tranh (Speed)
+# 8. Cửu Biến (Adaptation)
+# 9. Hành Quân (Execution)
+# 10. Địa Hình (Terrain)
+# 11. Cửu Địa (Situations)
+# 12. Hỏa Công (Disruption)
+# 13. Dụng Gián (Intelligence)
+```
+
+### Step 4: Create Strategy Report (3 min)
+```bash
+# Generate PDF report
+mekong binh-phap:report \
+  --client "ABC Corp" \
+  --output "./reports/abc-corp-strategy.pdf"
+
+# Expected: ✅ Strategy report generated
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `binh_phap/chapter_*.py` | 13 chapter analysis |
-| `strategy_officer.py` | Strategic planning |
-| `competitive_benchmark.py` | Competitor intel |
-
----
-
-## Service Pricing
-
-| Service | Bootstrap | VC-Ready |
-|---------|-----------|----------|
-| Strategy Assessment | $2K | $5K |
-| Moat Audit | $2K | $5K |
-| Full 13-Chapter | $15K | $40K |
+- [ ] Ngũ Sự assessment complete (5/5 factors)
+- [ ] 13 chapters analyzed
+- [ ] Strategy report generated
+- [ ] Actionable recommendations listed
 
 ---
 
-## Core Wisdom
+## 📋 Ngũ Sự Template
 
-> **"Tri bỉ tri kỉ, bách chiến bách thắng"**
-> Know enemy, know self = 100 battles, 100 victories
-
-> **"Bất chiến nhi khuất nhân chi binh"**
-> Win without fighting = supreme excellence
+```yaml
+# assessment/ngu-su.yaml
+factors:
+  dao:
+    question: "Are all stakeholders aligned?"
+    score: 0-100
+    
+  thien:
+    question: "Is timing favorable?"
+    score: 0-100
+    
+  dia:
+    question: "What is competitive position?"
+    score: 0-100
+    
+  tuong:
+    question: "Is leadership effective?"
+    score: 0-100
+    
+  phap:
+    question: "Are systems ready?"
+    score: 0-100
+    
+total_score: 0-500
+interpretation:
+  400-500: "Victory assured"
+  300-399: "Favorable odds"
+  200-299: "Uncertain"
+  0-199: "Do not engage"
+```
 
 ---
 
-**🏯 "Họ WIN → Mình WIN"**
+## 🔗 Next Workflow
+
+→ [VC Readiness](/docs/workflows/vc-readiness)
+
+---
+
+**🏯 "Tri bỉ tri kỉ, bách chiến bách thắng"**

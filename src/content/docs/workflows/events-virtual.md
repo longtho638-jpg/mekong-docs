@@ -4,6 +4,8 @@ description: "Events and webinars for community building"
 section: "workflows"
 order: 30
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 🎤 Virtual Events Workflow
@@ -12,77 +14,65 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Host virtual events and webinars to build community and generate leads.
-
----
-
-## Event Types
-
-| Type | Audience | Goal |
-|------|----------|------|
-| Webinar | 50-500 | Lead gen |
-| Workshop | 10-50 | Deep engagement |
-| Summit | 500+ | Brand awareness |
-| Office Hours | 5-20 | Community support |
-| Launch Event | 100+ | Product launch |
+```
+Execute workflow: https://agencyos.network/docs/workflows/events-virtual
+```
 
 ---
 
-## Event Workflow
+## ⚡ Step-by-Step Execution
 
-### Pre-Event (2-4 weeks)
-- [ ] Topic & speakers
-- [ ] Landing page
-- [ ] Email sequence
-- [ ] Social promotion
-- [ ] Reminders
+### Step 1: Create Event (3 min)
+```bash
+mekong event:create \
+  --title "Agency Automation Masterclass" \
+  --type "webinar" \
+  --date "2026-02-01" \
+  --duration "60min"
 
-### Day Of
-- [ ] Tech check
-- [ ] Attendee welcome
-- [ ] Content delivery
-- [ ] Q&A
-- [ ] CTA
+# Expected: ✅ Event created
+```
 
-### Post-Event
-- [ ] Recording upload
-- [ ] Follow-up emails
-- [ ] Lead scoring
-- [ ] Sales handoff
-- [ ] Feedback survey
+### Step 2: Setup Landing Page (3 min)
+```bash
+mekong event:landing \
+  --event "agency-automation-masterclass" \
+  --template "webinar"
+
+# Expected: ✅ Registration page live
+```
+
+### Step 3: Configure Email Sequence (3 min)
+```bash
+mekong event:emails \
+  --confirm "immediate" \
+  --reminder-1 "24h before" \
+  --reminder-2 "1h before" \
+  --followup "24h after"
+
+# Expected: ✅ 4-email sequence configured
+```
+
+### Step 4: Go Live (3 min)
+```bash
+mekong event:stream \
+  --platform "zoom" \
+  --record true \
+  --chat true
+
+# Expected: ✅ Stream ready
+```
 
 ---
 
-## AgencyOS Modules
+## ✅ Success Criteria
 
-| Module | Purpose |
-|--------|---------|
-| `event_coordinator.py` | Event management |
-| `community_manager.py` | Community ops |
-| `email_automation.py` | Event sequences |
-
----
-
-## Success Metrics
-
-| Metric | Target |
-|--------|--------|
-| Registration Rate | 30%+ |
-| Attendance Rate | 50%+ |
-| Engagement | 60%+ active |
-| Lead Conversion | 10%+ |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 5: Thế Trận** - Create momentum
-
-- Events build community
-- Consistent cadence wins
-- Authority = premium pricing
+- [ ] Landing page converting 30%+
+- [ ] 50%+ attendance rate
+- [ ] 60%+ engagement
+- [ ] 10%+ lead conversion
 
 ---
 

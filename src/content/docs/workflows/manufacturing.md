@@ -4,6 +4,8 @@ description: "Industrial operations and predictive maintenance"
 section: "workflows"
 order: 25
 published: true
+ai_executable: true
+estimated_time: "12 minutes"
 ---
 
 # 🏭 Manufacturing Workflow
@@ -12,64 +14,61 @@ published: true
 
 ---
 
-## Overview
+## 🤖 Quick Execute
 
-Help manufacturing clients with operational efficiency and marketing.
-
----
-
-## Core Workflows
-
-### 1. Predictive Maintenance
-- [ ] Sensor data collection
-- [ ] Anomaly detection
-- [ ] Alert generation
-- [ ] Maintenance scheduling
-- [ ] Downtime prevention
-
-### 2. Quality Control
-- [ ] Inspection automation
-- [ ] Defect tracking
-- [ ] Root cause analysis
-- [ ] Process improvement
-
-### 3. Supply Chain
-- [ ] Inventory optimization
-- [ ] Supplier management
-- [ ] Demand forecasting
-- [ ] Logistics coordination
+```
+Execute workflow: https://agencyos.network/docs/workflows/manufacturing
+```
 
 ---
 
-## Digital Marketing for B2B
+## ⚡ Step-by-Step Execution
 
-| Channel | Use Case |
-|---------|----------|
-| LinkedIn | Decision maker targeting |
-| Trade Shows | Lead generation |
-| Case Studies | Social proof |
-| SEO | Long-tail keywords |
+### Step 1: Setup IoT Dashboard (4 min)
+```bash
+mekong manufacturing:dashboard \
+  --sensors "temperature,pressure,vibration" \
+  --alerts true
+
+# Expected: ✅ Real-time monitoring dashboard
+```
+
+### Step 2: Configure Predictive Alerts (4 min)
+```bash
+mekong manufacturing:alerts \
+  --temp-max 85 \
+  --vibration-threshold 0.5 \
+  --notify "ops@factory.com"
+
+# Expected: ✅ Predictive alerts configured
+```
+
+### Step 3: Create Maintenance Schedule (2 min)
+```bash
+mekong manufacturing:maintenance \
+  --schedule "weekly" \
+  --checklist true
+
+# Expected: ✅ Maintenance calendar created
+```
+
+### Step 4: Setup B2B Lead Gen (2 min)
+```bash
+mekong manufacturing:leads \
+  --platform "linkedin" \
+  --target "operations-manager"
+
+# Expected: ✅ LinkedIn targeting configured
+```
 
 ---
 
-## Success Metrics
+## ✅ Success Criteria
 
-| Metric | Target |
-|--------|--------|
-| Uptime | 99%+ |
-| Defect Rate | < 1% |
-| Lead Quality | 30%+ MQL→SQL |
-| Deal Size | $50K+ |
-
----
-
-## Binh Pháp Alignment
-
-> **Chapter 2: Tác Chiến** - Resource management
-
-- Efficiency = profit
-- Prevention > repair
-- Long sales cycles need patience
+- [ ] IoT dashboard live
+- [ ] Predictive alerts active
+- [ ] Uptime > 99%
+- [ ] B2B leads flowing
 
 ---
 
