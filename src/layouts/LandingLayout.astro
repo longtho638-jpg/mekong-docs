@@ -91,14 +91,104 @@ const {
         
         <nav class="landing-nav">
           <a href="/agencyos">Home</a>
-          <a href="/demo">🖥️ Demo</a>
-          <a href="/quickstart">Quick Start</a>
-          <a href="/features">Features</a>
+          
+          <!-- Products Mega Dropdown -->
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-trigger">Products <span class="dropdown-arrow">▾</span></button>
+            <div class="mega-dropdown">
+              <div class="mega-col">
+                <div class="mega-title">🆓 FREE</div>
+                <a href="/docs" class="mega-item">
+                  <span class="mega-icon">📚</span>
+                  <div>
+                    <div class="mega-item-title">Documentation</div>
+                    <div class="mega-item-desc">310+ IDE-executable pages</div>
+                  </div>
+                </a>
+                <a href="/docs/getting-started" class="mega-item">
+                  <span class="mega-icon">🛠️</span>
+                  <div>
+                    <div class="mega-item-title">Mekong-CLI</div>
+                    <div class="mega-item-desc">Open source, 125+ commands</div>
+                  </div>
+                </a>
+                <a href="/binh-phap" class="mega-item">
+                  <span class="mega-icon">🏯</span>
+                  <div>
+                    <div class="mega-item-title">Binh Pháp</div>
+                    <div class="mega-item-desc">13 chapters strategy</div>
+                  </div>
+                </a>
+                <a href="/workflows" class="mega-item">
+                  <span class="mega-icon">📋</span>
+                  <div>
+                    <div class="mega-item-title">Workflows</div>
+                    <div class="mega-item-desc">27 workflow guides</div>
+                  </div>
+                </a>
+              </div>
+              <div class="mega-col">
+                <div class="mega-title">💰 PAID</div>
+                <a href="/pricing" class="mega-item">
+                  <span class="mega-icon">⭐</span>
+                  <div>
+                    <div class="mega-item-title">Starter</div>
+                    <div class="mega-item-desc">$29/mo - Solo operators</div>
+                  </div>
+                </a>
+                <a href="/pricing" class="mega-item">
+                  <span class="mega-icon">🚀</span>
+                  <div>
+                    <div class="mega-item-title">Pro</div>
+                    <div class="mega-item-desc">$99/mo - Teams + API</div>
+                  </div>
+                </a>
+                <a href="/franchise" class="mega-item">
+                  <span class="mega-icon">🏆</span>
+                  <div>
+                    <div class="mega-item-title">Franchise</div>
+                    <div class="mega-item-desc">$299/mo - White-label</div>
+                  </div>
+                </a>
+              </div>
+              <div class="mega-col">
+                <div class="mega-title">✨ Features</div>
+                <a href="/newsletter" class="mega-item">
+                  <span class="mega-icon">📧</span>
+                  <div>
+                    <div class="mega-item-title">Newsletter Hub</div>
+                    <div class="mega-item-desc">Email marketing</div>
+                  </div>
+                </a>
+                <a href="/affiliate" class="mega-item">
+                  <span class="mega-icon">🎯</span>
+                  <div>
+                    <div class="mega-item-title">Affiliate</div>
+                    <div class="mega-item-desc">Earn commissions</div>
+                  </div>
+                </a>
+                <a href="/marketplace" class="mega-item">
+                  <span class="mega-icon">🏪</span>
+                  <div>
+                    <div class="mega-item-title">Marketplace</div>
+                    <div class="mega-item-desc">Templates & tools</div>
+                  </div>
+                </a>
+                <a href="/wallet" class="mega-item">
+                  <span class="mega-icon">💳</span>
+                  <div>
+                    <div class="mega-item-title">Wallet</div>
+                    <div class="mega-item-desc">Payments & earnings</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          
           <a href="/pricing">Pricing</a>
-          <a href="/dashboard" class="dashboard-link">📊 Dashboard</a>
-          <a href="/roi-calculator">💰 ROI</a>
-          <a href="/commands">Commands</a>
+          <a href="/demo">🖥️ Demo</a>
           <a href="/docs/getting-started/introduction">Docs</a>
+          <a href="/blog">Blog</a>
         </nav>
         
         <div class="header-actions">
@@ -117,9 +207,18 @@ const {
       
       <div class="mobile-nav" id="mobile-nav">
         <a href="/agencyos">Home</a>
-        <a href="/pricing">Pricing</a>
-        <a href="/dashboard">📊 Dashboard</a>
-        <a href="/docs/getting-started/introduction">Docs</a>
+        <div class="mobile-section-title">🆓 FREE</div>
+        <a href="/docs">📚 Documentation</a>
+        <a href="/binh-phap">🏯 Binh Pháp</a>
+        <a href="/workflows">📋 Workflows</a>
+        <div class="mobile-section-title">💰 PAID</div>
+        <a href="/pricing">⭐ Starter $29</a>
+        <a href="/pricing">🚀 Pro $99</a>
+        <a href="/franchise">🏆 Franchise $299</a>
+        <div class="mobile-section-title">✨ Features</div>
+        <a href="/newsletter">📧 Newsletter</a>
+        <a href="/affiliate">🎯 Affiliate</a>
+        <a href="/marketplace">🏪 Marketplace</a>
         <a href="/docs/getting-started/installation" class="mobile-cta">Get Started</a>
       </div>
     </header>
@@ -324,10 +423,11 @@ const {
 
   .landing-nav {
     display: flex;
-    gap: 32px;
+    gap: 24px;
+    align-items: center;
   }
 
-  .landing-nav a {
+  .landing-nav > a {
     color: var(--color-text-secondary);
     text-decoration: none;
     font-size: 0.875rem;
@@ -335,8 +435,127 @@ const {
     transition: color 0.2s;
   }
 
-  .landing-nav a:hover {
+  .landing-nav > a:hover {
     color: var(--color-text-primary);
+  }
+
+  /* Mega Dropdown */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-trigger {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+    transition: color 0.2s;
+  }
+
+  .nav-dropdown-trigger:hover {
+    color: var(--color-text-primary);
+  }
+
+  .dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.2s;
+  }
+
+  .nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .mega-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 720px;
+    background: rgba(15, 15, 15, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
+
+  .nav-dropdown:hover .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .mega-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mega-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    padding-left: 8px;
+  }
+
+  .mega-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .mega-item:hover {
+    background: var(--color-bg-tertiary);
+    transform: translateX(4px);
+  }
+
+  .mega-icon {
+    font-size: 1.25rem;
+    margin-top: 2px;
+  }
+
+  .mega-item-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+  }
+
+  .mega-item-desc {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Mobile section titles */
+  .mobile-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 16px 4px;
+    margin-top: 8px;
   }
 
   .header-actions {
