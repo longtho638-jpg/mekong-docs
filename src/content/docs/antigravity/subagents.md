@@ -1,6 +1,9 @@
 ---
 title: "MekongAgent Subagents"
 description: "100 specialized AI subagents for AgencyOS × Antigravity IDE"
+section: "docs"
+order: 2
+published: true
 ---
 
 # 🤖 MekongAgent Subagents
