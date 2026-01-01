@@ -1,143 +1,73 @@
 ---
 title: Code Reviewer Agent
-description: Comprehensive code quality assessment with security audits, performance analysis, and actionable recommendations
+description: Review code for quality and best practices
 section: docs
 category: agents
-order: 7
+order: 11
 published: true
+ai_executable: true
 ---
 
-# Code Reviewer Agent
+# 👀 Code Reviewer Agent
 
-Production-grade security and quality audits with categorized findings before merge.
-
-## When to Use
-
-- Pre-merge quality gates
-- Security vulnerability detection
-- Type safety validation
-- Performance bottleneck analysis
-
-## Key Capabilities
-
-| Category | Checks |
-|----------|--------|
-| **Security** | OWASP Top 10, SQL injection, XSS, CSRF, secrets exposure |
-| **Type Safety** | TypeScript strict mode, `any` usage, null checks |
-| **Performance** | N+1 queries, memory leaks, bundle size |
-| **Quality** | Test coverage (80%+ target), error handling, code duplication |
-| **Standards** | Linting, naming conventions, documentation |
-
-## Common Use Cases
-
-**1. Pre-Merge Review**
-- **Who**: Any developer before PR
-- **Prompt**: `/review [feature-name]`
-- **Output**: Categorized issues (Critical/High/Medium/Low) with fix recommendations
-
-**2. Security Audit**
-- **Who**: Security-conscious teams
-- **Prompt**: `/review [security audit of auth module]`
-- **Output**: OWASP compliance report, vulnerability list, remediation steps
-
-**3. Refactoring Assessment**
-- **Who**: Teams improving legacy code
-- **Prompt**: `/review [type safety improvements in src/]`
-- **Output**: `any` type locations, strict mode violations, migration plan
-
-**4. Performance Analysis**
-- **Who**: Teams optimizing slow endpoints
-- **Prompt**: `/review [database query performance]`
-- **Output**: N+1 problems, missing indexes, caching opportunities
-
-**5. Standards Compliance**
-- **Who**: Teams enforcing code standards
-- **Prompt**: `/review [compare auth module against code-standards.md]`
-- **Output**: Standards checklist with pass/fail status
-
-## Pro Tips
-
-**Scope Reviews Strategically**
-```bash
-/review [src/auth/]              # Directory
-/review [user authentication]    # Feature
-/review [PR-123]                 # Pull request
-```
-
-**Combine with Fix Workflow**
-```bash
-/review [feature-x]
-/fix:fast [fix critical security issues from review]
-/test
-/review [feature-x]  # Verify fixes
-```
-
-**Use Review Categories**
-- **Critical**: Must fix before merge (security, data loss)
-- **High**: Should fix (performance, type safety, reliability)
-- **Medium**: Recommended (maintainability, code smells)
-- **Low**: Optional (style, minor improvements)
-
-**Check Task Status Updates**
-Reviews automatically update plan files with found issues and blocking status.
-
-**Set Quality Gates**
-Enforce 80%+ test coverage, zero `any` types, security scan pass before production.
-
-## Related Agents
-
-- [Planner](/docs/agents/planner) - Creates fix plans from review findings
-- [Tester](/docs/agents/tester) - Validates fixes with comprehensive tests
-- [Scout External](/docs/agents/scout-external) - Researches best practices for fixes
-
-## AgencyOS Integration
-
-```tsx
-import { useAgentOS, DynamicCard } from '@/agencyos';
-
-function ReviewerPanel() {
-  const { state } = useAgentOS({ agentName: 'code-reviewer' });
-  
-  return (
-    <DynamicCard
-      title="Code Review"
-      icon="👁️"
-      status={issues.critical > 0 ? 'error' : 'completed'}
-      metrics={[
-        { label: 'Critical', value: issues.critical },
-        { label: 'High', value: issues.high },
-        { label: 'Coverage', value: '85%' }
-      ]}
-    />
-  );
-}
-```
-
-### Vibe Coding Pattern
-```
-/@code-reviewer review auth module
-    ↓
-Scan: Security + Type Safety + Performance
-    ↓
-Output: DynamicCard with issue counts
-```
-
-## Key Takeaway
-
-The code reviewer agent prevents production incidents by catching security vulnerabilities, type safety violations, and performance issues before merge. Use it as a quality gate in every PR workflow.
+> **Review code for quality and best practices**
 
 ---
 
-## 🏯 Binh Pháp Alignment
+## 🤖 Quick Execute
 
-> **軍形篇** (Quân Hình) - Formation - Code defense
+```
+Execute: https://agencyos.network/docs/agents/code-reviewer
+```
 
-### Zero-Effort Commands
+---
 
-| Gõ lệnh | Agent tự động làm |
-|---------|-------------------|
-| `/plan` | Tự tạo implementation plan |
-| `/code` | Tự implement theo plan |
-| `/ship` | Tự test, review, deploy |
+## ⚡ Step-by-Step
 
-📖 [Xem tất cả Commands](/docs/commands)
+### Step 1: Review Code
+```bash
+mekong review "src/api/users.ts"
+
+# Review entire PR
+mekong review --pr 123
+
+# Review recent changes
+mekong review --recent
+```
+
+### Step 2: Get Feedback
+```bash
+# Output includes:
+# - Security issues
+# - Performance concerns
+# - Best practice violations
+# - Suggested improvements
+```
+
+### Step 3: Apply Suggestions
+```bash
+mekong review --apply
+```
+
+---
+
+## ✅ Success Criteria
+
+- [ ] Code reviewed
+- [ ] Issues identified
+- [ ] Suggestions applied
+- [ ] Quality improved
+
+---
+
+## 🔧 Commands
+
+| Command | Purpose |
+|---------|---------|
+| `mekong review "file"` | Review file |
+| `mekong review --pr` | Review PR |
+| `mekong review --apply` | Apply fixes |
+
+---
+
+**🏯 "Họ WIN → Mình WIN"**

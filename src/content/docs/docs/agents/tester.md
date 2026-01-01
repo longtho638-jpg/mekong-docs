@@ -1,143 +1,72 @@
 ---
 title: Tester Agent
-description: Execute tests, validate implementations, and ensure code quality with comprehensive coverage analysis
+description: Write and run tests for your code
 section: docs
 category: agents
-order: 4
+order: 6
 published: true
+ai_executable: true
 ---
 
-# Tester Agent
+# 🧪 Tester Agent
 
-Automated test execution with 80%+ coverage targets, failure diagnosis, and build verification across all major frameworks.
-
-## When to Use
-
-- `/test` - Run full test suite with coverage
-- `/fix:test [issue]` - Fix failing tests automatically
-- Pre-commit/pre-push validation
-- CI/CD pipeline verification
-
-## Key Capabilities
-
-| Category | Tools | Coverage Target |
-|----------|-------|-----------------|
-| **Unit Tests** | Jest, Vitest, pytest, cargo test, go test | 80%+ |
-| **Integration** | API testing, DB interactions, service layers | 75%+ |
-| **E2E** | Playwright, Cypress, Flutter integration tests | Critical paths |
-| **Coverage** | Line, branch, function, statement analysis | 80%+ overall |
-| **Build Check** | TypeScript, linting, bundle size, compilation | 100% pass |
-
-## Common Use Cases
-
-**Solo Dev - Pre-commit validation**
-```
-/test
-
-Validates all changes before commit with coverage report
-```
-
-**QA Engineer - Bug regression prevention**
-```
-/test
-Then review: Which areas have <80% coverage?
-```
-
-**Team Lead - PR validation**
-```
-/test
-Verify: All tests pass + coverage targets met
-```
-
-**DevOps - CI/CD integration**
-```
-/test
-Output: JSON report for pipeline integration
-```
-
-**Full-Stack Dev - Multi-framework testing**
-```
-/test
-
-Runs: Flutter analyze + Jest + pytest in sequence
-```
-
-## Pro Tips
-
-**Coverage-first approach**: Always check coverage gaps after test runs - uncovered code = untested risk
-**Fail fast**: Use `/test` before starting new work to catch environment issues early
-**Fix atomically**: Use `/fix:test [specific failure]` for targeted repairs instead of batch fixes
-**Performance baseline**: Track test execution time - >60s indicates need for optimization
-**Docker isolation**: Run tests in containers for consistency across team environments
-
-## Related Agents
-
-- [Debugger](/docs/agents/debugger) - Investigate test failures
-- [Code Reviewer](/docs/agents/code-reviewer) - Pre-test code quality
-- [Fullstack Developer](/docs/agents/fullstack-developer) - Post-test build verification
-
-## AgencyOS Integration
-
-Display test results with AgentReport:
-
-### Hook Setup
-
-```tsx
-import { useAgentOS, AgentReport, DynamicCard } from '@/agencyos';
-
-function TesterPanel() {
-  const { state, addArtifact } = useAgentOS({ agentName: 'tester' });
-
-  // After test run completes
-  addArtifact({
-    type: 'report',
-    path: 'reports/test-results.md',
-    summary: 'Coverage: 85% | Passed: 142 | Failed: 0'
-  });
-
-  return (
-    <DynamicCard
-      title="Test Results"
-      icon="🧪"
-      status={testsPassed ? 'completed' : 'error'}
-      metrics={[
-        { label: 'Coverage', value: '85%', change: 5 },
-        { label: 'Passed', value: 142 },
-        { label: 'Failed', value: 0 }
-      ]}
-    />
-  );
-}
-```
-
-### Vibe Coding Pattern
-
-```
-/@tester run tests
-    ↓
-Execute: Jest/Vitest/pytest
-    ↓
-Output: AgentReport with coverage
-    ↓
-Dashboard: DynamicCard with metrics
-```
-
-## Key Takeaway
-
-Test execution isn't about 100% coverage - it's about 80%+ on critical paths with zero flaky tests. The tester agent finds failures, diagnoses root causes, and ensures your coverage targets before any commit goes through.
+> **Write and run tests for your code**
 
 ---
 
-## 🏯 Binh Pháp Alignment
+## 🤖 Quick Execute
 
-> **虛實篇** (Hư Thực) - Illusion vs Reality - Find weak points
+```
+Execute: https://agencyos.network/docs/agents/tester
+```
 
-### Zero-Effort Commands
+---
 
-| Gõ lệnh | Agent tự động làm |
-|---------|-------------------|
-| `/plan` | Tự tạo implementation plan |
-| `/code` | Tự implement theo plan |
-| `/ship` | Tự test, review, deploy |
+## ⚡ Step-by-Step
 
-📖 [Xem tất cả Commands](/docs/commands)
+### Step 1: Activate Tester
+```bash
+mekong agent:tester --file "src/api/users.ts"
+```
+
+### Step 2: Generate Tests
+```bash
+# For a specific file
+mekong test:generate "src/api/users.ts"
+
+# For a feature
+mekong test:feature "user authentication"
+
+# Coverage report
+mekong test:coverage
+```
+
+### Step 3: Run Tests
+```bash
+mekong test
+# Expected: ✅ All tests passing
+```
+
+---
+
+## ✅ Success Criteria
+
+- [ ] Tests generated
+- [ ] Coverage > 80%
+- [ ] All tests passing
+- [ ] Edge cases covered
+
+---
+
+## 🔧 Commands
+
+| Command | Purpose |
+|---------|---------|
+| `mekong test` | Run all tests |
+| `mekong test:generate` | Create tests |
+| `mekong test:coverage` | Check coverage |
+| `mekong test:watch` | Watch mode |
+
+---
+
+**🏯 "Họ WIN → Mình WIN"**

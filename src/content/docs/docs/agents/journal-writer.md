@@ -1,144 +1,68 @@
 ---
 title: Journal Writer Agent
-description: Document technical failures and setbacks with brutal honesty and emotional authenticity
+description: Write project journals and updates
 section: docs
 category: agents
-order: 15
+order: 14
 published: true
+ai_executable: true
 ---
 
-# Journal Writer Agent
+# ✏️ Journal Writer Agent
 
-Transform critical failures into brutally honest learning documents that capture technical details, emotional reality, and prevent future mistakes.
+> **Write project journals and updates**
 
-## When to Use
+---
 
-- Production down >30min or data loss
-- Critical bugs caught before release
-- Failed deployments causing outages
-- Repeated issues team keeps hitting
+## 🤖 Quick Execute
 
-## Key Capabilities
+```
+Execute: https://agencyos.network/docs/agents/journal-writer
+```
 
-| Feature | What It Does |
-|---------|--------------|
-| Honest Documentation | Captures what failed without sugarcoating - includes error logs, stack traces, timeline |
-| Root Cause Analysis | Documents what was tried, why it failed, actual cause, systemic issues |
-| Emotional Context | Records team stress, pressure, relief - builds psychological safety through honesty |
-| Learning Extraction | Identifies lessons, prevention strategies, warning signs, process improvements |
+---
 
-## Common Use Cases
+## ⚡ Step-by-Step
 
-**DevOps Engineer** discovering payment race condition
+### Step 1: Create Journal Entry
 ```bash
-/journal
+mekong journal:create
 
-Context: Found race condition in payment system 2hrs before release.
-Bug causes duplicate charges when users rapidly click "Buy Now".
+# With topic
+mekong journal:create --topic "Week 1 Progress"
 ```
-Output: Full incident report with code snippets, failed attempts (DB constraints, optimistic locking), final fix (Stripe idempotency keys), emotional timeline, lessons learned, checklist for future payment code reviews
 
----
-
-**Backend Dev** after 6-hour production outage
+### Step 2: Auto-Generate from Git
 ```bash
-/journal
+mekong journal:from-git --days 7
 
-Context: Kubernetes CrashLoopBackOff on all pods for 6 hours.
-Rolled back - same error. No one knew why.
+# Output: ./journals/weekly-YYYYMMDD.md
 ```
-Output: Technical autopsy showing CI/CD silently failing (renamed npm script, old workflow config), cost breakdown ($16K revenue + support), 7 failed fix attempts, root cause (no build verification), new CI/CD checks added
 
----
-
-**Tech Lead** documenting near-miss
+### Step 3: Export
 ```bash
-/journal
-
-Context: QA found SQL injection vulnerability in prod API.
-Would have exposed 50K user records if exploited.
+mekong journal:export --format "pdf"
 ```
-Output: Vulnerability details, attack vectors, immediate patch, systemic causes (no parameterized queries, skipped security review), new secure coding standards, team training plan
 
 ---
 
-**Site Reliability Engineer** after Redis cluster split-brain
-```bash
-/journal
+## ✅ Success Criteria
 
-Context: Redis cluster split-brain during network partition.
-Half the nodes thought they were primary. Data corruption.
-```
-Output: Network partition timeline, data inconsistency examples, recovery steps, why monitoring didn't catch it, new quorum configuration, chaos engineering tests added
+- [ ] Journal entry created
+- [ ] Progress documented
+- [ ] Key learnings captured
+- [ ] Exported successfully
 
 ---
 
-**Full Stack Dev** documenting performance crisis
-```bash
-/journal
+## 🔧 Commands
 
-Context: API response times jumped from 200ms to 15sec.
-Unindexed DB query on 10M row table hitting production.
-```
-Output: Slow query log, missing index discovery, query plan analysis, why staging didn't catch it (small dataset), new query performance testing requirements, database review checklist
-
-## Pro Tips
-
-- **Write immediately** - Emotional context fades fast, write while it's fresh
-- **Include failed attempts** - Learning comes from what didn't work
-- **Use real language** - "We f*cked up" not "encountered an unexpected issue"
-- **Show the numbers** - Downtime cost, time to fix, impact metrics
-- **Add code snippets** - Actual error logs, broken code, working fix
-- **Make it searchable** - Someone will have same problem, use clear tags
-- **Blame the system** - Not individuals - focus on process failures that allowed it
-
-## Related Agents
-
-- [Debugger](/docs/agents/debugger) - Debug the issues being documented
-- [Project Manager](/docs/agents/project-manager) - Track improvements from learnings
-- [Fullstack Developer](/docs/agents/fullstack-developer) - Implement preventive fixes
-
-## AgencyOS Integration
-
-```tsx
-import { useAgentOS, AgentReport } from '@/agencyos';
-
-function JournalPanel() {
-  const { state, addArtifact } = useAgentOS({ agentName: 'journal-writer' });
-  
-  addArtifact({
-    type: 'walkthrough',
-    path: 'journals/incident-20251228.md',
-    summary: 'Production incident postmortem'
-  });
-
-  return <AgentReport type="walkthrough" {...journal} />;
-}
-```
-
-### Vibe Coding Pattern
-```
-/@journal document payment race condition
-    ↓
-Output: Incident report + lessons learned
-```
-
-## Key Takeaway
-
-Journal Writer transforms expensive failures into permanent institutional knowledge through brutally honest documentation - capturing technical details, emotional reality, failed attempts, and systemic causes so teams learn once instead of failing repeatedly. Part of AgencyOS $99 toolkit.
+| Command | Purpose |
+|---------|---------|
+| `mekong journal:create` | New entry |
+| `mekong journal:from-git` | From commits |
+| `mekong journal:export` | Export |
 
 ---
 
-## 🏯 Binh Pháp Alignment
-
-> **地形篇** (Địa Hình) - Terrain - Document journey
-
-### Zero-Effort Commands
-
-| Gõ lệnh | Agent tự động làm |
-|---------|-------------------|
-| `/plan` | Tự tạo implementation plan |
-| `/code` | Tự implement theo plan |
-| `/ship` | Tự test, review, deploy |
-
-📖 [Xem tất cả Commands](/docs/commands)
+**🏯 "Họ WIN → Mình WIN"**

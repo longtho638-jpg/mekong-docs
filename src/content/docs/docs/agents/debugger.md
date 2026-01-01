@@ -1,139 +1,96 @@
 ---
 title: Debugger Agent
-description: Systematically investigate issues, analyze logs, and provide root cause analysis with actionable solutions
+description: Find and fix bugs systematically
 section: docs
 category: agents
 order: 5
 published: true
+ai_executable: true
+estimated_time: "5 minutes"
 ---
 
-# Debugger Agent
+# 🐛 Debugger Agent
 
-Systematic root cause analysis for production incidents, API failures, and complex technical issues.
-
-## When to Use
-
-- API endpoints returning 500 errors or unexpected responses
-- CI/CD pipeline failures blocking deployments
-- Database connection pools exhausted or queries timing out
-- Production incidents requiring immediate diagnosis
-
-## Key Capabilities
-
-| Area | What It Does |
-|------|-------------|
-| **Issue Investigation** | Structured problem-solving: assess severity, collect logs, identify patterns, trace timeline |
-| **Database Analysis** | Schema inspection (`psql \d`), query plans (EXPLAIN), connection monitoring, lock detection |
-| **Log Analysis** | Parse server logs, CI/CD output, GitHub Actions failures, container logs, system errors |
-| **Performance** | Response times, resource usage (CPU/memory/disk), bottleneck identification, cache analysis |
-| **Root Cause** | Error tracing, dependency failures, config issues, code bugs, infrastructure problems |
-
-## Common Use Cases
-
-### Backend Engineer: API 500 Errors
-**Prompt**: `/debug [POST /api/orders returning 500, started after v2.3.4 deploy]`
-Gets root cause (missing req.user, connection leak), fix plan, rollback steps, validation commands.
-
-### DevOps: Database Connection Exhaustion
-**Prompt**: `/debug [PostgreSQL pool exhausted, 47/20 connections active]`
-Identifies leaked transactions, long-running queries, table locks. Provides kill commands, query timeouts, code fixes.
-
-### Full-Stack Dev: GitHub Actions Failing
-**Prompt**: `/debug [CI build failing on test step, error "Module not found"]`
-Analyzes workflow logs, identifies missing dependency or broken import, suggests package.json fix.
-
-### Site Reliability Engineer: Performance Degradation
-**Prompt**: `/debug [API latency increased from 200ms to 3s after deploy]`
-Profiles endpoints, finds N+1 queries or missing indexes, provides EXPLAIN ANALYZE output and optimization plan.
-
-## Pro Tips
-
-**Collect context first**: Before running `/debug`, gather error messages, timestamps, recent changes (deploys/commits), and environment details.
-
-**Check the usual suspects**: Recent deployments, config changes, dependency updates, database migrations often cause issues.
-
-**Use parallel investigation**: Combine with scout agents for broad searches: `scout('Find all database transaction usage', 3)` while analyzing logs.
-
-**Validate fixes in staging**: Test proposed solutions in non-production before applying to prod.
-
-**Document for next time**: Debugger reports become runbooks - save them for similar future incidents.
-
-## Related Agents
-
-- [Tester](/docs/agents/tester) - Validate fixes with comprehensive tests
-- [Code Reviewer](/docs/agents/code-reviewer) - Review fix quality before merge
-- [Fullstack Developer](/docs/agents/fullstack-developer) - Implement suggested fixes
-
-## AgencyOS Integration
-
-Connect the Debugger Agent to your dashboard with approval gates:
-
-### Hook Setup
-
-```tsx
-import { useAgentOS, useApprovalGate, ApprovalDialog } from '@/agencyos';
-
-function DebuggerPanel() {
-  const { state, startTask } = useAgentOS({ agentName: 'debugger' });
-  const { pendingRequest, requestApproval, approve, reject } = useApprovalGate();
-
-  async function applyFix(fix: DebugFix) {
-    const approved = await requestApproval(
-      `Apply Fix: ${fix.title}`,
-      fix.description,
-      { files: fix.affectedFiles, risk: fix.riskLevel }
-    );
-    
-    if (approved) {
-      // Apply the fix
-    }
-  }
-
-  return (
-    <>
-      <ApprovalDialog
-        isOpen={!!pendingRequest}
-        action={pendingRequest?.action || ''}
-        description={pendingRequest?.description || ''}
-        details={pendingRequest?.details}
-        onApprove={approve}
-        onReject={reject}
-      />
-    </>
-  );
-}
-```
-
-### Vibe Coding Pattern
-
-```
-/@debugger [API returning 500 errors]
-    ↓
-Analysis: Logs → Root cause → Fix options
-    ↓
-ApprovalGate: "Apply fix to auth/service.ts?"
-    ↓
-Human: ✅ Approve
-    ↓
-Fix applied + verified
-```
-
-## Key Takeaway
-
-Debugger agent systematically investigates technical issues from symptoms to root cause, providing actionable solutions with validation steps and prevention measures - turning hours of troubleshooting into 30-minute structured analysis.
+> **Find and fix bugs systematically**
 
 ---
 
-## 🏯 Binh Pháp Alignment
+## 🤖 Quick Execute
 
-> **火攻篇** (Hoả Công) - Fire attack - Swift resolution
+```
+Execute: https://agencyos.network/docs/agents/debugger
+```
 
-### Zero-Effort Commands
+---
 
-| Gõ lệnh | Agent tự động làm |
-|---------|-------------------|
-| `/plan` | Tự tạo implementation plan |
-| `/code` | Tự implement theo plan |
-| `/ship` | Tự test, review, deploy |
+## ⚡ Step-by-Step
 
-📖 [Xem tất cả Commands](/docs/commands)
+### Step 1: Describe the Bug (1 min)
+```bash
+mekong agent:debugger --bug "Login button not working"
+
+# Expected: ✅ Debugger analyzing...
+```
+
+### Step 2: Get Fix Plan
+```bash
+# Simple fix
+mekong fix "login not redirecting"
+
+# Hard debug (complex issues)
+mekong fix --hard "race condition in checkout"
+
+# From error log
+mekong fix --log "./error.log"
+```
+
+### Step 3: Apply Fix
+```bash
+# Auto-apply suggested fix
+mekong fix --apply
+
+# Review first
+mekong fix --review
+```
+
+### Step 4: Verify
+```bash
+# Run tests
+mekong test
+
+# Manual verification
+mekong dev
+```
+
+---
+
+## ✅ Success Criteria
+
+- [ ] Root cause identified
+- [ ] Fix applied
+- [ ] Tests passing
+- [ ] Bug not reproducible
+
+---
+
+## 🔧 Commands
+
+| Command | Purpose |
+|---------|---------|
+| `mekong fix "issue"` | Quick fix |
+| `mekong fix --hard` | Complex debugging |
+| `mekong fix --log` | Debug from logs |
+| `mekong fix --apply` | Auto-apply fix |
+| `mekong fix --test` | Fix + run tests |
+
+---
+
+## 🔗 Related
+
+- [Tester](/docs/agents/tester) - Verify fixes
+- [Scout](/docs/agents/scout) - Analyze codebase
+- [Fullstack](/docs/agents/fullstack-developer) - Implement
+
+---
+
+**🏯 "Họ WIN → Mình WIN"**

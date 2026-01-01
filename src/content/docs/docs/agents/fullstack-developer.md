@@ -1,167 +1,87 @@
 ---
 title: Fullstack Developer Agent
-description: Execute implementation phases from parallel plans with strict file ownership boundaries
+description: Write complete frontend and backend code
 section: docs
 category: agents
-order: 17
+order: 4
 published: true
+ai_executable: true
+estimated_time: "5 minutes"
 ---
 
-# Fullstack Developer Agent
+# 💻 Fullstack Developer Agent
 
-**Execute parallel-safe implementation phases across backend, frontend, and infrastructure with strict file ownership enforcement.**
+> **Write complete frontend and backend code**
 
-## When to Use
+---
 
-- Implementing phases from `/plan:parallel` output
-- Running backend + frontend work simultaneously without conflicts
-- Need file-level isolation for parallel execution
-- Building full-stack features (API + UI + tests)
+## 🤖 Quick Execute
 
-## Key Capabilities
+```
+Execute: https://agencyos.network/docs/agents/fullstack-developer
+```
 
-| Area | Details |
-|------|---------|
-| **Backend** | Node.js, Express APIs, auth, database ops |
-| **Frontend** | React, TypeScript, components, styling |
-| **Infrastructure** | Config, env setup, deployment scripts |
-| **Parallel Safety** | File ownership enforcement, conflict detection |
-| **Quality** | Type checking, tests, success criteria validation |
+---
 
-## Common Use Cases
+## ⚡ Step-by-Step
 
-| Who | Prompt | Outcome |
-|-----|--------|---------|
-| **Team Lead** | `/code plans/251201-user-api/phase-02-endpoints.md` | Executes Phase 02 API endpoints with ownership boundaries |
-| **Developer** | Execute backend + frontend phases simultaneously | Safe parallel execution, no file conflicts |
-| **PM** | `/plan:parallel Add CRUD API + React dashboard` → `/code` phases | Full implementation with automated reports |
-
-## How It Works
-
-**1. Phase Analysis**
-- Reads `phase-XX-*.md` from plan directory
-- Validates file ownership (exclusive files only)
-- Checks parallelization info and dependencies
-
-**2. Implementation**
-- Follows steps from phase file
-- Only touches files in "File Ownership" section
-- **NEVER** modifies files owned by other phases
-
-**3. Quality Assurance**
+### Step 1: Activate Agent (1 min)
 ```bash
-npm run typecheck  # Must pass
-npm test           # Must pass
+mekong agent:fullstack --task "Build landing page"
+
+# Expected: ✅ Fullstack agent activated
 ```
 
-**4. Report Output**
-```
-{active-plan}/reports/fullstack-dev-{YYMMDD}-phase-{XX}-{topic}.md
-```
+### Step 2: Implement Feature (varies)
+```bash
+# From a plan
+mekong cook @plans/landing-page.md
 
-## File Ownership Example
+# Direct coding
+mekong code "create user dashboard with charts"
 
-```markdown
-# Phase 02: API Endpoints
-
-## File Ownership (Exclusive)
-- src/api/users.ts
-- src/schemas/*.ts
-- tests/api/*.test.ts
-
-## Shared (Read-Only)
-- src/types/index.ts
+# From description
+mekong fullstack --feature "payment integration"
 ```
 
-**Critical Rules:**
-- **NEVER** modify files not in ownership list
-- **STOP** immediately if conflict detected
-- Only read shared files, never write
+### Step 3: Run & Test
+```bash
+# Start dev server
+mekong dev
 
-## Parallel Execution Safety
-
+# Run tests
+mekong test
 ```
-Phase 02 (Backend)     Phase 03 (Frontend)
-├── src/api/           ├── src/components/
-├── src/schemas/       ├── src/hooks/
-└── tests/api/         └── tests/components/
-
-No overlap → Safe for parallel execution
-```
-
-**Independence principles:**
-- Work without checking other phases' progress
-- Trust dependencies listed in phase file
-- Report completion to unblock dependent phases
-
-## Pro Tips
-
-1. **Read First**: Check `.agencyos/active-plan` for current plan path
-2. **Ownership Strict**: If not in ownership list, don't touch it
-3. **Phase Order**: Sequential phases (01, 04) must run in order; parallel phases (02, 03) can run simultaneously
-4. **YAGNI**: Only implement what's in the phase spec, nothing more
-5. **Token Efficiency**: Concise implementation, minimal overhead
-
-## Related Agents
-
-- [Planner Agent](/docs/agents/planner) - Creates implementation plans
-- [Scout Agent](/docs/agents/scout-external) - Gathers external context before planning
-
-## AgencyOS Integration
-
-Connect Fullstack Developer with multi-step task tracking:
-
-### Hook Setup
-
-```tsx
-import { useAgentOS, useTaskTracker, TaskTrackerWidget } from '@/agencyos';
-
-function FullstackPanel() {
-  const { state, setMode } = useAgentOS({ agentName: 'fullstack-developer' });
-  const { progress, initTask, completeStep } = useTaskTracker();
-
-  async function executePhase(phase: ImplementationPhase) {
-    setMode('execution');
-    initTask(`Phase ${phase.number}: ${phase.topic}`, phase.steps);
-    
-    for (const step of phase.steps) {
-      // Execute step
-      completeStep(step.id);
-    }
-  }
-
-  return <TaskTrackerWidget {...state} progress={progress} />;
-}
-```
-
-### Vibe Coding Pattern
-
-```
-/@fullstack implement phase-02-api.md
-    ↓
-Mode: execution
-    ↓
-TaskTracker: Step 1 → 2 → 3 → 4
-    ↓
-Output: Code + tests + report
-```
-
-## Key Takeaway
-
-**Fullstack Developer executes implementation phases with file-level isolation, enabling safe parallel backend/frontend development while maintaining code quality through automated testing.**
 
 ---
 
-## 🏯 Binh Pháp Alignment
+## ✅ Success Criteria
 
-> **作戰篇** (Tác Chiến) - Waging war - Full implementation
+- [ ] Feature implemented
+- [ ] Tests passing
+- [ ] Build successful
+- [ ] Ready for review
 
-### Zero-Effort Commands
+---
 
-| Gõ lệnh | Agent tự động làm |
-|---------|-------------------|
-| `/plan` | Tự tạo implementation plan |
-| `/code` | Tự implement theo plan |
-| `/ship` | Tự test, review, deploy |
+## 🔧 Commands
 
-📖 [Xem tất cả Commands](/docs/commands)
+| Command | Purpose |
+|---------|---------|
+| `mekong code "task"` | Write code |
+| `mekong cook @plan.md` | Execute from plan |
+| `mekong fullstack --feature` | Complete feature |
+| `mekong dev` | Start dev server |
+| `mekong test` | Run tests |
+
+---
+
+## 🔗 Related
+
+- [Planner](/docs/agents/planner) - Create plans first
+- [Debugger](/docs/agents/debugger) - Fix bugs
+- [Tester](/docs/agents/tester) - Write tests
+
+---
+
+**🏯 "Họ WIN → Mình WIN"**

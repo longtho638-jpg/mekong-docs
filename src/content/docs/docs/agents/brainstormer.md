@@ -1,132 +1,68 @@
 ---
 title: Brainstormer Agent
-description: Solution architect and technical advisor for exploring approaches, challenging assumptions, and debating decisions
+description: Generate ideas and brainstorm solutions
 section: docs
 category: agents
-order: 6
+order: 18
 published: true
+ai_executable: true
 ---
 
-# Brainstormer Agent
+# 💡 Brainstormer Agent
 
-Your technical advisor who challenges assumptions, debates approaches, and provides brutally honest assessments before code is written.
-
-## When to Use
-
-- Evaluating multiple architectural approaches with competing trade-offs
-- Challenging assumptions about requirements and feasibility
-- Debating technical decisions before committing resources
-- Need a "second opinion" on complex problems requiring creative solutions
-
-## Key Capabilities
-
-| Capability | Description |
-|-----------|-------------|
-| Multi-approach analysis | Explores 3-5 valid solutions with detailed pros/cons |
-| Assumption challenging | Questions requirements to ensure solving real problems |
-| Trade-off evaluation | Assesses complexity, maintenance, performance, cost, technical debt |
-| Brutal honesty | Unfiltered assessment: overengineering alerts, risk identification, simpler alternatives |
-| YAGNI/KISS/DRY | Applies principles to prevent premature optimization |
-| Contextual recommendations | Considers team skills, timeline, budget constraints |
-
-## Common Use Cases
-
-**Startup CTO**: Evaluating API architecture
-```bash
-/brainstorm [should we use REST API or GraphQL for our mobile app? Team has REST experience, need to ship MVP in 6 weeks]
-```
-
-**Tech Lead**: Debating caching strategies
-```bash
-/brainstorm [API responses are slow. Evaluating Redis cache vs database optimization vs CDN. Current p95 is 800ms, need <200ms]
-```
-
-**Product Engineer**: Challenging feature requests
-```bash
-/brainstorm [stakeholder wants real-time dashboard with WebSockets. Is this necessary or can we use polling?]
-```
-
-**Solo Developer**: Planning refactoring
-```bash
-/brainstorm [monolith is getting messy. Should I split into microservices or improve modular monolith structure first?]
-```
-
-**Team Lead**: Assessing feasibility
-```bash
-/brainstorm [client wants offline-first mobile app with sync. Team has 3 junior devs, 8-week timeline. Realistic?]
-```
-
-## Pro Tips
-
-**Provide context upfront**: Team skills, timeline, budget, constraints. Better context = better recommendations.
-
-**Be open to challenges**: Brainstormer will question your assumptions. That's the point. Saves costly mistakes.
-
-**Focus on "Recommendation" section**: If overwhelmed by options, read the final recommendation first, then backtrack for details.
-
-**Use success criteria**: Brainstormer defines measurable criteria (e.g., "p95 <200ms"). Use these to validate decisions later.
-
-**Don't skip "Open Questions"**: Unresolved questions in the output need answers before proceeding.
-
-**Trust YAGNI assessments**: If brainstormer says it's overengineering, it probably is. Build what you need now.
-
-**Follow "Next Steps"**: Output includes actionable next steps. Usually involves `/plan` command for implementation.
-
-## Related Agents
-
-- [Planner Agent](/docs/agents/planner) - Creates implementation plans after approach is decided
-- [Researcher Agent](/docs/agents/researcher) - Provides data for brainstorming decisions
-- [Docs-Manager Agent](/docs/agents/docs-manager) - Documents architectural decision records
-
-## AgencyOS Integration
-
-```tsx
-import { useAgentOS, DynamicCard } from '@/agencyos';
-
-function BrainstormerPanel() {
-  const { state } = useAgentOS({ agentName: 'brainstormer' });
-  
-  return (
-    <DynamicCard
-      title="Approach Analysis"
-      icon="🧠"
-      metrics={[
-        { label: 'Options', value: 3 },
-        { label: 'YAGNI Score', value: '8/10' }
-      ]}
-      actions={[
-        { id: 'accept', label: 'Accept Recommendation', variant: 'primary' }
-      ]}
-    />
-  );
-}
-```
-
-### Vibe Coding Pattern
-```
-/@brainstormer evaluate caching strategy
-    ↓
-Analysis: 3-5 approaches with trade-offs
-    ↓
-Output: DynamicCard with recommendation
-```
-
-## Key Takeaway
-
-Brainstormer doesn't write code. It saves you from writing the wrong code. Use it before committing to complex architectural decisions. 10 minutes of brainstorming prevents weeks of refactoring.
+> **Generate ideas and brainstorm solutions**
 
 ---
 
-## 🏯 Binh Pháp Alignment
+## 🤖 Quick Execute
 
-> **謀攻篇** (Mưu Công) - Offensive strategy - Ideas
+```
+Execute: https://agencyos.network/docs/agents/brainstormer
+```
 
-### Zero-Effort Commands
+---
 
-| Gõ lệnh | Agent tự động làm |
-|---------|-------------------|
-| `/plan` | Tự tạo implementation plan |
-| `/code` | Tự implement theo plan |
-| `/ship` | Tự test, review, deploy |
+## ⚡ Step-by-Step
 
-📖 [Xem tất cả Commands](/docs/commands)
+### Step 1: Start Brainstorm
+```bash
+mekong brainstorm "ways to improve user onboarding"
+
+# With constraints
+mekong brainstorm "marketing ideas" --budget 1000
+```
+
+### Step 2: Expand Ideas
+```bash
+mekong brainstorm:expand --idea "gamification"
+```
+
+### Step 3: Prioritize
+```bash
+mekong brainstorm:rank
+
+# Output: Ideas ranked by impact/effort
+```
+
+---
+
+## ✅ Success Criteria
+
+- [ ] 10+ ideas generated
+- [ ] Top 3 expanded
+- [ ] Prioritized by impact
+- [ ] Action plan created
+
+---
+
+## 🔧 Commands
+
+| Command | Purpose |
+|---------|---------|
+| `mekong brainstorm` | Generate ideas |
+| `mekong brainstorm:expand` | Expand idea |
+| `mekong brainstorm:rank` | Prioritize |
+
+---
+
+**🏯 "Họ WIN → Mình WIN"**
