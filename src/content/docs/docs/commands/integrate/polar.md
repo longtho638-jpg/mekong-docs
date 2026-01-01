@@ -5,9 +5,20 @@ section: docs
 category: commands/integrate
 order: 70
 published: true
+ai_executable: true
 ---
 
 # /integrate:polar
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/integrate/polar
+```
+
+
 
 Implement complete payment integration with Polar.sh. This command handles subscriptions, one-time payments, webhook processing, customer portal, and all necessary backend logic for SaaS monetization.
 

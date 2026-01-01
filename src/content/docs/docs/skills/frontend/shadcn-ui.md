@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 4
 published: true
+ai_executable: true
 ---
 
 # shadcn/ui Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/shadcn-ui
+```
+
+
 
 Copy-paste accessible UI components built on Radix UI + Tailwind CSS that live in your codebase, not node_modules.
 

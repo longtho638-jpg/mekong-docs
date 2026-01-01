@@ -5,9 +5,20 @@ section: docs
 category: commands/git
 order: 6
 published: true
+ai_executable: true
 ---
 
 # /git:merge
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/git/merge
+```
+
+
 
 Merge code from one branch to another with conflict resolution.
 

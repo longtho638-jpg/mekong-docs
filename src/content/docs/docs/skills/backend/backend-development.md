@@ -5,9 +5,20 @@ section: docs
 category: skills/backend
 order: 3
 published: true
+ai_executable: true
 ---
 
 # Backend Development Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/backend/backend-development
+```
+
+
 
 Build production-ready backend systems with modern technologies, security best practices, and proven scalability patterns.
 

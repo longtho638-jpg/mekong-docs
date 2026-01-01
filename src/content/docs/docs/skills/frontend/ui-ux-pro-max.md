@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 15
 published: true
+ai_executable: true
 ---
 
 # UI/UX Pro Max Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/ui-ux-pro-max
+```
+
+
 
 Get instant access to 50 UI styles, 21 color palettes, 50 font pairings, and 20 chart types—all tailored to your product type and tech stack.
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/ecommerce
 order: 23
 published: true
+ai_executable: true
 ---
 
 # Shopify Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/ecommerce/shopify
+```
+
+
 
 Build production-ready Shopify apps, checkout extensions, admin integrations, and themes with GraphQL APIs and Shopify CLI.
 

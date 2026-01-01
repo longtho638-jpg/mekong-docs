@@ -5,9 +5,20 @@ section: docs
 category: commands/design
 order: 42
 published: true
+ai_executable: true
 ---
 
 # /design:fast
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/design/fast
+```
+
+
 
 Rapidly prototype UI designs with fast turnaround. Perfect for quick iterations, MVP launches, internal tools, or when you need functional designs without the polish time. Speed over perfection - ship fast, iterate faster.
 

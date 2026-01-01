@@ -5,9 +5,20 @@ section: docs
 category: commands/plan
 order: 1
 published: true
+ai_executable: true
 ---
 
 # /plan
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/plan
+```
+
+
 
 Intelligent planning router. Analyzes task complexity, asks clarifying questions if needed, and routes to the appropriate planning workflow (`/plan:fast` or `/plan:hard`).
 

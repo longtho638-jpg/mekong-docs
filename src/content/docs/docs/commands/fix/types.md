@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 25
 published: true
+ai_executable: true
 ---
 
 # /fix:types
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/types
+```
+
+
 
 Automatically identify and fix all type errors in your TypeScript or Dart codebase. The command runs type checkers iteratively until all type errors are resolved, ensuring type safety without resorting to `any` types.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands
 order: 100
 published: true
+ai_executable: true
 ---
 
 # /e2e-test
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/testing/e2e-test
+```
+
+
 
 > 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
 

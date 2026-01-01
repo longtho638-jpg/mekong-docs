@@ -5,9 +5,20 @@ section: docs
 category: skills/multimedia
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Media Processing Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/multimedia/media-processing
+```
+
+
 
 Process video, audio, and images using FFmpeg, ImageMagick, and RMBG CLI tools.
 

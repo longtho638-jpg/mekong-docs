@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 3
 published: true
+ai_executable: true
 ---
 
 # /ask
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/ask
+```
+
+
 
 Strategic architectural consultation command. Provides expert guidance on technical decisions, system design, and architectural challenges without implementation.
 

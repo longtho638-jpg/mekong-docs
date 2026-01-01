@@ -5,9 +5,20 @@ section: docs
 category: commands/content
 order: 50
 published: true
+ai_executable: true
 ---
 
 # /content:cro
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/content/cro
+```
+
+
 
 Analyze existing content and optimize it for conversion. This command uses conversion rate optimization (CRO) best practices, psychological triggers, and A/B testing strategies to improve your copy's effectiveness.
 

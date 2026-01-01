@@ -5,9 +5,20 @@ section: docs
 category: commands
 order: 100
 published: true
+ai_executable: true
 ---
 
 # /migrate
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/utility/migrate
+```
+
+
 
 > 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/ai
 order: 20
 published: true
+ai_executable: true
 ---
 
 # Gemini Vision Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/ai/gemini-vision
+```
+
+
 
 This skill has been merged into **AI Multimodal** which provides comprehensive multimedia capabilities.
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 9
 published: true
+ai_executable: true
 ---
 
 # MCP Management Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/mcp-management
+```
+
+
 
 Discover and execute tools from MCP servers without polluting your context window.
 

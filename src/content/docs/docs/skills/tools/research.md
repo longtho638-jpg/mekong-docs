@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 15
 published: true
+ai_executable: true
 ---
 
 # Research
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/research
+```
+
+
 
 Validate technical decisions with multi-source research before implementation. Max 5 searches per task.
 

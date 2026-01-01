@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 5
 published: true
+ai_executable: true
 ---
 
 # /debug
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/debug
+```
+
+
 
 Issue investigation and diagnosis command. Analyzes bugs, errors, and technical problems to identify root causes and explain them clearly—without automatically implementing fixes.
 

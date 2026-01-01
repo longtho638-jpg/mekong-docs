@@ -5,9 +5,20 @@ section: docs
 category: skills/ai
 order: 24
 published: true
+ai_executable: true
 ---
 
 # canvas-design
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/ai/canvas-design
+```
+
+
 
 Create museum-quality visual art and designs in PNG/PDF formats through sophisticated design philosophies and expert craftsmanship.
 

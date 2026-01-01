@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 27
 published: true
+ai_executable: true
 ---
 
 # /cook:auto:fast
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/cook-auto-fast
+```
+
+
 
 Fast feature implementation with scouting and quick planning (no research).
 

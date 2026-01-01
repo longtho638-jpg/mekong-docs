@@ -5,9 +5,20 @@ section: docs
 category: commands/content
 order: 52
 published: true
+ai_executable: true
 ---
 
 # /content:fast
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/content/fast
+```
+
+
 
 Generate creative and effective copy quickly. This command produces multiple variations optimized for different platforms and use cases, perfect when you need quality content fast.
 

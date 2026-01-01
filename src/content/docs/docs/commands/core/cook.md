@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 2
 published: true
+ai_executable: true
 ---
 
 # /cook
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/cook
+```
+
+
 
 :::tip[Token-Saving Tip: /cook = /plan + /code]
 **If you already have a plan**, skip `/cook` and use `/code` directly:

@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 24
 published: true
+ai_executable: true
 ---
 
 # /bootstrap:auto
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/bootstrap-auto
+```
+
+
 
 Comprehensive automatic project bootstrapping with full research, design, and implementation.
 

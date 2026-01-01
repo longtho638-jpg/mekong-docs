@@ -5,9 +5,20 @@ section: docs
 category: skills/ai
 order: 3
 published: true
+ai_executable: true
 ---
 
 # Google ADK Python Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/ai/google-adk-python
+```
+
+
 
 Code-first AI agent framework with tool integration, multi-agent coordination, and workflow orchestration.
 

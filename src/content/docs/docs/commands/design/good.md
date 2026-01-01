@@ -5,9 +5,20 @@ section: docs
 category: commands/design
 order: 43
 published: true
+ai_executable: true
 ---
 
 # /design:good
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/design/good
+```
+
+
 
 Create exceptional, production-ready designs that captivate users and win awards. Research-driven design process studying Dribbble, Behance, and Awwwards winners to deliver immersive, high-fidelity experiences with meticulous attention to detail.
 

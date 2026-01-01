@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 23
 published: true
+ai_executable: true
 ---
 
 # /fix:logs
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/logs
+```
+
+
 
 Analyze log files to identify errors, warnings, and issues, then automatically implement fixes based on comprehensive root cause analysis. Perfect for troubleshooting production issues, debugging failed deployments, or investigating system errors.
 

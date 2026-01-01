@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 20
 published: true
+ai_executable: true
 ---
 
 # /fix:fast
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/fast
+```
+
+
 
 Fix minor bugs and issues quickly. This command skips extensive codebase analysis and planning, getting straight to implementation and testing. Perfect for simple fixes where you know what needs to be done.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/plan
 order: 10
 published: true
+ai_executable: true
 ---
 
 # /plan:ci
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/plan/ci
+```
+
+
 
 Analyze GitHub Actions workflow logs and create a detailed implementation plan to fix CI/CD issues. This command identifies problems, root causes, and provides actionable steps but does NOT implement fixes automatically.
 

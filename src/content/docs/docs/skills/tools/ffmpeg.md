@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 21
 published: true
+ai_executable: true
 ---
 
 # ffmpeg
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/ffmpeg
+```
+
+
 
 Process video and audio with professional-grade encoding, conversion, streaming, and filtering.
 

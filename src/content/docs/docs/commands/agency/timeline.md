@@ -5,9 +5,20 @@ section: docs
 category: commands
 order: 100
 published: true
+ai_executable: true
 ---
 
 # /timeline
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/agency/timeline
+```
+
+
 
 > 🏯 **Binh Pháp Aligned** - ZERO-EFFORT automation
 

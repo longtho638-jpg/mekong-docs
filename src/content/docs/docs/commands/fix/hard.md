@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 21
 published: true
+ai_executable: true
 ---
 
 # /fix:hard
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/hard
+```
+
+
 
 Fix complex bugs with thorough investigation and root cause analysis. This command deploys multiple agents to scan the codebase, research solutions, create a detailed fix plan, and implement it with comprehensive testing.
 

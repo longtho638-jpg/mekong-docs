@@ -5,9 +5,20 @@ section: docs
 category: cli
 order: 0
 published: true
+ai_executable: true
 ---
 
 # AgencyOS CLI Overview
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/cli
+```
+
+
 
 Command-line tool for bootstrapping and updating AgencyOS projects from private GitHub repository releases.
 

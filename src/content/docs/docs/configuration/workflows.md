@@ -5,9 +5,20 @@ section: docs
 category: configuration
 order: 3
 published: true
+ai_executable: true
 ---
 
 # Workflows
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/configuration/workflows
+```
+
+
 
 Workflows are the backbone of AgencyOS's agent coordination system. They provide detailed instructions that ensure agents work together cohesively and follow project standards.
 

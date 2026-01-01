@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 10
 published: true
+ai_executable: true
 ---
 
 # /fix:parallel
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/parallel
+```
+
+
 
 Parallel issue fixing command. Resolves multiple independent issues simultaneously by spawning parallel fullstack-developer agents, each handling one issue.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/plan
 order: 2
 published: true
+ai_executable: true
 ---
 
 # /plan:fast
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/plan/fast
+```
+
+
 
 Quick planning without research. Analyzes codebase and creates implementation plan.
 

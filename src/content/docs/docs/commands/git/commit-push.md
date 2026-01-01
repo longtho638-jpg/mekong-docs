@@ -5,9 +5,20 @@ section: docs
 category: commands/git
 order: 31
 published: true
+ai_executable: true
 ---
 
 # /git:cp
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/git/commit-push
+```
+
+
 
 Stage all changes, create a conventional commit with a professional message, and push to the remote repository in one streamlined command. Perfect for quick iteration cycles.
 

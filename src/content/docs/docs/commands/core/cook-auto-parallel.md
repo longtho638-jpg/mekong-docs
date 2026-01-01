@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 51
 published: true
+ai_executable: true
 ---
 
 # /cook:auto:parallel
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/cook-auto-parallel
+```
+
+
 
 Feature implementation with parallel execution. Creates a parallel plan and launches multiple fullstack-developer agents to implement independent phases simultaneously.
 

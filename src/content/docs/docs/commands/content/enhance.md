@@ -5,9 +5,20 @@ section: docs
 category: commands/content
 order: 51
 published: true
+ai_executable: true
 ---
 
 # /content:enhance
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/content/enhance
+```
+
+
 
 Analyze and enhance existing copy to improve clarity, impact, SEO optimization, and readability. This command refines your content while maintaining your brand voice and core message.
 

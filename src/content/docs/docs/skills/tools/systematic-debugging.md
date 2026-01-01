@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 12
 published: true
+ai_executable: true
 ---
 
 # systematic-debugging
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/systematic-debugging
+```
+
+
 
 Four-phase debugging framework that enforces root cause investigation before attempting any fixes - turning hours of thrashing into 15-minute resolutions.
 

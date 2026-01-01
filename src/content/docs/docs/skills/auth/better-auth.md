@@ -5,9 +5,20 @@ section: docs
 category: skills/auth
 order: 10
 published: true
+ai_executable: true
 ---
 
 # Better Auth Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/auth/better-auth
+```
+
+
 
 Production-ready authentication for any TypeScript framework—Next.js, Nuxt, SvelteKit, Remix, Astro, Hono, Express.
 

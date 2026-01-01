@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 72
 published: true
+ai_executable: true
 ---
 
 # /review:codebase
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/review-codebase
+```
+
+
 
 Multi-agent codebase analysis command. Scans your entire codebase using researcher, scout, and code-reviewer agents to assess quality, identify technical debt, and create an improvement roadmap.
 

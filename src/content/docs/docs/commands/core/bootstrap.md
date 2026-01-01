@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 1
 published: true
+ai_executable: true
 ---
 
 # /bootstrap
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/bootstrap
+```
+
+
 
 Initialize new projects with spec-driven and test-driven development. This command guides you through requirements gathering, research, planning, and implementation.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/plan
 order: 4
 published: true
+ai_executable: true
 ---
 
 # /plan:cro
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/plan/cro
+```
+
+
 
 Create a CRO (Conversion Rate Optimization) plan for given content.
 

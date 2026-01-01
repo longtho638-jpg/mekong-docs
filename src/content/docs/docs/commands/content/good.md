@@ -5,9 +5,20 @@ section: docs
 category: commands/content
 order: 53
 published: true
+ai_executable: true
 ---
 
 # /content:good
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/content/good
+```
+
+
 
 Create high-quality, strategic copy with comprehensive research, competitor analysis, and multiple alternatives with detailed rationale. This is your go-to command for important content that requires thoughtful strategy and optimization.
 

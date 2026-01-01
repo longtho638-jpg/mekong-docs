@@ -5,9 +5,20 @@ section: docs
 category: commands/skill
 order: 82
 published: true
+ai_executable: true
 ---
 
 # /skill:add
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/skill/add
+```
+
+
 
 Extend existing skills with new references or executable scripts. Uses progressive disclosure to optimize token usage while expanding skill capabilities.
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 14
 published: true
+ai_executable: true
 ---
 
 # document-skills
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/document-skills
+```
+
+
 
 Read, parse, create, and manipulate PDF, Word, PowerPoint, and Excel documents with formula preservation and format conversion.
 

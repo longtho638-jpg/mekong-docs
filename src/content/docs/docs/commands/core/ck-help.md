@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 21
 published: true
+ai_executable: true
 ---
 
 # /ck-help
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/ck-help
+```
+
+
 
 All-in-one AgencyOS guide for discovering commands and workflows.
 

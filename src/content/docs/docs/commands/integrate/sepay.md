@@ -5,9 +5,20 @@ section: docs
 category: commands/integrate
 order: 71
 published: true
+ai_executable: true
 ---
 
 # /integrate:sepay
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/integrate/sepay
+```
+
+
 
 Implement complete payment integration with SePay.vn, Vietnam's leading payment gateway. This command handles QR code payments, bank transfers, webhook processing, and all necessary backend logic for Vietnamese market monetization.
 

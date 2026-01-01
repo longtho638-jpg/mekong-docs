@@ -5,9 +5,20 @@ section: docs
 category: commands/plan
 order: 3
 published: true
+ai_executable: true
 ---
 
 # /plan:hard
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/plan/hard
+```
+
+
 
 Thorough planning with research. Uses multiple researcher agents for comprehensive analysis.
 

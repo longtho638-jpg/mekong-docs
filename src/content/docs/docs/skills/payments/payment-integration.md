@@ -5,9 +5,20 @@ section: docs
 category: skills
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Payment Integration
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/payments/payment-integration
+```
+
+
 
 Implement payment processing with SePay (Vietnamese market) and Polar (global SaaS monetization).
 

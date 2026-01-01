@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 10
 published: true
+ai_executable: true
 ---
 
 # Aesthetic Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/aesthetic
+```
+
+
 
 Transform any design from generic to gorgeous using AgencyOS's systematic aesthetic framework.
 

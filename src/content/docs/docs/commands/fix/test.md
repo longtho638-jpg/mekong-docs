@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 8
 published: true
+ai_executable: true
 ---
 
 # /fix:test
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/test
+```
+
+
 
 Run tests and automatically fix failing tests.
 

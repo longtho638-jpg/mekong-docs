@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 12
 published: true
+ai_executable: true
 ---
 
 # Docs Seeker
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/docs-seeker
+```
+
+
 
 Execute scripts to fetch technical documentation from llms.txt sources (context7.com) with automatic query classification and agent distribution strategy.
 

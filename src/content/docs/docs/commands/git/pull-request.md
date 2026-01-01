@@ -5,9 +5,20 @@ section: docs
 category: commands/git
 order: 32
 published: true
+ai_executable: true
 ---
 
 # /git:pr
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/git/pull-request
+```
+
+
 
 Create a pull request with an AI-generated comprehensive summary and test plan. Analyzes all commits since branch divergence, reviews complete change set, and generates professional PR description using GitHub CLI.
 

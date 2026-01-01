@@ -5,9 +5,20 @@ section: docs
 category: skills/ai
 order: 3
 published: true
+ai_executable: true
 ---
 
 # AI Multimodal Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/ai/ai-multimodal
+```
+
+
 
 Process audio, images, videos, documents, and generate images/videos using Google Gemini's multimodal API. Supports analysis up to 9.5 hours of audio, 6 hours of video, and 1000-page PDFs with context windows up to 2M tokens.
 

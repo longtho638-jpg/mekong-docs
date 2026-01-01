@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 10
 published: true
+ai_executable: true
 ---
 
 # Sequential Thinking
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/sequential-thinking
+```
+
+
 
 Break down complex problems into numbered, reflective thought sequences that can revise, branch, and verify hypotheses dynamically.
 

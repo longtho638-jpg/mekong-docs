@@ -5,9 +5,20 @@ section: docs
 category: commands/docs-cmd
 order: 61
 published: true
+ai_executable: true
 ---
 
 # /docs:update
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/docs-cmd/update
+```
+
+
 
 Comprehensively analyze your codebase and update all documentation files to ensure they accurately reflect the current state of your project. Uses the `docs-manager` agent to maintain synchronized, high-quality documentation.
 

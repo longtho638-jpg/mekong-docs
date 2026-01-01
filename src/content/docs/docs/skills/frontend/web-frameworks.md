@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 5
 published: true
+ai_executable: true
 ---
 
 # Web Frameworks
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/web-frameworks
+```
+
+
 
 Build full-stack web apps with Next.js, Turborepo monorepos, and RemixIcon.
 

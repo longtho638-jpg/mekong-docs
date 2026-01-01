@@ -5,9 +5,20 @@ section: docs
 category: commands/git
 order: 4
 published: true
+ai_executable: true
 ---
 
 # /git:cm
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/git/cm
+```
+
+
 
 Stage all files and create a commit. Does NOT push to remote.
 

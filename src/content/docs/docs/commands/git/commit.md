@@ -5,9 +5,20 @@ section: docs
 category: commands/git
 order: 30
 published: true
+ai_executable: true
 ---
 
 # /git:cm
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/git/commit
+```
+
+
 
 Stage all files and create a conventional commit with a professionally crafted commit message following conventional commit standards.
 

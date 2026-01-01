@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 20
 published: true
+ai_executable: true
 ---
 
 # /use-mcp
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/use-mcp
+```
+
+
 
 Execute Model Context Protocol (MCP) operations via Gemini CLI to preserve context budget.
 

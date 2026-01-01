@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 13
 published: true
+ai_executable: true
 ---
 
 # Repomix Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/repomix
+```
+
+
 
 Package entire repositories into single AI-friendly files optimized for LLM context.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 22
 published: true
+ai_executable: true
 ---
 
 # /test
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/test
+```
+
+
 
 Run tests locally and analyze the summary report.
 

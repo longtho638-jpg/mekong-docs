@@ -5,9 +5,20 @@ section: docs
 category: commands/design
 order: 44
 published: true
+ai_executable: true
 ---
 
 # /design:screenshot
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/design/screenshot
+```
+
+
 
 Convert any screenshot into a working implementation. Reverse-engineer existing designs, recreate inspirational interfaces, or implement design mockups with pixel-perfect accuracy. See it, build it.
 

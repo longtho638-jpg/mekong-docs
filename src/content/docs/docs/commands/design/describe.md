@@ -5,9 +5,20 @@ section: docs
 category: commands/design
 order: 41
 published: true
+ai_executable: true
 ---
 
 # /design:describe
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/design/describe
+```
+
+
 
 Transform visual design references into actionable technical specifications. Analyze screenshots, videos, or design mockups to extract layout structure, styling details, component patterns, and implementation strategies.
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 13
 published: true
+ai_executable: true
 ---
 
 # MCP Builder Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/mcp-builder
+```
+
+
 
 Production-ready MCP (Model Context Protocol) servers that connect Claude to external APIs, databases, and services—built with agent-first design principles.
 

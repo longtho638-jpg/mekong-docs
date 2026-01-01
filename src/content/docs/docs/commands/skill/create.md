@@ -5,9 +5,20 @@ section: docs
 category: commands/skill
 order: 80
 published: true
+ai_executable: true
 ---
 
 # /skill:create
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/skill/create
+```
+
+
 
 Create new agent skills that extend Claude's capabilities with specialized knowledge, workflows, or tool integrations. This command follows a comprehensive 4-phase process: research, implementation, review, and evaluation.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/review
 order: 1
 published: true
+ai_executable: true
 ---
 
 # /review:codebase
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/review/codebase
+```
+
+
 
 Comprehensive codebase scan and analysis with research, planning, and code review.
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 11
 published: true
+ai_executable: true
 ---
 
 # Planning
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/planning
+```
+
+
 
 Transform vague requirements into detailed, executable technical plans through systematic research, codebase analysis, and solution design.
 

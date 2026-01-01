@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 8
 published: true
+ai_executable: true
 ---
 
 # Code Review Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/code-review
+```
+
+
 
 Enforce verification gates and technical rigor across three critical practices: receiving feedback, requesting reviews, and proving completion claims.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 25
 published: true
+ai_executable: true
 ---
 
 # /bootstrap:auto:fast
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/bootstrap-auto-fast
+```
+
+
 
 Faster automatic project bootstrapping with parallel research phases.
 

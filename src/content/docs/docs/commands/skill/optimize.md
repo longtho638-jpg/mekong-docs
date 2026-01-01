@@ -5,9 +5,20 @@ section: docs
 category: commands/skill
 order: 83
 published: true
+ai_executable: true
 ---
 
 # /skill:optimize
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/skill/optimize
+```
+
+
 
 Plan-based skill optimization with user approval. Analyzes skills, identifies improvements, creates a plan, and waits for approval before implementing changes.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 4
 published: true
+ai_executable: true
 ---
 
 # /scout
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/scout
+```
+
+
 
 High-speed parallel codebase exploration. Spawns multiple search agents to quickly find relevant files, implementations, and integration points before development work.
 

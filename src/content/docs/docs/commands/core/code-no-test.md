@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 23
 published: true
+ai_executable: true
 ---
 
 # /code:no-test
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/code-no-test
+```
+
+
 
 Implement a plan without the testing phase.
 

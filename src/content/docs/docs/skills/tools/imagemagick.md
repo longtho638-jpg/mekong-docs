@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 22
 published: true
+ai_executable: true
 ---
 
 # imagemagick
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/imagemagick
+```
+
+
 
 Command-line powerhouse for image processing - format conversion, resizing, effects, batch operations.
 

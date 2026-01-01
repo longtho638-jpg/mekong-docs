@@ -5,9 +5,20 @@ section: docs
 category: commands/plan
 order: 12
 published: true
+ai_executable: true
 ---
 
 # /plan:parallel
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/plan/parallel
+```
+
+
 
 Parallel execution planning command. Creates implementation plans with phases that can run simultaneously, using dependency graphs and file ownership boundaries to prevent conflicts.
 

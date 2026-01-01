@@ -5,9 +5,20 @@ section: docs
 category: commands
 order: 100
 published: true
+ai_executable: true
 ---
 
 # /sync-antigravity
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/docs-cmd/sync-antigravity
+```
+
+
 
 Tự động đồng bộ best practices và documentation patterns từ Google Antigravity vào AgencyOS.
 

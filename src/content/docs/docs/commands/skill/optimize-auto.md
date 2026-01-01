@@ -5,9 +5,20 @@ section: docs
 category: commands/skill
 order: 84
 published: true
+ai_executable: true
 ---
 
 # /skill:optimize:auto
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/skill/optimize-auto
+```
+
+
 
 Automatic skill optimization without approval gates. Applies improvements directly with backup/rollback safety for rapid iteration during skill development.
 

@@ -5,9 +5,20 @@ section: docs
 category: cli
 order: 1
 published: true
+ai_executable: true
 ---
 
 # CLI Installation
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/cli/installation
+```
+
+
 
 Install AgencyOS CLI (Mekong-CLI) to download and manage AgencyOS starter kits.
 

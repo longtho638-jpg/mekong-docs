@@ -5,9 +5,20 @@ section: docs
 category: commands/design
 order: 45
 published: true
+ai_executable: true
 ---
 
 # /design:video
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/design/video
+```
+
+
 
 Transform video demonstrations into working animated interfaces. Analyze screen recordings, interaction demos, or animation references to extract design patterns, motion principles, and timing specifications. See it move, build it move.
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/backend
 order: 11
 published: true
+ai_executable: true
 ---
 
 # docker
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/backend/docker
+```
+
+
 
 Containerize applications with production-ready Dockerfiles, multi-stage builds, and Docker Compose orchestration.
 

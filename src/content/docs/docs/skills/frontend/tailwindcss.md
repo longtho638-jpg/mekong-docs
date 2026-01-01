@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 3
 published: true
+ai_executable: true
 ---
 
 # Tailwind CSS Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/tailwindcss
+```
+
+
 
 Utility-first CSS framework that enables rapid UI development through composable classes - write zero custom CSS.
 

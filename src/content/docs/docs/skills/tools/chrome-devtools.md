@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 7
 published: true
+ai_executable: true
 ---
 
 # Chrome DevTools
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/chrome-devtools
+```
+
+
 
 Browser automation via executable Puppeteer scripts with JSON output for screenshots, performance analysis, web scraping, and debugging.
 

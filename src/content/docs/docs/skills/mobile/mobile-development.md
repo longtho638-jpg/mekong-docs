@@ -5,9 +5,20 @@ section: docs
 category: skills/mobile
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Mobile Development Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/mobile/mobile-development
+```
+
+
 
 Production-ready mobile development with modern frameworks, best practices, and mobile-first thinking patterns.
 

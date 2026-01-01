@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 8
 published: true
+ai_executable: true
 ---
 
 # Frontend Development
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/frontend-development
+```
+
+
 
 Modern React patterns with Suspense-first data fetching, lazy loading, and feature-based organization. Zero layout shift, type-safe, performance-optimized.
 

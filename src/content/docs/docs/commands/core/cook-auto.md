@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 26
 published: true
+ai_executable: true
 ---
 
 # /cook:auto
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/cook-auto
+```
+
+
 
 Implement a feature automatically with planning, coding, and optional commit.
 

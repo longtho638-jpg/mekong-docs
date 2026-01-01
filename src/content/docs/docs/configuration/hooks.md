@@ -5,9 +5,20 @@ section: docs
 category: configuration
 order: 4
 published: true
+ai_executable: true
 ---
 
 # Hooks
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/configuration/hooks
+```
+
+
 
 Hooks allow you to extend AgencyOS CLI with custom scripts that run at specific points in the workflow. AgencyOS includes pre-built hooks for notifications (Discord, Telegram) and development rule enforcement.
 

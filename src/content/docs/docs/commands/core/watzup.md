@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 7
 published: true
+ai_executable: true
 ---
 
 # /watzup
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/watzup
+```
+
+
 
 Quick review command that analyzes your current branch, recent commits, and code changes to provide a comprehensive summary of all work done. Perfect for stand-ups, code reviews, or understanding recent activity.
 

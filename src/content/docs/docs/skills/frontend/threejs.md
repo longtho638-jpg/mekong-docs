@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 7
 published: true
+ai_executable: true
 ---
 
 # Three.js Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/threejs
+```
+
+
 
 Build immersive 3D web experiences with WebGL/WebGPU. Production-ready scenes, animations, and interactive graphics.
 

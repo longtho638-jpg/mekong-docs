@@ -5,9 +5,20 @@ section: docs
 category: commands
 order: 0
 published: true
+ai_executable: true
 ---
 
 # Commands Overview
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands
+```
+
+
 
 > 🏯 **135+ Commands** × **13 Binh Pháp Clusters** × **ZERO-EFFORT Automation**
 

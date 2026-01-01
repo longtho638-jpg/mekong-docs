@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 12
 published: true
+ai_executable: true
 ---
 
 # Frontend Design Pro Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/frontend-design-pro
+```
+
+
 
 Agency-grade interfaces with perfect imagery - real photos OR custom AI prompts. Zero fake URLs.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 71
 published: true
+ai_executable: true
 ---
 
 # /scout:ext
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/scout-ext
+```
+
+
 
 External tool-powered codebase scouting. Uses Gemini CLI, Opencode, and Explore agents for enhanced search capabilities, especially for large codebases that exceed standard context limits.
 

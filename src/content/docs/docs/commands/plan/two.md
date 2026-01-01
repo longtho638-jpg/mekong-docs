@@ -5,9 +5,20 @@ section: docs
 category: commands/plan
 order: 11
 published: true
+ai_executable: true
 ---
 
 # /plan:two
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/plan/two
+```
+
+
 
 Research a task and create two distinct implementation approaches with detailed pros/cons analysis and a clear recommendation. Perfect when you want to evaluate multiple strategies before committing to one.
 

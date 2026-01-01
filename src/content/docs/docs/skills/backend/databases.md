@@ -5,9 +5,20 @@ section: docs
 category: skills/backend
 order: 4
 published: true
+ai_executable: true
 ---
 
 # Databases
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/backend/databases
+```
+
+
 
 Expert guidance for MongoDB (document-oriented) and PostgreSQL (relational) databases.
 

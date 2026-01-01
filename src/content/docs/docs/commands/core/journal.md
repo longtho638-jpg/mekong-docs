@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 6
 published: true
+ai_executable: true
 ---
 
 # /journal
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/journal
+```
+
+
 
 Development documentation command. Creates structured journal entries documenting work sessions, code changes, technical decisions, and project memories.
 

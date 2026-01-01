@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 2
 published: true
+ai_executable: true
 ---
 
 # Next.js Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/nextjs
+```
+
+
 
 React framework with SSR, SSG, Server Components (RSC), and App Router for building production-grade web applications.
 

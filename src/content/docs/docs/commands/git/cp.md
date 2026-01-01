@@ -5,9 +5,20 @@ section: docs
 category: commands/git
 order: 5
 published: true
+ai_executable: true
 ---
 
 # /git:cp
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/git/cp
+```
+
+
 
 Stage, commit and push all changes in one command.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/docs-cmd
 order: 62
 published: true
+ai_executable: true
 ---
 
 # /docs:summarize
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/docs-cmd/summarize
+```
+
+
 
 Generate a comprehensive summary of your codebase by analyzing project structure, files, and architecture. Creates or updates `./docs/codebase-summary.md` with detailed project overview, file statistics, and token counts.
 

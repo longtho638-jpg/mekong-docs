@@ -6,9 +6,20 @@ category: configuration
 order: 8
 published: true
 lastUpdated: 2025-11-17
+ai_executable: true
 ---
 
 # MCP Setup
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/configuration/mcp-setup
+```
+
+
 
 ## TL;DR
 

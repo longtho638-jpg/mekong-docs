@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 8
 published: true
+ai_executable: true
 ---
 
 # /code
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/code
+```
+
+
 
 Plan execution command. Implements a structured 6-step workflow with mandatory quality gates, automated testing, and code review.
 

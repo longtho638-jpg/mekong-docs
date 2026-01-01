@@ -5,9 +5,20 @@ section: docs
 category: commands/skill
 order: 81
 published: true
+ai_executable: true
 ---
 
 # /skill:fix-logs
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/skill/fix-logs
+```
+
+
 
 Fix agent skills based on errors and issues found in `logs.txt`. This command analyzes skill failures, identifies problems, updates the skill prompt, and validates fixes.
 

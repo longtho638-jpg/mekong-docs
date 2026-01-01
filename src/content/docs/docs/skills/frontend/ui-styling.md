@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 6
 published: true
+ai_executable: true
 ---
 
 # UI Styling Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/ui-styling
+```
+
+
 
 Beautiful, accessible UI with shadcn/ui components (Radix UI + Tailwind), utility-first styling, and canvas-based visual design systems.
 

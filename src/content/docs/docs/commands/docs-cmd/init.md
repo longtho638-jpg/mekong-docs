@@ -5,9 +5,20 @@ section: docs
 category: commands/docs-cmd
 order: 60
 published: true
+ai_executable: true
 ---
 
 # /docs:init
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/docs-cmd/init
+```
+
+
 
 Initialize comprehensive project documentation by analyzing the entire codebase. This is the essential first command when integrating AgencyOS into an existing project.
 

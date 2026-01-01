@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 14
 published: true
+ai_executable: true
 ---
 
 # Problem-Solving Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/problem-solving
+```
+
+
 
 Systematic approaches for different types of stuck-ness. Each technique targets specific problem patterns.
 

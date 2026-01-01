@@ -5,9 +5,20 @@ section: docs
 category: skills/backend
 order: 16
 published: true
+ai_executable: true
 ---
 
 # postgresql-psql Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/backend/postgresql-psql
+```
+
+
 
 Master PostgreSQL with psql CLI - query optimization, schema design, and production-ready database administration.
 

@@ -5,9 +5,20 @@ section: docs
 category: skills/backend
 order: 5
 published: true
+ai_executable: true
 ---
 
 # DevOps Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/backend/devops
+```
+
+
 
 Deploy and manage cloud infrastructure across Cloudflare edge, Docker containers, and Google Cloud Platform.
 

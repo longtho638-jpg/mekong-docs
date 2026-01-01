@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 22
 published: true
+ai_executable: true
 ---
 
 # /fix:ci
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/ci
+```
+
+
 
 Automatically fix GitHub Actions CI failures by analyzing workflow logs, identifying root causes, and implementing solutions. Essential for maintaining green CI/CD pipelines.
 

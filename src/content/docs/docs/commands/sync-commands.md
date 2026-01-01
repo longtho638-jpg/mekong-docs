@@ -5,9 +5,20 @@ section: docs
 category: commands
 order: 99
 published: true
+ai_executable: true
 ---
 
 # Sync Commands
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/sync-commands
+```
+
+
 
 Tự động đồng bộ documentation từ Google Antigravity vào AgencyOS. Mỗi command được ánh xạ với một cluster trong Binh Pháp.
 

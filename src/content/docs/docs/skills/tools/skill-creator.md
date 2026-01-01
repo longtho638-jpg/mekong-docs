@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 15
 published: true
+ai_executable: true
 ---
 
 # skill-creator
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/skill-creator
+```
+
+
 
 Transform your workflow knowledge into reusable AI skills that Claude can activate automatically.
 

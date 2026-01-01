@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 81
 published: true
+ai_executable: true
 ---
 
 # /code:parallel
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/code-parallel
+```
+
+
 
 Plan execution with parallel/sequential phase coordination. Reads dependency graphs from existing plans and executes phases using fullstack-developer agents in optimized waves.
 

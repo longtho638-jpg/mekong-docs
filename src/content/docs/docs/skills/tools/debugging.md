@@ -5,9 +5,20 @@ section: docs
 category: skills
 order: 20
 published: true
+ai_executable: true
 ---
 
 # Debugging
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/debugging
+```
+
+
 
 Systematic debugging framework that ensures root cause investigation before implementing any fixes.
 

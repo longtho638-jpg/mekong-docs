@@ -5,9 +5,20 @@ section: docs
 category: skills/tools
 order: 16
 published: true
+ai_executable: true
 ---
 
 # AgencyOS CLI Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/tools/claude-code-skill
+```
+
+
 
 Anthropic's agentic coding tool combining autonomous planning, execution, and validation with extensibility through skills, plugins, MCP servers, and hooks.
 

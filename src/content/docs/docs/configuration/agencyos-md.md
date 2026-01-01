@@ -5,9 +5,20 @@ section: docs
 category: configuration
 order: 2
 published: true
+ai_executable: true
 ---
 
 # AGENCYOS.md
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/configuration/agencyos-md
+```
+
+
 
 The `AGENCYOS.md` file is the primary configuration file that provides guidance to AgencyOS CLI when working with your codebase. Understanding this file is crucial for effective use of AgencyOS.
 

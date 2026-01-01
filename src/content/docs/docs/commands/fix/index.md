@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 1
 published: true
+ai_executable: true
 ---
 
 # /fix
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix
+```
+
+
 
 Intelligent issue router. Analyzes your issue description and automatically routes to the most appropriate fix command based on type, complexity, and scope.
 

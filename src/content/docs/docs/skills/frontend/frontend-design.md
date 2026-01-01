@@ -5,9 +5,20 @@ section: docs
 category: skills/frontend
 order: 4
 published: true
+ai_executable: true
 ---
 
 # Frontend Design Skill
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/skills/frontend/frontend-design
+```
+
+
 
 Build memorable web interfaces with bold aesthetics. Production-grade code that avoids generic AI patterns.
 

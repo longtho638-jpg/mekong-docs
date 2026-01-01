@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 41
 published: true
+ai_executable: true
 ---
 
 # /bootstrap:auto:parallel
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/bootstrap-auto-parallel
+```
+
+
 
 Parallel project bootstrapping with multi-agent orchestration. Creates complete projects from requirements using researcher, planner, designer, and implementation agents working in parallel execution waves.
 

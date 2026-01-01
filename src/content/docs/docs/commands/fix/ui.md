@@ -5,9 +5,20 @@ section: docs
 category: commands/fix
 order: 24
 published: true
+ai_executable: true
 ---
 
 # /fix:ui
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/fix/ui
+```
+
+
 
 Fix UI/UX issues by analyzing screenshots, videos, or descriptions. This command combines visual analysis with code debugging to resolve interface problems quickly.
 

@@ -5,9 +5,20 @@ section: docs
 category: commands/core
 order: 9
 published: true
+ai_executable: true
 ---
 
 # /brainstorm
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/commands/core/brainstorm
+```
+
+
 
 Elite brainstorming command for technical solutions. Engages multi-agent collaboration to evaluate approaches against engineering principles, producing documented recommendations.
 

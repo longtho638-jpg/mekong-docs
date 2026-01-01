@@ -4,9 +4,20 @@ description: "13 strategic clusters based on Sun Tzu's Art of War"
 section: "docs"
 category: "reference"
 order: 3
+ai_executable: true
 ---
 
 # 🏯 Binh Pháp Framework
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/binh-phap
+```
+
+
 
 > "Bất chiến nhi khuất nhân chi binh" - Win Without Fighting
 
