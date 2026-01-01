@@ -2,9 +2,20 @@
 title: Market Analysis
 description: Use /market-analysis to analyze local market prices in real-time
 section: docs
+ai_executable: true
 ---
 
 # /market-analysis - Local Market Intelligence
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/market-analysis
+```
+
+
 
 Command for analyzing local market prices and trends in your territory.
 

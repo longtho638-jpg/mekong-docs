@@ -4,9 +4,20 @@ description: "Common questions about AgencyOS, from getting started to advanced 
 section: support
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Frequently Asked Questions
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support/faq
+```
+
+
 
 Common questions about AgencyOS, from getting started to advanced usage.
 

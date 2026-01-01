@@ -4,9 +4,20 @@ description: "What is AgencyOS and how does it work? Learn the basics in 3 minut
 section: getting-started
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Introduction to AgencyOS
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/introduction
+```
+
+
 
 **AgencyOS** is an AI-powered operating system for solo agencies with specialized agents, slash commands, and reusable skills.
 

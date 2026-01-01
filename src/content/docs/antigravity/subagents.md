@@ -4,9 +4,20 @@ description: "100 specialized AI subagents for AgencyOS × Antigravity IDE"
 section: "docs"
 order: 2
 published: true
+ai_executable: true
 ---
 
 # 🤖 MekongAgent Subagents
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/antigravity/subagents
+```
+
+
 
 > **100 Subagents** | VoltAgent Compatible | WIN-WIN-WIN Protocol
 

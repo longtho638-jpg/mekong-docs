@@ -5,9 +5,20 @@ section: support
 category: support/troubleshooting
 order: 3
 published: true
+ai_executable: true
 ---
 
 # Command Errors
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support/troubleshooting/command-errors
+```
+
+
 
 Commands not working? Get them running in minutes with these step-by-step fixes.
 

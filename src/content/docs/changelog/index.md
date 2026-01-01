@@ -4,9 +4,20 @@ description: "Recent changes, updates, and release notes for AgencyOS"
 section: changelog
 order: 0
 published: true
+ai_executable: true
 ---
 
 # Changelog
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/changelog
+```
+
+
 
 Recent changes, updates, and release notes for AgencyOS.
 

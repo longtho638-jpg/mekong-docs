@@ -4,9 +4,20 @@ description: "Deep mapping of 13 Binh Pháp clusters to Antigravity IDE commands
 section: "docs"
 order: 3
 published: true
+ai_executable: true
 ---
 
 # 🏯 Binh Pháp → Antigravity IDE Mapping
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/antigravity/binh-phap-mapping
+```
+
+
 
 > **Triệt để ánh xạ 13 chương Binh Pháp vào Antigravity IDE**
 

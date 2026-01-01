@@ -2,9 +2,20 @@
 title: Sales Strategy
 description: Use /sales-strategy to build winning sales playbooks
 section: docs
+ai_executable: true
 ---
 
 # /sales-strategy - Sales Playbook Generator
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/sales-strategy
+```
+
+
 
 Create comprehensive **Sales Strategies** tailored to your market and offerings.
 

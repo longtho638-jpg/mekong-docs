@@ -2,9 +2,20 @@
 title: Customer Profile
 description: Use /customer-profile to create detailed customer personas
 section: docs
+ai_executable: true
 ---
 
 # /customer-profile - Customer Persona Builder
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/customer-profile
+```
+
+
 
 Create detailed **Customer Profiles** for your products or services, optimized for your local market.
 

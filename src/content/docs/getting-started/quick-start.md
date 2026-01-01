@@ -5,9 +5,20 @@ section: getting-started
 category: getting-started
 order: 4
 published: true
+ai_executable: true
 ---
 
 # Quick Start
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/quick-start
+```
+
+
 
 Ship your first agency automation in 15 minutes with Mekong-CLI.
 

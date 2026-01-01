@@ -2,9 +2,20 @@
 title: Marketing Messages
 description: Use /messaging to craft compelling value propositions
 section: docs
+ai_executable: true
 ---
 
 # /messaging - Value Proposition Builder
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/messaging
+```
+
+
 
 Create compelling **Marketing Messages** and value propositions.
 

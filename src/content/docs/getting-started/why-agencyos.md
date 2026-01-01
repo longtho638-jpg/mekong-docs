@@ -4,9 +4,20 @@ description: "Compare AgencyOS vs alternatives and see ROI calculations and pric
 section: getting-started
 order: 5
 published: true
+ai_executable: true
 ---
 
 # Why AgencyOS
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/why-agencyos
+```
+
+
 
 ## 5-Minute Quick Win
 

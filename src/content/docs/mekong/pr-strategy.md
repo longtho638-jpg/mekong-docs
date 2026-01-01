@@ -2,9 +2,20 @@
 title: PR Strategy
 description: Use /pr-strategy to plan public relations campaigns
 section: docs
+ai_executable: true
 ---
 
 # /pr-strategy - Public Relations Planner
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/pr-strategy
+```
+
+
 
 Build an effective **PR Strategy** for your brand.
 

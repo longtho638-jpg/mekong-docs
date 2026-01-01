@@ -5,9 +5,20 @@ section: tools
 category: tools
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Tools & Utilities
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/tools
+```
+
+
 
 Ecosystem tools that complement AgencyOS and enhance your development workflow.
 

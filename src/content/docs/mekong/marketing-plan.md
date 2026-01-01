@@ -2,9 +2,20 @@
 title: Marketing Plan
 description: Use /marketing-plan to create comprehensive marketing strategies
 section: docs
+ai_executable: true
 ---
 
 # /marketing-plan - Marketing Strategy Builder
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/marketing-plan
+```
+
+
 
 Generate a complete **Marketing Plan** tailored to your business and market.
 

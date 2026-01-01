@@ -4,9 +4,20 @@ description: "Understand how AgencyOS's agents, commands, and skills architectur
 section: getting-started
 order: 2
 published: true
+ai_executable: true
 ---
 
 # Core Concepts
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/concepts
+```
+
+
 
 AgencyOS's power comes from three interconnected systems: **Agents**, **Commands**, and **Skills**.
 

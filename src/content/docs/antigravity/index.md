@@ -4,9 +4,20 @@ description: "Run your entire agency on Google's Antigravity platform with 100 M
 section: "docs"
 order: 1
 published: true
+ai_executable: true
 ---
 
 # 🏯 AgencyOS on Antigravity
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/antigravity
+```
+
+
 
 > **"Build the New Way"** - Google Antigravity  
 > **"Không đánh mà thắng"** - AgencyOS Binh Pháp

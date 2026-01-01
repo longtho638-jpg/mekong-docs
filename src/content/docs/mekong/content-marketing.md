@@ -2,9 +2,20 @@
 title: Content Marketing
 description: Use /content-marketing to generate content strategies
 section: docs
+ai_executable: true
 ---
 
 # /content-marketing - Content Strategy Assistant
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/content-marketing
+```
+
+
 
 Build a complete **Content Marketing** strategy for your business.
 

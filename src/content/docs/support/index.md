@@ -4,9 +4,20 @@ description: "Get help with AgencyOS through community, documentation, and direc
 section: support
 order: 0
 published: true
+ai_executable: true
 ---
 
 # Support
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support
+```
+
+
 
 Get help with AgencyOS through our community resources, documentation, and direct support channels.
 

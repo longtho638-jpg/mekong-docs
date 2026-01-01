@@ -5,9 +5,20 @@ section: support
 category: support/troubleshooting
 order: 4
 published: true
+ai_executable: true
 ---
 
 # Agent Issues
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support/troubleshooting/agent-issues
+```
+
+
 
 Agents not responding or behaving unexpectedly? Debug and fix agent problems fast.
 

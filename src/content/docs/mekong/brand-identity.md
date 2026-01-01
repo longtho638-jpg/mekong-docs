@@ -2,9 +2,20 @@
 title: Brand Identity
 description: Use /brand-identity to create cohesive brand guidelines
 section: docs
+ai_executable: true
 ---
 
 # /brand-identity - Brand Guidelines Generator
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/brand-identity
+```
+
+
 
 Create a comprehensive **Brand Identity** package for your business.
 

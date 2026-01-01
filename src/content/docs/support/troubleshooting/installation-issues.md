@@ -5,9 +5,20 @@ section: support
 category: support/troubleshooting
 order: 2
 published: true
+ai_executable: true
 ---
 
 # Installation Issues
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support/troubleshooting/installation-issues
+```
+
+
 
 AgencyOS installation problems? Get unblocked in minutes with platform-specific fixes.
 

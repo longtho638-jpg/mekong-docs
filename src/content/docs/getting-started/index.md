@@ -4,9 +4,20 @@ description: "Deploy Your Agency in 15 Minutes with AgencyOS"
 section: getting-started
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Getting Started
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started
+```
+
+
 
 Welcome to **AgencyOS** - the AI-powered agency operating system that helps you automate operations, scale efficiently, and build faster.
 

@@ -5,9 +5,20 @@ section: tools
 category: tools
 order: 2
 published: true
+ai_executable: true
 ---
 
 # CCS - AgencyOS CLI Switch
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/tools/ccs
+```
+
+
 
 **One command, zero downtime, multiple accounts**
 

@@ -2,9 +2,20 @@
 title: "Mekong Business Commands"
 description: "28 AI-powered business commands with bilingual support (EN/VN)"
 section: "docs"
+ai_executable: true
 ---
 
 # Mekong Business Commands
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong
+```
+
+
 
 > 🌐 28 commands for business planning, marketing, and sales  
 > 🇻🇳 Vietnamese + 🇬🇧 English aliases

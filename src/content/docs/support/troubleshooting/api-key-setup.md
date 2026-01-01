@@ -5,9 +5,20 @@ section: support
 category: support/troubleshooting
 order: 5
 published: true
+ai_executable: true
 ---
 
 # API Key Setup
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support/troubleshooting/api-key-setup
+```
+
+
 
 Fix API key errors and configure credentials for AgencyOS's AI-powered features.
 

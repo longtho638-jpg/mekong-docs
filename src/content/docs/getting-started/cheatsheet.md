@@ -6,9 +6,20 @@ category: "getting-started"
 order: 5
 published: true
 lastUpdated: 2025-11-07
+ai_executable: true
 ---
 
 # AgencyOS Cheatsheet
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/cheatsheet
+```
+
+
 
 Quick reference guide for AgencyOS CLI: **18 agents**, **125+ commands**, **5 business suites**.
 

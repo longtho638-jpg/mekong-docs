@@ -2,9 +2,20 @@
 title: Social Media Ideas
 description: Use /social-media to generate creative post ideas
 section: docs
+ai_executable: true
 ---
 
 # /social-media - Social Media Content Generator
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/social-media
+```
+
+
 
 Generate creative **Social Media** content ideas for any platform.
 

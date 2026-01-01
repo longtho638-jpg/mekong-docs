@@ -2,9 +2,20 @@
 title: Business Plan
 description: Use /business-plan to create a comprehensive business strategy
 section: docs
+ai_executable: true
 ---
 
 # /business-plan - Business Planning Assistant
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/business-plan
+```
+
+
 
 Generate a complete **Business Plan** for your venture.
 

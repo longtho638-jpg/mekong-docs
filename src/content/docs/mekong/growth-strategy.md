@@ -2,9 +2,20 @@
 title: Growth Strategy
 description: Use /growth-strategy to plan business expansion
 section: docs
+ai_executable: true
 ---
 
 # /growth-strategy - Scaling Your Business
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/growth-strategy
+```
+
+
 
 Develop a comprehensive **Growth Strategy** for sustainable expansion.
 

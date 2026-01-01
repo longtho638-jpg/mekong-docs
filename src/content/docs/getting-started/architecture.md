@@ -4,9 +4,20 @@ description: "Deep dive into AgencyOS's 18-agent orchestration system, 125+ comm
 section: getting-started
 order: 3
 published: true
+ai_executable: true
 ---
 
 # System Architecture
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/architecture
+```
+
+
 
 AgencyOS is built on three pillars: **18 Specialized Agents**, **125+ Commands across 5 Business Suites**, and the **WIN³ Framework** for aligned success.
 

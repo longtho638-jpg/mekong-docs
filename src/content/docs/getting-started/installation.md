@@ -5,9 +5,20 @@ section: getting-started
 category: getting-started
 order: 2
 published: true
+ai_executable: true
 ---
 
 # Installation
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/installation
+```
+
+
 
 Get started with Mekong-CLI and automate your agency operations.
 

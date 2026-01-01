@@ -2,9 +2,20 @@
 title: Marketing Overview
 description: Overview of all marketing tools in Agency OS
 section: docs
+ai_executable: true
 ---
 
 # Marketing Tools
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/marketing-overview
+```
+
+
 
 Your complete marketing toolkit within Agency OS.
 

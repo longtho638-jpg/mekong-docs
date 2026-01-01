@@ -2,9 +2,20 @@
 title: Sales Funnel
 description: Use /sales-funnel to build conversion-optimized funnels
 section: docs
+ai_executable: true
 ---
 
 # /sales-funnel - Funnel Builder
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/sales-funnel
+```
+
+
 
 Create high-converting **Sales Funnels** for your business.
 

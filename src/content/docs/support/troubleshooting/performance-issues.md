@@ -5,9 +5,20 @@ section: support
 category: support/troubleshooting
 order: 6
 published: true
+ai_executable: true
 ---
 
 # Performance Issues
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support/troubleshooting/performance-issues
+```
+
+
 
 Commands taking forever? Optimize AgencyOS for blazing-fast execution.
 

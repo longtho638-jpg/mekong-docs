@@ -4,9 +4,20 @@ description: "Migrate from AgencyOS CLI to AgencyOS seamlessly"
 section: getting-started
 order: 3
 published: true
+ai_executable: true
 ---
 
 # Upgrading from AgencyOS CLI to AgencyOS
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/getting-started/upgrade-guide
+```
+
+
 
 Already using AgencyOS CLI? AgencyOS enhances your workflow without breaking existing habits.
 

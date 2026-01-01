@@ -4,9 +4,20 @@ description: "Build complete products end-to-end with Binh Pháp methodology"
 section: "docs"
 order: 2
 published: true
+ai_executable: true
 ---
 
 # 🚀 Full-Stack Product Development Workflow
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/antigravity/full-stack-workflow
+```
+
+
 
 > **From idea to production in one day using Binh Pháp methodology**
 

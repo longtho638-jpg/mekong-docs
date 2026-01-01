@@ -5,9 +5,20 @@ section: support
 category: support/troubleshooting
 order: 1
 published: true
+ai_executable: true
 ---
 
 # Troubleshooting
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/support/troubleshooting
+```
+
+
 
 Quick fixes for common issues. Most problems resolve in under 5 minutes.
 

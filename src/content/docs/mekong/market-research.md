@@ -2,9 +2,20 @@
 title: Market Research
 description: Use /market-research to analyze your competitive landscape
 section: docs
+ai_executable: true
 ---
 
 # /market-research - Competitive Intelligence
+
+---
+
+## 🤖 Quick Execute
+
+```
+Execute: https://agencyos.network/docs/mekong/market-research
+```
+
+
 
 Conduct comprehensive **Market Research** for your business.
 
