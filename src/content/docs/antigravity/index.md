@@ -1,6 +1,6 @@
 ---
 title: "AgencyOS on Antigravity"
-description: "Run your entire agency on Google's Antigravity platform with 13 Binh Pháp clusters"
+description: "Run your entire agency on Google's Antigravity platform with 100 MekongAgent subagents"
 section: "docs"
 order: 1
 published: true
@@ -19,8 +19,9 @@ published: true
 
 AgencyOS is the **premier agency automation system** running on Antigravity, combining:
 - 🏯 **13 Binh Pháp Clusters** - Sun Tzu's 2500-year wisdom
-- 🤖 **18 AI Agents** - Specialized for every agency task
-- ⚡ **125+ Commands** - End-to-end automation
+- 🤖 **100 MekongAgent Subagents** - Specialized for every agency task
+- ⚡ **168 Core Modules** - End-to-end automation
+- 🌐 **i18n 100%** - Full localization (EN/VI/ZH)
 
 ---
 

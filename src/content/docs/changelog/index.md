@@ -12,6 +12,40 @@ Recent changes, updates, and release notes for AgencyOS.
 
 ## Latest Release
 
+### Version 2.0.0 - 2026-01-01
+
+#### 🏯 Antigravity × AgencyOS Integration
+
+**Major Features**:
+- **100 MekongAgent Subagents** - Complete subagent ecosystem for Antigravity IDE
+- **MekongAgent Branding** - Renamed from VoltAgent for legal protection
+- **18 Hub Subagents** - Department-specific AI assistance
+- **34 AgentOps** - Specialized operations agents
+- **i18n 100% Coverage** - 84 pages fully localized (EN/VI/ZH)
+
+**Subagent Structure**:
+```
+.agent/subagents/
+├── hubs/        18  # binh-phap, vc, sales...
+├── core/         5  # win3-checker, vibe-tuner...
+├── ops/         34  # sdrops, aeops, seoops...
+├── mekongAgent/ 42  # python-pro, nextjs...
+└── README.md     1
+```
+
+**Key Subagents**:
+- `binh-phap-hub` - 13 chapters strategic framework
+- `win3-checker` - WIN-WIN-WIN validation
+- `vc-hub` - Fundraising & anti-dilution shield
+- `vibe-tuner` - Voice & tone management
+
+**Documentation**:
+- Updated CLAUDE.md with 100 subagents reference
+- Updated GEMINI.md with MekongAgent branding
+- Created comprehensive subagents.md guide
+
+---
+
 ### Version 1.0.0 - 2024-12-01
 
 #### 🎉 Initial Release
