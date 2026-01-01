@@ -228,21 +228,89 @@ const {
       <slot />
     </main>
 
-    <!-- Footer -->
+    <!-- Mega Footer -->
     <footer class="landing-footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <span class="logo-icon">🏯</span>
-          <span>AgencyOS</span>
+      <div class="footer-mega">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <a href="/" class="footer-logo">
+            <span class="logo-icon">🏯</span>
+            <span class="logo-text">AgencyOS</span>
+          </a>
+          <p class="footer-tagline">The AI-powered operating system for one-person agencies.</p>
+          <div class="footer-social">
+            <a href="https://twitter.com/agencyos" aria-label="Twitter">𝕏</a>
+            <a href="https://github.com/agencyos" aria-label="GitHub">⌘</a>
+            <a href="https://discord.gg/agencyos" aria-label="Discord">💬</a>
+          </div>
         </div>
-        <div class="footer-links">
-          <a href="/agencyos">Home</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/docs/getting-started/introduction">Docs</a>
-          <a href="mailto:hello@agencyos.network">Contact</a>
+        
+        <!-- Products Column -->
+        <div class="footer-col">
+          <h4 class="footer-title">Products</h4>
+          <div class="footer-col-split">
+            <div class="footer-links">
+              <span class="footer-label">FREE</span>
+              <a href="/docs">📚 Documentation</a>
+              <a href="/binh-phap">🏯 Binh Pháp</a>
+              <a href="/workflows">📋 Workflows</a>
+            </div>
+            <div class="footer-links">
+              <span class="footer-label">PAID</span>
+              <a href="/pricing">⭐ Starter $29</a>
+              <a href="/pricing">🚀 Pro $99</a>
+              <a href="/franchise">🏆 Franchise $299</a>
+            </div>
+          </div>
         </div>
+        
+        <!-- Features Column -->
+        <div class="footer-col">
+          <h4 class="footer-title">Features</h4>
+          <div class="footer-links">
+            <a href="/newsletter">📧 Newsletter Hub</a>
+            <a href="/affiliate">🎯 Affiliate Program</a>
+            <a href="/marketplace">🏪 Marketplace</a>
+            <a href="/wallet">💳 Wallet</a>
+            <a href="/gamification">🎮 Gamification</a>
+            <a href="/dashboard">📊 Dashboard</a>
+          </div>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-col">
+          <h4 class="footer-title">Resources</h4>
+          <div class="footer-links">
+            <a href="/docs/getting-started">🚀 Quick Start</a>
+            <a href="/commands">⌨️ Commands</a>
+            <a href="/demo">🎬 Demo</a>
+            <a href="/roi-calculator">💰 ROI Calculator</a>
+            <a href="/blog">📝 Blog</a>
+            <a href="/changelog">📋 Changelog</a>
+          </div>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-col">
+          <h4 class="footer-title">Company</h4>
+          <div class="footer-links">
+            <a href="/about">ℹ️ About Us</a>
+            <a href="/case-studies">📈 Case Studies</a>
+            <a href="/contact">✉️ Contact</a>
+            <a href="/faq">❓ FAQ</a>
+            <a href="/terms">📜 Terms</a>
+            <a href="/privacy">🔒 Privacy</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
         <div class="footer-copy">
-          © 2025 AgencyOS Network. All rights reserved.
+          © 2026 AgencyOS Network. All rights reserved.
+        </div>
+        <div class="footer-motto">
+          🏯 "Họ WIN → Mình WIN → All WIN"
         </div>
       </div>
     </footer>
@@ -377,6 +445,167 @@ const {
 </html>
 
 <style>
+  /* Landing Header */
+  .landing-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 100;
+  }
+
+  /* === Mega Footer === */
+  .landing-footer {
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    padding: 64px 24px 24px;
+  }
+
+  .footer-mega {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .footer-tagline {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    max-width: 220px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 12px;
+  }
+
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .footer-social a:hover {
+    border-color: var(--color-accent-green);
+    transform: translateY(-2px);
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-col-split {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-accent-green);
+    margin-bottom: 4px;
+  }
+
+  .footer-links a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-text-primary);
+    transform: translateX(4px);
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copy {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+  }
+
+  .footer-motto {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+
+  /* Footer Responsive */
+  @media (max-width: 1024px) {
+    .footer-mega {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-brand-col {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-mega {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+  }
+
   /* Landing Header */
   .landing-header {
     position: fixed;
